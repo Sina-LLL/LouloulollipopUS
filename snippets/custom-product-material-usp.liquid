@@ -1,0 +1,208 @@
+{% assign material_care = product.metafields.custom.material.value[0] %}
+{% assign product_type = product.metafields.custom.product_template.value.product_type.value %}
+
+<div class="product-material-usp">
+  {% case material_care %}
+    {% when 'TENCEL Lyocell' %}
+      <h3>Ultra-soft & Breathable Tencel Fabric</h3>
+      <div class="product-material-usp__icons-wrapper">
+        <div class="product-material-usp__icons">
+          {% render 'icon-cf20' %}
+          <p>Moisture Wicking</p>
+        </div>
+         <div class="product-material-usp__icons">
+           {% render 'icon-sm3' %}
+          <p>Non-Toxic & Safe</p>
+        </div>
+         <div class="product-material-usp__icons">
+           {% render 'icon-cf10' %}
+          <p>Ultra-Soft & Gentle On Baby’s Skin​</p>
+        </div>
+      </div>  
+      <!-- <a class="btn btn--secondary" href="https://louloulollipop.com/blogs/the-lastest-scoop/carbon-neutral-close-loop-with-tencel-lyocell-fabric" target="blank">Learn More</a> -->
+     {% when 'TENCEL Waffle' %}
+       <h3>Ultra-soft & Breathable Tencel Fabric</h3>
+      <div class="product-material-usp__icons-wrapper">
+        <div class="product-material-usp__icons">
+          {% render 'icon-cf20' %}
+          <p>Moisture Wicking</p>
+        </div>
+         <div class="product-material-usp__icons">
+           {% render 'icon-sm3' %}
+          <p>Non-Toxic & Safe</p>
+        </div>
+         <div class="product-material-usp__icons">
+           {% render 'icon-cf10' %}
+          <p>Ultra-Soft & Gentle On Baby’s Skin​</p>
+        </div>
+      </div>  
+      <!-- <a class="btn btn--secondary" href="https://louloulollipop.com/blogs/the-lastest-scoop/carbon-neutral-close-loop-with-tencel-lyocell-fabric" target="blank">Learn More</a> -->
+    
+    {% when 'Muslin' %}
+     <h3>Our Irresistibly Light & Airy Muslin</h3>
+      <div class="product-material-usp__icons-wrapper">
+        <div class="product-material-usp__icons">
+          {% render 'icon-sm8' %}
+          <p>Oeko-Tex Certified & Chemical Free</p>
+        </div>
+         <div class="product-material-usp__icons">
+           {% render 'icon-sm3' %}
+          <p>Non-Toxic & Safe</p>
+        </div>
+         <div class="product-material-usp__icons">
+           {% render 'icon-cf10' %}
+          <p>Ultra-Soft & Gentle On Baby’s Skin​</p>
+        </div>
+      </div>  
+      <!-- <a class="btn btn--secondary" href="https://louloulollipop.com/blogs/the-lastest-scoop/carbon-neutral-close-loop-with-tencel-lyocell-fabric" target="blank">Learn More</a>
+ -->
+    {% when 'Silicone-Platinum Eat' %}
+      <h3>Our Premium FDA Food Grade Approved Silicone</h3>
+      <div class="product-material-usp__icons-wrapper">
+        <div class="product-material-usp__icons">
+          {% render 'icon-sm10' %}
+          <p>Platinum Food Grade Silicone</p>
+        </div>
+         <div class="product-material-usp__icons">
+           {% render 'icon-sm7' %}
+          <p>BPA Free</p>
+        </div>
+         <div class="product-material-usp__icons">
+           {% render 'icon-sm3' %}
+          <p>Non-Toxic & Safe</p>
+        </div>
+                 <div class="product-material-usp__icons">
+           {% render 'icon-sm13' %}
+          <p>Stringently Safety Tested</p>
+        </div>
+                 <div class="product-material-usp__icons">
+           {% render 'icon-sm15' %}
+          <p>Water Based Food Grade Dye</p>
+        </div>
+                 <div class="product-material-usp__icons">
+           {% render 'icon-sm16' %}
+          <p>Phthalate Free</p>
+        </div>
+      </div>  
+    {% when 'Silicone-Soft Eat' %}
+      <h3>Our Premium FDA Food Grade Approved Silicone</h3>
+      <div class="product-material-usp__icons-wrapper">
+        <div class="product-material-usp__icons">
+          {% render 'icon-sm10' %}
+          <p>Made of Food-Grade Silicone</p>
+        </div>
+         <div class="product-material-usp__icons">
+           {% render 'icon-sm7' %}
+          <p>BPA Free</p>
+        </div>
+         <div class="product-material-usp__icons">
+           {% render 'icon-sm3' %}
+          <p>Non-Toxic & Safe</p>
+        </div>
+                 <div class="product-material-usp__icons">
+           {% render 'icon-sm13' %}
+          <p>Stringently Safety Tested</p>
+        </div>
+                 <div class="product-material-usp__icons">
+           {% render 'icon-sm15' %}
+          <p>Water Based Food Grade Dye</p>
+        </div>
+                 <div class="product-material-usp__icons">
+           {% render 'icon-sm16' %}
+          <p>Phthalate Free</p>
+        </div>
+      </div>  
+    {% when 'Silicone-Soft Play' %}
+      <h3>Our Premium FDA Food Grade Approved Silicone</h3>
+      <div class="product-material-usp__icons-wrapper">
+        <div class="product-material-usp__icons">
+          {% render 'icon-sm10' %}
+          <p>Made of Food-Grade Silicone</p>
+        </div>
+        <div class="product-material-usp__icons">
+           {% render 'icon-sm7' %}
+          <p>BPA Free</p>
+        </div>
+        <div class="product-material-usp__icons">
+           {% render 'icon-sm3' %}
+          <p>Non-Toxic & Safe</p>
+        </div>
+        <div class="product-material-usp__icons">
+           {% render 'icon-sm13' %}
+          <p>Stringently Safety Tested</p>
+        </div>
+        <div class="product-material-usp__icons">
+           {% render 'icon-sm15' %}
+          <p>Water Based Food Grade Dye</p>
+        </div>
+        <div class="product-material-usp__icons">
+           {% render 'icon-sm16' %}
+          <p>Phthalate Free</p>
+        </div>
+      </div> 
+      <!-- <a class="btn btn--secondary" href="#">Learn More</a> -->
+    {% when 'Silicone-Platinum Play' %}
+      <h3>Our Premium FDA Food Grade Approved Silicone</h3>
+      <div class="product-material-usp__icons-wrapper">
+        <div class="product-material-usp__icons">
+          {% render 'icon-sm10' %}
+          <p>Platinum Food Grade Silicone</p>
+        </div>
+         <div class="product-material-usp__icons">
+           {% render 'icon-sm7' %}
+          <p>BPA Free</p>
+        </div>
+         <div class="product-material-usp__icons">
+           {% render 'icon-sm3' %}
+          <p>Non-Toxic & Safe</p>
+        </div>
+                 <div class="product-material-usp__icons">
+           {% render 'icon-sm13' %}
+          <p>Stringently Safety Tested</p>
+        </div>
+                 <div class="product-material-usp__icons">
+           {% render 'icon-sm15' %}
+          <p>Water Based Food Grade Dye</p>
+        </div>
+                 <div class="product-material-usp__icons">
+           {% render 'icon-sm16' %}
+          <p>Phthalate Free</p>
+        </div>
+      </div> 
+      <!-- <a class="btn btn--secondary" href="#">Learn More</a> -->
+    {% when 'Recycled Polyester' %}
+      <h3>Durable & Responsibly Sourced Recycled Polyester</h3>
+      <div class="product-material-usp__icons-wrapper">
+        <div class="product-material-usp__icons">
+           {% render 'icon-sm1' %}
+          <p>100% Recycled Polyester</p>
+        </div>
+        <div class="product-material-usp__icons">
+          {% render 'icon-sm8' %}
+          <p>Oeko-Tex Certified & Chemical Free</p>
+        </div>
+          <div class="product-material-usp__icons">
+           {% render 'icon-sm3' %}
+          <p>Non-Toxic & Safe</p>
+        </div>
+      </div>  
+      <!-- <a class="btn btn--secondary" href="#">Learn More</a>-->
+    {% when 'stainless-steel' %} 
+      <h3>Stainless Steel</h3>
+      <div class="product-material-usp__icons-wrapper">
+        <div class="product-material-usp__icons">
+          {% render 'icon-star' %}
+          <p>Lightweight & Breathable</p>
+        </div>
+         <div class="product-material-usp__icons">
+           {% render 'icon-star' %}
+          <p>Durable & Soft</p>
+        </div>
+         <div class="product-material-usp__icons">
+           {% render 'icon-star' %}
+          <p>Soft on sensitive Skin</p>
+        </div>
+      </div>  
+      <!-- <a class="btn btn--secondary" href="#">Learn More</a>-->
+  {% endcase %} 
+</div>

@@ -1,0 +1,22 @@
+{% liquid
+  assign shop_id = shop.id
+  if shop_id == 14589446
+    assign store_id = 237
+  else
+    # US store
+    assign store_id = 236
+  endif
+%}
+
+<script type="module" async crossorigin>
+  import { init } from "https://sdk.beamimpact.com/web-sdk/{{ settings.beam_sdk_version }}/dist/integrations/beam.js";
+
+  const beam = await init({
+    apiKey: "{{ settings.beam_api_key }}",
+    chainId: {{ settings.beam_chain_id }},
+    storeId: {{ store_id }},
+    domain: "{{ settings.beam_store_domain }}",
+    baseUrl: "{{ settings.beam_base_url }}",
+    plugins: []
+  });
+</script>

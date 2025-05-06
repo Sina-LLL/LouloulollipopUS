@@ -1,0 +1,19 @@
+{% assign beam_language = 'en' %}
+
+{% liquid
+  assign shop_id = shop.id
+  if shop_id == 14589446
+    assign store_id = 237
+  else
+    # US store
+    assign store_id = 236
+  endif
+%}
+
+<div data-beam-widget="select-nonprofit" data-cart-empty="false" style="width: 100%;">
+  <beam-select-nonprofit
+    apiKey="{{ settings.beam_api_key }}"
+    storeId="{{ store_id }}"
+    lang="{{ beam_language }}"
+  ></beam-select-nonprofit>
+</div>

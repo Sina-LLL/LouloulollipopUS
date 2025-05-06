@@ -1,0 +1,53 @@
+{% liquid
+  assign shop_id = shop.id
+  if shop_id == 14589446
+    assign store_id = 237
+  else
+    # US store
+    assign store_id = 236
+  endif
+%}
+
+{% render 'beam-config' %}
+{% render 'beam-cart-setup' %}
+{% render 'beam-product-details-page' %}
+
+<script
+  type="module"
+  async
+  crossorigin
+  data-em-disable
+  data-categories="analytics"
+  src="https://sdk.beamimpact.com/web-sdk/{{ settings.beam_sdk_version }}/dist/components/select-nonprofit.js"
+></script>
+
+<script>
+  // Default behavior is to not show the Beam Select Nonprofit widget if it is empty
+  document.head.insertAdjacentHTML(
+    "beforeend",
+    `<style>[data-beam-widget="select-nonprofit"][data-cart-empty="true"]{display:none;}</style>`
+  );
+</script>
+
+<script type="module" async crossorigin>
+  import { getCurrentCart } from "https://sdk.beamimpact.com/web-sdk/{{ settings.beam_sdk_version }}/dist/integrations/shopify.js";
+  import { events } from "https://sdk.beamimpact.com/web-sdk/{{ settings.beam_sdk_version }}/dist/integrations/utils.js";
+
+  async function showBeamCartWidgetIfNeeded(event) {
+    let itemCount = 0;
+
+    const currentCart = await getCurrentCart({
+      apiKey: "{{ settings.beam_api_key }}",
+      chainId: "{{ settings.beam_chain_id }}",
+      storeId: {{ store_id }}
+    });
+    itemCount = currentCart?.cart?.itemCount;
+
+    document.querySelectorAll('[data-beam-widget="select-nonprofit"]').forEach((widgetElement) => {
+      widgetElement?.setAttribute("data-cart-empty", itemCount <= 0);
+    });
+  }
+
+  await showBeamCartWidgetIfNeeded();
+  window.addEventListener(events.BeamCartChangeEvent.eventName, showBeamCartWidgetIfNeeded);
+</script>

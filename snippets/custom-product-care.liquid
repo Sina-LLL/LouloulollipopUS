@@ -1,0 +1,172 @@
+{% assign material_care = product.metafields.custom.material.value[0] %}
+{% assign product_type = product.metafields.custom.product_template.value.product_type.value %}
+
+  {% case material_care %}  
+
+     {% when 'TENCEL Lyocell' %}
+      <div class="product-material__icons-wrapper">
+        <div class="product-material-care__icons">
+          {% render 'icon-machine-wash-cold' %}
+          <p>Machine wash cold with like colours</p>
+        </div>
+        <div class="product-material-care__icons">
+           {% render 'icon-wash-delicate' %}
+          <p>Delicate or gentle cycle</p>
+        </div>
+         <div class="product-material-care__icons">
+           {% render 'icon-tumble-dry-low-heat' %}
+          <p>Tumble dry on low heat</p>
+        </div>
+         <div class="product-material-care__icons">
+          {% render 'icon-none-chlorine-bleach' %}
+          <p>Use only non-chlorine bleach</p>
+        </div>
+        <div class="product-material-care__icons">
+          {% render 'icon-iron-medium' %}
+          <p>Iron medium </p>
+        </div>
+        <div class="product-material-care__icons">
+          {% render 'icon-no-dry-clean' %}
+          <p>Do not dry clean</p>
+        </div>
+        
+      </div> 
+    
+    {% when 'Muslin' %}
+       <div class="product-material__icons-wrapper">
+        <div class="product-material-care__icons">
+          {% render 'icon-machine-wash-cold' %}
+          <p>Machine wash cold with like colours</p>
+        </div>
+        
+         <div class="product-material-care__icons">
+           {% render 'icon-tumble-dry-low-heat' %}
+          <p>Tumble dry on low heat</p>
+        </div>
+         <div class="product-material-care__icons">
+           {% render 'icon-none-chlorine-bleach' %}
+          <p>Use only non-chlorine bleach</p>
+        </div>
+        <div class="product-material-care__icons">
+           {% render 'icon-no-iron' %}
+          <p>Do not iron</p>
+        </div>
+        <div class="product-material-care__icons">
+           {% render 'icon-no-dry-clean' %}
+          <p>Do not dry clean</p>
+        </div>
+         <div class="product-material-care__icons">
+          <p>Wash in a garment bag</p>
+        </div>
+        
+      </div>  
+    {% when 'Silicone-Soft Eat' %}
+       <div class="product-material__icons-wrapper">
+        <div class="product-material-care__icons">
+          {% render 'icon-dishwasher-safe' %}
+          <p>Dishwasher safe</p>
+        </div>
+        {% if product_type == 'Snack Plate' or product_type == 'Snack Bowl' %}
+          <div class="product-material-care__icons">
+            {% render 'icon-microwave-safe' %}
+            <p>Microwave safe</p>
+          </div>
+         {% endif %}
+        <div class="product-material-care__icons">
+           {% render 'icon-freezer-safe' %}
+          <p>Freezer Safe</p>
+        </div>
+      </div>
+
+
+    {% when 'Silicone-Platinum Eat' %}
+       <div class="product-material__icons-wrapper">
+        <div class="product-material-care__icons">
+          {% render 'icon-dishwasher-safe' %}
+          <p>Dishwasher safe</p>
+        </div>
+        {% if product_type == 'Snack Plate' or product_type == 'Snack Bowl' %}
+        <div class="product-material-care__icons">
+           {% render 'icon-microwave-safe' %}
+          <p>Microwave safe</p>
+        </div>
+        {% endif %}
+        <div class="product-material-care__icons">
+           {% render 'icon-freezer-safe' %}
+          <p>Freezer Safe</p>
+        </div>
+      </div> 
+    
+    {% when 'Silicone-Soft Play' %}
+     <div class="product-material__icons-wrapper">
+      <div class="product-material-care__icons">
+        {% render 'icon-dishwasher-safe' %}
+        <p>Top rack dishwasher safe or wipe clean</p>
+      </div>
+      <div class="product-material-care__icons">
+         {% render 'icon-freezer-safe' %}
+        <p>Freezer Safe</p>
+      </div>
+      </div> 
+    
+        {% when 'Silicone-Platinum Play' %}
+     <div class="product-material__icons-wrapper">
+      <div class="product-material-care__icons">
+        {% render 'icon-dishwasher-safe' %}
+        <p>Top rack dishwasher safe or wipe clean</p>
+      </div>
+      <div class="product-material-care__icons">
+         {% render 'icon-freezer-safe' %}
+        <p>Freezer Safe</p>
+      </div>
+      
+    </div> 
+    {% when 'Recycled Polyester' %}
+       <div class="product-material__icons-wrapper">
+        <div class="product-material-care__icons">
+          {% render 'icon-machine-wash' %}
+          <p>Machine wash</p>
+        </div>
+        
+         <div class="product-material-care__icons">
+           {% render 'icon-tumble-dry-low-heat' %}
+          <p>Tumble dry on low heat</p>
+        </div>
+        <div class="product-material-care__icons">
+           {% render 'icon-no-iron' %}
+          <p>Do not iron</p>
+        </div>
+         <div class="product-material-care__icons">
+          <p>Wash in a garment bag</p>
+        </div>
+        
+      </div> 
+    {% when 'TENCEL Waffle' %}
+      <div class="product-material__icons-wrapper">
+        <div class="product-material-care__icons">
+          {% render 'icon-machine-wash-cold' %}
+          <p>Machine wash cold with like colours</p>
+        </div>
+        
+         <div class="product-material-care__icons">
+           {% render 'icon-tumble-dry-low-heat' %}
+          <p>Tumble dry on low heat</p>
+        </div>
+         <div class="product-material-care__icons">
+           {% render 'icon-none-chlorine-bleach' %}
+          <p>Use only non-chlorine bleach</p>
+        </div>
+        <div class="product-material-care__icons">
+           {% render 'icon-no-iron' %}
+          <p>Do not iron</p>
+        </div>
+        <div class="product-material-care__icons">
+           {% render 'icon-no-dry-clean' %}
+          <p>Do not dry clean</p>
+        </div>
+         <div class="product-material-care__icons">
+          <p>Wash in a garment bag</p>
+        </div>
+        
+      </div> 
+  {% endcase %}

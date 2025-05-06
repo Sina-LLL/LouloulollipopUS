@@ -1,0 +1,53 @@
+<script
+  type="module"
+  async
+  crossorigin
+  data-em-disable
+  src="https://sdk.beamimpact.com/web-sdk/{{ settings.beam_sdk_version }}/dist/components/product-details-page.esm.js"
+></script>
+
+{% liquid
+  assign shop_id = shop.id
+  if shop_id == 14589446
+    assign store_id = 237
+  else
+    # US store
+    assign store_id = 236
+  endif
+%}
+
+<div
+  class="beam-sync-visibility"
+  data-beam-widget="product-details-page"
+  style="display: none; margin: 20px 0px;"
+>
+  <beam-product-details-page
+    apiKey="{{ settings.beam_api_key }}"
+    storeId="{{ store_id }}"
+  ></beam-product-details-page>
+</div>
+
+<script type="module" async crossorigin  data-em-disable>
+  import { waitForElement } from "https://sdk.beamimpact.com/web-sdk/{{ settings.beam_sdk_version }}/dist/integrations/utils.js";
+
+  const insertAbove = true; // false will insert the widget below the sibling
+  const siblingElementTarget = ".product__block__pickup";
+  const productElementTarget = ".product__block__description";
+
+  const targetElement = document.querySelector(siblingElementTarget);
+  const targetElement2 = document.querySelector(productElementTarget);
+  const beamWidget = document.querySelector('[data-beam-widget="product-details-page"]');
+
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+       // Add the Beam widget into the parent element
+      if ((targetElement || targetElement2) && beamWidget) {
+        const insertPosition = insertAbove ? 'beforebegin' : 'afterend';
+        targetElement ?
+          targetElement.insertAdjacentElement(insertPosition, beamWidget) :
+          targetElement2.insertAdjacentElement(insertPosition, beamWidget);
+        beamWidget.style.display = "block";
+      }
+    }, 400);
+  });
+</script>
