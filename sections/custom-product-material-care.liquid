@@ -1,0 +1,85 @@
+{% if product.metafields.custom.materials_care != blank %}
+
+<div class="container custom-product-features">
+  <div class="custom-product-features__wrapper">
+    {% if section.settings.section_heading != blank %}
+      <button class="accordion-toggle" type="button" aria-expanded="true">
+        <h2 class="hometitle h2">{{ section.settings.section_heading | escape }}</h2>
+        <span class="chevron">−</span>
+      </button>
+    {% endif %}
+
+    <div class="custom-product-features__grid custom-accordion-content show">
+      {% if product.metafields.custom.materials_care != blank %}
+        <div class="material-info__Wrapper">
+          <div class="material-info__Material">
+          {{ product.metafields.custom.materials_care.value  }}
+          </div>  
+        </div>
+       {% render 'custom-product-care', material_care: product.metafields.custom.material.value %}
+      {% endif %}
+      {% if section.settings.care_image %}
+        <div class="material-image">
+            <div class="image-cont">
+              
+                <div class="custom-product_features__image">
+                  {%- liquid
+                    assign care_image = section.settings.care_image
+                    assign custom_aspect_ratio = 1.78
+                    assign custom_crop = 'center'
+                    assign loading = 'lazy'
+                  -%}
+                  {% render 'image' with care_image, loading: loading, size_cols_mobile: 1, size_cols_desktop: 4, custom_aspect_ratio: custom_aspect_ratio, custom_crop: custom_crop %}
+                </div>
+            </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endif %}
+
+<!-- <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.querySelector('.accordion-toggle');
+    const content = document.querySelector('.custom-product-material-care__content');
+    const chevron = toggle.querySelector('.chevron');
+
+    if (toggle && content && chevron) {
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        chevron.textContent = expanded ? '+' : '−';
+        content.classList.toggle('show', !expanded);
+      });
+    }
+  });
+</script> -->
+
+
+{% schema %}
+{
+  "name": "Custom Material & Care",
+  "tag": "section",
+  "class": "custom-product-material-care",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section Heading",
+      "default": "Material & Care"
+    },
+    {
+      "type": "image_picker",
+      "id": "care_image",
+      "label": "Care Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Material & Care",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,47 @@
+<script
+  type="module"
+  async
+  crossorigin
+  data-em-disable
+  data-categories="analytics"
+  src="https://sdk.beamimpact.com/web-sdk/{{ settings.beam_sdk_version }}/dist/components/community-impact.js"
+></script>
+
+{% schema %}
+  {
+    "name": "Beam",
+    "settings": []
+  }
+{% endschema %}
+
+{% liquid
+  assign shop_id = shop.id
+  if shop_id == 14589446
+    assign store_id = 237
+  else
+    # US store
+    assign store_id = 236
+  endif
+%}
+
+{% assign beam_partner_name = "LouLou Lollipop" %}
+{% if request.locale.iso_code == 'fr' %}
+  {% assign lang = 'fr' %}
+{% else %}
+  {% assign lang = 'en' %}
+{% endif %}
+
+
+
+<!-- BEAM START -->
+  <div id="community" style="padding: 2% 10%;">
+    <beam-community-impact
+      apiKey="{{ settings.beam_api_key }}"
+      chainId="{{ settings.beam_chain_id }}"
+      storeId="{{ store_id }}"
+      baseUrl="{{ settings.beam_base_url }}"
+      lang="{{ lang }}"
+      cardStyle="image"
+    ></beam-community-impact>
+  </div>
+<!-- BEAM END -->

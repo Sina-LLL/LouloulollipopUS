@@ -1,0 +1,37 @@
+{%- if localization.available_countries.size > 1 -%}
+  {%- liquid
+    assign id = section.id | append: '-country'
+
+    capture country_values
+      for country in localization.available_countries
+        if country.iso_code == "US" or country.iso_code == "CA"
+          echo country.iso_code
+          echo '|'
+        endif
+      endfor
+    endcapture
+  -%}
+
+  {%- capture country_names -%}
+    {%- for country in localization.available_countries -%}
+      {%- if country.iso_code == "US" or country.iso_code == "CA" -%}
+        <span class="country-option">
+          <span class="country-option__name">{{ country.name }}</span> 
+          <!-- <span class="country-option__currency">({{ country.currency.iso_code }}&nbsp;{{ country.currency.symbol }})</span> -->
+        </span>|
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endcapture -%}
+
+  {%- liquid
+    assign country_values = country_values | remove_last: '|' | split: '|'
+    assign country_names = country_names | remove_last: '|' | split: '|'
+  -%}
+
+  {%- render 'custom-select',
+    id: id,
+    option_values: country_values,
+    option_names: country_names,
+    selected_value: localization.country.iso_code
+  -%}
+{%- endif -%}

@@ -1,0 +1,182 @@
+<div id="section-id-{{ section.id }}" class="{% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }} fully-padded-row--medium{% else %}fully-spaced-row--medium{% endif %}">
+  <div class="container container--no-max">
+    <div class="flexible-layout flexible-layout--variable-columns valign-middle">
+      <div class="column text-column fade-in-up {% if section.settings.order %}column--order-push-desktop{% endif %}" {%- render 'animation-attrs', attrs: animation_attrs -%}>
+        <div class="text-column__image lightly-spaced-row">  
+        {%- if section.settings.image != blank -%}
+            {%- render 'image' with section.settings.image, sizes: sizes, widths: widths, size_cols_desktop: size_cols_desktop, custom_aspect_ratio: 1-%}
+        {%- else -%}
+          <div class="placeholder-image">
+            {{- 'image' | placeholder_svg_tag: 'placeholder-svg' -}}
+          </div>
+        {%- endif -%}
+        </div>
+      </div>
+      <div class="column text-column fade-in-up" {%- render 'animation-attrs', attrs: animation_attrs -%}>
+        <div class="text-column__image lightly-spaced-row">
+          <h2 class="hometitle h4" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}>
+              <a class="has-paging__title" href="{{ collection.url }}">{{ section.settings.title | escape }}</a>
+            </h2>
+            {% if section.settings.text != blank %}
+              <div class="text-column__text rte" {%- render 'animation-attrs', attrs: animation_attrs -%}>{{ section.settings.text }}</div>
+            {% endif %}
+          </div> 
+          <div class="collection-listing fade-in-up" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
+            <div class="product-grid product-grid--per-row-{{ section.settings.grid }} product-grid--per-row-mob-{{ settings.prod_thumb_mob_per_row }}">
+              {%- liquid
+                if section.settings.product_list == blank
+                  for i in (1..4)
+                    
+                    render 'onboarding-product-block', forloop: forloop
+                   
+                  endfor
+                else
+                  if settings.prod_thumb_shape == 'portrait-23'
+                    assign chosen_aspect_ratio = 0.67
+                  elsif settings.prod_thumb_shape == 'portrait-45'
+                    assign chosen_aspect_ratio = 0.8
+                  elsif settings.prod_thumb_shape == 'square'
+                    assign chosen_aspect_ratio = 1.0
+                  elsif settings.prod_thumb_shape == 'landscape-54'
+                    assign chosen_aspect_ratio = 1.25
+                  elsif settings.prod_thumb_shape == 'landscape-32'
+                    assign chosen_aspect_ratio = 1.50
+                  elsif settings.prod_thumb_shape == 'tallest'
+                    assign chosen_aspect_ratio = 99
+                    for product in section.settings.product_list
+                      if product.featured_media.preview_image.aspect_ratio < chosen_aspect_ratio
+                        assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
+                      endif
+                    endfor
+                  else
+                    assign chosen_aspect_ratio = 0
+                    for product in section.settings.product_list
+                      if product.featured_media.preview_image.aspect_ratio > chosen_aspect_ratio
+                        assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
+                      endif
+                    endfor
+                  endif
+                  for product in section.settings.product_list
+                    
+                    render 'product-block', product: product, custom_aspect_ratio: 1, no_swiping: section.settings.enable_carousel, no_quick_buy_markup: section.settings.enable_carousel
+                    
+                  endfor
+                endif
+              -%}
+             
+            </div>
+                        {% if section.settings.button_label != blank %}
+            <div class="button-row--{{ section.settings.button_style }}">
+              <a class="text-column__button {% if section.settings.button_style != 'link' %}btn btn--{{ section.settings.button_style }}{% else %}small-feature-link{% endif %}" href="{{ section.settings.link }}">{{ section.settings.button_label | escape }}</a>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Highlighted Collection",
+  "class": "section-featured-collection",
+  "disabled_on": {
+    "templates": [
+      "password"
+    ],
+    "groups": [
+      "aside"
+    ]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Product list"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "order",
+      "label": "Put image on the right",
+      "default": false
+    },
+    {
+      "type": "product_list",
+      "id": "product_list",
+      "label": "Product list",
+      "limit": 2
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button style",
+      "default": "primary",
+      "options": [
+        {
+          "label": "Primary",
+          "value": "primary"
+        },
+        {
+          "label": "Secondary",
+          "value": "secondary"
+        },
+        {
+          "label": "Link",
+          "value": "link"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "default",
+      "options": [
+        {
+          "value": "default",
+          "label": "Default"
+        },
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Highlighted Collection",
+      "settings": {
+        "title": "Highlighted Collection"
+      }
+    }
+  ]
+}
+{% endschema %}
