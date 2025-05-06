@@ -1,0 +1,269 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_with_text_overlay_3iMenn": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image": "shopify://shop_images/sustainability-outdoors-3.jpg",
+        "height": "fixed",
+        "height_desktop": 580,
+        "height_mobile": 460,
+        "image_link": "",
+        "full_width": true,
+        "text_alignment": "center center",
+        "mobile_overlay_under": false,
+        "overlay_style": "no_background"
+      }
+    },
+    "rich_text_BTHjGp": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_4hbbxP": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "A better future for all families."
+          }
+        },
+        "heading_Aqrawh": {
+          "type": "heading",
+          "settings": {
+            "title": "Sustainability",
+            "use_h1": true
+          }
+        }
+      },
+      "block_order": [
+        "subheading_4hbbxP",
+        "heading_Aqrawh"
+      ],
+      "settings": {
+        "height": "medium",
+        "text_alignment": "center",
+        "full_width": false,
+        "color_scheme": "default"
+      }
+    },
+    "image_with_text_xchgxU": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_iVemdL": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Our Values"
+          }
+        },
+        "heading_AbRpnW": {
+          "type": "heading",
+          "settings": {
+            "title": "Taking Care, Every Step Of The Way",
+            "use_h1": false
+          }
+        },
+        "text_pTGjD6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>To us, sustainability is more than just a buzzword—and it holds so many different meanings. But we’ll keep this short and sweet. When creating new Loulou Lollipop goodies, we consider our responsibility to our kids above all else. We use the most earth-friendly, non-toxic materials to minimize our impact on the earth they’ll inherit without sacrificing quality or style.</p>",
+            "enlarge_text": false
+          }
+        },
+        "text_wBry4B": {
+          "type": "text",
+          "settings": {
+            "text": "<p>And just like we put extra care and attention into everything we create, we do the same for our people. We treat all of our workers like part of the family, down to the factories where our products are made. Every factory we work with is BSCI compliant, ensuring fair wages, ethical business practices, and high health and safety standards—so you can feel good about every part of your purchase.</p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "subheading_iVemdL",
+        "heading_AbRpnW",
+        "text_pTGjD6",
+        "text_wBry4B"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_March_2024_-Web-29.jpg",
+        "image_width": 500,
+        "image_link": "",
+        "image_position": "left",
+        "text_alignment": "left",
+        "color_scheme": "default"
+      }
+    },
+    "image_with_text_x4kFfT": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_ppYyAi": {
+          "type": "heading",
+          "settings": {
+            "title": "Made To Love (And Last)",
+            "use_h1": false
+          }
+        },
+        "text_qhAFRT": {
+          "type": "text",
+          "settings": {
+            "text": "<p>These sustainable materials stand out, hold up, and feel good.</p><p><strong>Tencel:</strong> Super soft, hypoallergenic, antibacterial, and wrinkle resistant, this earth-friendly fabric – with a carbon-neutral production process – captures and reuses 99.5% of water and solvents for minimal environmental impact. Bonus: It’s perfect for sensitive skin and eczema.</p>",
+            "enlarge_text": false
+          }
+        },
+        "text_q8JDxA": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Silicone:</strong> More durable than plastic (yep, really), and derived from sand—a natural and plentiful resource—our BPA-free, food-grade silicone is safe for teething and chewing, and doesn’t break down into microplastics or produce harmful by-products.</p>",
+            "enlarge_text": false
+          }
+        },
+        "text_xGDdAH": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Muslin:</strong> Made from a soft, breathable bamboo and cotton blend, this hypoallergenic material supports highly regenerative growing processes and our designs are digitally printed to conserve more energy and water than traditional print processes.</p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_ppYyAi",
+        "text_qhAFRT",
+        "text_q8JDxA",
+        "text_xGDdAH"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Baby-in-orange-onesie-reaching-for-orange-flower-on-a-bush.jpg",
+        "image_width": 700,
+        "image_link": "",
+        "image_position": "right",
+        "text_alignment": "left",
+        "color_scheme": "default"
+      }
+    },
+    "rich_text_JwyxMm": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_AQiFHJ": {
+          "type": "heading",
+          "settings": {
+            "title": "Learn More About Our Mission & Impact",
+            "use_h1": false
+          }
+        },
+        "text_pmhx4L": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_AQiFHJ",
+        "text_pmhx4L"
+      ],
+      "settings": {
+        "height": "medium",
+        "text_alignment": "center",
+        "full_width": false,
+        "color_scheme": "default"
+      }
+    },
+    "gallery_PkC8mL": {
+      "type": "gallery",
+      "blocks": {
+        "media_HDnQ4e": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/nav-sustainability.jpg",
+            "enlarge_media": false,
+            "subheading": "",
+            "title": "Sustainability",
+            "button_label": "",
+            "link": "shopify://pages/sustainability",
+            "text_alignment": "center center"
+          }
+        },
+        "media_BMfHXc": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/Father-holding-swaddled-baby.jpg",
+            "enlarge_media": true,
+            "subheading": "",
+            "title": "Safety",
+            "button_label": "",
+            "link": "shopify://pages/safety",
+            "text_alignment": "center center"
+          }
+        },
+        "media_3B7FHx": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/backpack-buddies-team-volunteer-day-loulou-lollipop-square.jpg",
+            "enlarge_media": true,
+            "subheading": "",
+            "title": "Giving Back",
+            "button_label": "",
+            "link": "shopify://pages/community-impact",
+            "text_alignment": "center center"
+          }
+        },
+        "media_RKmLw7": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/sustainability-outdoors-3.jpg",
+            "enlarge_media": true,
+            "subheading": "",
+            "title": "our mission",
+            "button_label": "",
+            "link": "shopify://pages/b-corp",
+            "text_alignment": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "media_HDnQ4e",
+        "media_BMfHXc",
+        "media_3B7FHx",
+        "media_RKmLw7"
+      ],
+      "settings": {
+        "grid_desktop": 2,
+        "grid_mobile": "2",
+        "height": "fixed",
+        "desktop_image_height": 460,
+        "mobile_image_height": 400,
+        "title_size": 36,
+        "title_size_mobile": 22,
+        "enable_margin": true,
+        "enable_row_spacing": true,
+        "full_width": false,
+        "color_scheme": "default",
+        "enable_carousel": true,
+        "overlay_style": "full image-overlay--bg-shadow",
+        "button_style": "primary"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_page_title": true,
+        "full_width": false
+      }
+    }
+  },
+  "order": [
+    "image_with_text_overlay_3iMenn",
+    "rich_text_BTHjGp",
+    "image_with_text_xchgxU",
+    "image_with_text_x4kFfT",
+    "rich_text_JwyxMm",
+    "gallery_PkC8mL",
+    "main"
+  ]
+}

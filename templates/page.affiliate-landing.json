@@ -1,0 +1,636 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_with_text_overlay_qJR9Wb": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_nPyirk": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Share the Joy. Earn Rewards."
+          }
+        },
+        "heading_y9rJ93": {
+          "type": "heading",
+          "settings": {
+            "title": "Become An Ambassador",
+            "heading_max_width": 20,
+            "title_size": 108,
+            "title_size_mobile": 32,
+            "use_h1": true
+          }
+        },
+        "html_rtQKzV": {
+          "type": "html",
+          "settings": {
+            "code": "<div style=\"margin-top: calc(-10px + 2rem);\">\n<div class=\"text-overlay__button button-row__btn btn btn--primary\"id=\"lc-signup-container\" data-lc-button-text=\"Join The Collective\" data-lc-button-text-color=\"white\" data-lc-button-bg-color=\"\"><script type=\"text/javascript\" src=\"https://pub.loudcrowd.com/launch.js?hid=cHJvZ3JhbV9ob3N0OjY2MQ\"></script></div>\n</div>"
+          }
+        },
+        "text_wPPf6k": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Earn rewards, discounts and exclusive gifts</p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "subheading_nPyirk",
+        "heading_y9rJ93",
+        "html_rtQKzV",
+        "text_wPPf6k"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Affiliate.jpg",
+        "height": "fixed",
+        "height_desktop": 600,
+        "height_mobile": 460,
+        "image_link": "",
+        "full_width": true,
+        "text_alignment": "center left",
+        "mobile_overlay_under": false,
+        "overlay_style": "full image-overlay--bg-shadow"
+      }
+    },
+    "custom_content_dFyEjz": {
+      "type": "custom-content",
+      "blocks": {
+        "image_cfVd9J": {
+          "type": "image",
+          "settings": {
+            "width": "half",
+            "height": "adapt",
+            "height_desktop": 600,
+            "height_mobile": 500,
+            "subheading": "Subheading",
+            "title": "Tell your story",
+            "text": "<p>Pair text with an image to tell a story</p>",
+            "enlarge_text": false,
+            "button_label": "",
+            "button_style": "primary",
+            "image_link": "",
+            "text_alignment": "center center",
+            "mobile_overlay_under": false,
+            "overlay_style": "shadow"
+          }
+        },
+        "text_Ynryza": {
+          "type": "text",
+          "settings": {
+            "width": "half",
+            "subheading": "",
+            "title": "Welcome",
+            "text": "<p>Use this text to share information about your store with your customers.</p><p>Describe products, share announcements, or welcome customers to your store.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "text_alignment": "center"
+          }
+        },
+        "html_bcCkEC": {
+          "type": "html",
+          "settings": {
+            "width": "half",
+            "code": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_cfVd9J",
+        "text_Ynryza",
+        "html_bcCkEC"
+      ],
+      "disabled": true,
+      "settings": {
+        "alignment": "middle"
+      }
+    },
+    "multi_column_pjX9LP": {
+      "type": "multi-column",
+      "blocks": {
+        "text_block_edryc6": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "image": "shopify://shop_images/ElzaPhotographie_LoulouLollipop_March2024_-Web-41_a331961a-4465-4161-afc2-ed249978da05.jpg",
+            "title": "Apply",
+            "text": "<p>Apply using the \"JOIN THE COLLECTIVE\" button above. We will notify you once your application has been reviewed.</p>",
+            "button_label": "",
+            "link": ""
+          }
+        },
+        "text_block_XUtyxz": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "image": "shopify://shop_images/Baby-sitting-in-floral-jumpsuit-with-wooden-building-blocks.jpg",
+            "title": "Get Set Up",
+            "text": "<p>Once approved, you’ll receive an email with step-by-step instructions to set up your storefront.</p>",
+            "button_label": "",
+            "link": ""
+          }
+        },
+        "text_block_mA4NzF": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "image": "shopify://shop_images/SleepBagsCollection.jpg",
+            "title": "Share",
+            "text": "<p>Post on Instagram or TikTok featuring your favourite Loulou products and share your storefront link so followers can shop your picks. You’ll earn rewards based on the number of posts you share, so don’t forget to tag @louloulollipop!</p>",
+            "button_label": "",
+            "link": ""
+          }
+        },
+        "text_block_deBh7W": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "image": "shopify://shop_images/UGC_5.jpg",
+            "title": "Earn",
+            "text": "<p>Post your content (Reel, TikTok, or Photo) and earn rewards!<br/><strong>$10 credit</strong> for sharing 2 in-feed posts<br/><strong>$25 credit</strong> for sharing 5 in-feed posts.<br/><strong>$40 credit</strong> for sharing 7+ in-feed posts.<br/>Plus, earn a <strong>10% commission</strong> on every sale made through your storefront.</p>",
+            "button_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_edryc6",
+        "text_block_XUtyxz",
+        "text_block_mA4NzF",
+        "text_block_deBh7W"
+      ],
+      "settings": {
+        "title": "How it Works",
+        "media_aspect_ratio": "s",
+        "media_width": 700,
+        "text_alignment": "left",
+        "button_style": "primary",
+        "color_scheme": "default"
+      }
+    },
+    "rich_text_838aDe": {
+      "type": "rich-text",
+      "blocks": {
+        "text_WciTiP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>*Although posting on Stories doesn’t earn rewards, we highly recommend using it to share your Storefront link in order to maximize your commission potential.</p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "text_WciTiP"
+      ],
+      "disabled": true,
+      "settings": {
+        "height": "small",
+        "text_alignment": "center",
+        "full_width": true,
+        "color_scheme": "default"
+      }
+    },
+    "image_with_text_YYt4GK": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_D9FTrB": {
+          "type": "heading",
+          "settings": {
+            "title": "How It Works",
+            "use_h1": false
+          }
+        },
+        "text_Lckyrh": {
+          "type": "text",
+          "settings": {
+            "text": "<h5>1. Apply</h5><p>Apply using the <strong>JOIN THE COLLECTIVE </strong>button above. We will notify you once your application has been reviewed.</p>",
+            "enlarge_text": false
+          }
+        },
+        "text_Az6KbD": {
+          "type": "text",
+          "settings": {
+            "text": "<h5>2. Get Set Up</h5><p>Once approved, you’ll receive an email with step-by-step instructions to set up your storefront.</p>",
+            "enlarge_text": false
+          }
+        },
+        "text_zJrwKC": {
+          "type": "text",
+          "settings": {
+            "text": "<h5>3. Share</h5><p>Post on Instagram or TikTok featuring your favorite Loulou products, and share your storefront link so followers can shop your picks. Don't forget to tag <a href=\"https://www.instagram.com/louloulollipop/\" target=\"_blank\" title=\"https://www.instagram.com/louloulollipop/\">@louloulollipop</a>.</p>",
+            "enlarge_text": false
+          }
+        },
+        "text_k7D9zR": {
+          "type": "text",
+          "settings": {
+            "text": "<h5>4. Earn</h5><p><strong>Level 1 |</strong> $10 Credit: Share 2 Loulou Lollipop in-feed posts.</p><p><strong>Level 2 |</strong> $25 Credit: Share 5 Loulou Lollipop dedicated in-feed posts.</p><p><strong>Level 3 |</strong> $40 Credit: Share 7+ Loulou Lollipop dedicated in-feed posts.</p><p>Earn 10% commission on every sale made through your storefront.</p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_D9FTrB",
+        "text_Lckyrh",
+        "text_Az6KbD",
+        "text_zJrwKC",
+        "text_k7D9zR"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/UGC_5.jpg",
+        "image_width": 700,
+        "image_link": "",
+        "image_position": "right",
+        "text_alignment": "left",
+        "color_scheme": "default"
+      }
+    },
+    "multi_column_QMmxYh": {
+      "type": "multi-column",
+      "blocks": {
+        "text_block_n7GhQt": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "title": "Apply",
+            "text": "<p>Apply using the APPLY TODAY button above. We will notify you once your application has been reviewed.</p>",
+            "button_label": "",
+            "link": ""
+          }
+        },
+        "text_block_DFpGqJ": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "title": "Create your storefront",
+            "text": "<p>Upon approval, you can create your own storefront! Choose the products you love and share your storefront link with your social media followers.</p>",
+            "button_label": "",
+            "link": ""
+          }
+        },
+        "text_block_HKUNrT": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "title": "Share and Earn!",
+            "text": "<p>EDIT THIS!!!!!!!!!!!!!<br/>Earn 10% commission on each sale made through your shop and give your followers a 10% discount automatically applied by shopping through your storefront or using your affiliate code. <br/>EDIT THIS!!!!!!!!!!!!!</p>",
+            "button_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_n7GhQt",
+        "text_block_DFpGqJ",
+        "text_block_HKUNrT"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Ready to Start?",
+        "media_aspect_ratio": "s",
+        "media_width": 80,
+        "text_alignment": "center",
+        "button_style": "primary",
+        "color_scheme": "1"
+      }
+    },
+    "gallery_GfCKKM": {
+      "type": "gallery",
+      "blocks": {
+        "media_yBLGjH": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/UGC_2.heic",
+            "enlarge_media": false,
+            "subheading": "",
+            "title": "",
+            "button_label": "",
+            "link": "",
+            "text_alignment": "bottom left"
+          }
+        },
+        "media_BmcDUm": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/UGC_4.jpg",
+            "enlarge_media": false,
+            "subheading": "",
+            "title": "",
+            "button_label": "",
+            "link": "",
+            "text_alignment": "bottom left"
+          }
+        },
+        "media_3fmCxj": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/UGC_6.jpg",
+            "enlarge_media": false,
+            "subheading": "",
+            "title": "",
+            "button_label": "",
+            "link": "",
+            "text_alignment": "bottom left"
+          }
+        },
+        "media_8FMgwC": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/UGC_7.heic",
+            "enlarge_media": false,
+            "subheading": "",
+            "title": "",
+            "button_label": "",
+            "link": "",
+            "text_alignment": "bottom left"
+          }
+        }
+      },
+      "block_order": [
+        "media_yBLGjH",
+        "media_BmcDUm",
+        "media_3fmCxj",
+        "media_8FMgwC"
+      ],
+      "settings": {
+        "grid_desktop": 4,
+        "grid_mobile": "2",
+        "height": "fixed",
+        "desktop_image_height": 460,
+        "mobile_image_height": 250,
+        "title_size": 30,
+        "title_size_mobile": 22,
+        "enable_margin": false,
+        "enable_row_spacing": false,
+        "full_width": true,
+        "color_scheme": "default",
+        "enable_carousel": true,
+        "overlay_style": "no_background",
+        "button_style": "primary"
+      }
+    },
+    "image_with_text_34wWWd": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_4REfNY": {
+          "type": "heading",
+          "settings": {
+            "title": "Eligibility &  Posting Rules",
+            "use_h1": false
+          }
+        },
+        "text_CTT4FF": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>Must follow and tag <a href=\"https://www.instagram.com/louloulollipop/\" target=\"_blank\" title=\"https://www.instagram.com/louloulollipop/\">@louloulollipop</a> in your post. Tags must be visible and clickable.</li><li>The account you are posting on must be active and public. </li><li>Your posts must show products clearly, with no competing brands or visible logos included. </li><li>You must meet ALL posting requirements.</li><li>Post must be approved by Loulou Lollipop.</li><li>The post must be a dedicated in-feed post (Reel, TikTok, or Photo). Please note that a carousel with 5 dedicated Loulou Lollipop photos counts as <strong>1 post</strong>. A carousel with only 1 dedicated Loulou Lollipop photo among others does <strong>not</strong> count.</li><li>All shared content must convey a <strong>positive sentiment</strong> toward the brand.</li><li>A post will not qualify if the post is a screenshot or repost. </li><li>Any content showing a baby sleeping must align with current national safe sleep recommendations.</li><li>Any content featuring a baby should ensure they are in a secure environment, free from potential hazards or risks.</li><li>Any Loulou Lollipop content should feature a tidy, organized space—authentic to real homes but as clutter-free as possible.</li><li>You must be 18 years old or older. </li></ul>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_4REfNY",
+        "text_CTT4FF"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Copy_of_376A4029.png",
+        "image_width": 700,
+        "image_link": "",
+        "image_position": "left",
+        "text_alignment": "left",
+        "color_scheme": "default"
+      }
+    },
+    "image_with_text_KYxEte": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_YkGtrj": {
+          "type": "heading",
+          "settings": {
+            "title": "Terms & Conditions",
+            "use_h1": false
+          }
+        },
+        "text_7DN6Mq": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>To be eligible for rewards, you must sign up on this page and follow the rules outlined above.</li><li>By joining this program and tagging us in your content, you give permission for your images to be re-shared for marketing purposes. </li><li>This program is subject to change at any time. </li></ul>",
+            "enlarge_text": false
+          }
+        },
+        "button_kpj4fB": {
+          "type": "button",
+          "settings": {
+            "button_label": "Terms & Conditions",
+            "button_link": "shopify://pages/creator-terms-and-conditions",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_YkGtrj",
+        "text_7DN6Mq",
+        "button_kpj4fB"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/KA1006U_PCB_Short_Sleeve_Long_Pants_Pajama_Set_Pink_Checkerboard_3W_jpg.jpg",
+        "image_width": 700,
+        "image_link": "",
+        "image_position": "right",
+        "text_alignment": "left",
+        "color_scheme": "2"
+      }
+    },
+    "faq_header_j9tJWk": {
+      "type": "faq-header",
+      "settings": {
+        "title": "FAQ",
+        "use_h1": false,
+        "text": "",
+        "show_search": true,
+        "show_index": false,
+        "index_heading": ""
+      }
+    },
+    "collapsible_tabs_JdEzeW": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "question_6CMP6c": {
+          "type": "question",
+          "settings": {
+            "title": "How will I know when I have made a sale?",
+            "answer": "<p>You will receive an email each time you make a sale. Check your dashboard via your storefront to see and track your full sales/commission stats at any point.</p>"
+          }
+        },
+        "question_LtktMM": {
+          "type": "question",
+          "settings": {
+            "title": "When will I recieve my commission?",
+            "answer": "<p>You will receive an email from Tremendous with a link to receive your monthly commission on the first business week of the following month.</p>"
+          }
+        },
+        "question_Lk76K3": {
+          "type": "question",
+          "settings": {
+            "title": "How do I edit the products on my page?",
+            "answer": "<p>Log into your storefront and click the '+ Add' button on the page to pick individual products or create a collection of products to feature on your storefront.</p>"
+          }
+        },
+        "question_gAUnJp": {
+          "type": "question",
+          "settings": {
+            "title": "Where do I view my affiliate stats?",
+            "answer": "<p>Log into your storefront and click the 'View my dashboard' button to access your dashboard. You will be able to see commission stats (i.e. approved sales, sales amount, commissions earned) and social stats (i.e. number of approved/rejected posts) each month.</p>"
+          }
+        },
+        "question_zNkMK9": {
+          "type": "question",
+          "disabled": true,
+          "settings": {
+            "title": "Who can I contact with questions?",
+            "answer": "<p>Reach out to <a href=\"mailto:customercare@louloulollipop.ca\" target=\"_blank\" title=\"mailto:customercare@louloulollipop.ca\">customercare@louloulollipop.ca</a> with questions regarding your storefront or program activity.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_6CMP6c",
+        "question_LtktMM",
+        "question_Lk76K3",
+        "question_gAUnJp",
+        "question_zNkMK9"
+      ],
+      "settings": {
+        "title": ""
+      }
+    },
+    "rich_text_9FGARk": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_TBGHcL": {
+          "type": "heading",
+          "settings": {
+            "title": "Learn More About Our Mission & Impact",
+            "use_h1": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_TBGHcL"
+      ],
+      "settings": {
+        "height": "medium",
+        "text_alignment": "center",
+        "full_width": false,
+        "color_scheme": "default"
+      }
+    },
+    "gallery_4PQrXN": {
+      "type": "gallery",
+      "blocks": {
+        "media_nL9XNK": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/nav-sustainability.jpg",
+            "enlarge_media": false,
+            "subheading": "",
+            "title": "Sustainability",
+            "button_label": "",
+            "link": "shopify://pages/sustainability",
+            "text_alignment": "center center"
+          }
+        },
+        "media_qRahbz": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/Father-holding-swaddled-baby.jpg",
+            "enlarge_media": true,
+            "subheading": "",
+            "title": "Safety",
+            "button_label": "",
+            "link": "shopify://pages/safety",
+            "text_alignment": "center center"
+          }
+        },
+        "media_M4Geam": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/backpack-buddies-team-volunteer-day-loulou-lollipop-square.jpg",
+            "enlarge_media": true,
+            "subheading": "",
+            "title": "Giving Back",
+            "button_label": "",
+            "link": "shopify://pages/community-impact",
+            "text_alignment": "center center"
+          }
+        },
+        "media_x7hgem": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/sustainability-outdoors-3.jpg",
+            "enlarge_media": true,
+            "subheading": "",
+            "title": "our mission",
+            "button_label": "",
+            "link": "shopify://pages/b-corp",
+            "text_alignment": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "media_nL9XNK",
+        "media_qRahbz",
+        "media_M4Geam",
+        "media_x7hgem"
+      ],
+      "settings": {
+        "grid_desktop": 2,
+        "grid_mobile": "1",
+        "height": "fixed",
+        "desktop_image_height": 460,
+        "mobile_image_height": 400,
+        "title_size": 30,
+        "title_size_mobile": 22,
+        "enable_margin": true,
+        "enable_row_spacing": true,
+        "full_width": false,
+        "color_scheme": "default",
+        "enable_carousel": true,
+        "overlay_style": "full",
+        "button_style": "primary"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_page_title": true,
+        "full_width": false
+      }
+    }
+  },
+  "order": [
+    "image_with_text_overlay_qJR9Wb",
+    "custom_content_dFyEjz",
+    "multi_column_pjX9LP",
+    "rich_text_838aDe",
+    "image_with_text_YYt4GK",
+    "multi_column_QMmxYh",
+    "gallery_GfCKKM",
+    "image_with_text_34wWWd",
+    "image_with_text_KYxEte",
+    "faq_header_j9tJWk",
+    "collapsible_tabs_JdEzeW",
+    "rich_text_9FGARk",
+    "gallery_4PQrXN",
+    "main"
+  ]
+}
