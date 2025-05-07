@@ -179,7 +179,7 @@
           "settings": {
             "collection": "sleep-bags",
             "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._11th_2024_-Web-39.jpg",
-            "subheading": "Sleep bags",
+            "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
         },
