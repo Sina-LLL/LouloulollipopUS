@@ -166,10 +166,10 @@ a.navigation__link,.menu-promotion__text {
       margin-bottom: 0.5rem;
 }
 .subheading {
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.06rem;
-  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: normal;
+  text-transform: none;
 }
 .text-overlay__subheading{
   font-size: 1.25rem;
