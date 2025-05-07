@@ -43,7 +43,6 @@
   </style>
 
   {{ 'main.css' | asset_url | stylesheet_tag: preload: true }}
-  {{ 'design-system.css' | asset_url | stylesheet_tag: preload: true }}
 
 
   {%- if settings.swatch_source == 'theme' and settings.swatch_value_list != blank -%}
