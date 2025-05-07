@@ -80,7 +80,7 @@ h2.text-overlay__title.h4{
 
 /* H5 */
 h5,.h5{
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.5rem; 
   text-transform: uppercase;
@@ -89,7 +89,7 @@ h5,.h5{
 
 /* H6 */
 h6,.h6{
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.5rem;
   text-transform: uppercase;
