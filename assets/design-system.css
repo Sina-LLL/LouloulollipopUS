@@ -70,7 +70,6 @@ h4,.h4,h2.text-overlay__title.h4{
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 2.125rem; /* 141.667% */
-  letter-spacing: 0.06rem;
 }
 h2.text-overlay__title.h4{
     font-size: 1.25rem !important;
