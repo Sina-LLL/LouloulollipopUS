@@ -67,12 +67,12 @@ h3,.h3{
 
 /* H4 */
 h4,.h4,h2.text-overlay__title.h4{
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
   line-height: 2.125rem; /* 141.667% */
 }
 h2.text-overlay__title.h4{
-    font-size: 1.25rem !important;
+    font-size: 1.5rem !important;
 }
 /* End H4 */
 
