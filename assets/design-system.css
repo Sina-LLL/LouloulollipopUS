@@ -68,11 +68,14 @@ h3,.h3{
 
 /* H4 */
 h4,.h4,h2.text-overlay__title.h4{
-  font-size: 1.25rem;
-  font-weight: 800;
-  line-height: 2.125rem; /* 141.667% */
-  letter-spacing: 0.06rem;
-  text-transform: uppercase;
+
+  color: var(--Neutrals-Nero-Black, #1D1D1D);
+
+font-size: 2rem;
+font-style: normal;
+font-weight: 700;
+line-height: 2.5rem; /* 125% */
+letter-spacing: -0.03125rem;
 }
 h2.text-overlay__title.h4{
     font-size: 1.25rem !important;
