@@ -389,7 +389,7 @@
   },
   "current": {
     "max_page_width": 1460,
-    "use_fullwidth_layout": false,
+    "use_fullwidth_layout": true,
     "font_col_base": "#1d1d1d",
     "font_col_link": "#4f676e",
     "font_col_heads": "#1d1d1d",
