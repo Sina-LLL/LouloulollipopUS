@@ -28,7 +28,7 @@
         "filter_two_columns": false,
         "button_grid_filter_name": "Size,Taille,Größe,age",
         "auto_apply_hide_unavailable": true,
-        "enable_sticky_filter": false,
+        "enable_sticky_filter": true,
         "show_sort": true,
         "sort_show_featured": true,
         "sort_show_best": true,
