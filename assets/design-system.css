@@ -32,11 +32,12 @@ h1, .h1,
 /* H2 */
 h2,.h2, h2.h1{
   font-size: 1.75rem;
+  font-style: normal;
   font-weight: 700;
-  line-height: 3.125rem;
-  letter-spacing: -0.03125rem;
+  line-height: 2.25rem; /* 128.571% */
 }
 /* End H2 */
+
 /* Display 1 */
 h1.text-overlay__title,
 h2.text-overlay__title
