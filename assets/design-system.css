@@ -32,7 +32,7 @@ h1, .h1,
 
 
 /* H2 */
-h2,.h2, h2.h1{
+h2,.h2, h2.h1,h2.text-overlay__title.h1{
 
 font-family: "Avenir Next";
 font-size: 2rem;
@@ -41,6 +41,7 @@ font-weight: 800;
 line-height: 2.5rem; /* 125% */
 letter-spacing: -0.03125rem;
 }
+
 /* End H2 */
 /* Display 1 */
 h1.text-overlay__title,
