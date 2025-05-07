@@ -9910,7 +9910,7 @@ ul.inline li {
 .collection-slider-row.use-color-scheme {
   margin-top: 0;
   padding-top: var(--section-padding);
-  padding-bottom: 0;
+  padding-bottom: var(--section-padding);
 }
 .collection-slider-row.use-color-scheme .view-all:not(:hover) {
   opacity: 0.75;
