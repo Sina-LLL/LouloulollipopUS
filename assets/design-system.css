@@ -19,8 +19,8 @@ body{
 }
 /* Display 1 */
 h1.text-overlay__title,
-h2.text-overlay__title
-{
+h2.text-overlay__title,
+h2.text-overlay__title.h1 {
   line-height: 113% !important; /* 5.29688rem */
   letter-spacing: -0.01563rem;
   margin-bottom: 0.5rem !important;
