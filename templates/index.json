@@ -280,7 +280,7 @@
       "settings": {
         "title": "Shop by Category",
         "enable_carousel": true,
-        "grid": 4,
+        "grid": 5,
         "color_scheme": "2",
         "full_width": false,
         "coll_grid_image_shape": "portrait-45",
