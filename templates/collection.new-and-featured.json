@@ -93,8 +93,8 @@
           "snack-plate-octopus",
           "muslin-lightweight-sleep-bags-0-5-tog-sun-kissed-shoal"
         ],
-        "button_label": "",
-        "link": "",
+        "button_label": "Shop Now",
+        "link": "shopify://collections/ocean-wonders",
         "button_style": "primary",
         "color_scheme": "default"
       }
