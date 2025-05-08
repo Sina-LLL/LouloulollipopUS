@@ -171,8 +171,8 @@
         "grid": 4,
         "rows": 1,
         "color_scheme": "default",
-        "show_view_all": false,
-        "full_width": true,
+        "show_view_all": true,
+        "full_width": false,
         "text_alignment": "start"
       }
     },
