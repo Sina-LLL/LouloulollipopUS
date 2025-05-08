@@ -232,10 +232,10 @@
         "title": "Planets",
         "collection": "planets",
         "show_vendor": false,
-        "enable_carousel": true,
+        "enable_carousel": false,
         "grid": 5,
-        "rows": 1,
-        "color_scheme": "default",
+        "rows": 2,
+        "color_scheme": "1",
         "show_view_all": false,
         "full_width": false
       }
