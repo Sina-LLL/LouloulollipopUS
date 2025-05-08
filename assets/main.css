@@ -8379,12 +8379,12 @@ html:has(.modal[open]) > body {
   display: none;
 }
 
-/* .carousel[inactive] .slider::-webkit-scrollbar-thumb {
+.carousel[inactive] .slider::-webkit-scrollbar-thumb {
   display: none;
 }
 .carousel[inactive] .slider::-webkit-scrollbar-track {
   display: none;
-} */
+}
 
 .slider__item {
   scroll-snap-align: start;
