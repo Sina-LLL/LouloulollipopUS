@@ -172,7 +172,8 @@
         "rows": 1,
         "color_scheme": "default",
         "show_view_all": false,
-        "full_width": false
+        "full_width": true,
+        "text_alignment": "start"
       }
     },
     "gallery_rHeM9G": {
@@ -237,7 +238,8 @@
         "rows": 2,
         "color_scheme": "1",
         "show_view_all": false,
-        "full_width": false
+        "full_width": false,
+        "text_alignment": "start"
       }
     },
     "featured_collection_QDjC7c": {
@@ -252,7 +254,8 @@
         "rows": 1,
         "color_scheme": "default",
         "show_view_all": false,
-        "full_width": false
+        "full_width": false,
+        "text_alignment": "start"
       }
     }
   },
