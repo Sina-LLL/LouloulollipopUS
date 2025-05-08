@@ -9,15 +9,16 @@
 
 <div class="section-id-{{ section.id }} collection-slider-row {% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }}{% endif %}">
   <div class="container{% if section.settings.full_width %} container--no-max{% endif %}">
-    
-    <h2 class=" h4 text-{{ section.settings.text_alignment}}" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}>
-      <a class="has-paging__title" href="{{ collection.url }}">{{ section.settings.title | escape }}</a>
-    </h2>
-    
-    {% if section.settings.text != blank %}
-      <div class="hometitle  rte text-{{ section.settings.text_alignment}}" {%- render 'animation-attrs', attrs: animation_attrs -%}>{{ section.settings.text }}</div>
-    {% endif %}
-    
+
+    <div class="hometitle">
+      <h2 class=" h4 text-{{ section.settings.text_alignment}}" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}>
+        <a class="has-paging__title" href="{{ collection.url }}">{{ section.settings.title | escape }}</a>
+      </h2>
+      
+      {% if section.settings.text != blank %}
+        <div class="rte text-{{ section.settings.text_alignment}}" {%- render 'animation-attrs', attrs: animation_attrs -%}>{{ section.settings.text }}</div>
+      {% endif %}
+    </div>
     {%- if section.settings.enable_carousel -%}
     <carousel-slider class="carousel block collection-slider">
     {%- endif -%}
