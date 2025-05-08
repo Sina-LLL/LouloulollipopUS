@@ -94,7 +94,7 @@
   
   </div>
   {%- if section.settings.show_view_all -%}
-      <div class="view-all align-center" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.5s"' -%}>
+      <div class="align-center" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.5s"' -%}>
         <a class="small-feature-link" href="{{ collection.url }}">{{ 'sections.featured_collection.view_all' | t }}</a>
       </div>
     {%- endif -%}
