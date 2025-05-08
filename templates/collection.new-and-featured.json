@@ -168,11 +168,11 @@
         "collection": "ocean-wonders",
         "show_vendor": false,
         "enable_carousel": true,
-        "grid": 4,
+        "grid": 5,
         "rows": 1,
         "color_scheme": "default",
         "show_view_all": true,
-        "full_width": true,
+        "full_width": false,
         "text_alignment": "start"
       }
     },
