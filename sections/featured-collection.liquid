@@ -98,13 +98,13 @@
       </carousel-slider>
                   
     {%- endif -%}
-        {%- if section.settings.show_view_all -%}
+  
+  </div>
+  {%- if section.settings.show_view_all -%}
       <div class="view-all align-center" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.5s"' -%}>
         <a class="small-feature-link" href="{{ collection.url }}">{{ 'sections.featured_collection.view_all' | t }}</a>
       </div>
     {%- endif -%}
-  </div>
-
   {% if settings.quickbuy_style != 'off' and section.settings.enable_carousel %}
     <div class="quickbuy-container use-color-scheme use-color-scheme--{{ settings.quickbuy_color_scheme }}">
       <a href="#" class="close-detail" aria-label="{{ 'accessibility.close' | t }}" tabindex="-1">{% render 'icon-close', stroke_width: 1 %}</a>
