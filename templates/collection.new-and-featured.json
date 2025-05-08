@@ -172,7 +172,7 @@
         "rows": 1,
         "color_scheme": "default",
         "show_view_all": true,
-        "full_width": false,
+        "full_width": true,
         "text_alignment": "start"
       }
     },
