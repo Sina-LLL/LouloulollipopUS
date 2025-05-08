@@ -10,25 +10,25 @@
 <div class="section-id-{{ section.id }} collection-slider-row {% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }}{% endif %}">
   <div class="container{% if section.settings.enable_carousel %} container--not-mobile{% endif %}{% if section.settings.full_width %} container--no-max{% endif %}">
     {%- if section.settings.enable_carousel -%}
-      <carousel-slider class="carousel block collection-slider">
+    <h2 class="hometitle h4 text-{{ section.settings.text_alignment}}" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}>
+    
+    <!-- {% if section.settings.enable_carousel %}
+      <button name="prev" class="slider-nav__btn has-ltr-icon">
+        <span class="visually-hidden">{{ 'general.slider.previous' | t }}</span>
+        {% render 'icon-chevron-left' %}
+      </button>
+    {% endif %} -->
+    <a class="has-paging__title" href="{{ collection.url }}">{{ section.settings.title | escape }}</a>
+    <!-- {% if section.settings.enable_carousel %}
+      <button name="next" class="slider-nav__btn has-ltr-icon">
+        <span class="visually-hidden">{{ 'general.slider.next' | t }}</span>
+        {% render 'icon-chevron-right' %}
+      </button>
+    {% endif %} -->
+    </h2>
+    <carousel-slider class="carousel block collection-slider">
     {%- endif -%}
 
-    <h2 class="hometitle h4 text-{{ section.settings.text_alignment}}" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}>
-
-      <!-- {% if section.settings.enable_carousel %}
-        <button name="prev" class="slider-nav__btn has-ltr-icon">
-          <span class="visually-hidden">{{ 'general.slider.previous' | t }}</span>
-          {% render 'icon-chevron-left' %}
-        </button>
-      {% endif %} -->
-      <a class="has-paging__title" href="{{ collection.url }}">{{ section.settings.title | escape }}</a>
-      <!-- {% if section.settings.enable_carousel %}
-        <button name="next" class="slider-nav__btn has-ltr-icon">
-          <span class="visually-hidden">{{ 'general.slider.next' | t }}</span>
-          {% render 'icon-chevron-right' %}
-        </button>
-      {% endif %} -->
-    </h2>
 
     <div class="collection-listing fade-in-up{% if section.settings.enable_carousel %} slider {% if section.settings.full_width %}slider--edge-peek{% endif %} slider--mobile-container-pad {% endif %}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
       <div class="product-grid product-grid--per-row-{{ section.settings.grid }} product-grid--per-row-mob-{{ settings.prod_thumb_mob_per_row }}{% if section.settings.enable_carousel %} slider__grid product-grid--carousel{% endif %}">
