@@ -186,7 +186,7 @@
             "subheading": "",
             "title": "Hedgehogs",
             "button_label": "",
-            "link": "",
+            "link": "shopify://collections/hedgehogs",
             "text_alignment": "bottom left"
           }
         },
@@ -198,7 +198,7 @@
             "subheading": "",
             "title": "Bumble Bees",
             "button_label": "",
-            "link": "",
+            "link": "shopify://collections/bumble-bees",
             "text_alignment": "bottom left"
           }
         }
