@@ -129,6 +129,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "New Ocean Wonders Eat & Play",
+        "text": "",
         "collection": "ocean-wonders-eat-play",
         "show_vendor": false,
         "enable_carousel": true,
@@ -136,7 +137,8 @@
         "rows": 2,
         "color_scheme": "2",
         "show_view_all": true,
-        "full_width": true
+        "full_width": true,
+        "text_alignment": "start"
       }
     },
     "custom_product_highlight_PMwqLc": {
@@ -161,6 +163,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "New Ocean Wonders Collection",
+        "text": "",
         "collection": "ocean-wonders",
         "show_vendor": false,
         "enable_carousel": true,
@@ -168,7 +171,8 @@
         "rows": 2,
         "color_scheme": "1",
         "show_view_all": true,
-        "full_width": true
+        "full_width": true,
+        "text_alignment": "start"
       }
     },
     "collection_list_BzgHGC": {
@@ -473,6 +477,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "For meal time",
+        "text": "",
         "collection": "eat",
         "show_vendor": false,
         "enable_carousel": true,
@@ -480,13 +485,15 @@
         "rows": 1,
         "color_scheme": "2",
         "show_view_all": true,
-        "full_width": true
+        "full_width": true,
+        "text_alignment": "start"
       }
     },
     "featured_collection_6Cp3dQ": {
       "type": "featured-collection",
       "settings": {
         "title": "Perfect gifts for newborns",
+        "text": "",
         "collection": "newborn-0-6-months",
         "show_vendor": false,
         "enable_carousel": true,
@@ -494,13 +501,15 @@
         "rows": 1,
         "color_scheme": "default",
         "show_view_all": true,
-        "full_width": true
+        "full_width": true,
+        "text_alignment": "start"
       }
     },
     "featured_collection_tc8tiM": {
       "type": "featured-collection",
       "settings": {
         "title": "For the World Traveler",
+        "text": "",
         "collection": "world-traveler",
         "show_vendor": false,
         "enable_carousel": true,
@@ -508,7 +517,8 @@
         "rows": 1,
         "color_scheme": "default",
         "show_view_all": false,
-        "full_width": true
+        "full_width": true,
+        "text_alignment": "start"
       }
     },
     "collection_list_g7498J": {

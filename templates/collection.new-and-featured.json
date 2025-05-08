@@ -165,6 +165,7 @@
       "name": "Featured collection",
       "settings": {
         "title": "New Ocean Wonders",
+        "text": "<p>Sorem ipsum dolor sit amet, consectetur elit.</p>",
         "collection": "ocean-wonders",
         "show_vendor": false,
         "enable_carousel": true,
@@ -231,6 +232,7 @@
       "name": "Featured collection",
       "settings": {
         "title": "Planets",
+        "text": "",
         "collection": "planets",
         "show_vendor": false,
         "enable_carousel": false,
@@ -247,6 +249,7 @@
       "name": "Featured collection",
       "settings": {
         "title": "Sushi",
+        "text": "",
         "collection": "sushi",
         "show_vendor": false,
         "enable_carousel": true,
