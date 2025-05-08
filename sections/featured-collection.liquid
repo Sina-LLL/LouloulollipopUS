@@ -30,7 +30,7 @@
     {%- endif -%}
 
 
-    <div class="collection-listing fade-in-up{% if section.settings.enable_carousel %} slider {% if section.settings.full_width %}slider--edge-peek{% endif %} slider--mobile-container-pad {% endif %}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
+    <div class="collection-listing fade-in-up{% if section.settings.enable_carousel %} slider {% if section.settings.full_width %}slider--edge-peek{% endif %} {% endif %}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
       <div class="product-grid product-grid--per-row-{{ section.settings.grid }} product-grid--per-row-mob-{{ settings.prod_thumb_mob_per_row }}{% if section.settings.enable_carousel %} slider__grid product-grid--carousel{% endif %}">
         {%- liquid
           if section.settings.collection == blank
