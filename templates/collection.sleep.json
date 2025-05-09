@@ -203,7 +203,7 @@
         ],
         "show_vendor": false,
         "enable_carousel": true,
-        "grid": 4,
+        "grid": 5,
         "color_scheme": "default",
         "full_width": false
       }
@@ -217,7 +217,7 @@
         "collection": "0-5-tog",
         "show_vendor": false,
         "enable_carousel": true,
-        "grid": 4,
+        "grid": 5,
         "rows": 1,
         "color_scheme": "2",
         "show_view_all": true,
