@@ -9395,17 +9395,6 @@ html:has(.drawer[open]) > body {
 .price-label--sold-out {
   color: var(--product-label-sold-text);
 }
-.price-label--sold-out:after{
-  position: absolute;
-  left: 0;
-  top: 50%;
-  height: 1px;
-  background: #c00;
-  content: "";
-  width: 100%;
-  display: block;
-
-}
 
 .price-label--sale {
   color: var(--product-label-sale-text);
