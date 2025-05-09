@@ -8351,7 +8351,7 @@ html:has(.modal[open]) > body {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scrollbar-width: thin;
-  scrollbar-color: rgb(var(--text-color)) transparent;
+  scrollbar-color: red;
 }
 .slider::-webkit-scrollbar {
   height: 24px;
