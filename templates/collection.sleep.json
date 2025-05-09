@@ -53,101 +53,239 @@
         "collection_4wLe7J": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "subheading": "",
+            "collection": "sleep-bags",
+            "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
         },
-        "collection_x97Bt4": {
+        "collection_KCViN4": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "subheading": "",
+            "collection": "sleepers",
+            "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
         },
-        "collection_FVPf7D": {
+        "collection_HBGXfQ": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "subheading": "",
+            "collection": "pajamas",
+            "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
         },
-        "collection_J3B4Vf": {
+        "collection_qDEWF4": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "subheading": "",
+            "collection": "swaddles",
+            "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
         },
-        "collection_NnEbBA": {
+        "collection_ndLacp": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "subheading": "",
+            "collection": "blankets",
+            "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
         },
-        "collection_mti6nJ": {
+        "collection_7xaNhx": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "subheading": "",
+            "collection": "sleepsuits",
+            "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
         },
-        "collection_GhHGAb": {
+        "collection_hTVcdr": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "subheading": "",
-            "button_label": ""
-          }
-        },
-        "collection_J6hJcF": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "subheading": "",
+            "collection": "crib-sheets",
+            "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
         }
       },
       "block_order": [
         "collection_4wLe7J",
-        "collection_x97Bt4",
-        "collection_FVPf7D",
-        "collection_J3B4Vf",
-        "collection_NnEbBA",
-        "collection_mti6nJ",
-        "collection_GhHGAb",
-        "collection_J6hJcF"
+        "collection_KCViN4",
+        "collection_HBGXfQ",
+        "collection_qDEWF4",
+        "collection_ndLacp",
+        "collection_7xaNhx",
+        "collection_hTVcdr"
       ],
       "name": "Collection list",
       "settings": {
-        "title": "Collection list",
+        "title": "Sleep and Bedding",
         "text": "",
-        "text_alignment": "center",
+        "text_alignment": "start",
         "enable_carousel": true,
-        "grid": 8,
+        "grid": 5,
         "color_scheme": "default",
         "full_width": true,
-        "coll_grid_image_shape": "square",
+        "coll_grid_image_shape": "portrait-23",
         "coll_grid_image_position": "center center",
         "coll_thumb_mob_per_row": "2",
-        "coll_grid_show_count": true,
+        "coll_grid_show_count": false,
         "coll_text_position": "below",
         "coll_text_position_under_mobile": false,
-        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_x": "left",
         "coll_thumb_text_align_y": "center",
         "coll_button_style": "primary"
+      }
+    },
+    "gallery_xaHCdy": {
+      "type": "gallery",
+      "blocks": {
+        "media_bCRfid": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/Canada_Day_blanket_Swaddle-22.jpg",
+            "enlarge_media": false,
+            "subheading": "",
+            "title": "For the World Traveler",
+            "button_label": "",
+            "link": "shopify://collections/world-traveler",
+            "text_alignment": "bottom left"
+          }
+        },
+        "media_enRK7g": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/Muslin_Sleep_Bag_-_Hedgehogs__2_1150cf2d-b66c-40d0-b741-dd488f7e5bda.jpg",
+            "enlarge_media": false,
+            "subheading": "",
+            "title": "Animals and Insects",
+            "button_label": "",
+            "link": "https://louloulollipop.com/collections/animals-insects/Sleep",
+            "text_alignment": "bottom left"
+          }
+        }
+      },
+      "block_order": [
+        "media_bCRfid",
+        "media_enRK7g"
+      ],
+      "name": "Gallery",
+      "settings": {
+        "grid_desktop": 2,
+        "grid_mobile": "1",
+        "height": "fixed",
+        "desktop_image_height": 560,
+        "mobile_image_height": 400,
+        "title_size": 30,
+        "title_size_mobile": 22,
+        "enable_margin": true,
+        "enable_row_spacing": true,
+        "full_width": false,
+        "color_scheme": "default",
+        "enable_carousel": true,
+        "overlay_style": "shadow",
+        "button_style": "primary"
+      }
+    },
+    "product_list_jGJn7D": {
+      "type": "product-list",
+      "name": "Product list",
+      "settings": {
+        "title": "Best Sellers, for the Best Sleep",
+        "product_list": [
+          "sleeper-ice-hockey",
+          "sleeper-smiley-sharks",
+          "muslin-swaddle-usa",
+          "muslin-swaddle-sushi",
+          "muslin-lightweight-sleep-bags-0-5-tog-painterly-seahorses",
+          "muslin-swaddle-ramen",
+          "muslin-swaddle-football",
+          "muslin-lightweight-sleep-bags-0-5-tog-sun-kissed-shoal"
+        ],
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 4,
+        "color_scheme": "default",
+        "full_width": false
+      }
+    },
+    "featured_collection_yhnHaN": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "Lightweight Sleep Bags",
+        "text": "<p>Something about warm weather</p>",
+        "collection": "0-5-tog",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 4,
+        "rows": 1,
+        "color_scheme": "2",
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "start"
+      }
+    },
+    "custom_product_highlight_pTqNGi": {
+      "type": "custom-product-highlight",
+      "name": "Highlighted Collection",
+      "settings": {
+        "title": "Our Favorite Sleepers",
+        "text": "<p>Share blog posts, products, or promotions with your customers. </p>",
+        "image": "shopify://shop_images/Sleeper_All_Aboard__5_3861c2ed-f766-4071-b9c6-55262d743e5f.jpg",
+        "order": false,
+        "product_list": [
+          "sleeper-ocean-explorer",
+          "sleeper-sun-kissed-shoal"
+        ],
+        "button_label": "Shop Sleepers",
+        "link": "shopify://collections/sleepers",
+        "button_style": "primary",
+        "color_scheme": "1"
+      }
+    },
+    "featured_collection_YUXjBF": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "Swaddles",
+        "text": "<p>Wrap them tight and some other words</p>",
+        "collection": "swaddles",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 5,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "start"
+      }
+    },
+    "featured_collection_gfYhgH": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "Crib Sheets",
+        "text": "<p>Soft and gentle and some other words</p>",
+        "collection": "crib-sheets",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 5,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "start"
       }
     }
   },
   "order": [
     "main",
-    "collection_list_4KKNJE"
+    "collection_list_4KKNJE",
+    "gallery_xaHCdy",
+    "product_list_jGJn7D",
+    "featured_collection_yhnHaN",
+    "custom_product_highlight_pTqNGi",
+    "featured_collection_YUXjBF",
+    "featured_collection_gfYhgH"
   ]
 }
