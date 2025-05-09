@@ -8479,13 +8479,13 @@ carousel-slider[data-dynamic-height=true]:not([inactive]) {
   --slider-nav-btn-color: inherit;
   position: absolute;
   z-index: 3;
-  top: calc(50% - 12px);
+  top: calc(50% - 40px);
   transition: opacity 200ms;
 }
 .slider-nav--floating .slider-nav__btn, .slider-nav--floating .slider-nav__btn:hover, .slider-nav--floating .slider-nav__btn[disabled] {
   padding: 0;
   border: none !important;
-  background: transparent !important;
+  /* background: transparent !important; */
   color: var(--slider-nav-btn-color) !important;
 }
 .slider-nav--floating .slider-nav__btn[disabled] {
