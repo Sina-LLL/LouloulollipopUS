@@ -59,7 +59,7 @@
     -%}
   {%- endcapture -%}
 
-  <div class="{{ super_container_class }}">
+  <div class="{{ super_container_class }}container">
     {%- unless section.settings.full_width -%}<div class="container--not-mobile">{%- endunless -%}
     <div class="{% if section.settings.full_width %} container{% endif %} hometitle">
       <h2 class=" h4 text-{{ section.settings.text_alignment}}" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}>
