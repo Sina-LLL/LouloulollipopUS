@@ -6010,7 +6010,7 @@ hotspots-image .image-overlay {
     opacity: 0.9;
   }
   .container > .related-collection-links--gallery.gallery .slider-nav__btn {
-    --slider-nav-btn-x-offset: -26px;
+    --slider-nav-btn-x-offset: 10px;
   }
   .container > .related-collection-links--gallery.gallery .slider-nav__btn::after {
     content: none;
@@ -8475,7 +8475,7 @@ carousel-slider[data-dynamic-height=true]:not([inactive]) {
 }
 
 .slider-nav--floating .slider-nav__btn {
-  --slider-nav-btn-x-offset: -26px;
+  --slider-nav-btn-x-offset: 10px;
   --slider-nav-btn-color: inherit;
   position: absolute;
   z-index: 3;
