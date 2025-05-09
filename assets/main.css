@@ -8366,6 +8366,7 @@ html:has(.modal[open]) > body {
 
 .slider::-webkit-scrollbar-thumb:hover {
   border-width: 10px;
+  height: 5px
 }
 .slider::-webkit-scrollbar-track {
   margin: 0 calc(var(--gutter) - var(--scrollbar-border-width));
