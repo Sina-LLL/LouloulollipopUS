@@ -194,6 +194,8 @@
       "name": "Product list",
       "settings": {
         "title": "Best Sellers, for the Best Sleep",
+        "text": "",
+        "text_alignment": "start",
         "product_list": [
           "sleeper-ice-hockey",
           "sleeper-smiley-sharks",
@@ -208,7 +210,7 @@
         "enable_carousel": true,
         "grid": 5,
         "color_scheme": "default",
-        "full_width": false
+        "full_width": true
       }
     },
     "featured_collection_yhnHaN": {
