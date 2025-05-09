@@ -8354,7 +8354,7 @@ html:has(.modal[open]) > body {
   scrollbar-color: rgb(var(--text-color)) transparent;
 }
 .slider::-webkit-scrollbar {
-  height: 1px;
+  height: 160px;
 }
 .slider::-webkit-scrollbar-thumb {
   border: var(--scrollbar-border-width) solid transparent;
