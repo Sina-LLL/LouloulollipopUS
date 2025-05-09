@@ -182,7 +182,7 @@
         "title_size_mobile": 22,
         "enable_margin": true,
         "enable_row_spacing": true,
-        "full_width": false,
+        "full_width": true,
         "color_scheme": "default",
         "enable_carousel": true,
         "overlay_style": "shadow",
