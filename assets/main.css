@@ -8531,7 +8531,7 @@ carousel-slider[inactive] .slider-nav__btn {
   height: 32px;
   margin: 6px;
   stroke-width: 1;
-  stroke: rgb(var(--body-text-color));
+  stroke: #1d1d1d;
   opacity: 1;
   filter: none;
 }
