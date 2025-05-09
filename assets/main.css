@@ -8354,27 +8354,26 @@ html:has(.modal[open]) > body {
   scrollbar-color: rgb(var(--text-color)) transparent;
 }
 
-.slider::-webkit-scrollbar {
+/* .slider::-webkit-scrollbar {
   height: 16px;
 }
 .slider::-webkit-scrollbar-thumb {
-  /* border: var(--scrollbar-border-width) solid transparent;
+  border: var(--scrollbar-border-width) solid transparent;
   border-radius: var(--btn-border-radius);
-  box-shadow: inset 0 0 0 2px rgb(var(--text-color)); */
-  border-width: 1px;
+  box-shadow: inset 0 0 0 2px rgb(var(--text-color));
   height: 3px;
 }
 
 .slider::-webkit-scrollbar-thumb:hover {
-  /* border-width: 10px; */
-  height: 2px;
+  border-width: 10px;
+  height: 5px;
 }
 .slider::-webkit-scrollbar-track {
-  /* margin: 0 calc(var(--gutter) - var(--scrollbar-border-width));
-  border: var(--scrollbar-border-width) solid transparent; */
+  margin: 0 calc(var(--gutter) - var(--scrollbar-border-width));
+  border: var(--scrollbar-border-width) solid transparent;
   border-radius: var(--btn-border-radius);
   box-shadow: inset 0 0 0 2px rgba(var(--text-color)/0.3);
-}
+} */
 
 .slider.slider--no-scrollbar {
   padding-bottom: 0;
