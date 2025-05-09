@@ -61,7 +61,7 @@
 
   <div class="{{ super_container_class }}">
     {%- unless section.settings.full_width -%}<div class="container container--not-mobile">{%- endunless -%}
-    <div class="hometitle">
+    <div class="hometitle container">
       <h2 class=" h4 text-{{ section.settings.text_alignment}}" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}>
         <a class="has-paging__title" href="{{ collection.url }}">{{ section.settings.title | escape }}</a>
       </h2>
