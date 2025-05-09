@@ -8361,6 +8361,7 @@ html:has(.modal[open]) > body {
   border: var(--scrollbar-border-width) solid transparent;
   border-radius: var(--btn-border-radius);
   box-shadow: inset 0 0 0 2px rgb(var(--text-color));
+  height: 3px;
 }
 
 .slider::-webkit-scrollbar-thumb:hover {
