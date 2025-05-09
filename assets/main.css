@@ -8485,7 +8485,7 @@ carousel-slider[data-dynamic-height=true]:not([inactive]) {
 .slider-nav--floating .slider-nav__btn, .slider-nav--floating .slider-nav__btn:hover, .slider-nav--floating .slider-nav__btn[disabled] {
   padding: 0;
   border: none !important;
-  color: var(--slider-nav-btn-color) !important;
+  color: #1d1d1d !important;
   background: white;
   border-radius: 50%;
   /* position: relative; */
@@ -8531,7 +8531,7 @@ carousel-slider[inactive] .slider-nav__btn {
   height: 32px;
   margin: 6px;
   stroke-width: 1;
-  stroke: #1d1d1d;
+  stroke: rgb(var(--body-text-color));
   opacity: 1;
   filter: none;
 }
