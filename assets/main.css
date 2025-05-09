@@ -8354,23 +8354,15 @@ html:has(.modal[open]) > body {
   scrollbar-color: rgb(var(--text-color)) transparent;
 }
 
-/* .slider::-webkit-scrollbar {
+.slider::-webkit-scrollbar {
   height: 16px;
 }
 .slider::-webkit-scrollbar-thumb {
   border: var(--scrollbar-border-width) solid transparent;
   border-radius: var(--btn-border-radius);
   box-shadow: inset 0 0 0 2px rgb(var(--text-color));
-} */
-.slider::-webkit-scrollbar {
-  height: 8px;
-  transition: height 0.3s ease;
 }
 
-/* On hover of the container, increase scrollbar height */
-.slider:hover::-webkit-scrollbar {
-  height: 2px;
-}
 .slider::-webkit-scrollbar-thumb:hover {
   border-width: 10px;
 }
