@@ -283,6 +283,8 @@
       ],
       "settings": {
         "title": "Shop by Category",
+        "text": "",
+        "text_alignment": "center",
         "enable_carousel": true,
         "grid": 5,
         "color_scheme": "2",
@@ -458,6 +460,8 @@
       ],
       "settings": {
         "title": "Shop by Age",
+        "text": "",
+        "text_alignment": "center",
         "enable_carousel": true,
         "grid": 5,
         "color_scheme": "1",
@@ -476,7 +480,7 @@
     "featured_collection_K3tJdQ": {
       "type": "featured-collection",
       "settings": {
-        "title": "For meal time",
+        "title": "For Meal Time",
         "text": "",
         "collection": "eat",
         "show_vendor": false,
@@ -486,7 +490,7 @@
         "color_scheme": "2",
         "show_view_all": true,
         "full_width": true,
-        "text_alignment": "start"
+        "text_alignment": "center"
       }
     },
     "featured_collection_6Cp3dQ": {
@@ -559,6 +563,8 @@
       ],
       "settings": {
         "title": "Our Most Loved",
+        "text": "",
+        "text_alignment": "start",
         "enable_carousel": true,
         "grid": 3,
         "color_scheme": "1",
