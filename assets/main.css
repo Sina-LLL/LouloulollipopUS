@@ -8351,7 +8351,7 @@ html:has(.modal[open]) > body {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scrollbar-width: thin;
-  scrollbar-color: #6A8B95 transparent;
+  scrollbar-color: rgb(var(--text-color)) transparent;
 }
 .slider::-webkit-scrollbar {
   height: 16px;
@@ -8379,12 +8379,12 @@ html:has(.modal[open]) > body {
   display: none;
 }
 
-.carousel[inactive] .slider::-webkit-scrollbar-thumb {
+/* .carousel[inactive] .slider::-webkit-scrollbar-thumb {
   display: none;
 }
 .carousel[inactive] .slider::-webkit-scrollbar-track {
   display: none;
-}
+} */
 
 .slider__item {
   scroll-snap-align: start;
