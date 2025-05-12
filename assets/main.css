@@ -9912,6 +9912,7 @@ ul.inline li {
 /* Collection slider specific */
 .collection-slider-row {
   margin-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
 }
 .collection-slider-row.use-color-scheme {
   margin-top: 0;
