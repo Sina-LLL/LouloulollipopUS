@@ -89,7 +89,7 @@
     </div>
 
     {%- if section.settings.enable_carousel -%}
-         <div class="slider-nav slider-nav--floating desktop-only no-js-hidden">
+         <div class="slider-nav slider-nav--floating no-js-hidden">
           <button type="button" class="slider-nav__btn has-ltr-icon" name="prev" aria-controls="slider-{{ section.id }}">
             <span class="visually-hidden">{{ 'general.slider.previous' | t }}</span>
             {%- render 'icon-chevron-left', stroke_width: 1.5 -%}
