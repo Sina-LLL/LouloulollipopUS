@@ -60,8 +60,16 @@
   {%- endcapture -%}
 
   <div class="{{ super_container_class }}">
-    {%- unless section.settings.full_width -%}<div class="container container--not-mobile">{%- endunless -%}
-
+    <div class="container{% if section.settings.full_width %} container--no-max{% endif %}">
+      <div class=" hometitle">
+        <h2 class=" h4 text-{{ section.settings.text_alignment}}" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}>
+          <a class="has-paging__title" href="{{ collection.url }}">{{ section.settings.title | escape }}</a>
+        </h2>
+        
+        {% if section.settings.text != blank %}
+          <div class="rte text-{{ section.settings.text_alignment}}" {%- render 'animation-attrs', attrs: animation_attrs -%}>{{ section.settings.text }}</div>
+        {% endif %}
+      </div>
     {%- assign grid_mobile_int = section.settings.grid_mobile | plus: 0 -%}
     <div class="
       gallery
@@ -168,7 +176,7 @@
     </carousel-slider>
     {%- endif -%}
 
-    {%- unless section.settings.full_width -%}</div>{%- endunless -%}
+    </div>
   </div>
 </div>
 
@@ -183,6 +191,37 @@
     ]
   },
   "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "info": "Enter <br> for a line-break"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text Alignment",
+      "options": [
+        {
+          "value": "start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "end",
+          "label": "Right"
+        }
+      ],
+      "default": "start"
+    },
     {
       "type": "range",
       "id": "grid_desktop",

@@ -17,37 +17,14 @@ h6,.h6,
 body{
   font-family: sofia-pro, sans-serif;
 }
-
-h1, .h1{
-font-size: 3rem;
-line-height: 3.625rem; /* 120.833% */
-}
-
-h1, .h1,
-.btn,
-.small-feature-link{
-  font-weight:600;
-
-}
-
-
-/* H2 */
-h2,.h2, h2.h1{
-  font-size: 1.75rem;
-  font-weight: 700;
-  line-height: 3.125rem;
-  letter-spacing: -0.03125rem;
-}
-/* End H2 */
 /* Display 1 */
 h1.text-overlay__title,
-h2.text-overlay__title
-{
-  font-size:2.5rem !important;
+h2.text-overlay__title,
+h2.text-overlay__title.h1 {
   line-height: 113% !important; /* 5.29688rem */
   letter-spacing: -0.01563rem;
   margin-bottom: 0.5rem !important;
-    font-weight: 600;
+  font-weight: 800;
 
 }
 @media (min-width: 1100px) {
@@ -57,22 +34,44 @@ h2.text-overlay__title
   }
 }
 /* End Display 1 */
+
+/* H1 */
+h1, .h1{
+font-size: 3rem;
+line-height: 3.625rem; 
+}
+
+h1, .h1,
+.btn,
+.small-feature-link{
+  font-weight:600;
+
+}
+/* End H1 */
+
+/* H2 */
+h2,.h2, h2.h1{
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.25rem; 
+}
+/* End H2 */
+
+
 /* H3 */
 h3,.h3{
-  font-size: 1.8rem;
-  font-weight: 500;
-  line-height: 2.625rem; /* 131.25% */
-  letter-spacing: 0.03125rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 2rem; 
 }
 /* End H3 */
 
 /* H4 */
 h4,.h4,h2.text-overlay__title.h4{
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  line-height: 2.125rem; /* 141.667% */
-  letter-spacing: 0.06rem;
-  text-transform: uppercase;
+  line-height: 1.75rem; 
 }
 h2.text-overlay__title.h4{
     font-size: 1.25rem !important;
@@ -81,20 +80,18 @@ h2.text-overlay__title.h4{
 
 /* H5 */
 h5,.h5{
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 600;
-  line-height: 1.875rem; /* 150% */
-  letter-spacing: 0.03125rem;
+  line-height: 1.5rem; 
   text-transform: uppercase;
 }
 /* End H5 */
 
 /* H6 */
 h6,.h6{
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 600;
-  line-height: 1.75rem; /* 155.556% */
-  letter-spacing: 0.03125rem;
+  line-height: 1.5rem;
   text-transform: uppercase;
 }
 /* End H6 */
@@ -169,10 +166,10 @@ a.navigation__link,.menu-promotion__text {
       margin-bottom: 0.5rem;
 }
 .subheading {
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.06rem;
-  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: normal;
+  text-transform: none;
 }
 .text-overlay__subheading{
   font-size: 1.25rem;

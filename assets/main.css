@@ -1603,7 +1603,7 @@ h6,
 }
 @media (max-width: 1299.98px) {
   .hometitle {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 }
 
@@ -6010,7 +6010,7 @@ hotspots-image .image-overlay {
     opacity: 0.9;
   }
   .container > .related-collection-links--gallery.gallery .slider-nav__btn {
-    --slider-nav-btn-x-offset: -26px;
+    --slider-nav-btn-x-offset: 10px;
   }
   .container > .related-collection-links--gallery.gallery .slider-nav__btn::after {
     content: none;
@@ -8353,8 +8353,9 @@ html:has(.modal[open]) > body {
   scrollbar-width: thin;
   scrollbar-color: rgb(var(--text-color)) transparent;
 }
+
 .slider::-webkit-scrollbar {
-  height: 24px;
+  height: 16px;
 }
 .slider::-webkit-scrollbar-thumb {
   border: var(--scrollbar-border-width) solid transparent;
@@ -8475,18 +8476,23 @@ carousel-slider[data-dynamic-height=true]:not([inactive]) {
 }
 
 .slider-nav--floating .slider-nav__btn {
-  --slider-nav-btn-x-offset: -26px;
+  --slider-nav-btn-x-offset: 10px;
   --slider-nav-btn-color: inherit;
   position: absolute;
   z-index: 3;
-  top: calc(50% - 12px);
+  top: calc(50% - 40px);
   transition: opacity 200ms;
 }
 .slider-nav--floating .slider-nav__btn, .slider-nav--floating .slider-nav__btn:hover, .slider-nav--floating .slider-nav__btn[disabled] {
   padding: 0;
   border: none !important;
-  background: transparent !important;
-  color: var(--slider-nav-btn-color) !important;
+  color: #1d1d1d !important;
+  background: white;
+  border-radius: 50%;
+  /* position: relative; */
+  /* padding: 5px; */
+  height: 30px;
+  width: 30px;
 }
 .slider-nav--floating .slider-nav__btn[disabled] {
   opacity: 0;
@@ -9906,11 +9912,12 @@ ul.inline li {
 /* Collection slider specific */
 .collection-slider-row {
   margin-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
 }
 .collection-slider-row.use-color-scheme {
   margin-top: 0;
   padding-top: var(--section-padding);
-  padding-bottom: 0;
+  padding-bottom: var(--section-padding);
 }
 .collection-slider-row.use-color-scheme .view-all:not(:hover) {
   opacity: 0.75;
