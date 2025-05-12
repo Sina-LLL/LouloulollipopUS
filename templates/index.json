@@ -564,7 +564,7 @@
       "settings": {
         "title": "Our Most Loved",
         "text": "",
-        "text_alignment": "start",
+        "text_alignment": "center",
         "enable_carousel": true,
         "grid": 3,
         "color_scheme": "1",
