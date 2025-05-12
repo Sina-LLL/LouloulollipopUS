@@ -54,6 +54,7 @@
           "type": "collection",
           "settings": {
             "collection": "sleep-bags",
+            "image": "shopify://shop_images/BA9003U.SKS_Muslin_Sleep_Bag_-_Lightweight_Sun-kissed_Shoal_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -62,6 +63,7 @@
           "type": "collection",
           "settings": {
             "collection": "sleepers",
+            "image": "shopify://shop_images/BA1002U.SHK_Sleeper_Sharks_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -70,6 +72,7 @@
           "type": "collection",
           "settings": {
             "collection": "pajamas",
+            "image": "shopify://shop_images/KA1006U.MER_ShortSleeveLongPantsPajamaSet_Mermaids_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -78,6 +81,7 @@
           "type": "collection",
           "settings": {
             "collection": "swaddles",
+            "image": "shopify://shop_images/SWOCX_MuslinSwaddle_OceanExplorer_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -86,6 +90,7 @@
           "type": "collection",
           "settings": {
             "collection": "blankets",
+            "image": "shopify://shop_images/QTCZF_02.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -94,6 +99,7 @@
           "type": "collection",
           "settings": {
             "collection": "sleepsuits",
+            "image": "shopify://shop_images/BA9007U.PCB_Sleepsuit_1.0_Tog_Pink_Checkerboard_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -102,6 +108,7 @@
           "type": "collection",
           "settings": {
             "collection": "crib-sheets",
+            "image": "shopify://shop_images/CRIBSEL_MuslinFittedCribSheet_Seals_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
