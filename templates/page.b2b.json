@@ -46,7 +46,7 @@
       ],
       "name": "Slideshow",
       "settings": {
-        "height": "fixed",
+        "height": "full",
         "height_desktop": 600,
         "height_mobile": 460,
         "full_width": true,
