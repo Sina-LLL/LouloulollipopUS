@@ -89,6 +89,7 @@
           "type": "collection",
           "settings": {
             "collection": "sleep-swaddle",
+            "image": "shopify://shop_images/BA9003U.SKS_Muslin_Sleep_Bag_-_Lightweight_Sun-kissed_Shoal_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -97,6 +98,7 @@
           "type": "collection",
           "settings": {
             "collection": "wear",
+            "image": "shopify://shop_images/BA2006U.SGL_WaffleTop_BottomSet_Seaglass_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -105,6 +107,7 @@
           "type": "collection",
           "settings": {
             "collection": "eat",
+            "image": "shopify://shop_images/SILBIBSSH_SiliconeBibPrinted_Seashells_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -113,6 +116,7 @@
           "type": "collection",
           "settings": {
             "collection": "play",
+            "image": "shopify://shop_images/WTR-009-BFG-01_32dc418b-993b-413b-80e7-bab44a9f1acd.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -121,6 +125,7 @@
           "type": "collection",
           "settings": {
             "collection": "bathe",
+            "image": "shopify://shop_images/TWMER_23.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
