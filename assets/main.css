@@ -8576,7 +8576,7 @@ carousel-slider[inactive] .slider-nav__btn {
   }
   .slider--mobile-container-pad {
     margin-left: 0;
-    padding-left: var(--container-pad-x);
+    padding-left: 0;
     padding-right: var(--container-pad-x);
     scroll-padding-left: var(--container-pad-x);
     scroll-padding-right: var(--container-pad-x);
