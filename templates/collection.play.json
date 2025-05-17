@@ -54,6 +54,7 @@
           "type": "collection",
           "settings": {
             "collection": "single-teethers",
+            "image": "shopify://shop_images/WTR-009-BFG-01_32dc418b-993b-413b-80e7-bab44a9f1acd.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -168,6 +169,7 @@
         "media_bCRfid": {
           "type": "media",
           "settings": {
+            "image": "shopify://shop_images/WRGSTPST_Wild_Teething_Ring_Set_Pastel_52.jpg",
             "enlarge_media": false,
             "subheading": "",
             "title": "Teething Rings",
@@ -179,6 +181,7 @@
         "media_enRK7g": {
           "type": "media",
           "settings": {
+            "image": "shopify://shop_images/FCSALP_Flashcards_Alphabets_53_d198b5ee-619c-4937-9997-5ca1027a754c.jpg",
             "enlarge_media": false,
             "subheading": "",
             "title": "Flash Cards",
@@ -253,7 +256,7 @@
       "settings": {
         "title": "Silicone Teethers",
         "text": "",
-        "collection": "silicone-teethers",
+        "collection": "single-teethers",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 5,
@@ -270,6 +273,7 @@
       "settings": {
         "title": "Our Favourite Pacifier Clips",
         "text": "",
+        "image": "shopify://shop_images/SILCPSWRBN_Silicone_Pacifier_Clip_Sweetheart-Rainbow_7.jpg",
         "order": false,
         "product_list": [
           "gem-colour-pop-silicone-wood-pacifier-clip-pink-quartz",
