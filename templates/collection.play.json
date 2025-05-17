@@ -53,8 +53,7 @@
         "collection_4wLe7J": {
           "type": "collection",
           "settings": {
-            "collection": "silicone-teethers",
-            "image": "shopify://shop_images/WTR-009-BFG_WildTeether_Sharks_1.jpg",
+            "collection": "single-teethers",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -169,7 +168,6 @@
         "media_bCRfid": {
           "type": "media",
           "settings": {
-            "image": "shopify://shop_images/WRGSTPST_Wild_Teething_Ring_Set_Pastel_52.jpg",
             "enlarge_media": false,
             "subheading": "",
             "title": "Teething Rings",
@@ -181,7 +179,6 @@
         "media_enRK7g": {
           "type": "media",
           "settings": {
-            "image": "shopify://shop_images/FCSALP_Flashcards_Alphabets_53.jpg",
             "enlarge_media": false,
             "subheading": "",
             "title": "Flash Cards",
@@ -273,7 +270,6 @@
       "settings": {
         "title": "Our Favourite Pacifier Clips",
         "text": "",
-        "image": "shopify://shop_images/SILCPSWRBN_Silicone_Pacifier_Clip_Sweetheart-Rainbow_7.jpg",
         "order": false,
         "product_list": [
           "gem-colour-pop-silicone-wood-pacifier-clip-pink-quartz",
