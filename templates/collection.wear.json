@@ -11,13 +11,14 @@
   "sections": {
     "main": {
       "type": "main-collection",
+      "disabled": true,
       "settings": {
         "show_title": true,
         "show_image_behind_heading": true,
-        "heading_image_height": "huge",
+        "heading_image_height": "large",
         "overlay_style": "shadow",
         "coll_desc_pos": "below",
-        "coll_num_per_page_int": 50,
+        "coll_num_per_page_int": 30,
         "grid": 4,
         "show_vendor": false,
         "show_total": false,
@@ -39,15 +40,269 @@
         "related_collections_style": "gallery",
         "rel_coll_gall_aspect_ratio": "1",
         "image_position": "center center",
-        "rel_coll_gall_enable_margin": false,
+        "rel_coll_gall_enable_margin": true,
         "rel_coll_gall_full_width": false,
         "rel_coll_gall_overlay_style": "full image-overlay--bg-shadow",
         "rel_coll_gall_text_alignment": "center center",
         "rel_coll_grid_mobile": "2"
       }
+    },
+    "collection_list_4KKNJE": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_4wLe7J": {
+          "type": "collection",
+          "settings": {
+            "collection": "bodysuits-rompers",
+            "image": "shopify://shop_images/BA3005F.MER_BodysuitDress_Mermaids_1.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_KCViN4": {
+          "type": "collection",
+          "settings": {
+            "collection": "sets-bottoms",
+            "image": "shopify://shop_images/BA2006U.SGL_WaffleTop_BottomSet_Seaglass_1.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_HBGXfQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "dresses",
+            "image": "shopify://shop_images/KA4003F.LLC_WaffleSkaterDress_Lilac_1.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_ngYLRN": {
+          "type": "collection",
+          "settings": {
+            "collection": "sleepers",
+            "image": "shopify://shop_images/BA1002U.SHK_Sleeper_Sharks_1.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_nwWhhg": {
+          "type": "collection",
+          "settings": {
+            "collection": "pajamas",
+            "image": "shopify://shop_images/KA1006U.MER_ShortSleeveLongPantsPajamaSet_Mermaids_1.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_qDEWF4": {
+          "type": "collection",
+          "settings": {
+            "collection": "bandana-bibs",
+            "image": "shopify://shop_images/BIBSEL_9_22be66d9-bb15-4c54-9481-06cdecd34f02.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_ndLacp": {
+          "type": "collection",
+          "settings": {
+            "collection": "hats-headbands",
+            "image": "shopify://shop_images/WaffleTopKnotBeanie-DenimBlue.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_4wLe7J",
+        "collection_KCViN4",
+        "collection_HBGXfQ",
+        "collection_ngYLRN",
+        "collection_nwWhhg",
+        "collection_qDEWF4",
+        "collection_ndLacp"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Clothing",
+        "text": "",
+        "text_alignment": "start",
+        "enable_carousel": true,
+        "grid": 5,
+        "color_scheme": "default",
+        "full_width": true,
+        "coll_grid_image_shape": "portrait-23",
+        "coll_grid_image_position": "center center",
+        "coll_thumb_mob_per_row": "2",
+        "coll_grid_show_count": false,
+        "coll_text_position": "below",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "left",
+        "coll_thumb_text_align_y": "center",
+        "coll_button_style": "primary"
+      }
+    },
+    "gallery_xaHCdy": {
+      "type": "gallery",
+      "blocks": {
+        "media_bCRfid": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/ElzaPhotographie_LoulouLollipop_March2024_-Web-21_2b4403a8-0011-47be-a43e-e15e6683343f.jpg",
+            "enlarge_media": false,
+            "subheading": "",
+            "title": "Fun Food",
+            "button_label": "",
+            "link": "https://louloulollipop.ca/collections/fun-food/wear",
+            "text_alignment": "bottom left"
+          }
+        },
+        "media_enRK7g": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._4th_2024_-Web-13.jpg",
+            "enlarge_media": false,
+            "subheading": "",
+            "title": "Joyful Colours",
+            "button_label": "",
+            "link": "https://louloulollipop.ca/collections/joyful-colours/wear",
+            "text_alignment": "bottom left"
+          }
+        }
+      },
+      "block_order": [
+        "media_bCRfid",
+        "media_enRK7g"
+      ],
+      "name": "Gallery",
+      "settings": {
+        "title": "",
+        "text": "",
+        "text_alignment": "start",
+        "grid_desktop": 2,
+        "grid_mobile": "1",
+        "height": "fixed",
+        "desktop_image_height": 560,
+        "mobile_image_height": 400,
+        "title_size": 30,
+        "title_size_mobile": 22,
+        "enable_margin": true,
+        "enable_row_spacing": true,
+        "full_width": true,
+        "color_scheme": "default",
+        "enable_carousel": true,
+        "overlay_style": "shadow",
+        "button_style": "primary"
+      }
+    },
+    "product_list_jGJn7D": {
+      "type": "product-list",
+      "name": "Product list",
+      "settings": {
+        "title": "Best Sellers",
+        "text": "",
+        "text_alignment": "start",
+        "product_list": [
+          "short-sleeve-zipped-romper-smiley-sharks",
+          "waffle-long-sleeve-bodysuit-dress-coconut-milk",
+          "sleeper-check-it-out",
+          "sleeper-ocean-explorer",
+          "sleeper-mermaids",
+          "sleeper-silly-seals",
+          "short-sleeve-skater-dress-mermaids",
+          "short-sleeve-skater-dress-pink-checkerboard",
+          "waffle-long-sleeve-skater-dress-mauvewood",
+          "waffle-baby-pants-mauvewood",
+          "waffle-baby-pants-denim-blue",
+          "long-sleeve-pajama-set-jungle-friends",
+          "long-sleeve-pajama-set-check-it-out"
+        ],
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 5,
+        "color_scheme": "default",
+        "full_width": true
+      }
+    },
+    "featured_collection_yhnHaN": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "Pajama Sets",
+        "text": "",
+        "collection": "pajamas",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 5,
+        "rows": 1,
+        "color_scheme": "1",
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "start"
+      }
+    },
+    "custom_product_highlight_pTqNGi": {
+      "type": "custom-product-highlight",
+      "name": "Highlighted Collection",
+      "settings": {
+        "title": "Our Favourite Dresses",
+        "text": "",
+        "image": "shopify://shop_images/ElzaPhotographie_LoulouLollipop_March2024_-Web-88_65789c75-ac8c-49af-936d-6e094338255c.jpg",
+        "order": false,
+        "product_list": [
+          "short-sleeve-bodysuit-dress-mermaids",
+          "short-sleeve-bodysuit-dress-pink-checkerboard"
+        ],
+        "button_label": "Shop Dresses",
+        "link": "shopify://collections/dresses",
+        "button_style": "primary",
+        "color_scheme": "2"
+      }
+    },
+    "featured_collection_YUXjBF": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "Bodysuits & Rompers",
+        "text": "",
+        "collection": "bodysuits-rompers",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 5,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "start"
+      }
+    },
+    "featured_collection_gfYhgH": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "Bandana Bibs",
+        "text": "",
+        "collection": "bandana-bibs",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 5,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "start"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "collection_list_4KKNJE",
+    "gallery_xaHCdy",
+    "product_list_jGJn7D",
+    "featured_collection_yhnHaN",
+    "custom_product_highlight_pTqNGi",
+    "featured_collection_YUXjBF",
+    "featured_collection_gfYhgH"
   ]
 }

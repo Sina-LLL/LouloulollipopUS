@@ -161,7 +161,7 @@
         "media_enRK7g": {
           "type": "media",
           "settings": {
-            "image": "shopify://shop_images/Muslin_Sleep_Bag_-_Hedgehogs__2_1150cf2d-b66c-40d0-b741-dd488f7e5bda.jpg",
+            "image": "shopify://shop_images/Muslin_Swaddle_-_Hedgehogs__2_2e62baec-99fa-4807-9039-d24a4a6c678f.jpg",
             "enlarge_media": false,
             "subheading": "",
             "title": "Animals and Insects",
@@ -200,8 +200,8 @@
       "type": "product-list",
       "name": "Product list",
       "settings": {
-        "title": "Best Sellers, for the Best Sleep",
-        "text": "",
+        "title": "Sweet Dreams Are Made With These",
+        "text": "<p>Our bedtime best sellers —must-haves for parents, baby-approved for restful nights</p>",
         "text_alignment": "start",
         "product_list": [
           "sleeper-ice-hockey",
@@ -225,7 +225,7 @@
       "name": "Featured collection",
       "settings": {
         "title": "Lightweight Sleep Bags",
-        "text": "<p>Something about warm weather</p>",
+        "text": "<p>Soft, airy, and just right for warm nights </p>",
         "collection": "0-5-tog",
         "show_vendor": false,
         "enable_carousel": true,
@@ -241,9 +241,9 @@
       "type": "custom-product-highlight",
       "name": "Highlighted Collection",
       "settings": {
-        "title": "Our Favorite Sleepers",
-        "text": "<p>Share blog posts, products, or promotions with your customers. </p>",
-        "image": "shopify://shop_images/Sleeper_All_Aboard__5_3861c2ed-f766-4071-b9c6-55262d743e5f.jpg",
+        "title": "Sleeper Stars",
+        "text": "<p>Restful nights start with the best sleepers</p>",
+        "image": "shopify://shop_images/Sleeper_All_Aboard__5_bbf2f916-5967-4646-bea4-eb7f20b9bd03.jpg",
         "order": false,
         "product_list": [
           "sleeper-ocean-explorer",
@@ -259,8 +259,8 @@
       "type": "featured-collection",
       "name": "Featured collection",
       "settings": {
-        "title": "Swaddles",
-        "text": "<p>Wrap them tight and some other words</p>",
+        "title": "Wrapped Up Just Right",
+        "text": "<p>Cozy, breathable swaddles to help baby sleep tight, all night</p>",
         "collection": "swaddles",
         "show_vendor": false,
         "enable_carousel": true,
@@ -276,8 +276,8 @@
       "type": "featured-collection",
       "name": "Featured collection",
       "settings": {
-        "title": "Crib Sheets",
-        "text": "<p>Soft and gentle and some other words</p>",
+        "title": "Cozy Crib Sheets",
+        "text": "<p>Soft and gentle for baby’s best sleep </p>",
         "collection": "crib-sheets",
         "show_vendor": false,
         "enable_carousel": true,
