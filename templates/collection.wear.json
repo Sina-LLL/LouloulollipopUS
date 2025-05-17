@@ -108,7 +108,6 @@
           "type": "collection",
           "settings": {
             "collection": "hats-headbands",
-            "image": "shopify://shop_images/WaffleTopKnotBeanie-DenimBlue.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -149,12 +148,12 @@
         "media_bCRfid": {
           "type": "media",
           "settings": {
-            "image": "shopify://shop_images/ElzaPhotographie_LoulouLollipop_March2024_-Web-21_2b4403a8-0011-47be-a43e-e15e6683343f.jpg",
+            "image": "shopify://shop_images/SS21_Flatware-115_fdd56cb5-6d5c-4181-9a61-0a30f8bb58b4.jpg",
             "enlarge_media": false,
             "subheading": "",
             "title": "Fun Food",
             "button_label": "",
-            "link": "https://louloulollipop.ca/collections/fun-food/wear",
+            "link": "https://louloulollipop.com/collections/fun-food/wear",
             "text_alignment": "bottom left"
           }
         },
@@ -166,7 +165,7 @@
             "subheading": "",
             "title": "Joyful Colours",
             "button_label": "",
-            "link": "https://louloulollipop.ca/collections/joyful-colours/wear",
+            "link": "https://louloulollipop.com/collections/joyful-colours/wear",
             "text_alignment": "bottom left"
           }
         }
@@ -248,7 +247,7 @@
       "settings": {
         "title": "Our Favourite Dresses",
         "text": "",
-        "image": "shopify://shop_images/ElzaPhotographie_LoulouLollipop_March2024_-Web-88_65789c75-ac8c-49af-936d-6e094338255c.jpg",
+        "image": "shopify://shop_images/ElzaPhotographie_LoulouLollipop_March2024_-Web-88_5b20f93d-69d6-4702-8ca5-18c3c315da99.jpg",
         "order": false,
         "product_list": [
           "short-sleeve-bodysuit-dress-mermaids",
