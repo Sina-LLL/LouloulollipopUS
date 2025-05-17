@@ -11,13 +11,14 @@
   "sections": {
     "main": {
       "type": "main-collection",
+      "disabled": true,
       "settings": {
         "show_title": true,
         "show_image_behind_heading": true,
-        "heading_image_height": "huge",
+        "heading_image_height": "large",
         "overlay_style": "shadow",
         "coll_desc_pos": "below",
-        "coll_num_per_page_int": 50,
+        "coll_num_per_page_int": 30,
         "grid": 4,
         "show_vendor": false,
         "show_total": false,
@@ -39,15 +40,294 @@
         "related_collections_style": "gallery",
         "rel_coll_gall_aspect_ratio": "1",
         "image_position": "center center",
-        "rel_coll_gall_enable_margin": false,
+        "rel_coll_gall_enable_margin": true,
         "rel_coll_gall_full_width": false,
         "rel_coll_gall_overlay_style": "full image-overlay--bg-shadow",
         "rel_coll_gall_text_alignment": "center center",
         "rel_coll_grid_mobile": "2"
       }
+    },
+    "collection_list_4KKNJE": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_4wLe7J": {
+          "type": "collection",
+          "settings": {
+            "collection": "silicone-teethers",
+            "image": "shopify://shop_images/WTR-009-BFG_WildTeether_Sharks_1.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_KCViN4": {
+          "type": "collection",
+          "settings": {
+            "collection": "teething-rings",
+            "image": "shopify://shop_images/WRGSTSPK_WildTeetherRingSet_ShellPink_1.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_HBGXfQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "teething-mitts",
+            "image": "shopify://shop_images/TMT-005-GHN_01_0eb22df8-2b65-4eb2-9650-4fca323715cc.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_ngYLRN": {
+          "type": "collection",
+          "settings": {
+            "collection": "teething-charms",
+            "image": "shopify://shop_images/TCM-009-BFG_01.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_qDEWF4": {
+          "type": "collection",
+          "settings": {
+            "collection": "teething-sets",
+            "image": "shopify://shop_images/LLAMASETG_01.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_nwWhhg": {
+          "type": "collection",
+          "settings": {
+            "collection": "pacifier-clips",
+            "image": "shopify://shop_images/SILCPMON_01.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_t3MwCY": {
+          "type": "collection",
+          "settings": {
+            "collection": "flash-cards",
+            "image": "shopify://shop_images/FCS-CR_01.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_ndLacp": {
+          "type": "collection",
+          "settings": {
+            "collection": "stacking-cups",
+            "image": "shopify://shop_images/SCSRBW_03.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_9fk8m7": {
+          "type": "collection",
+          "settings": {
+            "collection": "bath-toys",
+            "image": "shopify://shop_images/TCUP-002-BPK_01-388.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_4wLe7J",
+        "collection_KCViN4",
+        "collection_HBGXfQ",
+        "collection_ngYLRN",
+        "collection_qDEWF4",
+        "collection_nwWhhg",
+        "collection_t3MwCY",
+        "collection_ndLacp",
+        "collection_9fk8m7"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Toys & Play",
+        "text": "",
+        "text_alignment": "start",
+        "enable_carousel": true,
+        "grid": 5,
+        "color_scheme": "default",
+        "full_width": true,
+        "coll_grid_image_shape": "portrait-23",
+        "coll_grid_image_position": "center center",
+        "coll_thumb_mob_per_row": "2",
+        "coll_grid_show_count": false,
+        "coll_text_position": "below",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "left",
+        "coll_thumb_text_align_y": "center",
+        "coll_button_style": "primary"
+      }
+    },
+    "gallery_xaHCdy": {
+      "type": "gallery",
+      "blocks": {
+        "media_bCRfid": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/WRGSTPST_Wild_Teething_Ring_Set_Pastel_52.jpg",
+            "enlarge_media": false,
+            "subheading": "",
+            "title": "Teething Rings",
+            "button_label": "",
+            "link": "shopify://collections/born-to-be-wild",
+            "text_alignment": "bottom left"
+          }
+        },
+        "media_enRK7g": {
+          "type": "media",
+          "settings": {
+            "image": "shopify://shop_images/FCSALP_Flashcards_Alphabets_53.jpg",
+            "enlarge_media": false,
+            "subheading": "",
+            "title": "Flash Cards",
+            "button_label": "",
+            "link": "shopify://collections/long-sleeve-bibs",
+            "text_alignment": "bottom left"
+          }
+        }
+      },
+      "block_order": [
+        "media_bCRfid",
+        "media_enRK7g"
+      ],
+      "name": "Gallery",
+      "settings": {
+        "title": "",
+        "text": "",
+        "text_alignment": "start",
+        "grid_desktop": 2,
+        "grid_mobile": "1",
+        "height": "fixed",
+        "desktop_image_height": 560,
+        "mobile_image_height": 400,
+        "title_size": 30,
+        "title_size_mobile": 22,
+        "enable_margin": true,
+        "enable_row_spacing": true,
+        "full_width": true,
+        "color_scheme": "default",
+        "enable_carousel": false,
+        "overlay_style": "shadow",
+        "button_style": "primary"
+      }
+    },
+    "product_list_jGJn7D": {
+      "type": "product-list",
+      "name": "Product list",
+      "settings": {
+        "title": "Best Sellers",
+        "text": "",
+        "text_alignment": "start",
+        "product_list": [
+          "bath-toy-set-blue",
+          "gem-colour-pop-silicone-wood-pacifier-clip-slate",
+          "pacifier-clip-teether-set-ebi-shrimp",
+          "teether-single-ebi-shrimp",
+          "teething-mitt-elephant",
+          "teething-mitt-bunny",
+          "wild-teether-aly-alligator",
+          "wild-teether-eddie-elephant",
+          "wild-teether-liam-lion",
+          "wild-teether-bailey-bunny",
+          "gem-pacifier-clip-teether-set-llama",
+          "wild-teether-ring-set-pastel",
+          "wild-teether-ring-set-sage-green",
+          "teether-single-taco",
+          "teether-single-sloth",
+          "pacifier-clip-teether-set-sloth",
+          "teether-single-boston-terrier",
+          "pacifier-clip-teether-set-boston-terrier"
+        ],
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 5,
+        "color_scheme": "default",
+        "full_width": true
+      }
+    },
+    "featured_collection_yhnHaN": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "Silicone Teethers",
+        "text": "",
+        "collection": "silicone-teethers",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 5,
+        "rows": 1,
+        "color_scheme": "1",
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "start"
+      }
+    },
+    "custom_product_highlight_pTqNGi": {
+      "type": "custom-product-highlight",
+      "name": "Highlighted Collection",
+      "settings": {
+        "title": "Our Favourite Pacifier Clips",
+        "text": "",
+        "image": "shopify://shop_images/SILCPSWRBN_Silicone_Pacifier_Clip_Sweetheart-Rainbow_7.jpg",
+        "order": false,
+        "product_list": [
+          "gem-colour-pop-silicone-wood-pacifier-clip-pink-quartz",
+          "pacifier-clip-beadless-monstera"
+        ],
+        "button_label": "Shop Pacifier Clips",
+        "link": "shopify://collections/pacifier-clips",
+        "button_style": "primary",
+        "color_scheme": "2"
+      }
+    },
+    "featured_collection_YUXjBF": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "Teething Charms",
+        "text": "",
+        "collection": "teething-charms",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 5,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "start"
+      }
+    },
+    "featured_collection_gfYhgH": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "Teething Sets",
+        "text": "",
+        "collection": "teething-sets",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 5,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "start"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "collection_list_4KKNJE",
+    "gallery_xaHCdy",
+    "product_list_jGJn7D",
+    "featured_collection_yhnHaN",
+    "custom_product_highlight_pTqNGi",
+    "featured_collection_YUXjBF",
+    "featured_collection_gfYhgH"
   ]
 }
