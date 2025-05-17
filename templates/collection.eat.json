@@ -63,7 +63,6 @@
           "type": "collection",
           "settings": {
             "collection": "long-sleeve-bibs",
-            "image": "shopify://shop_images/DS-ET0011_191_01fea2f8-2034-450a-a224-2faccff62f3a.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -99,7 +98,6 @@
           "type": "collection",
           "settings": {
             "collection": "snack-box",
-            "image": "shopify://shop_images/SBX-003-BLU_02.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -191,7 +189,7 @@
         "media_enRK7g": {
           "type": "media",
           "settings": {
-            "image": "shopify://shop_images/LSBIBPLN_Long_Sleeve_Bib_-_Planets_53_f1fdb735-9121-4f16-b963-b2d6bde48be1.jpg",
+            "image": "shopify://shop_images/LSBIBPLN_Long_Sleeve_Bib_-_Planets_53.jpg",
             "enlarge_media": false,
             "subheading": "",
             "title": "Long Sleeve Bibs",
@@ -279,7 +277,7 @@
       "type": "custom-product-highlight",
       "name": "Highlighted Collection",
       "settings": {
-        "title": "Our Favourite Silicone Bibs",
+        "title": "Our Favorite Silicone Bibs",
         "text": "",
         "image": "shopify://shop_images/SILBIBSHK_SiliconeBibPrinted_Sharks_2W.jpg",
         "order": false,
