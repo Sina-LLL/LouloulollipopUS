@@ -208,7 +208,7 @@
         "title_size": 30,
         "title_size_mobile": 22,
         "enable_margin": true,
-        "enable_row_spacing": true,
+        "enable_row_spacing": false,
         "full_width": true,
         "color_scheme": "default",
         "enable_carousel": false,
