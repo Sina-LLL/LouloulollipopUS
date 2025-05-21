@@ -4735,7 +4735,10 @@ shopify-payment-terms {
   display: flex;
   flex: 0 0 100%;
 }
-
+@media (max-width: 767.98px) {
+ align-items: center !important;
+ text-align: center !important;
+}
 .text-overlay {
   display: flex;
   position: absolute;
@@ -4865,6 +4868,7 @@ shopify-payment-terms {
     padding: 40px 60px;
   }
 }
+
 .text-overlay__inner {
   display: block;
   position: relative;
