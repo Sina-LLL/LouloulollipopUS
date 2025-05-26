@@ -164,10 +164,10 @@
                         {%- endif -%}
                       {%- else -%}
                         {%- if block.settings.button_label_1 != blank -%}
-                          <a class="text-overlay__button btn btn--primary" href="{{ block.settings.button_url_1 }}">{{ block.settings.button_label_1 | escape }}</a>
+                          <a class="text-overlay__button btn btn--primary" href="{{ block.settings.button_url_1 }}{% if block.settings.button_tag_1 %}/{{ block.settings.button_tag_1 | handle }}{% endif %}">{{ block.settings.button_label_1 | escape }}</a>
                         {%- endif -%}
                         {%- if block.settings.button_label_2 != blank -%}
-                          <a class="text-overlay__button btn btn--primary" href="{{ block.settings.button_url_2 }}">{{ block.settings.button_label_2 | escape }}</a>
+                          <a class="text-overlay__button btn btn--primary" href="{{ block.settings.button_url_2 }}{% if block.settings.button_tag_2 %}/{{ block.settings.button_tag_2 | handle }}{% endif %}">{{ block.settings.button_label_2 | escape }}</a>
                         {%- endif -%}
                       {%- endif -%}
                     </div>
@@ -487,6 +487,11 @@
         },
         {
           "type": "text",
+          "id": "button_tag_1",
+          "label": "Button 1 filter by tag"
+        },
+        {
+          "type": "text",
           "id": "button_label_2",
           "label": "Button 2 label",
           "default": "Shop all"
@@ -495,6 +500,11 @@
           "type": "url",
           "id": "button_url_2",
           "label": "Button 2 link"
+        },
+        {
+          "type": "text",
+          "id": "button_tag_2",
+          "label": "Button 2 filter by tag"
         },
         {
           "type": "select",
