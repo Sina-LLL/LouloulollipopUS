@@ -425,7 +425,7 @@
       "settings": {
         "title": "Shop by Category",
         "text": "",
-        "text_alignment": "center",
+        "text_alignment": "start",
         "enable_carousel": true,
         "grid": 5,
         "color_scheme": "2",
@@ -505,7 +505,7 @@
       "settings": {
         "title": "Shop by Age",
         "text": "",
-        "text_alignment": "center",
+        "text_alignment": "start",
         "enable_carousel": true,
         "grid": 5,
         "color_scheme": "1",
