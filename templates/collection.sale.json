@@ -15,14 +15,60 @@
         "collection_jffFNa": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "sale",
+            "tag": "sleep",
+            "image": "shopify://shop_images/TENCEL_Sleep_Bag_1.0_Tog_Baby_Dinomite_22f3dfe5-83a4-47b0-8c38-0a9382e28a0a.jpg",
             "subheading": "Sleep & Bedding",
+            "button_label": ""
+          }
+        },
+        "collection_ijQmHC": {
+          "type": "collection",
+          "settings": {
+            "collection": "sale",
+            "tag": "wear",
+            "image": "shopify://shop_images/KA1003U.PCK_Waffle_2-pc_Pajama_Set_Peacock_6.jpg",
+            "subheading": "Clothing",
+            "button_label": ""
+          }
+        },
+        "collection_UPFDjV": {
+          "type": "collection",
+          "settings": {
+            "collection": "sale",
+            "tag": "eat",
+            "image": "shopify://shop_images/baby-eating-noodles-with-bib.jpg",
+            "subheading": "Feeding Essentials",
+            "button_label": ""
+          }
+        },
+        "collection_3C3APa": {
+          "type": "collection",
+          "settings": {
+            "collection": "sale",
+            "tag": "play",
+            "image": "shopify://shop_images/Stacking_Toy_Pastel.jpg",
+            "subheading": "Toys & Play",
+            "button_label": ""
+          }
+        },
+        "collection_4pWbRV": {
+          "type": "collection",
+          "settings": {
+            "collection": "sale",
+            "tag": "bathe",
+            "image": "shopify://shop_images/Hooded_Towel_-_Some_Bunny_Loves_You__5_dfd27e75-501c-44f8-a95d-25d169cb55aa.jpg",
+            "subheading": "Bathe",
             "button_label": ""
           }
         }
       },
       "block_order": [
-        "collection_jffFNa"
+        "collection_jffFNa",
+        "collection_ijQmHC",
+        "collection_UPFDjV",
+        "collection_3C3APa",
+        "collection_4pWbRV"
       ],
       "name": "Collection list",
       "settings": {
@@ -33,7 +79,7 @@
         "grid": 5,
         "color_scheme": "default",
         "full_width": true,
-        "coll_grid_image_shape": "square",
+        "coll_grid_image_shape": "portrait-45",
         "coll_grid_image_position": "center center",
         "coll_thumb_mob_per_row": "2",
         "coll_grid_show_count": false,
