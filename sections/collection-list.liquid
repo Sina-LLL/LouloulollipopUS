@@ -61,7 +61,7 @@
               endif
 
               unless collection == blank
-                render 'collection-block', collection: collection, subheading: block.settings.subheading, button_label: block.settings.button_label, custom_attrs: block.shopify_attributes, custom_image: block.settings.image, custom_aspect_ratio: chosen_aspect_ratio, settings_object: section.settings
+                render 'collection-block', collection: collection, subheading: block.settings.subheading, button_label: block.settings.button_label, custom_attrs: block.shopify_attributes, custom_image: block.settings.image, custom_aspect_ratio: chosen_aspect_ratio, settings_object: section.settings, tag: block.settings.tag
               else
                 render 'onboarding-collection-block', forloop: forloop, settings_object: section.settings
               endunless
@@ -392,6 +392,11 @@
           "type": "collection",
           "id": "collection",
           "label": "Collection"
+        },
+        {
+          "type": "text",
+          "id": "tag",
+          "label": "Collection tag (optional)"
         },
         {
           "type": "image_picker",

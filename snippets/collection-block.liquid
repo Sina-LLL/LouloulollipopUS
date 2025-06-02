@@ -20,7 +20,7 @@
 -%}
 <div class="product-block collection-block" data-collection-id="{{ collection.id }}" {{ custom_attrs }} {% if animate %}{%- render 'animation-attrs', attrs: 'data-cc-animate', always: true -%}{% endif %}>
   <div class="block-inner">
-    <a class="product-link" href="{{ collection.url }}">
+    <a class="product-link" href="{{ collection.url }}{% if tag %}/{{ tag | handle }}{% endif %}">
       <div class="image-cont
         {%- if settings_object.coll_text_position contains 'over' %}
           image-overlay
