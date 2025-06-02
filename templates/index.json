@@ -28,8 +28,10 @@
             "enlarge_text": true,
             "button_label_1": "Shop Now",
             "button_url_1": "shopify://collections/ocean-wonders-eat-play",
+            "button_tag_1": "",
             "button_label_2": "",
             "button_url_2": "",
+            "button_tag_2": "",
             "text_alignment": "center left"
           }
         },
@@ -49,8 +51,10 @@
             "enlarge_text": true,
             "button_label_1": "Shop Now",
             "button_url_1": "shopify://collections/ocean-wonders",
+            "button_tag_1": "",
             "button_label_2": "",
             "button_url_2": "",
+            "button_tag_2": "",
             "text_alignment": "center left"
           }
         },
@@ -70,8 +74,10 @@
             "enlarge_text": true,
             "button_label_1": "Shop Sleepers",
             "button_url_1": "shopify://collections/sleepers-pajamas",
+            "button_tag_1": "",
             "button_label_2": "Shop Sleep bags",
             "button_url_2": "shopify://collections/sleep-bags",
+            "button_tag_2": "",
             "text_alignment": "center left"
           }
         }
@@ -97,6 +103,7 @@
     },
     "featured_collection_RcGTat": {
       "type": "featured-collection",
+      "name": "New Ocean Wonders Eat & Play",
       "settings": {
         "title": "New Ocean Wonders Eat & Play",
         "text": "",
@@ -109,165 +116,6 @@
         "show_view_all": true,
         "full_width": true,
         "text_alignment": "start"
-      }
-    },
-    "custom_product_highlight_PMwqLc": {
-      "type": "custom-product-highlight",
-      "name": "Highlighted Collection",
-      "settings": {
-        "title": "Mess-less Mealtimes",
-        "text": "<p>Our super smart silicone snack plates feature a strong sticky base even pro food flingers can't beat. Available in a variety of totally a-roar-able animal shapes for more happy snacking with less mess!</p>",
-        "image": "shopify://shop_images/SPL-008-SPK_SnackPlate_Seashell_51_cf7ec9aa-99f6-4eb9-b190-a3b7efd8d952.jpg",
-        "order": false,
-        "product_list": [
-          "snack-plate-sarah-shark",
-          "snack-plate-octopus"
-        ],
-        "button_label": "Shop Snack Plates",
-        "link": "shopify://collections/snack-plate",
-        "button_style": "primary",
-        "color_scheme": "default"
-      }
-    },
-    "featured_collection_iJcKke": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Ocean Wonders Sleep & Wear",
-        "text": "",
-        "collection": "ocean-wonders",
-        "show_vendor": false,
-        "enable_carousel": true,
-        "grid": 5,
-        "rows": 2,
-        "color_scheme": "1",
-        "show_view_all": true,
-        "full_width": true,
-        "text_alignment": "start"
-      }
-    },
-    "collection_list_BzgHGC": {
-      "type": "collection-list",
-      "blocks": {
-        "collection_btRm84": {
-          "type": "collection",
-          "settings": {
-            "collection": "sleep-bags",
-            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._11th_2024_-Web-39.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_3Y8JJd": {
-          "type": "collection",
-          "settings": {
-            "collection": "cups-utensils",
-            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._4th_2024_-Web-16.jpg",
-            "subheading": "Cups & Utensils",
-            "button_label": ""
-          }
-        },
-        "collection_xh3HLz": {
-          "type": "collection",
-          "settings": {
-            "collection": "dresses",
-            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._11th_2024_-Web-17.jpg",
-            "subheading": "Dresses",
-            "button_label": ""
-          }
-        },
-        "collection_NTfUeq": {
-          "type": "collection",
-          "settings": {
-            "collection": "teethers",
-            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._4th_2024_-Web-37.jpg",
-            "subheading": "Teethers",
-            "button_label": ""
-          }
-        },
-        "collection_Rrwynm": {
-          "type": "collection",
-          "settings": {
-            "collection": "silicone-bibs",
-            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._4th_2024_-Web-26.jpg",
-            "subheading": "Silicone Bibs",
-            "button_label": ""
-          }
-        },
-        "collection_FGqdjb": {
-          "type": "collection",
-          "settings": {
-            "collection": "sets-bottoms",
-            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._4th_2024_-Web-15.jpg",
-            "subheading": "Bottoms",
-            "button_label": ""
-          }
-        },
-        "collection_yQpDQx": {
-          "type": "collection",
-          "settings": {
-            "collection": "hooded-towel-sets",
-            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._11th_2024_-Web-23.jpg",
-            "subheading": "Hooded Towels",
-            "button_label": ""
-          }
-        },
-        "collection_f7kg3c": {
-          "type": "collection",
-          "settings": {
-            "collection": "pacifier-clips",
-            "image": "shopify://shop_images/loulou-pacifier1.jpg",
-            "subheading": "Pacifier Clips",
-            "button_label": ""
-          }
-        },
-        "collection_rCaCfc": {
-          "type": "collection",
-          "settings": {
-            "collection": "blankets",
-            "image": "shopify://shop_images/QTMER_Muslin_Quilt_Mermaids_4W_039e30aa-6c12-4f0d-b56f-ebb693707ee5.jpg",
-            "subheading": "Blankets",
-            "button_label": ""
-          }
-        },
-        "collection_jLCc7n": {
-          "type": "collection",
-          "settings": {
-            "collection": "bandana-bibs",
-            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._4th_2024_-Web-40.jpg",
-            "subheading": "Bandana Bibs",
-            "button_label": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection_btRm84",
-        "collection_3Y8JJd",
-        "collection_xh3HLz",
-        "collection_NTfUeq",
-        "collection_Rrwynm",
-        "collection_FGqdjb",
-        "collection_yQpDQx",
-        "collection_f7kg3c",
-        "collection_rCaCfc",
-        "collection_jLCc7n"
-      ],
-      "settings": {
-        "title": "Shop by Category",
-        "text": "",
-        "text_alignment": "center",
-        "enable_carousel": true,
-        "grid": 5,
-        "color_scheme": "2",
-        "full_width": false,
-        "coll_grid_image_shape": "portrait-23",
-        "coll_grid_image_position": "center center",
-        "coll_thumb_mob_per_row": "2",
-        "coll_grid_show_count": false,
-        "coll_text_position": "below",
-        "coll_text_position_under_mobile": false,
-        "coll_thumb_text_align_x": "center",
-        "coll_thumb_text_align_y": "center",
-        "coll_button_style": "primary"
       }
     },
     "logo_list_kYmwNX": {
@@ -372,6 +220,227 @@
         "color_scheme": "default"
       }
     },
+    "custom_product_highlight_PMwqLc": {
+      "type": "custom-product-highlight",
+      "name": "Mess-less Mealtimes",
+      "settings": {
+        "title": "Mess-less Mealtimes",
+        "text": "<p>Our super smart silicone snack plates feature a strong sticky base even pro food flingers can't beat. Available in a variety of totally a-roar-able animal shapes for more happy snacking with less mess!</p>",
+        "image": "shopify://shop_images/SPL-008-SPK_SnackPlate_Seashell_51_cf7ec9aa-99f6-4eb9-b190-a3b7efd8d952.jpg",
+        "order": false,
+        "product_list": [
+          "snack-plate-sarah-shark",
+          "snack-plate-octopus"
+        ],
+        "button_label": "Shop Snack Plates",
+        "link": "shopify://collections/snack-plate",
+        "button_style": "primary",
+        "color_scheme": "default"
+      }
+    },
+    "featured_collection_K3tJdQ": {
+      "type": "featured-collection",
+      "name": "For Meal Time",
+      "settings": {
+        "title": "For Meal Time",
+        "text": "",
+        "collection": "eat",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 5,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": true,
+        "text_alignment": "start"
+      }
+    },
+    "featured_collection_iJcKke": {
+      "type": "featured-collection",
+      "name": "Ocean Wonders Sleep & Wear",
+      "settings": {
+        "title": "Ocean Wonders Sleep & Wear",
+        "text": "",
+        "collection": "ocean-wonders",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 5,
+        "rows": 2,
+        "color_scheme": "1",
+        "show_view_all": true,
+        "full_width": true,
+        "text_alignment": "start"
+      }
+    },
+    "custom_product_highlight_jV6CAX": {
+      "type": "custom-product-highlight",
+      "name": "World Traveler",
+      "settings": {
+        "title": "World Traveler Collection",
+        "text": "<p>Soft muslin quilts and swaddles with hand-drawn prints that inspire little ones to dream big and wander far </p>",
+        "image": "shopify://shop_images/SWNYC_Muslin_Swaddle_New_York_51.jpg",
+        "order": true,
+        "product_list": [
+          "muslin-quilt-usa",
+          "muslin-swaddle-new-york-city"
+        ],
+        "button_label": "Shop Snack Plates",
+        "link": "shopify://collections/snack-plate",
+        "button_style": "primary",
+        "color_scheme": "default"
+      }
+    },
+    "featured_collection_tc8tiM": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "text": "",
+        "collection": "world-traveler",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 5,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": false,
+        "full_width": true,
+        "text_alignment": "start"
+      }
+    },
+    "collection_list_BzgHGC": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_btRm84": {
+          "type": "collection",
+          "settings": {
+            "collection": "sleep-bags",
+            "tag": "",
+            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._11th_2024_-Web-39.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_3Y8JJd": {
+          "type": "collection",
+          "settings": {
+            "collection": "cups-utensils",
+            "tag": "",
+            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._4th_2024_-Web-16.jpg",
+            "subheading": "Cups & Utensils",
+            "button_label": ""
+          }
+        },
+        "collection_xh3HLz": {
+          "type": "collection",
+          "settings": {
+            "collection": "dresses",
+            "tag": "",
+            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._11th_2024_-Web-17.jpg",
+            "subheading": "Dresses",
+            "button_label": ""
+          }
+        },
+        "collection_NTfUeq": {
+          "type": "collection",
+          "settings": {
+            "collection": "teethers",
+            "tag": "",
+            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._4th_2024_-Web-37.jpg",
+            "subheading": "Teethers",
+            "button_label": ""
+          }
+        },
+        "collection_Rrwynm": {
+          "type": "collection",
+          "settings": {
+            "collection": "silicone-bibs",
+            "tag": "",
+            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._4th_2024_-Web-26.jpg",
+            "subheading": "Silicone Bibs",
+            "button_label": ""
+          }
+        },
+        "collection_FGqdjb": {
+          "type": "collection",
+          "settings": {
+            "collection": "sets-bottoms",
+            "tag": "",
+            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._4th_2024_-Web-15.jpg",
+            "subheading": "Bottoms",
+            "button_label": ""
+          }
+        },
+        "collection_yQpDQx": {
+          "type": "collection",
+          "settings": {
+            "collection": "hooded-towel-sets",
+            "tag": "",
+            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._11th_2024_-Web-23.jpg",
+            "subheading": "Hooded Towels",
+            "button_label": ""
+          }
+        },
+        "collection_f7kg3c": {
+          "type": "collection",
+          "settings": {
+            "collection": "pacifier-clips",
+            "tag": "",
+            "image": "shopify://shop_images/loulou-pacifier1.jpg",
+            "subheading": "Pacifier Clips",
+            "button_label": ""
+          }
+        },
+        "collection_rCaCfc": {
+          "type": "collection",
+          "settings": {
+            "collection": "blankets",
+            "tag": "",
+            "image": "shopify://shop_images/QTMER_Muslin_Quilt_Mermaids_4W_039e30aa-6c12-4f0d-b56f-ebb693707ee5.jpg",
+            "subheading": "Blankets",
+            "button_label": ""
+          }
+        },
+        "collection_jLCc7n": {
+          "type": "collection",
+          "settings": {
+            "collection": "bandana-bibs",
+            "tag": "",
+            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._4th_2024_-Web-40.jpg",
+            "subheading": "Bandana Bibs",
+            "button_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_btRm84",
+        "collection_3Y8JJd",
+        "collection_xh3HLz",
+        "collection_NTfUeq",
+        "collection_Rrwynm",
+        "collection_FGqdjb",
+        "collection_yQpDQx",
+        "collection_f7kg3c",
+        "collection_rCaCfc",
+        "collection_jLCc7n"
+      ],
+      "settings": {
+        "title": "Shop by Category",
+        "text": "",
+        "text_alignment": "center",
+        "enable_carousel": true,
+        "grid": 5,
+        "color_scheme": "2",
+        "full_width": false,
+        "coll_grid_image_shape": "portrait-23",
+        "coll_grid_image_position": "center center",
+        "coll_thumb_mob_per_row": "2",
+        "coll_grid_show_count": false,
+        "coll_text_position": "below",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_y": "center",
+        "coll_button_style": "primary"
+      }
+    },
     "collection_list_XEbpaa": {
       "type": "collection-list",
       "blocks": {
@@ -379,6 +448,7 @@
           "type": "collection",
           "settings": {
             "collection": "newborn-0-6-months",
+            "tag": "",
             "image": "shopify://shop_images/Newborn-Swaddle-Tencel-Football.png",
             "subheading": "Newborn 0-6 Months",
             "button_label": ""
@@ -388,6 +458,7 @@
           "type": "collection",
           "settings": {
             "collection": "infant-6-12-months",
+            "tag": "",
             "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._11th_2024_-Web-24.jpg",
             "subheading": "Baby 6-12 Months",
             "button_label": ""
@@ -397,6 +468,7 @@
           "type": "collection",
           "settings": {
             "collection": "toddler-12-24-months",
+            "tag": "",
             "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._11th_2024_-Web-46.jpg",
             "subheading": "Toddler 12-24 Months",
             "button_label": ""
@@ -406,6 +478,7 @@
           "type": "collection",
           "settings": {
             "collection": "little-kid-2-4-years",
+            "tag": "",
             "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._11th_2024_-Web-4.jpg",
             "subheading": "Little Kid 2-4 Years",
             "button_label": ""
@@ -415,6 +488,7 @@
           "type": "collection",
           "settings": {
             "collection": "big-kid-4-years",
+            "tag": "",
             "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Holiday_2024_-Web-41.jpg",
             "subheading": "Big Kid 4+ years",
             "button_label": ""
@@ -447,22 +521,6 @@
         "coll_button_style": "primary"
       }
     },
-    "featured_collection_K3tJdQ": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "For Meal Time",
-        "text": "",
-        "collection": "eat",
-        "show_vendor": false,
-        "enable_carousel": true,
-        "grid": 5,
-        "rows": 1,
-        "color_scheme": "2",
-        "show_view_all": true,
-        "full_width": true,
-        "text_alignment": "center"
-      }
-    },
     "featured_collection_6Cp3dQ": {
       "type": "featured-collection",
       "settings": {
@@ -479,22 +537,6 @@
         "text_alignment": "start"
       }
     },
-    "featured_collection_tc8tiM": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "For the World Traveler",
-        "text": "",
-        "collection": "world-traveler",
-        "show_vendor": false,
-        "enable_carousel": true,
-        "grid": 5,
-        "rows": 1,
-        "color_scheme": "default",
-        "show_view_all": false,
-        "full_width": true,
-        "text_alignment": "start"
-      }
-    },
     "collection_list_g7498J": {
       "type": "collection-list",
       "blocks": {
@@ -502,6 +544,7 @@
           "type": "collection",
           "settings": {
             "collection": "sleep-bags",
+            "tag": "",
             "image": "shopify://shop_images/Sleep_Bag_2.5_Tog_-_Cozy_Forest_3.webp",
             "subheading": "Sleep Bags",
             "button_label": ""
@@ -511,6 +554,7 @@
           "type": "collection",
           "settings": {
             "collection": "waffle-collection",
+            "tag": "",
             "image": "shopify://shop_images/WaffleCollection.jpg",
             "subheading": "Waffle",
             "button_label": ""
@@ -520,6 +564,7 @@
           "type": "collection",
           "settings": {
             "collection": "long-sleeve-bibs",
+            "tag": "",
             "image": "shopify://shop_images/Web-38_1cc54960-045b-4072-91a0-a8e584247e79.jpg",
             "subheading": "Long Sleeve Bibs",
             "button_label": ""
@@ -651,14 +696,15 @@
   "order": [
     "16359276425da8ce46",
     "featured_collection_RcGTat",
-    "custom_product_highlight_PMwqLc",
-    "featured_collection_iJcKke",
-    "collection_list_BzgHGC",
     "logo_list_kYmwNX",
-    "collection_list_XEbpaa",
+    "custom_product_highlight_PMwqLc",
     "featured_collection_K3tJdQ",
-    "featured_collection_6Cp3dQ",
+    "featured_collection_iJcKke",
+    "custom_product_highlight_jV6CAX",
     "featured_collection_tc8tiM",
+    "collection_list_BzgHGC",
+    "collection_list_XEbpaa",
+    "featured_collection_6Cp3dQ",
     "collection_list_g7498J",
     "multi_column_MR9q33",
     "rich_text_AyKQDC",
