@@ -202,6 +202,87 @@
         "show_page_title": false,
         "full_width": true
       }
+    },
+    "collection_list_FK8cew": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_wMTiBg": {
+          "type": "collection",
+          "settings": {
+            "collection": "sleepers",
+            "tag": "",
+            "image": "shopify://shop_images/BA1002U.SKS_Sleeper_Sun-kissed_Shoal_1.jpg",
+            "subheading": "Sleepers",
+            "button_label": ""
+          }
+        },
+        "collection_p3AQmm": {
+          "type": "collection",
+          "settings": {
+            "collection": "pajamas",
+            "tag": "",
+            "image": "shopify://shop_images/KA1006U.SHK_ShortSleeveLongPantsPajamaSet_Sharks_1.jpg",
+            "subheading": "Pajamas",
+            "button_label": ""
+          }
+        },
+        "collection_pL7hwf": {
+          "type": "collection",
+          "settings": {
+            "collection": "sleep-bags",
+            "tag": "",
+            "image": "shopify://shop_images/BA9003U.BMB_1_7b68bb01-1eb6-497b-845f-6cfbb92647ce.jpg",
+            "subheading": "Sleep Bags",
+            "button_label": ""
+          }
+        },
+        "collection_p9DAGB": {
+          "type": "collection",
+          "settings": {
+            "collection": "sleepsuits",
+            "tag": "",
+            "image": "shopify://shop_images/BA9007U.PCB_Sleepsuit_1.0_Tog_Pink_Checkerboard_1.jpg",
+            "subheading": "Sleepsuits",
+            "button_label": ""
+          }
+        },
+        "collection_CcwCQA": {
+          "type": "collection",
+          "settings": {
+            "collection": "bodysuits-rompers",
+            "tag": "",
+            "image": "shopify://shop_images/BA1003U.SEL_Short_Sleeve_Zipped_Romper_Seals_1.jpg",
+            "subheading": "Bodysuits and Rompers",
+            "button_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_wMTiBg",
+        "collection_p3AQmm",
+        "collection_pL7hwf",
+        "collection_p9DAGB",
+        "collection_CcwCQA"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Where you’ll find TENCEL at Loulou Lollipop ",
+        "text": "<p>By now you won’t be surprised to learn that we love this fabric for our:</p>",
+        "text_alignment": "start",
+        "enable_carousel": true,
+        "grid": 5,
+        "color_scheme": "default",
+        "full_width": true,
+        "coll_grid_image_shape": "portrait-45",
+        "coll_grid_image_position": "center center",
+        "coll_thumb_mob_per_row": "2",
+        "coll_grid_show_count": false,
+        "coll_text_position": "below",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_y": "center",
+        "coll_button_style": "primary"
+      }
     }
   },
   "order": [
@@ -212,6 +293,7 @@
     "multi_column_dinXKM",
     "multi_column_Dtn3Fd",
     "rich_text_jjfkRp",
-    "main"
+    "main",
+    "collection_list_FK8cew"
   ]
 }
