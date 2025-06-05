@@ -16,7 +16,7 @@
           "type": "heading",
           "settings": {
             "title": "Why we chose TENCEL Lyocell for baby & toddler wear",
-            "use_h1": false
+            "use_h1": true
           }
         }
       },
@@ -80,6 +80,7 @@
     },
     "image_with_text_overlay_eJYqiL": {
       "type": "image-with-text-overlay",
+      "disabled": true,
       "name": "Image with text overlay",
       "settings": {
         "image": "shopify://shop_images/BA3004U.PCK_Waffle_Long_Sleeve_Bodysuit_Peacock_5.jpg",
@@ -102,8 +103,19 @@
           "settings": {
             "enable_media": true,
             "image": "shopify://shop_images/BA3005F.BMB_Bodysuit_Dress_-_Bumble_Bees_52.jpg",
-            "title": "It’s unbelievably soft",
+            "title": "Unbelievably Soft",
             "text": "<p>TENCEL fibres are naturally soft and smooth (some say even softer than silk!), making for the perfect fabric for delicate and sensitive baby skin. The softness is a super power for preventing irritation and maximizing comfort. </p>",
+            "button_label": "",
+            "link": ""
+          }
+        },
+        "text_block_9hPPLh": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "image": "shopify://shop_images/BA9007U.FBK_Sleepsuit_1.0_Tog_French_Breakfast_5.jpg",
+            "title": "Incredibly Durable",
+            "text": "<p>TENCEL is soft like bamboo, but stands up better to machine washing (even frequent washing, which, let’s be honest, is hard to avoid with little ones!), holding its shape better and pilling less than bamboo. </p><p>It also withstands the regular wear and tear that inevitably comes with active babies and toddlers —making it perfect for handing down to future family members or for consignment. </p>",
             "button_label": "",
             "link": ""
           }
@@ -113,8 +125,19 @@
           "settings": {
             "enable_media": true,
             "image": "shopify://shop_images/KA1003U.PCK_Waffle_2-pc_Pajama_Set_Peacock_6_26d1a114-24dc-445a-9d36-5feb92df9a7a.jpg",
-            "title": "It’s temperature regulating and moisture wicking  ",
+            "title": "Temperature Regulating & Moisture Wicking  ",
             "text": "<p>TENCEL is naturally wicking and breathable, keeping babies and toddlers warm in the winter and cool and dry in the summer. And that means better sleep for everyone.  </p>",
+            "button_label": "",
+            "link": ""
+          }
+        },
+        "text_block_gecBWU": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "image": "shopify://shop_images/BA3001U.CKO_Long_Sleeve_Bodysuit_Check_it_Out_5.jpg",
+            "title": "Certified Hypoallergenic & Skin-Friendly ",
+            "text": "<p>Extensive dermatological testing has proven TENCEL to be the ideal fabric for babies with sensitive skin and even eczema. It’s naturally hypoallergenic and its smooth fibre surface minimizes friction against delicate skin. </p><p>It’s also <a href=\"https://www.oeko-tex.com/en/our-standards/oeko-tex-standard-100\"><span style=\"text-decoration:underline\">OEKO-TEX certified</span></a>, so parents can rest assured that it’s been thoroughly tested and proven to be free from more than 1,000 harmful substances.  </p>",
             "button_label": "",
             "link": ""
           }
@@ -122,7 +145,9 @@
       },
       "block_order": [
         "text_block_WyxCLG",
-        "text_block_88RqQd"
+        "text_block_9hPPLh",
+        "text_block_88RqQd",
+        "text_block_gecBWU"
       ],
       "name": "Multi-column",
       "settings": {
@@ -131,39 +156,11 @@
         "media_width": 700,
         "text_alignment": "left",
         "button_style": "primary",
-        "color_scheme": "default"
+        "color_scheme": "2"
       }
     },
     "multi_column_Dtn3Fd": {
       "type": "multi-column",
-      "blocks": {
-        "text_block_c6agCx": {
-          "type": "text_block",
-          "settings": {
-            "enable_media": true,
-            "image": "shopify://shop_images/BA9007U.FBK_Sleepsuit_1.0_Tog_French_Breakfast_5.jpg",
-            "title": "Incredibly durable",
-            "text": "<p>TENCEL is soft like bamboo, but stands up better to machine washing (even frequent washing, which, let’s be honest, is hard to avoid with little ones!), holding its shape better and pilling less than bamboo. </p><p>It also withstands the regular wear and tear that inevitably comes with active babies and toddlers —making it perfect for handing down to future family members or for consignment. </p>",
-            "button_label": "",
-            "link": ""
-          }
-        },
-        "text_block_dCU68D": {
-          "type": "text_block",
-          "settings": {
-            "enable_media": true,
-            "image": "shopify://shop_images/BA3001U.CKO_Long_Sleeve_Bodysuit_Check_it_Out_5.jpg",
-            "title": "It’s certified hypoallergenic and skin-friendly ",
-            "text": "<p>Extensive dermatological testing has proven TENCEL to be the ideal fabric for babies with sensitive skin and even eczema. It’s naturally hypoallergenic and its smooth fibre surface minimizes friction against delicate skin. </p><p>It’s also <a href=\"https://www.oeko-tex.com/en/our-standards/oeko-tex-standard-100\"><span style=\"text-decoration:underline\">OEKO-TEX certified</span></a>, so parents can rest assured that it’s been thoroughly tested and proven to be free from more than 1,000 harmful substances.  </p>",
-            "button_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "text_block_c6agCx",
-        "text_block_dCU68D"
-      ],
       "name": "Multi-column",
       "settings": {
         "title": "",
