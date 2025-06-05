@@ -139,7 +139,7 @@
         "media_width": 700,
         "text_alignment": "left",
         "button_style": "primary",
-        "color_scheme": "default"
+        "color_scheme": "2"
       }
     },
     "multi_column_Dtn3Fd": {
@@ -175,11 +175,11 @@
       "name": "Multi-column",
       "settings": {
         "title": "",
-        "media_aspect_ratio": "s",
+        "media_aspect_ratio": "1",
         "media_width": 700,
         "text_alignment": "left",
         "button_style": "primary",
-        "color_scheme": "default"
+        "color_scheme": "2"
       }
     }
   },
