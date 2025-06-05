@@ -9759,7 +9759,7 @@ html:not(.js) .js-only {
 }
 
 .page-header--with-upper-spacing {
-  margin-top: 30px;
+  margin: 30px 0;
 }
 
 .page-header--with-background {
