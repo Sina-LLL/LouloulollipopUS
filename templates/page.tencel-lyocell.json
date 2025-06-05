@@ -269,7 +269,7 @@
         "title": "Where you’ll find TENCEL at Loulou Lollipop ",
         "text": "<p>By now you won’t be surprised to learn that we love this fabric for our:</p>",
         "text_alignment": "start",
-        "enable_carousel": false,
+        "enable_carousel": true,
         "grid": 5,
         "color_scheme": "default",
         "full_width": false,
