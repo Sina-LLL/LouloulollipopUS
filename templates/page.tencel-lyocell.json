@@ -63,11 +63,34 @@
         "text_alignment": "left",
         "color_scheme": "default"
       }
+    },
+    "rich_text_yBJjGA": {
+      "type": "rich-text",
+      "blocks": {
+        "text_apMbpx": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>How TENCEL™ Lyocell is made</h2><p>TENCEL™ Lyocell contains biodegradable fibres (they’re compostable!) made from responsibly sourced eucalyptus tree pulp. It's made using a closed-loop production process where 99.8 percent of the solvents are reused during manufacturing, helping to minimize waste and environmental impact. </p><p>Contrast that with bamboo, which grows quickly without pesticides, but is converted to rayon through chemical processing that can be hard on the environment. </p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "text_apMbpx"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "height": "medium",
+        "text_alignment": "left",
+        "full_width": true,
+        "color_scheme": "default"
+      }
     }
   },
   "order": [
     "main",
     "rich_text_UYkV6J",
-    "image_with_text_hCiUC3"
+    "image_with_text_hCiUC3",
+    "rich_text_yBJjGA"
   ]
 }
