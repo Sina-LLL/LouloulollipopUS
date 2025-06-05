@@ -90,9 +90,10 @@
       "type": "image-with-text-overlay",
       "name": "Image with text overlay",
       "settings": {
-        "image": "shopify://shop_images/KA1004U.CKO_2-pc_Pajama_Set_Check_it_Out_6_c7c620e0-6dc0-4e94-911e-3e3430c48e80.png",
+        "image": "shopify://shop_images/BA3004U.PCK_Waffle_Long_Sleeve_Bodysuit_Peacock_5.jpg",
+        "mobile_image": "shopify://shop_images/KA1004U.CKO_2-pc_Pajama_Set_Check_it_Out_6_f518a666-7ecd-44a2-ab63-aa00b37ebf07.jpg",
         "height": "fixed",
-        "height_desktop": 600,
+        "height_desktop": 480,
         "height_mobile": 460,
         "image_link": "",
         "full_width": false,
