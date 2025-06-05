@@ -241,7 +241,7 @@
       "settings": {
         "logo": "shopify://shop_images/LLL-Logo-Blue_4x_1008d3c0-8095-4423-8136-c51a68efdf05.png",
         "logo_img_width_int": 215,
-        "mobile_logo_img_width_int": 150,
+        "mobile_logo_img_width_int": 180,
         "logo_h1": false,
         "enable_sticky": true,
         "enable_transparent": true,
