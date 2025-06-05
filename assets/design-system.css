@@ -99,7 +99,7 @@ h6,.h6{
 /* Body Large */
 .large-text, .product-info .price__current{
   font-family: sofia-pro, sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.625rem; /* 144.444% */
   letter-spacing: 0.01563rem;
