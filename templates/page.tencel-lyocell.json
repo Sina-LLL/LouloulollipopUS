@@ -190,9 +190,9 @@
       ],
       "name": "Rich text",
       "settings": {
-        "height": "medium",
-        "text_alignment": "center",
-        "full_width": false,
+        "height": "large",
+        "text_alignment": "left",
+        "full_width": true,
         "color_scheme": "default"
       }
     },
