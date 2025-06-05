@@ -190,7 +190,7 @@
       ],
       "name": "Rich text",
       "settings": {
-        "height": "large",
+        "height": "small",
         "text_alignment": "left",
         "full_width": true,
         "color_scheme": "default"
