@@ -63,7 +63,7 @@
 
   <div class="container">
     {% if section.settings.title != blank %}
-      <h2 class="hometitle h4 align-center" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
+      <h2 class="hometitle h3 align-center" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
         {{- section.settings.title | escape -}}
       </h2>
     {% endif %}
@@ -140,7 +140,7 @@
           {% endif %}
 
           {% if block.settings.title != blank %}
-            <h3 class="text-column__title">{{ block.settings.title | escape }}</h3>
+            <h4 class="text-column__title">{{ block.settings.title | escape }}</h4>
           {% endif %}
 
           {% if block.settings.text != blank %}
