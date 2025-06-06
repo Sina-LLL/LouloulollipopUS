@@ -283,7 +283,7 @@
   const calculatePoints = (total, multiplier) => Math.round(total * multiplier);
 
   const formatCopyWithPoints = (copyText, points) => {
-    const pillHTML = `<span class="loyalty-pill">${points} pts</span>`;
+    const pillHTML = `<span class="loyalty-pill">${points}</span>`;
     return copyText.replace(/\[AMOUNT\]/g, pillHTML);
   };
 
