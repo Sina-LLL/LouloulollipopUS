@@ -202,6 +202,693 @@
             </span>
           </div>
 
+
+
+<!-- Add join from checkout ethos extension -->
+<script>
+(function () {
+  const checkboxId = "loyalty_checkbox";
+  const CART_TOTAL = {{ cart.total_price | divided_by: 100.0 | json }};
+  const COPY_MEMBER = {{ "You'll earn [AMOUNT] points for this order by being a Club Loulou member!" | json }};
+  const COPY_NON_MEMBER = {{ "Earn [AMOUNT] points for this order by joining Club Loulou!" | json }};
+  
+  {% comment %} Environment detection based on host {% endcomment %}
+  const REQUEST_HOST = {{ request.host | json }};
+  
+  {% comment %} Determine API URL based on environment {% endcomment %}
+  let MARKETPLACE_API_URL;
+  if (REQUEST_HOST.includes('myshopify.com') || REQUEST_HOST.includes('127.0.0.1') || REQUEST_HOST.includes('localhost')) {
+    MARKETPLACE_API_URL = "https://marketplaceapi.heyethos.dev";
+  } else {
+    MARKETPLACE_API_URL = "https://marketplaceapi.heyethos.com";
+  }
+  
+  const BASE_API_URL = MARKETPLACE_API_URL;
+  
+  const storeInfo = {
+    domain: {{ shop.domain | json }},
+    permanent_domain: {{ shop.permanent_domain | json }},
+    name: {{ shop.name | json }}
+  };
+  
+  {% if customer %}
+  const customerData = {
+    id: {{ customer.id | json }},
+    email: {{ customer.email | json }},
+    store: storeInfo
+  };
+  {% endif %}
+
+  let loyaltyState = {
+    multiplierData: null,
+    isUserMember: false,
+    isInitialized: false,
+    isUpdating: false,
+    isUpdatingAttribute: false,
+    lastCartTotal: CART_TOTAL,
+    updateTimeout: null
+  };
+
+  const getTierMultiplier = async () => {
+    try {
+      const payload = {
+        storeDomain: storeInfo.permanent_domain,
+        email: {% if customer %}customerData.email{% else %}""{% endif %}
+      };
+      
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 8000);
+      
+      const response = await fetch(`${BASE_API_URL}/api/shopify/multiplier`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+        signal: controller.signal
+      });
+      
+      clearTimeout(timeoutId);
+      
+      if (!response.ok) {
+        throw new Error(`API responded with status: ${response.status}`);
+      }
+      
+      const data = await response.json();
+      return data.success ? data : { tierModel: { multiplier: 1, isLoyaltyMember: false }, success: false };
+    } catch (error) {
+      console.warn("Loyalty API error:", error.message);
+      return { tierModel: { multiplier: 1, isLoyaltyMember: false }, success: false };
+    }
+  };
+
+  const calculatePoints = (total, multiplier) => Math.round(total * multiplier);
+
+  const formatCopyWithPoints = (copyText, points) => {
+    const pillHTML = `<span class="loyalty-pill">${points} pts</span>`;
+    return copyText.replace(/\[AMOUNT\]/g, pillHTML);
+  };
+
+  const updateCartAttribute = async (checked) => {
+    try {
+      const formData = new FormData();
+      formData.append("attributes[loyalty_join_intent]", checked ? "true" : "");
+      
+      loyaltyState.isUpdatingAttribute = true;
+      
+      const response = await fetch("/cart/update.js", {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" }
+      });
+      
+      if (!response.ok) throw new Error("Failed to update cart attributes");
+      
+      const cart = await response.json();
+      updateCheckboxState(cart.attributes.loyalty_join_intent === "true");
+      
+      // Reset flag after a delay to allow other updates
+      setTimeout(() => {
+        loyaltyState.isUpdatingAttribute = false;
+      }, 1000);
+      
+    } catch (error) {
+      console.error("Cart attribute update failed:", error);
+      loyaltyState.isUpdatingAttribute = false;
+    }
+  };
+
+  const updateCheckboxState = (checked) => {
+    const checkbox = document.getElementById(checkboxId);
+    const loyaltyJoinEl = document.querySelector(".loyalty-join");
+    
+    if (checkbox && loyaltyJoinEl && !loyaltyState.isUserMember) {
+      checkbox.checked = checked;
+      loyaltyJoinEl.classList.toggle("checked-state", checked);
+    }
+  };
+
+  const resetLoadingState = () => {
+    const copyEl = document.getElementById("loyalty_copy");
+    if (copyEl) {
+      copyEl.classList.remove('skeleton-loading', 'points-loading');
+    }
+    loyaltyState.isUpdating = false;
+  };
+
+  const updateLoyaltyDisplay = async (cartTotal) => {
+    const copyEl = document.getElementById("loyalty_copy");
+    if (!copyEl) {
+      console.warn("Loyalty copy element not found");
+      return;
+    }
+
+    if (loyaltyState.updateTimeout) {
+      clearTimeout(loyaltyState.updateTimeout);
+    }
+
+    if (loyaltyState.isUpdating) {
+      return;
+    }
+
+    loyaltyState.isUpdating = true;
+
+    loyaltyState.updateTimeout = setTimeout(() => {
+      console.warn("Update timeout reached, resetting state");
+      resetLoadingState();
+    }, 10000);
+
+    try {
+      // Only fetch new multiplier if cart total changed significantly or not cached
+      const cartTotalChange = Math.abs(cartTotal - loyaltyState.lastCartTotal);
+      if (!loyaltyState.multiplierData || cartTotalChange > 1.0) {
+        copyEl.classList.add('points-loading');
+        loyaltyState.multiplierData = await getTierMultiplier();
+        loyaltyState.lastCartTotal = cartTotal;
+      }
+
+      const multiplier = loyaltyState.multiplierData?.tierModel?.multiplier || 1;
+      const points = calculatePoints(cartTotal, multiplier);
+      loyaltyState.isUserMember = loyaltyState.multiplierData?.tierModel?.isLoyaltyMember || false;
+
+      const copyText = loyaltyState.isUserMember ? COPY_MEMBER : COPY_NON_MEMBER;
+      copyEl.innerHTML = formatCopyWithPoints(copyText, points);
+      copyEl.classList.remove('skeleton-loading', 'points-loading');
+
+      const checkbox = document.getElementById(checkboxId);
+      const loyaltyJoinEl = document.querySelector(".loyalty-join");
+      
+      if (loyaltyState.isUserMember && checkbox) {
+        checkbox.style.display = "none";
+        loyaltyJoinEl?.classList.add("member-state");
+      }
+
+    } catch (error) {
+      console.error("Error updating loyalty display:", error);
+      const fallbackText = loyaltyState.isUserMember ? COPY_MEMBER : COPY_NON_MEMBER;
+      const fallbackPoints = Math.round(cartTotal);
+      copyEl.innerHTML = formatCopyWithPoints(fallbackText, fallbackPoints);
+      copyEl.classList.remove('skeleton-loading', 'points-loading');
+    } finally {
+      if (loyaltyState.updateTimeout) {
+        clearTimeout(loyaltyState.updateTimeout);
+        loyaltyState.updateTimeout = null;
+      }
+      loyaltyState.isUpdating = false;
+    }
+  };
+
+  const handleCartUpdate = async () => {
+    if (loyaltyState.isUpdatingAttribute) {
+      return;
+    }
+    
+    try {
+      const response = await fetch('/cart.js');
+      if (!response.ok) throw new Error("Failed to fetch cart");
+      
+      const cartData = await response.json();
+      const cartTotal = cartData.total_price / 100.0;
+      
+      if (!loyaltyState.isUpdatingAttribute) {
+        updateCheckboxState(cartData.attributes.loyalty_join_intent === "true");
+      }
+      
+      await updateLoyaltyDisplay(cartTotal);
+      
+    } catch (error) {
+      console.error('Cart update error:', error);
+      resetLoadingState();
+    }
+  };
+
+  const setupCheckboxListener = () => {
+    const checkbox = document.getElementById(checkboxId);
+    if (checkbox && !loyaltyState.isUserMember && !checkbox.dataset.loyaltyListenerAttached) {
+      checkbox.addEventListener("change", (e) => {
+        e.preventDefault();
+        updateCartAttribute(e.target.checked);
+      });
+      checkbox.dataset.loyaltyListenerAttached = "true";
+    }
+  };
+
+  const initializeLoyalty = async () => {
+    const copyEl = document.getElementById("loyalty_copy");
+    
+    if (!copyEl) {
+      console.warn("Loyalty copy element not found during initialization");
+      return;
+    }
+
+    // Only do the heavy initialization once
+    if (!loyaltyState.isInitialized) {
+      loyaltyState.isInitialized = true;
+      copyEl.classList.add('skeleton-loading');
+
+      try {
+        await updateLoyaltyDisplay(CART_TOTAL);
+        
+        const cartResponse = await fetch('/cart.js');
+        if (cartResponse.ok) {
+          const cartData = await cartResponse.json();
+          updateCheckboxState(cartData.attributes.loyalty_join_intent === "true");
+        }
+
+      } catch (error) {
+        console.error("Loyalty initialization error:", error);
+        resetLoadingState();
+      }
+    }
+
+    // Always ensure checkbox listener is attached (in case drawer was recreated)
+    setupCheckboxListener();
+  };
+
+  let updateDebounceTimer = null;
+  const debouncedCartUpdate = () => {
+    if (updateDebounceTimer) {
+      clearTimeout(updateDebounceTimer);
+    }
+    updateDebounceTimer = setTimeout(() => {
+      handleCartUpdate();
+    }, 300);
+  };
+
+  const observeDrawerChanges = () => {
+    const cartDrawer = document.querySelector('cart-drawer');
+    if (!cartDrawer) {
+      console.warn("Cart drawer element not found");
+      return;
+    }
+
+    const observer = new MutationObserver((mutations) => {
+      let shouldUpdate = false;
+      let shouldReinitialize = false;
+      
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'childList') {
+          const target = mutation.target;
+          // Check for cart content changes
+          if (target.matches?.('.cart-items, .totals__subtotal-value, #CartDrawer-CartItems, .cart-item__quantity, .cart-item') ||
+              target.closest?.('.cart-items, .totals__subtotal-value, #CartDrawer-CartItems')) {
+            shouldUpdate = true;
+          }
+          // Check if loyalty component area was updated
+          if (target.matches?.('.cart-drawer__footer, .drawer__footer') ||
+              target.closest?.('.cart-drawer__footer, .drawer__footer') ||
+              mutation.target.querySelector?.('#loyalty_checkbox')) {
+            shouldReinitialize = true;
+          }
+        }
+      });
+
+      if (shouldReinitialize) {
+        // Re-initialize to ensure checkbox listener is attached
+        setTimeout(initializeLoyalty, 100);
+      }
+      
+      if (shouldUpdate) {
+        debouncedCartUpdate();
+      }
+    });
+
+    observer.observe(cartDrawer, {
+      childList: true,
+      subtree: true,
+      attributes: true,
+      attributeFilter: ['class']
+    });
+
+    const drawerForm = cartDrawer.querySelector('#CartDrawer-Form');
+    if (drawerForm) {
+      drawerForm.addEventListener('submit', () => {
+        setTimeout(handleCartUpdate, 500);
+      });
+    }
+
+    // Watch for drawer visibility changes
+    const visibilityObserver = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'attributes' && 
+            (mutation.attributeName === 'class' || mutation.attributeName === 'style')) {
+          const drawer = mutation.target;
+          const isVisible = drawer.style.visibility !== 'hidden' && 
+                           !drawer.classList.contains('hidden') &&
+                           drawer.style.display !== 'none';
+          
+          if (isVisible) {
+            // Drawer became visible, ensure loyalty component is ready
+            setTimeout(initializeLoyalty, 200);
+          }
+        }
+      });
+    });
+
+    visibilityObserver.observe(cartDrawer, {
+      attributes: true,
+      attributeFilter: ['class', 'style']
+    });
+  };
+
+  const setupEventListeners = () => {
+    const cartUpdateEvents = [
+      'cart:updated', 'cart:changed', 'cart:change', 
+      'drawer:updated', 'drawer:changed',
+      'variant:change', 'quantity:change'
+    ];
+    
+    const drawerOpenEvents = [
+      'drawer:open', 'drawer:opened', 'cart:open', 'cart:opened'
+    ];
+    
+    cartUpdateEvents.forEach(eventName => {
+      document.addEventListener(eventName, () => {
+        debouncedCartUpdate();
+      });
+    });
+
+    drawerOpenEvents.forEach(eventName => {
+      document.addEventListener(eventName, () => {
+        // Re-initialize when drawer opens to ensure checkbox works
+        setTimeout(initializeLoyalty, 150);
+      });
+    });
+
+    const originalFetch = window.fetch;
+    window.fetch = function(...args) {
+      const [url, options] = args;
+      const result = originalFetch.apply(this, arguments);
+      
+      if (typeof url === 'string' && 
+          (url.includes('/cart/add') || 
+           url.includes('/cart/update') || 
+           url.includes('/cart/change') ||
+           url.includes('/cart/clear'))) {
+        
+        if (loyaltyState.isUpdatingAttribute && url.includes('/cart/update')) {
+          return result;
+        }
+        
+        result.then(() => {
+          setTimeout(handleCartUpdate, 800);
+        }).catch(() => {
+          setTimeout(handleCartUpdate, 800);
+        });
+      }
+      
+      return result;
+    };
+  };
+
+  const initialize = () => {
+    setTimeout(() => {
+      initializeLoyalty();
+      observeDrawerChanges();
+      setupEventListeners();
+    }, 200);
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initialize);
+  } else {
+    initialize();
+  }
+
+})();
+</script>
+  
+  <style>
+  {% assign label_col = block.settings.label_text_color | default: '#4D4D4D' %}
+  {% assign pill_text_col = '#ffffff' | default: '#1673B0' %}
+  {% assign pill_bg_col = '#6a8b95' | default: '#F0F5FF' %}
+  {% assign bg_col = '#f4d8ca' | default: 'transparent' %}
+  {% assign scale_percent = block.settings.component_scale | default: 100 %}
+  {% assign scale = scale_percent | divided_by: 100.0 %}
+  {% assign user_font_size = block.settings.font_size | default: 12 %}
+  {% assign user_line_height = block.settings.line_height | default: 1.3 %}
+  {% assign text_font_weight = block.settings.text_font_weight | default: 500 %}
+  {% assign pill_font_weight = block.settings.pill_font_weight | default: 600 %}
+  {% assign text_align = block.settings.text_alignment | default: 'left' %}
+  
+  {% comment %} Base sizes (at 100% scale) {% endcomment %}
+  {% assign base_min_height = 32 %}
+  {% assign base_padding_v = 8 %}
+  {% assign base_padding_h = 12 %}
+  {% assign base_checkbox_size = 13 %}
+  {% assign base_pill_height = 16 %}
+  {% assign base_gap = 8 %}
+  
+  {% comment %} Scaled sizes {% endcomment %}
+  {% assign font_size = user_font_size | times: scale | round %}
+  {% assign min_height = base_min_height | times: scale | round %}
+  {% assign padding_v = base_padding_v | times: scale | round %}
+  {% assign padding_h = base_padding_h | times: scale | round %}
+  {% assign checkbox_size = base_checkbox_size | times: scale | round %}
+  {% assign pill_height = base_pill_height | times: scale | round %}
+  {% assign gap = base_gap | times: scale | round %}
+  
+  {% comment %} Checkbox checkmark scaling {% endcomment %}
+  {% assign checkmark_width = 6 | times: scale | round %}
+  {% assign checkmark_height = 3 | times: scale | round %}
+  {% assign checkmark_left = 3 | times: scale | round %}
+  {% assign checkmark_top = 4 | times: scale | round %}
+  
+  {% assign mobile_font_size = font_size | minus: 1 %}
+
+  .loyalty-join {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: {{ gap }}px;
+    width: 100%;
+    min-height: {{ min_height }}px;
+    background: {{ bg_col }};
+    position: relative;
+    box-sizing: border-box;
+    margin: 0 0 12px 0;
+    padding: {{ padding_v }}px {{ padding_h }}px;
+    border-radius: 6px;
+    overflow: hidden;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: {{ text_align }};
+    {% if text_align == 'center' %}
+    justify-content: center;
+    {% elsif text_align == 'right' %}
+    justify-content: flex-end;
+    {% endif %}
+  }
+
+  #loyalty_checkbox {
+    width: {{ checkbox_size }}px;
+    height: {{ checkbox_size }}px;
+    flex: 0 0 {{ checkbox_size }}px;
+    order: 0;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #4D4D4D;
+    box-shadow: 0px 1px 2px rgba(17, 24, 39, 0.05);
+    border-radius: 3px;
+    position: relative;
+    margin: {{ font_size | divided_by: 4 | round }}px 2px 0 0;
+    transition: all 0.2s ease;
+  }
+
+  #loyalty_checkbox:focus {
+    outline: 2px solid #0066cc;
+    outline-offset: 2px;
+    border-color: #0066cc;
+  }
+
+  #loyalty_checkbox:hover {
+    border-color: #1673B0;
+    box-shadow: 0px 2px 4px rgba(17, 24, 39, 0.1);
+  }
+
+  #loyalty_checkbox:checked {
+    background: #1673B0;
+    border: none;
+    border-radius: 3px;
+  }
+
+  #loyalty_checkbox:checked::after {
+    content: "";
+    position: absolute;
+    border: 1px solid #FFFFFF;
+    width: {{ checkmark_width }}px;
+    height: {{ checkmark_height }}px;
+    border-top: 0;
+    border-right: 0;
+    transform: rotate(-45deg);
+    left: {{ checkmark_left }}px;
+    top: {{ checkmark_top }}px;
+  }
+  
+  .loyalty-join.checked-state #loyalty_checkbox {
+    background: #1673B0;
+    border: none;
+    border-radius: 3px;
+  }
+  
+  .loyalty-join.checked-state #loyalty_checkbox::after {
+    content: "";
+    position: absolute;
+    border: 1px solid #FFFFFF;
+    width: {{ checkmark_width }}px;
+    height: {{ checkmark_height }}px;
+    border-top: 0;
+    border-right: 0;
+    transform: rotate(-45deg);
+    left: {{ checkmark_left }}px;
+    top: {{ checkmark_top }}px;
+  }
+
+  .loyalty-content {
+    display: flex;
+    align-items: flex-start;
+    flex: 1 1 auto;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .loyalty-copy {
+    width: 100%;
+    font-style: normal;
+    font-weight: {{ text_font_weight }};
+    font-size: {{ font_size }}px;
+    line-height: {{ user_line_height }};
+    color: {{ label_col }};
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .loyalty-copy-text {
+    white-space: nowrap;
+    flex: 0 1 auto;
+  }
+
+  .loyalty-earn {
+    display: inline;
+    font-weight: inherit;
+    font-size: {{ font_size }}px;
+    line-height: inherit;
+  }
+
+  .loyalty-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    padding: 2px 6px 4px;
+    height: {{ pill_height }}px;
+    background: {{ pill_bg_col }};
+    border-radius: 100px;
+    font-style: normal;
+    font-weight: {{ pill_font_weight }};
+    font-size: {{ font_size }}px;
+    line-height: 1;
+    color: {{ pill_text_col }};
+    white-space: nowrap;
+    margin: 0 2px;
+  }
+
+  .loyalty-program {
+    display: inline;
+    font-size: {{ font_size }}px;
+    line-height: inherit;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .loyalty-join.member-state {
+    padding-left: 12px;
+  }
+  
+  .loyalty-join.member-state .loyalty-content {
+    margin-left: 0;
+  }
+  
+  .member-state #loyalty_checkbox {
+    display: none;
+  }
+
+  @keyframes skeletonPulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0.6; }
+  }
+  
+  .skeleton-loading .loyalty-earn,
+  .skeleton-loading .loyalty-program,
+  .skeleton-loading .loyalty-pill {
+    color: transparent !important;
+    background-color: #E6E6E6;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    animation: skeletonPulse 1.5s ease-in-out infinite;
+  }
+  
+  .skeleton-loading .loyalty-pill {
+    background-color: {{ pill_bg_col }};
+  }
+  
+  .points-loading .loyalty-pill {
+    color: transparent !important;
+    background-color: {{ pill_bg_col }};
+    position: relative;
+    overflow: hidden;
+    animation: skeletonPulse 1.5s ease-in-out infinite;
+  }
+
+  @media screen and (max-width: 749px) {
+    .loyalty-join {
+      width: 100%;
+    }
+    .loyalty-copy {
+      font-size: {{ mobile_font_size }}px;
+      line-height: {{ user_line_height }};
+    }
+    .loyalty-earn, .loyalty-program, .loyalty-pill {
+      font-size: {{ mobile_font_size }}px;
+    }
+    .loyalty-pill {
+      line-height: {{ pill_height }}px;
+    }
+  }
+</style>
+  
+  <div class="loyalty-join loyalty-join-block" role="region" aria-labelledby="loyalty_copy">
+    <input
+      id="loyalty_checkbox"
+      type="checkbox"
+      name="attributes[loyalty_join_intent]"
+      value="true"
+      tabindex="0"
+      aria-label="Join rewards program and earn points for this order"
+      aria-describedby="loyalty_copy"
+      {% if cart.attributes.loyalty_join_intent == 'true' %}checked{% endif %}>
+    <div class="loyalty-content">
+      <span id="loyalty_copy" class="loyalty-copy skeleton-loading" aria-live="polite" aria-atomic="true">
+        <span class="loyalty-earn">Earn</span>
+        <span class="loyalty-pill">00 pts</span>
+        <span class="loyalty-program">for this order by joining our rewards program!</span>
+      </span>
+    </div>
+  </div>
+<!-- End join from checkout ethos extension -->
+
+
+          
+
           <div class="lightly-spaced-row">
             {%- if section.settings.show_tax_and_shipping -%}
               <div class="cart-policies rte">
