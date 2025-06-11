@@ -276,13 +276,13 @@
       "type": "custom-product-highlight",
       "name": "World Traveler",
       "settings": {
-        "title": "World Traveler Collection",
-        "text": "<p>Soft muslin quilts and swaddles with hand-drawn prints that inspire little ones to dream big and wander far </p>",
-        "image": "shopify://shop_images/SWNYC_Muslin_Swaddle_New_York_51.jpg",
+        "title": "Lightweight Sleep Bags",
+        "text": "<p>Soft, airy, and just right for warm nights</p>",
+        "image": "shopify://shop_images/MuslinSleepBag-Peaches_ebf74673-9c81-44a4-b292-d553eb301b55.jpg",
         "order": true,
         "product_list": [
-          "muslin-quilt-usa",
-          "muslin-swaddle-new-york-city"
+          "muslin-lightweight-sleep-bag-0-5-tog-all-aboard",
+          "muslin-lightweight-sleep-bag-0-5-tog-bumble-bees"
         ],
         "button_label": "Shop Snack Plates",
         "link": "shopify://collections/snack-plate",
