@@ -15,7 +15,7 @@
         "heading_hVQPzc": {
           "type": "heading",
           "settings": {
-            "title": "Why we chose TENCEL Lyocell for baby & toddler wear",
+            "title": "Why we believe TENCEL Lyocell is best for baby clothing",
             "use_h1": true
           }
         }
@@ -37,7 +37,7 @@
         "text_hyjefe": {
           "type": "text",
           "settings": {
-            "text": "<p>We’re proud to be doing our very best every day to produce products that make raising the future generation easier, while also being safe and gentle for little humans and the planet they’ll inherit someday. That means being mindful of the materials we use. Read on for everything you need to know about one of our all-time favourite materials: TENCEL™ Lyocell.</p>",
+            "text": "<p>We’re proud to be doing our very best every day to produce products that make raising the future generation easier, while also being safe and gentle as possible for little humans and the planet they’ll inherit someday. That means being mindful of the materials we use. </p>",
             "enlarge_text": false
           }
         }
@@ -53,28 +53,6 @@
         "image_link": "",
         "image_position": "left",
         "text_alignment": "left",
-        "color_scheme": "default"
-      }
-    },
-    "rich_text_yBJjGA": {
-      "type": "rich-text",
-      "blocks": {
-        "text_apMbpx": {
-          "type": "text",
-          "settings": {
-            "text": "<h2>How TENCEL™ Lyocell is made</h2><p>TENCEL™ Lyocell contains biodegradable fibres (they’re compostable!) made from responsibly sourced eucalyptus tree pulp. It's made using a closed-loop production process where 99.8 percent of the solvents are reused during manufacturing, helping to minimize waste and environmental impact. </p><p>Contrast that with bamboo, which grows quickly without pesticides, but is converted to rayon through chemical processing that can be hard on the environment. </p>",
-            "enlarge_text": false
-          }
-        }
-      },
-      "block_order": [
-        "text_apMbpx"
-      ],
-      "name": "Rich text",
-      "settings": {
-        "height": "medium",
-        "text_alignment": "left",
-        "full_width": true,
         "color_scheme": "default"
       }
     },
@@ -115,7 +93,7 @@
             "enable_media": true,
             "image": "shopify://shop_images/BA9007U.FBK_Sleepsuit_1.0_Tog_French_Breakfast_5.jpg",
             "title": "Incredibly Durable",
-            "text": "<p>TENCEL is soft like bamboo, but stands up better to machine washing (even frequent washing, which, let’s be honest, is hard to avoid with little ones!), holding its shape better and pilling less than bamboo. </p><p>It also withstands the regular wear and tear that inevitably comes with active babies and toddlers —making it perfect for handing down to future family members or for consignment. </p>",
+            "text": "<p>TENCEL is soft like bamboo, but stands up better to machine washing (even frequent washing, which, let’s be honest, is hard to avoid with little ones!), holding its shape better and pilling less than bamboo. </p><p>It also withstands the regular wear and tear that inevitably comes with active babies and toddlers —making it perfect for handing down to future family members or for consignment. </p>",
             "button_label": "",
             "link": ""
           }
@@ -137,7 +115,7 @@
             "enable_media": true,
             "image": "shopify://shop_images/BA3001U.CKO_Long_Sleeve_Bodysuit_Check_it_Out_5.jpg",
             "title": "Certified Hypoallergenic & Skin-Friendly ",
-            "text": "<p>Extensive dermatological testing has proven TENCEL to be the ideal fabric for babies with sensitive skin and even eczema. It’s naturally hypoallergenic and its smooth fibre surface minimizes friction against delicate skin. </p><p>It’s also <a href=\"https://www.oeko-tex.com/en/our-standards/oeko-tex-standard-100\"><span style=\"text-decoration:underline\">OEKO-TEX certified</span></a>, so parents can rest assured that it’s been thoroughly tested and proven to be free from more than 1,000 harmful substances.  </p>",
+            "text": "<p>Extensive dermatological testing has proven TENCEL to be the ideal fabric for babies with sensitive skin and even eczema. It’s naturally hypoallergenic and its smooth fibre surface minimizes friction against delicate skin. </p><p>It’s also <a href=\"https://www.oeko-tex.com/en/our-standards/oeko-tex-standard-100\"><span style=\"text-decoration:underline\">OEKO-TEX certified</span></a>, so parents can rest assured that it’s been thoroughly tested and proven to be free from more than 1,000 harmful substances.</p>",
             "button_label": "",
             "link": ""
           }
@@ -151,7 +129,7 @@
       ],
       "name": "Multi-column",
       "settings": {
-        "title": "4 reasons we love TENCEL™ for baby & toddler clothes ",
+        "title": "4 reasons we love TENCEL™ for baby & toddler clothes",
         "media_aspect_ratio": "s",
         "media_width": 700,
         "text_alignment": "left",
@@ -198,6 +176,28 @@
       "settings": {
         "show_page_title": false,
         "full_width": true
+      }
+    },
+    "rich_text_yBJjGA": {
+      "type": "rich-text",
+      "blocks": {
+        "text_apMbpx": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>How TENCEL™ Lyocell is made</h2><p>TENCEL™ Lyocell contains biodegradable fibres (they’re compostable!) made from responsibly sourced eucalyptus tree pulp. It's made using a closed-loop production process where 99.8% of the solvents are reused during manufacturing, helping to minimize waste and environmental impact. </p><p>Contrast that with bamboo, which grows quickly without pesticides, but is converted to rayon through chemical processing that can be hard on the environment. </p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "text_apMbpx"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "height": "medium",
+        "text_alignment": "left",
+        "full_width": true,
+        "color_scheme": "default"
       }
     },
     "collection_list_FK8cew": {
@@ -285,12 +285,12 @@
   "order": [
     "rich_text_UYkV6J",
     "image_with_text_hCiUC3",
-    "rich_text_yBJjGA",
     "image_with_text_overlay_eJYqiL",
     "multi_column_dinXKM",
     "multi_column_Dtn3Fd",
     "rich_text_jjfkRp",
     "main",
+    "rich_text_yBJjGA",
     "collection_list_FK8cew"
   ]
 }
