@@ -327,6 +327,8 @@
                 {%- endif -%}
               {%- endif -%}
             </div>
+          
+          
 
           {% when 'description' %}
             {%- if product.description != blank -%}
@@ -364,8 +366,22 @@
                   </div>
                 {% endif %}
               </div>
+              {% if product.metafields.custom.bundle_products != blank %}
+                <div class="bundle-products">
+                  <h3 class="bundle-product-title">Bundle Includes:</h3>
+                  <div class="product-grid product-grid--per-row-3 product-grid--per-row-mob-3">
+                    {% assign bundled_products = product.metafields.custom.bundle_products.value %}
+                    {% for bundled_product in bundled_products %}
+                        {% render 'product-block',
+                          product: bundled_product,
+                          custom_aspect_ratio: 0.8
+                        %}
+                    {% endfor %}
+                  </div>
+                </div>
+              {% endif %}
             {%- endif -%}
-
+          
           {% when 'vendor' %}
             {%- liquid
               assign product_vendor_handle = product.vendor | handle
@@ -460,12 +476,12 @@
                         <div class="product-free-shipping__messages">
                           {% render 'icon-shipping' %}
                           <p>
-                            Free Shipping for orders over $65+
+                            Free Shipping for orders over $100+
                             <br>
                             <a href="{{ shop.shipping_policy.url }}"class="shipping-info-trigger">Shipping</a>
                           </p>
                           <div class="shipping-info-tooltip">
-                            All US orders over $65 ship for free!<br>Shipping is $7 for orders under $65. If you need expedited shipping, the shipping fee will be calculated at checkout.
+                            All CA orders over $100 ship for free!<br>$12 standard shipping in BC, $18 rest of Canada for orders under $100. If you need expedited shipping, the shipping fee will be calculated at checkout.
                           </div>
                         </div>
                         <div class="wishlist--container">
