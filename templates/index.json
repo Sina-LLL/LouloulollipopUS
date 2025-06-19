@@ -395,54 +395,111 @@
           "type": "testimonial",
           "settings": {
             "star_rating": 5,
-            "testimonial": "Add customer reviews and testimonials to showcase your store’s happy customers.",
-            "author": "Author's name",
+            "testimonial-title": "LOVE the bees!! 🐝",
+            "testimonial": "Super soft, we love the fold over mitts and socks! Couldn’t be more in love with the pattern as well.",
+            "author": "Stacey D",
+            "image": "shopify://shop_images/6f343775-42fa-5aff-8245-6d9a0ec41c98.jpg",
             "image_caption": "",
-            "link": ""
+            "link": "shopify://products/sleeper-bumble-bees"
           }
         },
         "testimonial_E6kGWU": {
           "type": "testimonial",
           "settings": {
             "star_rating": 5,
-            "testimonial": "Add customer reviews and testimonials to showcase your store’s happy customers.",
-            "author": "Author's name",
+            "testimonial-title": "Surprisingly soft",
+            "testimonial": "I am really impressed with this bib! It is the softest waterproof bib we own by far; I don’t know how they managed to make it both soft and functional, but it is definitely both. The coverage is great on my petite two year old, keeping her nice and clean, and I love that I can just toss it in the washer. It makes it so much easier to get fully clean. The print is super cute too - I would definitely recommend it! I received this product as part of the Stellar Product Testing Panel in exchange for my honest review.",
+            "author": "Anonymous",
+            "image": "shopify://shop_images/22ab6ac7-6f8e-5b3b-a508-6bf3da54680e.jpg",
             "image_caption": "",
-            "link": ""
+            "link": "shopify://products/long-sleeve-bib-sweet-treats"
+          }
+        },
+        "testimonial_tqPcqL": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 5,
+            "testimonial-title": "Love these— go to sleep sack",
+            "testimonial": "I absolutely love these sleep sacks and other LouLou products! The quality is fantastic and has endured many washes!! I aim to not put in dryer— one sack has gone in multiple times while the other I try to hang. I’m so impressed by how well these have stood up over the past 4 months of wear. A bit disappointed there’s no between size from the 0-6 and 6-18. My daughter is too petite to fit the next size for some time. It will be tough to be without our favourite sleep sack until she can.",
+            "author": "Dcgilmr",
+            "image": "shopify://shop_images/a6aa598a-c4b7-5ce4-a018-d67bd5c85bcb.jpg",
+            "image_caption": "",
+            "link": "shopify://collections/sleep-bags"
+          }
+        },
+        "testimonial_3BMPQJ": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 5,
+            "testimonial-title": "Softest Muslin",
+            "testimonial": "Love these Muslim swaddles. I use them as lightweight and breathable summer blankets for my 8 month old. Large enough to cover his stroller for nap time or just to keep the sun off him. They are by far the softest I have found. Who wants to wrap their baby in scratchy muslin. Super cute designs too. Highly recommend.",
+            "author": "Jasminetara",
+            "image": "shopify://shop_images/500b5d60-9252-53bc-8df9-b53c73d4d475.jpg",
+            "image_caption": "",
+            "link": "shopify://products/muslin-swaddle-sushi"
           }
         }
       },
       "block_order": [
         "testimonial_dzeRxc",
-        "testimonial_E6kGWU"
+        "testimonial_E6kGWU",
+        "testimonial_tqPcqL",
+        "testimonial_3BMPQJ"
       ],
       "name": "Testimonials",
       "settings": {
-        "title": "Customer reviews",
+        "title": "Real Kid Tested. Parent-Approved.",
         "layout": "image-right",
         "text_caps": false,
-        "quote_text_size": 30,
-        "quote_text_size_mobile": 20,
+        "quote_text_size": 24,
+        "quote_text_size_mobile": 16,
         "image_shape": "square",
         "color_scheme": "default",
         "autoplay": true,
         "autoplay_speed": 5
       }
     },
-    "featured_collection_tc8tiM": {
-      "type": "featured-collection",
+    "logo_list_pgf7FP": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_rQ8D9n": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Certified_B_Corporation_B_Corp_Logo_2022_Black_RGB_svg.webp",
+            "image_width": 80,
+            "link": "https://www.bcorporation.net/en-us/",
+            "title": ""
+          }
+        },
+        "logo_GtMKA4": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Benefits-of-Partnering-with-a-WBENC-Certified-Women-Business-Enterprise-Public-Relations-and-Marketing-Agency-feature.webp",
+            "image_width": 160,
+            "link": "https://buywomenowned.com/",
+            "title": ""
+          }
+        },
+        "logo_Hqdrmf": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/OEKO_TEX.png",
+            "image_width": 80,
+            "link": "https://www.oeko-tex.com/en/",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_rQ8D9n",
+        "logo_GtMKA4",
+        "logo_Hqdrmf"
+      ],
+      "name": "Logo list",
       "settings": {
-        "title": "Shop by Category",
-        "text": "",
-        "collection": "0-5-tog",
-        "show_vendor": false,
-        "enable_carousel": true,
-        "grid": 5,
-        "rows": 1,
-        "color_scheme": "default",
-        "show_view_all": false,
-        "full_width": true,
-        "text_alignment": "start"
+        "title": "",
+        "image_opacity": 100,
+        "color_scheme": "default"
       }
     },
     "custom_product_highlight_PMwqLc": {
@@ -452,7 +509,7 @@
         "title": "Mess-less Mealtimes",
         "text": "<p>Our super smart silicone snack plates feature a strong sticky base even pro food flingers can't beat. Available in a variety of totally a-roar-able animal shapes for more happy snacking with less mess!</p>",
         "image": "shopify://shop_images/SPL-008-SPK_SnackPlate_Seashell_51_cf7ec9aa-99f6-4eb9-b190-a3b7efd8d952.jpg",
-        "order": false,
+        "order": true,
         "product_list": [
           "snack-plate-sarah-shark",
           "snack-plate-octopus"
@@ -460,7 +517,23 @@
         "button_label": "Shop Snack Plates",
         "link": "shopify://collections/snack-plate",
         "button_style": "primary",
-        "color_scheme": "default"
+        "color_scheme": "2"
+      }
+    },
+    "featured_collection_tc8tiM": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "text": "",
+        "collection": "snack-plate",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 5,
+        "rows": 1,
+        "color_scheme": "2",
+        "show_view_all": false,
+        "full_width": true,
+        "text_alignment": "start"
       }
     },
     "featured_collection_iJcKke": {
@@ -741,8 +814,9 @@
     "featured_collection_K3tJdQ",
     "collection_list_BzgHGC",
     "testimonials_VgkpHw",
-    "featured_collection_tc8tiM",
+    "logo_list_pgf7FP",
     "custom_product_highlight_PMwqLc",
+    "featured_collection_tc8tiM",
     "featured_collection_iJcKke",
     "collection_list_XEbpaa",
     "featured_collection_6Cp3dQ",
