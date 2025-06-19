@@ -504,6 +504,9 @@
     },
     "custom_product_highlight_PMwqLc": {
       "type": "custom-product-highlight",
+      "custom_css": [
+        ".fully-padded-row--medium {padding-bottom: 0 !important;}"
+      ],
       "name": "Mess-less Mealtimes",
       "settings": {
         "title": "Mess-less Mealtimes",
