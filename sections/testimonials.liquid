@@ -54,7 +54,7 @@
   <div class="container fade-in" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.2s"' -%}>
     <div class="testimonial-list testimonial-list--{{ section.settings.layout }} testimonial-list--{% if show_image %}with-images {% else %}without-images{% endif %}" data-testimonial-count="{{ section.blocks.size }}">
       {%- if section.settings.title != blank -%}
-        <div class="subheading">{{ section.settings.title | escape }}</div>
+        <h2 class="h4">{{ section.settings.title | escape }}</h2>
       {%- endif -%}
 
       {%- if use_slideshow -%}
@@ -69,9 +69,7 @@
 
         <div class="testimonial testimonial-{{ forloop.index }}{% if show_image == false %} reading-width{% endif %}" {{ block.shopify_attributes }}>
           <div class="testimonial__column testimonial__column--text">
-            {% if section.settings.title != blank and show_image %}
-              <div class="subheading">{{ section.settings.title | escape }}</div>
-            {% endif %}
+          
 
             <div class="testimonial__content">
               {%- if block.settings.star_rating > 0 -%}
@@ -84,6 +82,7 @@
 
               {%- if block.settings.testimonial != blank -%}
                 <div class="testimonial__text">
+                  <h5 class="h5">{{ block.settings.testimonial-title }}</h5>
                   <blockquote class="testimonial__blockquote{% if section.settings.text_caps %} testimonial__blockquote--caps{% endif %} heading-font">{% render 'multiline-text' with block.settings.testimonial %}</blockquote>
                 </div>
               {%- endif -%}
@@ -280,6 +279,12 @@
           "step": 1,
           "label": "Star rating",
           "default": 5
+        },
+        {
+          "type": "text",
+          "id": "testimonial-title",
+          "label": "Testimonial Title",
+          "default": "Customer Review Title"
         },
         {
           "type": "text",
