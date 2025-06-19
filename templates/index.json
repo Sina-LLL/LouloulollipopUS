@@ -539,23 +539,6 @@
         "text_alignment": "start"
       }
     },
-    "featured_collection_iJcKke": {
-      "type": "featured-collection",
-      "name": "Ocean Wonders Sleep & Wear",
-      "settings": {
-        "title": "Ocean Wonders Sleep & Wear",
-        "text": "",
-        "collection": "ocean-wonders",
-        "show_vendor": false,
-        "enable_carousel": true,
-        "grid": 5,
-        "rows": 2,
-        "color_scheme": "1",
-        "show_view_all": true,
-        "full_width": true,
-        "text_alignment": "start"
-      }
-    },
     "collection_list_XEbpaa": {
       "type": "collection-list",
       "blocks": {
@@ -617,6 +600,7 @@
         "collection_hT7mWW",
         "collection_7rXmQD"
       ],
+      "disabled": true,
       "settings": {
         "title": "Shop by Age",
         "text": "",
@@ -631,80 +615,6 @@
         "coll_grid_show_count": false,
         "coll_text_position": "below",
         "coll_text_position_under_mobile": true,
-        "coll_thumb_text_align_x": "center",
-        "coll_thumb_text_align_y": "center",
-        "coll_button_style": "primary"
-      }
-    },
-    "featured_collection_6Cp3dQ": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Perfect gifts for newborns",
-        "text": "",
-        "collection": "newborn-0-6-months",
-        "show_vendor": false,
-        "enable_carousel": true,
-        "grid": 5,
-        "rows": 1,
-        "color_scheme": "default",
-        "show_view_all": true,
-        "full_width": true,
-        "text_alignment": "start"
-      }
-    },
-    "collection_list_g7498J": {
-      "type": "collection-list",
-      "blocks": {
-        "collection_j8MAG6": {
-          "type": "collection",
-          "settings": {
-            "collection": "sleep-bags",
-            "tag": "",
-            "image": "shopify://shop_images/Sleep_Bag_2.5_Tog_-_Cozy_Forest_3.webp",
-            "subheading": "Sleep Bags",
-            "button_label": ""
-          }
-        },
-        "collection_dUtKCB": {
-          "type": "collection",
-          "settings": {
-            "collection": "waffle-collection",
-            "tag": "",
-            "image": "shopify://shop_images/WaffleCollection.jpg",
-            "subheading": "Waffle",
-            "button_label": ""
-          }
-        },
-        "collection_76prhk": {
-          "type": "collection",
-          "settings": {
-            "collection": "long-sleeve-bibs",
-            "tag": "",
-            "image": "shopify://shop_images/Web-38_1cc54960-045b-4072-91a0-a8e584247e79.jpg",
-            "subheading": "Long Sleeve Bibs",
-            "button_label": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection_j8MAG6",
-        "collection_dUtKCB",
-        "collection_76prhk"
-      ],
-      "settings": {
-        "title": "Our Most Loved",
-        "text": "",
-        "text_alignment": "center",
-        "enable_carousel": true,
-        "grid": 3,
-        "color_scheme": "1",
-        "full_width": true,
-        "coll_grid_image_shape": "portrait-45",
-        "coll_grid_image_position": "center center",
-        "coll_thumb_mob_per_row": "2",
-        "coll_grid_show_count": false,
-        "coll_text_position": "below",
-        "coll_text_position_under_mobile": false,
         "coll_thumb_text_align_x": "center",
         "coll_thumb_text_align_y": "center",
         "coll_button_style": "primary"
@@ -740,6 +650,7 @@
         "text_block_zy7AYT",
         "text_block_VkTHha"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "media_aspect_ratio": "1.25",
@@ -747,34 +658,6 @@
         "text_alignment": "center",
         "button_style": "primary",
         "color_scheme": "default"
-      }
-    },
-    "rich_text_AyKQDC": {
-      "type": "rich-text",
-      "blocks": {
-        "subheading_8LtjR7": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "Love, Quality, and Purpose"
-          }
-        },
-        "heading_PdHfXy": {
-          "type": "heading",
-          "settings": {
-            "title": "Designed to Last, Crafted to Love",
-            "use_h1": false
-          }
-        }
-      },
-      "block_order": [
-        "subheading_8LtjR7",
-        "heading_PdHfXy"
-      ],
-      "settings": {
-        "height": "medium",
-        "text_alignment": "center",
-        "full_width": false,
-        "color_scheme": "2"
       }
     },
     "1737676593fa7ff914": {
@@ -820,12 +703,8 @@
     "logo_list_pgf7FP",
     "custom_product_highlight_PMwqLc",
     "featured_collection_tc8tiM",
-    "featured_collection_iJcKke",
     "collection_list_XEbpaa",
-    "featured_collection_6Cp3dQ",
-    "collection_list_g7498J",
     "multi_column_MR9q33",
-    "rich_text_AyKQDC",
     "1737676593fa7ff914"
   ]
 }
