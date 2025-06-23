@@ -310,8 +310,8 @@ li.slider__item.is-active {
   border-radius:4px;
 }
 .swatch-style-icon_square .option-selector .opt-label--image{
-  height:50px;
-  width:50px;
+  height:60px;
+  width:60px;
   border-radius:4px;
   margin-right: 12px;
   margin-top: 12px;
@@ -737,4 +737,20 @@ label.filter-group__item.filter-group__item--active:before{
   height: 40px;
   background-size: 140%;
   border: 2px solid #D9E1E4;
+}
+
+/* Bundles PDP */
+
+.bundle-products .price__current{
+  display: none;
+}
+.bundle-products .product-block__title{
+  font-size:14px;
+  line-height:1em
+}
+.product-grid--per-row-mob-3{
+  --product-columns-desktop: 3;
+}
+.bundle-product-title{
+  font-size: 1.25rem;
 }
