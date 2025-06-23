@@ -148,6 +148,7 @@
         },
         "menu_promotion_small_9UBNbq": {
           "type": "menu-promotion-small",
+          "disabled": true,
           "settings": {
             "dropdown_link_title": "Top Gifts",
             "image": "shopify://shop_images/Frame_1_719c04ec-ea55-404e-be01-73014c2ccfb9.png",
@@ -158,10 +159,10 @@
         "menu_promotion_small_mgLirm": {
           "type": "menu-promotion-small",
           "settings": {
-            "dropdown_link_title": "Gifts & Bundles",
+            "dropdown_link_title": "Bundles & Gifts",
             "image": "shopify://shop_images/DS-NB002_42.png",
-            "title": "Gift Sets",
-            "link_url": "shopify://collections/gift-sets"
+            "title": "Bundles & Gift Sets",
+            "link_url": "shopify://collections/bundles-and-sets"
           }
         },
         "menu_promotion_small_jbPGfw": {
