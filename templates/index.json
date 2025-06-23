@@ -300,7 +300,7 @@
         "collection": "bundles-and-sets",
         "show_vendor": false,
         "enable_carousel": true,
-        "grid": 4,
+        "grid": 5,
         "rows": 1,
         "color_scheme": "1",
         "show_view_all": true,
