@@ -462,6 +462,15 @@
     "logo_list_pgf7FP": {
       "type": "logo-list",
       "blocks": {
+        "logo_PyLQJg": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/ICON-SM-6.svg",
+            "image_width": 80,
+            "link": "",
+            "title": ""
+          }
+        },
         "logo_rQ8D9n": {
           "type": "logo",
           "settings": {
@@ -488,12 +497,23 @@
             "link": "https://www.oeko-tex.com/en/",
             "title": ""
           }
+        },
+        "logo_DDHT6z": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/ICON-SM-16.svg",
+            "image_width": 80,
+            "link": "",
+            "title": "Phthalate Free"
+          }
         }
       },
       "block_order": [
+        "logo_PyLQJg",
         "logo_rQ8D9n",
         "logo_GtMKA4",
-        "logo_Hqdrmf"
+        "logo_Hqdrmf",
+        "logo_DDHT6z"
       ],
       "name": "Logo list",
       "settings": {
