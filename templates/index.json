@@ -248,7 +248,7 @@
         "text_block_CjCE3F": {
           "type": "text_block",
           "settings": {
-            "enable_media": true,
+            "enable_media": false,
             "title": "Made by Moms, Loved by Parents Everywhere",
             "text": "<p>Made by twin sisters and self-proclaimed picky moms who get it, our products are real-life tested to stand up to anything life - and kids -  throw at ’em.</p>",
             "button_label": "",
@@ -258,7 +258,7 @@
         "text_block_nfX6Kf": {
           "type": "text_block",
           "settings": {
-            "enable_media": true,
+            "enable_media": false,
             "title": "Helping Families Hit the Big (and Small) Milestones Since 2015",
             "text": "<p>From first smiles to first foods, we’ve been there for the baby moments you’ll never forget—and the parenting ones you wish you could (IYKYK). From teething to sleep regressions and everything in between, we’re here to make it all a little easier.</p>",
             "button_label": "",
@@ -268,7 +268,7 @@
         "text_block_craMbA": {
           "type": "text_block",
           "settings": {
-            "enable_media": true,
+            "enable_media": false,
             "title": "Safe for Baby, Approved by Grown-Ups",
             "text": "<p>We only use premium, non-toxic, safety-tested materials—like buttery soft TENCEL™ Lyocell and 100% food-grade silicone—so you can stress less, snuggle more, and actually enjoy the messy magic of parenthood.</p>",
             "button_label": "",
@@ -297,7 +297,7 @@
       "settings": {
         "title": "Ready-to-Go Bundles & Gift Sets",
         "text": "<p>Pre-packed with love. Beautifully boxed and ready to gift.</p>",
-        "collection": "gift-sets",
+        "collection": "bundles-and-sets",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 4,
