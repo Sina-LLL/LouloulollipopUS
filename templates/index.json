@@ -130,6 +130,15 @@
             "title": ""
           }
         },
+        "logo_KwwATQ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/BabyList-Logo.png",
+            "image_width": 160,
+            "link": "https://www.babylist.com/store/b/loulou-lollipop/919",
+            "title": ""
+          }
+        },
         "logo_m3DkDJ": {
           "type": "logo",
           "settings": {
@@ -144,16 +153,7 @@
           "settings": {
             "image": "shopify://shop_images/Parade-Logo.png",
             "image_width": 160,
-            "link": "",
-            "title": ""
-          }
-        },
-        "logo_KwwATQ": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/BabyList-Logo.png",
-            "image_width": 160,
-            "link": "",
+            "link": "https://parade.com/1343996/leighblickley/easter-gifts-for-babies/",
             "title": ""
           }
         },
@@ -162,7 +162,7 @@
           "settings": {
             "image": "shopify://shop_images/theBUMP-Logo.png",
             "image_width": 160,
-            "link": "",
+            "link": "https://www.thebump.com/a/best-of-baby-winner-baby-tableware-2021",
             "title": ""
           }
         },
@@ -209,9 +209,9 @@
       },
       "block_order": [
         "logo_3E4WaJ",
+        "logo_KwwATQ",
         "logo_m3DkDJ",
         "logo_mQKag7",
-        "logo_KwwATQ",
         "logo_Pb9irB",
         "logo_RidJwp",
         "logo_CGcCUn",
