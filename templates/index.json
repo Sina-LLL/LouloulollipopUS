@@ -161,7 +161,7 @@
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/theBUMP-Logo.png",
-            "image_width": 160,
+            "image_width": 150,
             "link": "https://www.thebump.com/a/best-of-baby-winner-baby-tableware-2021",
             "title": ""
           }
@@ -249,8 +249,8 @@
           "type": "text_block",
           "settings": {
             "enable_media": true,
-            "title": "Add a title or tagline",
-            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+            "title": "Made by Moms, Loved by Parents Everywhere",
+            "text": "<p>Made by twin sisters and self-proclaimed picky moms who get it, our products are real-life tested to stand up to anything life - and kids -  throw at ’em.</p>",
             "button_label": "",
             "link": ""
           }
@@ -259,8 +259,8 @@
           "type": "text_block",
           "settings": {
             "enable_media": true,
-            "title": "Add a title or tagline",
-            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+            "title": "Helping Families Hit the Big (and Small) Milestones Since 2015",
+            "text": "<p>From first smiles to first foods, we’ve been there for the baby moments you’ll never forget—and the parenting ones you wish you could (IYKYK). From teething to sleep regressions and everything in between, we’re here to make it all a little easier.</p>",
             "button_label": "",
             "link": ""
           }
@@ -269,8 +269,8 @@
           "type": "text_block",
           "settings": {
             "enable_media": true,
-            "title": "Add a title or tagline",
-            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+            "title": "Safe for Baby, Approved by Grown-Ups",
+            "text": "<p>We only use premium, non-toxic, safety-tested materials—like buttery soft TENCEL™ Lyocell and 100% food-grade silicone—so you can stress less, snuggle more, and actually enjoy the messy magic of parenthood.</p>",
             "button_label": "",
             "link": ""
           }
