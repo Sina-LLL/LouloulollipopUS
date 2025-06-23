@@ -146,16 +146,6 @@
             "link_url": "shopify://collections/newborn-0-6-months"
           }
         },
-        "menu_promotion_small_9UBNbq": {
-          "type": "menu-promotion-small",
-          "disabled": true,
-          "settings": {
-            "dropdown_link_title": "Top Gifts",
-            "image": "shopify://shop_images/Frame_1_719c04ec-ea55-404e-be01-73014c2ccfb9.png",
-            "title": "Gift Cards",
-            "link_url": "shopify://products/gift-cards"
-          }
-        },
         "menu_promotion_small_mgLirm": {
           "type": "menu-promotion-small",
           "settings": {
@@ -163,6 +153,15 @@
             "image": "shopify://shop_images/DS-NB001_113.jpg",
             "title": "Bundles & Gift Sets",
             "link_url": "shopify://collections/bundles-and-sets"
+          }
+        },
+        "menu_promotion_small_9UBNbq": {
+          "type": "menu-promotion-small",
+          "settings": {
+            "dropdown_link_title": "Bundles & Gifts",
+            "image": "shopify://shop_images/Frame_1_719c04ec-ea55-404e-be01-73014c2ccfb9.png",
+            "title": "Gift Cards",
+            "link_url": "shopify://products/gift-cards"
           }
         },
         "menu_promotion_small_jbPGfw": {
@@ -230,8 +229,8 @@
         "menu_promotion_small_FkQ6bx",
         "menu_promotion_small_pTVJy3",
         "menu_promotion_small_9XzrdD",
-        "menu_promotion_small_9UBNbq",
         "menu_promotion_small_mgLirm",
+        "menu_promotion_small_9UBNbq",
         "menu_promotion_small_jbPGfw",
         "menu_promotion_small_7d9UtM",
         "menu_promotion_small_xcHDVd",
