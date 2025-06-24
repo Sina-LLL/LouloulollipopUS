@@ -761,3 +761,9 @@ label.filter-group__item.filter-group__item--active:before{
 .bundle-product-title{
   font-size: 1.25rem;
 }
+
+
+/* Columns */
+h4.text-column__title {
+    font-size: 20px;
+}
