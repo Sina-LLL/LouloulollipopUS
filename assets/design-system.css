@@ -275,6 +275,10 @@ a.opt-label.opt-label--image .opt-label__media.media, a.opt-label.opt-label--ima
 .product-form .input-row, .buy-buttons-row{
   margin:12px 0;
 }
+button.btn.btn--large.no-stock {
+    background-color: #B3C3C9;
+    border-color: #B3C3C9;
+}
 carousel-slider.carousel.block.thumbnails.mobile-only {
   position: absolute;
   bottom: 0;
