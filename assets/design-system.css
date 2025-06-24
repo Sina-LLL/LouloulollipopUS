@@ -724,8 +724,9 @@ h1.product-title {
   font-style: normal;
   font-weight: 700;
   letter-spacing: -.03rem;
-  margin-bottom: 0;
+  margin-bottom: 12px;
   margin-top: 4px;
+  line-height: 2.625rem;
 }
 
 .overflow_hidden{
