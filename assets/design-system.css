@@ -455,8 +455,15 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
 }
 
 
+.product-price--large .price__was{
+  margin-left:0;
+}
+.product-price--large .price__current{
+  margin-left: 8px;
+}
 .price__was{
   font-size:1rem;
+  color: #848484;
 }
 .product-free-shipping__container{
   font-size:14px;
