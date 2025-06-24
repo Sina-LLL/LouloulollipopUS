@@ -51,7 +51,10 @@
                {% if sibling.handle == product.handle %}data-selected="true"{% endif %}>
              
               <div class="overflow_hidden">
-               <div class="opt-label__media media">                
+               <div class="opt-label__media media">  
+                {%- if sibling.available == false  -%}
+                   <div class="sold-out-line"></div>
+                {% endif %}
                   {% if sibling.metafields.custom.swatch.value.image.value != blank %}
                   {%- render 'image',
                     image: sibling.metafields.custom.swatch.value.image.value,
@@ -103,11 +106,14 @@
         {%- unless sibling.tags contains 'new' or sibling.tags contains 'sale'-%}
           {%- if sibling.tags contains 'core' -%}
             <a href="{{ sibling.url }}" 
-               class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}" 
+               class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}{% if sibling.available == false  %} sold-out{% endif %}" 
                data-color="{{ sibling.metafields.theme.cutline }}" data-section="core"
                {% if sibling.handle == product.handle %}data-selected="true"{% endif %}>
               <div class="overflow_hidden">
-                 <div class="opt-label__media media">                
+                 <div class="opt-label__media media " >  
+                  {%- if sibling.available == false  -%}
+                     <div class="sold-out-line"></div>
+                  {% endif %}
                     {% if sibling.metafields.custom.swatch.value.image.value != blank %}
                     {%- render 'image',
                       image: sibling.metafields.custom.swatch.value.image.value,
@@ -117,6 +123,16 @@
                       custom_crop: img_crop_align
                     -%}
                     {% elsif sibling.metafields.custom.swatch.value.image.value == blank %}
+                       <style>
+                      a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
+                        max-width: 100%;
+                        max-height: 100%;
+                        position: absolute;
+                        left: 0; 
+                        top: 0;
+                        height: 130%;
+                    }
+                    </style>
                       {%- render 'image',
                       image: sibling.images.first,
                       sizes: img_sizes,
