@@ -565,6 +565,7 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
 
 .accordion-toggle h2 {
   margin: 0;
+  font-size: 1.75rem;
 }
 
 .accordion-toggle .chevron {
