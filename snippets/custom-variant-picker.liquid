@@ -151,14 +151,17 @@
       {%- for sibling in sibs_collection.products -%}
         {%- if sibling.tags contains 'sale' -%}
           <a href="{{ sibling.url }}" 
-             class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}" 
+             class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}{% if sibling.available == false  %} sold-out{% endif %}" 
              data-color="{{ sibling.metafields.theme.cutline }}" data-section="core"
              {% if sibling.handle == product.handle %}data-selected="true"{% endif %}>
             {%- if sibling.tags contains 'sale' -%}
               <div class="opt-label__tag product-label--sale">SALE</div>
             {%- endif -%}
             <div class="overflow_hidden">
-              <div class="opt-label__media media">                
+              <div class="opt-label__media media">  
+                {%- if sibling.available == false  -%}
+                   <div class="sold-out-line"></div>
+                {% endif %}
                 {% if sibling.metafields.custom.swatch.value.image.value != blank %}
                 {%- render 'image',
                   image: sibling.metafields.custom.swatch.value.image.value,

@@ -490,10 +490,9 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
 
 .product-price--large .price__was{
   margin-left:0;
+  margin-right: 8px;
 }
-.product-price--large .price__current{
-  margin-left: 8px;
-}
+
 .price__was{
   font-size:1rem;
   color: #848484;
@@ -515,6 +514,7 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
   display: flex;
   align-items: center;
   position: relative;
+  padding-right: 8px;
 }
 .product-free-shipping__messages svg{
   margin-right:16px;
@@ -564,6 +564,7 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
 
 .accordion-toggle h2 {
   margin: 0;
+  font-size: 1.75rem;
 }
 
 .accordion-toggle .chevron {
@@ -718,14 +719,15 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
 hr{
   border-bottom: 0.5px solid #1d1d1d;
 }
-h1.product-title{
-  font-family: avenir-next-lt-pro, sofia-pro, sans-serif;
-  font-size: 2.5rem;
+h1.product-title {
+  font-family: avenir-next-lt-pro,sofia-pro,sans-serif;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 700;
-  letter-spacing: -0.03rem;
-  margin-bottom: 23px;
+  letter-spacing: -.03rem;
+  margin-bottom: 12px;
   margin-top: 4px;
+  line-height: 2.625rem;
 }
 
 .overflow_hidden{
