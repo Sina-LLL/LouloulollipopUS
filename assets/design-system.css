@@ -331,12 +331,41 @@ li.slider__item.is-active {
   border:2.5px solid #6A8B95 !important;
   border-radius:4px;
 }
+.sold-out-line {
+    height: 84.85px;
+    position: absolute;
+    width: 2px;
+    background-color: red;
+    z-index: 9;
+    transform: translate3d(-50%, -50%, 0) rotate(45deg);
+    top: 50%;
+    left: 50%;
+}
+
+.swatch-style-icon_square .option-selector .opt-label--image .sold-out-line{
+  background-color:#D9E1E4;
+}
+.swatch-style-icon_square .option-selector .opt-label--image:hover .sold-out-line{
+  background-color: #D9E1E4;
+}
+.opt-label.opt-label--image.is-active .sold-out-line{
+  background-color:#6A8B95;
+}
 .swatch-style-icon_square .option-selector .opt-label--image:hover:after{
   border: 2px solid #8EA7AF;
 }
 .swatch-style-icon_square .option-selector .opt-label--image:after{
   border-radius:4px;
   border:2px solid #D9E1E4;
+}
+.swatch-style-icon_square .option-selector .opt-label--image.sold-out:hover:after {
+  border-color:#D9E1E4;
+}
+.opt-label.opt-label--image.is-active.sold-out:hover .sold-out-line{
+  background-color:#6A8B95;
+}
+.sold-out .theme-img{
+  opacity: 30%;
 }
 .price-currency{
   display:inline-block;
