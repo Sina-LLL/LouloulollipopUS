@@ -331,6 +331,17 @@ li.slider__item.is-active {
   border:2.5px solid #6A8B95 !important;
   border-radius:4px;
 }
+
+.price.price--sold-out .price__default{
+  display: none;
+}
+.price.price--on-sale.price--sold-out .price__default{
+  display:flex;
+}
+.price-label--sold-out{
+  font-weight: 600;
+  
+}
 .sold-out-line {
     height: 84.85px;
     position: absolute;
