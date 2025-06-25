@@ -14,6 +14,22 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_dQqYfe": {
+          "type": "announcement",
+          "settings": {
+            "text": "<strong>End of Season Sale - </strong><a href=\"/collections/sale\" title=\"SALE\"><strong>Up to 65% Off</strong></a>",
+            "show_countdown": false,
+            "hide_on_end": false,
+            "end_date": "",
+            "end_time": "",
+            "number_font": "base",
+            "countdown_separator": "box",
+            "use_custom_colors": false,
+            "bg_color": "#4a4a4a",
+            "bg_gradient": "",
+            "text_color": "#ffffff"
+          }
+        },
         "announcement-1": {
           "type": "announcement",
           "settings": {
@@ -48,6 +64,7 @@
         }
       },
       "block_order": [
+        "announcement_dQqYfe",
         "announcement-1",
         "announcement-2"
       ],
