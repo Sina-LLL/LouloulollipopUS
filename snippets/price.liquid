@@ -43,17 +43,17 @@
         {{ price | money }}
       {%- endif -%}
     </span> -->
-      {% if for_variant_picker or compare_at_price > price -%}
-         {%- if compare_at_price > price -%}    
-        <span class="price__was">
-         
-            {{- compare_at_price | money -}}
-          {%- endif -%}
-        </span>
-      {%- endif -%}
+        {% if for_variant_picker or compare_at_price > price -%}
+          <span class="price__was">
+            {%- if compare_at_price > price -%}
+              {{- compare_at_price | money -}}
+            {%- endif -%}
+          </span>
+        {%- endif -%}
        <span class="price__current">
-        {%- assign formatted_price = price | money_with_currency -%}
-        {%- assign price_parts = formatted_price | split: ' ' -%}
+       {%- assign formatted_price = price | money_with_currency | strip_html -%}
+       {%- assign price_parts = formatted_price | split: ' ' -%}
+
       
         {%- if show_currency_code -%}
           <span class="price-value">{{ price_parts[0] }}</span>
@@ -72,7 +72,11 @@
     {% elsif settings.prod_pre_order_label_show and product.template_suffix contains 'preorder' %}
       <span class="price-label price-label--preorder">{{ 'products.product.preorder' | t }}</span>
     {% elsif settings.prod_sale_show and variant.compare_at_price > variant.price %}
-      <span class="price-label price-label--sale">{{ 'products.product.sale' | t }}</span>
+      {% if settings.prod_sold_out_show and product.available == false %}
+        <span class="price-label price-label--sold-out">{{ 'products.product.sold_out' | t }}</span>
+      {% else %}
+        <span class="price-label price-label--sale">{{ 'products.product.sale' | t }}</span>
+      {% endif %}
     {% endif %}
   {% endif %}
 
