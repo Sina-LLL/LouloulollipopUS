@@ -91,7 +91,7 @@
         "height": "fixed",
         "height_desktop": 700,
         "height_mobile": 700,
-        "full_width": false,
+        "full_width": true,
         "mobile_overlay_under": false,
         "overlay_style": "full image-overlay--bg-shadow",
         "transition": "fade",
