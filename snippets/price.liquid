@@ -27,7 +27,8 @@
 -%}
 
 <div class="price{%- if compare_at_price > price %} price--on-sale{% endif -%}
-                 {%- if available == false %} price--sold-out{% endif -%}">
+                 {%- if available == false %} price--sold-out{% endif -%}
+                 {%- if product.available == false %} All-Variants--sold-out{% endif -%}">
   <div class="price__default">
     {%- if product.price_varies -%}
       {%- if for_variant_picker == false -%}
