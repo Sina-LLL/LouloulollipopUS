@@ -332,7 +332,7 @@ li.slider__item.is-active {
   border-radius:4px;
 }
 
-.price.price--sold-out .price__default{
+.product-block .price.All-Variants--sold-out .price__default,.product-block .price.All-Variants--sold-out.price--on-sale .price__default{
   display: none;
 }
 .price.price--on-sale.price--sold-out .price__default{
