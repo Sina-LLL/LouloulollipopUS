@@ -331,6 +331,17 @@ li.slider__item.is-active {
   border:2.5px solid #6A8B95 !important;
   border-radius:4px;
 }
+
+.product-block .price.All-Variants--sold-out .price__default,.product-block .price.All-Variants--sold-out.price--on-sale .price__default{
+  display: none;
+}
+.price.price--on-sale.price--sold-out .price__default{
+  display:flex;
+}
+.price-label--sold-out{
+  font-weight: 600;
+  
+}
 .sold-out-line {
     height: 84.85px;
     position: absolute;
@@ -409,7 +420,7 @@ label.opt-label.opt-label--btn.btn.relative.text-center{
   border:1px solid #6A8B95;
 
 }
-label.opt-label.opt-label--btn.btn.relative.text-center:hover{
+label.opt-label.opt-label--btn.btn.relative.text-center:hover, .opt-btn.is-unavailable+.opt-label:hover{
   border:1px solid #8EA7AF;
   color:#fff;
   background-color:#8EA7AF;
@@ -418,6 +429,10 @@ label.opt-label.opt-label--btn.btn.relative.text-center:hover{
 .add-to-cart-wrapper{
   display:flex;
   gap:16px;
+}
+.add-to-cart-wrapper #klaviyo-bis-button-container{
+  margin-bottom: 0 !important;
+  width: 100%;
 }
 .quantity-wrapper{
   display: flex;
@@ -484,8 +499,8 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
   border-color:#D9E1E4 !important;
 }
 .is-unavailable+label{
-  pointer-events: none;
-}
+  /* pointer-events: none;*/
+} 
 
 
 .product-price--large .price__was{
