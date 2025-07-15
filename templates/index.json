@@ -15,19 +15,18 @@
         "image_LjwyjV": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/summer_picks.png",
-            "mobile_image": "shopify://shop_images/image_22.png",
+            "image": "shopify://shop_images/Alphabet_Smiles_PRINT.png",
             "slide_link": "",
-            "subheading": "",
-            "title": "Summer Must-Haves",
+            "subheading": "From A to Z, With Love",
+            "title": "Alphabet Smiles Is Here",
             "heading_max_width": 14,
             "title_size": 60,
             "title_size_mobile": 32,
             "use_h1": true,
-            "text": "<p>From breathable fabrics to playful prints, discover must-haves made for sunny days, park adventures, and beach getaways.</p>",
+            "text": "<p>Every letter comes with a kind word—because little ones deserve to grow up wrapped in positivity.</p>",
             "enlarge_text": true,
-            "button_label_1": "Explore Summer Picks",
-            "button_url_1": "shopify://collections/summer-picks",
+            "button_label_1": "Shop the print",
+            "button_url_1": "shopify://collections/alphabet-smiles",
             "button_tag_1": "",
             "button_label_2": "",
             "button_url_2": "",
@@ -99,23 +98,6 @@
         "autoplay": true,
         "autoplay_speed": 7,
         "accessibility_info": ""
-      }
-    },
-    "featured_collection_RcGTat": {
-      "type": "featured-collection",
-      "name": "New Ocean Wonders Eat & Play",
-      "settings": {
-        "title": "Shop Our Bestsellers",
-        "text": "",
-        "collection": "best-sellers",
-        "show_vendor": false,
-        "enable_carousel": true,
-        "grid": 5,
-        "rows": 2,
-        "color_scheme": "2",
-        "show_view_all": true,
-        "full_width": true,
-        "text_alignment": "start"
       }
     },
     "logo_list_kYmwNX": {
@@ -228,18 +210,35 @@
       "type": "custom-product-highlight",
       "name": "Sleep bag 0.5 tog",
       "settings": {
-        "title": "Lightweight Sleep Bags",
-        "text": "<p>Soft, airy, and just right for warm nights</p>",
-        "image": "shopify://shop_images/BA9003U.SEL_Muslin_Sleep_Bag_-_Lightweight_Seals_3W.jpg",
+        "title": "Letters That Lift Them Up",
+        "text": "<p>Our Alphabet Smiles print pairs A–Z with positive affirmations.</p>",
+        "image": "shopify://shop_images/Alphabet_Smiles_PRINT.png",
         "order": false,
         "product_list": [
-          "muslin-lightweight-sleep-bag-0-5-tog-all-aboard",
-          "muslin-lightweight-sleep-bag-0-5-tog-bumble-bees"
+          "muslin-lightweight-sleep-bags-0-5-tog-alphabet-smiles",
+          "muslin-swaddle-alphabet-smiles"
         ],
-        "button_label": "Shop Snack Plates",
-        "link": "shopify://collections/snack-plate",
+        "button_label": "shop alphabet smiles",
+        "link": "shopify://collections/alphabet-smiles",
         "button_style": "primary",
         "color_scheme": "default"
+      }
+    },
+    "featured_collection_RcGTat": {
+      "type": "featured-collection",
+      "name": "New Ocean Wonders Eat & Play",
+      "settings": {
+        "title": "Shop Our Bestsellers",
+        "text": "",
+        "collection": "best-sellers",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 5,
+        "rows": 2,
+        "color_scheme": "2",
+        "show_view_all": true,
+        "full_width": true,
+        "text_alignment": "start"
       }
     },
     "multi_column_gyeJnc": {
@@ -288,7 +287,7 @@
         "media_width": 100,
         "text_alignment": "center",
         "button_style": "primary",
-        "color_scheme": "2"
+        "color_scheme": "default"
       }
     },
     "featured_collection_K3tJdQ": {
@@ -713,9 +712,9 @@
   },
   "order": [
     "16359276425da8ce46",
-    "featured_collection_RcGTat",
     "logo_list_kYmwNX",
     "custom_product_highlight_jV6CAX",
+    "featured_collection_RcGTat",
     "multi_column_gyeJnc",
     "featured_collection_K3tJdQ",
     "collection_list_BzgHGC",
