@@ -262,7 +262,7 @@
         "mobile_logo_img_width_int": 180,
         "logo_h1": false,
         "enable_sticky": true,
-        "enable_transparent": true,
+        "enable_transparent": false,
         "transparent_color": "#ffffff",
         "transparent_logo": "shopify://shop_images/LLL-Logo_4x_a59d88f8-405b-45e2-9a2b-8e05445c7b63.png",
         "menu_linklist": "2025_main-menu-tarrif-update",

@@ -94,7 +94,7 @@
         "mobile_overlay_under": false,
         "overlay_style": "full image-overlay--bg-shadow",
         "transition": "fade",
-        "navigation": "arrows",
+        "navigation": "dots",
         "autoplay": true,
         "autoplay_speed": 7,
         "accessibility_info": ""
