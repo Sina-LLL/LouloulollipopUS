@@ -170,7 +170,7 @@
                 endfor
               endif
             -%}
-            {% for item in search.results %}
+            {% for item in search.results %}{% comment %}start BSS Commerce Hide Price{% endcomment %}{% capture bss_lock_check %}{% render 'bss-lock-condition', scope: 'subject', subject: item, variable: 'transparent' %}{% endcapture %}{% if bss_lock_check contains 'true' %}{% continue %}<div style="display:none" class="bss-hpc-lock"></div>{% endif %}{% comment %}end BSS Commerce Hide Price{% endcomment %}
               {% if item.object_type == 'product' %}
                 {% render 'product-block', product: item, custom_aspect_ratio: chosen_product_aspect_ratio, animate: true %}
               {% elsif item.object_type == 'collection' %}
