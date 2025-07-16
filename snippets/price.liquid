@@ -1,3 +1,4 @@
+{%- comment %}BSS Login{% endcomment -%}{% capture bss_lock_check %} {% render 'bss-lock-condition', scope: 'subject', subject: product, subject_parent: product, variable: 'price', get_content: true, bss_lock_action: 'bss_hide_price' %} {% endcapture %} {% if bss_lock_check contains 'bss-lock-element' %} {{ bss_lock_check }} {% break %} {% endif %}{%- comment %}BSS-Login{% endcomment -%}
 {% comment %}
   Parameters:
   - product {Object} - Product object.
