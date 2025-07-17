@@ -49,7 +49,7 @@
           {%- unless sibling.tags contains 'hidden' -%}
             {%- if sibling.tags contains 'new' -%}
               <a href="{{ sibling.url }}" 
-                 class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}" 
+                 class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}{% if sibling.available == false  %} sold-out{% endif %}" 
                  data-color="{{ sibling.metafields.theme.cutline }}" data-section="new"
                  {% if sibling.handle == product.handle %}data-selected="true"{% endif %}>
                
