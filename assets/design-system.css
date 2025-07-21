@@ -817,3 +817,19 @@ label.filter-group__item.filter-group__item--active:before{
 h4.text-column__title {
     font-size: 20px;
 }
+
+/* Cart page*/
+#cartform h2.subtotal{
+  margin: 0;
+  font-size:1.5rem;
+}
+.cart-policies.rte{
+  font-size:12px;
+}
+cart-form .majortitle{
+  font-size:2rem;
+  margin:0;
+}
+cart-form .page-header:not(.page-header--with-background){
+  padding: 0;
+}
