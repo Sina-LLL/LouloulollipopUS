@@ -101,6 +101,17 @@
           <div class="flexible-layout">
             <div class="checkout-subtotal-container__left column column--half">
               {% if section.settings.show_order_note %}
+                <div class="cart-note block lightly-spaced-row">  
+                  <label>
+                    <input type="checkbox" id="GiftCheckbox" />
+                      Is this a gift?
+                  </label>
+                </div>
+              <!-- <div class="cart-gift-message lightly-spaced-row cart-note block" id="GiftMessageWrapper" style="display: none;">
+                <label for="GiftMessage">Gift Message (included in package)</label>
+                <textarea id="GiftMessage" name="attributes[GiftMessage]"></textarea>
+              </div> -->
+
                 <cart-note class="cart-note block lightly-spaced-row">
                   <label class="block" for="note">{{ 'cart.note.label' | t }}</label>
                   <textarea id="note" name="note">{{ cart.note }}</textarea>

@@ -1,6 +1,6 @@
 {%- unless template.name == 'cart' or settings.cart_type == 'page' -%}
 
-  <script>
+<script>
   (function() {
     // Define the Web Component globally if it hasn't been defined yet
     if (!customElements.get('loyalty-join')) {
@@ -547,7 +547,7 @@
 
 
 
-    <!-- Add join from checkout ethos extension -->
+<!-- Add join from checkout ethos extension -->
     
     <style>
     {% assign label_col = block.settings.label_text_color | default: '#4D4D4D' %}
@@ -810,7 +810,6 @@
     </loyalty-join>
   <!-- End join from checkout ethos extension -->
 
-
           
 
           <div class="lightly-spaced-row">
@@ -829,17 +828,22 @@
             {%- endif -%}
 
             {% if section.settings.show_order_note %}
-    
-              <toggle-target id="CartDrawerNoteToggle" type="checkbox"role="button" tabindex="0" class="toggle-target-toggler--is-hidden link underline" data-toggle-target=".cart-drawer__note">
-                {{ 'cart.note.label' | t }}
-              </toggle-target>
+              
+          <label style="display: block; margin-top: 1rem;">
+            <input type="checkbox" id="GiftCheckbox" />
+              Is this a gift?
+          </label>
+
+              
+
+              <toggle-target id="CartDrawerNoteToggle" role="button" tabindex="0" class="toggle-target-toggler--is-hidden link underline" data-toggle-target=".cart-drawer__note">{{ 'cart.note.label' | t }}</toggle-target>
               <div class="cart-drawer__note toggle-target toggle-target--hidden">
                 <cart-note class="block toggle-target-container">
                   <textarea name="note" aria-labelledby="CartDrawerNoteToggle">{{ cart.note }}</textarea>
                 </cart-note>
               </div>
             {% endif %}
-            <!--BEAM START-->
+             <!--BEAM START-->
               <div class="profit-wrapper {% if cart == empty %} is-empty{% endif %}">
                 <div id="widget-parent-wrapper">
                   <div id="beam-nonprofit-widget" style="display: flex; margin-top:20px">
@@ -851,8 +855,6 @@
           </div>
         {% endif %}
       </div>
-
-
 
       {% if section.settings.cart_terms_page != blank %}
         <terms-agreement class="terms-agreement rte">
