@@ -10,7 +10,7 @@
   Usage:
   {% render 'price', product: product %}
 {% endcomment %}
-
+{% assign sale_on_sale = "+20% off in cart" %}
 {%- liquid
   assign variant = current_variant | default: product.variants | sort: 'price' | first
 
@@ -65,7 +65,7 @@
           <div class="price-currency">{{ price_parts[1] }}</div>
         {%- endif -%}
     </span>
-    
+    {% if product.tags contains "sale_on_sale" %} <span class="price__current">{{ sale_on_sale }} </span>{% endif %}
   </div>
 
   {% if show_labels %}
