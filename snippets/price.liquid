@@ -13,7 +13,7 @@
 {% assign sale_on_sale = "+20% off in cart" %}
 {%- liquid
   assign variant = current_variant | default: product.variants | sort: 'price' | first
-
+  
   if for_variant_picker
     if current_variant == false
       assign available = true
