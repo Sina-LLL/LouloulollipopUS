@@ -10,10 +10,10 @@
   Usage:
   {% render 'price', product: product %}
 {% endcomment %}
-
+{% assign sale_on_sale = "+20% off in cart" %}
 {%- liquid
   assign variant = current_variant | default: product.variants | sort: 'price' | first
-
+  
   if for_variant_picker
     if current_variant == false
       assign available = true
@@ -65,7 +65,7 @@
           <div class="price-currency">{{ price_parts[1] }}</div>
         {%- endif -%}
     </span>
-    
+    {% if product.tags contains "sale_on_sale" %} <span class="price-label price-label--sale" style="font-size:14px">{{ sale_on_sale }} </span>{% endif %}
   </div>
 
   {% if show_labels %}
@@ -77,7 +77,7 @@
       {% if settings.prod_sold_out_show and product.available == false %}
         <span class="price-label price-label--sold-out">{{ 'products.product.sold_out' | t }}</span>
       {% else %}
-        <span class="price-label price-label--sale">{{ 'products.product.sale' | t }}</span>
+        <span class="price-label price-label--sale">{% unless product.tags contains "sale_on_sale" %}{{ 'products.product.sale' | t }}{% endunless %}</span>
       {% endif %}
     {% endif %}
   {% endif %}
