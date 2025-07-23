@@ -117,5 +117,36 @@ document.addEventListener('DOMContentLoaded', function () {
   // On load, show/hide gift message based on current checkbox state
   toggleGiftMessage();
 });
+document.addEventListener('DOMContentLoaded', function () {
+  const checkbox = document.getElementById('GiftCheckbox');
+  if (!checkbox) return;
+
+  // Fetch current cart data
+  fetch('/cart.js')
+    .then(response => response.json())
+    .then(cart => {
+      const isGift = cart.attributes && cart.attributes.GiftOption === 'Yes';
+      checkbox.checked = isGift;
+    });
+
+  // Save on change
+  checkbox.addEventListener('change', function () {
+    const isGift = this.checked ? 'Yes' : 'No';
+
+    fetch('/cart/update.js', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        attributes: {
+          GiftOption: isGift
+        }
+      })
+    });
+  });
+});
+
 
 
