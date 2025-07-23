@@ -20,34 +20,33 @@ if (!customElements.get('cart-note')) {
       this.init();
     }
 
-      init() {
-        this.debouncedHandleNoteChange = debounce(this.handleNoteChange.bind(this), 300);
-        // Save as soon as possible, avoid link-click not providing time to save
-        this.addEventListener('input', this.debouncedHandleNoteChange);
-      }
+    init() {
+      this.debouncedHandleNoteChange = debounce(this.handleNoteChange.bind(this), 300);
+      // Save note input with debounce
+      this.addEventListener('input', this.debouncedHandleNoteChange);
+    }
 
-     handleNoteChange(evt) {
+    handleNoteChange(evt) {
       if (this.cartNoteToggle) {
         const label = evt.target.value ? theme.strings.editCartNote : theme.strings.addCartNote;
         if (this.cartNoteToggle.textContent !== label) {
           this.cartNoteToggle.textContent = label;
         }
       }
-    
-      // Read the gift checkbox
+
+      // Include GiftOption with the note
       const isGiftChecked = document.getElementById('GiftCheckbox')?.checked;
       const giftValue = isGiftChecked ? 'Yes' : 'No';
-    
+
       this.fetchRequestOpts.body = JSON.stringify({
         note: evt.target.value,
         attributes: {
           GiftOption: giftValue
         }
       });
-    
+
       fetch(theme.routes.cartUpdate, this.fetchRequestOpts);
     }
-
   }
 
   customElements.define('cart-note', CartNote);
@@ -55,83 +54,36 @@ if (!customElements.get('cart-note')) {
 
 document.addEventListener('DOMContentLoaded', function () {
   const checkbox = document.getElementById('GiftCheckbox');
-  if (!checkbox) return;
-
-  checkbox.addEventListener('change', function () {
-    const isGift = this.checked ? 'Yes' : 'No';
-
-    fetch('/cart/update.js', {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        attributes: {
-          GiftOption: isGift
-        }
-      })
-    });
-  });
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  const checkbox = document.getElementById('GiftCheckbox');
   const giftMessageWrapper = document.getElementById('GiftMessageWrapper');
 
   if (!checkbox) return;
 
-  // Show/hide the gift message textarea
+  // Handle checkbox state and gift message visibility
   const toggleGiftMessage = () => {
+    if (!giftMessageWrapper) return;
+
     if (checkbox.checked) {
       giftMessageWrapper.style.display = 'block';
     } else {
       giftMessageWrapper.style.display = 'none';
-      // Optionally clear gift message if unchecked
       const messageInput = document.getElementById('GiftMessage');
       if (messageInput) messageInput.value = '';
     }
   };
 
-  checkbox.addEventListener('change', function () {
-    const isGift = this.checked ? 'Yes' : 'No';
-
-    // Toggle textarea visibility
-    toggleGiftMessage();
-
-    // Update gift option on cart
-    fetch('/cart/update.js', {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        attributes: {
-          GiftOption: isGift
-        }
-      })
-    });
-  });
-
-  // On load, show/hide gift message based on current checkbox state
-  toggleGiftMessage();
-});
-document.addEventListener('DOMContentLoaded', function () {
-  const checkbox = document.getElementById('GiftCheckbox');
-  if (!checkbox) return;
-
-  // Fetch current cart data
+  // Restore checkbox state from cart
   fetch('/cart.js')
     .then(response => response.json())
     .then(cart => {
       const isGift = cart.attributes && cart.attributes.GiftOption === 'Yes';
       checkbox.checked = isGift;
+      toggleGiftMessage();
     });
 
-  // Save on change
+  // On checkbox change, update cart and toggle textarea
   checkbox.addEventListener('change', function () {
     const isGift = this.checked ? 'Yes' : 'No';
+    toggleGiftMessage();
 
     fetch('/cart/update.js', {
       method: 'POST',
@@ -147,6 +99,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
-
-
-
