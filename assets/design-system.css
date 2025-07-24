@@ -845,6 +845,8 @@ cart-form .page-header:not(.page-header--with-background){
   top: 40px;
   margin-bottom: 0;
 }
+
+/* Carousel edits */
 .slider--no-max{
   padding-left: var(--container-pad-x);
 }
