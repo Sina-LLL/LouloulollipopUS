@@ -845,12 +845,12 @@ cart-form .page-header:not(.page-header--with-background){
   top: 40px;
   margin-bottom: 0;
 }
-.collection-slider-row{
+.slider--no-max{
   padding-left: var(--container-pad-x);
 }
-.collection-slider-row .container.container--no-max, .collection-slider-row .collection-listing.fade-in-up.slider.slider--edge-peek.cc-animate-init.cc-animate-in.is-grabbable{
+.slider--no-max .container.container--no-max, .slider--no-max .collection-listing.fade-in-up.slider.slider--edge-peek.cc-animate-init.cc-animate-in.is-grabbable{
   padding-left:0;
 }
-.collection-slider-row .carousel.block.collection-slider{
+.slider--no-max .carousel.block.collection-slider{
   padding-left: var(--container-pad-x);
 }
