@@ -15,6 +15,29 @@
         "image_LjwyjV": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Group_91.png",
+            "mobile_image": "shopify://shop_images/EOSS_Mobile_hero.png",
+            "slide_link": "",
+            "subheading": "",
+            "title": "Summer Sale on Sale ☀️",
+            "heading_max_width": 14,
+            "title_size": 60,
+            "title_size_mobile": 32,
+            "use_h1": true,
+            "text": "<p>Take an extra <strong>20% off</strong> already marked down styles!</p>",
+            "enlarge_text": true,
+            "button_label_1": "Shop the sale",
+            "button_url_1": "shopify://collections/sale",
+            "button_tag_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_tag_2": "",
+            "text_alignment": "center left"
+          }
+        },
+        "image_iNCw9G": {
+          "type": "image",
+          "settings": {
             "image": "shopify://shop_images/Alphabet_Smiles_PRINT.png",
             "slide_link": "",
             "subheading": "From A to Z, With Love",
@@ -22,7 +45,7 @@
             "heading_max_width": 14,
             "title_size": 60,
             "title_size_mobile": 32,
-            "use_h1": true,
+            "use_h1": false,
             "text": "<p>Every letter comes with a kind word—because little ones deserve to grow up wrapped in positivity.</p>",
             "enlarge_text": true,
             "button_label_1": "Shop the print",
@@ -37,19 +60,19 @@
         "16359276425da8ce46-1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/lightweight_sleep_bag.png",
-            "mobile_image": "shopify://shop_images/BA9003U.PSH_Muslin_Sleep_Bag_-_Lightweight_Painterly_Seahorse_3W.jpg",
+            "image": "shopify://shop_images/summer_picks.png",
+            "mobile_image": "shopify://shop_images/image_22.png",
             "slide_link": "",
             "subheading": "",
-            "title": "The Coolest <br>Sleep of the Summer",
+            "title": "Summer Must-Haves",
             "heading_max_width": 14,
             "title_size": 60,
             "title_size_mobile": 32,
             "use_h1": false,
-            "text": "<p>Made for warmer nights, our 0.5 TOG Sleep Bags are breathable, buttery-soft, and baby-approved.</p>",
+            "text": "<p>From breathable fabrics to playful prints, discover must-haves made for sunny days, park adventures, and beach getaways.</p>",
             "enlarge_text": true,
-            "button_label_1": "Shop Lightweight Sleep Bags",
-            "button_url_1": "shopify://collections/0-5-tog",
+            "button_label_1": "Explore Summer Picks",
+            "button_url_1": "shopify://collections/summer-picks",
             "button_tag_1": "",
             "button_label_2": "",
             "button_url_2": "",
@@ -59,6 +82,7 @@
         },
         "16359276425da8ce46-0": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/BA1003U.SKS_Short_Sleeve_Zipped_Romper_Sun-kissed_Shoal_51.jpg",
             "mobile_image": "shopify://shop_images/BA1003USKS-LS1.png",
@@ -83,6 +107,7 @@
       },
       "block_order": [
         "image_LjwyjV",
+        "image_iNCw9G",
         "16359276425da8ce46-1",
         "16359276425da8ce46-0"
       ],
@@ -98,6 +123,23 @@
         "autoplay": true,
         "autoplay_speed": 7,
         "accessibility_info": ""
+      }
+    },
+    "featured_collection_RcGTat": {
+      "type": "featured-collection",
+      "name": "Best Sellers",
+      "settings": {
+        "title": "Sale on Sale",
+        "text": "",
+        "collection": "sale",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 5,
+        "rows": 2,
+        "color_scheme": "2",
+        "show_view_all": true,
+        "full_width": true,
+        "text_alignment": "center"
       }
     },
     "logo_list_kYmwNX": {
@@ -222,23 +264,6 @@
         "link": "shopify://collections/alphabet-smiles",
         "button_style": "primary",
         "color_scheme": "default"
-      }
-    },
-    "featured_collection_RcGTat": {
-      "type": "featured-collection",
-      "name": "Best Sellers",
-      "settings": {
-        "title": "Shop Our Bestsellers",
-        "text": "",
-        "collection": "best-sellers",
-        "show_vendor": false,
-        "enable_carousel": true,
-        "grid": 5,
-        "rows": 2,
-        "color_scheme": "2",
-        "show_view_all": true,
-        "full_width": true,
-        "text_alignment": "start"
       }
     },
     "multi_column_gyeJnc": {
@@ -712,9 +737,9 @@
   },
   "order": [
     "16359276425da8ce46",
+    "featured_collection_RcGTat",
     "logo_list_kYmwNX",
     "custom_product_highlight_jV6CAX",
-    "featured_collection_RcGTat",
     "multi_column_gyeJnc",
     "featured_collection_K3tJdQ",
     "collection_list_BzgHGC",

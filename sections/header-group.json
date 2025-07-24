@@ -16,9 +16,8 @@
       "blocks": {
         "announcement_dQqYfe": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
-            "text": "<strong>End of Season Sale - </strong><a href=\"/collections/sale\" title=\"SALE\"><strong>Up to 65% Off</strong></a>",
+            "text": "Sale on Sale - <strong>Extra 20%</strong> off on sale styles",
             "show_countdown": false,
             "hide_on_end": false,
             "end_date": "",
