@@ -833,3 +833,15 @@ cart-form .majortitle{
 cart-form .page-header:not(.page-header--with-background){
   padding: 0;
 }
+
+
+/* Custom product highlight section */
+.custom-product-highlight__image-container{
+  position: relative;
+}
+
+.custom-product-highlight__image{
+  position: sticky;
+  top: 40px;
+  margin-bottom: 0;
+}
