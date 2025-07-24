@@ -1,8 +1,8 @@
 <div id="section-id-{{ section.id }}" class="{% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }} fully-padded-row--medium{% else %}fully-spaced-row--medium{% endif %}">
   <div class="container container--no-max">
-    <div class="flexible-layout flexible-layout--variable-columns valign-middle">
-      <div class="column text-column fade-in-up {% if section.settings.order %}column--order-push-desktop{% endif %}" {%- render 'animation-attrs', attrs: animation_attrs -%}>
-        <div class="text-column__image lightly-spaced-row">  
+    <div class="flexible-layout flexible-layout--variable-columns valign-top ">
+      <div class="desktop-only custom-product-highlight__image-container column text-column fade-in-up {% if section.settings.order %}column--order-push-desktop{% endif %}" {%- render 'animation-attrs', attrs: animation_attrs -%}>
+        <div class="text-column__image lightly-spaced-row custom-product-highlight__image">  
         {%- if section.settings.image != blank -%}
             {%- render 'image' with section.settings.image, sizes: sizes, widths: widths, size_cols_desktop: size_cols_desktop, custom_aspect_ratio: 1-%}
         {%- else -%}
@@ -21,6 +21,17 @@
               <div class="text-column__text rte" {%- render 'animation-attrs', attrs: animation_attrs -%}>{{ section.settings.text }}</div>
             {% endif %}
           </div> 
+        <div class="mobile-only custom-product-highlight__image-container column text-column fade-in-up {% if section.settings.order %}column--order-push-desktop{% endif %}" {%- render 'animation-attrs', attrs: animation_attrs -%}>
+          <div class="text-column__image lightly-spaced-row custom-product-highlight__image">  
+          {%- if section.settings.image != blank -%}
+              {%- render 'image' with section.settings.image, sizes: sizes, widths: widths, size_cols_desktop: size_cols_desktop, custom_aspect_ratio: 1-%}
+          {%- else -%}
+            <div class="placeholder-image">
+              {{- 'image' | placeholder_svg_tag: 'placeholder-svg' -}}
+            </div>
+          {%- endif -%}
+          </div>
+        </div>
           <div class="collection-listing fade-in-up" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
             <div class="product-grid product-grid--per-row-{{ section.settings.grid }} product-grid--per-row-mob-{{ settings.prod_thumb_mob_per_row }}">
               {%- liquid
