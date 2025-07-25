@@ -1,4 +1,4 @@
-<div class="section-id-{{ section.id }} collection-slider-row for-collections {% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }}{% endif %}">
+<div class="section-id-{{ section.id }} collection-slider-row for-collections {% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }}{% endif %}{% if section.settings.full_width %} slider--no-max{% endif %}">
   <div class="container{% if section.settings.full_width %} container--no-max{% endif %}">
     <div class="hometitle">
       <h2 class=" h4 text-{{ section.settings.text_alignment}}" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}>
