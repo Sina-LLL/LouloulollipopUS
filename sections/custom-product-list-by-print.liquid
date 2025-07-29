@@ -31,20 +31,20 @@
     <div class="collection-listing fade-in-up{% if section.settings.enable_carousel %} slider {% if section.settings.full_width %}slider--edge-peek{% endif %} slider--mobile-container-pad slider--no-scrollbar{% endif %}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
       <div class="product-grid product-grid--per-row-{{ section.settings.grid }} product-grid--per-row-mob-{{ settings.prod_thumb_mob_per_row }}{% if section.settings.enable_carousel %} slider__grid product-grid--carousel{% endif %}">
         {% for product in swatch_collection.products %}
-          {% if section.settings.enable_carousel %}
-            <div class="slider__item">
-          {% endif %}
-
-          {% render 'product-block',
-            product: product,
-            custom_aspect_ratio: 0.8,
-            no_swiping: section.settings.enable_carousel,
-            no_quick_buy_markup: section.settings.enable_carousel
-          %}
-
-          {% if section.settings.enable_carousel %}
-            </div>
-          {% endif %}
+            {% if section.settings.enable_carousel %}
+              <div class="slider__item {% if product.tags contains 'hidden' %}hidden-product{% endif %}">
+            {% endif %}
+             
+              {% render 'product-block',
+                product: product,
+                custom_aspect_ratio: 0.8,
+                no_swiping: section.settings.enable_carousel,
+                no_quick_buy_markup: section.settings.enable_carousel
+              %}
+            
+            {% if section.settings.enable_carousel %}
+              </div>
+            {% endif %}
         {% endfor %}
 
       </div>

@@ -864,3 +864,9 @@ cart-form .page-header:not(.page-header--with-background){
      padding-left:0; 
   }
 }
+
+/* Hidden Blocks for loyalty */
+.hidden-product, .product-grid--carousel .slider__item.hidden-product {
+  display: none;
+}
+

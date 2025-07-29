@@ -1,4 +1,10 @@
-<div data-section-id="{{ section.id }}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
+{%- comment -%}
+  Option 2: Bypass if URL contains ?preview=true
+{%- endcomment -%}
+<!--  -->
+
+
+<div data-section-id="{{ section.id }}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%} class="TEST">
 {% paginate collection.products by section.settings.coll_num_per_page_int %}
 
 {%- liquid
@@ -319,12 +325,14 @@
               endif
 
               for product in collection.products
-                assign prioritised_loading = false
-                if forloop.index0 < section.settings.grid
-                  assign prioritised_loading = true
-                endif
-                render 'product-block', product: product, custom_aspect_ratio: chosen_aspect_ratio, animate: true, prioritised_loading: prioritised_loading
-              endfor
+                
+                  assign prioritised_loading = false
+                  if forloop.index0 < section.settings.grid
+                    assign prioritised_loading = true
+                  endif
+                  render 'product-block', product: product, custom_aspect_ratio: chosen_aspect_ratio, animate: true, prioritised_loading: prioritised_loading
+                 
+            endfor
             -%}
           </div>
         {% endif %}
