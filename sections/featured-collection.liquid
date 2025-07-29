@@ -29,13 +29,20 @@
         {%- liquid
           if section.settings.collection == blank
             for i in (1..product_limit)
-              if section.settings.enable_carousel
-                echo '<div class="slider__item">'
-              endif
-              render 'onboarding-product-block', forloop: forloop
-              if section.settings.enable_carousel
-                echo '</div>'
-              endif
+               assign extra_class = ''
+                  if product.tags contains 'hidden'
+                    assign extra_class = 'hidden-product'
+                  endif
+                if section.settings.enable_carousel
+                  echo '<div class="slider__item ' | append: extra_class | append: '">'
+                endif
+                
+                  render 'onboarding-product-block', forloop: forloop
+                
+                if section.settings.enable_carousel
+                  echo '</div>'
+                endif
+              
             endfor
           else
             if settings.prod_thumb_shape == 'portrait-23'
@@ -65,13 +72,21 @@
             endif
 
             for product in collection.products limit: product_limit
-              if section.settings.enable_carousel
-                echo '<div class="slider__item">'
-              endif
-              render 'product-block', product: product, collection: collection, custom_aspect_ratio: chosen_aspect_ratio, no_swiping: section.settings.enable_carousel, no_quick_buy_markup: section.settings.enable_carousel
-              if section.settings.enable_carousel
-                echo '</div>'
-              endif
+
+                  assign extra_class = ''
+                  if product.tags contains 'hidden'
+                    assign extra_class = 'hidden-product'
+                  endif
+                if section.settings.enable_carousel
+                  echo '<div class="slider__item ' | append: extra_class | append: '">'
+                endif
+              
+                render 'product-block', product: product, collection: collection, custom_aspect_ratio: chosen_aspect_ratio, no_swiping: section.settings.enable_carousel, no_quick_buy_markup: section.settings.enable_carousel
+              
+                if section.settings.enable_carousel
+                  echo '</div>'
+                endif
+              
             endfor
           endif
         -%}
