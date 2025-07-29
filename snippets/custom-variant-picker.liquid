@@ -46,7 +46,7 @@
       </legend>
       <div class="option-selector__btns flex flex-wrap">
         {%- for sibling in sibs_collection.products -%}
-          {%- unless sibling.tags contains 'hidden' -%}
+          
             {%- if sibling.tags contains 'new' -%}
               <a href="{{ sibling.url }}" 
                  class="opt-label opt-label--image {% if product.tags contains 'hidden' %}hidden-product{% endif %} {% if sibling.handle == product.handle %}is-active{% endif %}{% if sibling.available == false  %} sold-out{% endif %}" 
@@ -90,7 +90,6 @@
                 </div>
               </a>
             {%- endif -%}
-          {%- endunless -%}
         {%- endfor -%}
       </div>
 
