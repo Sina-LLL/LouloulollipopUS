@@ -16,6 +16,10 @@ Parameters:
     product: product
   %}
 {%- endcomment -%}
+
+
+
+
 {%- liquid
   if collection and settings.prod_thumb_url_within_coll and product.collections contains collection
     assign product_url = product.url | within: collection
@@ -70,7 +74,7 @@ Parameters:
   endif
 -%}
 
-<product-block class="product-block{% if compact %} product-block--compact{% endif %}{% if card_layout == 'landscape' %} product-block--landscape{% endif %}" data-product-id="{{ product.id }}">
+<product-block class="product-block {% if product.tags contains 'hidden' %}hidden-product{% endif %} {% if compact %} product-block--compact{% endif %}{% if card_layout == 'landscape' %} product-block--landscape{% endif %}" data-product-id="{{ product.id }}">
   <div class="block-inner"{% if animate %}{%- render 'animation-attrs', attrs: 'data-cc-animate', always: true -%}{% endif %}>
     <div class="block-inner-inner">
       {% if product.featured_media %}
