@@ -4177,3 +4177,33 @@ window.onpageshow = () => {
       });
     });
   });
+
+// Hidden products for early access
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const hasPreviewAccess = urlParams.get('preview') === 'loyalty';  //change this to change the URL ending
+
+    // Cookie helpers
+    function setCookie(name, value, days) {
+      const d = new Date();
+      d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+      document.cookie = `${name}=${value};expires=${d.toUTCString()};path=/`;
+    }
+
+    function getCookie(name) {
+      const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+      return match ? match[2] : null;
+    }
+
+    if (hasPreviewAccess) {
+      setCookie('loyalty_preview', 'true', 3); // expires in 3 days
+    }
+
+    if (hasPreviewAccess || getCookie('loyalty_preview') === 'true') {
+      document.querySelectorAll('.hidden-product').forEach(el => {
+        el.style.display = 'block';
+      });
+    }
+  });
+  
