@@ -24,7 +24,7 @@
             "title_size": 60,
             "title_size_mobile": 32,
             "use_h1": true,
-            "text": "<p>Take an extra <strong>20% off</strong> already marked down styles!</p>",
+            "text": "<h3>Take an extra <strong>20% off</strong> already marked down styles!</h3>",
             "enlarge_text": true,
             "button_label_1": "Shop the sale",
             "button_url_1": "shopify://collections/sale",
@@ -136,7 +136,7 @@
         "enable_carousel": true,
         "grid": 5,
         "rows": 2,
-        "color_scheme": "2",
+        "color_scheme": "default",
         "show_view_all": true,
         "full_width": true,
         "text_alignment": "center"
@@ -566,11 +566,71 @@
         "button_label": "Shop Snack Plates",
         "link": "shopify://collections/snack-plate",
         "button_style": "primary",
-        "color_scheme": "2"
+        "color_scheme": "default"
+      }
+    },
+    "collection_list_9AdzKx": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_c4g8RY": {
+          "type": "collection",
+          "settings": {
+            "collection": "long-sleeve-bibs",
+            "tag": "",
+            "image": "shopify://shop_images/LSBIBSHK_LongSleeveBib_Sharks_51.jpg",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
+        "collection_fa8Bth": {
+          "type": "collection",
+          "settings": {
+            "collection": "silicone-bibs",
+            "tag": "",
+            "image": "shopify://shop_images/Bibs_LouLou_Lollipop-85_c100222a-a06f-49f5-9427-dfb7d6d71c6b.jpg",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
+        "collection_FXgkGy": {
+          "type": "collection",
+          "settings": {
+            "collection": "burp-cloths",
+            "tag": "",
+            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._11th_2024_-Web-16.jpg",
+            "subheading": "",
+            "button_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_c4g8RY",
+        "collection_fa8Bth",
+        "collection_FXgkGy"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "",
+        "text": "",
+        "text_alignment": "start",
+        "enable_carousel": false,
+        "grid": 3,
+        "color_scheme": "default",
+        "full_width": true,
+        "coll_grid_image_shape": "portrait-45",
+        "coll_grid_image_position": "center center",
+        "coll_thumb_mob_per_row": "1",
+        "coll_grid_show_count": false,
+        "coll_text_position": "over-shadow",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_y": "bottom",
+        "coll_button_style": "primary"
       }
     },
     "featured_collection_tc8tiM": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "",
         "text": "",
@@ -579,7 +639,7 @@
         "enable_carousel": true,
         "grid": 5,
         "rows": 1,
-        "color_scheme": "2",
+        "color_scheme": "default",
         "show_view_all": false,
         "full_width": true,
         "text_alignment": "start"
@@ -748,6 +808,7 @@
     "testimonials_VgkpHw",
     "logo_list_pgf7FP",
     "custom_product_highlight_PMwqLc",
+    "collection_list_9AdzKx",
     "featured_collection_tc8tiM",
     "collection_list_XEbpaa",
     "multi_column_MR9q33",
