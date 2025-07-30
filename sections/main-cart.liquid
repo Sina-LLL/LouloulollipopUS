@@ -211,128 +211,12 @@
     </form>
   </cart-form>
 </div>
-  {% if block.settings.product_list != blank %}
-    <div class="{% if block.settings.style == 'card' %}lightly-spaced-row lightish-spaced-row-above{% else %}input-row{% endif %}{% unless block.settings.show_in_quickbuy %} not-in-quickbuy{% endunless %}" {{ block.shopify_attributes }}>
-      <div class="label" role="heading" aria-level="2">{{ block.settings.title | escape }}</div>
-      {%- liquid
-        if settings.prod_thumb_shape == 'portrait-23'
-          assign chosen_aspect_ratio = 0.67
-        elsif settings.prod_thumb_shape == 'portrait-45'
-          assign chosen_aspect_ratio = 0.8
-        elsif settings.prod_thumb_shape == 'square'
-          assign chosen_aspect_ratio = 1.0
-        elsif settings.prod_thumb_shape == 'landscape-54'
-          assign chosen_aspect_ratio = 1.25
-        elsif settings.prod_thumb_shape == 'landscape-32'
-          assign chosen_aspect_ratio = 1.50
-        elsif settings.prod_thumb_shape == 'tallest'
-          assign chosen_aspect_ratio = 99
-          for related_product in block.settings.product_list
-            if related_product.featured_media.preview_image.aspect_ratio < chosen_aspect_ratio
-              assign chosen_aspect_ratio = related_product.featured_media.preview_image.aspect_ratio
-            endif
-          endfor
-        else
-          assign chosen_aspect_ratio = 0
-          for related_product in block.settings.product_list
-            if related_product.featured_media.preview_image.aspect_ratio > chosen_aspect_ratio
-              assign chosen_aspect_ratio = related_product.featured_media.preview_image.aspect_ratio
-            endif
-          endfor
-        endif
-
-        if settings.prod_thumb_crop
-          assign custom_crop = settings.prod_thumb_crop_align
-        else
-          assign custom_crop = 'contain'
-        endif
-      -%}
-      {%- if block.settings.style == 'card' -%}
-        <div class="fixed-layout">
-          {%- for related_product in block.settings.product_list -%}
-            <div class="column column--half">
-              {%- render 'product-block',
-                product: related_product,
-                no_quick_buy: true,
-                custom_aspect_ratio: chosen_aspect_ratio,
-                grid: 5
-              -%}
-            </div>
-          {%- endfor -%}
-        </div>
-      {%- else -%}
-        <div class="related-swatches" style="--image-width: {{ block.settings.image_width }}px">
-          {%- capture widths -%}{{ block.settings.image_width }}, {{ block.settings.image_width | times: 2 }}{%- endcapture -%}
-          {%- for related_product in block.settings.product_list -%}
-            <a class="related-swatch img-var
-                {%- unless related_product.available %} related-swatch--unavailable{% endunless %}"
-               href="{{ related_product.url }}"
-               title="{{ related_product.title | escape }}">
-              {%- render 'image',
-                image: related_product.featured_media.preview_image,
-                sizes: block.settings.image_width,
-                widths: widths,
-                custom_aspect_ratio: chosen_aspect_ratio,
-                custom_crop: custom_crop
-              -%}
-              <span class="visually-hidden">{{ related_product.title }}</span>
-            </a>
-          {%- endfor -%}
-        </div>
-      {%- endif -%}
-    </div>
-  {% endif %}
 
 
 {% schema %}
 {
   "name": "Cart page",
   "class": "page-section-spacing",
-  "blocks":[
-    {
-    "type": "related-products",
-    "name": "Related Products",
-    "settings": [
-      {
-        "type": "product_list",
-        "id": "product_list",
-        "label": "Products to show",
-        "limit": 10
-      },
-      {
-        "type": "text",
-        "id": "title",
-        "label": "Heading",
-        "default": "You might also like"
-      },
-      {
-        "type": "select",
-        "id": "style",
-        "label": "Layout style",
-        "options": [
-          { "value": "card", "label": "Product cards" },
-          { "value": "swatches", "label": "Image swatches" }
-        ],
-        "default": "card"
-      },
-      {
-        "type": "range",
-        "id": "image_width",
-        "label": "Swatch image width (if using swatches)",
-        "default": 80,
-        "min": 50,
-        "max": 200,
-        "step": 10
-      },
-      {
-        "type": "checkbox",
-        "id": "show_in_quickbuy",
-        "label": "Show in quick buy",
-        "default": false
-      }
-    ]
-  }
-  ],
   "settings": [
     {
       "type": "checkbox",
