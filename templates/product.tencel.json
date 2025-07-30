@@ -96,14 +96,6 @@
             "show_in_quickbuy": false
           }
         },
-        "complementary_pgLkAn": {
-          "type": "complementary",
-          "settings": {
-            "heading": "Pairs well with",
-            "enable_carousel": true,
-            "max_products": 10
-          }
-        },
         "feature_rating_tdmkCF": {
           "type": "feature-rating",
           "disabled": true,
@@ -156,7 +148,6 @@
         "usp_CRdfie",
         "divider_kgTqeY",
         "description",
-        "complementary_pgLkAn",
         "feature_rating_tdmkCF",
         "accordion_yktgxC",
         "accordion_KqCkWX"
