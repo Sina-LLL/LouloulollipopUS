@@ -1,0 +1,13 @@
+{% if product.metafields.custom.mux_video %}
+    <div class="mux-video-container">
+        <h2 class="mux-video-title">Expeerly Reviews</h2>
+        <div class="mux-video-wrapper">
+            <video controls preload="none">
+                <source src="{{ product.metafields.custom.mux_video }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+{% else %}
+    <p>No video available for this product.</p>
+{% endif %}   
