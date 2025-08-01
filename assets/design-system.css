@@ -870,3 +870,38 @@ cart-form .page-header:not(.page-header--with-background){
   display: none;
 }
 
+/* Mux Video */
+  /* Container to center the video and title */
+.mux-video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 20px auto;
+}
+
+  /* Title styling */
+.mux-video-title {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+  /* Wrapper to maintain 9:16 aspect ratio */
+.mux-video-wrapper {
+    position: relative;
+    width: 225px; /* Adjust width based on design */
+    max-width: 100%;
+    aspect-ratio: 9 / 16;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+  /* Video styling */
+.mux-video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video properly fills the frame */
+    border-radius: 8px; /* Optional rounded corners */
+}
