@@ -58,7 +58,7 @@
         "announcement_text_col": "#faf9f6",
         "show_social_icons": true,
         "menu": "",
-        "enable_country_selector": false,
+        "enable_country_selector": true,
         "enable_language_selector": false
       }
     },
