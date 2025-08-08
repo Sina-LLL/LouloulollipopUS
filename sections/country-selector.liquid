@@ -31,14 +31,14 @@
       {%- endfor -%}
     {%- endif -%}
     {%- for country in localization.available_countries -%}
-      {%- liquid
-        if popular_countries and country.popular?
-          continue
-        endif
-      -%}
-      <span class="country-option">
-        <span class="country-option__name">{{ country.name }}</span> <span class="country-option__currency">({{ country.currency.iso_code }}&nbsp;{{ country.currency.symbol }})</span>
-      </span>|
+      {%- if country.iso_code == "US" or country.iso_code == "CA" -%}
+        <span class="country-option">
+          <span class="country-option__name">{{ country.name }}</span>
+          <span class="country-option__currency">
+            ({{ country.currency.iso_code }}&nbsp;{{ country.currency.symbol }})
+          </span>
+        </span>|
+      {%- endif -%}
     {%- endfor -%}
   {%- endcapture -%}
 
