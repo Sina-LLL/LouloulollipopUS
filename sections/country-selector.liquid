@@ -23,24 +23,32 @@
   -%}
 
   {%- capture country_names -%}
-    {% if popular_countries -%}
-      {%- for country in popular_countries -%}
+  {% if popular_countries -%}
+    {%- for country in popular_countries -%}
+      {% if country.iso_code == "US" or country.iso_code == "CA" %}
         <span class="country-option" data-popular>
-          <span class="country-option__name">{{ country.name }}</span> <span class="country-option__currency">({{ country.currency.iso_code }}&nbsp;{{ country.currency.symbol }})</span>
-        </span>|
-      {%- endfor -%}
-    {%- endif -%}
-    {%- for country in localization.available_countries -%}
-      {%- if country.iso_code == "US" or country.iso_code == "CA" -%}
-        <span class="country-option">
           <span class="country-option__name">{{ country.name }}</span>
-          <span class="country-option__currency">
-            ({{ country.currency.iso_code }}&nbsp;{{ country.currency.symbol }})
-          </span>
+          <span class="country-option__currency">({{ country.currency.iso_code }}&nbsp;{{ country.currency.symbol }})</span>
         </span>|
-      {%- endif -%}
+      {% endif %}
     {%- endfor -%}
-  {%- endcapture -%}
+  {%- endif -%}
+
+  {%- for country in localization.available_countries -%}
+    {%- liquid
+      if popular_countries and country.popular?
+        continue
+      endif
+    -%}
+    {% if country.iso_code == "US" or country.iso_code == "CA" %}
+      <span class="country-option">
+        <span class="country-option__name">{{ country.name }}</span>
+        <span class="country-option__currency">({{ country.currency.iso_code }}&nbsp;{{ country.currency.symbol }})</span>
+      </span>|
+    {% endif %}
+  {%- endfor -%}
+{%- endcapture -%}
+
 
   {%- liquid
     assign country_values = country_values | remove_last: '|' | split: '|'
