@@ -1,25 +1,44 @@
 {%- if localization.available_countries.size > 1 -%}
   {%- liquid
     assign id = section.id | append: '-country'
+    if localization.available_countries.size > 9
+      assign popular_countries = localization.available_countries | where: 'popular?' | sort: 'name'
+    endif
 
     capture country_values
-      for country in localization.available_countries
-        if country.iso_code == "US" or country.iso_code == "CA"
+      if popular_countries
+        for country in popular_countries
           echo country.iso_code
           echo '|'
+        endfor
+      endif
+      for country in localization.available_countries
+        if popular_countries and country.popular?
+          continue
         endif
+        echo country.iso_code
+        echo '|'
       endfor
     endcapture
   -%}
 
   {%- capture country_names -%}
-    {%- for country in localization.available_countries -%}
-      {%- if country.iso_code == "US" or country.iso_code == "CA" -%}
-        <span class="country-option">
-          <span class="country-option__name">{{ country.name }}</span> 
-          <!-- <span class="country-option__currency">({{ country.currency.iso_code }}&nbsp;{{ country.currency.symbol }})</span> -->
+    {% if popular_countries -%}
+      {%- for country in popular_countries -%}
+        <span class="country-option" data-popular>
+          <span class="country-option__name">{{ country.name }}</span> <span class="country-option__currency">({{ country.currency.iso_code }}&nbsp;{{ country.currency.symbol }})</span>
         </span>|
-      {%- endif -%}
+      {%- endfor -%}
+    {%- endif -%}
+    {%- for country in localization.available_countries -%}
+      {%- liquid
+        if popular_countries and country.popular?
+          continue
+        endif
+      -%}
+      <span class="country-option">
+        <span class="country-option__name">{{ country.name }}</span> <span class="country-option__currency">({{ country.currency.iso_code }}&nbsp;{{ country.currency.symbol }})</span>
+      </span>|
     {%- endfor -%}
   {%- endcapture -%}
 
