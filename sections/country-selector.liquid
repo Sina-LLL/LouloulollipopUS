@@ -18,7 +18,7 @@
       <span class="country-option">
         <span class="country-option__name">{{ country.name }}</span>
         <span class="country-option__currency">
-          ({% if country.iso_code == "CA" %}CAD&nbsp;$ {% else %}{{ country.currency.iso_code }}&nbsp;{{ country.currency.symbol }}{% endif %})
+          ({% if country.iso_code == "CA" %}CAD&nbsp;${% else %}{{ country.currency.iso_code }}&nbsp;{{ country.currency.symbol }}{% endif %})
         </span>
       </span>|
     {%- endfor -%}
