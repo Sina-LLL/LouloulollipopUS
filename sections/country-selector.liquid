@@ -1,27 +1,29 @@
 {%- if localization.available_countries.size > 1 -%}
   {%- liquid
     assign id = section.id | append: '-country'
+    assign filtered_countries = localization.available_countries | where: "iso_code", "US"
+    assign ca_country = localization.available_countries | where: "iso_code", "CA"
+    assign filtered_countries = filtered_countries | concat: ca_country
 
     capture country_values
-      for country in localization.available_countries
-        if country.iso_code == "US" or country.iso_code == "CA"
-          echo country.iso_code
-          echo '|'
-        endif
+      for country in filtered_countries
+        echo country.iso_code
+        echo '|'
       endfor
     endcapture
   -%}
 
   {%- capture country_names -%}
-    {%- for country in localization.available_countries -%}
-      {%- if country.iso_code == "US" or country.iso_code == "CA" -%}
-        <span class="country-option">
-          <span class="country-option__name">{{ country.name }}</span> 
-          <!-- <span class="country-option__currency">({{ country.currency.iso_code }}&nbsp;{{ country.currency.symbol }})</span> -->
-        </span>|
-      {%- endif -%}
+    {%- for country in filtered_countries -%}
+      <span class="country-option">
+        <span class="country-option__name">{{ country.name }}</span>
+        <span class="country-option__currency">
+          ({% if country.iso_code == "CA" %}CAD&nbsp;${% else %}{{ country.currency.iso_code }}&nbsp;{{ country.currency.symbol }}{% endif %})
+        </span>
+      </span>|
     {%- endfor -%}
   {%- endcapture -%}
+
 
   {%- liquid
     assign country_values = country_values | remove_last: '|' | split: '|'
