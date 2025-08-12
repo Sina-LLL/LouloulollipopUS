@@ -11,6 +11,7 @@
   display: flex;
   align-items: center;
   padding: var(--gutter-content) var(--container-pad-x) calc(var(--gutter-content) + env(safe-area-inset-bottom, 0px) * 1.5);
+  padding-bottom:40px;
   line-height: 1.4em;
   color: rgb(var(--body-text-color));
   background-color: rgb(var(--body-bg-color));
