@@ -46,11 +46,11 @@
       {%- endif -%}
     </span> -->
         {% if for_variant_picker or compare_at_price > price -%}
-          <span class="price__was">
-            {%- if compare_at_price > price -%}
+          {%- if compare_at_price > price -%}
+            <span class="price__was">
               {{- compare_at_price | money -}}
-            {%- endif -%}
-          </span>
+            </span>
+           {%- endif -%}
         {%- endif -%}
        <span class="price__current">
        {%- assign formatted_price = price | money_with_currency | strip_html -%}
