@@ -4740,6 +4740,9 @@ shopify-payment-terms {
     align-items: center !important;
     text-align: center !important;
   }
+  .text-overlay.text-overlay--with-reveal h1{
+    margin: 0 auto;
+  }
 }
 .text-overlay {
   display: flex;
