@@ -5,7 +5,7 @@
   inset-inline-start: 0;
   inset-inline-end: 0;
   bottom: 0;
-  z-index: 10;
+  z-index: 10000000;
   visibility: visible;
   width: 100%;
   display: flex;
@@ -19,7 +19,9 @@
   transition-duration: 0.2s;
   transition-timing-function: ease;
 }
-
+@media (max-width: 767.98px) {
+  padding-bottom:40px;
+}
 .sticky-atc--out,
 .scrolled-to-bottom .sticky-atc {
   visibility: hidden;
