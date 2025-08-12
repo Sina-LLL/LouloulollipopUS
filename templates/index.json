@@ -144,21 +144,24 @@
         "accessibility_info": ""
       }
     },
-    "featured_collection_RcGTat": {
-      "type": "featured-collection",
-      "name": "Best Sellers",
+    "custom_product_highlight_jV6CAX": {
+      "type": "custom-product-highlight",
+      "name": "Sleep bag 0.5 tog",
       "settings": {
-        "title": "Shop Our Bestsellers",
-        "text": "",
-        "collection": "best-sellers",
-        "show_vendor": false,
-        "enable_carousel": true,
-        "grid": 5,
-        "rows": 2,
-        "color_scheme": "default",
-        "show_view_all": true,
-        "full_width": true,
-        "text_alignment": "center"
+        "title": "For Dreams as Magical as Dragons",
+        "text": "<p>Built for cozy nights, storybook dreams, and everything in between.</p>",
+        "image": "shopify://shop_images/Magical_Dragons_Hero.png",
+        "order": false,
+        "product_list": [
+          "sleeper-magical-dragons",
+          "tencel-sleep-bag-1-0-tog-magical-dragons",
+          "long-sleeve-pajama-set-magical-dragons",
+          "muslin-swaddle-magical-dragons"
+        ],
+        "button_label": "Shop Magical Dragons",
+        "link": "shopify://collections/magical-dragons",
+        "button_style": "primary",
+        "color_scheme": "default"
       }
     },
     "logo_list_kYmwNX": {
@@ -267,24 +270,21 @@
         "color_scheme": "default"
       }
     },
-    "custom_product_highlight_jV6CAX": {
-      "type": "custom-product-highlight",
-      "name": "Sleep bag 0.5 tog",
+    "featured_collection_RcGTat": {
+      "type": "featured-collection",
+      "name": "Best Sellers",
       "settings": {
-        "title": "Letters That Lift Them Up",
-        "text": "<p>Our Alphabet Smiles print pairs A–Z with positive affirmations.</p>",
-        "image": "shopify://shop_images/Alphabet_Smiles_PRINT.png",
-        "order": false,
-        "product_list": [
-          "muslin-lightweight-sleep-bags-0-5-tog-alphabet-smiles",
-          "muslin-swaddle-alphabet-smiles",
-          "sleeper-alphabet-smiles",
-          "tencel-sleep-bag-1-0-tog-alphabet-smiles"
-        ],
-        "button_label": "shop alphabet smiles",
-        "link": "shopify://collections/alphabet-smiles",
-        "button_style": "primary",
-        "color_scheme": "default"
+        "title": "Shop Our Bestsellers",
+        "text": "",
+        "collection": "best-sellers",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 5,
+        "rows": 2,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": true,
+        "text_alignment": "center"
       }
     },
     "multi_column_gyeJnc": {
@@ -819,9 +819,9 @@
   "order": [
     "16359276425da8ce46",
     "slideshow_C7Jmag",
-    "featured_collection_RcGTat",
-    "logo_list_kYmwNX",
     "custom_product_highlight_jV6CAX",
+    "logo_list_kYmwNX",
+    "featured_collection_RcGTat",
     "multi_column_gyeJnc",
     "featured_collection_K3tJdQ",
     "collection_list_BzgHGC",
