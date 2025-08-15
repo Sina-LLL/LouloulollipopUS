@@ -230,6 +230,16 @@
         "grid": 4
       }
     },
+    "mux_video_embed_h8jKHN": {
+      "type": "mux-video-embed",
+      "name": "Mux Video",
+      "settings": {}
+    },
+    "mux_video_embed_m7epHW": {
+      "type": "mux-video-embed",
+      "name": "Mux Video",
+      "settings": {}
+    },
     "custom_liquid_RMm8G9": {
       "type": "custom-liquid",
       "settings": {
@@ -237,11 +247,6 @@
         "show_space": true,
         "code": "<div class=\"wrapper--full\">\n          {% comment %}\n/snippets/bv-ratings-reviews.liquid\nBazaarvoice Ratings & Reviews\n{% endcomment %}\n{% render 'bv-ratings-reviews' %}\n{% comment %}\nEnd Bazaarvoice Ratings & Reviews\n{% endcomment %}\n</div>"
       }
-    },
-    "mux_video_embed_h8jKHN": {
-      "type": "mux-video-embed",
-      "name": "Mux Video",
-      "settings": {}
     }
   },
   "order": [
@@ -251,6 +256,7 @@
     "custom_product_list_by_print_fGCmUV",
     "related-products",
     "mux_video_embed_h8jKHN",
+    "mux_video_embed_m7epHW",
     "custom_liquid_RMm8G9"
   ]
 }
