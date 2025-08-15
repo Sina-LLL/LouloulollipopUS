@@ -235,11 +235,6 @@
       "name": "Mux Video",
       "settings": {}
     },
-    "mux_video_embed_m7epHW": {
-      "type": "mux-video-embed",
-      "name": "Mux Video",
-      "settings": {}
-    },
     "custom_liquid_RMm8G9": {
       "type": "custom-liquid",
       "settings": {
@@ -256,7 +251,6 @@
     "custom_product_list_by_print_fGCmUV",
     "related-products",
     "mux_video_embed_h8jKHN",
-    "mux_video_embed_m7epHW",
     "custom_liquid_RMm8G9"
   ]
 }
