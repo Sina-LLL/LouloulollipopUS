@@ -870,14 +870,23 @@ cart-form .page-header:not(.page-header--with-background){
   display: none;
 }
 
-/* Mux Video */
+/* Mux Video Embed */
   /* Container to center the video and title */
 .mux-video-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin: 20px auto;
+  display: grid;
+  width: max-content;
+  max-width: 100%;
+  margin: auto;
+  column-gap: var(--gutter);
+  row-gap: var(--gutter);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-items: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .mux-video-container{
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
   /* Title styling */
@@ -891,10 +900,8 @@ cart-form .page-header:not(.page-header--with-background){
   /* Wrapper to maintain 9:16 aspect ratio */
 .mux-video-wrapper {
     position: relative;
-    width: 225px; /* Adjust width based on design */
-    max-width: 100%;
     aspect-ratio: 9 / 16;
-    max-height: 400px;
+    max-height: 600px;
     overflow: hidden;
 }
 
