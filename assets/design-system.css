@@ -870,3 +870,45 @@ cart-form .page-header:not(.page-header--with-background){
   display: none;
 }
 
+/* Mux Video Embed */
+  /* Container to center the video and title */
+.mux-video-container {
+  display: grid;
+  width: max-content;
+  max-width: 100%;
+  margin: auto;
+  column-gap: var(--gutter);
+  row-gap: var(--gutter);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-items: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .mux-video-container{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+  /* Title styling */
+.mux-video-title {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+  /* Wrapper to maintain 9:16 aspect ratio */
+.mux-video-wrapper {
+    position: relative;
+    aspect-ratio: 9 / 16;
+    max-height: 600px;
+    overflow: hidden;
+}
+
+  /* Video styling */
+.mux-video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video properly fills the frame */
+    border-radius: 8px; /* Optional rounded corners */
+}
