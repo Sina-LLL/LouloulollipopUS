@@ -1,0 +1,32 @@
+{%- assign mux_urls = product.metafields.custom.mux_video_url.value -%}
+
+{% if product.metafields.custom.mux_video_url %}
+    <div class="container container--no-max fully-spaced-row">
+      <h4 class="align-center hometitle">Expeerly Reviews</h4>
+      <div class="mux-video-container">  
+        {%- for urls in mux_urls -%}
+          <div class="mux-video-wrapper">
+            <video controls preload="metadata">
+              <source src="{{ urls }}" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>         
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+{% endif %}   
+
+
+{% schema %}
+{
+  "name": "Mux Video",
+  "tag": "section",
+  "class": "page-section-spacing page-section-spacing--no-top-mobile",
+  "presets": [
+    {
+      "name": "Mux Video",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}
