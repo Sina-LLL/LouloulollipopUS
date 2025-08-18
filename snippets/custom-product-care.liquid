@@ -5,7 +5,7 @@
       {% for item in care_list %}
         <div class="product-material-care__icons">
           {% if item.icon != blank %}
-            <img src="{{ item.icon | image_url: width: 64 }}" alt="{{ item.label }}" loading="lazy">
+            <img src="{{ item.icon | image_url: width: 34 }}" alt="{{ item.label }}" loading="lazy">
           {% endif %}
           <p>{{ item.title }}</p>
         </div>
