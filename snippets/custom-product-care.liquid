@@ -1,6 +1,6 @@
 {% assign material_care = product.metafields.custom.material.value[0] %}
 {% assign care_image = product.metafields.custom.care_instructions.value.care_instructions.icon %}
-{{ care_image }}
+CC: {{ care_image }}
   {% case material_care %}  
 
      {% when 'TENCEL Lyocell' %}
