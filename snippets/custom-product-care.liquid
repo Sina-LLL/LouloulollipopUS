@@ -1,17 +1,46 @@
 {% assign care_list = product.metafields.custom.care_instructions.value %}
 
 {% if care_list != blank %}
-  <div class="product-care-instructions">
-    <h3>Care Instructions</h3>
-    <ul class="care-icons">
+  <div class="product-material__icons-wrapper">
       {% for item in care_list %}
+        <div class="product-material-care__icons">
         <li class="care-item">
           {% if item.icon != blank %}
             <img src="{{ item.icon | image_url: width: 64 }}" alt="{{ item.label }}" loading="lazy">
           {% endif %}
           <p>{{ item.title }}</p>
         </li>
+        </div>
+
       {% endfor %}
-    </ul>
   </div>
 {% endif %}
+
+      <div class="product-material__icons-wrapper">
+        <div class="product-material-care__icons">
+          {% render 'icon-machine-wash-cold' %}
+          <p>Machine wash cold with like colours</p>
+        </div>
+        <div class="product-material-care__icons">
+           {% render 'icon-wash-delicate' %}
+          <p>Delicate or gentle cycle</p>
+        </div>
+         <div class="product-material-care__icons">
+           {% render 'icon-tumble-dry-low-heat' %}
+          <p>Tumble dry on low heat</p>
+        </div>
+         <div class="product-material-care__icons">
+          {% render 'icon-none-chlorine-bleach' %}
+          <p>Use only non-chlorine bleach</p>
+        </div>
+        <div class="product-material-care__icons">
+          {% render 'icon-iron-medium' %}
+          <p>Iron medium </p>
+        </div>
+        <div class="product-material-care__icons">
+          {% render 'icon-no-dry-clean' %}
+          <p>Do not dry clean</p>
+        </div>
+        
+      </div> 
+    
