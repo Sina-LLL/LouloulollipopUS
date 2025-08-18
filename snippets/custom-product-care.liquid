@@ -9,7 +9,7 @@
           {% if item.icon != blank %}
             <img src="{{ item.icon | image_url: width: 64 }}" alt="{{ item.label }}" loading="lazy">
           {% endif %}
-          <p>{{ item.label }}</p>
+          <p>{{ item.title }}</p>
         </li>
       {% endfor %}
     </ul>
