@@ -69,36 +69,36 @@
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "New & Featured",
-            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._11th_2024_-Web-46.jpg",
-            "title": "Ocean Wonders",
-            "link_url": "shopify://collections/ocean-wonders"
+            "image": "shopify://shop_images/Celestial_adventures.png",
+            "title": "Celestial Adventures",
+            "link_url": "shopify://collections/celestial-adventure"
           }
         },
         "menu_promotion_small_tKL9pd": {
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "Sleep & Bedding",
-            "image": "shopify://shop_images/Sleeper_CheckItOut_7.webp",
-            "title": "Check it Out Sleeper",
-            "link_url": "shopify://products/sleeper-check-it-out"
+            "image": "shopify://shop_images/LuluLollipopEdits-01002-2_3.png",
+            "title": "Alphabet Smiles Sleeper",
+            "link_url": "shopify://products/sleeper-alphabet-smiles"
           }
         },
         "menu_promotion_small_8ghxfY": {
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "Clothing",
-            "image": "shopify://shop_images/KA4006F.MER_Skater_Dress_Mermaids_2W.jpg",
-            "title": "Mermaids Skater Dress",
-            "link_url": "shopify://products/short-sleeve-skater-dress-mermaids"
+            "image": "shopify://shop_images/LuluLollipopEdits-01002-2_5.png",
+            "title": "Long Sleeve Pajama Sets",
+            "link_url": "shopify://products/long-sleeve-pajama-set-baby-dinomite"
           }
         },
         "menu_promotion_small_VjUPFk": {
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "Feeding",
-            "image": "shopify://shop_images/eat-7.jpg",
-            "title": "Wildlife Snack Plates",
-            "link_url": "shopify://collections/suction-plates"
+            "image": "shopify://shop_images/LuluLollipopEdits-01002-2_4.png",
+            "title": "Silicone Bibs",
+            "link_url": "shopify://collections/silicone-bibs"
           }
         },
         "menu_promotion_small_AkrWYN": {
@@ -114,7 +114,7 @@
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "Bathe",
-            "image": "shopify://shop_images/TWOCX_Muslin_Hooded_Towel_Set_Ocean_Explorer_3.jpg",
+            "image": "shopify://shop_images/Hooded_Towels.png",
             "title": "Hooded Towels",
             "link_url": "shopify://collections/hooded-towel-sets"
           }
