@@ -459,15 +459,6 @@
                   <textarea id="note" name="note">{{ cart.note }}</textarea>
                 </cart-note>
               {% endif %}
-              <!--BEAM START-->
-              <div class="profit-wrapper {% if cart == empty %} is-empty{% endif %}">
-                <div id="widget-parent-wrapper">
-                  <div id="beam-nonprofit-widget" style="display: flex; padding: 0px 0px 0px 0px;">
-                      {% render 'beam-select-nonprofit' %}
-                  </div>
-                </div>
-              </div>
-              <!--BEAM END-->
               {% if section.settings.show_shipping_calculator %}
                 <toggle-target class="block lightly-spaced-row link underline" role="button" tabindex="0" data-toggle-target="#{{ section.id }}-shipping-calculator-container" data-toggle-close-label="{{ 'cart.shipping_calculator.hide' | t }}">{{ 'cart.shipping_calculator.show' | t }}</toggle-target>
                 <div id="{{ section.id }}-shipping-calculator-container" class="toggle-target toggle-target--hidden">
