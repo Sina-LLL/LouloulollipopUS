@@ -28,6 +28,13 @@
             "use_h1": true
           }
         },
+        "text_xAWxeX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This page is for our USA program. If you’re in Canada, head over to our <a href=\"https://louloulollipop.ca/pages/affiliates\" title=\"https://louloulollipop.ca/pages/affiliates\"><strong>Canada page</strong></a><strong>.</strong></p>",
+            "enlarge_text": true
+          }
+        },
         "html_rtQKzV": {
           "type": "html",
           "settings": {
@@ -46,6 +53,7 @@
       "block_order": [
         "subheading_nPyirk",
         "heading_y9rJ93",
+        "text_xAWxeX",
         "html_rtQKzV",
         "text_wPPf6k"
       ],
@@ -363,6 +371,9 @@
         "media_8FMgwC"
       ],
       "settings": {
+        "title": "",
+        "text": "",
+        "text_alignment": "start",
         "grid_desktop": 4,
         "grid_mobile": "2",
         "height": "fixed",
@@ -592,6 +603,9 @@
         "media_x7hgem"
       ],
       "settings": {
+        "title": "",
+        "text": "",
+        "text_alignment": "start",
         "grid_desktop": 2,
         "grid_mobile": "1",
         "height": "fixed",
