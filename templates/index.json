@@ -18,15 +18,15 @@
             "image": "shopify://shop_images/LuluLollipopEdits-00249_d12f2c03-9a8d-42ed-8139-358822fd611c.jpg",
             "mobile_image": "shopify://shop_images/LuluLollipopEdits-00033_cd0cad26-f967-496a-b3ec-2161617ae6f2.jpg",
             "slide_link": "",
-            "subheading": "A Whirl of Wonder",
-            "title": "Unicorn Ballet Has Arrived",
+            "subheading": "Chase the Stars",
+            "title": "Meet Stargazing Bears",
             "heading_max_width": 14,
             "title_size": 60,
             "title_size_mobile": 42,
             "use_h1": true,
-            "text": "<p><strong>Sparkle, sweetness, and playful charm all twirled into one whimsical print</strong></p>",
+            "text": "<p><strong>Snuggle in and let imaginations wander with playful bears and sparkling skies</strong></p>",
             "enlarge_text": true,
-            "button_label_1": "Shop Stargazing Bear",
+            "button_label_1": "Shop Stargazing Bears",
             "button_url_1": "shopify://collections/stargazing-bear",
             "button_tag_1": "",
             "button_label_2": "",
@@ -149,8 +149,8 @@
       "type": "custom-product-highlight",
       "name": "Sleep bag 0.5 tog",
       "settings": {
-        "title": "Where Whimsy Meets Everyday",
-        "text": "<p>Perfect for twirls, cuddles, and everything in between</p>",
+        "title": "Let Dreams Take Flight",
+        "text": "<p>Perfect for cozy nights, dreamy days, and limitless imagination</p>",
         "image": "shopify://shop_images/Stargazing_Bears_Hero.png",
         "order": false,
         "product_list": [
@@ -159,8 +159,8 @@
           "sleeper-stargazing-bear",
           "hooded-towel-set-stargazing-bear"
         ],
-        "button_label": "Shop Unicorn Ballet",
-        "link": "shopify://collections/unicorn-ballet",
+        "button_label": "Shop Stargazing Bears",
+        "link": "shopify://collections/stargazing-bear",
         "button_style": "primary",
         "color_scheme": "default"
       }
