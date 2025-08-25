@@ -775,7 +775,7 @@
     <loyalty-join
       data-cart-total="{{ cart.total_price | divided_by: 100.0 }}"
       data-copy-member="{{ "You'll earn [AMOUNT] points for this order by being a Club Loulou member!" | escape }}"
-      data-copy-non-member="{{ "Earn [AMOUNT] points for this order by joining Club Loulou!" | escape }}"
+      data-copy-non-member="{{ "Instantly earn [AMOUNT] points on this order when you join Club Loulou Rewards (free to join, comes with awesome perks)" | escape }}"
       data-marketplace-api="{% if request.host contains 'myshopify.com' or request.host contains 'localhost' %}https://marketplaceapi.heyethos.dev{% else %}https://marketplaceapi.heyethos.com{% endif %}"
       data-store-info='{"domain":{{ shop.domain | json }},"permanent_domain":{{ shop.permanent_domain | json }},"name":{{ shop.name | json }}}'
       {% if customer %}data-customer='{"id":{{ customer.id | json }},"email":{{ customer.email | json }}}'{% endif %}
