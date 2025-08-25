@@ -15,13 +15,16 @@
         "heading_hVQPzc": {
           "type": "heading",
           "settings": {
-            "title": "Why we believe TENCEL Lyocell is best for baby clothing",
+            "title": "Why we believe TENCEL™ Lyocell is best for baby clothing",
             "use_h1": true
           }
         }
       },
       "block_order": [
         "heading_hVQPzc"
+      ],
+      "custom_css": [
+        "h1 {font-size: 2rem; line-height: 1.5;}"
       ],
       "name": "Rich text",
       "settings": {
@@ -82,7 +85,7 @@
             "enable_media": true,
             "image": "shopify://shop_images/BA3005F.BMB_Bodysuit_Dress_-_Bumble_Bees_52.jpg",
             "title": "Unbelievably Soft",
-            "text": "<p>TENCEL fibres are naturally soft and smooth (some say even softer than silk!), making for the perfect fabric for delicate and sensitive baby skin. The softness is a super power for preventing irritation and maximizing comfort. </p>",
+            "text": "<p>TENCEL™ fibres are naturally soft and smooth (some say even softer than silk!), making for the perfect fabric for delicate and sensitive baby skin. The softness is a super power for preventing irritation and maximizing comfort. </p>",
             "button_label": "",
             "link": ""
           }
@@ -93,7 +96,7 @@
             "enable_media": true,
             "image": "shopify://shop_images/BA9007U.FBK_Sleepsuit_1.0_Tog_French_Breakfast_5.jpg",
             "title": "Incredibly Durable",
-            "text": "<p>TENCEL is soft like bamboo, but stands up better to machine washing (even frequent washing, which, let’s be honest, is hard to avoid with little ones!), holding its shape better and pilling less than bamboo. </p><p>It also withstands the regular wear and tear that inevitably comes with active babies and toddlers —making it perfect for handing down to future family members or for consignment. </p>",
+            "text": "<p>TENCEL™ is soft like bamboo, but stands up better to machine washing (even frequent washing, which, let’s be honest, is hard to avoid with little ones!), holding its shape better and pilling less than bamboo. </p><p>It also withstands the regular wear and tear that inevitably comes with active babies and toddlers —making it perfect for handing down to future family members or for consignment. </p>",
             "button_label": "",
             "link": ""
           }
@@ -104,7 +107,7 @@
             "enable_media": true,
             "image": "shopify://shop_images/KA1003U.PCK_Waffle_2-pc_Pajama_Set_Peacock_6_26d1a114-24dc-445a-9d36-5feb92df9a7a.jpg",
             "title": "Temperature Regulating & Moisture Wicking  ",
-            "text": "<p>TENCEL is naturally wicking and breathable, keeping babies and toddlers warm in the winter and cool and dry in the summer. And that means better sleep for everyone.  </p>",
+            "text": "<p>TENCEL™ is naturally wicking and breathable, keeping babies and toddlers warm in the winter and cool and dry in the summer. And that means better sleep for everyone.  </p>",
             "button_label": "",
             "link": ""
           }
@@ -115,7 +118,7 @@
             "enable_media": true,
             "image": "shopify://shop_images/BA3001U.CKO_Long_Sleeve_Bodysuit_Check_it_Out_5.jpg",
             "title": "Certified Hypoallergenic & Skin-Friendly ",
-            "text": "<p>Extensive dermatological testing has proven TENCEL to be the ideal fabric for babies with sensitive skin and even eczema. It’s naturally hypoallergenic and its smooth fibre surface minimizes friction against delicate skin. </p><p>It’s also <a href=\"https://www.oeko-tex.com/en/our-standards/oeko-tex-standard-100\"><span style=\"text-decoration:underline\">OEKO-TEX certified</span></a>, so parents can rest assured that it’s been thoroughly tested and proven to be free from more than 1,000 harmful substances.</p>",
+            "text": "<p>Extensive dermatological testing has proven TENCEL™ to be the ideal fabric for babies with sensitive skin and even eczema. It’s naturally hypoallergenic and its smooth fibre surface minimizes friction against delicate skin. </p><p>It’s also <a href=\"https://www.oeko-tex.com/en/our-standards/oeko-tex-standard-100\"><span style=\"text-decoration:underline\">OEKO-TEX certified</span></a>, so parents can rest assured that it’s been thoroughly tested and proven to be free from more than 1,000 harmful substances.</p>",
             "button_label": "",
             "link": ""
           }
@@ -263,9 +266,9 @@
       ],
       "name": "Collection list",
       "settings": {
-        "title": "Where you’ll find TENCEL at Loulou Lollipop ",
+        "title": "Where you’ll find TENCEL™ at Loulou Lollipop ",
         "text": "<p>By now you won’t be surprised to learn that we love this fabric for our:</p>",
-        "text_alignment": "start",
+        "text_alignment": "center",
         "enable_carousel": true,
         "grid": 5,
         "color_scheme": "default",
