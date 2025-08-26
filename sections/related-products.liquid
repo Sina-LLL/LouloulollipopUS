@@ -64,20 +64,24 @@ var loadProductRecommendationsIntoSection = function() {
       var container = document.createElement("div");
       container.innerHTML = request.response;
 
-      // Get the recommended products markup
+      // Grab the new recommendations content
       var newContent = container.querySelector(".related-products");
 
       if (newContent) {
-        // Remove products with tag "EXCLUDED"
-        var products = newContent.querySelectorAll("[data-product-tags]");
-        products.forEach(function(product) {
-          var tags = product.getAttribute("data-product-tags");
-          if (tags && tags.split(",").includes("EXCLUDED")) {
-            product.remove();
+        // Hide a product by handle (example: "example-product")
+        var excludedHandle = "free-returns-package-protection"; // change this to your product's handle
+
+        // Loop through all links/cards
+        var productCards = newContent.querySelectorAll("a[href*='/products/']");
+        productCards.forEach(function(card) {
+          if (card.href.includes("/products/" + excludedHandle)) {
+            // Remove the whole product card wrapper
+            var cardWrapper = card.closest(".grid__item, .product-card, li, div");
+            if (cardWrapper) cardWrapper.remove();
           }
         });
 
-        // Replace section content
+        // Replace section content with filtered products
         productRecommendationsSection.innerHTML = newContent.innerHTML;
       }
     }
