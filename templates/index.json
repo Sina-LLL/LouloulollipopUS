@@ -15,18 +15,19 @@
         "16359276425da8ce46-1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/LuluLollipopEdits-00874.jpg",
+            "image": "shopify://shop_images/LuluLollipopEdits-00249_d12f2c03-9a8d-42ed-8139-358822fd611c.jpg",
+            "mobile_image": "shopify://shop_images/LuluLollipopEdits-00033_cd0cad26-f967-496a-b3ec-2161617ae6f2.jpg",
             "slide_link": "",
-            "subheading": "A Whirl of Wonder",
-            "title": "Unicorn Ballet Has Arrived",
+            "subheading": "Chase the Stars",
+            "title": "Meet Stargazing Bears",
             "heading_max_width": 14,
             "title_size": 60,
-            "title_size_mobile": 42,
+            "title_size_mobile": 40,
             "use_h1": true,
-            "text": "<p><strong>Sparkle, sweetness, and playful charm all twirled into one whimsical print</strong></p>",
+            "text": "<p><strong>Snuggle in and let imaginations wander with playful bears and sparkling skies</strong></p>",
             "enlarge_text": true,
-            "button_label_1": "Shop Unicorn Ballet",
-            "button_url_1": "shopify://collections/unicorn-ballet",
+            "button_label_1": "Shop Stargazing Bears",
+            "button_url_1": "shopify://collections/stargazing-bear",
             "button_tag_1": "",
             "button_label_2": "",
             "button_url_2": "",
@@ -148,18 +149,18 @@
       "type": "custom-product-highlight",
       "name": "Sleep bag 0.5 tog",
       "settings": {
-        "title": "Where Whimsy Meets Everyday",
-        "text": "<p>Perfect for twirls, cuddles, and everything in between</p>",
-        "image": "shopify://shop_images/Unicorn_Ballet_Hero.png",
+        "title": "Let Dreams Take Flight",
+        "text": "<p>Perfect for cozy nights, dreamy days, and limitless imagination</p>",
+        "image": "shopify://shop_images/Stargazing_Bears_Hero.png",
         "order": false,
         "product_list": [
-          "sleeper-unicorn-ballet",
-          "tencel-sleep-bag-1-0-tog-unicorn-ballet",
-          "long-sleeve-pajama-set-unicorn-ballet",
-          "hooded-towel-set-unicorn-ballet"
+          "long-sleeve-pajama-set-stargazing-bear",
+          "tencel-sleep-bag-1-0-tog-stargazing-bear",
+          "sleeper-stargazing-bear",
+          "hooded-towel-set-stargazing-bear"
         ],
-        "button_label": "Shop Unicorn Ballet",
-        "link": "shopify://collections/unicorn-ballet",
+        "button_label": "Shop Stargazing Bears",
+        "link": "shopify://collections/stargazing-bear",
         "button_style": "primary",
         "color_scheme": "default"
       }
@@ -281,7 +282,7 @@
         "enable_carousel": true,
         "grid": 5,
         "rows": 2,
-        "color_scheme": "default",
+        "color_scheme": "1",
         "show_view_all": true,
         "full_width": true,
         "text_alignment": "center"
@@ -569,9 +570,7 @@
     },
     "custom_product_highlight_PMwqLc": {
       "type": "custom-product-highlight",
-      "custom_css": [
-        ".fully-padded-row--medium {padding-bottom: 0 !important;}"
-      ],
+      "custom_css": [],
       "name": "Mess-less Mealtimes",
       "settings": {
         "title": "Mess-less Mealtimes",
@@ -585,7 +584,7 @@
         "button_label": "Shop Snack Plates",
         "link": "shopify://collections/snack-plate",
         "button_style": "primary",
-        "color_scheme": "default"
+        "color_scheme": "1"
       }
     },
     "collection_list_9AdzKx": {
