@@ -1,0 +1,256 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "custom-main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "custom_liquid_W4BPWG": {
+          "type": "custom-liquid",
+          "settings": {
+            "custom_liquid": "{% comment %}\n/snippets/bv-summary.liquid\nBazaarvoice Summary Container\n{% endcomment %}\n{% render 'bv-summary' %}\n{% comment %}\nEnd Bazaarvoice Summary Container\n{% endcomment %}",
+            "show_in_quickbuy": false
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_tax_and_shipping": false,
+            "enable_product_reviews_by_price": true
+          }
+        },
+        "variant-picker": {
+          "type": "variant-picker",
+          "settings": {
+            "show_single": false,
+            "selector_style": "listed",
+            "dynamic_availability": "show",
+            "enable_size_chart": true,
+            "size_chart_label": "What size do I get?",
+            "size_chart_variant": "Size",
+            "size_chart_page": "size-chart-clothing"
+          }
+        },
+        "ethos_exclusive_add_to_cart_UM3MD3": {
+          "type": "shopify://apps/ethos/blocks/exclusive-add-to-cart/e6f2bd3b-e2fd-4f16-b73c-bf198b58bb45",
+          "settings": {
+            "membership_name": "Club Loulou",
+            "membership_url": "https://louloulollipopus.heyethos.com",
+            "logged_out_message_product": "This is an exclusive access product. You must be logged in and have an active [MEMBERSHIP_NAME] membership to purchase.",
+            "no_access_message": "This is an exclusive access product only available to [MEMBERSHIP_NAME] Members.",
+            "join_now_message": "Don't worry though, the [MEMBERSHIP_NAME] Program is free to join! Sign up now and get points, exclusive rewards, and enter contests only for you.",
+            "access_granted_message": "You've unlocked an exclusive access product because you're a [MEMBERSHIP_NAME] member. Enjoy!",
+            "button_background_color": "#000000",
+            "button_border_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_text_color": "#ffffff",
+            "button_hover_background_color": "#333333",
+            "button_hover_border_color": "#333333",
+            "shop_login_link": "/account/login",
+            "buy_button_css_class": ".your-custom-button-class"
+          }
+        },
+        "buy-buttons": {
+          "type": "buy-buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "enable_payment_button": false,
+            "show_backorder_text": false,
+            "show_pickup_availability": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "usp_CRdfie": {
+          "type": "USP",
+          "repeater": "{{ product.metafields.custom.product_template.value.usp_icons.value }}",
+          "settings": {
+            "text": "{{ block.repeater.title.value }}",
+            "icon": "",
+            "custom_icon": "{{ block.repeater.icon.value }}",
+            "icon_size": "large"
+          }
+        },
+        "divider_kgTqeY": {
+          "type": "divider",
+          "settings": {
+            "show_in_quickbuy": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "show_in_tab": false,
+            "open_tab": true,
+            "icon": "",
+            "show_in_quickbuy": false
+          }
+        },
+        "feature_rating_tdmkCF": {
+          "type": "feature-rating",
+          "disabled": true,
+          "settings": {
+            "heading": "0.5 lightweight",
+            "segments": 5,
+            "active_segment": "4",
+            "fill_segments": true,
+            "show_labels": true,
+            "label_left": "Cold",
+            "label_middle": "Breazy",
+            "label_right": "Warm",
+            "show_in_quickbuy": false
+          }
+        },
+        "accordion_yktgxC": {
+          "type": "accordion",
+          "disabled": true,
+          "settings": {
+            "title": "Materials & Care",
+            "icon": "",
+            "content": "",
+            "page": "",
+            "custom_liquid": "{{ product.metafields.custom.materials_care.value }}",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        },
+        "accordion_KqCkWX": {
+          "type": "accordion",
+          "disabled": true,
+          "settings": {
+            "title": "Shipping & Returns",
+            "icon": "",
+            "content": "<p>All US orders over $65 ship for free! Shipping is $7 for orders under $65.</p><p>If you need expedited shipping, the shipping fee will be calculated at checkout.</p>",
+            "page": "",
+            "custom_liquid": "",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        },
+        "complementary_BwbHzJ": {
+          "type": "complementary",
+          "disabled": true,
+          "settings": {
+            "heading": "Pairs well with",
+            "enable_carousel": true,
+            "max_products": 10
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "custom_liquid_W4BPWG",
+        "price",
+        "variant-picker",
+        "ethos_exclusive_add_to_cart_UM3MD3",
+        "buy-buttons",
+        "usp_CRdfie",
+        "divider_kgTqeY",
+        "description",
+        "feature_rating_tdmkCF",
+        "accordion_yktgxC",
+        "accordion_KqCkWX",
+        "complementary_BwbHzJ"
+      ],
+      "settings": {
+        "show_breadcrumbs": true,
+        "select_first_variant": true,
+        "show_location_underneath": false,
+        "inventory_transfers_enable": true,
+        "enable_sticky_columns": true,
+        "enable_sticky_atc": true,
+        "sticky_atc_position": "center",
+        "sticky_atc_mobile": true,
+        "sticky_atc_behavior": "add_to_cart",
+        "sticky_atc_button_style": "primary",
+        "gallery_size": "medium",
+        "gallery_layout": "collage-1",
+        "enable_zoom": true,
+        "show_alt_text": false,
+        "alt_text_icon": "",
+        "enable_video_autoplay": false,
+        "enable_video_looping": false,
+        "enable_media_grouping": false,
+        "media_grouping_option": "Color,Colour,Couleur,Farbe"
+      }
+    },
+    "custom_product_features_J4Txgz": {
+      "type": "custom-product-features",
+      "blocks": {
+        "feature_gaaBJH": {
+          "type": "feature",
+          "repeater": "{{ product.metafields.custom.product_template.value.features.value }}",
+          "settings": {
+            "image": "{{ block.repeater.image.value }}",
+            "title": "{{ block.repeater.title.value }}",
+            "description": "<p>{{ block.repeater.description | metafield_tag }}</p>"
+          }
+        }
+      },
+      "block_order": [
+        "feature_gaaBJH"
+      ],
+      "settings": {
+        "section_heading": "We Thought of that Too"
+      }
+    },
+    "custom_product_material_care_jFczeg": {
+      "type": "custom-product-material-care",
+      "settings": {
+        "section_heading": "Material & Care"
+      }
+    },
+    "custom_product_list_by_print_fGCmUV": {
+      "type": "custom-product-list-by-print",
+      "name": "Custom Product List by Print",
+      "settings": {
+        "title": "Get the Set",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 5,
+        "color_scheme": "default",
+        "full_width": true
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "title": "You may also like",
+        "show_vendor": false,
+        "grid": 4
+      }
+    },
+    "mux_video_embed_h8jKHN": {
+      "type": "mux-video-embed",
+      "name": "Mux Video",
+      "settings": {}
+    },
+    "custom_liquid_RMm8G9": {
+      "type": "custom-liquid",
+      "settings": {
+        "full_width": true,
+        "show_space": true,
+        "code": "<div class=\"wrapper--full\">\n          {% comment %}\n/snippets/bv-ratings-reviews.liquid\nBazaarvoice Ratings & Reviews\n{% endcomment %}\n{% render 'bv-ratings-reviews' %}\n{% comment %}\nEnd Bazaarvoice Ratings & Reviews\n{% endcomment %}\n</div>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_product_features_J4Txgz",
+    "custom_product_material_care_jFczeg",
+    "custom_product_list_by_print_fGCmUV",
+    "related-products",
+    "mux_video_embed_h8jKHN",
+    "custom_liquid_RMm8G9"
+  ]
+}
