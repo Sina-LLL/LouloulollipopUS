@@ -55,6 +55,7 @@ var loadProductRecommendationsIntoSection = function() {
   // Look for an element with class 'related-products'
   var productRecommendationsSection = document.querySelector(".related-products");
   if (productRecommendationsSection === null) { return; }
+
   // Create request and submit it using Ajax
   var request = new XMLHttpRequest();
   request.open("GET", productRecommendationsSection.dataset.url);
@@ -62,20 +63,39 @@ var loadProductRecommendationsIntoSection = function() {
     if (request.status >= 200 && request.status < 300) {
       var container = document.createElement("div");
       container.innerHTML = request.response;
-      productRecommendationsSection.innerHTML = container.querySelector(".related-products").innerHTML;
+
+      // Get the recommended products markup
+      var newContent = container.querySelector(".related-products");
+
+      if (newContent) {
+        // Remove products with tag "EXCLUDED"
+        var products = newContent.querySelectorAll("[data-product-tags]");
+        products.forEach(function(product) {
+          var tags = product.getAttribute("data-product-tags");
+          if (tags && tags.split(",").includes("EXCLUDED")) {
+            product.remove();
+          }
+        });
+
+        // Replace section content
+        productRecommendationsSection.innerHTML = newContent.innerHTML;
+      }
     }
   };
   request.send();
 };
+
 // fetch when section reloads in editor
 document.addEventListener("shopify:section:load", function(event) {
   if (document.querySelector('[data-section-id="' + event.detail.sectionId + '"].related-products')) {
     loadProductRecommendationsIntoSection();
   }
 });
+
 // Fetching the recommendations on page load
 loadProductRecommendationsIntoSection();
 {% endjavascript %}
+
 
 
 {% schema %}
