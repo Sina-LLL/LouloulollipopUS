@@ -459,15 +459,6 @@
                   <textarea id="note" name="note">{{ cart.note }}</textarea>
                 </cart-note>
               {% endif %}
-              <!--BEAM START-->
-              <div class="profit-wrapper {% if cart == empty %} is-empty{% endif %}">
-                <div id="widget-parent-wrapper">
-                  <div id="beam-nonprofit-widget" style="display: flex; padding: 0px 0px 0px 0px;">
-                      {% render 'beam-select-nonprofit' %}
-                  </div>
-                </div>
-              </div>
-              <!--BEAM END-->
               {% if section.settings.show_shipping_calculator %}
                 <toggle-target class="block lightly-spaced-row link underline" role="button" tabindex="0" data-toggle-target="#{{ section.id }}-shipping-calculator-container" data-toggle-close-label="{{ 'cart.shipping_calculator.hide' | t }}">{{ 'cart.shipping_calculator.show' | t }}</toggle-target>
                 <div id="{{ section.id }}-shipping-calculator-container" class="toggle-target toggle-target--hidden">
@@ -784,7 +775,7 @@
     <loyalty-join
       data-cart-total="{{ cart.total_price | divided_by: 100.0 }}"
       data-copy-member="{{ "You'll earn [AMOUNT] points for this order by being a Club Loulou member!" | escape }}"
-      data-copy-non-member="{{ "Earn [AMOUNT] points for this order by joining Club Loulou!" | escape }}"
+      data-copy-non-member="{{ "Instantly earn [AMOUNT] points on this order when you join Club Loulou Rewards (free to join, comes with awesome perks)" | escape }}"
       data-marketplace-api="{% if request.host contains 'myshopify.com' or request.host contains 'localhost' %}https://marketplaceapi.heyethos.dev{% else %}https://marketplaceapi.heyethos.com{% endif %}"
       data-store-info='{"domain":{{ shop.domain | json }},"permanent_domain":{{ shop.permanent_domain | json }},"name":{{ shop.name | json }}}'
       {% if customer %}data-customer='{"id":{{ customer.id | json }},"email":{{ customer.email | json }}}'{% endif %}
