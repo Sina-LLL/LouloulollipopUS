@@ -52,11 +52,9 @@
 
 {% javascript %}
 var loadProductRecommendationsIntoSection = function() {
-  // Look for an element with class 'related-products'
   var productRecommendationsSection = document.querySelector(".related-products");
-  if (productRecommendationsSection === null) { return; }
+  if (!productRecommendationsSection) return;
 
-  // Create request and submit it using Ajax
   var request = new XMLHttpRequest();
   request.open("GET", productRecommendationsSection.dataset.url);
   request.onload = function() {
@@ -64,41 +62,42 @@ var loadProductRecommendationsIntoSection = function() {
       var container = document.createElement("div");
       container.innerHTML = request.response;
 
-      // Grab the new recommendations content
       var newContent = container.querySelector(".related-products");
+      if (!newContent) return;
 
-      if (newContent) {
-        // Hide a product by handle (example: "example-product")
-        var excludedHandle = "free-returns-package-protection"; // change this to your product's handle
+      // change this handle to the one you want to hide
+      var excludedHandles = ["free-returns-package-protection"];
 
-        // Loop through all links/cards
-        var productCards = newContent.querySelectorAll("a[href*='/products/']");
-        productCards.forEach(function(card) {
-          if (card.href.includes("/products/" + excludedHandle)) {
-            // Remove the whole product card wrapper
-            var cardWrapper = card.closest(".grid__item, .product-card, li, div");
-            if (cardWrapper) cardWrapper.remove();
-          }
+      // Find product links
+      var productLinks = newContent.querySelectorAll("a[href*='/products/']");
+      productLinks.forEach(function(a) {
+        var href = a.getAttribute("href") || a.href || "";
+        var isExcluded = excludedHandles.some(function(h) {
+          return href.indexOf("/products/" + h) !== -1;
         });
+        if (isExcluded) {
+          // Try to remove the card wrapper used by your theme/snippet
+          var wrapper = a.closest("[data-product-id], .product-block, .product-grid__item, .product-card, .grid__item, li");
+          if (!wrapper) wrapper = a.closest("div"); // last resort
+          if (wrapper) wrapper.remove();
+        }
+      });
 
-        // Replace section content with filtered products
-        productRecommendationsSection.innerHTML = newContent.innerHTML;
-      }
+      productRecommendationsSection.innerHTML = newContent.innerHTML;
     }
   };
   request.send();
 };
 
-// fetch when section reloads in editor
 document.addEventListener("shopify:section:load", function(event) {
   if (document.querySelector('[data-section-id="' + event.detail.sectionId + '"].related-products')) {
     loadProductRecommendationsIntoSection();
   }
 });
 
-// Fetching the recommendations on page load
 loadProductRecommendationsIntoSection();
 {% endjavascript %}
+
 
 
 
