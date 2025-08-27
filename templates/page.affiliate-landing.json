@@ -38,7 +38,7 @@
         "html_rtQKzV": {
           "type": "html",
           "settings": {
-            "code": "<div style=\"margin-top: calc(-10px + 2rem);\">\n<div class=\"text-overlay__button button-row__btn btn btn--primary\"id=\"lc-signup-container\" data-lc-button-text=\"Join The Collective\" data-lc-button-text-color=\"white\" data-lc-button-bg-color=\"\"><script type=\"text/javascript\" src=\"https://pub.loudcrowd.com/launch.js?hid=cHJvZ3JhbV9ob3N0OjY2MQ\"></script></div>\n</div>"
+            "code": "<div style=\"margin-top: calc(-10px + 2rem);\">\n<div class=\"text-overlay__button button-row__btn btn btn--primary\"id=\"lc-signup-container\" data-lc-button-text=\"Join The Collective\" data-lc-button-text-color=\"white\" data-lc-button-bg-color=\"\"><script type=\"text/javascript\" src=\"https://pub.loudcrowd.com/launch.js?hid=cHJvZ3JhbV9ob3N0OjY2MA\"></script></div>\n</div>"
           }
         },
         "text_wPPf6k": {

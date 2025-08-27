@@ -32,6 +32,7 @@
         },
         "announcement-2": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Every purchase gives back",
             "show_countdown": false,
