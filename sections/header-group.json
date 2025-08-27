@@ -32,9 +32,8 @@
         },
         "announcement-2": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
-            "text": "Every purchase gives back",
+            "text": "Shop our new Celestial Adventures Collection",
             "show_countdown": false,
             "hide_on_end": false,
             "end_date": "",
