@@ -159,8 +159,8 @@
           "tencel-sleep-bag-1-0-tog-magical-dragons",
           "tencel-sleep-bag-1-0-tog-unicorn-ballet"
         ],
-        "button_label": "Shop Stargazing Bears",
-        "link": "shopify://collections/stargazing-bear",
+        "button_label": "Shop Celestial Adventures",
+        "link": "shopify://collections/celestial-adventure",
         "button_style": "primary",
         "color_scheme": "default"
       }
