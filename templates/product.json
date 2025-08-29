@@ -45,8 +45,6 @@
         "ethos_exclusive_add_to_cart_UM3MD3": {
           "type": "shopify://apps/ethos/blocks/exclusive-add-to-cart/e6f2bd3b-e2fd-4f16-b73c-bf198b58bb45",
           "settings": {
-            "membership_name": "Club Loulou",
-            "membership_url": "https://louloulollipopus.heyethos.com",
             "logged_out_message_product": "This is an exclusive access product. You must be logged in and have an active [MEMBERSHIP_NAME] membership to purchase.",
             "no_access_message": "This is an exclusive access product only available to [MEMBERSHIP_NAME] Members.",
             "join_now_message": "Don't worry though, the [MEMBERSHIP_NAME] Program is free to join! Sign up now and get points, exclusive rewards, and enter contests only for you.",
@@ -57,7 +55,6 @@
             "button_hover_text_color": "#ffffff",
             "button_hover_background_color": "#333333",
             "button_hover_border_color": "#333333",
-            "shop_login_link": "/account/login",
             "buy_button_css_class": ".your-custom-button-class"
           }
         },
