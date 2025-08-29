@@ -165,6 +165,23 @@
         "color_scheme": "default"
       }
     },
+    "featured_collection_RcGTat": {
+      "type": "featured-collection",
+      "name": "Best Sellers",
+      "settings": {
+        "title": "Shop Our Bestsellers",
+        "text": "",
+        "collection": "best-sellers",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 5,
+        "rows": 2,
+        "color_scheme": "1",
+        "show_view_all": true,
+        "full_width": true,
+        "text_alignment": "center"
+      }
+    },
     "logo_list_kYmwNX": {
       "type": "logo-list",
       "blocks": {
@@ -269,23 +286,6 @@
         "title": "As Seen In",
         "image_opacity": 100,
         "color_scheme": "default"
-      }
-    },
-    "featured_collection_RcGTat": {
-      "type": "featured-collection",
-      "name": "Best Sellers",
-      "settings": {
-        "title": "Shop Our Bestsellers",
-        "text": "",
-        "collection": "best-sellers",
-        "show_vendor": false,
-        "enable_carousel": true,
-        "grid": 5,
-        "rows": 2,
-        "color_scheme": "1",
-        "show_view_all": true,
-        "full_width": true,
-        "text_alignment": "center"
       }
     },
     "multi_column_gyeJnc": {
@@ -819,8 +819,8 @@
     "16359276425da8ce46",
     "slideshow_C7Jmag",
     "custom_product_highlight_jV6CAX",
-    "logo_list_kYmwNX",
     "featured_collection_RcGTat",
+    "logo_list_kYmwNX",
     "multi_column_gyeJnc",
     "featured_collection_K3tJdQ",
     "collection_list_BzgHGC",
