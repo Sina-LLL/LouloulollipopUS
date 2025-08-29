@@ -529,6 +529,11 @@
         "settings": {
           "lc_secret": ""
         }
+      },
+      "18409844787685645432": {
+        "type": "shopify://apps/ethos/blocks/referrals/e6f2bd3b-e2fd-4f16-b73c-bf198b58bb45",
+        "disabled": false,
+        "settings": {}
       }
     }
   }

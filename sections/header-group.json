@@ -29,10 +29,27 @@
             "bg_gradient": "",
             "text_color": "#ffffff"
           }
+        },
+        "announcement-2": {
+          "type": "announcement",
+          "settings": {
+            "text": "Shop our new Celestial Adventures Collection",
+            "show_countdown": false,
+            "hide_on_end": false,
+            "end_date": "",
+            "end_time": "",
+            "number_font": "base",
+            "countdown_separator": "box",
+            "use_custom_colors": false,
+            "bg_color": "#f4f6f8",
+            "bg_gradient": "",
+            "text_color": "#4c4c4b"
+          }
         }
       },
       "block_order": [
-        "announcement-1"
+        "announcement-1",
+        "announcement-2"
       ],
       "settings": {
         "message_font_size": 14,

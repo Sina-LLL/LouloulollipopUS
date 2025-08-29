@@ -37,8 +37,11 @@
             endif
           -%}
           {%- for product in recommendations.products -%}{% comment %}start BSS Commerce Hide Price{% endcomment %}{% capture bss_lock_check %}{% render 'bss-lock-condition', scope: 'subject', subject: product, variable: 'transparent' %}{% endcapture %}{% if bss_lock_check contains 'true' %}{% continue %}<div style="display:none" class="bss-hpc-lock"></div>{% endif %}{% comment %}end BSS Commerce Hide Price{% endcomment %}
-            {% render 'product-block', product: product, custom_aspect_ratio: chosen_aspect_ratio %}
+            {%- unless product.tags contains "EXCLUDED" %}  
+             {% render 'product-block', product: product, custom_aspect_ratio: chosen_aspect_ratio %}
+            {% endunless -%}
           {%- endfor -%}
+
         </div>
       </div>
 
@@ -49,30 +52,53 @@
 
 {% javascript %}
 var loadProductRecommendationsIntoSection = function() {
-  // Look for an element with class 'related-products'
   var productRecommendationsSection = document.querySelector(".related-products");
-  if (productRecommendationsSection === null) { return; }
-  // Create request and submit it using Ajax
+  if (!productRecommendationsSection) return;
+
   var request = new XMLHttpRequest();
   request.open("GET", productRecommendationsSection.dataset.url);
   request.onload = function() {
     if (request.status >= 200 && request.status < 300) {
       var container = document.createElement("div");
       container.innerHTML = request.response;
-      productRecommendationsSection.innerHTML = container.querySelector(".related-products").innerHTML;
+
+      var newContent = container.querySelector(".related-products");
+      if (!newContent) return;
+
+      // change this handle to the one you want to hide
+      var excludedHandles = ["free-returns-package-protection"];
+
+      // Find product links
+      var productLinks = newContent.querySelectorAll("a[href*='/products/']");
+      productLinks.forEach(function(a) {
+        var href = a.getAttribute("href") || a.href || "";
+        var isExcluded = excludedHandles.some(function(h) {
+          return href.indexOf("/products/" + h) !== -1;
+        });
+        if (isExcluded) {
+          // Try to remove the card wrapper used by your theme/snippet
+          var wrapper = a.closest("[data-product-id], .product-block, .product-grid__item, .product-card, .grid__item, li");
+          if (!wrapper) wrapper = a.closest("div"); // last resort
+          if (wrapper) wrapper.remove();
+        }
+      });
+
+      productRecommendationsSection.innerHTML = newContent.innerHTML;
     }
   };
   request.send();
 };
-// fetch when section reloads in editor
+
 document.addEventListener("shopify:section:load", function(event) {
   if (document.querySelector('[data-section-id="' + event.detail.sectionId + '"].related-products')) {
     loadProductRecommendationsIntoSection();
   }
 });
-// Fetching the recommendations on page load
+
 loadProductRecommendationsIntoSection();
 {% endjavascript %}
+
+
 
 
 {% schema %}
