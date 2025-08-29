@@ -340,6 +340,7 @@
   })();
   </script>
 
+
 {%- liquid
   if section.settings.show_continue_shopping and cart.items != empty
     if section.settings.continue_shopping_url != blank
@@ -449,16 +450,18 @@
                       Is this a gift?
                   </label>
                 </div>
-                <div class="cart-gift-message lightly-spaced-row cart-note block" id="GiftMessageWrapper" style="display: none;">
+               <div class="cart-gift-message lightly-spaced-row cart-note block" id="GiftMessageWrapper" style="display: none;">
                   <label class="block" for="GiftMessage">Gift Message</label>
                   <textarea id="GiftMessage" name="attributes[GiftMessage]"></textarea>
                 </div>  
+
 
                 <cart-note class="cart-note block lightly-spaced-row">
                   <label class="block" for="note">{{ 'cart.note.label' | t }}</label>
                   <textarea id="note" name="note">{{ cart.note }}</textarea>
                 </cart-note>
               {% endif %}
+           
               {% if section.settings.show_shipping_calculator %}
                 <toggle-target class="block lightly-spaced-row link underline" role="button" tabindex="0" data-toggle-target="#{{ section.id }}-shipping-calculator-container" data-toggle-close-label="{{ 'cart.shipping_calculator.hide' | t }}">{{ 'cart.shipping_calculator.show' | t }}</toggle-target>
                 <div id="{{ section.id }}-shipping-calculator-container" class="toggle-target toggle-target--hidden">
@@ -783,7 +786,6 @@
     </loyalty-join>
   <!-- End join from checkout ethos extension -->
   </div>
-
 
               <div class="checkout-col">
                 <div class="checkout-buttons">
