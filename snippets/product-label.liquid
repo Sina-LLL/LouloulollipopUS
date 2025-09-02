@@ -18,7 +18,7 @@
           assign new_label_text = 'products.product.new' | t
         endif
       elsif settings.prod_new_method == 'tag'
-        if product.tags contains 'New_Arrival' or product.tags contains 'new_arrival'
+        if product.tags contains 'New' or product.tags contains 'new'
           assign new_label_text = 'products.product.new' | t
         endif
      
