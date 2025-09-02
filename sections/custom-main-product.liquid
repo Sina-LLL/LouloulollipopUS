@@ -728,6 +728,22 @@
           {% when 'divider' %}
             <hr {% unless block.settings.show_in_quickbuy %}class="not-in-quickbuy"{% endunless %} {{ block.shopify_attributes }}>
 
+          {% when 'swatch_highlight' %}
+            {% assign swatch_name = product.metafields.theme.cutline %}
+            {% assign swatch_collection = swatch_name | handleize %}    
+            <div class="swatch-highlight-container lightly-spaced-row inline-width-container{% unless block.settings.show_in_quickbuy %} not-in-quickbuy{% endunless %}" {{ block.shopify_attributes }}>
+              {%- render 'image',
+                image: product.metafields.custom.swatch.value.image.value,
+                sizes: img_sizes,
+                widths: img_widths,
+                custom_aspect_ratio: img_aspect_ratio,
+                custom_crop: img_crop_align
+              -%}
+              <div class="swatch-highlight-btn">
+                <a class=" btn btn--secondary" href="{{ routes.collections_url }}/{{ swatch_collection }}" >Shop All {{ product.metafields.theme.cutline }}</a>
+              </div>
+            </div>
+            
           {% when 'custom-option' %}
             {%- if block.settings.label != blank -%}
               {%- liquid
