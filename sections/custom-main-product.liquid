@@ -730,7 +730,9 @@
 
           {% when 'swatch_highlight' %}
             {% assign swatch_name = product.metafields.theme.cutline %}
-            {% assign swatch_collection = swatch_name | handleize %}    
+            {% assign swatch_handle = swatch_name | handleize %}
+            {% assign swatch_collection = collections[swatch_handle] %}
+
             <div class="swatch-highlight-container lightly-spaced-row inline-width-container{% unless block.settings.show_in_quickbuy %} not-in-quickbuy{% endunless %}" {{ block.shopify_attributes }}>
               {%- render 'image',
                 image: product.metafields.custom.swatch.value.image.value,
@@ -739,9 +741,14 @@
                 custom_aspect_ratio: img_aspect_ratio,
                 custom_crop: img_crop_align
               -%}
-              <div class="swatch-highlight-btn">
-                <a class=" btn btn--secondary" href="{{ routes.collections_url }}/{{ swatch_collection }}" >Shop All {{ product.metafields.theme.cutline }}</a>
-              </div>
+
+              {% if swatch_collection and swatch_collection.products.size > 0 %}
+                <div class="swatch-highlight-btn">
+                  <a class="btn btn--secondary" href="{{ swatch_collection.url }}">
+                    Shop All {{ swatch_name }}
+                  </a>
+                </div>
+              {% endif %}
             </div>
 
           {% when 'custom-option' %}
