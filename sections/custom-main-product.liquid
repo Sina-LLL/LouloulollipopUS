@@ -743,7 +743,7 @@
                 <a class=" btn btn--secondary" href="{{ routes.collections_url }}/{{ swatch_collection }}" >Shop All {{ product.metafields.theme.cutline }}</a>
               </div>
             </div>
-            
+
           {% when 'custom-option' %}
             {%- if block.settings.label != blank -%}
               {%- liquid
@@ -1678,6 +1678,10 @@
       "type": "barcode",
       "name": "Barcode (ISBN, UPC, etc)",
       "limit": 1
+    },
+    {
+      "type": "swatch_highlight",
+      "name": "Swatch Highlight"
     },
     {
       "type": "variant-picker",
