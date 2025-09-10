@@ -34,14 +34,15 @@ if (!customElements.get('cart-note')) {
         }
       }
 
-      // Include GiftOption with the note
       const isGiftChecked = document.getElementById('GiftCheckbox')?.checked;
       const giftValue = isGiftChecked ? 'Yes' : 'No';
+      const giftMessage = document.getElementById('GiftMessage')?.value || '';
 
       this.fetchRequestOpts.body = JSON.stringify({
         note: evt.target.value,
         attributes: {
-          GiftOption: giftValue
+          GiftOption: giftValue,
+          GiftMessage: giftMessage
         }
       });
 
@@ -84,9 +85,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Update cart when checkbox changes
   checkbox.addEventListener('change', function () {
-    const isGift = this.checked ? 'Yes' : 'No';
-    toggleGiftMessage();
+  const isGift = this.checked ? 'Yes' : 'No';
+  toggleGiftMessage();
 
+  fetch('/cart/update.js', {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      attributes: {
+        GiftOption: isGift,
+        GiftMessage: giftMessageInput?.value || ''
+      }
+    })
+  });
+});
+
+if (giftMessageInput) {
+  giftMessageInput.addEventListener('input', function () {
     fetch('/cart/update.js', {
       method: 'POST',
       headers: {
@@ -95,29 +113,10 @@ document.addEventListener('DOMContentLoaded', function () {
       },
       body: JSON.stringify({
         attributes: {
-          GiftOption: isGift,
-          GiftMessage: giftMessageInput?.value || ''
+          GiftOption: checkbox.checked ? 'Yes' : 'No',
+          GiftMessage: this.value
         }
       })
     });
   });
-
-  // Update cart when gift message changes
-  if (giftMessageInput) {
-    giftMessageInput.addEventListener('input', function () {
-      fetch('/cart/update.js', {
-        method: 'POST',
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          attributes: {
-            GiftOption: checkbox.checked ? 'Yes' : 'No',
-            GiftMessage: this.value
-          }
-        })
-      });
-    });
-  }
-});
+}
