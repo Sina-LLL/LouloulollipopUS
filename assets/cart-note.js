@@ -9,24 +9,15 @@ if (!customElements.get('cart-note')) {
         this.cartNoteToggle = this.disclosure.querySelector('.js-show-note');
       }
 
-      this.fetchRequestOpts = {
-        method: 'POST',
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json'
-        }
-      };
-
       this.init();
     }
 
     init() {
       this.debouncedHandleNoteChange = debounce(this.handleNoteChange.bind(this), 300);
-      // Save note input with debounce
       this.addEventListener('input', this.debouncedHandleNoteChange);
     }
 
-    handleNoteChange(evt) {
+    async handleNoteChange(evt) {
       if (this.cartNoteToggle) {
         const label = evt.target.value ? theme.strings.editCartNote : theme.strings.addCartNote;
         if (this.cartNoteToggle.textContent !== label) {
@@ -34,19 +25,16 @@ if (!customElements.get('cart-note')) {
         }
       }
 
-      const isGiftChecked = document.getElementById('GiftCheckbox')?.checked;
-      const giftValue = isGiftChecked ? 'Yes' : 'No';
-      const giftMessage = document.getElementById('GiftMessage')?.value || '';
+      const checkbox = document.getElementById('GiftCheckbox');
+      const giftMessageInput = document.getElementById('GiftMessage');
 
-      this.fetchRequestOpts.body = JSON.stringify({
-        note: evt.target.value,
-        attributes: {
-          GiftOption: giftValue,
-          GiftMessage: giftMessage
-        }
-      });
-
-      fetch(theme.routes.cartUpdate, this.fetchRequestOpts);
+      await updateCartAttributes(
+        {
+          GiftOption: checkbox?.checked ? 'Yes' : 'No',
+          GiftMessage: giftMessageInput?.value || ''
+        },
+        evt.target.value
+      );
     }
   }
 
@@ -85,38 +73,49 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Update cart when checkbox changes
   checkbox.addEventListener('change', function () {
-  const isGift = this.checked ? 'Yes' : 'No';
-  toggleGiftMessage();
+    updateCartAttributes({
+      GiftOption: this.checked ? 'Yes' : 'No',
+      GiftMessage: giftMessageInput?.value || ''
+    });
+    toggleGiftMessage();
+  });
 
-  fetch('/cart/update.js', {
+  // Update cart when gift message changes
+  if (giftMessageInput) {
+    giftMessageInput.addEventListener('input', function () {
+      updateCartAttributes({
+        GiftOption: checkbox.checked ? 'Yes' : 'No',
+        GiftMessage: this.value
+      });
+    });
+  }
+});
+
+/* ---------------------------
+   Helper: merge cart attributes
+---------------------------- */
+async function updateCartAttributes(newAttributes, note) {
+  const cart = await fetch('/cart.js').then(r => r.json());
+
+  const mergedAttributes = {
+    ...cart.attributes,
+    ...newAttributes
+  };
+
+  const body = {
+    attributes: mergedAttributes
+  };
+
+  if (note !== undefined) {
+    body.note = note;
+  }
+
+  return fetch('/cart/update.js', {
     method: 'POST',
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({
-      attributes: {
-        GiftOption: isGift,
-        GiftMessage: giftMessageInput?.value || ''
-      }
-    })
-  });
-});
-
-if (giftMessageInput) {
-  giftMessageInput.addEventListener('input', function () {
-    fetch('/cart/update.js', {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        attributes: {
-          GiftOption: checkbox.checked ? 'Yes' : 'No',
-          GiftMessage: this.value
-        }
-      })
-    });
+    body: JSON.stringify(body)
   });
 }
