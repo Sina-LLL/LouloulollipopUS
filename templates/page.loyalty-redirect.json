@@ -71,7 +71,7 @@
       "settings": {
         "full_width": true,
         "show_space": true,
-        "code": "{% comment %}\nPaste this into the \"Custom Liquid\" block of the page\n{% endcomment %}\n<script>\ndocument.addEventListener(\"DOMContentLoaded\", function() {\n  // Find ALL links with target=\"_blank\" just on this page\n  document.querySelectorAll(\"a[target='_blank']\").forEach(function(link) {\n    link.removeAttribute(\"target\");\n  });\n});\n</script>"
+        "code": "<script>\ndocument.addEventListener(\"DOMContentLoaded\", function() {\n  document.querySelectorAll(\".no-new-tab a\").forEach(function(link) {\n    link.addEventListener(\"click\", function(e) {\n      // force the link to behave as same-tab\n      e.preventDefault();\n      window.location.href = link.href;\n    });\n  });\n});\n</script>"
       }
     }
   },
