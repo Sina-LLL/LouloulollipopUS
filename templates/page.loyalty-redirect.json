@@ -64,10 +64,20 @@
         "full_width": false,
         "color_scheme": "default"
       }
+    },
+    "custom_liquid_nhGmb3": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "show_space": true,
+        "code": "{% comment %}\nPaste this into the \"Custom Liquid\" block of the page\n{% endcomment %}\n<script>\ndocument.addEventListener(\"DOMContentLoaded\", function() {\n  // Find ALL links with target=\"_blank\" just on this page\n  document.querySelectorAll(\"a[target='_blank']\").forEach(function(link) {\n    link.removeAttribute(\"target\");\n  });\n});\n</script>"
+      }
     }
   },
   "order": [
     "main",
-    "rich_text_yxziKN"
+    "rich_text_yxziKN",
+    "custom_liquid_nhGmb3"
   ]
 }
