@@ -71,7 +71,7 @@
       "settings": {
         "full_width": true,
         "show_space": true,
-        "code": "<div style=\"display:flex;\"><a href=\"https://louloulollipopca.heyethos.com/\"><img src=\"https://cdn.shopify.com/s/files/1/1318/3343/files/Flag_of_Canada_svg.png?v=1757719387\" width=\"150px\" alt=\"Canada\"></a>\n</div>"
+        "code": "<div style=\"display:flex;\"><a href=\"https://louloulollipopca.heyethos.com/\" target=\"_self\"><img src=\"https://cdn.shopify.com/s/files/1/1318/3343/files/Flag_of_Canada_svg.png?v=1757719387\" width=\"150px\" alt=\"Canada\"></a>\n</div>"
       }
     }
   },
