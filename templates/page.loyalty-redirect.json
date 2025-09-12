@@ -64,20 +64,10 @@
         "full_width": false,
         "color_scheme": "default"
       }
-    },
-    "custom_liquid_nhGmb3": {
-      "type": "custom-liquid",
-      "name": "Custom Liquid",
-      "settings": {
-        "full_width": true,
-        "show_space": true,
-        "code": "<div style=\"display:flex;\"><a href=\"https://louloulollipopca.heyethos.com/\" target=\"_self\"><img src=\"https://cdn.shopify.com/s/files/1/1318/3343/files/Flag_of_Canada_svg.png?v=1757719387\" width=\"150px\" alt=\"Canada\"></a>\n</div>"
-      }
     }
   },
   "order": [
     "main",
-    "rich_text_yxziKN",
-    "custom_liquid_nhGmb3"
+    "rich_text_yxziKN"
   ]
 }
