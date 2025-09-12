@@ -131,9 +131,87 @@
             {% render 'localization-form', id: 'annbar-localization', hide_labels: true, promote_popular: true %}
           </div>
         {% endif %}
+        <!-- Country Selector Dropdown -->
+        <div class="country-dropdown">
+          <button class="dropdown-toggle">
+            <img src="https://cdn.shopify.com/s/files/1/1458/9446/files/Flag_of_the_United_States__DoS_ECA_Color_Standard___Pantone__svg.png?v=1757694831" alt="United States" />
+          </button>  
+          <div class="dropdown-menu">
+            <a href="https://louloulollipop.com" target="_self">
+              <img src="https://cdn.shopify.com/s/files/1/1458/9446/files/Flag_of_the_United_States__DoS_ECA_Color_Standard___Pantone__svg.png?v=1757694831" alt="United States" /> United States
+            </a>
+            <a href="https://louloulollipop.ca" target="_self">
+              <img src="https://cdn.shopify.com/s/files/1/1458/9446/files/Flag_of_Canada_svg.png?v=1757694832" alt="Canada" /> Canada
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </announcement-bar>
+  <style>
+.country-dropdown {
+  position: relative;
+  display: inline-block;
+  order:2;
+}
+
+.dropdown-toggle {
+  background: none;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.dropdown-toggle img {
+  width: 24px;
+  height: auto;
+  border-radius:2px;
+}
+
+.dropdown-toggle .arrow {
+  font-size: 10px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: 150px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.dropdown-menu a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown-menu a:hover {
+  background: #f5f5f5;
+}
+
+.dropdown-menu img {
+  width: 18px;
+  height: auto;
+  border-radius:2px;
+}
+
+/* Show dropdown when hovering */
+.country-dropdown:hover .dropdown-menu {
+  display: block;
+}
+</style>
 {%- endif -%}
 
 
