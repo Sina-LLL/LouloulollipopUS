@@ -13,7 +13,6 @@
   "sections": {
     "17454391451a62f5a0": {
       "type": "apps",
-      "disabled": true,
       "settings": {
         "full_width": false,
         "show_space": true
@@ -106,7 +105,6 @@
         "menu_BybNNi",
         "custom_liquid_XQrHGw"
       ],
-      "disabled": true,
       "settings": {
         "lower_menu": "bottom-footer",
         "show_powered_by": false,
