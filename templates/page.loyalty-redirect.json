@@ -11,13 +11,63 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "show_page_title": true,
         "full_width": false
       }
+    },
+    "rich_text_yxziKN": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_cethcW": {
+          "type": "heading",
+          "settings": {
+            "title": "Club Loulou Rewards Program",
+            "use_h1": false
+          }
+        },
+        "text_fAgiPQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Please select your country</p>",
+            "enlarge_text": true
+          }
+        },
+        "image_AfNxLA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Flag_of_Canada_svg.png",
+            "image_width": 150,
+            "url": "https://louloulollipopca.heyethos.com/"
+          }
+        },
+        "image_gFdB3W": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Flag_of_the_United_States__DoS_ECA_Color_Standard___Pantone__svg.png",
+            "image_width": 150,
+            "url": "https://louloulollipopus.heyethos.com/"
+          }
+        }
+      },
+      "block_order": [
+        "heading_cethcW",
+        "text_fAgiPQ",
+        "image_AfNxLA",
+        "image_gFdB3W"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "height": "medium",
+        "text_alignment": "center",
+        "full_width": false,
+        "color_scheme": "default"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "rich_text_yxziKN"
   ]
 }

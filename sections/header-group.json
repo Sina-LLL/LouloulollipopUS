@@ -51,6 +51,7 @@
         "announcement-1",
         "announcement-2"
       ],
+      "disabled": true,
       "settings": {
         "message_font_size": 14,
         "announcement_bar_col": "#6a8b95",
@@ -238,6 +239,7 @@
         "menu_promotion_small_gmBk8w",
         "menu_promotion_small_NKx4Gk"
       ],
+      "disabled": true,
       "settings": {
         "logo": "shopify://shop_images/LLL-Logo-Blue_4x_1008d3c0-8095-4423-8136-c51a68efdf05.png",
         "logo_img_width_int": 215,
