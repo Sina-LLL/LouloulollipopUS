@@ -185,6 +185,15 @@
     "logo_list_kYmwNX": {
       "type": "logo-list",
       "blocks": {
+        "logo_Pb9irB": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/logo.dc34ecc.svg",
+            "image_width": 150,
+            "link": "https://www.goodhousekeeping.com/childrens-products/a65382807/parenting-awards-baby-2025/",
+            "title": ""
+          }
+        },
         "logo_3E4WaJ": {
           "type": "logo",
           "settings": {
@@ -215,18 +224,9 @@
         "logo_mQKag7": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/Parade-Logo.png",
-            "image_width": 160,
-            "link": "https://parade.com/1343996/leighblickley/easter-gifts-for-babies/",
-            "title": ""
-          }
-        },
-        "logo_Pb9irB": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/theBUMP-Logo.png",
-            "image_width": 150,
-            "link": "https://www.thebump.com/a/best-of-baby-winner-baby-tableware-2021",
+            "image": "shopify://shop_images/the-everymom-logo.png",
+            "image_width": 190,
+            "link": "https://theeverymom.com/registry-awards/",
             "title": ""
           }
         },
@@ -272,11 +272,11 @@
         }
       },
       "block_order": [
+        "logo_Pb9irB",
         "logo_3E4WaJ",
         "logo_KwwATQ",
         "logo_m3DkDJ",
         "logo_mQKag7",
-        "logo_Pb9irB",
         "logo_RidJwp",
         "logo_CGcCUn",
         "logo_j4Arc7",

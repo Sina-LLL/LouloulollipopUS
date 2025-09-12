@@ -534,6 +534,11 @@
         "type": "shopify://apps/ethos/blocks/referrals/e6f2bd3b-e2fd-4f16-b73c-bf198b58bb45",
         "disabled": false,
         "settings": {}
+      },
+      "2153490007123654574": {
+        "type": "shopify://apps/consentmo-gdpr/blocks/gdpr_cookie_consent/4fbe573f-a377-4fea-9801-3ee0858cae41",
+        "disabled": false,
+        "settings": {}
       }
     }
   }
