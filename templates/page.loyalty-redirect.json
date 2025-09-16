@@ -17,21 +17,72 @@
         "full_width": false
       }
     },
+    "slideshow_iYt6wm": {
+      "type": "slideshow",
+      "blocks": {
+        "image_FLWkXR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/LuluLollipopEdits-08853.jpg",
+            "slide_link": "",
+            "subheading": "",
+            "title": "Become a Club Loulou Rewards Member!",
+            "heading_max_width": 15,
+            "title_size": 84,
+            "title_size_mobile": 38,
+            "use_h1": false,
+            "text": "",
+            "enlarge_text": false,
+            "button_label_1": "",
+            "button_url_1": "",
+            "button_tag_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_tag_2": "",
+            "text_alignment": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "image_FLWkXR"
+      ],
+      "name": "Slideshow",
+      "settings": {
+        "height": "fixed",
+        "height_desktop": 440,
+        "height_mobile": 280,
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow",
+        "transition": "fade",
+        "navigation": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "accessibility_info": ""
+      }
+    },
     "rich_text_yxziKN": {
       "type": "rich-text",
       "blocks": {
         "heading_cethcW": {
           "type": "heading",
           "settings": {
-            "title": "Club Loulou Rewards Program",
+            "title": "",
             "use_h1": false
           }
         },
         "text_fAgiPQ": {
           "type": "text",
           "settings": {
-            "text": "<p>Please select your country</p>",
+            "text": "<p>Earn points for every purchase, save money, access member-exclusive sales — and more! </p>",
             "enlarge_text": true
+          }
+        },
+        "text_GCzAGA": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Please select your country below to create your free account:<br/></strong></p>",
+            "enlarge_text": false
           }
         },
         "image_AfNxLA": {
@@ -54,6 +105,7 @@
       "block_order": [
         "heading_cethcW",
         "text_fAgiPQ",
+        "text_GCzAGA",
         "image_AfNxLA",
         "image_gFdB3W"
       ],
@@ -68,6 +120,7 @@
   },
   "order": [
     "main",
+    "slideshow_iYt6wm",
     "rich_text_yxziKN"
   ]
 }
