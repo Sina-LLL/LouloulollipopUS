@@ -15,19 +15,19 @@
         "16359276425da8ce46-1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Celestial_Adventures_-_Hero.jpg",
-            "mobile_image": "shopify://shop_images/Celestial_Adventures_-_Mobiel_Hero.jpg",
+            "image": "shopify://shop_images/Waffle_BOGO_-_Homepage.png",
+            "mobile_image": "shopify://shop_images/Waffle_BOGO_-_Mobile.jpg",
             "slide_link": "",
-            "subheading": "One Magical Tale",
-            "title": "Celestial Adventures",
+            "subheading": "The Waffle Collection",
+            "title": "Buy One, Get One 50% OFF",
             "heading_max_width": 14,
             "title_size": 60,
             "title_size_mobile": 40,
             "use_h1": true,
-            "text": "<p><strong>From dancing unicorns to starlit bears and fire-breathing dreams</strong></p>",
+            "text": "<p><strong>Double up on cozy cold-weather waffle staples</strong></p>",
             "enlarge_text": true,
-            "button_label_1": "Shop Celestial Adventures",
-            "button_url_1": "shopify://collections/celestial-adventure",
+            "button_label_1": "Shop the Waffle BOGO",
+            "button_url_1": "shopify://collections/waffle-collection",
             "button_tag_1": "",
             "button_label_2": "",
             "button_url_2": "",
@@ -145,43 +145,6 @@
         "accessibility_info": ""
       }
     },
-    "custom_product_highlight_jV6CAX": {
-      "type": "custom-product-highlight",
-      "name": "Sleep bag 0.5 tog",
-      "settings": {
-        "title": "Let Dreams Take Flight",
-        "text": "<p>Perfect for cozy nights, dreamy days, and limitless imagination</p>",
-        "image": "shopify://shop_images/Celestal_Adventures.png",
-        "order": false,
-        "product_list": [
-          "long-sleeve-pajama-set-stargazing-bear",
-          "sleeper-unicorn-ballet",
-          "tencel-sleep-bag-1-0-tog-magical-dragons",
-          "tencel-sleep-bag-1-0-tog-unicorn-ballet"
-        ],
-        "button_label": "Shop Celestial Adventures",
-        "link": "shopify://collections/celestial-adventure",
-        "button_style": "primary",
-        "color_scheme": "default"
-      }
-    },
-    "featured_collection_RcGTat": {
-      "type": "featured-collection",
-      "name": "Best Sellers",
-      "settings": {
-        "title": "Shop Our Bestsellers",
-        "text": "",
-        "collection": "best-sellers",
-        "show_vendor": false,
-        "enable_carousel": true,
-        "grid": 5,
-        "rows": 2,
-        "color_scheme": "1",
-        "show_view_all": true,
-        "full_width": true,
-        "text_alignment": "center"
-      }
-    },
     "logo_list_kYmwNX": {
       "type": "logo-list",
       "blocks": {
@@ -288,6 +251,106 @@
         "color_scheme": "default"
       }
     },
+    "custom_product_highlight_jV6CAX": {
+      "type": "custom-product-highlight",
+      "name": "Highlighted Collection",
+      "settings": {
+        "title": "Your cold-weather staples are calling",
+        "text": "<p>Now’s the perfect time to <strong>stock up on winter must-haves </strong>— buy one, get the second <strong>50% off</strong>.</p>",
+        "image": "shopify://shop_images/Waffle_crop_df18d935-32d5-404d-afed-f3ec69952f7c.jpg",
+        "order": false,
+        "product_list": [
+          "waffle-sleep-bag-1-0-tog-blush-pink",
+          "waffle-long-sleeve-skater-dress-mauvewood",
+          "waffle-sleep-bag-1-0-tog-denim-blue",
+          "waffle-long-sleeve-pajama-set-peacock"
+        ],
+        "button_label": "Shop the waffle collection",
+        "link": "shopify://collections/waffle-collection",
+        "button_style": "primary",
+        "color_scheme": "default"
+      }
+    },
+    "featured_collection_RcGTat": {
+      "type": "featured-collection",
+      "name": "Best Sellers",
+      "settings": {
+        "title": "Shop Our Bestsellers",
+        "text": "",
+        "collection": "best-sellers",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 4,
+        "rows": 2,
+        "color_scheme": "1",
+        "show_view_all": true,
+        "full_width": true,
+        "text_alignment": "center"
+      }
+    },
+    "logo_list_pgf7FP": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_PyLQJg": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/ICON-SM-6.svg",
+            "image_width": 80,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_rQ8D9n": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Certified_B_Corporation_B_Corp_Logo_2022_Black_RGB_svg.webp",
+            "image_width": 80,
+            "link": "https://www.bcorporation.net/en-us/",
+            "title": ""
+          }
+        },
+        "logo_GtMKA4": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Benefits-of-Partnering-with-a-WBENC-Certified-Women-Business-Enterprise-Public-Relations-and-Marketing-Agency-feature.webp",
+            "image_width": 160,
+            "link": "https://buywomenowned.com/",
+            "title": ""
+          }
+        },
+        "logo_Hqdrmf": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/OEKO_TEX.png",
+            "image_width": 80,
+            "link": "https://www.oeko-tex.com/en/",
+            "title": ""
+          }
+        },
+        "logo_DDHT6z": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/ICON-SM-16.svg",
+            "image_width": 80,
+            "link": "",
+            "title": "Phthalate Free"
+          }
+        }
+      },
+      "block_order": [
+        "logo_PyLQJg",
+        "logo_rQ8D9n",
+        "logo_GtMKA4",
+        "logo_Hqdrmf",
+        "logo_DDHT6z"
+      ],
+      "name": "USP list",
+      "settings": {
+        "title": "",
+        "image_opacity": 100,
+        "color_scheme": "default"
+      }
+    },
     "multi_column_gyeJnc": {
       "type": "multi-column",
       "blocks": {
@@ -327,7 +390,7 @@
         "text_block_nfX6Kf",
         "text_block_craMbA"
       ],
-      "name": "Multi-column",
+      "name": "Company Message",
       "settings": {
         "title": "",
         "media_aspect_ratio": "s",
@@ -339,7 +402,8 @@
     },
     "featured_collection_K3tJdQ": {
       "type": "featured-collection",
-      "name": "For Meal Time",
+      "disabled": true,
+      "name": "Bundles",
       "settings": {
         "title": "Ready-to-Go Bundles & Gifts",
         "text": "<p>Pre-packed with love. Beautifully boxed and ready to gift.</p>",
@@ -399,6 +463,7 @@
         },
         "collection_Rrwynm": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "bathe",
             "tag": "",
@@ -418,10 +483,10 @@
       "settings": {
         "title": "Shop by Category",
         "text": "",
-        "text_alignment": "start",
-        "enable_carousel": true,
-        "grid": 5,
-        "color_scheme": "default",
+        "text_alignment": "center",
+        "enable_carousel": false,
+        "grid": 4,
+        "color_scheme": "1",
         "full_width": false,
         "coll_grid_image_shape": "portrait-23",
         "coll_grid_image_position": "center center",
@@ -505,71 +570,9 @@
         "autoplay_speed": 5
       }
     },
-    "logo_list_pgf7FP": {
-      "type": "logo-list",
-      "blocks": {
-        "logo_PyLQJg": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/ICON-SM-6.svg",
-            "image_width": 80,
-            "link": "",
-            "title": ""
-          }
-        },
-        "logo_rQ8D9n": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Certified_B_Corporation_B_Corp_Logo_2022_Black_RGB_svg.webp",
-            "image_width": 80,
-            "link": "https://www.bcorporation.net/en-us/",
-            "title": ""
-          }
-        },
-        "logo_GtMKA4": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Benefits-of-Partnering-with-a-WBENC-Certified-Women-Business-Enterprise-Public-Relations-and-Marketing-Agency-feature.webp",
-            "image_width": 160,
-            "link": "https://buywomenowned.com/",
-            "title": ""
-          }
-        },
-        "logo_Hqdrmf": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/OEKO_TEX.png",
-            "image_width": 80,
-            "link": "https://www.oeko-tex.com/en/",
-            "title": ""
-          }
-        },
-        "logo_DDHT6z": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/ICON-SM-16.svg",
-            "image_width": 80,
-            "link": "",
-            "title": "Phthalate Free"
-          }
-        }
-      },
-      "block_order": [
-        "logo_PyLQJg",
-        "logo_rQ8D9n",
-        "logo_GtMKA4",
-        "logo_Hqdrmf",
-        "logo_DDHT6z"
-      ],
-      "name": "Logo list",
-      "settings": {
-        "title": "",
-        "image_opacity": 100,
-        "color_scheme": "default"
-      }
-    },
     "custom_product_highlight_PMwqLc": {
       "type": "custom-product-highlight",
+      "disabled": true,
       "custom_css": [],
       "name": "Mess-less Mealtimes",
       "settings": {
@@ -626,6 +629,7 @@
         "collection_fa8Bth",
         "collection_FXgkGy"
       ],
+      "disabled": true,
       "name": "Collection list",
       "settings": {
         "title": "",
@@ -818,14 +822,14 @@
   "order": [
     "16359276425da8ce46",
     "slideshow_C7Jmag",
+    "logo_list_kYmwNX",
     "custom_product_highlight_jV6CAX",
     "featured_collection_RcGTat",
-    "logo_list_kYmwNX",
+    "logo_list_pgf7FP",
     "multi_column_gyeJnc",
     "featured_collection_K3tJdQ",
     "collection_list_BzgHGC",
     "testimonials_VgkpHw",
-    "logo_list_pgf7FP",
     "custom_product_highlight_PMwqLc",
     "collection_list_9AdzKx",
     "featured_collection_tc8tiM",
