@@ -24,7 +24,7 @@
             "title_size": 60,
             "title_size_mobile": 40,
             "use_h1": true,
-            "text": "<p><strong>Double up on cozy cold-weather waffle staples</strong></p>",
+            "text": "<p>Second item must be of equal or lesser value</p>",
             "enlarge_text": true,
             "button_label_1": "Shop the Waffle BOGO",
             "button_url_1": "shopify://collections/waffle-collection",
