@@ -216,6 +216,9 @@
     },
     "custom_product_list_by_print_fGCmUV": {
       "type": "custom-product-list-by-print",
+      "custom_css": [
+        ".collection-slider-row {padding-bottom: 0;}"
+      ],
       "name": "Custom Product List by Print",
       "settings": {
         "title": "Get the Set",
