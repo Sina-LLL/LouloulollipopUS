@@ -471,7 +471,44 @@
                 </div>
               {% endif %}
             </div>
-
+<div class="cart-complementary-products">
+  <h3>You Might Also Like</h3>
+  <ul class="complementary-list">
+    {%- assign shown = false -%}
+    {%- for line in cart.items -%}
+      {%- assign prod = line.product -%}
+      {%- comment -%}
+        Use Shopify’s recommendations object if available, or custom metafield
+      {%- endcomment -%}
+      {%- if prod.recommendations and prod.recommendations.products.size > 0 -%}
+        {%- for rec in prod.recommendations.products -%}
+          {%- unless cart.items contains rec -%}  {# skip items already in cart #}
+            <li class="comp-item">
+              <div class="comp-image">
+                <a href="{{ rec.url }}">
+                  <img src="{{ rec.featured_image | img_url: 'small' }}" alt="{{ rec.title }}">
+                </a>
+              </div>
+              <div class="comp-info">
+                <a href="{{ rec.url }}">{{ rec.title }}</a>
+                <span class="comp-price">{{ rec.price | money }}</span>
+                <form method="post" action="/cart/add">
+                  <input type="hidden" name="id" value="{{ rec.variants.first.id }}">
+                  <button type="submit">Add</button>
+                </form>
+              </div>
+            </li>
+            {%- assign shown = true -%}
+          {%- endunless -%}
+        {%- endfor -%}
+        {%- break -%} {# show only first product’s recommendations #}
+      {%- endif -%}
+    {%- endfor -%}
+    {%- unless shown -%}
+      <li>No suggestions available</li>
+    {%- endunless -%}
+  </ul>
+</div>
             <div class="checkout-subtotal-container__right column column--half">
               <div data-merge="total">
                 {%- if cart.cart_level_discount_applications != blank -%}
