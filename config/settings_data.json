@@ -499,7 +499,7 @@
     "coll_grid_image_position": "center center",
     "coll_grid_show_count": true,
     "favicon": "shopify://shop_images/Logo601SmokeBlue.png",
-    "cart_type": "drawer",
+    "cart_type": "page",
     "after_add_to_cart": "notification",
     "show_free_shipping_bar": true,
     "free_shipping_amounts": "USD:6500",
