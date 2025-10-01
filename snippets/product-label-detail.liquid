@@ -29,10 +29,20 @@
         endfor
       endif
     endif
+    if product.tags contains 'BOGO50' or product.tags contains 'bogo50'
+      assign BOGO_text = 'BOGO 50% Off'
+    endif
   -%}
+  
   {%- if new_label_text -%}
     <span class="product-label product-label--new-in">
       <span>{{ new_label_text }}</span>
+    </span>
+  {%- endif -%}
+
+  {%- if BOGO_text -%}
+    <span class="product-label product-label--sale">
+      <span>{{ BOGO_text }}</span>
     </span>
   {%- endif -%}
 {%- endcapture -%}

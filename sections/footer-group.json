@@ -1,1 +1,122 @@
-{"type":"footer","name":"Footer Group","sections":{"17454391451a62f5a0":{"type":"apps","blocks":{"ethos_referrals_jrMg9w":{"type":"shopify:\/\/apps\/ethos\/blocks\/referrals\/e6f2bd3b-e2fd-4f16-b73c-bf198b58bb45","settings":{}}},"block_order":["ethos_referrals_jrMg9w"],"settings":{"full_width":false,"show_space":true}},"cross-page-promos":{"type":"cross-page-promos","blocks":{"1478526632862":{"type":"icon","settings":{"icon":"truck","text":"Free delivery!","link_url":""}},"1478526645605":{"type":"icon","settings":{"icon":"map_pin","text":"Your nearest store","link_url":""}},"1478526647261":{"type":"icon","settings":{"icon":"price_tag","text":"Gift cards","link_url":""}},"1478527611164":{"type":"icon","settings":{"icon":"heart","text":"Student discount","link_url":""}}},"block_order":["1478526632862","1478526645605","1478526647261","1478527611164"],"disabled":true,"settings":{"cross_page_promo_bg":"#ffffff","cross_page_promo_color":"#454564","show_on_home_page":true}},"footer":{"type":"footer","blocks":{"klaviyo_email_marketing_sms_form_embed_block_7b7TzR":{"type":"shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/form-embed-block\/2632fe16-c075-4321-a88b-50b567f42507","disabled":true,"settings":{"formId":"<div class=\"klaviyo-form-SEVbuc\"><\/div>"}},"1601308671932":{"type":"menu","settings":{"title":"Help","menu":"help"}},"menu_BybNNi":{"type":"menu","settings":{"title":"Company","menu":"company"}},"custom_liquid_XQrHGw":{"type":"custom-liquid","settings":{"title":"Sign up to receive exclusive offers!","code":"<p>Never miss a sale or special<\/p>\n<div class=\"klaviyo-form-SEVbuc\"><\/div>"}}},"block_order":["klaviyo_email_marketing_sms_form_embed_block_7b7TzR","1601308671932","menu_BybNNi","custom_liquid_XQrHGw"],"settings":{"lower_menu":"bottom-footer","show_powered_by":false,"show_payment_icons":false,"enable_country_selector":false,"enable_language_selector":false}}},"order":["17454391451a62f5a0","cross-page-promos","footer"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer Group",
+  "sections": {
+    "17454391451a62f5a0": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "show_space": true
+      }
+    },
+    "cross-page-promos": {
+      "type": "cross-page-promos",
+      "blocks": {
+        "1478526632862": {
+          "type": "icon",
+          "settings": {
+            "icon": "truck",
+            "text": "Free delivery!",
+            "link_url": ""
+          }
+        },
+        "1478526645605": {
+          "type": "icon",
+          "settings": {
+            "icon": "map_pin",
+            "text": "Your nearest store",
+            "link_url": ""
+          }
+        },
+        "1478526647261": {
+          "type": "icon",
+          "settings": {
+            "icon": "price_tag",
+            "text": "Gift cards",
+            "link_url": ""
+          }
+        },
+        "1478527611164": {
+          "type": "icon",
+          "settings": {
+            "icon": "heart",
+            "text": "Student discount",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "1478526632862",
+        "1478526645605",
+        "1478526647261",
+        "1478527611164"
+      ],
+      "disabled": true,
+      "settings": {
+        "cross_page_promo_bg": "#ffffff",
+        "cross_page_promo_color": "#454564",
+        "show_on_home_page": true
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "klaviyo_email_marketing_sms_form_embed_block_7b7TzR": {
+          "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
+          "disabled": true,
+          "settings": {
+            "formId": "<div class=\"klaviyo-form-SEVbuc\"></div>"
+          }
+        },
+        "1601308671932": {
+          "type": "menu",
+          "settings": {
+            "title": "Help",
+            "menu": "help"
+          }
+        },
+        "menu_BybNNi": {
+          "type": "menu",
+          "settings": {
+            "title": "Company",
+            "menu": "company"
+          }
+        },
+        "custom_liquid_XQrHGw": {
+          "type": "custom-liquid",
+          "settings": {
+            "title": "Sign up to receive exclusive offers!",
+            "code": "<p>Never miss a sale or special</p>\n<div class=\"klaviyo-form-SEVbuc\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "klaviyo_email_marketing_sms_form_embed_block_7b7TzR",
+        "1601308671932",
+        "menu_BybNNi",
+        "custom_liquid_XQrHGw"
+      ],
+      "settings": {
+        "lower_menu": "bottom-footer",
+        "show_powered_by": false,
+        "show_payment_icons": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    }
+  },
+  "order": [
+    "17454391451a62f5a0",
+    "cross-page-promos",
+    "footer"
+  ]
+}
