@@ -469,7 +469,7 @@
                   </div>
                 </div>
                 <div class="slider slider--no-scrollbar slider--edge-peek">
-                  <ul class="slider__grid product-grid product-grid--carousel product-grid--per-row-2 product-grid--per-row-mob-2">
+                  <ul class="slider__grid product-grid product-grid--carousel product-grid--per-row-3 product-grid--per-row-mob-2">
                     {%- if cross_sell_product_list -%}
                       {%- liquid
                         if settings.prod_thumb_shape == 'portrait-23'
@@ -828,14 +828,16 @@
             {%- endif -%}
 
             {% if section.settings.show_order_note %}
-              
-          <label style="display: block; margin-top: 1rem;">
-            <input type="checkbox" id="GiftCheckbox" />
-              Is this a gift?
-          </label>
-
-              
-
+              <div class="cart-note block lightly-spaced-row">  
+                <label>
+                  <input type="checkbox" id="GiftCheckbox" />
+                    Is this a gift?
+                </label>
+              </div>
+              <div class="cart-gift-message lightly-spaced-row cart-note block" id="GiftMessageWrapper" style="display: none;">
+                <label class="block" for="GiftMessage">Gift Message</label>
+                <textarea id="GiftMessage" name="attributes[GiftMessage]"></textarea>
+              </div>  
               <toggle-target id="CartDrawerNoteToggle" role="button" tabindex="0" class="toggle-target-toggler--is-hidden link underline" data-toggle-target=".cart-drawer__note">{{ 'cart.note.label' | t }}</toggle-target>
               <div class="cart-drawer__note toggle-target toggle-target--hidden">
                 <cart-note class="block toggle-target-container">
@@ -1325,7 +1327,7 @@
       "type": "text",
       "id": "cross_sell_title",
       "label": "Heading",
-      "default": "You may like"
+      "default": "You May Also like"
     },
     {
       "type": "product_list",

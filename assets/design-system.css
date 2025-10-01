@@ -823,7 +823,10 @@ label.filter-group__item.filter-group__item--active:before{
 h4.text-column__title {
     font-size: 20px;
 }
-
+/* Cart Drawr */
+.subtotal.h4.heading-font.opposing-items,div#CartDrawerModal-Title{
+  font-size: 1.25rem;
+}
 /* Cart page*/
 #cartform h2.subtotal{
   margin: 0;
