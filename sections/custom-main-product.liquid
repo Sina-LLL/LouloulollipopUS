@@ -363,6 +363,9 @@
                         <span class="with-icon__beside">{{ product.description }}</span>
                       </div>
                     {%- endif -%}
+                    {% if product.metafields.product.age_group != blank %}
+                      <p><strong>For Ages:</strong> {{ product.metafields.product.age_group.value }}</p>
+                    {% endif %}
                   </div>
                 {% endif %}
               </div>
