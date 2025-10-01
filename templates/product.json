@@ -222,7 +222,7 @@
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 5,
-        "color_scheme": "default",
+        "color_scheme": "1",
         "full_width": true
       }
     },
