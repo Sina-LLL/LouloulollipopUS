@@ -40,7 +40,7 @@
         "empty_color_background_gradient": "",
         "empty_color_text": "",
         "enable_cross_sells": true,
-        "cross_sell_title": "You may like",
+        "cross_sell_title": "You May Also Like:",
         "cross_sell_products": [],
         "enable_automatic_cross_sells": true,
         "croll_sell_color_scheme": "1"
