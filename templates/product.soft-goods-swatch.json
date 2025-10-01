@@ -90,6 +90,14 @@
             "show_in_quickbuy": false
           }
         },
+        "complementary_BwbHzJ": {
+          "type": "complementary",
+          "settings": {
+            "heading": "Pairs well with",
+            "enable_carousel": true,
+            "max_products": 10
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -143,15 +151,6 @@
             "open": false,
             "show_in_quickbuy": false
           }
-        },
-        "complementary_BwbHzJ": {
-          "type": "complementary",
-          "disabled": true,
-          "settings": {
-            "heading": "Pairs well with",
-            "enable_carousel": true,
-            "max_products": 10
-          }
         }
       },
       "block_order": [
@@ -164,12 +163,12 @@
         "ethos_exclusive_add_to_cart_UM3MD3",
         "buy-buttons",
         "divider_wxWQrL",
+        "complementary_BwbHzJ",
         "description",
         "swatch_highlight_gzgLHA",
         "feature_rating_tdmkCF",
         "accordion_yktgxC",
-        "accordion_KqCkWX",
-        "complementary_BwbHzJ"
+        "accordion_KqCkWX"
       ],
       "settings": {
         "show_breadcrumbs": true,
@@ -221,13 +220,16 @@
     },
     "custom_product_list_by_print_fGCmUV": {
       "type": "custom-product-list-by-print",
+      "custom_css": [
+        ".collection-slider-row {padding-bottom: 0;}"
+      ],
       "name": "Custom Product List by Print",
       "settings": {
         "title": "Get the Set",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 5,
-        "color_scheme": "default",
+        "color_scheme": "1",
         "full_width": true
       }
     },
