@@ -39,8 +39,9 @@
     
   
 <!-- New Prints Section -->
+{%- if has_new_prints -%}
 <fieldset class="option-selector" data-selector-type="listed" data-option="{{ option.name | escape }}">
-  {%- if has_new_prints -%}
+  
       <legend class="label">
         New Styles: <span class="option-selector__label-value js-color-text" data-section="new"></span>
       </legend>
@@ -93,8 +94,9 @@
         {%- endfor -%}
       </div>
 
-  {%- endif -%}
+  
   </fieldset>
+  {%- endif -%}
   <!-- Core or Sale Prints Section -->
     
 <fieldset class="option-selector" data-selector-type="listed" data-option="{{ option.name | escape }}">
