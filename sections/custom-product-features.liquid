@@ -24,7 +24,7 @@
             {% endif %}
 
             {% if block.settings.description != blank %}
-              <p class="custom-product-features__body">{{ block.settings.description  }}</p>
+              <p class="custom-product-features__body">{{ block.settings.description | strip_html }}</p>
             {% endif %}
           </div>
         {% endfor %}

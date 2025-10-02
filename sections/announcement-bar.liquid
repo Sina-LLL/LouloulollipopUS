@@ -113,7 +113,7 @@
             {%- endfor -%}
           </div>
           <div class="announcement-bar__announcement-controller">
-            <button class="announcement-button announcement-button--previous" aria-label="{{ 'general.slider.previous' | t | escape }}">{% render 'icon-chevron-left' %}</button><button class="announcement-button announcement-button--next" aria-label="{{ 'general.slider.next' | t | escape }}">{% render 'icon-chevron-right' %}</button>
+            <button role="button" class="announcement-button announcement-button--previous" aria-label="{{ 'general.slider.previous' | t | escape }}">{% render 'icon-chevron-left' %}</button><button role="button" class="announcement-button announcement-button--next" aria-label="{{ 'general.slider.next' | t | escape }}">{% render 'icon-chevron-right' %}</button>
           </div>
         {%- endif -%}
       </div>
@@ -143,12 +143,14 @@
             <a href="https://louloulollipop.ca" target="_self">
               <img src="https://cdn.shopify.com/s/files/1/1458/9446/files/Flag_of_Canada_svg.png?v=1757694832" alt="Canada" /> Canada
             </a>
+            
           </div>
         </div>
       </div>
     </div>
   </announcement-bar>
-  <style>
+
+<style>
 .country-dropdown {
   position: relative;
   display: inline-block;
@@ -166,7 +168,7 @@
 }
 
 .dropdown-toggle img {
-  width: 24px;
+  width: 28px;
   height: auto;
   border-radius:2px;
 }
