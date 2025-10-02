@@ -224,7 +224,7 @@
         "title": "Get the Set",
         "show_vendor": false,
         "enable_carousel": true,
-        "grid": 5,
+        "grid": 4,
         "color_scheme": "1",
         "full_width": true
       }
