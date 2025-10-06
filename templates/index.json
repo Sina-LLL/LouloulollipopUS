@@ -271,6 +271,232 @@
         "color_scheme": "default"
       }
     },
+    "collection_list_CyizYV": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_bnwTKN": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "tag": "",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
+        "collection_caYMNU": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "tag": "",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
+        "collection_bA9FE3": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "tag": "",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
+        "collection_WBdDTy": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "tag": "",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
+        "collection_QPKHxq": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "tag": "",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
+        "collection_iAcHNL": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "tag": "",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
+        "collection_Ehkmea": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "tag": "",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
+        "collection_6BGHwy": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "tag": "",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
+        "collection_ccCpBD": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "tag": "",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
+        "collection_dY7xbD": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "tag": "",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
+        "collection_8LcbGc": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "tag": "",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
+        "collection_nCeY3m": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "tag": "",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
+        "collection_XiJfkc": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "tag": "",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
+        "collection_nb7wBC": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "tag": "",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
+        "collection_Xj7Pyb": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "tag": "",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
+        "collection_3EXREA": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "tag": "",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
+        "collection_jEWVBh": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "tag": "",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
+        "collection_tE9Rzg": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "tag": "",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
+        "collection_kWNbHV": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "tag": "",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
+        "collection_iKmPaA": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "tag": "",
+            "subheading": "",
+            "button_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_bnwTKN",
+        "collection_caYMNU",
+        "collection_bA9FE3",
+        "collection_WBdDTy",
+        "collection_QPKHxq",
+        "collection_iAcHNL",
+        "collection_Ehkmea",
+        "collection_6BGHwy",
+        "collection_ccCpBD",
+        "collection_dY7xbD",
+        "collection_8LcbGc",
+        "collection_nCeY3m",
+        "collection_XiJfkc",
+        "collection_nb7wBC",
+        "collection_Xj7Pyb",
+        "collection_3EXREA",
+        "collection_jEWVBh",
+        "collection_tE9Rzg",
+        "collection_kWNbHV",
+        "collection_iKmPaA"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "Shop by Print",
+        "text": "",
+        "text_alignment": "start",
+        "enable_carousel": true,
+        "grid": 5,
+        "color_scheme": "default",
+        "full_width": true,
+        "coll_grid_image_shape": "square",
+        "coll_grid_image_position": "center center",
+        "coll_thumb_mob_per_row": "2",
+        "coll_grid_show_count": true,
+        "coll_text_position": "below",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_y": "center",
+        "coll_button_style": "primary"
+      }
+    },
     "featured_collection_RcGTat": {
       "type": "featured-collection",
       "name": "Best Sellers",
@@ -824,6 +1050,7 @@
     "slideshow_C7Jmag",
     "logo_list_kYmwNX",
     "custom_product_highlight_jV6CAX",
+    "collection_list_CyizYV",
     "featured_collection_RcGTat",
     "logo_list_pgf7FP",
     "multi_column_gyeJnc",
