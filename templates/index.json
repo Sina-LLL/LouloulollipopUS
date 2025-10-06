@@ -310,15 +310,6 @@
             "button_label": ""
           }
         },
-        "collection_rc8zw8": {
-          "type": "collection",
-          "settings": {
-            "collection": "canada",
-            "tag": "",
-            "subheading": "O Canada",
-            "button_label": ""
-          }
-        },
         "collection_aHLB8h": {
           "type": "collection",
           "settings": {
@@ -391,6 +382,15 @@
             "button_label": ""
           }
         },
+        "collection_rc8zw8": {
+          "type": "collection",
+          "settings": {
+            "collection": "canada",
+            "tag": "",
+            "subheading": "O Canada",
+            "button_label": ""
+          }
+        },
         "collection_dqkine": {
           "type": "collection",
           "settings": {
@@ -460,7 +460,6 @@
         "collection_m7DJDa",
         "collection_ExCE9F",
         "collection_dGF3f4",
-        "collection_rc8zw8",
         "collection_aHLB8h",
         "collection_eU9Ecq",
         "collection_3hmwzf",
@@ -469,6 +468,7 @@
         "collection_erNL4a",
         "collection_FQR9KE",
         "collection_HYRWrg",
+        "collection_rc8zw8",
         "collection_dqkine",
         "collection_jz8qFh",
         "collection_iyjCCb",
