@@ -13,7 +13,7 @@
       "type": "main-collection",
       "settings": {
         "show_title": true,
-        "show_image_behind_heading": true,
+        "show_image_behind_heading": false,
         "heading_image_height": "huge",
         "overlay_style": "shadow",
         "coll_desc_pos": "below",
