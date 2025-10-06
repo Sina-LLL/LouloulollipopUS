@@ -677,7 +677,7 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
     grid-template-columns: 1fr 1fr 1fr;
   }
   .product-form .option-selector{
-     margin-bottom:24px; 
+     margin-bottom:32px; 
   }
   .quantity-wrapper{
     display: flex;
