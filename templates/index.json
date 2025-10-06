@@ -271,211 +271,211 @@
         "color_scheme": "default"
       }
     },
-    "collection_list_CyizYV": {
+    "collection_list_zhMrUA": {
       "type": "collection-list",
       "blocks": {
-        "collection_bnwTKN": {
+        "collection_FhR9Rc": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "magical-dragons",
+            "tag": "",
+            "subheading": "Magical Dragons",
+            "button_label": ""
+          }
+        },
+        "collection_m7DJDa": {
+          "type": "collection",
+          "settings": {
+            "collection": "unicorn-ballet",
+            "tag": "",
+            "subheading": "Unicorn Ballet",
+            "button_label": ""
+          }
+        },
+        "collection_ExCE9F": {
+          "type": "collection",
+          "settings": {
+            "collection": "stargazing-bear",
+            "tag": "",
+            "subheading": "Stargazing Bear",
+            "button_label": ""
+          }
+        },
+        "collection_dGF3f4": {
+          "type": "collection",
+          "settings": {
+            "collection": "alphabet-smiles",
+            "tag": "",
+            "subheading": "Alphabet Smiles",
+            "button_label": ""
+          }
+        },
+        "collection_rc8zw8": {
+          "type": "collection",
+          "settings": {
+            "collection": "canada",
+            "tag": "",
+            "subheading": "O Canada",
+            "button_label": ""
+          }
+        },
+        "collection_aHLB8h": {
+          "type": "collection",
+          "settings": {
+            "collection": "smiley-sharks",
+            "tag": "",
+            "subheading": "Smiley Sharks",
+            "button_label": ""
+          }
+        },
+        "collection_eU9Ecq": {
+          "type": "collection",
+          "settings": {
+            "collection": "mermaids",
+            "tag": "",
+            "subheading": "Mermaids",
+            "button_label": ""
+          }
+        },
+        "collection_3hmwzf": {
+          "type": "collection",
+          "settings": {
+            "collection": "ocean-explorer",
+            "tag": "",
+            "subheading": "Ocean Explorer",
+            "button_label": ""
+          }
+        },
+        "collection_hcDexP": {
+          "type": "collection",
+          "settings": {
+            "collection": "painterly-seahorses",
+            "tag": "",
+            "subheading": "Painterly Seahorses",
+            "button_label": ""
+          }
+        },
+        "collection_CXEmHx": {
+          "type": "collection",
+          "settings": {
+            "collection": "safari-jungle",
+            "tag": "",
+            "subheading": "Safari Jungle",
+            "button_label": ""
+          }
+        },
+        "collection_erNL4a": {
+          "type": "collection",
+          "settings": {
+            "collection": "peaches",
             "tag": "",
             "subheading": "",
             "button_label": ""
           }
         },
-        "collection_caYMNU": {
+        "collection_FQR9KE": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "planets",
             "tag": "",
-            "subheading": "",
+            "subheading": "Planets",
             "button_label": ""
           }
         },
-        "collection_bA9FE3": {
+        "collection_HYRWrg": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "sushi",
             "tag": "",
-            "subheading": "",
+            "subheading": "Sushi",
             "button_label": ""
           }
         },
-        "collection_WBdDTy": {
+        "collection_dqkine": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "french-breakfast",
             "tag": "",
-            "subheading": "",
+            "subheading": "French Breakfast",
             "button_label": ""
           }
         },
-        "collection_QPKHxq": {
+        "collection_jz8qFh": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "secret-garden",
             "tag": "",
-            "subheading": "",
+            "subheading": "Secret Garden",
             "button_label": ""
           }
         },
-        "collection_iAcHNL": {
+        "collection_iyjCCb": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "bears-on-bikes",
             "tag": "",
-            "subheading": "",
+            "subheading": "Bears on Bikes",
             "button_label": ""
           }
         },
-        "collection_Ehkmea": {
+        "collection_ntR4RL": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "bumble-bees",
             "tag": "",
-            "subheading": "",
+            "subheading": "Bumble Bees",
             "button_label": ""
           }
         },
-        "collection_6BGHwy": {
+        "collection_WdAqzh": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "baby-dinomite",
             "tag": "",
-            "subheading": "",
+            "subheading": "Baby Dinomite",
             "button_label": ""
           }
         },
-        "collection_ccCpBD": {
+        "collection_dHNH3W": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "hedgehogs",
             "tag": "",
-            "subheading": "",
+            "subheading": "Hedgehogs",
             "button_label": ""
           }
         },
-        "collection_dY7xbD": {
+        "collection_UErxAh": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "camper-vans",
             "tag": "",
-            "subheading": "",
-            "button_label": ""
-          }
-        },
-        "collection_8LcbGc": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "tag": "",
-            "subheading": "",
-            "button_label": ""
-          }
-        },
-        "collection_nCeY3m": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "tag": "",
-            "subheading": "",
-            "button_label": ""
-          }
-        },
-        "collection_XiJfkc": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "tag": "",
-            "subheading": "",
-            "button_label": ""
-          }
-        },
-        "collection_nb7wBC": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "tag": "",
-            "subheading": "",
-            "button_label": ""
-          }
-        },
-        "collection_Xj7Pyb": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "tag": "",
-            "subheading": "",
-            "button_label": ""
-          }
-        },
-        "collection_3EXREA": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "tag": "",
-            "subheading": "",
-            "button_label": ""
-          }
-        },
-        "collection_jEWVBh": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "tag": "",
-            "subheading": "",
-            "button_label": ""
-          }
-        },
-        "collection_tE9Rzg": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "tag": "",
-            "subheading": "",
-            "button_label": ""
-          }
-        },
-        "collection_kWNbHV": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "tag": "",
-            "subheading": "",
-            "button_label": ""
-          }
-        },
-        "collection_iKmPaA": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "tag": "",
-            "subheading": "",
+            "subheading": "Camper Vans",
             "button_label": ""
           }
         }
       },
       "block_order": [
-        "collection_bnwTKN",
-        "collection_caYMNU",
-        "collection_bA9FE3",
-        "collection_WBdDTy",
-        "collection_QPKHxq",
-        "collection_iAcHNL",
-        "collection_Ehkmea",
-        "collection_6BGHwy",
-        "collection_ccCpBD",
-        "collection_dY7xbD",
-        "collection_8LcbGc",
-        "collection_nCeY3m",
-        "collection_XiJfkc",
-        "collection_nb7wBC",
-        "collection_Xj7Pyb",
-        "collection_3EXREA",
-        "collection_jEWVBh",
-        "collection_tE9Rzg",
-        "collection_kWNbHV",
-        "collection_iKmPaA"
+        "collection_FhR9Rc",
+        "collection_m7DJDa",
+        "collection_ExCE9F",
+        "collection_dGF3f4",
+        "collection_rc8zw8",
+        "collection_aHLB8h",
+        "collection_eU9Ecq",
+        "collection_3hmwzf",
+        "collection_hcDexP",
+        "collection_CXEmHx",
+        "collection_erNL4a",
+        "collection_FQR9KE",
+        "collection_HYRWrg",
+        "collection_dqkine",
+        "collection_jz8qFh",
+        "collection_iyjCCb",
+        "collection_ntR4RL",
+        "collection_WdAqzh",
+        "collection_dHNH3W",
+        "collection_UErxAh"
       ],
       "name": "Collection list",
       "settings": {
@@ -489,7 +489,7 @@
         "coll_grid_image_shape": "square",
         "coll_grid_image_position": "center center",
         "coll_thumb_mob_per_row": "2",
-        "coll_grid_show_count": true,
+        "coll_grid_show_count": false,
         "coll_text_position": "below",
         "coll_text_position_under_mobile": false,
         "coll_thumb_text_align_x": "center",
@@ -1050,7 +1050,7 @@
     "slideshow_C7Jmag",
     "logo_list_kYmwNX",
     "custom_product_highlight_jV6CAX",
-    "collection_list_CyizYV",
+    "collection_list_zhMrUA",
     "featured_collection_RcGTat",
     "logo_list_pgf7FP",
     "multi_column_gyeJnc",
