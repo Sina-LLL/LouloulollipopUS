@@ -45,7 +45,7 @@
         "height_mobile": 700,
         "full_width": true,
         "mobile_overlay_under": false,
-        "overlay_style": "full image-overlay--bg-shadow",
+        "overlay_style": "shadow",
         "transition": "fade",
         "navigation": "dots",
         "autoplay": true,
