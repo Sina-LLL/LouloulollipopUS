@@ -265,8 +265,8 @@
           "muslin-lightweight-sleep-bags-0-5-tog-dinosaur-stomp",
           "muslin-swaddle-dinosaur-stomp"
         ],
-        "button_label": "Shop the waffle collection",
-        "link": "shopify://collections/waffle-collection",
+        "button_label": "Shop Dinosaur Stomp",
+        "link": "shopify://collections/dinosaur-stomp",
         "button_style": "primary",
         "color_scheme": "default"
       }
