@@ -70,7 +70,7 @@
       ],
       "settings": {
         "message_font_size": 14,
-        "announcement_bar_col": "#6a8b95",
+        "announcement_bar_col": "#78b742",
         "announcement_bar_gradient": "",
         "announcement_text_col": "#faf9f6",
         "show_social_icons": true,
