@@ -15,19 +15,19 @@
         "16359276425da8ce46-1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Waffle_BOGO_-_Homepage.png",
-            "mobile_image": "shopify://shop_images/Waffle_BOGO_-_Mobile.jpg",
+            "image": "shopify://shop_images/Dancing_Dragonflies_hero.png",
+            "mobile_image": "shopify://shop_images/Dancing_Dragonflies_mobile_hero.png",
             "slide_link": "",
-            "subheading": "The Waffle Collection",
-            "title": "Buy One, Get One 50% OFF",
+            "subheading": "Your New Bedtime Beat",
+            "title": "Dreamland Dance Party",
             "heading_max_width": 14,
             "title_size": 60,
             "title_size_mobile": 40,
             "use_h1": true,
-            "text": "<p>Second item must be of equal or lesser value</p>",
+            "text": "<p><strong>Let your little ones drift into dreamland with two new prints</strong></p>",
             "enlarge_text": true,
-            "button_label_1": "Shop the Waffle BOGO",
-            "button_url_1": "shopify://collections/waffle-collection",
+            "button_label_1": "Shop the new collection",
+            "button_url_1": "shopify://collections/dreamland-dance-party",
             "button_tag_1": "",
             "button_label_2": "",
             "button_url_2": "",
@@ -45,7 +45,7 @@
         "height_mobile": 700,
         "full_width": true,
         "mobile_overlay_under": false,
-        "overlay_style": "full image-overlay--bg-shadow",
+        "overlay_style": "shadow",
         "transition": "fade",
         "navigation": "dots",
         "autoplay": true,
@@ -255,18 +255,18 @@
       "type": "custom-product-highlight",
       "name": "Highlighted Collection",
       "settings": {
-        "title": "Your cold-weather staples are calling",
-        "text": "<p>Now’s the perfect time to <strong>stock up on winter must-haves </strong>— buy one, get the second <strong>50% off</strong>.</p>",
-        "image": "shopify://shop_images/Waffle_crop_df18d935-32d5-404d-afed-f3ec69952f7c.jpg",
+        "title": "Dinosaur Stomp",
+        "text": "<p>Bold, playful, full of bounce.</p>",
+        "image": "shopify://shop_images/Dinosaur_Stomp.png",
         "order": false,
         "product_list": [
-          "waffle-sleep-bag-1-0-tog-blush-pink",
-          "waffle-long-sleeve-skater-dress-mauvewood",
-          "waffle-sleep-bag-1-0-tog-denim-blue",
-          "waffle-long-sleeve-pajama-set-peacock"
+          "tencel-sleep-bag-1-0-tog-dinosaur-stomp",
+          "sleeper-dinosaur-stomp",
+          "muslin-lightweight-sleep-bags-0-5-tog-dinosaur-stomp",
+          "muslin-swaddle-dinosaur-stomp"
         ],
-        "button_label": "Shop the waffle collection",
-        "link": "shopify://collections/waffle-collection",
+        "button_label": "Shop Dinosaur Stomp",
+        "link": "shopify://collections/dinosaur-stomp",
         "button_style": "primary",
         "color_scheme": "default"
       }
@@ -274,6 +274,24 @@
     "collection_list_zhMrUA": {
       "type": "collection-list",
       "blocks": {
+        "collection_BbdfXk": {
+          "type": "collection",
+          "settings": {
+            "collection": "dancing-dragonflies",
+            "tag": "",
+            "subheading": "Dancing Dragonflies",
+            "button_label": ""
+          }
+        },
+        "collection_tCMDnh": {
+          "type": "collection",
+          "settings": {
+            "collection": "dinosaur-stomp",
+            "tag": "",
+            "subheading": "Dinosaur Stomp",
+            "button_label": ""
+          }
+        },
         "collection_FhR9Rc": {
           "type": "collection",
           "settings": {
@@ -427,15 +445,6 @@
             "button_label": ""
           }
         },
-        "collection_WdAqzh": {
-          "type": "collection",
-          "settings": {
-            "collection": "baby-dinomite",
-            "tag": "",
-            "subheading": "Baby Dinomite",
-            "button_label": ""
-          }
-        },
         "collection_dHNH3W": {
           "type": "collection",
           "settings": {
@@ -444,18 +453,11 @@
             "subheading": "Hedgehogs",
             "button_label": ""
           }
-        },
-        "collection_UErxAh": {
-          "type": "collection",
-          "settings": {
-            "collection": "camper-vans",
-            "tag": "",
-            "subheading": "Camper Vans",
-            "button_label": ""
-          }
         }
       },
       "block_order": [
+        "collection_BbdfXk",
+        "collection_tCMDnh",
         "collection_FhR9Rc",
         "collection_m7DJDa",
         "collection_ExCE9F",
@@ -473,9 +475,7 @@
         "collection_jz8qFh",
         "collection_iyjCCb",
         "collection_ntR4RL",
-        "collection_WdAqzh",
-        "collection_dHNH3W",
-        "collection_UErxAh"
+        "collection_dHNH3W"
       ],
       "name": "Collection list",
       "settings": {
@@ -583,7 +583,8 @@
         "text_block_CjCE3F": {
           "type": "text_block",
           "settings": {
-            "enable_media": false,
+            "enable_media": true,
+            "image": "shopify://shop_images/Heart.svg",
             "title": "Made by Moms, Loved by Parents Everywhere",
             "text": "<p>Made by twin sisters and self-proclaimed picky moms who get it, our products are real-life tested to stand up to anything life - and kids -  throw at ’em.</p>",
             "button_label": "",
@@ -593,7 +594,8 @@
         "text_block_nfX6Kf": {
           "type": "text_block",
           "settings": {
-            "enable_media": false,
+            "enable_media": true,
+            "image": "shopify://shop_images/Medal.svg",
             "title": "Helping Families Hit the Big (and Small) Milestones Since 2015",
             "text": "<p>From first smiles to first foods, we’ve been there for the baby moments you’ll never forget—and the parenting ones you wish you could (IYKYK). From teething to sleep regressions and everything in between, we’re here to make it all a little easier.</p>",
             "button_label": "",
@@ -603,7 +605,8 @@
         "text_block_craMbA": {
           "type": "text_block",
           "settings": {
-            "enable_media": false,
+            "enable_media": true,
+            "image": "shopify://shop_images/Happy.svg",
             "title": "Safe for Baby, Approved by Grown-Ups",
             "text": "<p>We only use premium, non-toxic, safety-tested materials—like buttery soft TENCEL™ Lyocell and 100% food-grade silicone—so you can stress less, snuggle more, and actually enjoy the messy magic of parenthood.</p>",
             "button_label": "",
@@ -616,11 +619,14 @@
         "text_block_nfX6Kf",
         "text_block_craMbA"
       ],
+      "custom_css": [
+        ".img-ar--cover img {object-fit: fill;}"
+      ],
       "name": "Company Message",
       "settings": {
         "title": "",
         "media_aspect_ratio": "s",
-        "media_width": 100,
+        "media_width": 60,
         "text_alignment": "center",
         "button_style": "primary",
         "color_scheme": "default"
