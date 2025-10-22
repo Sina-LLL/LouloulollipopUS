@@ -6,7 +6,7 @@
   {%- endfor -%}
 
   {%- if group.user_agent.value == '*' -%}
-    {{ 'Disallow: *bvstate=' }}
+    {{ 'Disallow: *bvstate=*' }}
   {%- endif -%}
 
   {%- if group.sitemap != blank -%}
