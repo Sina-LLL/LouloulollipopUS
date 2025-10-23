@@ -93,7 +93,7 @@
         "complementary_BwbHzJ": {
           "type": "complementary",
           "settings": {
-            "heading": "Pairs well with",
+            "heading": "Pairs Perfectly With",
             "enable_carousel": true,
             "max_products": 10
           }
@@ -225,7 +225,7 @@
       ],
       "name": "Custom Product List by Print",
       "settings": {
-        "title": "Get the Set",
+        "title": "Get the set",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 5,
