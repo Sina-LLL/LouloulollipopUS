@@ -15,8 +15,8 @@
         "collection_jffFNa": {
           "type": "collection",
           "settings": {
-            "collection": "sale",
-            "tag": "sleep",
+            "collection": "sleep-bedding-sale",
+            "tag": "",
             "image": "shopify://shop_images/TENCEL_Sleep_Bag_1.0_Tog_Baby_Dinomite_22f3dfe5-83a4-47b0-8c38-0a9382e28a0a.jpg",
             "subheading": "Sleep & Bedding",
             "button_label": ""
@@ -25,8 +25,8 @@
         "collection_ijQmHC": {
           "type": "collection",
           "settings": {
-            "collection": "sale",
-            "tag": "wear",
+            "collection": "clothing-sale",
+            "tag": "",
             "image": "shopify://shop_images/KA1003U.PCK_Waffle_2-pc_Pajama_Set_Peacock_6.jpg",
             "subheading": "Clothing",
             "button_label": ""
@@ -35,8 +35,8 @@
         "collection_UPFDjV": {
           "type": "collection",
           "settings": {
-            "collection": "sale",
-            "tag": "eat",
+            "collection": "feeding-essentials-sale",
+            "tag": "",
             "image": "shopify://shop_images/baby-eating-noodles-with-bib.jpg",
             "subheading": "Feeding Essentials",
             "button_label": ""
@@ -45,8 +45,8 @@
         "collection_3C3APa": {
           "type": "collection",
           "settings": {
-            "collection": "sale",
-            "tag": "play",
+            "collection": "toys-play-sale",
+            "tag": "",
             "image": "shopify://shop_images/Stacking_Toy_Pastel.jpg",
             "subheading": "Toys & Play",
             "button_label": ""
@@ -55,8 +55,8 @@
         "collection_4pWbRV": {
           "type": "collection",
           "settings": {
-            "collection": "sale",
-            "tag": "bathe",
+            "collection": "bathe-sale",
+            "tag": "",
             "image": "shopify://shop_images/Hooded_Towel_-_Some_Bunny_Loves_You__5_dfd27e75-501c-44f8-a95d-25d169cb55aa.jpg",
             "subheading": "Bathe",
             "button_label": ""

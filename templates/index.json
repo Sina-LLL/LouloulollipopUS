@@ -255,18 +255,18 @@
       "type": "custom-product-highlight",
       "name": "Highlighted Collection",
       "settings": {
-        "title": "Dinosaur Stomp",
-        "text": "<p>Bold, playful, full of bounce.</p>",
-        "image": "shopify://shop_images/Dinosaur_Stomp.png",
+        "title": "BOGO 50% Off Waffles!",
+        "text": "<p>Now’s the perfect time to stock up on winter must-haves</p>",
+        "image": "shopify://shop_images/KA1003U.PCK_Waffle_2-pc_Pajama_Set_Peacock_6_26d1a114-24dc-445a-9d36-5feb92df9a7a.jpg",
         "order": false,
         "product_list": [
-          "tencel-sleep-bag-1-0-tog-dinosaur-stomp",
-          "sleeper-dinosaur-stomp",
-          "muslin-lightweight-sleep-bags-0-5-tog-dinosaur-stomp",
-          "muslin-swaddle-dinosaur-stomp"
+          "waffle-sleep-bag-1-0-tog-blush-pink",
+          "waffle-sleep-bag-1-0-tog-denim-blue",
+          "waffle-long-sleeve-bodysuit-coconut-milk",
+          "waffle-long-sleeve-bodysuit-denim-blue"
         ],
-        "button_label": "Shop Dinosaur Stomp",
-        "link": "shopify://collections/dinosaur-stomp",
+        "button_label": "Shop BOGO Now",
+        "link": "shopify://collections/waffle-collection",
         "button_style": "primary",
         "color_scheme": "default"
       }
@@ -501,12 +501,12 @@
       "type": "featured-collection",
       "name": "Best Sellers",
       "settings": {
-        "title": "Shop Our Bestsellers",
+        "title": "Newborn Essentials, Perfectly Bundled",
         "text": "",
-        "collection": "best-sellers",
+        "collection": "newborn-bundles",
         "show_vendor": false,
         "enable_carousel": true,
-        "grid": 4,
+        "grid": 5,
         "rows": 2,
         "color_scheme": "1",
         "show_view_all": true,
