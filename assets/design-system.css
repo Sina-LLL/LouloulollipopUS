@@ -54,7 +54,7 @@ h2,.h2, h2.h1{
   font-size: 2rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 2.25rem; 
+  line-height: 2.5rem; 
 }
 /* End H2 */
 
@@ -63,7 +63,7 @@ h2,.h2, h2.h1{
 h3,.h3{
   font-size: 1.75rem;
   font-weight: 600;
-  line-height: 2rem; 
+  line-height: 2.5rem; 
 }
 /* End H3 */
 
