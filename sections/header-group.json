@@ -14,26 +14,10 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
-        "announcement-1": {
-          "type": "announcement",
-          "settings": {
-            "text": "Free Standard Shipping $65+",
-            "show_countdown": false,
-            "hide_on_end": false,
-            "end_date": "",
-            "end_time": "",
-            "number_font": "base",
-            "countdown_separator": "box",
-            "use_custom_colors": false,
-            "bg_color": "#202020",
-            "bg_gradient": "",
-            "text_color": "#ffffff"
-          }
-        },
         "announcement-2": {
           "type": "announcement",
           "settings": {
-            "text": "Shop our new Celestial Adventures Collection",
+            "text": "We’re experiencing longer U.S. delivery times than usual — thank you for your patience!",
             "show_countdown": false,
             "hide_on_end": false,
             "end_date": "",
@@ -61,12 +45,28 @@
             "bg_gradient": "",
             "text_color": "#4c4c4b"
           }
+        },
+        "announcement-1": {
+          "type": "announcement",
+          "settings": {
+            "text": "Free Standard Shipping $65+",
+            "show_countdown": false,
+            "hide_on_end": false,
+            "end_date": "",
+            "end_time": "",
+            "number_font": "base",
+            "countdown_separator": "box",
+            "use_custom_colors": false,
+            "bg_color": "#202020",
+            "bg_gradient": "",
+            "text_color": "#ffffff"
+          }
         }
       },
       "block_order": [
-        "announcement-1",
         "announcement-2",
-        "announcement_gLBKkX"
+        "announcement_gLBKkX",
+        "announcement-1"
       ],
       "settings": {
         "message_font_size": 14,

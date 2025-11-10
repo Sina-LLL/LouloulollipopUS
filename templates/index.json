@@ -15,19 +15,19 @@
         "16359276425da8ce46-1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Dancing_Dragonflies_hero.png",
-            "mobile_image": "shopify://shop_images/Dancing_Dragonflies_mobile_hero.png",
+            "image": "shopify://shop_images/Forest_Families_Hero_1.png",
+            "mobile_image": "shopify://shop_images/Forest_Families_Mobile_Hero_1.jpg",
             "slide_link": "",
-            "subheading": "Your New Bedtime Beat",
-            "title": "Dreamland Dance Party",
+            "subheading": "Celebrate the Season's Coziness",
+            "title": "Forest Families Collection",
             "heading_max_width": 14,
             "title_size": 60,
             "title_size_mobile": 40,
             "use_h1": true,
-            "text": "<p><strong>Let your little ones drift into dreamland with two new prints</strong></p>",
+            "text": "<p>Bring holiday magic to every little moment</p>",
             "enlarge_text": true,
-            "button_label_1": "Shop the new collection",
-            "button_url_1": "shopify://collections/dreamland-dance-party",
+            "button_label_1": "Shop Forest Families",
+            "button_url_1": "shopify://collections/forest-families",
             "button_tag_1": "",
             "button_label_2": "",
             "button_url_2": "",
@@ -257,7 +257,7 @@
       "settings": {
         "title": "BOGO 50% Off Waffles!",
         "text": "<p>Now’s the perfect time to stock up on winter must-haves</p>",
-        "image": "shopify://shop_images/KA1003U.PCK_Waffle_2-pc_Pajama_Set_Peacock_6_26d1a114-24dc-445a-9d36-5feb92df9a7a.jpg",
+        "image": "shopify://shop_images/Waffle_crop.jpg",
         "order": false,
         "product_list": [
           "waffle-sleep-bag-1-0-tog-blush-pink",
@@ -274,6 +274,15 @@
     "collection_list_zhMrUA": {
       "type": "collection-list",
       "blocks": {
+        "collection_rEV79r": {
+          "type": "collection",
+          "settings": {
+            "collection": "forest-families",
+            "tag": "",
+            "subheading": "Forest Families",
+            "button_label": ""
+          }
+        },
         "collection_BbdfXk": {
           "type": "collection",
           "settings": {
@@ -444,18 +453,10 @@
             "subheading": "Bumble Bees",
             "button_label": ""
           }
-        },
-        "collection_dHNH3W": {
-          "type": "collection",
-          "settings": {
-            "collection": "hedgehogs",
-            "tag": "",
-            "subheading": "Hedgehogs",
-            "button_label": ""
-          }
         }
       },
       "block_order": [
+        "collection_rEV79r",
         "collection_BbdfXk",
         "collection_tCMDnh",
         "collection_FhR9Rc",
@@ -474,8 +475,7 @@
         "collection_dqkine",
         "collection_jz8qFh",
         "collection_iyjCCb",
-        "collection_ntR4RL",
-        "collection_dHNH3W"
+        "collection_ntR4RL"
       ],
       "name": "Collection list",
       "settings": {
@@ -501,7 +501,7 @@
       "type": "featured-collection",
       "name": "Best Sellers",
       "settings": {
-        "title": "Newborn Essentials, Perfectly Bundled",
+        "title": "Perfectly Bundled Essentials",
         "text": "",
         "collection": "newborn-bundles",
         "show_vendor": false,
