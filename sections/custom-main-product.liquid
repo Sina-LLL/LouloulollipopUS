@@ -380,7 +380,7 @@
               {% if product.metafields.custom.bundle_products != blank %}
                 <div class="bundle-products">
                   <h3 class="bundle-product-title">Bundle Includes:</h3>
-                  <div class="product-grid product-grid--per-row-3 product-grid--per-row-mob-3">
+                  <div class="product-grid product-grid--per-row-2 product-grid--per-row-mob-2">
                     {% assign bundled_products = product.metafields.custom.bundle_products.value %}
                     {% for bundled_product in bundled_products %}
                         {% render 'product-block',
