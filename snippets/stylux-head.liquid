@@ -52,9 +52,28 @@
               if (isCartPage) {
                 window.location.reload();
               } else {
-                const form = document.querySelector('.js-product-form');
-                document.dispatchEvent(new CustomEvent('on:cart:change', { bubbles: true }));
-                setTimeout(() => document.querySelector('.js-cart-drawer').open(), 500);
+                if (theme.settings.afterAddToCart === 'drawer') {
+                  const form = document.querySelector('.js-product-form');
+                  document.dispatchEvent(new CustomEvent('on:cart:change', { bubbles: true }));
+                  setTimeout(() => document.querySelector('.js-cart-drawer').open(), 500);
+                } else if (theme.settings.afterAddToCart === 'notification') {
+                  const notification = document.getElementById('AddedNotification').content.firstElementChild.cloneNode(true);
+                  const variantName = `${document.querySelector('.product-title').textContent} - ${
+                    document.querySelector('[data-section="new"]').textContent !== ""
+                    ? document.querySelector('[data-section="new"]').textContent
+                    : document.querySelector('[data-section="core"]').textContent}`;
+                  notification.dataset.productTitle = variantName;
+                  document.dispatchEvent(new CustomEvent('on:cart:change', { bubbles: true }));
+                  let notificationContainer = document.querySelector('.pageheader--sticky');
+                  if (!notificationContainer) {
+                    notificationContainer = document.querySelector('body');
+                  }
+                  notificationContainer.appendChild(notification);
+                } else {
+                  setTimeout(() => {
+                    window.location.href = theme.routes.cart;
+                  }, 300);
+                }
               }
             },
           },
