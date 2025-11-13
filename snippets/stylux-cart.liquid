@@ -1,0 +1,23 @@
+<div id="stylux-cart-offer-container" class="stylux-cart-offer-container"></div>
+
+<script>
+  Stylux.onScriptLoad(() => {
+    if (!self.Stylux) {
+      return;
+    }
+    function showCartOffer() {
+        if (!document.querySelector('#stylux-cart-offer-container')) {
+            return;
+        }
+
+        Stylux.offers.show({
+            type: 'CART',
+            elementClasses: ['stylux-cart-offer-container']
+        });
+    }
+
+    document.addEventListener('on:cart:change', () => showCartOffer());
+
+    showCartOffer();
+  });
+</script>

@@ -1,0 +1,12 @@
+<div id="stylux-offer-container" class="stylux-offer-container"></div>
+
+<script>
+    Stylux.onScriptLoad(() => {
+        const productId = {{ product.selected_or_first_available_variant.id | default: 'null' }};
+
+        Stylux.offers.show({
+            productId: productId,
+            elementClasses: 'stylux-offer-btn btn btn--large add-to-cart'
+        });
+    })
+</script>
