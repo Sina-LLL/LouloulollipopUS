@@ -1,0 +1,100 @@
+<script>
+  (async function () {
+    window.Stylux = {
+      queue: [],
+      onScriptLoad: (fn) => {
+        window.Stylux.queue.push(fn);
+      },
+    };
+
+    (function loadStyluxSDK(src, onload) {
+      const script = document.createElement("script");
+      script.src = src;
+      script.async = true;
+      script.crossOrigin = "anonymous";
+      script.onload = onload;
+      document.head.appendChild(script);
+    })("https://sdk.stylux.io/js-sdk.js", async () => {
+      if (!self.Stylux) {
+        return;
+      }
+
+      if (!self.Shopify) {
+        return;
+      }
+
+      await Stylux.setup({
+        merchantId: "cb4854d8-7e45-4bcf-9319-3bc18a383c8a",
+        monitoring: true,
+
+        apiKey:
+          "STLX_1f14f3897dc04bc135e735957331d2fd052df04bbc69c48ff4ceb70cb0b1",
+
+        getButtonOfferText(config) {
+          return config.ctaText;
+        },
+
+        modal: {
+          // any custom CSS styling (key-value pairs)
+          buttonStyles: {},
+        },
+
+        plugins: {
+          shopify: {
+            afterUpdateCartVersion: "V2",
+            afterUpdateCart(updateCartRes) {
+              if (!updateCartRes) {
+                return;
+              }
+
+              const isCartPage = document.location.pathname.includes("cart");
+
+              if (isCartPage) {
+                window.location.reload();
+              } else {
+                if (theme.settings.afterAddToCart === 'drawer') {
+                  const form = document.querySelector('.js-product-form');
+                  document.dispatchEvent(new CustomEvent('on:cart:change', { bubbles: true }));
+                  setTimeout(() => document.querySelector('.js-cart-drawer').open(), 500);
+                } else if (theme.settings.afterAddToCart === 'notification') {
+                  const notification = document.getElementById('AddedNotification').content.firstElementChild.cloneNode(true);
+                  const variantName = `${document.querySelector('.product-title').textContent} - ${
+                    document.querySelector('[data-section="new"]').textContent !== ""
+                    ? document.querySelector('[data-section="new"]').textContent
+                    : document.querySelector('[data-section="core"]').textContent}`;
+                  notification.dataset.productTitle = variantName;
+                  document.dispatchEvent(new CustomEvent('on:cart:change', { bubbles: true }));
+                  let notificationContainer = document.querySelector('.pageheader--sticky');
+                  if (!notificationContainer) {
+                    notificationContainer = document.querySelector('body');
+                  }
+                  notificationContainer.appendChild(notification);
+                } else {
+                  setTimeout(() => {
+                    window.location.href = theme.routes.cart;
+                  }, 300);
+                }
+              }
+            },
+          },
+        },
+      });
+    });
+  })();
+</script>
+<style>
+    .stylux-offer-container {
+        margin-bottom: -8px;
+    }
+    .stylux-offer-btn {
+        color: #4f676e;
+        background-color: #fff;
+        width: 100%;
+        border: 1px solid #4F676E;
+    }
+    .stylux-offer-btn:hover {
+        color: #fff;
+        background-color: #8ea7af;
+        border: 1px solid #8EA7AF;
+    }
+</style>
