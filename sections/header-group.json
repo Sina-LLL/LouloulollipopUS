@@ -32,6 +32,7 @@
         },
         "announcement_gLBKkX": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "<a href=\"/collections/waffle-collection\" title=\"Waffle Collection\">BOGO 50% off our Waffle collection</a> - Second item must be of equal or lesser value",
             "show_countdown": false,

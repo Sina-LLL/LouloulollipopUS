@@ -255,18 +255,18 @@
       "type": "custom-product-highlight",
       "name": "Highlighted Collection",
       "settings": {
-        "title": "BOGO 50% Off Waffles!",
-        "text": "<p>Now’s the perfect time to stock up on winter must-haves</p>",
-        "image": "shopify://shop_images/Waffle_crop.jpg",
+        "title": "Bundle up and Save",
+        "text": "<p>Everything Baby Needs — All Wrapped Up </p>",
+        "image": "shopify://shop_images/Gift_Box_1.jpg",
         "order": false,
         "product_list": [
-          "waffle-sleep-bag-1-0-tog-blush-pink",
-          "waffle-sleep-bag-1-0-tog-denim-blue",
-          "waffle-long-sleeve-bodysuit-coconut-milk",
-          "waffle-long-sleeve-bodysuit-denim-blue"
+          "newborn-sleep-gift-bundle-forest-families",
+          "newborn-sleep-bundle-stargazing-bear",
+          "baby-feeding-bundle-elephant",
+          "baby-learning-feeding-bundle-smiley-sharks"
         ],
-        "button_label": "Shop BOGO Now",
-        "link": "shopify://collections/waffle-collection",
+        "button_label": "Shop bundles",
+        "link": "shopify://collections/bundles-and-sets",
         "button_style": "primary",
         "color_scheme": "default"
       }
