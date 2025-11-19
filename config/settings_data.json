@@ -544,6 +544,14 @@
         "type": "shopify://apps/noindexly-sitemap-manager/blocks/gropulse-noindex/1ebb161d-2855-45b0-be8b-0de45dbb5725",
         "disabled": false,
         "settings": {}
+      },
+      "11015274795786323183": {
+        "type": "shopify://apps/multiscount/blocks/autogift-embed/e991b375-762d-4bff-8308-d0a28e464f1a",
+        "disabled": false,
+        "settings": {
+          "auto_remove_gift": true,
+          "auto_refresh": false
+        }
       }
     }
   }
