@@ -499,6 +499,7 @@
     "coll_grid_image_position": "center center",
     "coll_grid_show_count": true,
     "favicon": "shopify://shop_images/Logo601SmokeBlue.png",
+    "animations_disabled_first_section": false,
     "cart_type": "page",
     "after_add_to_cart": "notification",
     "show_free_shipping_bar": true,
