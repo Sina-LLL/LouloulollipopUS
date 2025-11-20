@@ -42,7 +42,7 @@
       "settings": {
         "height": "fixed",
         "height_desktop": 500,
-        "height_mobile": 180,
+        "height_mobile": 620,
         "full_width": true,
         "mobile_overlay_under": false,
         "overlay_style": "shadow",
@@ -222,6 +222,7 @@
         "logo_j4Arc7",
         "logo_i3itWL"
       ],
+      "disabled": true,
       "settings": {
         "title": "As Seen In",
         "image_opacity": 100,
@@ -242,7 +243,7 @@
           "baby-learning-feeding-bundle-smiley-sharks",
           "baby-learning-feeding-bundle-smiley-sharks-1"
         ],
-        "button_label": "Shop bundles",
+        "button_label": "Shop bundles & Sets",
         "link": "shopify://collections/bundles-and-sets",
         "button_style": "primary",
         "color_scheme": "default"
@@ -257,9 +258,9 @@
         "collection": "top-newborn-gifts",
         "show_vendor": false,
         "enable_carousel": true,
-        "grid": 5,
+        "grid": 4,
         "rows": 2,
-        "color_scheme": "default",
+        "color_scheme": "1",
         "show_view_all": true,
         "full_width": true,
         "text_alignment": "center"
@@ -471,7 +472,8 @@
         "collection_iyjCCb",
         "collection_ntR4RL"
       ],
-      "name": "Collection list",
+      "disabled": true,
+      "name": "Shop by print",
       "settings": {
         "title": "Shop by Print",
         "text": "",
@@ -491,21 +493,73 @@
         "coll_button_style": "primary"
       }
     },
-    "featured_collection_RQjf3y": {
-      "type": "featured-collection",
-      "name": "Best Sellers",
+    "collection_list_4hPPdd": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_hnnxPW": {
+          "type": "collection",
+          "settings": {
+            "collection": "sleep-bags",
+            "tag": "",
+            "image": "shopify://shop_images/LuluLollipopEdits-09852.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_fEKXHL": {
+          "type": "collection",
+          "settings": {
+            "collection": "sleepers",
+            "tag": "",
+            "image": "shopify://shop_images/LuluLollipopEdits-09487.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_3ybKnj": {
+          "type": "collection",
+          "settings": {
+            "collection": "suction-plates",
+            "tag": "",
+            "image": "shopify://shop_images/LuluLollipopEdits-01064.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_fPFBUC": {
+          "type": "collection",
+          "settings": {
+            "collection": "long-sleeve-bibs",
+            "tag": "",
+            "image": "shopify://shop_images/LuluLollipopEdits-08796.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_hnnxPW",
+        "collection_fEKXHL",
+        "collection_3ybKnj",
+        "collection_fPFBUC"
+      ],
       "settings": {
-        "title": "Perfectly Bundled Essentials",
+        "title": "Shop by Category",
         "text": "",
-        "collection": "newborn-bundles",
-        "show_vendor": false,
-        "enable_carousel": true,
-        "grid": 5,
-        "rows": 2,
-        "color_scheme": "1",
-        "show_view_all": true,
-        "full_width": true,
-        "text_alignment": "center"
+        "text_alignment": "center",
+        "enable_carousel": false,
+        "grid": 2,
+        "color_scheme": "default",
+        "full_width": false,
+        "coll_grid_image_shape": "portrait-45",
+        "coll_grid_image_position": "center center",
+        "coll_thumb_mob_per_row": "2",
+        "coll_grid_show_count": false,
+        "coll_text_position": "below",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_y": "center",
+        "coll_button_style": "primary"
       }
     },
     "logo_list_pgf7FP": {
@@ -564,6 +618,7 @@
         "logo_Hqdrmf",
         "logo_DDHT6z"
       ],
+      "disabled": true,
       "name": "USP list",
       "settings": {
         "title": "",
@@ -971,7 +1026,7 @@
     "custom_product_highlight_jV6CAX",
     "featured_collection_RcGTat",
     "collection_list_zhMrUA",
-    "featured_collection_RQjf3y",
+    "collection_list_4hPPdd",
     "logo_list_pgf7FP",
     "multi_column_gyeJnc",
     "featured_collection_K3tJdQ",
