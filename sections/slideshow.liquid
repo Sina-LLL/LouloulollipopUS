@@ -223,7 +223,38 @@
 
   {%- unless section.settings.full_width -%}</div>{%- endunless -%}
 </div>
+<style>
+  .bfcm-badges {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap; /* allows tidy wrapping on mobile */
+}
 
+.bfcm-pill {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #000;
+  backdrop-filter: blur(4px);
+  white-space: nowrap;
+}
+
+/* Optional: tighten spacing on smaller screens */
+@media (max-width: 480px) {
+  .bfcm-pill {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+  .bfcm-badges {
+    gap: 6px;
+  }
+}
+
+</style>
 
 {% schema %}
 {
