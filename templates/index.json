@@ -53,73 +53,6 @@
         "accessibility_info": ""
       }
     },
-    "countdown_timer_NggWD9": {
-      "type": "countdown-timer",
-      "blocks": {
-        "subheading_yYGk7t": {
-          "type": "subheading",
-          "disabled": true,
-          "settings": {
-            "subheading": "Subheading"
-          }
-        },
-        "heading_G3Jtqg": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "title": "Countdown timer",
-            "use_h1": false
-          }
-        },
-        "text_4ij4gd": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "<p>Create urgency around an offer or event using a countdown timer.</p>",
-            "enlarge_text": true
-          }
-        },
-        "countdown_CRCRM9": {
-          "type": "countdown",
-          "settings": {
-            "end_date": "",
-            "end_time": "",
-            "end_text": "",
-            "hide_on_end": false,
-            "number_size": 60,
-            "number_font": "base",
-            "divider_type": "colon",
-            "show_timer_labels": true
-          }
-        },
-        "button_DjNKwh": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "Button text",
-            "button_link": "",
-            "button_style": "primary"
-          }
-        }
-      },
-      "block_order": [
-        "subheading_yYGk7t",
-        "heading_G3Jtqg",
-        "text_4ij4gd",
-        "countdown_CRCRM9",
-        "button_DjNKwh"
-      ],
-      "disabled": true,
-      "name": "Countdown timer",
-      "settings": {
-        "show_image": false,
-        "image_link": "",
-        "show_image_space": false,
-        "image_position": "left",
-        "text_alignment": "center",
-        "color_scheme": "default"
-      }
-    },
     "collection_list_BzgHGC": {
       "type": "collection-list",
       "blocks": {
@@ -1144,7 +1077,6 @@
   },
   "order": [
     "16359276425da8ce46",
-    "countdown_timer_NggWD9",
     "collection_list_BzgHGC",
     "custom_product_highlight_jV6CAX",
     "featured_collection_RcGTat",
