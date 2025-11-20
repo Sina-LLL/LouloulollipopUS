@@ -40,8 +40,8 @@
         "16359276425da8ce46-1"
       ],
       "settings": {
-        "height": "adapt",
-        "height_desktop": 380,
+        "height": "fixed",
+        "height_desktop": 500,
         "height_mobile": 180,
         "full_width": true,
         "mobile_overlay_under": false,
