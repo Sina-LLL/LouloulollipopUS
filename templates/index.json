@@ -122,112 +122,6 @@
         "coll_button_style": "primary"
       }
     },
-    "logo_list_kYmwNX": {
-      "type": "logo-list",
-      "blocks": {
-        "logo_Pb9irB": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/logo.dc34ecc.svg",
-            "image_width": 150,
-            "link": "https://www.goodhousekeeping.com/childrens-products/a65382807/parenting-awards-baby-2025/",
-            "title": ""
-          }
-        },
-        "logo_3E4WaJ": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Parents_idf45riGiK_0.png",
-            "image_width": 190,
-            "link": "",
-            "title": ""
-          }
-        },
-        "logo_KwwATQ": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/BabyList-Logo.png",
-            "image_width": 160,
-            "link": "https://www.babylist.com/store/b/loulou-lollipop/919",
-            "title": ""
-          }
-        },
-        "logo_m3DkDJ": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/tinybeans-Logo.png",
-            "image_width": 160,
-            "link": "",
-            "title": ""
-          }
-        },
-        "logo_mQKag7": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/the-everymom-logo.png",
-            "image_width": 190,
-            "link": "https://theeverymom.com/registry-awards/",
-            "title": ""
-          }
-        },
-        "logo_RidJwp": {
-          "type": "logo",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Jillian-Harris-Logo_e0e75a9e-fd3e-465d-a063-55cd2d888757.png",
-            "image_width": 160,
-            "link": "",
-            "title": ""
-          }
-        },
-        "logo_CGcCUn": {
-          "type": "logo",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Motherly-Logo.png",
-            "image_width": 160,
-            "link": "",
-            "title": ""
-          }
-        },
-        "logo_j4Arc7": {
-          "type": "logo",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Momtastic-Logo.png",
-            "image_width": 160,
-            "link": "",
-            "title": ""
-          }
-        },
-        "logo_i3itWL": {
-          "type": "logo",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/8_what_to_expect_226b9ac0-b823-4eff-ba1a-75692a46e19f.png",
-            "image_width": 160,
-            "link": "",
-            "title": ""
-          }
-        }
-      },
-      "block_order": [
-        "logo_Pb9irB",
-        "logo_3E4WaJ",
-        "logo_KwwATQ",
-        "logo_m3DkDJ",
-        "logo_mQKag7",
-        "logo_RidJwp",
-        "logo_CGcCUn",
-        "logo_j4Arc7",
-        "logo_i3itWL"
-      ],
-      "settings": {
-        "title": "As Seen In",
-        "image_opacity": 100,
-        "color_scheme": "default"
-      }
-    },
     "custom_product_highlight_jV6CAX": {
       "type": "custom-product-highlight",
       "name": "Highlighted Collection",
@@ -239,8 +133,8 @@
         "product_list": [
           "sleeper-hedgehogs",
           "hooded-towel-set-bunny-meadow",
-          "short-sleeve-bodysuit-dress-mermaids",
-          "newborn-sleep-gift-bundle-safari-jungle"
+          "newborn-sleep-gift-bundle-safari-jungle",
+          "baby-learning-feeding-bundle-smiley-sharks"
         ],
         "button_label": "Shop Top Newborn Gifts",
         "link": "shopify://collections/top-newborn-gifts",
@@ -550,6 +444,112 @@
         "coll_button_style": "primary"
       }
     },
+    "logo_list_kYmwNX": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_Pb9irB": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/logo.dc34ecc.svg",
+            "image_width": 150,
+            "link": "https://www.goodhousekeeping.com/childrens-products/a65382807/parenting-awards-baby-2025/",
+            "title": ""
+          }
+        },
+        "logo_3E4WaJ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Parents_idf45riGiK_0.png",
+            "image_width": 190,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_KwwATQ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/BabyList-Logo.png",
+            "image_width": 160,
+            "link": "https://www.babylist.com/store/b/loulou-lollipop/919",
+            "title": ""
+          }
+        },
+        "logo_m3DkDJ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/tinybeans-Logo.png",
+            "image_width": 160,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_mQKag7": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/the-everymom-logo.png",
+            "image_width": 190,
+            "link": "https://theeverymom.com/registry-awards/",
+            "title": ""
+          }
+        },
+        "logo_RidJwp": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Jillian-Harris-Logo_e0e75a9e-fd3e-465d-a063-55cd2d888757.png",
+            "image_width": 160,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_CGcCUn": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Motherly-Logo.png",
+            "image_width": 160,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_j4Arc7": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Momtastic-Logo.png",
+            "image_width": 160,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_i3itWL": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/8_what_to_expect_226b9ac0-b823-4eff-ba1a-75692a46e19f.png",
+            "image_width": 160,
+            "link": "",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_Pb9irB",
+        "logo_3E4WaJ",
+        "logo_KwwATQ",
+        "logo_m3DkDJ",
+        "logo_mQKag7",
+        "logo_RidJwp",
+        "logo_CGcCUn",
+        "logo_j4Arc7",
+        "logo_i3itWL"
+      ],
+      "settings": {
+        "title": "As Seen In",
+        "image_opacity": 100,
+        "color_scheme": "default"
+      }
+    },
     "collection_list_zQRndp": {
       "type": "collection-list",
       "blocks": {
@@ -682,6 +682,77 @@
         "color_scheme": "default"
       }
     },
+    "testimonials_VgkpHw": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_dzeRxc": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 5,
+            "testimonial-title": "LOVE the bees!! 🐝",
+            "testimonial": "Super soft, we love the fold over mitts and socks! Couldn’t be more in love with the pattern as well.",
+            "author": "Stacey D",
+            "image": "shopify://shop_images/6f343775-42fa-5aff-8245-6d9a0ec41c98.jpg",
+            "image_caption": "",
+            "link": "shopify://products/sleeper-bumble-bees"
+          }
+        },
+        "testimonial_E6kGWU": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 5,
+            "testimonial-title": "Surprisingly soft",
+            "testimonial": "I am really impressed with this bib! It is the softest waterproof bib we own by far; I don’t know how they managed to make it both soft and functional, but it is definitely both. The coverage is great on my petite two year old, keeping her nice and clean, and I love that I can just toss it in the washer. It makes it so much easier to get fully clean. The print is super cute too - I would definitely recommend it! I received this product as part of the Stellar Product Testing Panel in exchange for my honest review.",
+            "author": "Anonymous",
+            "image": "shopify://shop_images/22ab6ac7-6f8e-5b3b-a508-6bf3da54680e.jpg",
+            "image_caption": "",
+            "link": "shopify://products/long-sleeve-bib-sweet-treats"
+          }
+        },
+        "testimonial_tqPcqL": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 5,
+            "testimonial-title": "Love these— go to sleep sack",
+            "testimonial": "I absolutely love these sleep sacks and other LouLou products! The quality is fantastic and has endured many washes!! I aim to not put in dryer— one sack has gone in multiple times while the other I try to hang. I’m so impressed by how well these have stood up over the past 4 months of wear. A bit disappointed there’s no between size from the 0-6 and 6-18. My daughter is too petite to fit the next size for some time. It will be tough to be without our favourite sleep sack until she can.",
+            "author": "Dcgilmr",
+            "image": "shopify://shop_images/a6aa598a-c4b7-5ce4-a018-d67bd5c85bcb.jpg",
+            "image_caption": "",
+            "link": "shopify://collections/sleep-bags"
+          }
+        },
+        "testimonial_3BMPQJ": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 5,
+            "testimonial-title": "Softest Muslin",
+            "testimonial": "Love these Muslim swaddles. I use them as lightweight and breathable summer blankets for my 8 month old. Large enough to cover his stroller for nap time or just to keep the sun off him. They are by far the softest I have found. Who wants to wrap their baby in scratchy muslin. Super cute designs too. Highly recommend.",
+            "author": "Jasminetara",
+            "image": "shopify://shop_images/500b5d60-9252-53bc-8df9-b53c73d4d475.jpg",
+            "image_caption": "",
+            "link": "shopify://products/muslin-swaddle-sushi"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_dzeRxc",
+        "testimonial_E6kGWU",
+        "testimonial_tqPcqL",
+        "testimonial_3BMPQJ"
+      ],
+      "name": "Testimonials",
+      "settings": {
+        "title": "Real Kid Tested. Parent-Approved.",
+        "layout": "image-right",
+        "text_caps": false,
+        "quote_text_size": 24,
+        "quote_text_size_mobile": 16,
+        "image_shape": "square",
+        "color_scheme": "default",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
     "multi_column_gyeJnc": {
       "type": "multi-column",
       "blocks": {
@@ -753,77 +824,6 @@
         "show_view_all": true,
         "full_width": true,
         "text_alignment": "center"
-      }
-    },
-    "testimonials_VgkpHw": {
-      "type": "testimonials",
-      "blocks": {
-        "testimonial_dzeRxc": {
-          "type": "testimonial",
-          "settings": {
-            "star_rating": 5,
-            "testimonial-title": "LOVE the bees!! 🐝",
-            "testimonial": "Super soft, we love the fold over mitts and socks! Couldn’t be more in love with the pattern as well.",
-            "author": "Stacey D",
-            "image": "shopify://shop_images/6f343775-42fa-5aff-8245-6d9a0ec41c98.jpg",
-            "image_caption": "",
-            "link": "shopify://products/sleeper-bumble-bees"
-          }
-        },
-        "testimonial_E6kGWU": {
-          "type": "testimonial",
-          "settings": {
-            "star_rating": 5,
-            "testimonial-title": "Surprisingly soft",
-            "testimonial": "I am really impressed with this bib! It is the softest waterproof bib we own by far; I don’t know how they managed to make it both soft and functional, but it is definitely both. The coverage is great on my petite two year old, keeping her nice and clean, and I love that I can just toss it in the washer. It makes it so much easier to get fully clean. The print is super cute too - I would definitely recommend it! I received this product as part of the Stellar Product Testing Panel in exchange for my honest review.",
-            "author": "Anonymous",
-            "image": "shopify://shop_images/22ab6ac7-6f8e-5b3b-a508-6bf3da54680e.jpg",
-            "image_caption": "",
-            "link": "shopify://products/long-sleeve-bib-sweet-treats"
-          }
-        },
-        "testimonial_tqPcqL": {
-          "type": "testimonial",
-          "settings": {
-            "star_rating": 5,
-            "testimonial-title": "Love these— go to sleep sack",
-            "testimonial": "I absolutely love these sleep sacks and other LouLou products! The quality is fantastic and has endured many washes!! I aim to not put in dryer— one sack has gone in multiple times while the other I try to hang. I’m so impressed by how well these have stood up over the past 4 months of wear. A bit disappointed there’s no between size from the 0-6 and 6-18. My daughter is too petite to fit the next size for some time. It will be tough to be without our favourite sleep sack until she can.",
-            "author": "Dcgilmr",
-            "image": "shopify://shop_images/a6aa598a-c4b7-5ce4-a018-d67bd5c85bcb.jpg",
-            "image_caption": "",
-            "link": "shopify://collections/sleep-bags"
-          }
-        },
-        "testimonial_3BMPQJ": {
-          "type": "testimonial",
-          "settings": {
-            "star_rating": 5,
-            "testimonial-title": "Softest Muslin",
-            "testimonial": "Love these Muslim swaddles. I use them as lightweight and breathable summer blankets for my 8 month old. Large enough to cover his stroller for nap time or just to keep the sun off him. They are by far the softest I have found. Who wants to wrap their baby in scratchy muslin. Super cute designs too. Highly recommend.",
-            "author": "Jasminetara",
-            "image": "shopify://shop_images/500b5d60-9252-53bc-8df9-b53c73d4d475.jpg",
-            "image_caption": "",
-            "link": "shopify://products/muslin-swaddle-sushi"
-          }
-        }
-      },
-      "block_order": [
-        "testimonial_dzeRxc",
-        "testimonial_E6kGWU",
-        "testimonial_tqPcqL",
-        "testimonial_3BMPQJ"
-      ],
-      "name": "Testimonials",
-      "settings": {
-        "title": "Real Kid Tested. Parent-Approved.",
-        "layout": "image-right",
-        "text_caps": false,
-        "quote_text_size": 24,
-        "quote_text_size_mobile": 16,
-        "image_shape": "square",
-        "color_scheme": "default",
-        "autoplay": true,
-        "autoplay_speed": 5
       }
     },
     "custom_product_highlight_PMwqLc": {
