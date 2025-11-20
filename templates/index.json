@@ -222,7 +222,6 @@
         "logo_j4Arc7",
         "logo_i3itWL"
       ],
-      "disabled": true,
       "settings": {
         "title": "As Seen In",
         "image_opacity": 100,
@@ -548,7 +547,7 @@
         "text": "",
         "text_alignment": "center",
         "enable_carousel": false,
-        "grid": 2,
+        "grid": 4,
         "color_scheme": "default",
         "full_width": false,
         "coll_grid_image_shape": "portrait-45",
@@ -618,7 +617,6 @@
         "logo_Hqdrmf",
         "logo_DDHT6z"
       ],
-      "disabled": true,
       "name": "USP list",
       "settings": {
         "title": "",
