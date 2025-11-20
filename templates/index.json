@@ -265,44 +265,6 @@
         "text_alignment": "center"
       }
     },
-    "image_with_text_overlay_DpEqDG": {
-      "type": "image-with-text-overlay",
-      "blocks": {
-        "heading_xUDdBA": {
-          "type": "heading",
-          "settings": {
-            "title": "Sleep Bags",
-            "heading_max_width": 15,
-            "title_size": 84,
-            "title_size_mobile": 32,
-            "use_h1": false
-          }
-        },
-        "text_W7QJQ4": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Promote your brand or products with this feature section</p>",
-            "enlarge_text": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_xUDdBA",
-        "text_W7QJQ4"
-      ],
-      "name": "Image with text overlay",
-      "settings": {
-        "image": "shopify://shop_images/BA9001U.BFG_Waffle_Sleep_Bag_1.0_Tog_Blue_Fog_51_a95f2b1f-82c8-4ba7-a182-086cb64e0385.jpg",
-        "height": "fixed",
-        "height_desktop": 600,
-        "height_mobile": 460,
-        "image_link": "",
-        "full_width": true,
-        "text_alignment": "bottom left",
-        "mobile_overlay_under": false,
-        "overlay_style": "full image-overlay--bg-shadow"
-      }
-    },
     "collection_list_zhMrUA": {
       "type": "collection-list",
       "blocks": {
@@ -1061,7 +1023,6 @@
     "logo_list_kYmwNX",
     "custom_product_highlight_jV6CAX",
     "featured_collection_RcGTat",
-    "image_with_text_overlay_DpEqDG",
     "collection_list_zhMrUA",
     "collection_list_4hPPdd",
     "logo_list_pgf7FP",
