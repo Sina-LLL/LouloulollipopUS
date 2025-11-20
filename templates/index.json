@@ -18,21 +18,21 @@
             "image": "shopify://shop_images/Forest_Families_Hero_1.png",
             "mobile_image": "shopify://shop_images/Forest_Families_Mobile_Hero_1.jpg",
             "slide_link": "",
-            "subheading": "Celebrate the Season's Coziness",
-            "title": "Forest Families Collection",
-            "heading_max_width": 14,
-            "title_size": 60,
-            "title_size_mobile": 40,
+            "subheading": "BLACK FRIDAY IS HERE",
+            "title": "Up to 25% Off Everything",
+            "heading_max_width": 10,
+            "title_size": 72,
+            "title_size_mobile": 44,
             "use_h1": true,
-            "text": "<p>Bring holiday magic to every little moment</p>",
+            "text": "<p>15% off orders under $50<br/>20% off orders from $50–$95<br/>25% off orders of $95 or more</p>",
             "enlarge_text": true,
-            "button_label_1": "Shop Forest Families",
-            "button_url_1": "shopify://collections/forest-families",
+            "button_label_1": "Shop Best Sellers",
+            "button_url_1": "shopify://collections/best-sellers",
             "button_tag_1": "",
-            "button_label_2": "",
-            "button_url_2": "",
+            "button_label_2": "Shop Top Gifts",
+            "button_url_2": "shopify://collections/top-gifts",
             "button_tag_2": "",
-            "text_alignment": "bottom left"
+            "text_alignment": "center center"
           }
         }
       },
@@ -40,9 +40,9 @@
         "16359276425da8ce46-1"
       ],
       "settings": {
-        "height": "full",
-        "height_desktop": 700,
-        "height_mobile": 700,
+        "height": "adapt",
+        "height_desktop": 380,
+        "height_mobile": 180,
         "full_width": true,
         "mobile_overlay_under": false,
         "overlay_style": "shadow",
@@ -53,96 +53,73 @@
         "accessibility_info": ""
       }
     },
-    "slideshow_C7Jmag": {
-      "type": "slideshow",
+    "collection_list_BzgHGC": {
+      "type": "collection-list",
       "blocks": {
-        "image_LKKwgk": {
-          "type": "image",
+        "collection_btRm84": {
+          "type": "collection",
           "settings": {
-            "image": "shopify://shop_images/Summer_hero.png",
-            "mobile_image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._4th_2024_-Web-2.jpg",
-            "slide_link": "",
-            "subheading": "",
-            "title": "Summer Must-Haves",
-            "heading_max_width": 14,
-            "title_size": 60,
-            "title_size_mobile": 32,
-            "use_h1": true,
-            "text": "<p>From breathable fabrics to playful prints, discover must-haves made for sunny days</p>",
-            "enlarge_text": true,
-            "button_label_1": "Explore Summer Picks",
-            "button_url_1": "shopify://collections/summer-picks",
-            "button_tag_1": "",
-            "button_label_2": "",
-            "button_url_2": "",
-            "button_tag_2": "",
-            "text_alignment": "center left"
+            "collection": "sleep-bags",
+            "tag": "",
+            "image": "shopify://shop_images/LuluLollipopEdits-09852.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
           }
         },
-        "image_6LJNDb": {
-          "type": "image",
+        "collection_3Y8JJd": {
+          "type": "collection",
           "settings": {
-            "image": "shopify://shop_images/Alphabet_Smiles_PRINT.png",
-            "slide_link": "",
-            "subheading": "From A to Z, With Love",
-            "title": "Alphabet Smiles Is Here",
-            "heading_max_width": 14,
-            "title_size": 60,
-            "title_size_mobile": 32,
-            "use_h1": false,
-            "text": "<p>Every letter comes with a kind word—because little ones deserve to grow up wrapped in positivity.</p>",
-            "enlarge_text": true,
-            "button_label_1": "Shop the print",
-            "button_url_1": "shopify://collections/alphabet-smiles",
-            "button_tag_1": "",
-            "button_label_2": "",
-            "button_url_2": "",
-            "button_tag_2": "",
-            "text_alignment": "center left"
+            "collection": "sleepers",
+            "tag": "",
+            "image": "shopify://shop_images/LuluLollipopEdits-09487.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
           }
         },
-        "image_866Gfc": {
-          "type": "image",
+        "collection_xh3HLz": {
+          "type": "collection",
           "settings": {
-            "image": "shopify://shop_images/lightweight_sleep_bag.png",
-            "mobile_image": "shopify://shop_images/BA9003U.PSH_Muslin_Sleep_Bag_-_Lightweight_Painterly_Seahorse_3W.jpg",
-            "slide_link": "",
-            "subheading": "",
-            "title": "The Coolest Sleep of the Summer",
-            "heading_max_width": 14,
-            "title_size": 60,
-            "title_size_mobile": 32,
-            "use_h1": false,
-            "text": "<p>Made for warmer nights, our 0.5 TOG Sleep Bags are breathable, buttery-soft, and baby-approved.</p>",
-            "enlarge_text": true,
-            "button_label_1": "Shop Lightweight Sleep Bags",
-            "button_url_1": "shopify://collections/0-5-tog",
-            "button_tag_1": "",
-            "button_label_2": "",
-            "button_url_2": "",
-            "button_tag_2": "",
-            "text_alignment": "center left"
+            "collection": "suction-plates",
+            "tag": "",
+            "image": "shopify://shop_images/LuluLollipopEdits-01064.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_NTfUeq": {
+          "type": "collection",
+          "settings": {
+            "collection": "long-sleeve-bibs",
+            "tag": "",
+            "image": "shopify://shop_images/LuluLollipopEdits-08796.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
           }
         }
       },
       "block_order": [
-        "image_LKKwgk",
-        "image_6LJNDb",
-        "image_866Gfc"
+        "collection_btRm84",
+        "collection_3Y8JJd",
+        "collection_xh3HLz",
+        "collection_NTfUeq"
       ],
-      "disabled": true,
       "settings": {
-        "height": "full",
-        "height_desktop": 700,
-        "height_mobile": 700,
-        "full_width": true,
-        "mobile_overlay_under": false,
-        "overlay_style": "full image-overlay--bg-shadow",
-        "transition": "fade",
-        "navigation": "dots",
-        "autoplay": true,
-        "autoplay_speed": 7,
-        "accessibility_info": ""
+        "title": "Shop the Highlights",
+        "text": "",
+        "text_alignment": "center",
+        "enable_carousel": false,
+        "grid": 4,
+        "color_scheme": "1",
+        "full_width": false,
+        "coll_grid_image_shape": "portrait-45",
+        "coll_grid_image_position": "center center",
+        "coll_thumb_mob_per_row": "2",
+        "coll_grid_show_count": false,
+        "coll_text_position": "below",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_y": "center",
+        "coll_button_style": "primary"
       }
     },
     "logo_list_kYmwNX": {
@@ -255,20 +232,37 @@
       "type": "custom-product-highlight",
       "name": "Highlighted Collection",
       "settings": {
-        "title": "Bundle up and Save",
+        "title": "Bundle Up & Save Even More",
         "text": "<p>Everything Baby Needs — All Wrapped Up </p>",
         "image": "shopify://shop_images/Gift_Box_1.jpg",
         "order": false,
         "product_list": [
           "newborn-sleep-gift-bundle-forest-families",
           "newborn-sleep-bundle-stargazing-bear",
-          "baby-feeding-bundle-elephant",
-          "baby-learning-feeding-bundle-smiley-sharks"
+          "baby-learning-feeding-bundle-smiley-sharks",
+          "baby-learning-feeding-bundle-smiley-sharks-1"
         ],
         "button_label": "Shop bundles",
         "link": "shopify://collections/bundles-and-sets",
         "button_style": "primary",
         "color_scheme": "default"
+      }
+    },
+    "featured_collection_RcGTat": {
+      "type": "featured-collection",
+      "name": "Carousel",
+      "settings": {
+        "title": "Top Newborn Gifts",
+        "text": "",
+        "collection": "top-newborn-gifts",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 5,
+        "rows": 2,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": true,
+        "text_alignment": "center"
       }
     },
     "collection_list_zhMrUA": {
@@ -497,7 +491,7 @@
         "coll_button_style": "primary"
       }
     },
-    "featured_collection_RcGTat": {
+    "featured_collection_RQjf3y": {
       "type": "featured-collection",
       "name": "Best Sellers",
       "settings": {
@@ -648,87 +642,6 @@
         "show_view_all": true,
         "full_width": true,
         "text_alignment": "center"
-      }
-    },
-    "collection_list_BzgHGC": {
-      "type": "collection-list",
-      "blocks": {
-        "collection_btRm84": {
-          "type": "collection",
-          "settings": {
-            "collection": "sleep-swaddle",
-            "tag": "",
-            "image": "shopify://shop_images/LuluLollipopEdits-09852.jpg",
-            "subheading": "Sleep & Bedding",
-            "button_label": ""
-          }
-        },
-        "collection_3Y8JJd": {
-          "type": "collection",
-          "settings": {
-            "collection": "wear",
-            "tag": "",
-            "image": "shopify://shop_images/LuluLollipopEdits-09487.jpg",
-            "subheading": "Clothing",
-            "button_label": ""
-          }
-        },
-        "collection_xh3HLz": {
-          "type": "collection",
-          "settings": {
-            "collection": "eat",
-            "tag": "",
-            "image": "shopify://shop_images/LuluLollipopEdits-08796.jpg",
-            "subheading": "Feeding Essentials",
-            "button_label": ""
-          }
-        },
-        "collection_NTfUeq": {
-          "type": "collection",
-          "settings": {
-            "collection": "play",
-            "tag": "",
-            "image": "shopify://shop_images/Teethers-22_2c1dfa8a-8683-4cd1-aeef-cc8f3db49f34.jpg",
-            "subheading": "Toys & Play",
-            "button_label": ""
-          }
-        },
-        "collection_Rrwynm": {
-          "type": "collection",
-          "disabled": true,
-          "settings": {
-            "collection": "bathe",
-            "tag": "",
-            "image": "shopify://shop_images/TWMER_Muslin_Hooded_Towel_Set_Mermaids_5.jpg",
-            "subheading": "Bathe",
-            "button_label": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection_btRm84",
-        "collection_3Y8JJd",
-        "collection_xh3HLz",
-        "collection_NTfUeq",
-        "collection_Rrwynm"
-      ],
-      "settings": {
-        "title": "Shop by Category",
-        "text": "",
-        "text_alignment": "center",
-        "enable_carousel": false,
-        "grid": 4,
-        "color_scheme": "1",
-        "full_width": false,
-        "coll_grid_image_shape": "portrait-23",
-        "coll_grid_image_position": "center center",
-        "coll_thumb_mob_per_row": "2",
-        "coll_grid_show_count": false,
-        "coll_text_position": "below",
-        "coll_text_position_under_mobile": false,
-        "coll_thumb_text_align_x": "center",
-        "coll_thumb_text_align_y": "center",
-        "coll_button_style": "primary"
       }
     },
     "testimonials_VgkpHw": {
@@ -1053,15 +966,15 @@
   },
   "order": [
     "16359276425da8ce46",
-    "slideshow_C7Jmag",
+    "collection_list_BzgHGC",
     "logo_list_kYmwNX",
     "custom_product_highlight_jV6CAX",
-    "collection_list_zhMrUA",
     "featured_collection_RcGTat",
+    "collection_list_zhMrUA",
+    "featured_collection_RQjf3y",
     "logo_list_pgf7FP",
     "multi_column_gyeJnc",
     "featured_collection_K3tJdQ",
-    "collection_list_BzgHGC",
     "testimonials_VgkpHw",
     "custom_product_highlight_PMwqLc",
     "collection_list_9AdzKx",

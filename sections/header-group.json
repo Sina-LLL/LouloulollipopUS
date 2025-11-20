@@ -113,6 +113,7 @@
         "1601308125690",
         "1601308127822"
       ],
+      "disabled": true,
       "settings": {
         "head_not_home_only": false,
         "head_not_col_bg": "#6a8b95",
