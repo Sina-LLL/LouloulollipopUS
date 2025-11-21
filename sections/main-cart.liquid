@@ -378,11 +378,7 @@
         {%- endif -%}
       </div>
     {% endif %}
-
-    {%- if settings.show_free_shipping_bar -%}
-      <div class="slim-container align-center" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
-        {%- render 'free-shipping-bar' -%}
-        <div class="lightly-spaced-row not-in-quickbuy" style="margin-bottom: 0; pointer-events: auto;"><div class="product-info-block  text-box" style="--box-color: #fbeae5; --box-text-color: 174, 39, 0; pointer-events: auto;">
+<div class="lightly-spaced-row not-in-quickbuy" style="margin-bottom: 0; pointer-events: auto;"><div class="product-info-block  text-box" style="--box-color: #fbeae5; --box-text-color: 174, 39, 0; pointer-events: auto;">
                 
                   <div class=" rte cf">
                     {% assign cart_total_cents = cart.total_price %}
@@ -412,6 +408,10 @@
                   </div>
                 </div>
               </div>
+    {%- if settings.show_free_shipping_bar -%}
+      <div class="slim-container align-center" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
+        {%- render 'free-shipping-bar' -%}
+        
       </div>
     {%- endif -%}
 
