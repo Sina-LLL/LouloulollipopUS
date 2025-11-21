@@ -271,7 +271,23 @@
                 <svg class="icon icon--small icon--type-price_tag" stroke-width="1" aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="currentColor" d="M7.59 1.34a1 1 0 01.7-.29h5.66a1 1 0 011 1v5.66a1 1 0 01-.3.7L7.6 15.5a1 1 0 01-1.42 0L.52 9.83a1 1 0 010-1.42l7.07-7.07zm6.36 6.37l-7.07 7.07-5.66-5.66L8.3 2.05h5.66v5.66z" fill-rule="evenodd"></path>
                   <path fill="currentColor" d="M9.7 6.3a1 1 0 101.42-1.42 1 1 0 00-1.41 1.41zM9 7a2 2 0 102.83-2.83A2 2 0 009 7z" fill-rule="evenodd"></path>
                 </svg> 
-                <div class="with-icon__beside rte cf"><p>Buy 3, get 10% off!</p></div></div>
+                <div class="with-icon__beside rte cf">
+                  {% assign cart_total = cart.total_price | divided_by: 100.0 %}
+
+                  {% if cart_total < 50 %}
+                    {% assign diff = 50 | minus: cart_total %}
+                    <p>Add {{ diff | money_without_trailing_zeros }} more to unlock <strong>20% off</strong></p>
+
+                  {% elsif cart_total < 95 %}
+                    {% assign diff = 95 | minus: cart_total %}
+                    <p>Add {{ diff | money_without_trailing_zeros }} more to unlock <strong>25% off</strong></p>
+
+                  {% else %}
+                    <p>You unlocked our <strong>biggest Black Friday savings!</strong></p>
+                  {% endif %}
+
+                </div>
+              </div>
               </div>
             {% endif %}
             <div class="price-container" {{ block.shopify_attributes }}>
