@@ -502,7 +502,7 @@
     "animations_disabled_first_section": false,
     "cart_type": "page",
     "after_add_to_cart": "notification",
-    "show_free_shipping_bar": true,
+    "show_free_shipping_bar": false,
     "free_shipping_amounts": "USD:6500",
     "free_shipping_bar_col_under": "#4f676e",
     "free_shipping_bar_col_met": "#78b742",
