@@ -1089,7 +1089,26 @@
   {% endif %}
 {% endif %}
 
-                    
+          <script>
+function refreshDiscountMessage() {
+  fetch(window.location.pathname + '?section_id=discount-message') // refresh snippet
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('cart-discount-message').innerHTML = html;
+    });
+}
+
+// Update on page load
+document.addEventListener('DOMContentLoaded', refreshDiscountMessage);
+
+// Listen for add-to-cart buttons
+document.querySelectorAll('form[action^="/cart/add"]').forEach(form => {
+  form.addEventListener('submit', () => {
+    setTimeout(refreshDiscountMessage, 500);
+  });
+});
+</script>
+          
 <script>
 
   // Shipping hover
