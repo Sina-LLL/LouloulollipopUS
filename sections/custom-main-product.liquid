@@ -271,7 +271,7 @@
                   <path fill="currentColor" d="M9.7 6.3a1 1 0 101.42-1.42 1 1 0 00-1.41 1.41zM9 7a2 2 0 102.83-2.83A2 2 0 009 7z" fill-rule="evenodd"></path>
                 </svg> 
                   <div class="with-icon__beside rte cf">
-                    {% assign cart_total = cart.total_price  %}
+                    {% assign cart_total = cart.total_price | divided_by: 100.0 %}
 
                     {% if cart_total < 50 %}
                       {% assign diff = 50 | minus: cart_total %}
