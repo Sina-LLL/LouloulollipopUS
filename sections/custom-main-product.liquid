@@ -276,14 +276,14 @@
                       {% assign diff_cents = 5000 | minus: cart_total_cents %}
                       <p>
                         You're saving <strong>15%</strong> 🎉  <br>
-                        Add {{ diff_cents | money_without_currency }} more to unlock <strong>20% off</strong>.
+                        Add ${{ diff_cents | money_without_currency }} more to unlock <strong>20% off</strong>.
                       </p>
 
                     {% elsif cart_total_cents < 9500 %}
                       {% assign diff_cents = 9500 | minus: cart_total_cents %}
                       <p>
                         You're saving <strong>20%</strong> 🎉  <br>
-                        Add {{ diff_cents | money_without_currency }} more to unlock <strong>25% off</strong>.
+                        Add ${{ diff_cents | money_without_currency }} more to unlock <strong>25% off</strong>.
                       </p>
 
                     {% else %}
