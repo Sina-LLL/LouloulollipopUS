@@ -255,15 +255,15 @@
       "type": "custom-product-highlight",
       "name": "Highlighted Collection",
       "settings": {
-        "title": "Bundle up and Save",
+        "title": "Bundle up",
         "text": "<p>Everything Baby Needs — All Wrapped Up </p>",
         "image": "shopify://shop_images/Gift_Box_1.jpg",
         "order": false,
         "product_list": [
           "newborn-sleep-gift-bundle-forest-families",
           "newborn-sleep-bundle-stargazing-bear",
-          "baby-feeding-bundle-elephant",
-          "baby-learning-feeding-bundle-smiley-sharks"
+          "baby-learning-feeding-bundle-smiley-sharks",
+          "baby-learning-feeding-bundle-smiley-sharks-1"
         ],
         "button_label": "Shop bundles",
         "link": "shopify://collections/bundles-and-sets",
