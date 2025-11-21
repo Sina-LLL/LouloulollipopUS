@@ -273,17 +273,13 @@
   {% assign cart_total_cents = cart.total_price %}
 
   {% if cart_total_cents < 5000 %}
-    {% assign diff_cents = 5000 | minus: cart_total_cents %}
-    You're saving <strong>15%</strong> 🎉  
-    Add {{ diff_cents | money_without_currency }} more to unlock <strong>20% off</strong>.
-  
+    {% assign diff = 5000 | minus: cart_total_cents %}
+    You're saving <strong>15%</strong>. Add {{ diff | money_without_currency }} more to unlock <strong>20% off</strong>.
   {% elsif cart_total_cents < 9500 %}
-    {% assign diff_cents = 9500 | minus: cart_total_cents %}
-    You're saving <strong>20%</strong> 🎉  
-    Add {{ diff_cents | money_without_currency }} more to unlock <strong>25% off</strong>.
-  
+    {% assign diff = 9500 | minus: cart_total_cents %}
+    You're saving <strong>20%</strong>. Add {{ diff | money_without_currency }} more to unlock <strong>25% off</strong>.
   {% else %}
-    You've unlocked <strong>25% off — our biggest Black Friday savings!</strong> 🎉
+    You've unlocked <strong>25% off — our biggest Black Friday savings!</strong>
   {% endif %}
 </div>
 
