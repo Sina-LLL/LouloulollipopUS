@@ -1131,6 +1131,41 @@
   });
 });
 </script>
+<script>
+async function updateTierMessage() {
+  const response = await fetch('/cart.js');
+  const cart = await response.json();
+
+  let message = '';
+  const total = cart.total_price; // cents
+
+  if (total < 5000) {
+    const diff = ((5000 - total) / 100).toFixed(2);
+    message = `You're saving <strong>15%</strong> 🎉 Add $${diff} more to unlock <strong>20% off</strong>.`;
+  } else if (total < 9500) {
+    const diff = ((9500 - total) / 100).toFixed(2);
+    message = `You're saving <strong>20%</strong> 🎉 Add $${diff} more to unlock <strong>25% off</strong>.`;
+  } else {
+    message = `You've unlocked <strong>25% off — our biggest Black Friday savings!</strong> 🎉`;
+  }
+
+  document.querySelector('#tier-message').innerHTML = message;
+}
+
+/* Listen for Shopify Theme AJAX cart events */
+document.addEventListener('cart:updated', updateTierMessage);
+
+/* For themes that don't fire cart:updated, intercept add-to-cart */
+document.addEventListener('DOMContentLoaded', () => {
+  const forms = document.querySelectorAll('form[action="/cart/add"]');
+  forms.forEach(form => {
+    form.addEventListener('submit', () => {
+      setTimeout(updateTierMessage, 300);
+    });
+  });
+});
+</script>
+
 {% schema %}
 {
   "name": "Custom Product pages",
