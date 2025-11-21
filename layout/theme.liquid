@@ -268,5 +268,42 @@
   <!-- Widget : Free Wolfie -->
   <div data-rebuy-id="256023"></div>
   <!-- End Widget : Free Wolfie -->
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  // Find all add-to-cart buttons
+  const addToCartButtons = document.querySelectorAll('button[name="add"]');
+
+  addToCartButtons.forEach((btn) => {
+    btn.addEventListener('click', function() {
+      // Slight delay so Shopify finishes adding to cart
+      setTimeout(updateTierMessage, 400);
+    });
+  });
+
+});
+
+async function updateTierMessage() {
+  const res = await fetch('/cart.js');
+  const cart = await res.json();
+
+  let total = cart.total_price; // cents
+  let message = '';
+
+  if (total < 5000) {
+    let diff = ((5000 - total) / 100).toFixed(2);
+    message = `You're saving <strong>15%</strong>. Add $${diff} more to unlock <strong>20% off</strong>.`;
+  } else if (total < 9500) {
+    let diff = ((9500 - total) / 100).toFixed(2);
+    message = `You're saving <strong>20%</strong>. Add $${diff} more to unlock <strong>25% off</strong>.`;
+  } else {
+    message = `You've unlocked <strong>25% off</strong> — our biggest Black Friday savings!`;
+  }
+
+  const box = document.querySelector('#tier-message');
+  if (box) box.innerHTML = message;
+}
+</script>
+
 </body>
 </html>
