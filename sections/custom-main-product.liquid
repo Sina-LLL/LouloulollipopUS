@@ -266,72 +266,11 @@
             </div>
 
           {% when 'price' %}
-              <div class="lightly-spaced-row not-in-quickbuy" style="margin-bottom: 0; pointer-events: auto;">
-  <div class="product-info-block text-box" style="--box-color: #fbeae5; --box-text-color: 174, 39, 0; pointer-events: auto;">
-    <div id="cart-discount-message" class="rte cf">
-      {% assign cart_total_cents = cart.total_price %}
+            <div id="cart-discount-message">
+              {% render 'product-discount-message' %}
+            </div>
 
-      {% if cart_total_cents < 5000 %}
-        {% assign diff_cents = 5000 | minus: cart_total_cents %}
-        <p>
-          You're saving <strong>15%</strong> 🎉  <br>
-          Add ${{ diff_cents | money_without_currency }} more to unlock <strong>20% off</strong>.
-        </p>
-
-      {% elsif cart_total_cents < 9500 %}
-        {% assign diff_cents = 9500 | minus: cart_total_cents %}
-        <p>
-          You're saving <strong>20%</strong> 🎉  <br>
-          Add ${{ diff_cents | money_without_currency }} more to unlock <strong>25% off</strong>.
-        </p>
-
-      {% else %}
-        <p>
-          You've unlocked <strong>25% off <br> Our biggest Black Friday savings!</strong> 🎉
-        </p>
-      {% endif %}
-    </div>
-  </div>
-</div>
-<script>
-  function updateDiscountMessage() {
-    fetch('/cart.js')
-      .then(response => response.json())
-      .then(cart => {
-        const cartTotalCents = cart.items_subtotal_price;
-        const container = document.getElementById('cart-discount-message');
-        let html = '';
-
-        if (cartTotalCents < 5000) {
-          const diffCents = 5000 - cartTotalCents;
-          html = `<p>You're saving <strong>15%</strong> 🎉 <br>
-                  Add $${(diffCents / 100).toFixed(2)} more to unlock <strong>20% off</strong>.</p>`;
-        } else if (cartTotalCents < 9500) {
-          const diffCents = 9500 - cartTotalCents;
-          html = `<p>You're saving <strong>20%</strong> 🎉 <br>
-                  Add $${(diffCents / 100).toFixed(2)} more to unlock <strong>25% off</strong>.</p>`;
-        } else {
-          html = `<p>You've unlocked <strong>25% off <br> Our biggest Black Friday savings!</strong> 🎉</p>`;
-        }
-
-        container.innerHTML = html;
-      });
-  }
-
-  // Update on page load
-  document.addEventListener('DOMContentLoaded', updateDiscountMessage);
-
-  // Listen for Shopify's cart update events
-  document.addEventListener('cart:updated', updateDiscountMessage);
-
-  // For themes that use jQuery AJAX add-to-cart:
-  if (window.jQuery) {
-    jQuery(document).on('click', '[data-add-to-cart]', function() {
-      setTimeout(updateDiscountMessage, 500); // slight delay to wait for cart update
-    });
-  }
-</script>
-
+              
             <div class="price-container" {{ block.shopify_attributes }}>
               <div class="product-info__price product-price product-price--large">
                 {% render 'price', product: product, show_currency_code: settings.product_currency_code_enabled, for_variant_picker: true, current_variant: current_variant %}
