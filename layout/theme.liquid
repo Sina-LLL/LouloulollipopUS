@@ -268,34 +268,6 @@
   <!-- Widget : Free Wolfie -->
   <div data-rebuy-id="256023"></div>
   <!-- End Widget : Free Wolfie -->
-  <script>
-async function updateTierMessage() {
-  const res = await fetch('/cart.js');
-  const cart = await res.json();
-
-  const total = cart.total_price; // in cents
-  let message = '';
-
-  if (total < 5000) {
-    const diff = ((5000 - total) / 100).toFixed(2);
-    message = `You're saving <strong>15%</strong>. Add $${diff} more to unlock <strong>20% off</strong>.`;
-  } else if (total < 9500) {
-    const diff = ((9500 - total) / 100).toFixed(2);
-    message = `You're saving <strong>20%</strong>. Add $${diff} more to unlock <strong>25% off</strong>.`;
-  } else {
-    message = `You've unlocked <strong>25% off — our biggest Black Friday savings!</strong>`;
-  }
-
-  const box = document.getElementById('tier-message');
-  if (box) box.innerHTML = message;
-}
-
-// 🔥 Symmetry AJAX cart event
-document.addEventListener('cart:refresh', updateTierMessage);
-
-// Also update on page load (in case page loads with items in cart)
-document.addEventListener('DOMContentLoaded', updateTierMessage);
-</script>
-
+  
 </body>
 </html>
