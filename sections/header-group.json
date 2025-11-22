@@ -14,8 +14,25 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_7cnEpc": {
+          "type": "announcement",
+          "settings": {
+            "text": "Up to 25% Off Everything",
+            "show_countdown": true,
+            "hide_on_end": false,
+            "end_date": "2025-12-02",
+            "end_time": "",
+            "number_font": "base",
+            "countdown_separator": "dash",
+            "use_custom_colors": false,
+            "bg_color": "#927c70",
+            "bg_gradient": "",
+            "text_color": "#ffffff"
+          }
+        },
         "announcement-2": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "We’re experiencing longer U.S. delivery times than usual — thank you for your patience!",
             "show_countdown": false,
@@ -49,6 +66,7 @@
         },
         "announcement-1": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Free Standard Shipping $65+",
             "show_countdown": false,
@@ -65,12 +83,13 @@
         }
       },
       "block_order": [
+        "announcement_7cnEpc",
         "announcement-2",
         "announcement_gLBKkX",
         "announcement-1"
       ],
       "settings": {
-        "message_font_size": 12,
+        "message_font_size": 16,
         "announcement_bar_col": "#6a8b95",
         "announcement_bar_gradient": "",
         "announcement_text_col": "#faf9f6",
