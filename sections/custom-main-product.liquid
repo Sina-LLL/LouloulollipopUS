@@ -266,6 +266,7 @@
             </div>
 
           {% when 'price' %}
+            {% comment %} Delete Below Post BFCM {% endcomment %}
               <div class="lightly-spaced-row not-in-quickbuy" style="margin-bottom: 0; pointer-events: auto;"><div class="product-info-block  text-box" style="--box-color: #fbeae5; --box-text-color: 174, 39, 0; pointer-events: auto;">
                 
                   <div class=" rte cf">
@@ -296,6 +297,8 @@
                   </div>
                 </div>
               </div>
+            {% comment %} Delete Above Post BFCM {% endcomment %}
+
             <div class="price-container" {{ block.shopify_attributes }}>
               <div class="product-info__price product-price product-price--large">
                 {% render 'price', product: product, show_currency_code: settings.product_currency_code_enabled, for_variant_picker: true, current_variant: current_variant %}
