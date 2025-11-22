@@ -378,6 +378,7 @@
         {%- endif -%}
       </div>
     {% endif %}
+    {% comment %} Delete below Post BFCM {% endcomment %}
     <div class="lightly-spaced-row align-center" style=" pointer-events: auto;">
       <div class="product-info-block  text-box" style="width: 500px; max-width: 100%; --box-color: #fbeae5; --box-text-color: 174, 39, 0; pointer-events: auto;">
           <div class=" rte cf">
@@ -414,6 +415,7 @@
           </div>
         </div>
       </div>
+      {% comment %} Delete Above Post BFCM {% endcomment %}
     {%- if settings.show_free_shipping_bar -%}
       <div class="slim-container align-center" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
         {%- render 'free-shipping-bar' -%}
