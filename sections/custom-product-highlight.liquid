@@ -1,5 +1,5 @@
 <div id="section-id-{{ section.id }}" class="{% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }} fully-padded-row--medium{% else %}fully-spaced-row--medium{% endif %}">
-  <div class="container container--no-max">
+  <div class="custom-product-highlight__container container container--no-max">
     <div class="flexible-layout flexible-layout--variable-columns valign-top ">
       <div class="desktop-only custom-product-highlight__image-container column text-column fade-in-up {% if section.settings.order %}column--order-push-desktop{% endif %}" {%- render 'animation-attrs', attrs: animation_attrs -%}>
         <div class="text-column__image lightly-spaced-row custom-product-highlight__image">  
