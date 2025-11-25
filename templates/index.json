@@ -61,7 +61,7 @@
           "settings": {
             "collection": "sleep-bags",
             "tag": "",
-            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Holiday_2024_-Web-9_1.png",
+            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Holiday_2024_-Web-9_1_f5b17858-2468-408d-93af-73509081b4ca.png",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -81,7 +81,7 @@
           "settings": {
             "collection": "sleepers",
             "tag": "",
-            "image": "shopify://shop_images/LoulouLollipopNov2025Holiday-01642.jpg",
+            "image": "shopify://shop_images/LoulouLollipopNov2025Holiday-01642_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -394,7 +394,7 @@
           "settings": {
             "collection": "gifts-under-50",
             "tag": "",
-            "image": "shopify://shop_images/BA9001U.BFG_Waffle_Sleep_Bag_1.0_Tog_Blue_Fog_51_a95f2b1f-82c8-4ba7-a182-086cb64e0385.jpg",
+            "image": "shopify://shop_images/LSET-010-MNT_Learning_Utensils_Set_Octopus_51_4.jpg",
             "subheading": "",
             "button_label": ""
           }
@@ -404,7 +404,7 @@
           "settings": {
             "collection": "top-rated-sleep",
             "tag": "",
-            "image": "shopify://shop_images/MuslinSleepBag-DitsyFloral_2_b00be904-490d-4595-89d0-5c4e77331aba.webp",
+            "image": "shopify://shop_images/LuluLollipopEdits-09189_9cfcb7a8-5aac-4381-8876-99a784945a27.jpg",
             "subheading": "",
             "button_label": ""
           }
@@ -414,7 +414,7 @@
           "settings": {
             "collection": "top-prints",
             "tag": "",
-            "image": "shopify://shop_images/BA1002UB.PLN_Sleeper_-_Planets_51.jpg",
+            "image": "shopify://shop_images/BA1002U.SHK_Sleeper_Sharks_52_67c16a80-3e5e-4c89-b341-6098c06dec7f.jpg",
             "subheading": "",
             "button_label": ""
           }
@@ -568,7 +568,7 @@
           "settings": {
             "collection": "sleepers",
             "tag": "",
-            "image": "shopify://shop_images/LuluLollipopEdits-01108.jpg",
+            "image": "shopify://shop_images/LuluLollipopEdits-01108_e4dc987f-40a5-41d6-8ed9-0cae759083e2.jpg",
             "subheading": "Clothing",
             "button_label": ""
           }
@@ -578,7 +578,7 @@
           "settings": {
             "collection": "eat",
             "tag": "",
-            "image": "shopify://shop_images/SPL-009-BFG_SnackPlate-Sharks_52.jpg",
+            "image": "shopify://shop_images/SPL-009-BFG_SnackPlate-Sharks_52_61f6f851-3d5f-4968-a154-aa8b316915d5.jpg",
             "subheading": "Feeding",
             "button_label": ""
           }
@@ -588,7 +588,7 @@
           "settings": {
             "collection": "play",
             "tag": "",
-            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._4th_2024_-Web-43.jpg",
+            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._4th_2024_-Web-43_6eb00ecb-09e6-4b33-bc0d-c24200eeee74.jpg",
             "subheading": "Toys & Play",
             "button_label": ""
           }
