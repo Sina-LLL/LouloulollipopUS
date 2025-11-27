@@ -540,6 +540,7 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
   margin-bottom: 0;
 }
 .shipping-info-tooltip{
+  z-index: 30;
   display:none;
   position: absolute;
   top: 50px;
