@@ -536,11 +536,6 @@
         "disabled": false,
         "settings": {}
       },
-      "2153490007123654574": {
-        "type": "shopify://apps/consentmo-gdpr/blocks/gdpr_cookie_consent/4fbe573f-a377-4fea-9801-3ee0858cae41",
-        "disabled": false,
-        "settings": {}
-      },
       "13808347755494404075": {
         "type": "shopify://apps/noindexly-sitemap-manager/blocks/gropulse-noindex/1ebb161d-2855-45b0-be8b-0de45dbb5725",
         "disabled": false,
@@ -551,8 +546,13 @@
         "disabled": false,
         "settings": {
           "auto_remove_gift": true,
-          "auto_refresh": false
+          "auto_refresh": true
         }
+      },
+      "2153490007123654574": {
+        "type": "shopify://apps/consentmo-gdpr/blocks/gdpr_cookie_consent/4fbe573f-a377-4fea-9801-3ee0858cae41",
+        "disabled": false,
+        "settings": {}
       }
     }
   }
