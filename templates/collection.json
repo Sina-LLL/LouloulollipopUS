@@ -13,8 +13,8 @@
       "type": "main-collection",
       "settings": {
         "show_title": true,
-        "show_image_behind_heading": false,
-        "heading_image_height": "huge",
+        "show_image_behind_heading": true,
+        "heading_image_height": "large",
         "overlay_style": "shadow",
         "coll_desc_pos": "below",
         "coll_num_per_page_int": 50,
@@ -36,14 +36,14 @@
         "sort_show_price": true,
         "sort_show_date": false,
         "related_collections": "{{ collection.metafields.custom.subcollections.value }}",
-        "related_collections_style": "gallery",
-        "rel_coll_gall_aspect_ratio": "1",
+        "related_collections_style": "buttons",
+        "rel_coll_gall_aspect_ratio": "2",
         "image_position": "center center",
-        "rel_coll_gall_enable_margin": false,
-        "rel_coll_gall_full_width": false,
+        "rel_coll_gall_enable_margin": true,
+        "rel_coll_gall_full_width": true,
         "rel_coll_gall_overlay_style": "full image-overlay--bg-shadow",
-        "rel_coll_gall_text_alignment": "center center",
-        "rel_coll_grid_mobile": "2"
+        "rel_coll_gall_text_alignment": "bottom center",
+        "rel_coll_grid_mobile": "1"
       }
     }
   },
