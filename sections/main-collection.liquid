@@ -155,7 +155,7 @@
             {%- endif -%}
 
             {% if collection.description != blank and section.settings.coll_desc_pos == 'above' %}
-              <div class="text-overlay__rte rte cf align-center reading-width ">{{ collection.description }}</div>
+              <div class="text-overlay__rte rte cf align-center reading-width bold">{{ collection.description }}</div>
             {% endif %}
 
             {%- if related_collections_count > 0 and section.settings.related_collections_style == 'buttons' -%}
