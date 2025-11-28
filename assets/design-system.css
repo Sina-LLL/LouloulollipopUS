@@ -16,6 +16,9 @@ h6,.h6,
 .toggle-btn,
 .filter-group__heading__text{
 }
+.bold{
+  font-weight:600;
+}
 body{
   font-family: sofia-pro, sans-serif;
 }
