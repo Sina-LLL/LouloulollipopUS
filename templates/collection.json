@@ -16,7 +16,7 @@
         "show_image_behind_heading": true,
         "heading_image_height": "large",
         "overlay_style": "shadow",
-        "coll_desc_pos": "below",
+        "coll_desc_pos": "above",
         "coll_num_per_page_int": 50,
         "grid": 4,
         "show_vendor": false,
