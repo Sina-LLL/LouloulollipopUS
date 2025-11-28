@@ -39,7 +39,7 @@
         <related-collection-link-buttons class="related-collection-links related-collection-links--buttons align-center{% if header_image_enabled %} image-overlay__over{% endif %}" data-expander-btn-text="{{ 'sections.collection.view_all_related_collections' | t }}">
           {%- for loop_collection in section.settings.related_collections -%}
             {%- unless loop_collection.handle == collection.handle -%}
-              <a class="btn btn--secondary" href="{{ loop_collection.url }}">{{ loop_collection.title | escape }}</a>
+              <a class="btn btn--primary" href="{{ loop_collection.url }}">{{ loop_collection.title | escape }}</a>
             {%- endunless -%}
           {%- endfor -%}
         </related-collection-link-buttons>
