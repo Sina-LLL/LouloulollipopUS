@@ -763,6 +763,7 @@ h1.product-title {
 }
 .btn--secondary{
   border:none;
+  font-weight: 600;
 }
 .custom-product-features .theme-img{
   border-radius:10px;
