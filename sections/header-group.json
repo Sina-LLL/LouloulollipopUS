@@ -17,10 +17,10 @@
         "announcement_7cnEpc": {
           "type": "announcement",
           "settings": {
-            "text": "<a href=\"/collections/best-sellers\" title=\"Best Sellers\">Black Friday Sale Up to 25% Off</a>",
+            "text": "<a href=\"/collections/best-sellers\" title=\"Best Sellers\">Cyber Monday Sale Up to 25% Off</a>",
             "show_countdown": true,
             "hide_on_end": false,
-            "end_date": "2025-11-30",
+            "end_date": "2025-12-03",
             "end_time": "",
             "number_font": "base",
             "countdown_separator": "dash",
@@ -90,7 +90,7 @@
       ],
       "settings": {
         "message_font_size": 16,
-        "announcement_bar_col": "#927c70",
+        "announcement_bar_col": "#db3f30",
         "announcement_bar_gradient": "",
         "announcement_text_col": "#faf9f6",
         "show_social_icons": false,
