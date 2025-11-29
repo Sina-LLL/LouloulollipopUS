@@ -122,6 +122,23 @@
         "coll_button_style": "primary"
       }
     },
+    "featured_collection_bY6q7L": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "Sale On Sale",
+        "text": "<p>Our sale section gets extra Black Friday savings</p>",
+        "collection": "sale",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 4,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "center"
+      }
+    },
     "custom_product_highlight_jV6CAX": {
       "type": "custom-product-highlight",
       "name": "Highlighted Collection",
@@ -131,10 +148,10 @@
         "image": "shopify://shop_images/LoulouLollipopNov2025Holiday-00358.jpg",
         "order": false,
         "product_list": [
-          "muslin-swaddle-magical-dragons",
-          "tencel-sleep-bag-1-0-tog-stargazing-bear",
-          "muslin-swaddle-new-york-city",
-          "muslin-fitted-crib-sheet-adventure-begins"
+          "long-sleeve-pajama-set-stargazing-bear",
+          "long-sleeve-pajama-set-forest-families",
+          "bandana-bib-set-2-pack-bears-on-bikes",
+          "snack-plate-bunny"
         ],
         "button_label": "Shop Top Newborn Gifts",
         "link": "shopify://collections/top-newborn-gifts",
@@ -1078,6 +1095,7 @@
   "order": [
     "16359276425da8ce46",
     "collection_list_BzgHGC",
+    "featured_collection_bY6q7L",
     "custom_product_highlight_jV6CAX",
     "featured_collection_RcGTat",
     "collection_list_zhMrUA",
