@@ -123,7 +123,7 @@
         "collection_9fk8m7": {
           "type": "collection",
           "settings": {
-            "collection": "sippy-cups",
+            "collection": "straw-cups",
             "image": "shopify://shop_images/TCUP-003-BLU_03_2d33849b-fd20-4cb8-99ab-cdf7eceb6942.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
