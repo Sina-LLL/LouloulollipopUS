@@ -148,6 +148,24 @@
                       {% else %}
                         <h2 class="text-overlay__title h1 has-motion">{% render 'multiline-text' with block.settings.title %}</h2>
                       {% endif %}
+                     {% comment %} TIER BADGES BFCM {% endcomment %}
+                      <div class="tier-badges">
+                        <div class="tier-badge">
+                          15% OFF
+                          <span>orders under $50</span>
+                        </div>
+
+                        <div class="tier-badge">
+                          20% OFF
+                          <span>$50–$95</span>
+                        </div>
+
+                        <div class="tier-badge">
+                          25% OFF
+                          <span>$95+</span>
+                        </div>
+                      </div>
+
                     </div>
                   {%- endif -%}
                   {%- if block.settings.text != blank -%}
@@ -217,7 +235,36 @@
 
   {%- unless section.settings.full_width -%}</div>{%- endunless -%}
 </div>
+<style>
+  .tier-badges {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+  }
 
+  .tier-badge {
+    background: #FAF9F6;
+    border-radius: 50px;
+    padding: 8px 14px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.3;
+    font-weight: 600;
+    color: #1d1d1d;
+    border: 1px solid #B3C3C9;
+    min-width: 90px;
+  }
+
+  .tier-badge span {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    opacity: 0.8;
+    margin-top: 2px;
+  }
+</style>
 
 {% schema %}
 {

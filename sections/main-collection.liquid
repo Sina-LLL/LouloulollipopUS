@@ -4,7 +4,7 @@
 <!--  -->
 
 
-<div data-section-id="{{ section.id }}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%} class="TEST">
+<div data-section-id="{{ section.id }}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%} class="">
 {% paginate collection.products by section.settings.coll_num_per_page_int %}
 
 {%- liquid
@@ -39,7 +39,7 @@
         <related-collection-link-buttons class="related-collection-links related-collection-links--buttons align-center{% if header_image_enabled %} image-overlay__over{% endif %}" data-expander-btn-text="{{ 'sections.collection.view_all_related_collections' | t }}">
           {%- for loop_collection in section.settings.related_collections -%}
             {%- unless loop_collection.handle == collection.handle -%}
-              <a class="btn btn--tertiary" href="{{ loop_collection.url }}">{{ loop_collection.title | escape }}</a>
+              <a class="btn btn--primary" href="{{ loop_collection.url }}">{{ loop_collection.title | escape }}</a>
             {%- endunless -%}
           {%- endfor -%}
         </related-collection-link-buttons>
@@ -151,11 +151,11 @@
         <div class="text-overlay__inner">
           <div class="text-overlay__text">
             {%- if section.settings.show_title -%}
-              <h1 class="text-overlay__title super-large-text">{{ collection.title | escape }}</h1>
+              <h1 class="h2 text-overlay__title super-large-text">{{ collection.title | escape }}</h1>
             {%- endif -%}
 
             {% if collection.description != blank and section.settings.coll_desc_pos == 'above' %}
-              <div class="text-overlay__rte rte cf align-center reading-width large-text">{{ collection.description }}</div>
+              <div class="text-overlay__rte rte cf align-center reading-width bold">{{ collection.description }}</div>
             {% endif %}
 
             {%- if related_collections_count > 0 and section.settings.related_collections_style == 'buttons' -%}

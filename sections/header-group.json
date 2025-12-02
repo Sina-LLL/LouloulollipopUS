@@ -14,8 +14,25 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_7cnEpc": {
+          "type": "announcement",
+          "settings": {
+            "text": "<a href=\"/collections/best-sellers\" title=\"Best Sellers\">Cyber Monday Sale Up to 25% Off</a>",
+            "show_countdown": true,
+            "hide_on_end": false,
+            "end_date": "2025-12-03",
+            "end_time": "",
+            "number_font": "base",
+            "countdown_separator": "dash",
+            "use_custom_colors": false,
+            "bg_color": "#927c70",
+            "bg_gradient": "",
+            "text_color": "#ffffff"
+          }
+        },
         "announcement-2": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "We’re experiencing longer U.S. delivery times than usual — thank you for your patience!",
             "show_countdown": false,
@@ -49,6 +66,7 @@
         },
         "announcement-1": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Free Standard Shipping $65+",
             "show_countdown": false,
@@ -65,19 +83,64 @@
         }
       },
       "block_order": [
+        "announcement_7cnEpc",
         "announcement-2",
         "announcement_gLBKkX",
         "announcement-1"
       ],
       "settings": {
-        "message_font_size": 14,
-        "announcement_bar_col": "#6a8b95",
+        "message_font_size": 16,
+        "announcement_bar_col": "#db3f30",
         "announcement_bar_gradient": "",
         "announcement_text_col": "#faf9f6",
-        "show_social_icons": true,
+        "show_social_icons": false,
         "menu": "",
         "enable_country_selector": false,
         "enable_language_selector": false
+      }
+    },
+    "store-messages": {
+      "type": "store-messages",
+      "blocks": {
+        "1601308104445": {
+          "type": "message",
+          "settings": {
+            "heading": "15% OFF",
+            "subheading": "For orders under $50",
+            "link_url": ""
+          }
+        },
+        "1601308125690": {
+          "type": "message",
+          "settings": {
+            "heading": "20% OFF",
+            "subheading": "For orders from $50 - $95",
+            "link_url": ""
+          }
+        },
+        "1601308127822": {
+          "type": "message",
+          "settings": {
+            "heading": "25% OFF",
+            "subheading": "For orders of $95 or more",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "1601308104445",
+        "1601308125690",
+        "1601308127822"
+      ],
+      "disabled": true,
+      "settings": {
+        "head_not_home_only": false,
+        "head_not_col_bg": "#6a8b95",
+        "head_not_col_txt1": "#ffffff",
+        "head_not_col_txt2": "#ffffff",
+        "head_not_mob_show": false,
+        "head_not_mob_text": "",
+        "head_not_mob_url": ""
       }
     },
     "header": {
@@ -141,9 +204,9 @@
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "Bathe",
-            "image": "shopify://shop_images/WASHSHK_Washcloth_Set_Silly_Seals.png",
-            "title": "Washcloths",
-            "link_url": "shopify://collections/washcloths"
+            "image": "shopify://shop_images/WBGUNB_WetDry_Bag_-_Unicorn_Ballet_02.jpg",
+            "title": "Wet Dry Bags",
+            "link_url": "shopify://collections/wet-bags"
           }
         },
         "menu_promotion_small_pTVJy3": {
@@ -262,7 +325,7 @@
         "mobile_logo_img_width_int": 180,
         "logo_h1": false,
         "enable_sticky": true,
-        "enable_transparent": true,
+        "enable_transparent": false,
         "transparent_color": "#ffffff",
         "transparent_logo": "shopify://shop_images/LLL-Logo_4x_a59d88f8-405b-45e2-9a2b-8e05445c7b63.png",
         "menu_linklist": "2025_main-menu-tarrif-update",
@@ -280,55 +343,11 @@
         "icon_strategy": "icons_only",
         "cart_icon": "basket"
       }
-    },
-    "store-messages": {
-      "type": "store-messages",
-      "blocks": {
-        "1601308104445": {
-          "type": "message",
-          "settings": {
-            "heading": "",
-            "subheading": "Free shipping on orders over $100",
-            "link_url": ""
-          }
-        },
-        "1601308125690": {
-          "type": "message",
-          "settings": {
-            "heading": "",
-            "subheading": "Free Click & Collect to US stores*",
-            "link_url": ""
-          }
-        },
-        "1601308127822": {
-          "type": "message",
-          "settings": {
-            "heading": "",
-            "subheading": "Free and easy domestic returns",
-            "link_url": ""
-          }
-        }
-      },
-      "block_order": [
-        "1601308104445",
-        "1601308125690",
-        "1601308127822"
-      ],
-      "disabled": true,
-      "settings": {
-        "head_not_home_only": false,
-        "head_not_col_bg": "#f4f6f8",
-        "head_not_col_txt1": "#171717",
-        "head_not_col_txt2": "#4c4c4b",
-        "head_not_mob_show": true,
-        "head_not_mob_text": "Free shipping on orders over $100",
-        "head_not_mob_url": ""
-      }
     }
   },
   "order": [
     "announcement-bar",
-    "header",
-    "store-messages"
+    "store-messages",
+    "header"
   ]
 }
