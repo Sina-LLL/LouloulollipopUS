@@ -169,6 +169,15 @@
             "button_label": ""
           }
         },
+        "collection_ExCE9F": {
+          "type": "collection",
+          "settings": {
+            "collection": "stargazing-bear",
+            "tag": "",
+            "subheading": "Stargazing Bear",
+            "button_label": ""
+          }
+        },
         "collection_BbdfXk": {
           "type": "collection",
           "settings": {
@@ -202,15 +211,6 @@
             "collection": "unicorn-ballet",
             "tag": "",
             "subheading": "Unicorn Ballet",
-            "button_label": ""
-          }
-        },
-        "collection_ExCE9F": {
-          "type": "collection",
-          "settings": {
-            "collection": "stargazing-bear",
-            "tag": "",
-            "subheading": "Stargazing Bear",
             "button_label": ""
           }
         },
@@ -343,11 +343,11 @@
       },
       "block_order": [
         "collection_rEV79r",
+        "collection_ExCE9F",
         "collection_BbdfXk",
         "collection_tCMDnh",
         "collection_FhR9Rc",
         "collection_m7DJDa",
-        "collection_ExCE9F",
         "collection_dGF3f4",
         "collection_aHLB8h",
         "collection_eU9Ecq",
