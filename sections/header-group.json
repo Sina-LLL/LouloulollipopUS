@@ -67,7 +67,7 @@
         "announcement_jKG3Y7": {
           "type": "announcement",
           "settings": {
-            "text": "<strong>✨ Order by Dec 10 for guaranteed holiday delivery!</strong>",
+            "text": "✨ Order by Dec 10 for holiday delivery!",
             "show_countdown": false,
             "hide_on_end": false,
             "end_date": "",

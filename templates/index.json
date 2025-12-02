@@ -15,22 +15,22 @@
         "16359276425da8ce46-1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/LuluLollipopEdits-08853_89334399-1c28-4ae1-ba03-9988daf35334.jpg",
-            "mobile_image": "shopify://shop_images/LuluLollipopEdits-08853_4f8fd78a-8261-4315-ae1f-e517ec17b1fe.jpg",
+            "image": "shopify://shop_images/Hero-dec_2.jpg",
+            "mobile_image": "shopify://shop_images/Hero_Mobile_-_Dec.jpg",
             "slide_link": "",
-            "subheading": "CYBER MONDAY SALE",
-            "title": "Up To 25% Off Everything",
+            "subheading": "It's Gifting Season",
+            "title": "Find The Perfect Gifts For Newborns",
             "heading_max_width": 10,
             "title_size": 72,
-            "title_size_mobile": 36,
+            "title_size_mobile": 34,
             "use_h1": true,
             "text": "<p></p><p></p>",
             "enlarge_text": false,
-            "button_label_1": "Shop Best Sellers",
-            "button_url_1": "shopify://collections/best-sellers",
+            "button_label_1": "Shop Newborn Gifts",
+            "button_url_1": "shopify://collections/top-newborn-gifts",
             "button_tag_1": "",
-            "button_label_2": "Shop Top Gifts",
-            "button_url_2": "shopify://collections/top-gifts",
+            "button_label_2": "Shop Newborn Bundles",
+            "button_url_2": "shopify://collections/newborn-bundles",
             "button_tag_2": "",
             "text_alignment": "center center"
           }
@@ -61,17 +61,7 @@
           "settings": {
             "collection": "sleep-bags",
             "tag": "",
-            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Holiday_2024_-Web-9_1_f5b17858-2468-408d-93af-73509081b4ca.png",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_xh3HLz": {
-          "type": "collection",
-          "settings": {
-            "collection": "suction-plates",
-            "tag": "",
-            "image": "shopify://shop_images/LuluLollipopEdits-01064.jpg",
+            "image": "shopify://shop_images/LoulouLollipopNov2025Holiday-01750.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -79,9 +69,9 @@
         "collection_3Y8JJd": {
           "type": "collection",
           "settings": {
-            "collection": "sleepers",
+            "collection": "pajamas",
             "tag": "",
-            "image": "shopify://shop_images/LoulouLollipopNov2025Holiday-01642_1.jpg",
+            "image": "shopify://shop_images/LoulouLollipopNov2025Holiday-01357.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -91,7 +81,17 @@
           "settings": {
             "collection": "long-sleeve-bibs",
             "tag": "",
-            "image": "shopify://shop_images/LuluLollipopEdits-08796.jpg",
+            "image": "shopify://shop_images/LSBIBSHK_Long_Sleeve_Bib_Sharks_54.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_xh3HLz": {
+          "type": "collection",
+          "settings": {
+            "collection": "silicone-bibs",
+            "tag": "",
+            "image": "shopify://shop_images/SILBIBAVOPP_Silicone_Bib_Printed_-_Avocado_51.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -99,12 +99,12 @@
       },
       "block_order": [
         "collection_btRm84",
-        "collection_xh3HLz",
         "collection_3Y8JJd",
-        "collection_NTfUeq"
+        "collection_NTfUeq",
+        "collection_xh3HLz"
       ],
       "settings": {
-        "title": "Shop the Highlights",
+        "title": "Shop the Essentials",
         "text": "<p>Your go-to essentials for gifting, newborns, and everyday comfort</p>",
         "text_alignment": "start",
         "enable_carousel": false,
@@ -126,8 +126,8 @@
       "type": "featured-collection",
       "name": "Featured collection",
       "settings": {
-        "title": "Sale On Sale",
-        "text": "<p>Our sale section gets extra Cyber Monday savings</p>",
+        "title": "Holiday Deals Are Still Live",
+        "text": "<p>Gift-worthy picks at rare prices — while inventory lasts</p>",
         "collection": "sale",
         "show_vendor": false,
         "enable_carousel": true,
@@ -136,44 +136,25 @@
         "color_scheme": "default",
         "show_view_all": true,
         "full_width": false,
-        "text_alignment": "center"
+        "text_alignment": "start"
       }
     },
     "custom_product_highlight_jV6CAX": {
       "type": "custom-product-highlight",
       "name": "Highlighted Collection",
       "settings": {
-        "title": "Top Gifts for Newborns",
-        "text": "<p>Loved by parents. Perfect for gifting.</p>",
-        "image": "shopify://shop_images/LoulouLollipopNov2025Holiday--2_1.jpg",
+        "title": "Meet Wolfie",
+        "text": "<p>Our beloved icon is here to lead the pack</p>",
+        "image": "shopify://shop_images/WTR-WOF_WildTeether_Wolfie_01.jpg",
         "order": false,
         "product_list": [
-          "tencel-sleep-bag-1-0-tog-stargazing-bear",
-          "muslin-quilt-stargazing-bear",
-          "tencel-sleep-bag-1-0-tog-forest-families",
-          "muslin-swaddle-forest-families"
+          "wolfie-plush-bag-charm-pink-limited-edition",
+          "wolfie-plush-bag-charm-smoke-blue"
         ],
-        "button_label": "Shop Top Newborn Gifts",
-        "link": "shopify://collections/top-newborn-gifts",
+        "button_label": "Shop Wolfie",
+        "link": "shopify://collections/wolfie",
         "button_style": "primary",
         "color_scheme": "default"
-      }
-    },
-    "featured_collection_RcGTat": {
-      "type": "featured-collection",
-      "name": "Carousel",
-      "settings": {
-        "title": "Gift-able Bundles",
-        "text": "<p>Perfectly paired bundles for easy gifting</p>",
-        "collection": "bundles-and-sets",
-        "show_vendor": false,
-        "enable_carousel": true,
-        "grid": 5,
-        "rows": 2,
-        "color_scheme": "1",
-        "show_view_all": true,
-        "full_width": true,
-        "text_alignment": "start"
       }
     },
     "collection_list_zhMrUA": {
@@ -382,7 +363,6 @@
         "collection_iyjCCb",
         "collection_ntR4RL"
       ],
-      "disabled": true,
       "name": "Shop by print",
       "settings": {
         "title": "Shop by Print",
@@ -403,62 +383,22 @@
         "coll_button_style": "primary"
       }
     },
-    "collection_list_4hPPdd": {
-      "type": "collection-list",
-      "blocks": {
-        "collection_hnnxPW": {
-          "type": "collection",
-          "settings": {
-            "collection": "gifts-under-50",
-            "tag": "",
-            "image": "shopify://shop_images/LSET-010-MNT_Learning_Utensils_Set_Octopus_51_4.jpg",
-            "subheading": "",
-            "button_label": ""
-          }
-        },
-        "collection_3ybKnj": {
-          "type": "collection",
-          "settings": {
-            "collection": "top-rated-sleep",
-            "tag": "",
-            "image": "shopify://shop_images/LuluLollipopEdits-09189_9cfcb7a8-5aac-4381-8876-99a784945a27.jpg",
-            "subheading": "",
-            "button_label": ""
-          }
-        },
-        "collection_fEKXHL": {
-          "type": "collection",
-          "settings": {
-            "collection": "top-prints",
-            "tag": "",
-            "image": "shopify://shop_images/BA1002U.SHK_Sleeper_Sharks_52_67c16a80-3e5e-4c89-b341-6098c06dec7f.jpg",
-            "subheading": "",
-            "button_label": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection_hnnxPW",
-        "collection_3ybKnj",
-        "collection_fEKXHL"
-      ],
+    "featured_collection_RcGTat": {
+      "type": "featured-collection",
+      "disabled": true,
+      "name": "Carousel",
       "settings": {
-        "title": "",
-        "text": "",
-        "text_alignment": "center",
-        "enable_carousel": false,
-        "grid": 3,
-        "color_scheme": "default",
+        "title": "Gift-able Bundles",
+        "text": "<p>Perfectly paired bundles for easy gifting</p>",
+        "collection": "bundles-and-sets",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 5,
+        "rows": 2,
+        "color_scheme": "1",
+        "show_view_all": true,
         "full_width": true,
-        "coll_grid_image_shape": "landscape-54",
-        "coll_grid_image_position": "top center",
-        "coll_thumb_mob_per_row": "1",
-        "coll_grid_show_count": false,
-        "coll_text_position": "over-shadow",
-        "coll_text_position_under_mobile": false,
-        "coll_thumb_text_align_x": "center",
-        "coll_thumb_text_align_y": "bottom",
-        "coll_button_style": "primary"
+        "text_alignment": "start"
       }
     },
     "collection_list_zQRndp": {
@@ -489,7 +429,7 @@
           "settings": {
             "collection": "eat",
             "tag": "",
-            "image": "shopify://shop_images/SPL-009-BFG_SnackPlate-Sharks_52_61f6f851-3d5f-4968-a154-aa8b316915d5.jpg",
+            "image": "shopify://shop_images/LSBIBDSF_Long_Sleeve_Bib_-_Ditsy_Floral_51jpg.jpg",
             "subheading": "Feeding",
             "button_label": ""
           }
@@ -634,6 +574,64 @@
         "title": "As Seen In",
         "image_opacity": 100,
         "color_scheme": "default"
+      }
+    },
+    "collection_list_4hPPdd": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_hnnxPW": {
+          "type": "collection",
+          "settings": {
+            "collection": "gifts-under-50",
+            "tag": "",
+            "image": "shopify://shop_images/LSET-010-MNT_Learning_Utensils_Set_Octopus_51_4.jpg",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
+        "collection_3ybKnj": {
+          "type": "collection",
+          "settings": {
+            "collection": "top-rated-sleep",
+            "tag": "",
+            "image": "shopify://shop_images/LuluLollipopEdits-09189_9cfcb7a8-5aac-4381-8876-99a784945a27.jpg",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
+        "collection_fEKXHL": {
+          "type": "collection",
+          "settings": {
+            "collection": "top-prints",
+            "tag": "",
+            "image": "shopify://shop_images/BA1002U.SHK_Sleeper_Sharks_52_67c16a80-3e5e-4c89-b341-6098c06dec7f.jpg",
+            "subheading": "",
+            "button_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_hnnxPW",
+        "collection_3ybKnj",
+        "collection_fEKXHL"
+      ],
+      "settings": {
+        "title": "",
+        "text": "",
+        "text_alignment": "center",
+        "enable_carousel": false,
+        "grid": 3,
+        "color_scheme": "default",
+        "full_width": true,
+        "coll_grid_image_shape": "landscape-54",
+        "coll_grid_image_position": "top center",
+        "coll_thumb_mob_per_row": "1",
+        "coll_grid_show_count": false,
+        "coll_text_position": "over-shadow",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_y": "bottom",
+        "coll_button_style": "primary"
       }
     },
     "logo_list_pgf7FP": {
@@ -1097,8 +1095,8 @@
     "collection_list_BzgHGC",
     "featured_collection_bY6q7L",
     "custom_product_highlight_jV6CAX",
-    "featured_collection_RcGTat",
     "collection_list_zhMrUA",
+    "featured_collection_RcGTat",
     "collection_list_zQRndp",
     "logo_list_kYmwNX",
     "collection_list_4hPPdd",
