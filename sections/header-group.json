@@ -14,22 +14,6 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
-        "announcement_7cnEpc": {
-          "type": "announcement",
-          "settings": {
-            "text": "<a href=\"/collections/best-sellers\" title=\"Best Sellers\">Cyber Monday Sale Up to 25% Off</a>",
-            "show_countdown": true,
-            "hide_on_end": false,
-            "end_date": "2025-12-03",
-            "end_time": "",
-            "number_font": "base",
-            "countdown_separator": "dash",
-            "use_custom_colors": false,
-            "bg_color": "#927c70",
-            "bg_gradient": "",
-            "text_color": "#ffffff"
-          }
-        },
         "announcement-2": {
           "type": "announcement",
           "disabled": true,
@@ -66,7 +50,6 @@
         },
         "announcement-1": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
             "text": "Free Standard Shipping $65+",
             "show_countdown": false,
@@ -80,17 +63,33 @@
             "bg_gradient": "",
             "text_color": "#ffffff"
           }
+        },
+        "announcement_jKG3Y7": {
+          "type": "announcement",
+          "settings": {
+            "text": "<strong>✨ Order by Dec 10 for guaranteed holiday delivery!</strong>",
+            "show_countdown": false,
+            "hide_on_end": false,
+            "end_date": "",
+            "end_time": "",
+            "number_font": "base",
+            "countdown_separator": "box",
+            "use_custom_colors": false,
+            "bg_color": "#4a4a4a",
+            "bg_gradient": "",
+            "text_color": "#ffffff"
+          }
         }
       },
       "block_order": [
-        "announcement_7cnEpc",
         "announcement-2",
         "announcement_gLBKkX",
-        "announcement-1"
+        "announcement-1",
+        "announcement_jKG3Y7"
       ],
       "settings": {
         "message_font_size": 16,
-        "announcement_bar_col": "#db3f30",
+        "announcement_bar_col": "#6a8b95",
         "announcement_bar_gradient": "",
         "announcement_text_col": "#faf9f6",
         "show_social_icons": false,

@@ -461,6 +461,75 @@
         "coll_button_style": "primary"
       }
     },
+    "collection_list_zQRndp": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_gwadLy": {
+          "type": "collection",
+          "settings": {
+            "collection": "sleep-swaddle",
+            "tag": "",
+            "image": "shopify://shop_images/Sleeper_-_Quilt_-_Bumble_Bees_8b5f92f1-4604-41bc-8eaf-56dab4c3e7b9.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_kPp4AW": {
+          "type": "collection",
+          "settings": {
+            "collection": "sleepers",
+            "tag": "",
+            "image": "shopify://shop_images/LuluLollipopEdits-01108_e4dc987f-40a5-41d6-8ed9-0cae759083e2.jpg",
+            "subheading": "Clothing",
+            "button_label": ""
+          }
+        },
+        "collection_4F6qwa": {
+          "type": "collection",
+          "settings": {
+            "collection": "eat",
+            "tag": "",
+            "image": "shopify://shop_images/SPL-009-BFG_SnackPlate-Sharks_52_61f6f851-3d5f-4968-a154-aa8b316915d5.jpg",
+            "subheading": "Feeding",
+            "button_label": ""
+          }
+        },
+        "collection_GHwVe3": {
+          "type": "collection",
+          "settings": {
+            "collection": "play",
+            "tag": "",
+            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._4th_2024_-Web-43_6eb00ecb-09e6-4b33-bc0d-c24200eeee74.jpg",
+            "subheading": "Toys & Play",
+            "button_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_gwadLy",
+        "collection_kPp4AW",
+        "collection_4F6qwa",
+        "collection_GHwVe3"
+      ],
+      "settings": {
+        "title": "Shop by Category",
+        "text": "",
+        "text_alignment": "center",
+        "enable_carousel": false,
+        "grid": 4,
+        "color_scheme": "default",
+        "full_width": true,
+        "coll_grid_image_shape": "portrait-45",
+        "coll_grid_image_position": "center center",
+        "coll_thumb_mob_per_row": "2",
+        "coll_grid_show_count": false,
+        "coll_text_position": "below",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_y": "center",
+        "coll_button_style": "primary"
+      }
+    },
     "logo_list_kYmwNX": {
       "type": "logo-list",
       "blocks": {
@@ -565,75 +634,6 @@
         "title": "As Seen In",
         "image_opacity": 100,
         "color_scheme": "default"
-      }
-    },
-    "collection_list_zQRndp": {
-      "type": "collection-list",
-      "blocks": {
-        "collection_gwadLy": {
-          "type": "collection",
-          "settings": {
-            "collection": "sleep-swaddle",
-            "tag": "",
-            "image": "shopify://shop_images/Sleeper_-_Quilt_-_Bumble_Bees_8b5f92f1-4604-41bc-8eaf-56dab4c3e7b9.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_kPp4AW": {
-          "type": "collection",
-          "settings": {
-            "collection": "sleepers",
-            "tag": "",
-            "image": "shopify://shop_images/LuluLollipopEdits-01108_e4dc987f-40a5-41d6-8ed9-0cae759083e2.jpg",
-            "subheading": "Clothing",
-            "button_label": ""
-          }
-        },
-        "collection_4F6qwa": {
-          "type": "collection",
-          "settings": {
-            "collection": "eat",
-            "tag": "",
-            "image": "shopify://shop_images/SPL-009-BFG_SnackPlate-Sharks_52_61f6f851-3d5f-4968-a154-aa8b316915d5.jpg",
-            "subheading": "Feeding",
-            "button_label": ""
-          }
-        },
-        "collection_GHwVe3": {
-          "type": "collection",
-          "settings": {
-            "collection": "play",
-            "tag": "",
-            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._4th_2024_-Web-43_6eb00ecb-09e6-4b33-bc0d-c24200eeee74.jpg",
-            "subheading": "Toys & Play",
-            "button_label": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection_gwadLy",
-        "collection_kPp4AW",
-        "collection_4F6qwa",
-        "collection_GHwVe3"
-      ],
-      "settings": {
-        "title": "Shop by Category",
-        "text": "",
-        "text_alignment": "center",
-        "enable_carousel": false,
-        "grid": 4,
-        "color_scheme": "default",
-        "full_width": true,
-        "coll_grid_image_shape": "portrait-45",
-        "coll_grid_image_position": "center center",
-        "coll_thumb_mob_per_row": "2",
-        "coll_grid_show_count": false,
-        "coll_text_position": "below",
-        "coll_text_position_under_mobile": false,
-        "coll_thumb_text_align_x": "center",
-        "coll_thumb_text_align_y": "center",
-        "coll_button_style": "primary"
       }
     },
     "logo_list_pgf7FP": {
@@ -1099,9 +1099,9 @@
     "custom_product_highlight_jV6CAX",
     "featured_collection_RcGTat",
     "collection_list_zhMrUA",
-    "collection_list_4hPPdd",
-    "logo_list_kYmwNX",
     "collection_list_zQRndp",
+    "logo_list_kYmwNX",
+    "collection_list_4hPPdd",
     "logo_list_pgf7FP",
     "testimonials_VgkpHw",
     "multi_column_gyeJnc",
