@@ -196,14 +196,14 @@
 
   {%- if has_core_prints -%}
     <legend class="label">
-      Personalize It: <span class="option-selector__label-value js-color-text" data-section="core"></span>
+      Personalize It: <span class="option-selector__label-value js-color-text" data-section="personalize-it"></span>
     </legend>
     <div class="option-selector__btns flex flex-wrap">
       {%- for sibling in sibs_collection.products -%}
           {%- if sibling.tags contains 'personalize-it' -%}
             <a href="{{ sibling.url }}" 
                class="opt-label opt-label--image {% if sibling.tags contains 'hidden' %}hidden-product{% endif %} {% if sibling.handle == product.handle %}is-active{% endif %}{% if sibling.available == false  %} sold-out{% endif %}" 
-               data-color="{{ sibling.metafields.theme.cutline }}" data-section="core"
+               data-color="{{ sibling.metafields.theme.cutline }}" data-section="personalize-it"
                {% if sibling.handle == product.handle %}data-selected="true"{% endif %}>
               <div class="overflow_hidden">
                  <div class="opt-label__media media " >  
