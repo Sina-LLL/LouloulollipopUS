@@ -25,16 +25,22 @@
     <!-- Check for New Prints -->
   {%- assign has_new_prints = false -%}
   {%- assign has_core_prints = false -%}
+  {%- assign has_personalize_prints = false -%}
+
 
   {%- for sibling in sibs_collection.products -%}
     {%- unless sibling.tags contains 'hidden' -%}
       {%- if sibling.tags contains 'new' -%}
         {%- assign has_new_prints = true -%}
       {%- endif -%}
+      {%- if sibling.tags contains 'personalize-it' -%}
+        {%- assign has_personalize_prints = true -%}
+    {%- endif -%}
     {%- endunless -%}
     {%- if sibling.tags contains 'core' or sibling.tags contains 'sale' -%}
       {%- assign has_core_prints = true -%}
     {%- endif -%}
+    
   {%- endfor -%}
     
   
@@ -192,6 +198,9 @@
 
   {%- endif -%}
 </fieldset>
+
+{% comment %} Personalize it Selection {% endcomment %}
+ {%- if has_personalize_prints -%}
 <fieldset class="option-selector" data-selector-type="listed" data-option="{{ option.name | escape }}">
 
   {%- if has_core_prints -%}
@@ -248,6 +257,8 @@
 
   {%- endif -%}
 </fieldset>
+{% endif %}
+
 
 
 {% endif %}
