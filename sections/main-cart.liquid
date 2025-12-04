@@ -377,44 +377,7 @@
           </div>
         {%- endif -%}
       </div>
-    {% endif %}
-    {% comment %} Delete below Post BFCM {% endcomment %}
-      <div class="lightly-spaced-row align-center" style=" pointer-events: auto;">
-        <div class="product-info-block  text-box" style="width: 500px; max-width: 100%; --box-color: #fbeae5; --box-text-color: 174, 39, 0; pointer-events: auto;">
-          <div class=" rte cf">
-            {% assign cart_total_cents = cart.total_price %}
-
-
-            {% if cart_total_cents < 5000 %}
-              {% assign diff_cents = 5000 | minus: cart_total_cents %}
-              <p>
-                You're saving <strong>15%</strong> 🎉  <br>
-                Add ${{ diff_cents | money_without_currency }} more to unlock <strong>20% off</strong>.
-              </p>
-            {% elsif cart_total_cents < 6500 %}
-              {% assign diff_cents = 6500 | minus: cart_total_cents %}
-              <p>
-                You're saving <strong>20%</strong> 🎉  <br>
-                Add ${{ diff_cents | money_without_currency }} more to unlock <strong>Free Shipping!</strong>
-              </p>
-
-            {% elsif cart_total_cents < 9500 %}
-              {% assign diff_cents = 9500 | minus: cart_total_cents %}
-              <p>
-                You're saving <strong>20% </strong>with <strong>free shipping</strong> 🎉  <br>
-                Add ${{ diff_cents | money_without_currency }} more to unlock <strong>25% off</strong>.
-              </p>
-
-            {% else %}
-              <p>
-                You've unlocked <strong>25% off with free shipping<br> Our biggest Black Friday savings!</strong> 🎉
-              </p>
-            {% endif %}
-          </div>
-        </div>
-      </div>
-    {% comment %} Delete Above Post BFCM {% endcomment %}
-     
+    {% endif %} 
     {%- if settings.show_free_shipping_bar -%}
       <div class="slim-container align-center" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
         {%- render 'free-shipping-bar' -%}

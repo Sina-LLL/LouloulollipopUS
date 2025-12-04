@@ -14,22 +14,6 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
-        "announcement_7cnEpc": {
-          "type": "announcement",
-          "settings": {
-            "text": "<a href=\"/collections/best-sellers\" title=\"Best Sellers\">Cyber Monday Sale Up to 25% Off</a>",
-            "show_countdown": true,
-            "hide_on_end": false,
-            "end_date": "2025-12-03",
-            "end_time": "",
-            "number_font": "base",
-            "countdown_separator": "dash",
-            "use_custom_colors": false,
-            "bg_color": "#927c70",
-            "bg_gradient": "",
-            "text_color": "#ffffff"
-          }
-        },
         "announcement-2": {
           "type": "announcement",
           "disabled": true,
@@ -66,7 +50,6 @@
         },
         "announcement-1": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
             "text": "Free Standard Shipping $65+",
             "show_countdown": false,
@@ -80,17 +63,33 @@
             "bg_gradient": "",
             "text_color": "#ffffff"
           }
+        },
+        "announcement_jKG3Y7": {
+          "type": "announcement",
+          "settings": {
+            "text": "✨ Order by Dec 10 for holiday delivery!",
+            "show_countdown": false,
+            "hide_on_end": false,
+            "end_date": "",
+            "end_time": "",
+            "number_font": "base",
+            "countdown_separator": "box",
+            "use_custom_colors": false,
+            "bg_color": "#4a4a4a",
+            "bg_gradient": "",
+            "text_color": "#ffffff"
+          }
         }
       },
       "block_order": [
-        "announcement_7cnEpc",
         "announcement-2",
         "announcement_gLBKkX",
-        "announcement-1"
+        "announcement-1",
+        "announcement_jKG3Y7"
       ],
       "settings": {
         "message_font_size": 16,
-        "announcement_bar_col": "#db3f30",
+        "announcement_bar_col": "#6a8b95",
         "announcement_bar_gradient": "",
         "announcement_text_col": "#faf9f6",
         "show_social_icons": false,
@@ -213,8 +212,8 @@
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "Toys & Play",
-            "image": "shopify://shop_images/FCS-CR_FCS-BW_Flashcards_2.jpg",
-            "title": "Flash Cards",
+            "image": "shopify://shop_images/blue_wolfie_40444dd3-c1e3-4f45-b678-164090ad7218.jpg",
+            "title": "Wolfie Plush Charm",
             "link_url": "shopify://collections/flash-cards"
           }
         },
@@ -320,7 +319,7 @@
         "menu_promotion_small_NKx4Gk"
       ],
       "settings": {
-        "logo": "shopify://shop_images/LLL-Logo-Blue_4x_1008d3c0-8095-4423-8136-c51a68efdf05.png",
+        "logo": "shopify://shop_images/Logo_LLL.png",
         "logo_img_width_int": 215,
         "mobile_logo_img_width_int": 180,
         "logo_h1": false,
