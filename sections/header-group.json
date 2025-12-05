@@ -167,18 +167,36 @@
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "Clothing",
-            "image": "shopify://shop_images/LuluLollipopEdits-01002-2_5.png",
+            "image": "shopify://shop_images/LuluLollipopEdits-01002-2_5_26c7fa6d-5c5e-42b0-9da3-cd6b7ef3bd69.png",
             "title": "Long Sleeve Pajama Sets",
             "link_url": "shopify://products/long-sleeve-pajama-set-baby-dinomite"
+          }
+        },
+        "menu_promotion_small_MfmWBr": {
+          "type": "menu-promotion-small",
+          "settings": {
+            "dropdown_link_title": "Clothing",
+            "image": "shopify://shop_images/ElzaPhotographie_LoulouLollipop_March2024_-Web-36_f139feaa-d9c6-4c63-be4c-f02e5333b292.jpg",
+            "title": "Long Sleeve Bodysuit",
+            "link_url": "shopify://collections/long-sleeve-bodysuit"
           }
         },
         "menu_promotion_small_VjUPFk": {
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "Feeding",
-            "image": "shopify://shop_images/LuluLollipopEdits-01002-2_4.png",
+            "image": "shopify://shop_images/LuluLollipopEdits-01002-2_4_323713a8-6d32-4e7c-a51d-05a4a02400e6.png",
             "title": "Silicone Bibs",
             "link_url": "shopify://collections/silicone-bibs"
+          }
+        },
+        "menu_promotion_small_QhqTw7": {
+          "type": "menu-promotion-small",
+          "settings": {
+            "dropdown_link_title": "Feeding",
+            "image": "shopify://shop_images/DSC02060.jpg",
+            "title": "Suction Plates",
+            "link_url": "shopify://collections/suction-plates"
           }
         },
         "menu_promotion_small_AkrWYN": {
@@ -214,6 +232,15 @@
             "dropdown_link_title": "Toys & Play",
             "image": "shopify://shop_images/blue_wolfie_40444dd3-c1e3-4f45-b678-164090ad7218.jpg",
             "title": "Wolfie Plush Charm",
+            "link_url": "shopify://collections/flash-cards"
+          }
+        },
+        "menu_promotion_small_FXciLQ": {
+          "type": "menu-promotion-small",
+          "settings": {
+            "dropdown_link_title": "Toys & Play",
+            "image": "shopify://shop_images/LLAMA_01.jpg",
+            "title": "Silicone Teethers",
             "link_url": "shopify://collections/flash-cards"
           }
         },
@@ -303,11 +330,14 @@
         "menu_promotion_small_LfPP96",
         "menu_promotion_small_tKL9pd",
         "menu_promotion_small_8ghxfY",
+        "menu_promotion_small_MfmWBr",
         "menu_promotion_small_VjUPFk",
+        "menu_promotion_small_QhqTw7",
         "menu_promotion_small_AkrWYN",
         "menu_promotion_small_RmrAtN",
         "menu_promotion_small_FkQ6bx",
         "menu_promotion_small_pTVJy3",
+        "menu_promotion_small_FXciLQ",
         "menu_promotion_small_9XzrdD",
         "menu_promotion_small_mgLirm",
         "menu_promotion_small_9UBNbq",
