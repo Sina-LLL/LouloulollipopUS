@@ -80,6 +80,8 @@
                         {%- liquid
                           if loop_collection.metafields.custom.sub_collection_image != empty
                             assign rel_coll_image = loop_collection.metafields.custom.sub_collection_image.value
+                          elsif loop_collection.featured_image
+                            assign rel_coll_image = loop_collection.featured_image
                           else
                             assign rel_coll_image = false
                           endif
