@@ -111,13 +111,11 @@
 
                     </a>
                       {%- if section.settings.rel_coll_gall_text_placement == true -%}
-                      <div class="ss text-overlay text-overlay--v-{{ section.settings.rel_coll_gall_text_alignment | split: ' ' | first }} text-overlay--h-{{ section.settings.rel_coll_gall_text_alignment | split: ' ' | last }} image-overlay__over">
-                        <div class="text-overlay__inner">
+                      <div class="text-overlay__inner">
                           <div class="text-overlay__text">
-                            <h2 class="text-overlay__title h4">{{ loop_collection.title | escape }}</h2>
+                            <h2 class="text-overlay__title h4" style="color:#1d1d1d">{{ loop_collection.title | escape }}</h2>
                           </div>
                         </div>
-                      </div>
                     {%- endif -%}
                   </div>
                 {%- endunless -%}
