@@ -10,26 +10,6 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}" dir="{{ lang_dir }}">
 <head>
-{%- assign current_path = request.path -%}
-
-{%- assign us_domain = 'https://louloulollipop.com' -%}
-{%- assign ca_domain = 'https://louloulollipop.ca' -%}
-
-{%- comment -%}
-Remove /fr from path to get base English path
-{%- endcomment -%}
-{%- if current_path contains '/fr/' -%}
-  {%- assign base_path = current_path | remove_first: '/fr' -%}
-{%- else -%}
-  {%- assign base_path = current_path -%}
-{%- endif -%}
-
-<link rel="alternate" hreflang="x-default" href="{{ us_domain }}{{ base_path }}" />
-<link rel="alternate" hreflang="en" href="{{ us_domain }}{{ base_path }}" />
-<link rel="alternate" hreflang="en-us" href="{{ us_domain }}{{ base_path }}" />
-<link rel="alternate" hreflang="en-ca" href="{{ ca_domain }}{{ base_path }}" />
-<link rel="alternate" hreflang="fr" href="{{ ca_domain }}/fr{{ base_path }}" />
-<link rel="alternate" hreflang="fr-ca" href="{{ ca_domain }}/fr{{ base_path }}" />
 
   <link rel="stylesheet" href="https://use.typekit.net/kdi1qif.css">
   {%- render 'doc-head-core' -%}
@@ -214,7 +194,12 @@ Remove /fr from path to get base English path
   <meta name="google-site-verification" content="hi3HWj9GvDf8he5e3qfpKdEYOgX4tTQK4MPN-XeBBb8" />
   {% render 'stylux-head' %}
 
- 
+  <link rel="alternate" hreflang="x-default" href="https://louloulollipop.com{{ request.path }}" />
+  <link rel="alternate" hreflang="en" href="https://louloulollipop.com{{ request.path }}" />
+  <link rel="alternate" hreflang="en-us" href="https://louloulollipop.com{{ request.path }}" />
+  <link rel="alternate" hreflang="en-ca" href="https://louloulollipop.ca{{ request.path }}" />
+  <link rel="alternate" hreflang="fr-ca" href="https://louloulollipop.ca/fr{{ request.path }}" />
+  <link rel="alternate" hreflang="fr" href="https://louloulollipop.ca/fr{{ request.path }}" />
 </head>
 
 <body class="template-{{ template | split: '.' | first | handle }}
