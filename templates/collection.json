@@ -36,13 +36,13 @@
         "sort_show_price": true,
         "sort_show_date": false,
         "related_collections": "{{ collection.metafields.custom.subcollections.value }}",
-        "related_collections_style": "buttons",
-        "rel_coll_gall_aspect_ratio": "2",
+        "related_collections_style": "gallery",
+        "rel_coll_gall_aspect_ratio": "0.8",
         "image_position": "center center",
         "rel_coll_gall_enable_margin": true,
-        "rel_coll_gall_full_width": true,
-        "rel_coll_gall_overlay_style": "full image-overlay--bg-shadow",
-        "rel_coll_gall_text_alignment": "bottom center",
+        "rel_coll_gall_full_width": false,
+        "rel_coll_gall_overlay_style": "shadow",
+        "rel_coll_gall_text_alignment": "bottom left",
         "rel_coll_grid_mobile": "1"
       }
     }
