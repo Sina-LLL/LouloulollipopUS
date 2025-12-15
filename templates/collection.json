@@ -37,7 +37,7 @@
         "sort_show_date": false,
         "related_collections": "{{ collection.metafields.custom.subcollections.value }}",
         "related_collections_style": "gallery",
-        "rel_coll_gall_aspect_ratio": "0.8",
+        "rel_coll_gall_aspect_ratio": "1",
         "image_position": "center center",
         "rel_coll_gall_enable_margin": true,
         "rel_coll_gall_full_width": true,
