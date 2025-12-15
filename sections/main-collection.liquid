@@ -78,8 +78,8 @@
                     <a class="image-overlay__image-link" href="{{ loop_collection.url }}">
                       <div class="image-overlay__image gallery__image img-stretch">
                         {%- liquid
-                          if loop_collection.featured_image
-                            assign rel_coll_image = loop_collection.featured_image
+                          if loop_collection.metafields.custom.sub_collection_image
+                            assign rel_coll_image = loop_collection.metafields.custom.sub_collection_image.value
                           else
                             assign rel_coll_image = false
                           endif
