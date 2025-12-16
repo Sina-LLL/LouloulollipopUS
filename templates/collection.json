@@ -14,8 +14,8 @@
       "settings": {
         "show_title": true,
         "show_image_behind_heading": true,
-        "heading_image_height": "huge",
-        "overlay_style": "shadow",
+        "heading_image_height": "large",
+        "overlay_style": "full image-overlay--bg-shadow",
         "coll_desc_pos": "above",
         "coll_num_per_page_int": 50,
         "grid": 4,
@@ -40,8 +40,8 @@
         "rel_coll_gall_aspect_ratio": "1",
         "image_position": "center center",
         "rel_coll_gall_enable_margin": true,
-        "rel_coll_gall_full_width": true,
-        "rel_coll_gall_overlay_style": "shadow",
+        "rel_coll_gall_full_width": false,
+        "rel_coll_gall_overlay_style": "no_background",
         "rel_coll_gall_text_placement": true,
         "rel_coll_gall_text_alignment": "bottom left",
         "rel_coll_grid_mobile": "2"
