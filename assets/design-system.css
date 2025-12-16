@@ -79,7 +79,7 @@ h4,.h4,h2.text-overlay__title.h4{
   line-height: 1.25rem; 
 }
 h2.text-overlay__title.h4{
-    font-size: 1.15rem !important;
+    font-size: 1rem !important;
 }
 .gallery--grid-mobile-2 .gallery__item .text-overlay__inner{
   padding:12px;
