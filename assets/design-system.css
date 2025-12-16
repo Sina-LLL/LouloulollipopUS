@@ -239,6 +239,12 @@ a.opt-label.opt-label--image .opt-label__media.media, a.opt-label.opt-label--ima
 .section-footer__row__col.section-footer__custom-liquid-block {
     max-width: 100%;
 }
+.product-block.collection-block .image-cont .theme-img, .product-block__image .theme-img, .custom-product-highlight__container .theme-img, .slider__grid .image-overlay__image .theme-img{
+  border-radius: 12px;
+}
+.product-label>span{
+  border-radius:4px;
+}
 @media only screen and (min-width: 768px) {
   .feature-text-paired {
       margin-right: 12%;
