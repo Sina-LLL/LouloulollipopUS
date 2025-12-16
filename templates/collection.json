@@ -42,8 +42,9 @@
         "rel_coll_gall_enable_margin": true,
         "rel_coll_gall_full_width": true,
         "rel_coll_gall_overlay_style": "shadow",
+        "rel_coll_gall_text_placement": true,
         "rel_coll_gall_text_alignment": "bottom left",
-        "rel_coll_grid_mobile": "1"
+        "rel_coll_grid_mobile": "2"
       }
     }
   },
