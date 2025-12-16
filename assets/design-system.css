@@ -26,7 +26,7 @@ body{
 h1.text-overlay__title,
 h2.text-overlay__title,
 h2.text-overlay__title.h1 {
-  line-height: 113% !important; /* 5.29688rem */
+  line-height: 1.25rem;
   letter-spacing: -0.01563rem;
   margin-bottom: 0.5rem !important;
   font-weight: 800;
@@ -76,7 +76,7 @@ h3,.h3{
 h4,.h4,h2.text-overlay__title.h4{
   font-size: 1.5rem;
   font-weight: 600;
-  line-height: 1.75rem; 
+  line-height: 1.25rem; 
 }
 h2.text-overlay__title.h4{
     font-size: 1.15rem !important;
