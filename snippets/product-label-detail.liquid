@@ -32,6 +32,9 @@
     if product.tags contains 'BOGO50' or product.tags contains 'bogo50'
       assign BOGO_text = 'BOGO 50% Off'
     endif
+     if product.tags contains 'personalize-it' or product.tags contains 'Personalize-It'
+      assign personalize-it_text = 'Personalize It'
+    endif
   -%}
   
   {%- if new_label_text -%}
@@ -43,6 +46,11 @@
   {%- if BOGO_text -%}
     <span class="product-label product-label--sale">
       <span>{{ BOGO_text }}</span>
+    </span>
+  {%- endif -%}
+    {%- if personalize-it_text -%}
+    <span class="product-label product-label--personalize">
+      <span>{{ personalize-it_text }}</span>
     </span>
   {%- endif -%}
 {%- endcapture -%}
