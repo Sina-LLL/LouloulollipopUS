@@ -9381,9 +9381,12 @@ html:has(.drawer[open]) > body {
     font-size: var(--smaller-text-size-3);
   }
 }
-
 .product-label--sale {
   font-weight: 600;
+}
+.product-label--personalize > span {
+  background: #7A8F78;
+  color: var(--product-label-overlay-stock-text);
 }
 
 .product-label--stock > span {

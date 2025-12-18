@@ -26,7 +26,7 @@ body{
 h1.text-overlay__title,
 h2.text-overlay__title,
 h2.text-overlay__title.h1 {
-  line-height: 113% !important; /* 5.29688rem */
+  line-height: 1.25rem;
   letter-spacing: -0.01563rem;
   margin-bottom: 0.5rem !important;
   font-weight: 800;
@@ -76,10 +76,13 @@ h3,.h3{
 h4,.h4,h2.text-overlay__title.h4{
   font-size: 1.5rem;
   font-weight: 600;
-  line-height: 1.75rem; 
+  line-height: 1.25rem; 
 }
 h2.text-overlay__title.h4{
-    font-size: 1.25rem !important;
+    font-size: 1rem !important;
+}
+.gallery--grid-mobile-2 .gallery__item .text-overlay__inner{
+  padding:8px;
 }
 /* End H4 */
 
@@ -117,7 +120,7 @@ h6,.h6{
   font-family: sofia-pro, sans-serif;
   font-size: 1rem;
   font-weight: 500;
-  line-height: 1.5rem; /* 150% */
+  line-height: 1.25rem; /* 125% */
   letter-spacing: 0.01563rem;
 }
 /* End Body Medium */
@@ -235,6 +238,12 @@ a.opt-label.opt-label--image .opt-label__media.media, a.opt-label.opt-label--ima
 
 .section-footer__row__col.section-footer__custom-liquid-block {
     max-width: 100%;
+}
+.product-block.collection-block .image-cont .theme-img, .product-block__image .theme-img, .custom-product-highlight__container .theme-img, .slider__grid .image-overlay__image .theme-img{
+  border-radius: 12px;
+}
+.product-label>span{
+  border-radius:4px;
 }
 @media only screen and (min-width: 768px) {
   .feature-text-paired {
@@ -481,12 +490,12 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
 /* .option-selector .label{
   margin-top:12px;
 } */
-.opt-label__tag{
+.opt-label__tag{s
   border-radius: 4px;
   position: absolute;
   z-index: 1000;
   bottom: -10px;
-  left: 16%;
+  left: 25%;
   font-weight: 700;
   font-size: 10px;
   padding: 4px;

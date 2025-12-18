@@ -78,7 +78,9 @@
                     <a class="image-overlay__image-link" href="{{ loop_collection.url }}">
                       <div class="image-overlay__image gallery__image img-stretch">
                         {%- liquid
-                          if loop_collection.featured_image
+                          if loop_collection.metafields.custom.sub_collection_image != blank
+                            assign rel_coll_image = loop_collection.metafields.custom.sub_collection_image.value
+                          elsif loop_collection.featured_image
                             assign rel_coll_image = loop_collection.featured_image
                           else
                             assign rel_coll_image = false
@@ -96,7 +98,8 @@
                           </div>
                         {%- endif -%}
                       </div>
-
+                      {%- unless section.settings.rel_coll_gall_text_placement == true-%}
+                        
                       <div class="text-overlay text-overlay--v-{{ section.settings.rel_coll_gall_text_alignment | split: ' ' | first }} text-overlay--h-{{ section.settings.rel_coll_gall_text_alignment | split: ' ' | last }} image-overlay__over">
                         <div class="text-overlay__inner">
                           <div class="text-overlay__text">
@@ -104,7 +107,16 @@
                           </div>
                         </div>
                       </div>
+                      {%- endunless -%}
+
                     </a>
+                      {%- if section.settings.rel_coll_gall_text_placement == true -%}
+                      <div class="text-overlay__inner">
+                          <div class="text-overlay__text">
+                            <h2 class="text-overlay__title h4" style="color:#1d1d1d">{{ loop_collection.title | escape }}</h2>
+                          </div>
+                        </div>
+                    {%- endif -%}
                   </div>
                 {%- endunless -%}
               {%- endfor -%}
@@ -740,6 +752,12 @@
           "label": "No background"
         }
       ]
+    },
+    {
+      "type": "checkbox",
+      "id": "rel_coll_gall_text_placement",
+      "label": "Put text under",
+      "default": true
     },
     {
       "type": "select",
