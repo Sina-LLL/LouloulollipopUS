@@ -60,7 +60,7 @@
         "collection_Hm9y9k": {
           "type": "collection",
           "settings": {
-            "collection": "sleep-sale",
+            "collection": "sleep-bedding-sale",
             "tag": "",
             "image": "shopify://shop_images/MuslinSleepBag-DitsyFloral_2330eff0-8476-48c8-8522-add10c736676.jpg",
             "subheading": "Sleep & Bedding",
@@ -80,8 +80,9 @@
         "collection_Vpb7Q9": {
           "type": "collection",
           "settings": {
-            "collection": "feeding-sale",
+            "collection": "feeding-essentials-sale",
             "tag": "",
+            "image": "shopify://shop_images/Tableware-white-23.jpg",
             "subheading": "Feeding Essentials",
             "button_label": ""
           }
@@ -91,6 +92,7 @@
           "settings": {
             "collection": "toys-play-sale",
             "tag": "",
+            "image": "shopify://shop_images/Group_3.jpg",
             "subheading": "Toys & Play",
             "button_label": ""
           }
@@ -123,7 +125,8 @@
     },
     "featured_collection_bY6q7L": {
       "type": "featured-collection",
-      "name": "Featured collection",
+      "disabled": true,
+      "name": "Personalization",
       "settings": {
         "title": "Made Just for Your Little One",
         "text": "<p>Add embroidery to create a one-of-a-kind keepsake.</p>",
@@ -138,25 +141,142 @@
         "text_alignment": "start"
       }
     },
-    "featured_collection_8Bxebt": {
-      "type": "featured-collection",
-      "name": "Featured collection",
+    "logo_list_kYmwNX": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_Pb9irB": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/logo.dc34ecc.svg",
+            "image_width": 150,
+            "link": "https://www.goodhousekeeping.com/childrens-products/a65382807/parenting-awards-baby-2025/",
+            "title": ""
+          }
+        },
+        "logo_3E4WaJ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Parents_idf45riGiK_0.png",
+            "image_width": 190,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_KwwATQ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/BabyList-Logo.png",
+            "image_width": 160,
+            "link": "https://www.babylist.com/store/b/loulou-lollipop/919",
+            "title": ""
+          }
+        },
+        "logo_m3DkDJ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/tinybeans-Logo.png",
+            "image_width": 160,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_mQKag7": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/the-everymom-logo.png",
+            "image_width": 190,
+            "link": "https://theeverymom.com/registry-awards/",
+            "title": ""
+          }
+        },
+        "logo_RidJwp": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Jillian-Harris-Logo_e0e75a9e-fd3e-465d-a063-55cd2d888757.png",
+            "image_width": 160,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_CGcCUn": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Motherly-Logo.png",
+            "image_width": 160,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_j4Arc7": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Momtastic-Logo.png",
+            "image_width": 160,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_i3itWL": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/8_what_to_expect_226b9ac0-b823-4eff-ba1a-75692a46e19f.png",
+            "image_width": 160,
+            "link": "",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_Pb9irB",
+        "logo_3E4WaJ",
+        "logo_KwwATQ",
+        "logo_m3DkDJ",
+        "logo_mQKag7",
+        "logo_RidJwp",
+        "logo_CGcCUn",
+        "logo_j4Arc7",
+        "logo_i3itWL"
+      ],
       "settings": {
-        "title": "Holiday Deals Are Still Live",
-        "text": "<p>Gift-worthy picks at rare prices — while inventory lasts</p>",
-        "collection": "sale",
-        "show_vendor": false,
+        "title": "As Seen In",
         "enable_carousel": true,
-        "grid": 4,
-        "rows": 1,
+        "carousel_speed": 30,
+        "image_opacity": 100,
+        "color_scheme": "default"
+      }
+    },
+    "custom_specific_product_list_JtdwwF": {
+      "type": "custom-specific-product-list",
+      "name": "Custom Product Selector",
+      "settings": {
+        "heading": "Parent Favourites on Sale",
+        "body_text": "<p>Our most-loved pieces, on sale!</p>",
+        "text_alignment": "start",
+        "product_list": [
+          "short-sleeve-zipped-romper-silly-seals",
+          "muslin-lightweight-sleep-bag-0-5-tog-all-aboard",
+          "short-sleeve-bodysuit-dress-mermaids",
+          "sleeper-hedgehogs",
+          "snack-box-alligator",
+          "snack-cup-pink",
+          "wild-teether-rhino",
+          "snack-plate-lion"
+        ],
+        "enable_carousel": false,
+        "products_per_row": 4,
         "color_scheme": "default",
+        "full_width": true,
         "show_view_all": true,
-        "full_width": false,
-        "text_alignment": "start"
+        "view_all_collection": "sale"
       }
     },
     "custom_product_highlight_jV6CAX": {
       "type": "custom-product-highlight",
+      "disabled": true,
       "name": "Highlighted Collection",
       "settings": {
         "title": "Meet Wolfie",
@@ -379,6 +499,7 @@
         "collection_iyjCCb",
         "collection_ntR4RL"
       ],
+      "disabled": true,
       "name": "Shop by print",
       "settings": {
         "title": "Shop by Print",
@@ -467,6 +588,7 @@
         "collection_4F6qwa",
         "collection_GHwVe3"
       ],
+      "disabled": true,
       "settings": {
         "title": "Shop by Category",
         "text": "",
@@ -484,114 +606,6 @@
         "coll_thumb_text_align_x": "center",
         "coll_thumb_text_align_y": "center",
         "coll_button_style": "primary"
-      }
-    },
-    "logo_list_kYmwNX": {
-      "type": "logo-list",
-      "blocks": {
-        "logo_Pb9irB": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/logo.dc34ecc.svg",
-            "image_width": 150,
-            "link": "https://www.goodhousekeeping.com/childrens-products/a65382807/parenting-awards-baby-2025/",
-            "title": ""
-          }
-        },
-        "logo_3E4WaJ": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Parents_idf45riGiK_0.png",
-            "image_width": 190,
-            "link": "",
-            "title": ""
-          }
-        },
-        "logo_KwwATQ": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/BabyList-Logo.png",
-            "image_width": 160,
-            "link": "https://www.babylist.com/store/b/loulou-lollipop/919",
-            "title": ""
-          }
-        },
-        "logo_m3DkDJ": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/tinybeans-Logo.png",
-            "image_width": 160,
-            "link": "",
-            "title": ""
-          }
-        },
-        "logo_mQKag7": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/the-everymom-logo.png",
-            "image_width": 190,
-            "link": "https://theeverymom.com/registry-awards/",
-            "title": ""
-          }
-        },
-        "logo_RidJwp": {
-          "type": "logo",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Jillian-Harris-Logo_e0e75a9e-fd3e-465d-a063-55cd2d888757.png",
-            "image_width": 160,
-            "link": "",
-            "title": ""
-          }
-        },
-        "logo_CGcCUn": {
-          "type": "logo",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Motherly-Logo.png",
-            "image_width": 160,
-            "link": "",
-            "title": ""
-          }
-        },
-        "logo_j4Arc7": {
-          "type": "logo",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Momtastic-Logo.png",
-            "image_width": 160,
-            "link": "",
-            "title": ""
-          }
-        },
-        "logo_i3itWL": {
-          "type": "logo",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/8_what_to_expect_226b9ac0-b823-4eff-ba1a-75692a46e19f.png",
-            "image_width": 160,
-            "link": "",
-            "title": ""
-          }
-        }
-      },
-      "block_order": [
-        "logo_Pb9irB",
-        "logo_3E4WaJ",
-        "logo_KwwATQ",
-        "logo_m3DkDJ",
-        "logo_mQKag7",
-        "logo_RidJwp",
-        "logo_CGcCUn",
-        "logo_j4Arc7",
-        "logo_i3itWL"
-      ],
-      "settings": {
-        "title": "As Seen In",
-        "enable_carousel": false,
-        "carousel_speed": 30,
-        "image_opacity": 100,
-        "color_scheme": "default"
       }
     },
     "collection_list_4hPPdd": {
@@ -1114,12 +1128,12 @@
     "slideshow_dwrJFr",
     "collection_list_T4VhHW",
     "featured_collection_bY6q7L",
-    "featured_collection_8Bxebt",
+    "logo_list_kYmwNX",
+    "custom_specific_product_list_JtdwwF",
     "custom_product_highlight_jV6CAX",
     "collection_list_zhMrUA",
     "featured_collection_RcGTat",
     "collection_list_zQRndp",
-    "logo_list_kYmwNX",
     "collection_list_4hPPdd",
     "logo_list_pgf7FP",
     "testimonials_VgkpHw",
