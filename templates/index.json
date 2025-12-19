@@ -621,6 +621,16 @@
             "button_label": ""
           }
         },
+        "collection_fEKXHL": {
+          "type": "collection",
+          "settings": {
+            "collection": "top-newborn-gifts",
+            "tag": "",
+            "image": "shopify://shop_images/MuslinSwaddle-Quilt-BumbleBees_2_3caf242e-9e24-483a-bbdc-4aa88cbc0a7d.jpg",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
         "collection_3ybKnj": {
           "type": "collection",
           "settings": {
@@ -630,22 +640,12 @@
             "subheading": "",
             "button_label": ""
           }
-        },
-        "collection_fEKXHL": {
-          "type": "collection",
-          "settings": {
-            "collection": "top-prints",
-            "tag": "",
-            "image": "shopify://shop_images/BA1002U.SHK_Sleeper_Sharks_52_67c16a80-3e5e-4c89-b341-6098c06dec7f.jpg",
-            "subheading": "",
-            "button_label": ""
-          }
         }
       },
       "block_order": [
         "collection_hnnxPW",
-        "collection_3ybKnj",
-        "collection_fEKXHL"
+        "collection_fEKXHL",
+        "collection_3ybKnj"
       ],
       "settings": {
         "title": "",
