@@ -29,6 +29,17 @@
             "show_in_quickbuy": false
           }
         },
+        "richtext_JyPDKn": {
+          "type": "richtext",
+          "settings": {
+            "richtext": "<p>Buy a <strong>$100</strong> gift card → <strong>get $10</strong> in store credit</p><p>Buy a <strong>$150</strong> gift card → <strong>get $20</strong> in store credit</p><p>Buy a <strong>$200</strong> gift card → <strong>get $30</strong> in store credit</p>",
+            "icon": "gift",
+            "icon_size": "small",
+            "enable_box": true,
+            "box_color": "#e0f4d5",
+            "show_in_quickbuy": false
+          }
+        },
         "richtext_x7nJpd": {
           "type": "richtext",
           "disabled": true,
@@ -60,7 +71,7 @@
             "enable_payment_button": false,
             "show_backorder_text": false,
             "show_pickup_availability": false,
-            "show_gift_card_recipient": false
+            "show_gift_card_recipient": true
           }
         },
         "custom_liquid_GybNim": {
@@ -110,6 +121,7 @@
         "title",
         "price",
         "divider",
+        "richtext_JyPDKn",
         "richtext_x7nJpd",
         "variant-picker",
         "buy-buttons",
