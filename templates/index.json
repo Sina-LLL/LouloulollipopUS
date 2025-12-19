@@ -9,27 +9,27 @@
  */
 {
   "sections": {
-    "16359276425da8ce46": {
+    "slideshow_dwrJFr": {
       "type": "slideshow",
       "blocks": {
-        "16359276425da8ce46-1": {
+        "image_Qfbcc9": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Hero-dec_2.jpg",
-            "mobile_image": "shopify://shop_images/Hero_Mobile_-_Dec.jpg",
+            "image": "shopify://shop_images/Boxing_Day_Hero_1.png",
+            "mobile_image": "shopify://shop_images/LOUOU-07402-topaz_2_1.png",
             "slide_link": "",
-            "subheading": "It's Gifting Season",
-            "title": "Find The Perfect Gifts For Newborns",
+            "subheading": "BOXING DAY SALE",
+            "title": "UP TO 50% OFF",
             "heading_max_width": 10,
-            "title_size": 72,
-            "title_size_mobile": 34,
+            "title_size": 120,
+            "title_size_mobile": 36,
             "use_h1": true,
-            "text": "<p></p><p></p>",
-            "enlarge_text": false,
-            "button_label_1": "Shop Newborn Gifts",
-            "button_url_1": "shopify://collections/top-newborn-gifts",
+            "text": "<p><strong>Biggest markdowns of the year</strong></p>",
+            "enlarge_text": true,
+            "button_label_1": "Shop The Sale",
+            "button_url_1": "shopify://collections/sale",
             "button_tag_1": "",
-            "button_label_2": "Shop Newborn Bundles",
+            "button_label_2": "",
             "button_url_2": "shopify://collections/newborn-bundles",
             "button_tag_2": "",
             "text_alignment": "center left"
@@ -37,8 +37,9 @@
         }
       },
       "block_order": [
-        "16359276425da8ce46-1"
+        "image_Qfbcc9"
       ],
+      "name": "Slideshow",
       "settings": {
         "height": "fixed",
         "height_desktop": 600,
@@ -53,66 +54,64 @@
         "accessibility_info": ""
       }
     },
-    "collection_list_BzgHGC": {
+    "collection_list_T4VhHW": {
       "type": "collection-list",
       "blocks": {
-        "collection_btRm84": {
+        "collection_Hm9y9k": {
           "type": "collection",
           "settings": {
-            "collection": "sleep-bags",
+            "collection": "sleep-sale",
             "tag": "",
-            "image": "shopify://shop_images/LoulouLollipopNov2025Holiday-01750.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "image": "shopify://shop_images/MuslinSleepBag-DitsyFloral_2330eff0-8476-48c8-8522-add10c736676.jpg",
+            "subheading": "Sleep & Bedding",
             "button_label": ""
           }
         },
-        "collection_3Y8JJd": {
+        "collection_97r7KX": {
           "type": "collection",
           "settings": {
-            "collection": "pajamas",
+            "collection": "clothing-sale",
             "tag": "",
-            "image": "shopify://shop_images/LoulouLollipopNov2025Holiday-01357.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "image": "shopify://shop_images/DSC07646_3056e8aa-1461-487c-a89c-7d6577a8c9de.jpg",
+            "subheading": "Clothing",
             "button_label": ""
           }
         },
-        "collection_NTfUeq": {
+        "collection_Vpb7Q9": {
           "type": "collection",
           "settings": {
-            "collection": "long-sleeve-bibs",
+            "collection": "feeding-sale",
             "tag": "",
-            "image": "shopify://shop_images/LSBIBSHK_Long_Sleeve_Bib_Sharks_54.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "subheading": "Feeding Essentials",
             "button_label": ""
           }
         },
-        "collection_xh3HLz": {
+        "collection_xaztbJ": {
           "type": "collection",
           "settings": {
-            "collection": "silicone-bibs",
+            "collection": "toys-play-sale",
             "tag": "",
-            "image": "shopify://shop_images/SILBIBAVOPP_Silicone_Bib_Printed_-_Avocado_51.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "subheading": "Toys & Play",
             "button_label": ""
           }
         }
       },
       "block_order": [
-        "collection_btRm84",
-        "collection_3Y8JJd",
-        "collection_NTfUeq",
-        "collection_xh3HLz"
+        "collection_Hm9y9k",
+        "collection_97r7KX",
+        "collection_Vpb7Q9",
+        "collection_xaztbJ"
       ],
       "settings": {
-        "title": "Shop the Essentials",
-        "text": "<p>Your go-to essentials for gifting, newborns, and everyday comfort</p>",
+        "title": "Shop the Sale by Category",
+        "text": "<p>Explore our most-loved essentials, now at special Boxing Day pricing - <strong>up to 50% off</strong></p>",
         "text_alignment": "start",
         "enable_carousel": false,
         "grid": 4,
         "color_scheme": "1",
         "full_width": false,
         "coll_grid_image_shape": "portrait-45",
-        "coll_grid_image_position": "top center",
+        "coll_grid_image_position": "center center",
         "coll_thumb_mob_per_row": "2",
         "coll_grid_show_count": false,
         "coll_text_position": "below",
@@ -589,6 +588,8 @@
       ],
       "settings": {
         "title": "As Seen In",
+        "enable_carousel": false,
+        "carousel_speed": 30,
         "image_opacity": 100,
         "color_scheme": "default"
       }
@@ -710,6 +711,8 @@
       "name": "USP list",
       "settings": {
         "title": "",
+        "enable_carousel": false,
+        "carousel_speed": 30,
         "image_opacity": 100,
         "color_scheme": "default"
       }
@@ -1108,8 +1111,8 @@
     }
   },
   "order": [
-    "16359276425da8ce46",
-    "collection_list_BzgHGC",
+    "slideshow_dwrJFr",
+    "collection_list_T4VhHW",
     "featured_collection_bY6q7L",
     "featured_collection_8Bxebt",
     "custom_product_highlight_jV6CAX",
