@@ -11,6 +11,37 @@
         max-width: {{ block.settings.image_width }}px;
       }
     {%- endfor -%}
+    
+    {%- if section.settings.enable_carousel -%}
+      @keyframes scroll-logos {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      
+      #section-id-{{ section.id }} .logo-list--carousel {
+        overflow: hidden;
+        position: relative;
+      }
+      
+      #section-id-{{ section.id }} .logo-list--carousel .logo-list {
+        display: flex;
+        width: max-content;
+        animation: scroll-logos {{ section.settings.carousel_speed }}s linear infinite;
+      }
+      
+      #section-id-{{ section.id }} .logo-list--carousel .logo-list:hover {
+        animation-play-state: paused;
+      }
+      
+      #section-id-{{ section.id }} .logo-list--carousel .logo-list__logo {
+        flex: 0 0 auto;
+        padding: 0 2rem;
+      }
+    {%- endif -%}
   {%- endstyle -%}
 
   <div class="container">
@@ -18,57 +49,144 @@
       {{ section.settings.title | escape }}
     </h2>
 
-    <div class="logo-list-container">
-      <div class="logo-list logo-list--count-{{ section.blocks.size }}">
-        {%- for block in section.blocks -%}
-          {%- assign animation_delay = forloop.index | times: 0.15 | append: 's' -%}
-          {%- assign animation_attrs = 'data-cc-animate data-cc-animate-delay="' | append: animation_delay | append: '"' -%}
-          {%- if block.settings.link != blank -%}
-            <a class="logo-list__logo logo-list__logo-{{ forloop.index }} logo-list__link fade-in-up" href="{{ block.settings.link }}" {{ block.shopify_attributes }} {%- render 'animation-attrs', attrs: animation_attrs -%}>
-          {%- else -%}
-            <div class="logo-list__logo logo-list__logo-{{ forloop.index }} fade-in-up" {{ block.shopify_attributes }} {%- render 'animation-attrs', attrs: animation_attrs -%}>
-          {%- endif -%}
-
-            <div class="logo-list__logo-image">
-              {%- if block.settings.image != blank -%}
-                {%- liquid
-                  assign image_sizes = block.settings.image_width | append: 'px'
-                  assign image_widths = block.settings.image_width | times: 2 | prepend: ', ' | prepend: block.settings.image_width
-                  render 'image' with block.settings.image, sizes: image_sizes, widths: image_widths
-                -%}
-              {%- else -%}
-                <div class="placeholder-image">
-                  {{- 'logo' | placeholder_svg_tag: 'placeholder-svg' -}}
-                </div>
-              {%- endif -%}
-            </div>
-
-            {%- if block.settings.title != blank -%}
-              <div class="logo-list__logo-title">
-                {{ block.settings.title | escape }}
-              </div>
+    {%- if section.settings.enable_carousel -%}
+      <div class="logo-list-container logo-list--carousel">
+        <div class="logo-list">
+          {%- for block in section.blocks -%}
+            {%- if block.settings.link != blank -%}
+              <a class="logo-list__logo logo-list__logo-{{ forloop.index }} logo-list__link" href="{{ block.settings.link }}" {{ block.shopify_attributes }}>
+            {%- else -%}
+              <div class="logo-list__logo logo-list__logo-{{ forloop.index }}" {{ block.shopify_attributes }}>
             {%- endif -%}
 
-          {%- unless block.settings.link != blank -%}
-            </div>
-          {%- else -%}
-          </a>
-          {%- endunless -%}
-        {%- endfor -%}
-
-        {% if section.blocks.size == 0 %}
-          {%- for i in (1..4) -%}
-            <div class="logo-list__logo">
               <div class="logo-list__logo-image">
-                <div class="placeholder-image">
-                  {{- 'logo' | placeholder_svg_tag: 'placeholder-svg' -}}
+                {%- if block.settings.image != blank -%}
+                  {%- liquid
+                    assign image_sizes = block.settings.image_width | append: 'px'
+                    assign image_widths = block.settings.image_width | times: 2 | prepend: ', ' | prepend: block.settings.image_width
+                    render 'image' with block.settings.image, sizes: image_sizes, widths: image_widths
+                  -%}
+                {%- else -%}
+                  <div class="placeholder-image">
+                    {{- 'logo' | placeholder_svg_tag: 'placeholder-svg' -}}
+                  </div>
+                {%- endif -%}
+              </div>
+
+              {%- if block.settings.title != blank -%}
+                <div class="logo-list__logo-title">
+                  {{ block.settings.title | escape }}
+                </div>
+              {%- endif -%}
+
+            {%- unless block.settings.link != blank -%}
+              </div>
+            {%- else -%}
+            </a>
+            {%- endunless -%}
+          {%- endfor -%}
+
+          {%- comment -%} Duplicate logos for seamless loop {%- endcomment -%}
+          {%- for block in section.blocks -%}
+            {%- if block.settings.link != blank -%}
+              <a class="logo-list__logo logo-list__logo-{{ forloop.index }} logo-list__link" href="{{ block.settings.link }}" aria-hidden="true">
+            {%- else -%}
+              <div class="logo-list__logo logo-list__logo-{{ forloop.index }}" aria-hidden="true">
+            {%- endif -%}
+
+              <div class="logo-list__logo-image">
+                {%- if block.settings.image != blank -%}
+                  {%- liquid
+                    assign image_sizes = block.settings.image_width | append: 'px'
+                    assign image_widths = block.settings.image_width | times: 2 | prepend: ', ' | prepend: block.settings.image_width
+                    render 'image' with block.settings.image, sizes: image_sizes, widths: image_widths
+                  -%}
+                {%- else -%}
+                  <div class="placeholder-image">
+                    {{- 'logo' | placeholder_svg_tag: 'placeholder-svg' -}}
+                  </div>
+                {%- endif -%}
+              </div>
+
+              {%- if block.settings.title != blank -%}
+                <div class="logo-list__logo-title">
+                  {{ block.settings.title | escape }}
+                </div>
+              {%- endif -%}
+
+            {%- unless block.settings.link != blank -%}
+              </div>
+            {%- else -%}
+            </a>
+            {%- endunless -%}
+          {%- endfor -%}
+
+          {% if section.blocks.size == 0 %}
+            {%- for i in (1..4) -%}
+              <div class="logo-list__logo">
+                <div class="logo-list__logo-image">
+                  <div class="placeholder-image">
+                    {{- 'logo' | placeholder_svg_tag: 'placeholder-svg' -}}
+                  </div>
                 </div>
               </div>
-            </div>
-          {%- endfor -%}
-        {% endif %}
+            {%- endfor -%}
+          {% endif %}
+        </div>
       </div>
-    </div>
+    {%- else -%}
+      <div class="logo-list-container">
+        <div class="logo-list logo-list--count-{{ section.blocks.size }}">
+          {%- for block in section.blocks -%}
+            {%- assign animation_delay = forloop.index | times: 0.15 | append: 's' -%}
+            {%- assign animation_attrs = 'data-cc-animate data-cc-animate-delay="' | append: animation_delay | append: '"' -%}
+            {%- if block.settings.link != blank -%}
+              <a class="logo-list__logo logo-list__logo-{{ forloop.index }} logo-list__link fade-in-up" href="{{ block.settings.link }}" {{ block.shopify_attributes }} {%- render 'animation-attrs', attrs: animation_attrs -%}>
+            {%- else -%}
+              <div class="logo-list__logo logo-list__logo-{{ forloop.index }} fade-in-up" {{ block.shopify_attributes }} {%- render 'animation-attrs', attrs: animation_attrs -%}>
+            {%- endif -%}
+
+              <div class="logo-list__logo-image">
+                {%- if block.settings.image != blank -%}
+                  {%- liquid
+                    assign image_sizes = block.settings.image_width | append: 'px'
+                    assign image_widths = block.settings.image_width | times: 2 | prepend: ', ' | prepend: block.settings.image_width
+                    render 'image' with block.settings.image, sizes: image_sizes, widths: image_widths
+                  -%}
+                {%- else -%}
+                  <div class="placeholder-image">
+                    {{- 'logo' | placeholder_svg_tag: 'placeholder-svg' -}}
+                  </div>
+                {%- endif -%}
+              </div>
+
+              {%- if block.settings.title != blank -%}
+                <div class="logo-list__logo-title">
+                  {{ block.settings.title | escape }}
+                </div>
+              {%- endif -%}
+
+            {%- unless block.settings.link != blank -%}
+              </div>
+            {%- else -%}
+            </a>
+            {%- endunless -%}
+          {%- endfor -%}
+
+          {% if section.blocks.size == 0 %}
+            {%- for i in (1..4) -%}
+              <div class="logo-list__logo">
+                <div class="logo-list__logo-image">
+                  <div class="placeholder-image">
+                    {{- 'logo' | placeholder_svg_tag: 'placeholder-svg' -}}
+                  </div>
+                </div>
+              </div>
+            {%- endfor -%}
+          {% endif %}
+        </div>
+      </div>
+    {%- endif -%}
   </div>
 </div>
 
@@ -88,6 +206,24 @@
       "id": "title",
       "label": "Heading",
       "default": "Logo list"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_carousel",
+      "label": "Enable automatic carousel",
+      "default": false,
+      "info": "Logos will scroll continuously in a seamless loop"
+    },
+    {
+      "type": "range",
+      "id": "carousel_speed",
+      "label": "Carousel speed",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "s",
+      "default": 30,
+      "info": "Lower number = faster scroll. Only applies when carousel is enabled."
     },
     {
       "type": "range",
