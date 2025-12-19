@@ -75,17 +75,6 @@
             "buy_button_css_class": ".your-custom-button-class"
           }
         },
-        "richtext_CPgVN6": {
-          "type": "richtext",
-          "settings": {
-            "richtext": "<p>We want everything to arrive on time! Place holiday orders by <strong>December 10</strong>.</p>",
-            "icon": "",
-            "icon_size": "small",
-            "enable_box": true,
-            "box_color": "#e0f4d5",
-            "show_in_quickbuy": false
-          }
-        },
         "buy-buttons": {
           "type": "buy-buttons",
           "settings": {
@@ -169,7 +158,6 @@
         "divider_qDGcdF",
         "variant-picker",
         "ethos_exclusive_add_to_cart_UM3MD3",
-        "richtext_CPgVN6",
         "buy-buttons",
         "divider_kgTqeY",
         "complementary_BwbHzJ",
