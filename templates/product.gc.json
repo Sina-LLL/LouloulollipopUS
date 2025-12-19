@@ -31,6 +31,7 @@
         },
         "richtext_x7nJpd": {
           "type": "richtext",
+          "disabled": true,
           "settings": {
             "richtext": "<p>Buy a <strong>$100</strong> gift card → get <strong>$10</strong> in store credit<br/>Buy a <strong>$150</strong> gift card → get <strong>$20</strong> in store credit<br/>Buy a <strong>$200</strong> gift card → get <strong>$30</strong> in store credit</p>",
             "icon": "",
