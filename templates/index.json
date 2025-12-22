@@ -18,7 +18,7 @@
             "image": "shopify://shop_images/Boxing_Day_Hero_1.png",
             "mobile_image": "shopify://shop_images/LOUOU-07402-topaz_2_1.png",
             "slide_link": "",
-            "subheading": "BOXING DAY SALE",
+            "subheading": "WINTER SALE",
             "title": "UP TO 50% OFF",
             "heading_max_width": 10,
             "title_size": 120,
@@ -106,7 +106,7 @@
       ],
       "settings": {
         "title": "Shop the Sale by Category",
-        "text": "<p>Explore our most-loved essentials, now at special Boxing Day pricing - <strong>up to 50% off</strong></p>",
+        "text": "<p>Explore our most-loved essentials - <strong>UP TO 50% OFF</strong></p>",
         "text_alignment": "start",
         "enable_carousel": false,
         "grid": 4,
