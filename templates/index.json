@@ -269,7 +269,7 @@
         "enable_carousel": false,
         "products_per_row": 4,
         "color_scheme": "default",
-        "full_width": true,
+        "full_width": false,
         "show_view_all": true,
         "view_all_collection": "sale"
       }
