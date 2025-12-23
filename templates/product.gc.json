@@ -23,23 +23,6 @@
             "enable_product_reviews_by_price": true
           }
         },
-        "divider": {
-          "type": "divider",
-          "settings": {
-            "show_in_quickbuy": false
-          }
-        },
-        "richtext_JyPDKn": {
-          "type": "richtext",
-          "settings": {
-            "richtext": "<p>Buy a <strong>$100</strong> gift card → <strong>get $10</strong> in store credit</p><p>Buy a <strong>$150</strong> gift card → <strong>get $20</strong> in store credit</p><p>Buy a <strong>$200</strong> gift card → <strong>get $30</strong> in store credit</p>",
-            "icon": "gift",
-            "icon_size": "small",
-            "enable_box": true,
-            "box_color": "#e0f4d5",
-            "show_in_quickbuy": false
-          }
-        },
         "richtext_x7nJpd": {
           "type": "richtext",
           "disabled": true,
@@ -120,8 +103,6 @@
       "block_order": [
         "title",
         "price",
-        "divider",
-        "richtext_JyPDKn",
         "richtext_x7nJpd",
         "variant-picker",
         "buy-buttons",
