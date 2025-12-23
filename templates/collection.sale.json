@@ -70,6 +70,7 @@
         "collection_3C3APa",
         "collection_4pWbRV"
       ],
+      "disabled": true,
       "name": "Collection list",
       "settings": {
         "title": "Shop Sale by Category",
@@ -122,7 +123,8 @@
         "image_position": "center center",
         "rel_coll_gall_enable_margin": true,
         "rel_coll_gall_full_width": false,
-        "rel_coll_gall_overlay_style": "full image-overlay--bg-shadow",
+        "rel_coll_gall_overlay_style": "no_background",
+        "rel_coll_gall_text_placement": true,
         "rel_coll_gall_text_alignment": "center center",
         "rel_coll_grid_mobile": "2"
       }

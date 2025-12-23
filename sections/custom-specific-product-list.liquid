@@ -1,0 +1,232 @@
+{%- liquid
+  if section.settings.enable_carousel
+    assign product_limit = 20
+  else
+    assign product_limit = section.settings.products_per_row | times: 2
+  endif
+-%}
+
+<div class="collection-slider-row section-id-{{ section.id }} {% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }}{% endif %}{% if section.settings.full_width %} slider--no-max{% endif %}">
+  <div class="container{% if section.settings.full_width %} container--no-max{% endif %}">
+    <div class="hometitle lightly-spaced-row">
+      {% if section.settings.heading != blank %}
+        <h2 class="h4 text-{{ section.settings.text_alignment }}" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}>
+          {% if section.settings.show_view_all and section.settings.view_all_collection != blank %}
+            <a class="has-paging__title" href="{{ collections[section.settings.view_all_collection].url }}">{{ section.settings.heading | escape }}</a>
+          {% else %}
+            {{ section.settings.heading | escape }}
+          {% endif %}
+        </h2>
+      {% endif %}
+      {% if section.settings.body_text != blank %}
+        <div class="rte text-{{ section.settings.text_alignment }}" {%- render 'animation-attrs', attrs: animation_attrs -%}>
+          {{ section.settings.body_text }}
+        </div>
+      {% endif %}
+    </div>
+
+    {%- if section.settings.enable_carousel -%}
+      <carousel-slider class="carousel block collection-slider">
+    {%- endif -%}
+
+    <div class="collection-listing fade-in-up{% if section.settings.enable_carousel %} slider {% if section.settings.full_width %}slider--edge-peek{% endif %} slider--mobile-container-pad{% endif %}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
+      <div class="product-grid product-grid--per-row-{{ section.settings.products_per_row }} product-grid--per-row-mob-{{ settings.prod_thumb_mob_per_row }}{% if section.settings.enable_carousel %} slider__grid product-grid--carousel{% endif %}">
+        {%- liquid
+          if section.settings.product_list == blank
+            for i in (1..section.settings.products_per_row)
+              assign extra_class = ''
+              if section.settings.enable_carousel
+                echo '<div class="slider__item ' | append: extra_class | append: '">'
+              endif
+              render 'onboarding-product-block', forloop: forloop
+              if section.settings.enable_carousel
+                echo '</div>'
+              endif
+            endfor
+          else
+            if settings.prod_thumb_shape == 'portrait-23'
+              assign chosen_aspect_ratio = 0.67
+            elsif settings.prod_thumb_shape == 'portrait-45'
+              assign chosen_aspect_ratio = 0.8
+            elsif settings.prod_thumb_shape == 'square'
+              assign chosen_aspect_ratio = 1.0
+            elsif settings.prod_thumb_shape == 'landscape-54'
+              assign chosen_aspect_ratio = 1.25
+            elsif settings.prod_thumb_shape == 'landscape-32'
+              assign chosen_aspect_ratio = 1.50
+            elsif settings.prod_thumb_shape == 'tallest'
+              assign chosen_aspect_ratio = 99
+              for product in section.settings.product_list
+                if product.featured_media.preview_image.aspect_ratio < chosen_aspect_ratio
+                  assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
+                endif
+              endfor
+            else
+              assign chosen_aspect_ratio = 0
+              for product in section.settings.product_list
+                if product.featured_media.preview_image.aspect_ratio > chosen_aspect_ratio
+                  assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
+                endif
+              endfor
+            endif
+            
+            for product in section.settings.product_list
+              assign extra_class = ''
+              if product.tags contains 'hidden'
+                assign extra_class = 'hidden-product'
+              endif
+              if section.settings.enable_carousel
+                echo '<div class="slider__item ' | append: extra_class | append: '">'
+              endif
+              render 'product-block', product: product, custom_aspect_ratio: chosen_aspect_ratio, no_swiping: section.settings.enable_carousel, no_quick_buy_markup: section.settings.enable_carousel
+              if section.settings.enable_carousel
+                echo '</div>'
+              endif
+            endfor
+          endif
+        -%}
+      </div>
+    </div>
+
+    {%- if section.settings.enable_carousel -%}
+      <div class="slider-nav slider-nav--floating no-js-hidden">
+        <button type="button" class="slider-nav__btn has-ltr-icon" name="prev" aria-controls="slider-{{ section.id }}">
+          <span class="visually-hidden">{{ 'general.slider.previous' | t }}</span>
+          {%- render 'icon-chevron-left', stroke_width: 1.5 -%}
+        </button>
+        <button type="button" class="slider-nav__btn has-ltr-icon" name="next" aria-controls="slider-{{ section.id }}">
+          <span class="visually-hidden">{{ 'general.slider.next' | t }}</span>
+          {%- render 'icon-chevron-right', stroke_width: 1.5 -%}
+        </button>
+      </div>
+      </carousel-slider>
+    {%- endif -%}
+  </div>
+
+  {%- if section.settings.show_view_all and section.settings.view_all_collection != blank -%}
+    <div class="align-center" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.5s"' -%}>
+      <a class="small-feature-link" href="{{ collections[section.settings.view_all_collection].url }}">{{ 'sections.featured_collection.view_all' | t }}</a>
+    </div>
+  {%- endif -%}
+
+  {% if settings.quickbuy_style != 'off' and section.settings.enable_carousel %}
+    <div class="quickbuy-container use-color-scheme use-color-scheme--{{ settings.quickbuy_color_scheme }}">
+      <a href="#" class="close-detail" aria-label="{{ 'accessibility.close' | t }}" tabindex="-1">{% render 'icon-close', stroke_width: 1 %}</a>
+      <div class="inner"></div>
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Custom Product Selector",
+  "class": "section-custom-product-selector",
+  "disabled_on": {
+    "templates": [
+      "password"
+    ],
+    "groups": [
+      "aside"
+    ]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Featured Products"
+    },
+    {
+      "type": "richtext",
+      "id": "body_text",
+      "label": "Body text",
+      "default": "<p>Choose your favorite products from our collection.</p>"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "end",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "product_list",
+      "id": "product_list",
+      "label": "Products",
+      "info": "Select products to display"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_carousel",
+      "label": "Enable carousel",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "products_per_row",
+      "label": "Products per row",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 4,
+      "info": "Choose 2, 3, or 4 products per row"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "default",
+      "options": [
+        {
+          "value": "default",
+          "label": "Default"
+        },
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ]
+    },
+    {
+      "id": "full_width",
+      "type": "checkbox",
+      "label": "Full page width",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_view_all",
+      "label": "Show 'View all' link",
+      "default": false
+    },
+    {
+      "type": "collection",
+      "id": "view_all_collection",
+      "label": "View all collection",
+      "info": "Collection to link to when 'View all' is clicked. Also makes the heading clickable."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Product Selector"
+    }
+  ]
+}
+{% endschema %}
