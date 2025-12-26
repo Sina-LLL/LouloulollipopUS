@@ -249,7 +249,7 @@
         "color_scheme": "default"
       }
     },
-    "custom_specific_product_list_JtdwwF": {
+    "custom_specific_product_list_LxUePF": {
       "type": "custom-specific-product-list",
       "name": "Custom Product Selector",
       "settings": {
@@ -257,39 +257,14 @@
         "body_text": "<p>Our most-loved pieces, on sale!</p>",
         "text_alignment": "start",
         "product_list": [
-          "short-sleeve-zipped-romper-silly-seals",
-          "muslin-lightweight-sleep-bag-0-5-tog-all-aboard",
-          "short-sleeve-bodysuit-dress-mermaids",
+          "flashcards-fruits",
+          "wet-dry-bag-animal-puzzle",
+          "snack-box-bunny",
+          "burp-cloth-set-2-pack-smiley-sharks",
           "sleeper-hedgehogs",
-          "snack-box-alligator",
-          "snack-cup-pink",
-          "wild-teether-rhino",
-          "snack-plate-lion"
-        ],
-        "enable_carousel": false,
-        "products_per_row": 4,
-        "color_scheme": "default",
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_collection": "sale"
-      }
-    },
-    "custom_specific_product_list_UxwdAm": {
-      "type": "custom-specific-product-list",
-      "name": "Custom Product Selector",
-      "settings": {
-        "heading": "Parent Favourites on Sale",
-        "body_text": "<p>Our most-loved pieces, on sale!</p>",
-        "text_alignment": "start",
-        "product_list": [
-          "waffle-sleep-bag-1-0-tog-denim-blue",
-          "long-sleeve-pajama-set-french-breakfast",
-          "sleeper-sun-kissed-shoal",
-          "muslin-lightweight-sleep-bags-0-5-tog-silly-seals",
-          "stacking-cups-classic",
-          "learning-utensils-set-giraffe",
-          "long-sleeve-bib-pink-checkerboard",
-          "snack-cup-blue"
+          "waffle-sleep-bag-1-0-tog-blush-pink",
+          "muslin-fitted-crib-sheet-silly-seals",
+          "muslin-swaddle-painterly-seahorse"
         ],
         "enable_carousel": false,
         "products_per_row": 4,
@@ -1154,8 +1129,7 @@
     "collection_list_T4VhHW",
     "featured_collection_bY6q7L",
     "logo_list_kYmwNX",
-    "custom_specific_product_list_JtdwwF",
-    "custom_specific_product_list_UxwdAm",
+    "custom_specific_product_list_LxUePF",
     "custom_product_highlight_jV6CAX",
     "collection_list_zhMrUA",
     "featured_collection_RcGTat",
