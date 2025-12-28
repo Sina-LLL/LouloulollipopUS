@@ -67,7 +67,7 @@
         "announcement_jKG3Y7": {
           "type": "announcement",
           "settings": {
-            "text": "<a href=\"/collections/sale\" title=\"SALE\"><strong>Boxing Day Sale - Up to 50% Off</strong></a>",
+            "text": "<a href=\"/collections/sale\" title=\"SALE\"><strong>Winter Sale - Up to 50% Off</strong></a>",
             "show_countdown": false,
             "hide_on_end": false,
             "end_date": "",
