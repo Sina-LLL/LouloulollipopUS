@@ -249,7 +249,7 @@
         "color_scheme": "default"
       }
     },
-    "custom_specific_product_list_LxUePF": {
+    "custom_specific_product_list_78CJhA": {
       "type": "custom-specific-product-list",
       "name": "Custom Product Selector",
       "settings": {
@@ -257,14 +257,14 @@
         "body_text": "<p>Our most-loved pieces, on sale!</p>",
         "text_alignment": "start",
         "product_list": [
-          "flashcards-fruits",
-          "wet-dry-bag-animal-puzzle",
-          "snack-box-bunny",
-          "burp-cloth-set-2-pack-smiley-sharks",
-          "sleeper-hedgehogs",
+          "tencel-sleep-bag-1-0-tog-ocean-explorer",
           "waffle-sleep-bag-1-0-tog-blush-pink",
-          "muslin-fitted-crib-sheet-planets",
-          "muslin-swaddle-painterly-seahorse"
+          "waffle-sleep-bag-1-0-tog-denim-blue",
+          "tencel-sleep-bag-1-0-tog-jungle-friends",
+          "short-sleeve-long-pants-pajama-set-mermaids",
+          "short-sleeve-long-pants-pajama-set-ocean-explorer",
+          "short-sleeve-long-pants-pajama-set-pink-checkerboard",
+          "short-sleeve-long-pants-pajama-set-smiley-sharks"
         ],
         "enable_carousel": false,
         "products_per_row": 4,
@@ -1129,7 +1129,7 @@
     "collection_list_T4VhHW",
     "featured_collection_bY6q7L",
     "logo_list_kYmwNX",
-    "custom_specific_product_list_LxUePF",
+    "custom_specific_product_list_78CJhA",
     "custom_product_highlight_jV6CAX",
     "collection_list_zhMrUA",
     "featured_collection_RcGTat",

@@ -174,10 +174,17 @@ Parameters:
                 <div class="vendor">{{ product.vendor | escape }}</div>
               {%- endif -%}
 
-              <div class="">
-                <span class="product-block__title">{{ product.title | split: ' - ' | first | escape }}</span>
-                <br>
-                <span class="product-title-sub">{{ product.title | split: ' - ' | last | escape }}</span>
+              {% assign title_parts = product.title | split: ' - ' %}
+              {% assign main_title = title_parts | first %}
+              {% assign sub_title = title_parts | last %}
+
+              <div>
+                <span class="product-block__title">{{ main_title | escape }}</span>
+
+                {% if title_parts.size > 1 and main_title != sub_title %}
+                  <br>
+                  <span class="product-title-sub">{{ sub_title | escape }}</span>
+                {% endif %}
               </div>
               <!-- <h1 class="product-title">
                 <span class="product-title-main">{{ product.title | split: ' - ' | first | escape }}</span>
