@@ -123,21 +123,6 @@
         "coll_button_style": "primary"
       }
     },
-    "product_list_Lntrpg": {
-      "type": "product-list",
-      "name": "Product list",
-      "settings": {
-        "title": "Mystery Boxes",
-        "text": "<p>Premium Loulou Lollipop pieces up to <strong>80% off</strong></p>",
-        "text_alignment": "start",
-        "product_list": [],
-        "show_vendor": false,
-        "enable_carousel": true,
-        "grid": 3,
-        "color_scheme": "default",
-        "full_width": false
-      }
-    },
     "featured_collection_bY6q7L": {
       "type": "featured-collection",
       "disabled": true,
@@ -1142,7 +1127,6 @@
   "order": [
     "slideshow_dwrJFr",
     "collection_list_T4VhHW",
-    "product_list_Lntrpg",
     "featured_collection_bY6q7L",
     "logo_list_kYmwNX",
     "custom_specific_product_list_78CJhA",
