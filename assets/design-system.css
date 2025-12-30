@@ -785,7 +785,9 @@ h1.product-title {
 .custom-product-features .theme-img{
   border-radius:10px;
 }
-
+.related-collection-links--buttons {
+  justify-content: space-around; 
+}
 
 
 
