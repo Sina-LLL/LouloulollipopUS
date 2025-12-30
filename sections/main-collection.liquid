@@ -167,7 +167,7 @@
             {%- endif -%}
 
             {% if collection.description != blank and section.settings.coll_desc_pos == 'above' %}
-              <div class="text-overlay__rte rte cf align-center reading-width bold">{{ collection.description }}</div>
+              <div class="collection-description text-overlay__rte rte cf align-center reading-width bold">{{ collection.description }}</div>
             {% endif %}
 
             {%- if related_collections_count > 0 and section.settings.related_collections_style == 'buttons' -%}
@@ -179,7 +179,6 @@
     </div>
   {%- endif -%}
 {% else %}
-  {{ related_collection_html }}
   {%- liquid
     assign show_header = false
     if section.settings.show_title
@@ -190,17 +189,51 @@
     endif
   -%}
   {%- if show_header -%}
-    <div class="page-header page-header--with-upper-spacing">
-      <div class="container">
-        {%- if section.settings.show_title -%}
-          <h1 class="pagetitle h3">{{ collection.title | escape }}</h1>
-        {%- endif -%}
-
-        {% if collection.description != blank and section.settings.coll_desc_pos == 'above' %}
-          <div class="rte cf align-center reading-width">{{ collection.description }}</div>
-        {% endif %}
+    {%- if section.settings.coll_desc_pos == 'above' and section.settings.coll_desc_layout == 'sidebyside' and collection.description != blank and collection.image -%}
+      {%- comment -%} Side by side layout {%- endcomment -%}
+      <div class="page-header">
+        <div class="">
+          <div class="collection-header-sidebyside">
+            <div class="collection-header-sidebyside__content">
+              {%- if section.settings.show_title -%}
+                <h1 class="pagetitle h3">{{ collection.title | escape }}</h1>
+              {%- endif -%}
+              <div class="collection-description rte cf">{{ collection.description }}</div>
+              {%- if related_collections_count > 0 and section.settings.related_collections_style == 'buttons' -%}
+            <div style="margin-top: 20px;">
+              <related-collection-link-buttons class="related-collection-links related-collection-links--buttons" data-expander-btn-text="{{ 'sections.collection.view_all_related_collections' | t }}">
+                {%- for loop_collection in section.settings.related_collections -%}
+                  {%- unless loop_collection.handle == collection.handle -%}
+                    <a class="btn btn--primary" href="{{ loop_collection.url }}">{{ loop_collection.title | escape }}</a>
+                  {%- endunless -%}
+                {%- endfor -%}
+              </related-collection-link-buttons>
+            </div>
+          {%- endif -%}
+            </div>
+            <div class="collection-header-sidebyside__image">
+              {%- render 'image' with collection.image, loading: 'eager', fetchpriority: 'high' -%}
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+      {%- if related_collections_count > 0 and section.settings.related_collections_style != 'buttons' -%}
+    {{ related_collection_html }}
+  {%- endif -%}
+    {%- else -%}
+      {%- comment -%} Default layout {%- endcomment -%}
+      <div class="page-header page-header--with-upper-spacing">
+        <div class="container">
+          {%- if section.settings.show_title -%}
+            <h1 class="pagetitle h3">{{ collection.title | escape }}</h1>
+          {%- endif -%}
+
+          {% if collection.description != blank and section.settings.coll_desc_pos == 'above' %}
+            <div class="collection-description rte cf align-center reading-width">{{ collection.description }}</div>
+          {% endif %}
+        </div>
+      </div>
+    {%- endif -%}
   {% endif %}
 {% endif %}
 
@@ -358,7 +391,7 @@
 
   {% if collection.description != blank and section.settings.coll_desc_pos == 'below' %}
     <div class="container container--reading-width fully-spaced-row" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
-      <div class="rte cf">{{ collection.description }}</div>
+      <div class="collection-description rte cf">{{ collection.description }}</div>
     </div>
   {% endif %}
 </div>
@@ -449,6 +482,23 @@
         {
           "value": "below",
           "label": "Below products"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "coll_desc_layout",
+      "label": "Description layout (when position is 'Below collection title')",
+      "info": "Only applies when 'Show collection image behind title' is disabled and collection has both description and image",
+      "default": "stacked",
+      "options": [
+        {
+          "value": "stacked",
+          "label": "Stacked (centered)"
+        },
+        {
+          "value": "sidebyside",
+          "label": "Side by side (description left, image right)"
         }
       ]
     },
