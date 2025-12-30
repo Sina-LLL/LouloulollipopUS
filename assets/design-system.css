@@ -971,3 +971,61 @@ cart-form .page-header:not(.page-header--with-background){
   margin-bottom: 24px;
   justify-content: center;
 }
+
+/* Main Collection  */
+.collection-description{
+  font-size: 18px;
+  line-height: 1.5em;
+}
+.collection-header-sidebyside {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.collection-header-sidebyside__content {
+  order: 1;
+  max-width: var(--page-container-width);
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--container-pad-x);
+  padding-left: var(--container-pad-x);
+  text-align:left;
+}
+.collection-header-sidebyside__image {
+  order: 2;
+  aspect-ratio: 2 / 1;
+  overflow: hidden;
+  height: 100%;
+
+}
+.collection-header-sidebyside__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 767px) {
+  .collection-header-sidebyside {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .collection-header-sidebyside__content {
+    order: 2;
+    text-align:center;
+
+  }
+  .collection-header-sidebyside__image {
+    order:1;
+  }
+  .collection-description{
+    font-size: 16px;
+  }
+}
+.related-collection-links--buttons .btn{
+  margin: 0 4px var(--gutter-desktop);
+  padding:1em;
+  font-size: 12px;
+
+}
