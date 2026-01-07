@@ -541,16 +541,13 @@
         "disabled": false,
         "settings": {}
       },
-      "11015274795786323183": {
-        "type": "shopify://apps/multiscount/blocks/autogift-embed/e991b375-762d-4bff-8308-d0a28e464f1a",
-        "disabled": false,
-        "settings": {
-          "auto_remove_gift": true,
-          "auto_refresh": true
-        }
-      },
       "2153490007123654574": {
         "type": "shopify://apps/consentmo-gdpr/blocks/gdpr_cookie_consent/4fbe573f-a377-4fea-9801-3ee0858cae41",
+        "disabled": false,
+        "settings": {}
+      },
+      "12439146293631897289": {
+        "type": "shopify://apps/blockify-fraud-filter/blocks/app_embed/2e3e0ba5-0e70-447a-9ec5-3bf76b5ef12e",
         "disabled": false,
         "settings": {}
       }
