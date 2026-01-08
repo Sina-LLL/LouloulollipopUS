@@ -50,6 +50,7 @@
         },
         "announcement-1": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Free Standard Shipping $65+",
             "show_countdown": false,
@@ -64,16 +65,16 @@
             "text_color": "#ffffff"
           }
         },
-        "announcement_jKG3Y7": {
+        "announcement_9zQWUX": {
           "type": "announcement",
           "settings": {
-            "text": "<a href=\"/collections/sale\" title=\"SALE\"><strong>Winter Sale - Up to 50% Off</strong></a>",
-            "show_countdown": false,
-            "hide_on_end": false,
-            "end_date": "",
+            "text": "<a href=\"/collections/sale\" title=\"SALE\"><strong>Up to 50% Winter Sale Last Chance</strong></a>",
+            "show_countdown": true,
+            "hide_on_end": true,
+            "end_date": "2026-01-10",
             "end_time": "",
             "number_font": "base",
-            "countdown_separator": "box",
+            "countdown_separator": "dash",
             "use_custom_colors": false,
             "bg_color": "#4a4a4a",
             "bg_gradient": "",
@@ -85,7 +86,7 @@
         "announcement-2",
         "announcement_gLBKkX",
         "announcement-1",
-        "announcement_jKG3Y7"
+        "announcement_9zQWUX"
       ],
       "settings": {
         "message_font_size": 16,
