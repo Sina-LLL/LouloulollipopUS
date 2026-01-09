@@ -522,6 +522,37 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
   /* pointer-events: none;*/
 } 
 
+/* Compact grid layout for variant swatches */
+.variant-grid-compact.option-selector__btns {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  gap: 6px;
+}
+
+@media (min-width: 768px) {
+  .variant-grid-compact.option-selector__btns {
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    gap: 8px;
+  }
+}
+
+/* Smaller swatches on mobile */
+@media (max-width: 767px) {
+  .variant-grid-compact .opt-label--image {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .variant-grid-compact.option-selector__btns {
+    gap: 6px;
+  }
+}
+
+/* Ensure swatches fit properly in grid */
+.variant-grid-compact .opt-label--image {
+  margin: 0;
+}
+
 
 .product-price--large .price__was{
   margin-left:0;
