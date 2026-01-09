@@ -214,6 +214,7 @@
     },
     "custom_product_list_by_print_fGCmUV": {
       "type": "custom-product-list-by-print",
+      "disabled": true,
       "custom_css": [
         ".collection-slider-row {padding-bottom: 0;}"
       ],
