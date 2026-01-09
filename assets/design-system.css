@@ -1062,3 +1062,6 @@ cart-form .page-header:not(.page-header--with-background){
   font-size: 12px;
 
 }
+#repWebClientContainer{
+  z-index: 5 !important;
+}
