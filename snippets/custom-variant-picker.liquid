@@ -50,7 +50,7 @@
     <legend class="label">
       New Styles: <span class="option-selector__label-value js-color-text" data-section="new"></span>
     </legend>
-    <div class="option-selector__btns flex flex-wrap">
+    <div class="option-selector__btns variant-grid-compact">
       {%- for sibling in sibs_collection.products -%}
           {%- if sibling.tags contains 'new' -%}
             <a href="{{ sibling.url }}" 
@@ -108,7 +108,7 @@
     <legend class="label">
       Core Styles: <span class="option-selector__label-value js-color-text" data-section="core"></span>
     </legend>
-    <div class="option-selector__btns flex flex-wrap">
+    <div class="option-selector__btns variant-grid-compact">
       {%- for sibling in sibs_collection.products -%}
         {%- unless sibling.tags contains 'new' or sibling.tags contains 'sale' -%}
             <a href="{{ sibling.url }}" 
@@ -204,7 +204,7 @@
     <legend class="label">
       Personalize It: <span class="option-selector__label-value js-color-text" data-section="personalize-it"></span>
     </legend>
-    <div class="option-selector__btns flex flex-wrap">
+    <div class="option-selector__btns variant-grid-compact">
       {%- for sibling in sibs_collection.products -%}
           {%- if sibling.tags contains 'personalize-it' -%}
             <a href="{{ sibling.url }}" 
