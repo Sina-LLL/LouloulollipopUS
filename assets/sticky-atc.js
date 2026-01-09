@@ -103,9 +103,13 @@ if (!customElements.get('sticky-atc')) {
        */
       static handleScroll() {
         const topOffset = document.querySelector('.pageheader--sticky') ? document.querySelector('.section-header').offsetHeight : 0;
+        
+        // Check if mobile
+        const isMobile = window.innerWidth < 768;
+        
         this.classList.toggle(
           'sticky-atc--out',
-          this.buyButtons.getBoundingClientRect().bottom > topOffset
+          !isMobile && this.buyButtons.getBoundingClientRect().bottom > topOffset
         );
 
         document.body.classList.toggle(
