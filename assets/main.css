@@ -3964,7 +3964,7 @@ shopify-payment-terms {
   }
 }
 .gallery-viewer-modal.modal {
-  z-index: 10000;
+  z-index: 10000000;
 }
 .gallery-viewer-modal .modal__window {
   width: 100%;

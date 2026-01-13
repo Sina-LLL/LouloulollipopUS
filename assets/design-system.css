@@ -110,7 +110,7 @@ h6,.h6{
 /* End H6 */
 
 /* Body Large */
-.large-text, .product-info .price__current{
+.large-text{
   font-family: sofia-pro, sans-serif;
   font-size: 1.25rem;
   font-weight: 400;

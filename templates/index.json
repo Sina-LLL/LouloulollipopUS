@@ -15,22 +15,22 @@
         "image_Qfbcc9": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Boxing_Day_Hero_1.png",
-            "mobile_image": "shopify://shop_images/LOUOU-07402-topaz_2_1.png",
+            "image": "shopify://shop_images/2.5_TOG_Hero.png",
+            "mobile_image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._11th_2024_-Web-31.jpg",
             "slide_link": "",
-            "subheading": "WINTER SALE",
-            "title": "UP TO 50% OFF",
-            "heading_max_width": 10,
-            "title_size": 120,
+            "subheading": "",
+            "title": "Sleep Through Every Season",
+            "heading_max_width": 8,
+            "title_size": 80,
             "title_size_mobile": 36,
             "use_h1": true,
-            "text": "<p><strong>Biggest markdowns of the year</strong></p>",
+            "text": "<p><strong>Keep your little one warm with sleep suits and quilts</strong></p>",
             "enlarge_text": true,
-            "button_label_1": "Shop The Sale",
-            "button_url_1": "shopify://collections/sale",
+            "button_label_1": "Shop Sleepsuits",
+            "button_url_1": "shopify://collections/sleepsuits",
             "button_tag_1": "",
-            "button_label_2": "",
-            "button_url_2": "shopify://collections/newborn-bundles",
+            "button_label_2": "Shop Muslin Quilts",
+            "button_url_2": "shopify://collections/muslin-quilt",
             "button_tag_2": "",
             "text_alignment": "center left"
           }
@@ -52,93 +52,6 @@
         "autoplay": true,
         "autoplay_speed": 7,
         "accessibility_info": ""
-      }
-    },
-    "collection_list_T4VhHW": {
-      "type": "collection-list",
-      "blocks": {
-        "collection_Hm9y9k": {
-          "type": "collection",
-          "settings": {
-            "collection": "sleep-bedding-sale",
-            "tag": "",
-            "image": "shopify://shop_images/MuslinSleepBag-DitsyFloral_2330eff0-8476-48c8-8522-add10c736676.jpg",
-            "subheading": "Sleep & Bedding",
-            "button_label": ""
-          }
-        },
-        "collection_97r7KX": {
-          "type": "collection",
-          "settings": {
-            "collection": "clothing-sale",
-            "tag": "",
-            "image": "shopify://shop_images/DSC07646_3056e8aa-1461-487c-a89c-7d6577a8c9de.jpg",
-            "subheading": "Clothing",
-            "button_label": ""
-          }
-        },
-        "collection_Vpb7Q9": {
-          "type": "collection",
-          "settings": {
-            "collection": "feeding-essentials-sale",
-            "tag": "",
-            "image": "shopify://shop_images/Tableware-white-23.jpg",
-            "subheading": "Feeding Essentials",
-            "button_label": ""
-          }
-        },
-        "collection_xaztbJ": {
-          "type": "collection",
-          "settings": {
-            "collection": "toys-play-sale",
-            "tag": "",
-            "image": "shopify://shop_images/Group_3.jpg",
-            "subheading": "Toys & Play",
-            "button_label": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection_Hm9y9k",
-        "collection_97r7KX",
-        "collection_Vpb7Q9",
-        "collection_xaztbJ"
-      ],
-      "settings": {
-        "title": "Shop the Sale by Category",
-        "text": "<p>Explore our most-loved essentials - <strong>UP TO 50% OFF</strong></p>",
-        "text_alignment": "start",
-        "enable_carousel": false,
-        "grid": 4,
-        "color_scheme": "1",
-        "full_width": false,
-        "coll_grid_image_shape": "portrait-45",
-        "coll_grid_image_position": "center center",
-        "coll_thumb_mob_per_row": "2",
-        "coll_grid_show_count": false,
-        "coll_text_position": "below",
-        "coll_text_position_under_mobile": false,
-        "coll_thumb_text_align_x": "center",
-        "coll_thumb_text_align_y": "center",
-        "coll_button_style": "primary"
-      }
-    },
-    "featured_collection_bY6q7L": {
-      "type": "featured-collection",
-      "disabled": true,
-      "name": "Personalization",
-      "settings": {
-        "title": "Made Just for Your Little One",
-        "text": "<p>Add embroidery to create a one-of-a-kind keepsake.</p>",
-        "collection": "personalize-it",
-        "show_vendor": false,
-        "enable_carousel": true,
-        "grid": 4,
-        "rows": 1,
-        "color_scheme": "default",
-        "show_view_all": true,
-        "full_width": false,
-        "text_alignment": "start"
       }
     },
     "logo_list_kYmwNX": {
@@ -249,48 +162,110 @@
         "color_scheme": "default"
       }
     },
-    "custom_specific_product_list_enyxGy": {
-      "type": "custom-specific-product-list",
-      "name": "Custom Product Selector",
+    "featured_collection_bY6q7L": {
+      "type": "featured-collection",
+      "name": "Personalization",
       "settings": {
-        "heading": "Parent Favourites on Sale",
-        "body_text": "<p>Our most-loved pieces, on sale!</p>",
-        "text_alignment": "start",
-        "product_list": [
-          "long-sleeve-bodysuit-all-aboard",
-          "kids-straw-bunny",
-          "long-sleeve-pajama-set-planets",
-          "muslin-fitted-crib-sheet-bluebell",
-          "short-sleeve-bodysuit-camper-vans",
-          "wet-dry-bag-animal-puzzle",
-          "long-sleeve-bodysuit-grey-dash",
-          "long-sleeve-bib-peaches"
-        ],
-        "enable_carousel": false,
-        "products_per_row": 4,
+        "title": "Made Just for Your Little One",
+        "text": "<p>Add embroidery to create a one-of-a-kind keepsake.</p>",
+        "collection": "personalize-it",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 4,
+        "rows": 1,
         "color_scheme": "default",
-        "full_width": false,
         "show_view_all": true,
-        "view_all_collection": "sale"
+        "full_width": false,
+        "text_alignment": "start"
       }
     },
-    "custom_product_highlight_jV6CAX": {
+    "custom_product_highlight_9KD3MN": {
       "type": "custom-product-highlight",
-      "disabled": true,
       "name": "Highlighted Collection",
       "settings": {
-        "title": "Meet Wolfie",
-        "text": "<p>Our beloved icon is here to lead the pack</p>",
-        "image": "shopify://shop_images/WTR-WOF_WildTeether_Wolfie_01.jpg",
+        "title": "Layered Comfort",
+        "text": "<p>Pair our sleep suits with breathable quilts for flexible warmth and sleep</p>",
+        "image": "shopify://shop_images/BA9007U.SHK_Sleepsuit_1.0_Tog_Sharks_3W_caf0f2b1-2a62-4fc0-946a-e986b07e834c.jpg",
         "order": false,
         "product_list": [
-          "wolfie-plush-bag-charm-pink-limited-edition",
-          "wolfie-plush-bag-charm-smoke-blue"
+          "muslin-quilt-forest-families",
+          "tencel-sleepsuit-1-0-tog-mermaids",
+          "muslin-quilt-bunny-meadow",
+          "tencel-sleepsuit-1-0-tog-smiley-sharks"
         ],
-        "button_label": "Shop Wolfie",
+        "button_label": "",
         "link": "shopify://collections/wolfie",
         "button_style": "primary",
         "color_scheme": "default"
+      }
+    },
+    "collection_list_T4VhHW": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_Hm9y9k": {
+          "type": "collection",
+          "settings": {
+            "collection": "sleep-bedding-sale",
+            "tag": "",
+            "image": "shopify://shop_images/MuslinSleepBag-DitsyFloral_2330eff0-8476-48c8-8522-add10c736676.jpg",
+            "subheading": "Sleep & Bedding",
+            "button_label": ""
+          }
+        },
+        "collection_97r7KX": {
+          "type": "collection",
+          "settings": {
+            "collection": "clothing-sale",
+            "tag": "",
+            "image": "shopify://shop_images/DSC07646_3056e8aa-1461-487c-a89c-7d6577a8c9de.jpg",
+            "subheading": "Clothing",
+            "button_label": ""
+          }
+        },
+        "collection_Vpb7Q9": {
+          "type": "collection",
+          "settings": {
+            "collection": "feeding-essentials-sale",
+            "tag": "",
+            "image": "shopify://shop_images/Tableware-white-23.jpg",
+            "subheading": "Feeding Essentials",
+            "button_label": ""
+          }
+        },
+        "collection_xaztbJ": {
+          "type": "collection",
+          "settings": {
+            "collection": "toys-play-sale",
+            "tag": "",
+            "image": "shopify://shop_images/Group_3.jpg",
+            "subheading": "Toys & Play",
+            "button_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_Hm9y9k",
+        "collection_97r7KX",
+        "collection_Vpb7Q9",
+        "collection_xaztbJ"
+      ],
+      "settings": {
+        "title": "Shop the Sale Section",
+        "text": "<p>Explore our most-loved essentials - <strong>UP TO 50% OFF</strong></p>",
+        "text_alignment": "start",
+        "enable_carousel": false,
+        "grid": 4,
+        "color_scheme": "1",
+        "full_width": false,
+        "coll_grid_image_shape": "portrait-45",
+        "coll_grid_image_position": "center center",
+        "coll_thumb_mob_per_row": "2",
+        "coll_grid_show_count": false,
+        "coll_text_position": "below",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_y": "center",
+        "coll_button_style": "primary"
       }
     },
     "collection_list_zhMrUA": {
@@ -499,7 +474,6 @@
         "collection_iyjCCb",
         "collection_ntR4RL"
       ],
-      "disabled": true,
       "name": "Shop by print",
       "settings": {
         "title": "Shop by Print",
@@ -1126,11 +1100,10 @@
   },
   "order": [
     "slideshow_dwrJFr",
-    "collection_list_T4VhHW",
-    "featured_collection_bY6q7L",
     "logo_list_kYmwNX",
-    "custom_specific_product_list_enyxGy",
-    "custom_product_highlight_jV6CAX",
+    "featured_collection_bY6q7L",
+    "custom_product_highlight_9KD3MN",
+    "collection_list_T4VhHW",
     "collection_list_zhMrUA",
     "featured_collection_RcGTat",
     "collection_list_zQRndp",
