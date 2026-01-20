@@ -514,11 +514,6 @@
         "disabled": false,
         "settings": {}
       },
-      "260908246434737815": {
-        "type": "shopify://apps/thoughtmetric/blocks/tm/5a9f9e10-3a9f-41b1-8250-d2eab3bd19a4",
-        "disabled": false,
-        "settings": {}
-      },
       "855628211100114053": {
         "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
@@ -548,6 +543,11 @@
       },
       "12439146293631897289": {
         "type": "shopify://apps/blockify-fraud-filter/blocks/app_embed/2e3e0ba5-0e70-447a-9ec5-3bf76b5ef12e",
+        "disabled": false,
+        "settings": {}
+      },
+      "13477285647392927056": {
+        "type": "shopify://apps/kefi-bundle-builder/blocks/kefi/a54b549a-0a53-4f58-b095-45369cafa8e7",
         "disabled": false,
         "settings": {}
       }
