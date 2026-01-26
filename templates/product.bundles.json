@@ -44,6 +44,7 @@
         },
         "ethos_exclusive_add_to_cart_UM3MD3": {
           "type": "shopify://apps/ethos/blocks/exclusive-add-to-cart/e6f2bd3b-e2fd-4f16-b73c-bf198b58bb45",
+          "disabled": true,
           "settings": {
             "logged_out_message_product": "This is an exclusive access product. You must be logged in and have an active [MEMBERSHIP_NAME] membership to purchase.",
             "no_access_message": "This is an exclusive access product only available to [MEMBERSHIP_NAME] Members.",
