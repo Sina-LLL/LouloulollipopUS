@@ -26,11 +26,11 @@
             "use_h1": true,
             "text": "<p><strong>Introducing our new playful hockey print with Incredibly soft fabrics.</strong></p>",
             "enlarge_text": true,
-            "button_label_1": "Shop Sleepsuits",
-            "button_url_1": "shopify://collections/sleepsuits",
+            "button_label_1": "Shop The print",
+            "button_url_1": "shopify://collections/she-shoots-she-scores",
             "button_tag_1": "",
-            "button_label_2": "Shop Muslin Quilts",
-            "button_url_2": "shopify://collections/muslin-quilt",
+            "button_label_2": "",
+            "button_url_2": "",
             "button_tag_2": "",
             "text_alignment": "center left"
           }
@@ -176,8 +176,8 @@
           "teether-single-hockey-helmet",
           "tencel-sleep-bag-1-0-tog-ice-hockey"
         ],
-        "button_label": "",
-        "link": "shopify://collections/wolfie",
+        "button_label": "Shop Winter Games",
+        "link": "shopify://collections/winter-games",
         "button_style": "primary",
         "color_scheme": "default"
       }
