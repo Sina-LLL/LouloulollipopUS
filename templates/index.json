@@ -15,16 +15,16 @@
         "image_Qfbcc9": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/2.5_TOG_Hero.png",
-            "mobile_image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._11th_2024_-Web-31.jpg",
+            "image": "shopify://shop_images/DSC01865_fafefb52-e9db-4db7-b3e0-0738c669f6dd.jpg",
+            "mobile_image": "shopify://shop_images/DSC01865_1.png",
             "slide_link": "",
             "subheading": "",
-            "title": "Sleep Through Every Season",
-            "heading_max_width": 8,
+            "title": "She Shoots, She Scores",
+            "heading_max_width": 12,
             "title_size": 80,
             "title_size_mobile": 36,
             "use_h1": true,
-            "text": "<p><strong>Keep your little one warm with sleep suits and quilts</strong></p>",
+            "text": "<p><strong>Introducing our new playful hockey print with Incredibly soft fabrics.</strong></p>",
             "enlarge_text": true,
             "button_label_1": "Shop Sleepsuits",
             "button_url_1": "shopify://collections/sleepsuits",
@@ -42,8 +42,8 @@
       "name": "Slideshow",
       "settings": {
         "height": "fixed",
-        "height_desktop": 600,
-        "height_mobile": 600,
+        "height_desktop": 660,
+        "height_mobile": 460,
         "full_width": true,
         "mobile_overlay_under": false,
         "overlay_style": "full image-overlay--bg-shadow",
@@ -162,6 +162,26 @@
         "color_scheme": "default"
       }
     },
+    "custom_product_highlight_9KD3MN": {
+      "type": "custom-product-highlight",
+      "name": "Highlighted Collection",
+      "settings": {
+        "title": "Welcome to the Lineup",
+        "text": "<p>Our hockey lineup just got stronger. Featuring a brand-new print and fresh styles in an existing fan-favourite.</p>",
+        "image": "shopify://shop_images/DSC07609-2.jpg",
+        "order": false,
+        "product_list": [
+          "short-sleeve-skater-dress-she-shoots-she-scores",
+          "short-sleeve-long-pants-pajama-set-she-shoots-she-scores",
+          "teether-single-hockey-helmet",
+          "tencel-sleep-bag-1-0-tog-ice-hockey"
+        ],
+        "button_label": "",
+        "link": "shopify://collections/wolfie",
+        "button_style": "primary",
+        "color_scheme": "default"
+      }
+    },
     "featured_collection_bY6q7L": {
       "type": "featured-collection",
       "name": "Personalization",
@@ -177,26 +197,6 @@
         "show_view_all": true,
         "full_width": false,
         "text_alignment": "start"
-      }
-    },
-    "custom_product_highlight_9KD3MN": {
-      "type": "custom-product-highlight",
-      "name": "Highlighted Collection",
-      "settings": {
-        "title": "Layered Comfort",
-        "text": "<p>Pair our sleep suits with breathable quilts for flexible warmth and sleep</p>",
-        "image": "shopify://shop_images/BA9007U.SHK_Sleepsuit_1.0_Tog_Sharks_3W_caf0f2b1-2a62-4fc0-946a-e986b07e834c.jpg",
-        "order": false,
-        "product_list": [
-          "muslin-quilt-forest-families",
-          "tencel-sleepsuit-1-0-tog-mermaids",
-          "muslin-quilt-bunny-meadow",
-          "tencel-sleepsuit-1-0-tog-smiley-sharks"
-        ],
-        "button_label": "",
-        "link": "shopify://collections/wolfie",
-        "button_style": "primary",
-        "color_scheme": "default"
       }
     },
     "collection_list_T4VhHW": {
@@ -1101,8 +1101,8 @@
   "order": [
     "slideshow_dwrJFr",
     "logo_list_kYmwNX",
-    "featured_collection_bY6q7L",
     "custom_product_highlight_9KD3MN",
+    "featured_collection_bY6q7L",
     "collection_list_T4VhHW",
     "collection_list_zhMrUA",
     "featured_collection_RcGTat",
