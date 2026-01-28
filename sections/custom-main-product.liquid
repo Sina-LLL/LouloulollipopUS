@@ -376,6 +376,7 @@
                     {% endif %}
                   </div>
                 {% endif %}
+                {% render 'product-pr-mentions' %}
               </div>
               {% if product.metafields.custom.bundle_products != blank %}
                 <div class="bundle-products">
@@ -391,6 +392,8 @@
                   </div>
                 </div>
               {% endif %}
+              
+
             {%- endif -%}
           
           {% when 'vendor' %}
