@@ -1,0 +1,30 @@
+{% comment %}
+  Publications Logos Section
+  Add this code where you want the logos to appear (after product description)
+{% endcomment %}
+
+{% assign publications = product.metafields.custom.pr_mentions.value %}
+{% if publications != blank and publications.size > 0 %}
+  <hr {% unless block.settings.show_in_quickbuy %}class="not-in-quickbuy"{% endunless %} {{ block.shopify_attributes }}>
+  <div class="publications-section">
+    <h3 class="h4 align-center">As Featured In</h3>
+    
+    <div class="publications-grid">
+      {% for publication in publications %}
+        {% if publication.logo_image != blank and publication.url_to_publication != blank %}
+          <a href="{{ publication.url_to_publication.value.url }}" 
+             class="publication-link" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             title="{{ publication.title | default: 'Publication' }}">
+            <img 
+              src="{{ publication.logo_image | image_url: width: 200 }}" 
+              alt="{{ publication.title | default: 'Publication logo' }}"
+              loading="lazy"
+              class="publication-logo">
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
