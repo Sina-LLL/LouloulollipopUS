@@ -66,12 +66,12 @@
             "title": ""
           }
         },
-        "logo_3E4WaJ": {
+        "logo_RidJwp": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/Parents_idf45riGiK_0.png",
-            "image_width": 190,
-            "link": "",
+            "image": "shopify://shop_images/Forbes_Logo.webp",
+            "image_width": 160,
+            "link": "https://www.forbes.com/sites/forbes-personal-shopper/article/best-baby-clothes-brands/",
             "title": ""
           }
         },
@@ -81,6 +81,33 @@
             "image": "shopify://shop_images/BabyList-Logo.png",
             "image_width": 160,
             "link": "https://www.babylist.com/store/b/loulou-lollipop/919",
+            "title": ""
+          }
+        },
+        "logo_yLUyRU": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/placeholder-buzzfeed-logo.png",
+            "image_width": 160,
+            "link": "https://www.buzzfeed.com/bekoconnell/traveling-with-kids-easier?origin=web-hf",
+            "title": ""
+          }
+        },
+        "logo_3E4WaJ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Parents_idf45riGiK_0.png",
+            "image_width": 190,
+            "link": "https://www.parents.com/best-for-baby-awards-2025-feeding-11719843",
+            "title": ""
+          }
+        },
+        "logo_CGcCUn": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Strategist.webp",
+            "image_width": 160,
+            "link": "https://nymag.com/strategist/article/best-gifts-toys-for-a-1-year-old-holiday-2025.html",
             "title": ""
           }
         },
@@ -99,26 +126,6 @@
             "image": "shopify://shop_images/the-everymom-logo.png",
             "image_width": 190,
             "link": "https://theeverymom.com/registry-awards/",
-            "title": ""
-          }
-        },
-        "logo_RidJwp": {
-          "type": "logo",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Jillian-Harris-Logo_e0e75a9e-fd3e-465d-a063-55cd2d888757.png",
-            "image_width": 160,
-            "link": "",
-            "title": ""
-          }
-        },
-        "logo_CGcCUn": {
-          "type": "logo",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Motherly-Logo.png",
-            "image_width": 160,
-            "link": "",
             "title": ""
           }
         },
@@ -145,12 +152,13 @@
       },
       "block_order": [
         "logo_Pb9irB",
-        "logo_3E4WaJ",
+        "logo_RidJwp",
         "logo_KwwATQ",
+        "logo_yLUyRU",
+        "logo_3E4WaJ",
+        "logo_CGcCUn",
         "logo_m3DkDJ",
         "logo_mQKag7",
-        "logo_RidJwp",
-        "logo_CGcCUn",
         "logo_j4Arc7",
         "logo_i3itWL"
       ],
