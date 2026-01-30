@@ -1119,7 +1119,7 @@
             "instafeed_margin_sides": 0,
             "show_instagram_link": false,
             "link_alignment": "left",
-            "link_color": "#000000",
+            "link_color": "#1d1d1d",
             "background_color": "",
             "feed_id": "",
             "html_area": ""
