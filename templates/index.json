@@ -162,6 +162,9 @@
         "logo_j4Arc7",
         "logo_i3itWL"
       ],
+      "custom_css": [
+        ".fully-spaced-row--medium{margin-top: 2em;}"
+      ],
       "settings": {
         "title": "",
         "enable_carousel": true,
