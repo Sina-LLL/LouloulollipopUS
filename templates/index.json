@@ -163,12 +163,12 @@
         "logo_i3itWL"
       ],
       "custom_css": [
-        ".fully-spaced-row--medium{margin-top: 2em;}"
+        ".fully-spaced-row--medium {margin-top: 2em;}"
       ],
       "settings": {
         "title": "",
         "enable_carousel": true,
-        "carousel_speed": 30,
+        "carousel_speed": 35,
         "image_opacity": 100,
         "color_scheme": "default"
       }
