@@ -1094,12 +1094,11 @@ cart-form .page-header:not(.page-header--with-background){
     }
     
     .publication-logo {
-      max-width: 140px;
+      max-width: 128px;
       max-height: 72px;
       width: auto;
       height: auto;
       object-fit: contain;
-      filter: grayscale(100%);
       transition: filter 0.2s ease;
     }
     
