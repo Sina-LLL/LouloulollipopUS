@@ -1069,7 +1069,7 @@ cart-form .page-header:not(.page-header--with-background){
 
 /* PDP PR Mentions */
  .publications-section{
-      padding: 1.2em;
+      padding: 1.2em 0;
       margin-bottom: 20px;
     }
     .publications-section .h4{
