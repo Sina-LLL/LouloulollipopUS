@@ -214,7 +214,7 @@
         "title": "Curious Cuddles",
         "text": "<p>Soft, breathable fabrics you’ll love, with a curious twist that makes everyday moments a little more magical.</p>",
         "image": "shopify://shop_images/CC_Hero_2b8aae45-0b8f-4eff-b034-358605920691.png",
-        "order": false,
+        "order": true,
         "product_list": [
           "sleeper-mini-mathletes",
           "tencel-sleep-bag-1-0-tog-tiny-engineers",
@@ -322,6 +322,42 @@
         "collection_rEV79r": {
           "type": "collection",
           "settings": {
+            "collection": "tiny-engineers",
+            "tag": "",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_Ukw68h": {
+          "type": "collection",
+          "settings": {
+            "collection": "astro-explorers",
+            "tag": "",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_EUdm88": {
+          "type": "collection",
+          "settings": {
+            "collection": "mini-mathletes",
+            "tag": "",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_ePeJPa": {
+          "type": "collection",
+          "settings": {
+            "collection": "she-shoots-she-scores",
+            "tag": "",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_3QQ6E6": {
+          "type": "collection",
+          "settings": {
             "collection": "forest-families",
             "tag": "",
             "subheading": "Forest Families",
@@ -409,30 +445,12 @@
             "button_label": ""
           }
         },
-        "collection_hcDexP": {
-          "type": "collection",
-          "settings": {
-            "collection": "painterly-seahorses",
-            "tag": "",
-            "subheading": "Painterly Seahorses",
-            "button_label": ""
-          }
-        },
         "collection_CXEmHx": {
           "type": "collection",
           "settings": {
             "collection": "safari-jungle",
             "tag": "",
             "subheading": "Safari Jungle",
-            "button_label": ""
-          }
-        },
-        "collection_erNL4a": {
-          "type": "collection",
-          "settings": {
-            "collection": "peaches",
-            "tag": "",
-            "subheading": "",
             "button_label": ""
           }
         },
@@ -472,24 +490,6 @@
             "button_label": ""
           }
         },
-        "collection_jz8qFh": {
-          "type": "collection",
-          "settings": {
-            "collection": "secret-garden",
-            "tag": "",
-            "subheading": "Secret Garden",
-            "button_label": ""
-          }
-        },
-        "collection_iyjCCb": {
-          "type": "collection",
-          "settings": {
-            "collection": "bears-on-bikes",
-            "tag": "",
-            "subheading": "Bears on Bikes",
-            "button_label": ""
-          }
-        },
         "collection_ntR4RL": {
           "type": "collection",
           "settings": {
@@ -502,6 +502,10 @@
       },
       "block_order": [
         "collection_rEV79r",
+        "collection_Ukw68h",
+        "collection_EUdm88",
+        "collection_ePeJPa",
+        "collection_3QQ6E6",
         "collection_ExCE9F",
         "collection_BbdfXk",
         "collection_tCMDnh",
@@ -511,15 +515,11 @@
         "collection_aHLB8h",
         "collection_eU9Ecq",
         "collection_3hmwzf",
-        "collection_hcDexP",
         "collection_CXEmHx",
-        "collection_erNL4a",
         "collection_FQR9KE",
         "collection_HYRWrg",
         "collection_rc8zw8",
         "collection_dqkine",
-        "collection_jz8qFh",
-        "collection_iyjCCb",
         "collection_ntR4RL"
       ],
       "name": "Shop by print",
