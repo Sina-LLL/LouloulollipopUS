@@ -15,19 +15,19 @@
         "image_Qfbcc9": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/DSC01865_fafefb52-e9db-4db7-b3e0-0738c669f6dd.jpg",
-            "mobile_image": "shopify://shop_images/DSC01865_1.png",
+            "image": "shopify://shop_images/DSC00616_adfe694c-eb2f-449c-908a-7b8f6855bf52.jpg",
+            "mobile_image": "shopify://shop_images/CC_Hero_2940fa2c-6e97-4f4e-beac-8682bee6f90e.png",
             "slide_link": "",
             "subheading": "",
-            "title": "She Shoots, She Scores",
+            "title": "Curious Cuddles",
             "heading_max_width": 12,
             "title_size": 80,
             "title_size_mobile": 36,
             "use_h1": true,
-            "text": "<p><strong>Introducing our new playful hockey print with Incredibly soft fabrics.</strong></p>",
+            "text": "<p><strong>Invite even the youngest minds to never stop learning</strong></p>",
             "enlarge_text": true,
-            "button_label_1": "Shop The print",
-            "button_url_1": "shopify://collections/she-shoots-she-scores",
+            "button_label_1": "Shop Curious Cuddles",
+            "button_url_1": "shopify://collections/curious-cuddles",
             "button_tag_1": "",
             "button_label_2": "",
             "button_url_2": "",
@@ -187,20 +187,20 @@
         "color_scheme": "default",
         "show_view_all": true,
         "full_width": false,
-        "text_alignment": "start"
+        "text_alignment": "center"
       }
     },
-    "featured_collection_Yy4EbR": {
+    "featured_collection_jrWdN3": {
       "type": "featured-collection",
-      "name": "Best Sellers",
+      "name": "Featured collection",
       "settings": {
-        "title": "Parent Favorites",
-        "text": "",
-        "collection": "best-sellers",
+        "title": "For Hockey Fans in the Making",
+        "text": "<p>Designed for movement, naps, & everything in between</p>",
+        "collection": "winter-games",
         "show_vendor": false,
-        "enable_carousel": false,
+        "enable_carousel": true,
         "grid": 4,
-        "rows": 2,
+        "rows": 1,
         "color_scheme": "default",
         "show_view_all": true,
         "full_width": false,
@@ -211,18 +211,18 @@
       "type": "custom-product-highlight",
       "name": "Highlighted Collection",
       "settings": {
-        "title": "Welcome to the Lineup",
-        "text": "<p>Our hockey lineup just got stronger. Featuring a brand-new print and fresh styles in an existing fan-favourite.</p>",
-        "image": "shopify://shop_images/DSC07609-2.jpg",
+        "title": "Curious Cuddles",
+        "text": "<p>Soft, breathable fabrics you’ll love, with a curious twist that makes everyday moments a little more magical.</p>",
+        "image": "shopify://shop_images/CC_Hero_2b8aae45-0b8f-4eff-b034-358605920691.png",
         "order": false,
         "product_list": [
-          "short-sleeve-skater-dress-she-shoots-she-scores",
-          "short-sleeve-long-pants-pajama-set-she-shoots-she-scores",
-          "teether-single-hockey-helmet",
-          "tencel-sleep-bag-1-0-tog-ice-hockey"
+          "sleeper-mini-mathletes",
+          "tencel-sleep-bag-1-0-tog-tiny-engineers",
+          "short-sleeve-bodysuit-dress-astro-explorers",
+          "newborn-sleep-bundle-astro-explorers"
         ],
-        "button_label": "Shop Winter Games",
-        "link": "shopify://collections/winter-games",
+        "button_label": "Shop Curious Cuddles",
+        "link": "shopify://collections/curious-cuddles",
         "button_style": "primary",
         "color_scheme": "default"
       }
@@ -658,7 +658,7 @@
           "settings": {
             "collection": "top-rated-sleep",
             "tag": "",
-            "image": "shopify://shop_images/LuluLollipopEdits-09189_9cfcb7a8-5aac-4381-8876-99a784945a27.jpg",
+            "image": "shopify://shop_images/DSC00442-2_7ede22b4-5323-438f-8485-7309b9627de9.jpg",
             "subheading": "",
             "button_label": ""
           }
@@ -1150,7 +1150,7 @@
     "slideshow_dwrJFr",
     "logo_list_kYmwNX",
     "featured_collection_bY6q7L",
-    "featured_collection_Yy4EbR",
+    "featured_collection_jrWdN3",
     "custom_product_highlight_9KD3MN",
     "featured_collection_6CcnbR",
     "collection_list_T4VhHW",
