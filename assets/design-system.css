@@ -1065,3 +1065,54 @@ cart-form .page-header:not(.page-header--with-background){
 #repWebClientContainer{
   z-index: 5 !important;
 }
+
+
+/* PDP PR Mentions */
+ .publications-section{
+      padding: 1.2em 0;
+      margin-bottom: 20px;
+    }
+    .publications-section .h4{
+      font-size:1.25em
+    }
+    .publications-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+      justify-content: space-around;
+    }
+    
+    .publication-link {
+      display: block;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+    
+    .publication-link:hover {
+      opacity: 0.7;
+      transform: translateY(-2px);
+    }
+    
+    .publication-logo {
+      max-width: 128px;
+      max-height: 72px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      transition: filter 0.2s ease;
+    }
+    
+    .publication-link:hover .publication-logo {
+      filter: grayscale(0%);
+    }
+    
+    @media screen and (max-width: 768px) {
+      .publications-grid {
+        gap: 1.5rem;
+      }
+      
+      .publication-logo {
+        max-width: 100px;
+        max-height: 60px;
+      }
+    }

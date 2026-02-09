@@ -550,6 +550,11 @@
         "type": "shopify://apps/kefi-bundle-builder/blocks/kefi/a54b549a-0a53-4f58-b095-45369cafa8e7",
         "disabled": false,
         "settings": {}
+      },
+      "1232542678405107163": {
+        "type": "shopify://apps/instafeed/blocks/head-block/c447db20-095d-4a10-9725-b5977662c9d5",
+        "disabled": false,
+        "settings": {}
       }
     }
   }

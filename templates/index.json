@@ -66,12 +66,12 @@
             "title": ""
           }
         },
-        "logo_3E4WaJ": {
+        "logo_RidJwp": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/Parents_idf45riGiK_0.png",
-            "image_width": 190,
-            "link": "",
+            "image": "shopify://shop_images/Forbes_Logo.webp",
+            "image_width": 160,
+            "link": "https://www.forbes.com/sites/forbes-personal-shopper/article/best-baby-clothes-brands/",
             "title": ""
           }
         },
@@ -81,6 +81,33 @@
             "image": "shopify://shop_images/BabyList-Logo.png",
             "image_width": 160,
             "link": "https://www.babylist.com/store/b/loulou-lollipop/919",
+            "title": ""
+          }
+        },
+        "logo_yLUyRU": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/placeholder-buzzfeed-logo.png",
+            "image_width": 160,
+            "link": "https://www.buzzfeed.com/bekoconnell/traveling-with-kids-easier?origin=web-hf",
+            "title": ""
+          }
+        },
+        "logo_3E4WaJ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Parents_idf45riGiK_0.png",
+            "image_width": 190,
+            "link": "https://www.parents.com/best-for-baby-awards-2025-feeding-11719843",
+            "title": ""
+          }
+        },
+        "logo_CGcCUn": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Strategist.webp",
+            "image_width": 160,
+            "link": "https://nymag.com/strategist/article/best-gifts-toys-for-a-1-year-old-holiday-2025.html",
             "title": ""
           }
         },
@@ -99,26 +126,6 @@
             "image": "shopify://shop_images/the-everymom-logo.png",
             "image_width": 190,
             "link": "https://theeverymom.com/registry-awards/",
-            "title": ""
-          }
-        },
-        "logo_RidJwp": {
-          "type": "logo",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Jillian-Harris-Logo_e0e75a9e-fd3e-465d-a063-55cd2d888757.png",
-            "image_width": 160,
-            "link": "",
-            "title": ""
-          }
-        },
-        "logo_CGcCUn": {
-          "type": "logo",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Motherly-Logo.png",
-            "image_width": 160,
-            "link": "",
             "title": ""
           }
         },
@@ -145,21 +152,59 @@
       },
       "block_order": [
         "logo_Pb9irB",
-        "logo_3E4WaJ",
+        "logo_RidJwp",
         "logo_KwwATQ",
+        "logo_yLUyRU",
+        "logo_3E4WaJ",
+        "logo_CGcCUn",
         "logo_m3DkDJ",
         "logo_mQKag7",
-        "logo_RidJwp",
-        "logo_CGcCUn",
         "logo_j4Arc7",
         "logo_i3itWL"
       ],
+      "custom_css": [
+        ".fully-spaced-row--medium {margin-top: 2em;}"
+      ],
       "settings": {
-        "title": "As Seen In",
+        "title": "",
         "enable_carousel": true,
-        "carousel_speed": 30,
+        "carousel_speed": 35,
         "image_opacity": 100,
         "color_scheme": "default"
+      }
+    },
+    "featured_collection_bY6q7L": {
+      "type": "featured-collection",
+      "name": "The View",
+      "settings": {
+        "title": "As Seen on The View",
+        "text": "",
+        "collection": "the-view",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 4,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "start"
+      }
+    },
+    "featured_collection_Yy4EbR": {
+      "type": "featured-collection",
+      "name": "Best Sellers",
+      "settings": {
+        "title": "Parent Favorites",
+        "text": "",
+        "collection": "best-sellers",
+        "show_vendor": false,
+        "enable_carousel": false,
+        "grid": 4,
+        "rows": 2,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "start"
       }
     },
     "custom_product_highlight_9KD3MN": {
@@ -182,8 +227,9 @@
         "color_scheme": "default"
       }
     },
-    "featured_collection_bY6q7L": {
+    "featured_collection_6CcnbR": {
       "type": "featured-collection",
+      "disabled": true,
       "name": "Personalization",
       "settings": {
         "title": "Made Just for Your Little One",
@@ -249,6 +295,8 @@
         "collection_Vpb7Q9",
         "collection_xaztbJ"
       ],
+      "disabled": true,
+      "name": "Sale Section",
       "settings": {
         "title": "Shop the Sale Section",
         "text": "<p>Explore our most-loved essentials - <strong>UP TO 50% OFF</strong></p>",
@@ -1082,7 +1130,7 @@
             "instafeed_margin_sides": 0,
             "show_instagram_link": false,
             "link_alignment": "left",
-            "link_color": "#000000",
+            "link_color": "#1d1d1d",
             "background_color": "",
             "feed_id": "",
             "html_area": ""
@@ -1101,8 +1149,10 @@
   "order": [
     "slideshow_dwrJFr",
     "logo_list_kYmwNX",
-    "custom_product_highlight_9KD3MN",
     "featured_collection_bY6q7L",
+    "featured_collection_Yy4EbR",
+    "custom_product_highlight_9KD3MN",
+    "featured_collection_6CcnbR",
     "collection_list_T4VhHW",
     "collection_list_zhMrUA",
     "featured_collection_RcGTat",
