@@ -18,6 +18,11 @@ if (!customElements.get('cart-note')) {
     }
 
     async handleNoteChange(evt) {
+      // Skip if this is the gift message textarea
+      if (evt.target.id === 'GiftMessage') {
+        return;
+      }
+
       if (this.cartNoteToggle) {
         const label = evt.target.value ? theme.strings.editCartNote : theme.strings.addCartNote;
         if (this.cartNoteToggle.textContent !== label) {
@@ -41,7 +46,8 @@ if (!customElements.get('cart-note')) {
   customElements.define('cart-note', CartNote);
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+// Initialize gift functionality
+function initGiftFeature() {
   const checkbox = document.getElementById('GiftCheckbox');
   const giftMessageWrapper = document.getElementById('GiftMessageWrapper');
   const giftMessageInput = document.getElementById('GiftMessage');
@@ -69,53 +75,79 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       toggleGiftMessage();
-    });
+    })
+    .catch(err => console.error('Error loading cart state:', err));
 
   // Update cart when checkbox changes
   checkbox.addEventListener('change', function () {
-    updateCartAttributes({
+    const newAttributes = {
       GiftOption: this.checked ? 'Yes' : 'No',
-      GiftMessage: giftMessageInput?.value || ''
-    });
+      GiftMessage: this.checked ? (giftMessageInput?.value || '') : ''
+    };
+    
+    updateCartAttributes(newAttributes);
     toggleGiftMessage();
   });
 
-  // Update cart when gift message changes
+  // Update cart when gift message changes (debounced)
   if (giftMessageInput) {
-    giftMessageInput.addEventListener('input', function () {
-      updateCartAttributes({
-        GiftOption: checkbox.checked ? 'Yes' : 'No',
-        GiftMessage: this.value
-      });
-    });
+    const debouncedUpdate = debounce(function() {
+      if (checkbox.checked) {
+        updateCartAttributes({
+          GiftOption: 'Yes',
+          GiftMessage: giftMessageInput.value
+        });
+      }
+    }, 500);
+
+    giftMessageInput.addEventListener('input', debouncedUpdate);
   }
-});
+}
+
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initGiftFeature);
+} else {
+  // DOM already loaded
+  initGiftFeature();
+}
 
 /* ---------------------------
    Helper: merge cart attributes
 ---------------------------- */
 async function updateCartAttributes(newAttributes, note) {
-  const cart = await fetch('/cart.js').then(r => r.json());
+  try {
+    const cart = await fetch('/cart.js').then(r => r.json());
 
-  const mergedAttributes = {
-    ...cart.attributes,
-    ...newAttributes
-  };
+    const mergedAttributes = {
+      ...cart.attributes,
+      ...newAttributes
+    };
 
-  const body = {
-    attributes: mergedAttributes
-  };
+    const body = {
+      attributes: mergedAttributes
+    };
 
-  if (note !== undefined) {
-    body.note = note;
+    if (note !== undefined) {
+      body.note = note;
+    }
+
+    const response = await fetch('/cart/update.js', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to update cart attributes');
+    }
+
+    return response;
+  } catch (error) {
+    console.error('Error updating cart attributes:', error);
+    throw error;
   }
-
-  return fetch('/cart/update.js', {
-    method: 'POST',
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(body)
-  });
 }
