@@ -172,6 +172,27 @@ if (!customElements.get('sticky-atc')) {
 
     customElements.define('sticky-atc', StickyAtc);
 
-    
+    // Sync classes from main button to sticky button
+    customElements.whenDefined('sticky-atc').then(() => {
+      function syncButtonClasses() {
+        const mainBtn = document.querySelector('.js-product button.add-to-cart[name="add"]');
+        const stickyBtn = document.querySelector('sticky-atc button.add-to-cart[name="add"]');
+        
+        if (mainBtn && stickyBtn) {
+          // Copy ALL classes from main button to sticky button
+          const mainClasses = Array.from(mainBtn.classList);
+          mainClasses.forEach(cls => {
+            if (!stickyBtn.classList.contains(cls)) {
+              stickyBtn.classList.add(cls);
+            }
+          });
+          console.log('Synced classes to sticky button');
+        }
+      }
+      
+      setTimeout(syncButtonClasses, 500);
+      setTimeout(syncButtonClasses, 1500);
+      setTimeout(syncButtonClasses, 3000);
+    });
   });
 }
