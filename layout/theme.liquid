@@ -268,37 +268,6 @@
   <script async type="text/javascript" src="https://www.babylist.com/add.js"></script>
   {% render 'klaviyo-onsite-trackers' %}
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Wait for the sticky-atc custom element to be defined
-      if (customElements.get('sticky-atc')) {
-        customElements.whenDefined('sticky-atc').then(() => {
-          const stickyAtc = document.querySelector('sticky-atc');
-          
-          if (stickyAtc) {
-            // Store reference to the original handleSubmit method
-            const originalHandleSubmit = stickyAtc.handleSubmit.bind(stickyAtc);
-            
-            // Override the handleSubmit method
-            stickyAtc.handleSubmit = function(evt) {
-              evt.preventDefault();
-              evt.stopPropagation();
-              
-              // Get the main product form
-              const mainProductForm = this.section?.querySelector('.js-product');
-              
-              if (mainProductForm) {
-                // Trigger the main form's submit button click (this will trigger Kefi Bundles)
-                const mainSubmitBtn = mainProductForm.querySelector('button[type="submit"].add-to-cart');
-                if (mainSubmitBtn) {
-                  mainSubmitBtn.click();
-                }
-              }
-            };
-          }
-        });
-      }
-    });
-  </script>
+
 </body>
 </html>
