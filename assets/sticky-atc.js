@@ -173,26 +173,45 @@ if (!customElements.get('sticky-atc')) {
     customElements.define('sticky-atc', StickyAtc);
 
     // Sync classes from main button to sticky button
-    customElements.whenDefined('sticky-atc').then(() => {
-      function syncButtonClasses() {
-        const mainBtn = document.querySelector('.js-product button.add-to-cart[name="add"]');
-        const stickyBtn = document.querySelector('sticky-atc button.add-to-cart[name="add"]');
-        
-        if (mainBtn && stickyBtn) {
-          // Copy ALL classes from main button to sticky button
-          const mainClasses = Array.from(mainBtn.classList);
-          mainClasses.forEach(cls => {
-            if (!stickyBtn.classList.contains(cls)) {
-              stickyBtn.classList.add(cls);
-            }
-          });
-          console.log('Synced classes to sticky button');
+// Sync classes from main button to sticky button (including dynamically added ones)
+customElements.whenDefined('sticky-atc').then(() => {
+  const mainBtn = document.querySelector('.js-product button.add-to-cart[name="add"]');
+  const stickyBtn = document.querySelector('sticky-atc button.add-to-cart[name="add"]');
+  
+  if (mainBtn && stickyBtn) {
+    // Initial sync
+    function syncClasses() {
+      const mainClasses = Array.from(mainBtn.classList);
+      mainClasses.forEach(cls => {
+        if (!stickyBtn.classList.contains(cls)) {
+          stickyBtn.classList.add(cls);
         }
-      }
-      
-      setTimeout(syncButtonClasses, 500);
-      setTimeout(syncButtonClasses, 1500);
-      setTimeout(syncButtonClasses, 3000);
+      });
+    }
+    
+    syncClasses();
+    
+    // Watch for class changes on main button
+    const observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+          syncClasses();
+          console.log('Classes synced after Kefi load');
+        }
+      });
     });
+    
+    // Start observing the main button
+    observer.observe(mainBtn, {
+      attributes: true,
+      attributeFilter: ['class']
+    });
+    
+    // Also try syncing after delays
+    setTimeout(syncClasses, 1000);
+    setTimeout(syncClasses, 2000);
+    setTimeout(syncClasses, 3000);
+  }
+});
   });
 }
