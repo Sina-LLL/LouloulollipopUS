@@ -268,6 +268,59 @@
   <script async type="text/javascript" src="https://www.babylist.com/add.js"></script>
   {% render 'klaviyo-onsite-trackers' %}
 
-
+  <script>
+  // Copy Kefi class from main ATC to sticky ATC
+  (function() {
+    function copyKefiClass() {
+      const mainBtn = document.querySelector('.js-product button.add-to-cart[name="add"]');
+      const stickyBtn = document.querySelector('sticky-atc button.add-to-cart[name="add"]');
+      
+      if (mainBtn && stickyBtn) {
+        // Find ALL classes that contain 'kefi' (case-insensitive)
+        const mainClasses = Array.from(mainBtn.classList);
+        const kefiClasses = mainClasses.filter(cls => cls.toLowerCase().includes('kefi'));
+        
+        if (kefiClasses.length > 0) {
+          kefiClasses.forEach(kefiClass => {
+            if (!stickyBtn.classList.contains(kefiClass)) {
+              stickyBtn.classList.add(kefiClass);
+              console.log('Added Kefi class to sticky button:', kefiClass);
+            }
+          });
+          return true;
+        }
+      }
+      return false;
+    }
+    
+    // Try multiple times with increasing delays
+    let attempts = 0;
+    const maxAttempts = 10;
+    
+    function tryAddClass() {
+      attempts++;
+      const success = copyKefiClass();
+      
+      if (!success && attempts < maxAttempts) {
+        setTimeout(tryAddClass, attempts * 500);
+      }
+    }
+    
+    // Start when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', tryAddClass);
+    } else {
+      tryAddClass();
+    }
+    
+    // Also try when sticky-atc is defined
+    if (customElements && customElements.whenDefined) {
+      customElements.whenDefined('sticky-atc').then(() => {
+        setTimeout(copyKefiClass, 200);
+        setTimeout(copyKefiClass, 1000);
+      });
+    }
+  })();
+  </script>
 </body>
 </html>
