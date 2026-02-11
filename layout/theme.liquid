@@ -270,27 +270,34 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Wait for custom elements to be defined
-      customElements.whenDefined('sticky-atc').then(() => {
-        const stickyAtc = document.querySelector('sticky-atc');
-        
-        if (stickyAtc) {
-          const stickySubmitBtn = stickyAtc.querySelector('button[type="submit"]');
-          const mainProductForm = stickyAtc.section?.querySelector('.js-product');
-          const mainSubmitBtn = mainProductForm?.querySelector('button[type="submit"], input[type="submit"], .shopify-payment-button button');
+      // Wait for the sticky-atc custom element to be defined
+      if (customElements.get('sticky-atc')) {
+        customElements.whenDefined('sticky-atc').then(() => {
+          const stickyAtc = document.querySelector('sticky-atc');
           
-          if (stickySubmitBtn && mainSubmitBtn) {
-            // Remove the sticky button's default submit behavior
-            stickySubmitBtn.addEventListener('click', function(e) {
-              e.preventDefault();
-              e.stopPropagation();
+          if (stickyAtc) {
+            // Store reference to the original handleSubmit method
+            const originalHandleSubmit = stickyAtc.handleSubmit.bind(stickyAtc);
+            
+            // Override the handleSubmit method
+            stickyAtc.handleSubmit = function(evt) {
+              evt.preventDefault();
+              evt.stopPropagation();
               
-              // Trigger click on main button (this will trigger Kefi Bundles)
-              mainSubmitBtn.click();
-            }, true); // Use capture phase to intercept early
+              // Get the main product form
+              const mainProductForm = this.section?.querySelector('.js-product');
+              
+              if (mainProductForm) {
+                // Trigger the main form's submit button click (this will trigger Kefi Bundles)
+                const mainSubmitBtn = mainProductForm.querySelector('button[type="submit"].add-to-cart');
+                if (mainSubmitBtn) {
+                  mainSubmitBtn.click();
+                }
+              }
+            };
           }
-        }
-      });
+        });
+      }
     });
   </script>
 </body>
