@@ -172,53 +172,6 @@ if (!customElements.get('sticky-atc')) {
 
     customElements.define('sticky-atc', StickyAtc);
 
-    // Sync classes from main button to sticky button
-// Watch for Kefi to add its class to main button, then copy to sticky
-customElements.whenDefined('sticky-atc').then(() => {
-  setTimeout(() => {
-    const mainBtnContainer = document.querySelector('buy-buttons');
-    const stickyBtn = document.querySelector('sticky-atc button.add-to-cart[name="add"]');
     
-    if (mainBtnContainer && stickyBtn) {
-      // Watch for changes in the buy-buttons container
-      const observer = new MutationObserver(() => {
-        // Find the Kefi button inside buy-buttons
-        const kefiBtn = mainBtnContainer.querySelector('button.add-to-cart');
-        
-        if (kefiBtn) {
-          // Find any class starting with "kefi"
-          const kefiClass = Array.from(kefiBtn.classList).find(cls => 
-            cls.toLowerCase().includes('kefi')
-          );
-          
-          if (kefiClass && !stickyBtn.classList.contains(kefiClass)) {
-            stickyBtn.classList.add(kefiClass);
-            console.log('Kefi class added to sticky button:', kefiClass);
-          }
-        }
-      });
-      
-      // Start watching the buy-buttons container for any changes
-      observer.observe(mainBtnContainer, {
-        childList: true,
-        subtree: true,
-        attributes: true,
-        attributeFilter: ['class']
-      });
-      
-      // Also trigger immediately in case Kefi already loaded
-      observer.disconnect();
-      const initialKefiBtn = mainBtnContainer.querySelector('button.add-to-cart');
-      if (initialKefiBtn) {
-        const kefiClass = Array.from(initialKefiBtn.classList).find(cls => 
-          cls.toLowerCase().includes('kefi')
-        );
-        if (kefiClass) {
-          stickyBtn.classList.add(kefiClass);
-          console.log('Kefi class added to sticky button:', kefiClass);
-        }
-      }
-      observer.observe(mainBtnContainer, {
-        childList: true,
   });
 }
