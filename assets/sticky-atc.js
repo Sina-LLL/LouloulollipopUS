@@ -172,21 +172,6 @@ if (!customElements.get('sticky-atc')) {
 
     customElements.define('sticky-atc', StickyAtc);
 
-    // Copy Kefi bundle class to sticky button
-    document.addEventListener('DOMContentLoaded', function() {
-      customElements.whenDefined('sticky-atc').then(() => {
-        setTimeout(() => {
-          const mainBtn = document.querySelector('.js-product button[type="submit"].add-to-cart');
-          const stickyBtn = document.querySelector('sticky-atc button[type="submit"]');
-          
-          if (mainBtn && stickyBtn) {
-            const kefiClass = Array.from(mainBtn.classList).find(cls => cls.toLowerCase().startsWith('kefi'));
-            if (kefiClass) {
-              stickyBtn.classList.add(kefiClass);
-            }
-          }
-        }, 500);
-      });
-    });
+    
   });
 }
