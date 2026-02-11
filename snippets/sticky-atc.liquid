@@ -47,16 +47,8 @@
     {%- if section.settings.sticky_atc_behavior == 'add_to_cart' -%}
       {% form 'product', product, id: product_form_id, class: 'form js-product-form', data-product-id: product.id %}
         <input type="hidden" name="id" value="{{ current_variant.id }}">
-       {%- comment -%} Get all classes from the main product form button {%- endcomment -%}
-        {%- assign main_button = '' -%}
-        {%- for block in section.blocks -%}
-          {%- if block.type == 'buy-buttons' -%}
-            {%- capture main_button_classes -%}btn btn--large add-to-cart{%- endcapture -%}
-          {%- endif -%}
-        {%- endfor -%}
-
         <button
-            class="btn btn--{{ section.settings.sticky_atc_button_style }} btn--compact add-to-cart js-sticky-atc-sync"
+            class="btn btn--{{ section.settings.sticky_atc_button_style }} btn--compact add-to-cart"
             type="submit"
             name="add"
             data-unavailable-text="{{ 'products.product.view_details' | t }}"
