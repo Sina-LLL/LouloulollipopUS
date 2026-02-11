@@ -173,45 +173,52 @@ if (!customElements.get('sticky-atc')) {
     customElements.define('sticky-atc', StickyAtc);
 
     // Sync classes from main button to sticky button
-// Sync classes from main button to sticky button (including dynamically added ones)
+// Watch for Kefi to add its class to main button, then copy to sticky
 customElements.whenDefined('sticky-atc').then(() => {
-  const mainBtn = document.querySelector('.js-product button.add-to-cart[name="add"]');
-  const stickyBtn = document.querySelector('sticky-atc button.add-to-cart[name="add"]');
-  
-  if (mainBtn && stickyBtn) {
-    // Initial sync
-    function syncClasses() {
-      const mainClasses = Array.from(mainBtn.classList);
-      mainClasses.forEach(cls => {
-        if (!stickyBtn.classList.contains(cls)) {
-          stickyBtn.classList.add(cls);
+  setTimeout(() => {
+    const mainBtnContainer = document.querySelector('buy-buttons');
+    const stickyBtn = document.querySelector('sticky-atc button.add-to-cart[name="add"]');
+    
+    if (mainBtnContainer && stickyBtn) {
+      // Watch for changes in the buy-buttons container
+      const observer = new MutationObserver(() => {
+        // Find the Kefi button inside buy-buttons
+        const kefiBtn = mainBtnContainer.querySelector('button.add-to-cart');
+        
+        if (kefiBtn) {
+          // Find any class starting with "kefi"
+          const kefiClass = Array.from(kefiBtn.classList).find(cls => 
+            cls.toLowerCase().includes('kefi')
+          );
+          
+          if (kefiClass && !stickyBtn.classList.contains(kefiClass)) {
+            stickyBtn.classList.add(kefiClass);
+            console.log('Kefi class added to sticky button:', kefiClass);
+          }
         }
       });
-    }
-    
-    syncClasses();
-    
-    // Watch for class changes on main button
-    const observer = new MutationObserver(function(mutations) {
-      mutations.forEach(function(mutation) {
-        if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-          syncClasses();
-          console.log('Classes synced after Kefi load');
-        }
+      
+      // Start watching the buy-buttons container for any changes
+      observer.observe(mainBtnContainer, {
+        childList: true,
+        subtree: true,
+        attributes: true,
+        attributeFilter: ['class']
       });
-    });
-    
-    // Start observing the main button
-    observer.observe(mainBtn, {
-      attributes: true,
-      attributeFilter: ['class']
-    });
-    
-    // Also try syncing after delays
-    setTimeout(syncClasses, 1000);
-    setTimeout(syncClasses, 2000);
-    setTimeout(syncClasses, 3000);
-  }
-});
+      
+      // Also trigger immediately in case Kefi already loaded
+      observer.disconnect();
+      const initialKefiBtn = mainBtnContainer.querySelector('button.add-to-cart');
+      if (initialKefiBtn) {
+        const kefiClass = Array.from(initialKefiBtn.classList).find(cls => 
+          cls.toLowerCase().includes('kefi')
+        );
+        if (kefiClass) {
+          stickyBtn.classList.add(kefiClass);
+          console.log('Kefi class added to sticky button:', kefiClass);
+        }
+      }
+      observer.observe(mainBtnContainer, {
+        childList: true,
   });
 }
