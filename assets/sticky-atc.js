@@ -171,5 +171,7 @@ if (!customElements.get('sticky-atc')) {
     }
 
     customElements.define('sticky-atc', StickyAtc);
+
+    
   });
 }

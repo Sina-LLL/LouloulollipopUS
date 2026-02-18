@@ -42,6 +42,7 @@
       {%- endunless -%}
     </div>
   </div>
+  
   <div class="sticky-atc__buttons">
     {%- if section.settings.sticky_atc_behavior == 'add_to_cart' -%}
       {% form 'product', product, id: product_form_id, class: 'form js-product-form', data-product-id: product.id %}
