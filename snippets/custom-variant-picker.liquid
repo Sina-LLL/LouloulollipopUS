@@ -57,7 +57,9 @@
                 class="opt-label opt-label--image {% if sibling.tags contains 'hidden' %}hidden-product{% endif %} {% if sibling.handle == product.handle %}is-active{% endif %}{% if sibling.available == false  %} sold-out{% endif %}" 
                 data-color="{{ sibling.metafields.theme.cutline }}" data-section="new"
                 {% if sibling.handle == product.handle %}data-selected="true"{% endif %}>
-              
+                {%- if sibling.tags contains 'new' -%}
+                  <div class="opt-label__tag product-label--new">NEW</div>
+                {%- endif -%}
               <div class="overflow_hidden">
                 <div class="opt-label__media media">  
                 {%- if sibling.available == false  -%}
