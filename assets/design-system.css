@@ -506,7 +506,7 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
   padding: 4px;
   margin: auto;
 }
-.op-label__tag.product-label--new-in{
+.op-label__tag.product-label--new-in,.opt-label__tag.product-label--new{
   background-color:var(--product-label-overlay-new-bg);
   color:var(--product-label-overlay-new-text);
 }
