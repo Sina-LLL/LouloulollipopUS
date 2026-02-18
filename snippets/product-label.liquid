@@ -53,6 +53,25 @@
       assign personalize-it_text = 'Personalize It'
     endif
   -%}
+  {% unless product.tags contains 'sale' or product.tags contains 'SALE' %}
+    {% if product.tags contains 'bundle' or product.tags contains 'Bundle' %}
+      {% assign bundled_products = product.metafields.custom.bundle_products.value %}
+      
+      {% assign total_regular_price = 0 %}
+      
+      {% for bundled_product in bundled_products %}
+        {% assign total_regular_price = total_regular_price | plus: bundled_product.price %}
+      {% endfor %}
+      
+      {% if total_regular_price > product.price %}
+        {% assign savings = total_regular_price | minus: product.price %}
+        {% assign percent_saved = savings | times: 100 | divided_by: total_regular_price %}
+        <span class="product-label product-label--sale">
+          <span>Bundle & save {{ percent_saved }}%</span>
+        </span>
+      {% endif %}
+    {% endif %} 
+  {% endunless %}
   
   
   {%- if BOGO_text -%}
