@@ -695,8 +695,9 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
   fill:#fff;
 }
 .product-material-usp p{
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
+  line-height: 1rem;
 }
 
 .product-material-usp h3{
