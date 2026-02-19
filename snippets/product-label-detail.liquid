@@ -1,75 +1,88 @@
+{%- capture all_variants_label_html -%}
+  {%- if product.metafields.theme.label != blank -%}
+    <span class="product-label product-label--meta">
+      <span>{{ product.metafields.theme.label | escape }}</span>
+    </span>
+  {%- endif -%}
+
+  {%- liquid
+    if settings.prod_new_show
+      if settings.prod_new_method == 'date'
+        assign now_s = 'now' | date: '%s' | plus: 0
+        assign pub_s = product.created_at | date: '%s' | plus: 0
+        assign diff_days = now_s | minus: pub_s | divided_by: 86400
+
+        if diff_days < settings.prod_new_limit_int
+          assign new_label_text = 'products.product.new' | t
+        endif
+      elsif settings.prod_new_method == 'tag'
+        if product.tags contains 'New' or product.tags contains 'new'
+          assign new_label_text = 'products.product.new' | t
+        endif
+      else
+        for collection in product.collections
+          assign split_collection_handle = collection.handle | split: '-'
+          if split_collection_handle contains 'new'
+            assign new_label_text = 'products.product.new' | t
+            break
+          endif
+        endfor
+      endif
+    endif
+    if product.tags contains 'BOGO50' or product.tags contains 'bogo50'
+      assign BOGO_text = 'BOGO 50% Off'
+    endif
+     if product.tags contains 'personalize-it' or product.tags contains 'Personalize-It'
+      assign personalize-it_text = 'Personalize It'
+    endif
+  -%}
+  
+  
+  {%- if new_label_text -%}
+    <span class="product-label product-label--new-in">
+      <span>{{ new_label_text }}</span>
+    </span>
+  {%- endif -%}
+
+  {%- if BOGO_text -%}
+    <span class="product-label product-label--sale">
+      <span>{{ BOGO_text }}</span>
+    </span>
+  {%- endif -%}
+    {%- if personalize-it_text -%}
+    <span class="product-label product-label--personalize">
+      <span>{{ personalize-it_text }}</span>
+    </span>
+  {%- endif -%}
+{%- endcapture -%}
+{% unless product.tags contains 'sale' or product.tags contains 'SALE' %}
+    {% if product.tags contains 'bundle' or product.tags contains 'Bundle' %}
+      {% assign bundled_products = product.metafields.custom.bundle_products.value %}
+      
+      {% assign total_regular_price = 0 %}
+      
+      {% for bundled_product in bundled_products %}
+        {% assign total_regular_price = total_regular_price | plus: bundled_product.price %}
+      {% endfor %}
+      
+      {% if total_regular_price > product.price %}
+        {% assign savings = total_regular_price | minus: product.price %}
+        {% assign percent_saved = savings | times: 100 | divided_by: total_regular_price %}
+        <span class="product-label product-label--sale">
+          <span>Bundle & save {{ percent_saved }}%</span>
+        </span>
+      {% endif %}
+    {% endif %} 
+  {% endunless %}
 <variant-content class="product-label-list">
   {%- for variant in product.variants -%}
     <script type="text/template" data-variant="{{ variant.id }}">
       {%- capture label_html -%}
+        {{- all_variants_label_html -}}
 
-        {% comment %} Meta label {% endcomment %}
-        {%- if product.metafields.theme.label != blank -%}
-          <span class="product-label product-label--meta">
-            <span>{{ product.metafields.theme.label | escape }}</span>
-          </span>
-        {%- endif -%}
-
-        {% comment %} New label {% endcomment %}
-        {%- if settings.prod_new_show -%}
-          {%- liquid
-            assign new_label_text = false
-            if settings.prod_new_method == 'date'
-              assign now_s = 'now' | date: '%s' | plus: 0
-              assign pub_s = product.created_at | date: '%s' | plus: 0
-              assign diff_days = now_s | minus: pub_s | divided_by: 86400
-              if diff_days < settings.prod_new_limit_int
-                assign new_label_text = 'products.product.new' | t
-              endif
-            elsif settings.prod_new_method == 'tag'
-              if product.tags contains 'New' or product.tags contains 'new'
-                assign new_label_text = 'products.product.new' | t
-              endif
-            else
-              for collection in product.collections
-                assign split_collection_handle = collection.handle | split: '-'
-                if split_collection_handle contains 'new'
-                  assign new_label_text = 'products.product.new' | t
-                  break
-                endif
-              endfor
-            endif
-          -%}
-          {%- if new_label_text -%}
-            <span class="product-label product-label--new-in">
-              <span>{{ new_label_text }}</span>
-            </span>
-          {%- endif -%}
-        {%- endif -%}
-
-        {% comment %} BOGO label {% endcomment %}
-        {%- if product.tags contains 'BOGO50' or product.tags contains 'bogo50' -%}
-          <span class="product-label product-label--sale">
-            <span>BOGO 50% Off</span>
-          </span>
-        {%- endif -%}
-
-        {% comment %} Bundle & Save label {% endcomment %}
-        {%- unless product.tags contains 'sale' or product.tags contains 'SALE' -%}
-          {%- if product.tags contains 'bundle' or product.tags contains 'Bundle' -%}
-            {%- assign bundled_products = product.metafields.custom.bundle_products.value -%}
-            {%- assign total_regular_price = 0 -%}
-            {%- for bundled_product in bundled_products -%}
-              {%- assign total_regular_price = total_regular_price | plus: bundled_product.price -%}
-            {%- endfor -%}
-            {%- if total_regular_price > product.price -%}
-              {%- assign savings = total_regular_price | minus: product.price -%}
-              {%- assign percent_saved = savings | times: 100 | divided_by: total_regular_price -%}
-              <span class="product-label product-label--sale">
-                <span>Bundle & save {{ percent_saved }}%</span>
-              </span>
-            {%- endif -%}
-          {%- endif -%}
-        {%- endunless -%}
-
-        {% comment %} Sale / reduction label {% endcomment %}
-        {%- if settings.prod_reduction_show and variant.compare_at_price > variant.price -%}
-          {%- liquid
+        {%- liquid
+          assign sale_label_text = false
+          if settings.prod_reduction_show and variant.compare_at_price > variant.price
             if settings.prod_reduction_type == 'percent'
               assign amount = 1.0 | times: variant.price | divided_by: variant.compare_at_price
               assign amount = 1.0 | minus: amount
@@ -79,12 +92,13 @@
               assign amount = variant.compare_at_price | minus: variant.price | money
               assign sale_label_text = 'products.product.value_reduction_html' | t: amount: amount
             endif
-          -%}
+          endif
+        -%}
+        {%- if sale_label_text -%}
           <span class="product-label product-label--sale">
             <span>{{ sale_label_text }}</span>
           </span>
         {%- endif -%}
-
       {%- endcapture -%}
 
       {%- if label_html != blank -%}
@@ -94,67 +108,21 @@
       {%- endif -%}
     </script>
 
-    {%- if current_variant and variant.id == current_variant.id and label_html != blank -%}
+    {%- if current_variant and variant.id == current_variant.id and label_html -%}
       <div class="product-label-container">
         {{- label_html -}}
       </div>
     {%- endif -%}
   {%- endfor -%}
 
-  {%- unless current_variant -%}
-    {%- capture all_variants_label_html -%}
-      {%- if product.metafields.theme.label != blank -%}
-        <span class="product-label product-label--meta">
-          <span>{{ product.metafields.theme.label | escape }}</span>
-        </span>
-      {%- endif -%}
-      {%- if settings.prod_new_show -%}
-        {%- liquid
-          assign new_label_text = false
-          if settings.prod_new_method == 'date'
-            assign now_s = 'now' | date: '%s' | plus: 0
-            assign pub_s = product.created_at | date: '%s' | plus: 0
-            assign diff_days = now_s | minus: pub_s | divided_by: 86400
-            if diff_days < settings.prod_new_limit_int
-              assign new_label_text = 'products.product.new' | t
-            endif
-          elsif settings.prod_new_method == 'tag'
-            if product.tags contains 'New' or product.tags contains 'new'
-              assign new_label_text = 'products.product.new' | t
-            endif
-          else
-            for collection in product.collections
-              assign split_collection_handle = collection.handle | split: '-'
-              if split_collection_handle contains 'new'
-                assign new_label_text = 'products.product.new' | t
-                break
-              endif
-            endfor
-          endif
-        -%}
-        {%- if new_label_text -%}
-          <span class="product-label product-label--new-in">
-            <span>{{ new_label_text }}</span>
-          </span>
-        {%- endif -%}
-      {%- endif -%}
-      {%- if product.tags contains 'BOGO50' or product.tags contains 'bogo50' -%}
-        <span class="product-label product-label--sale">
-          <span>BOGO 50% Off</span>
-        </span>
-      {%- endif -%}
-    {%- endcapture -%}
-
-    {%- if all_variants_label_html != blank -%}
-      <script type="text/template" data-variant="">
-        <div class="product-label-container">
-          {{- all_variants_label_html -}}
-        </div>
-      </script>
+  {%- if current_variant == false and all_variants_label_html != blank -%}
+    <script type="text/template" data-variant="">
       <div class="product-label-container">
         {{- all_variants_label_html -}}
       </div>
-    {%- endif -%}
-  {%- endunless -%}
-
+    </script>
+    <div class="product-label-container">
+      {{- all_variants_label_html -}}
+    </div>
+  {%- endif -%}
 </variant-content>
