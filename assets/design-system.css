@@ -663,7 +663,7 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
 .custom-product-features__heading, .material-info__wrapper span{
   font-size: 1.25rem;
   font-weight: 700;
-  line-height: 1rem;
+  line-height: 1.5rem;
 }
 .product-material-care__icons{
   display: flex;
