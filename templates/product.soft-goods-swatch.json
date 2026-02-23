@@ -203,7 +203,7 @@
         "feature_gaaBJH"
       ],
       "settings": {
-        "section_heading": "We Thought of that Too"
+        "section_heading": "Why Parents Love This"
       }
     },
     "custom_product_material_care_jFczeg": {
@@ -251,21 +251,6 @@
     },
     "1767990230b7e58a8e": {
       "type": "apps",
-      "blocks": {
-        "amazon_reviews_list_widget_block_product_bEtCge": {
-          "type": "shopify://apps/amazon-reviews/blocks/list-widget-block.product/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
-          "settings": {
-            "themeId": "light",
-            "showProductPicture": true,
-            "showDate": true,
-            "ratingStyle": "left",
-            "infoPosition": "top"
-          }
-        }
-      },
-      "block_order": [
-        "amazon_reviews_list_widget_block_product_bEtCge"
-      ],
       "settings": {
         "full_width": false,
         "show_space": true

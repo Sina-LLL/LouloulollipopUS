@@ -46,6 +46,8 @@
     {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.2s"' -%}>
 
     <div class="media-gallery__inner{% if section.settings.enable_sticky_columns %} sticky-content-container{% endif %}">
+      {% render 'product-label-detail', product: product, current_variant: current_variant %}
+      
       <div class="main-image">
         {%- liquid
           for media in product.media
@@ -260,7 +262,6 @@
               {% render 'breadcrumbs', show_next_prev: false %}
             {% endif %}
             <div class="title-row" {{ block.shopify_attributes }}>
-               {% render 'product-label-detail', product: product, current_variant: current_variant %}
               <h1 class="product-title">{{ product.title | split: ' - ' | first | escape }}</h1>
 
             </div>
