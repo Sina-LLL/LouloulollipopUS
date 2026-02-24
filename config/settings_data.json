@@ -560,6 +560,20 @@
         "type": "shopify://apps/geolocation-flow/blocks/auto-redirects/99c42a40-4a88-4244-a03e-a752a0b4e07d",
         "disabled": false,
         "settings": {}
+      },
+      "17880301688017462763": {
+        "type": "shopify://apps/geolocation-flow/blocks/widget-redirects/99c42a40-4a88-4244-a03e-a752a0b4e07d",
+        "disabled": false,
+        "settings": {
+          "preview_mode": false
+        }
+      },
+      "11612685103320446143": {
+        "type": "shopify://apps/geolocation-flow/blocks/markets-widget-redirects/99c42a40-4a88-4244-a03e-a752a0b4e07d",
+        "disabled": true,
+        "settings": {
+          "preview_mode": false
+        }
       }
     }
   }
