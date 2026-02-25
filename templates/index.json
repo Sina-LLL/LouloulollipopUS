@@ -15,8 +15,8 @@
         "image_Qfbcc9": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/DSC00616_adfe694c-eb2f-449c-908a-7b8f6855bf52.jpg",
-            "mobile_image": "shopify://shop_images/CC_Hero_2940fa2c-6e97-4f4e-beac-8682bee6f90e.png",
+            "image": "shopify://shop_images/Tiny_Engineers_-_Desktop_Hero.png",
+            "mobile_image": "shopify://shop_images/Tiny_Engineers_-_Mobile_Hero.png",
             "slide_link": "",
             "subheading": "",
             "title": "Curious Cuddles",
@@ -190,13 +190,33 @@
         "text_alignment": "center"
       }
     },
+    "custom_product_highlight_9KD3MN": {
+      "type": "custom-product-highlight",
+      "name": "Highlighted Collection",
+      "settings": {
+        "title": "Tiny Engineers",
+        "text": "<p>Made to keep up with big ideas and busy hands.</p>",
+        "image": "shopify://shop_images/Tiny_Engineers_-_Product_highlight.png",
+        "order": true,
+        "product_list": [
+          "newborn-sleep-gift-bundle-tiny-engineers",
+          "short-romper-tiny-engineers",
+          "tencel-sleep-bag-1-0-tog-tiny-engineers",
+          "hooded-towel-set-tiny-engineers"
+        ],
+        "button_label": "Shop Tiny Engineers",
+        "link": "shopify://collections/tiny-engineers",
+        "button_style": "primary",
+        "color_scheme": "default"
+      }
+    },
     "featured_collection_jrWdN3": {
       "type": "featured-collection",
       "name": "Featured collection",
       "settings": {
-        "title": "For Hockey Fans in the Making",
-        "text": "<p>Designed for movement, naps, & everything in between</p>",
-        "collection": "winter-games",
+        "title": "Curious Cuddles",
+        "text": "<p>Soft, breathable fabrics you’ll love, with a curious twist.</p>",
+        "collection": "curious-cuddles",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 4,
@@ -205,26 +225,6 @@
         "show_view_all": true,
         "full_width": false,
         "text_alignment": "start"
-      }
-    },
-    "custom_product_highlight_9KD3MN": {
-      "type": "custom-product-highlight",
-      "name": "Highlighted Collection",
-      "settings": {
-        "title": "Curious Cuddles",
-        "text": "<p>Soft, breathable fabrics you’ll love, with a curious twist that makes everyday moments a little more magical.</p>",
-        "image": "shopify://shop_images/CC_Hero_2b8aae45-0b8f-4eff-b034-358605920691.png",
-        "order": true,
-        "product_list": [
-          "sleeper-mini-mathletes",
-          "tencel-sleep-bag-1-0-tog-tiny-engineers",
-          "short-sleeve-bodysuit-dress-astro-explorers",
-          "newborn-sleep-bundle-astro-explorers"
-        ],
-        "button_label": "Shop Curious Cuddles",
-        "link": "shopify://collections/curious-cuddles",
-        "button_style": "primary",
-        "color_scheme": "default"
       }
     },
     "featured_collection_6CcnbR": {
@@ -1133,14 +1133,14 @@
     "slideshow_dwrJFr",
     "logo_list_kYmwNX",
     "featured_collection_bY6q7L",
-    "featured_collection_jrWdN3",
     "custom_product_highlight_9KD3MN",
+    "collection_list_pBrVBP",
+    "featured_collection_jrWdN3",
     "featured_collection_6CcnbR",
     "collection_list_T4VhHW",
     "collection_list_zhMrUA",
     "featured_collection_RcGTat",
     "logo_list_pgf7FP",
-    "collection_list_pBrVBP",
     "collection_list_4hPPdd",
     "testimonials_VG4FtN",
     "collection_list_XEbpaa",
