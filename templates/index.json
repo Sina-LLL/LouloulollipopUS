@@ -215,7 +215,6 @@
       "blocks": {
         "collection_WL7RyC": {
           "type": "collection",
-          "disabled": true,
           "settings": {
             "collection": "sleep-bags",
             "tag": "",
@@ -236,7 +235,6 @@
         },
         "collection_yBfKJJ": {
           "type": "collection",
-          "disabled": true,
           "settings": {
             "collection": "silicone-bibs",
             "tag": "",
@@ -257,7 +255,6 @@
         },
         "collection_KMDkWz": {
           "type": "collection",
-          "disabled": true,
           "settings": {
             "collection": "dresses",
             "tag": "",
@@ -278,7 +275,6 @@
         },
         "collection_tBcrJC": {
           "type": "collection",
-          "disabled": true,
           "settings": {
             "collection": "single-teethers",
             "tag": "",
@@ -299,7 +295,6 @@
         },
         "collection_6BHgD3": {
           "type": "collection",
-          "disabled": true,
           "settings": {
             "collection": "pacifier-clips",
             "tag": "",
