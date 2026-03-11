@@ -1,8 +1,110 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-list-collections",
+      "blocks": {
+        "image_YhKk8P": {
+          "type": "image",
+          "settings": {
+            "collection": "sleep-bags",
+            "image": "shopify://shop_images/BA9004U.BMB_TENCEL_Sleep_Bag_1.0_Bumble_Bees_51.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "image_BNnAib": {
+          "type": "image",
+          "settings": {
+            "collection": "sleepers",
+            "image": "shopify://shop_images/BA1002UB.PLN_Sleeper_-_Planets_51.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "image_NdehVG": {
+          "type": "image",
+          "settings": {
+            "collection": "swaddles",
+            "image": "shopify://shop_images/DSC01126-2.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "image_xEjgwn": {
+          "type": "image",
+          "settings": {
+            "collection": "pajamas",
+            "image": "shopify://shop_images/DSC07609-2.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "image_MYpHMc": {
+          "type": "image",
+          "settings": {
+            "collection": "long-sleeve-bibs",
+            "subheading": "Quilts",
+            "button_label": ""
+          }
+        },
+        "image_CPEaA9": {
+          "type": "image",
+          "settings": {
+            "collection": "silicone-bibs",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "image_LQ3UiL": {
+          "type": "image",
+          "settings": {
+            "collection": "dresses",
+            "image": "shopify://shop_images/Header_Image_-_Dresses.png",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "image_iX4fPq": {
+          "type": "image",
+          "settings": {
+            "collection": "suction-plates",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_YhKk8P",
+        "image_BNnAib",
+        "image_NdehVG",
+        "image_xEjgwn",
+        "image_MYpHMc",
+        "image_CPEaA9",
+        "image_LQ3UiL",
+        "image_iX4fPq"
+      ],
       "settings": {
+        "title": "Our Collections",
+        "display_type": "selected",
+        "grid": 4,
+        "coll_grid_image_shape": "portrait-45",
+        "coll_grid_image_position": "center center",
+        "coll_thumb_mob_per_row": "2",
+        "coll_grid_show_count": false,
+        "coll_text_position": "below",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_y": "center",
+        "coll_button_style": "primary"
       }
     }
   },
