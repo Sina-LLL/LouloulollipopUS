@@ -52,7 +52,7 @@
           "type": "image",
           "settings": {
             "collection": "long-sleeve-bibs",
-            "subheading": "Quilts",
+            "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
         },
@@ -80,6 +80,73 @@
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
+        },
+        "image_zVL3cy": {
+          "type": "image",
+          "settings": {
+            "collection": "muslin-quilt",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "image_yjJXKH": {
+          "type": "image",
+          "settings": {
+            "collection": "crib-sheets",
+            "image": "shopify://shop_images/Forest_Families_Mobile_Hero_1.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "image_appejm": {
+          "type": "image",
+          "settings": {
+            "collection": "bandana-bibs",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "image_DFfzwr": {
+          "type": "image",
+          "settings": {
+            "collection": "bodysuits-rompers",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "image_MH4dcz": {
+          "type": "image",
+          "settings": {
+            "collection": "hooded-towel-sets",
+            "image": "shopify://shop_images/DSC09558.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "image_CMc7BW": {
+          "type": "image",
+          "settings": {
+            "collection": "wet-bags",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "image_W4AJWf": {
+          "type": "image",
+          "settings": {
+            "collection": "single-teethers",
+            "image": "shopify://shop_images/WTR-WOF_Wild_Teether_-_Wolfie_51.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "image_AxdaKX": {
+          "type": "image",
+          "settings": {
+            "collection": "pacifier-clips",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
         }
       },
       "block_order": [
@@ -90,7 +157,15 @@
         "image_MYpHMc",
         "image_CPEaA9",
         "image_LQ3UiL",
-        "image_iX4fPq"
+        "image_iX4fPq",
+        "image_zVL3cy",
+        "image_yjJXKH",
+        "image_appejm",
+        "image_DFfzwr",
+        "image_MH4dcz",
+        "image_CMc7BW",
+        "image_W4AJWf",
+        "image_AxdaKX"
       ],
       "settings": {
         "title": "Our Collections",
