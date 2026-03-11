@@ -15,8 +15,8 @@
         "image_Qfbcc9": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Tiny_Engineers_-_Desktop_Hero.png",
-            "mobile_image": "shopify://shop_images/Tiny_Engineers_-_Mobile_Hero.png",
+            "image": "shopify://shop_images/MM_Hero.png",
+            "mobile_image": "shopify://shop_images/Mobile.png",
             "slide_link": "",
             "subheading": "",
             "title": "Curious Cuddles",
@@ -194,18 +194,18 @@
       "type": "custom-product-highlight",
       "name": "Highlighted Collection",
       "settings": {
-        "title": "Tiny Engineers",
-        "text": "<p>Made to keep up with big ideas and busy hands.</p>",
-        "image": "shopify://shop_images/Tiny_Engineers_-_Product_highlight.png",
+        "title": "Mini Mathletes",
+        "text": "<p>For Little Problem-Solvers</p>",
+        "image": "shopify://shop_images/DSC07941.jpg",
         "order": true,
         "product_list": [
-          "newborn-sleep-gift-bundle-tiny-engineers",
-          "short-romper-tiny-engineers",
-          "tencel-sleep-bag-1-0-tog-tiny-engineers",
-          "hooded-towel-set-tiny-engineers"
+          "newborn-sleep-gift-bundle-mini-mathletes",
+          "muslin-swaddle-mini-mathletes",
+          "silicone-bib-printed-mini-mathletes",
+          "tencel-sleep-bag-1-0-tog-mini-mathletes"
         ],
-        "button_label": "Shop Tiny Engineers",
-        "link": "shopify://collections/tiny-engineers",
+        "button_label": "Shop Mini Mathletes",
+        "link": "shopify://collections/mini-mathletes",
         "button_style": "primary",
         "color_scheme": "default"
       }
