@@ -33,7 +33,7 @@
 
   {%- for sibling in sibs_collection.products -%}
     {%- unless sibling.tags contains 'hidden' -%}
-      {%- if sibling.tags contains 'new' or sibling.tags contains 'Seasonal'-%}
+      {%- if sibling.tags contains 'new' or sibling.tags contains 'seasonal'-%}
         {%- assign has_new_prints = true -%}
       {%- endif -%}
       {%- if sibling.tags contains 'core' -%}
@@ -237,7 +237,7 @@
           {% comment %} Seasonal Tab - Seasonal prints (not Core) {% endcomment %}
           {%- for sibling in sibs_collection.products -%}
             {%- unless sibling.tags contains 'hidden' -%}
-              {%- if sibling.tags contains 'Seasonal' and sibling.available-%}
+              {%- if sibling.tags contains 'seasonal' and sibling.available-%}
                 <a href="{{ sibling.url }}"
                   class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}"
                   data-color="{{ sibling.metafields.theme.cutline }}"
@@ -260,7 +260,7 @@
           {%- for sibling in sibs_collection.products -%}
             {%- unless sibling.tags contains 'hidden' and sibling.available -%}
               {%- unless sibling.available -%}
-                {%- if sibling.tags contains 'Seasonal' or sibling.tags contains 'new'-%}
+                {%- if sibling.tags contains 'seasonal' or sibling.tags contains 'new'-%}
                   <a href="{{ sibling.url }}"
                     class="opt-label opt-label--image sold-out {% if sibling.handle == product.handle %}is-active{% endif %}"
                     data-color="{{ sibling.metafields.theme.cutline }}"
