@@ -18,6 +18,7 @@
         "heading_image_height": "large",
         "overlay_style": "shadow",
         "coll_desc_pos": "below",
+        "coll_desc_layout": "stacked",
         "coll_num_per_page_int": 30,
         "grid": 4,
         "show_vendor": false,
@@ -43,6 +44,7 @@
         "rel_coll_gall_enable_margin": true,
         "rel_coll_gall_full_width": false,
         "rel_coll_gall_overlay_style": "full image-overlay--bg-shadow",
+        "rel_coll_gall_text_placement": true,
         "rel_coll_gall_text_alignment": "center center",
         "rel_coll_grid_mobile": "2"
       }
@@ -54,6 +56,7 @@
           "type": "collection",
           "settings": {
             "collection": "single-teethers",
+            "tag": "",
             "image": "shopify://shop_images/WTR-009-BFG-01_32dc418b-993b-413b-80e7-bab44a9f1acd.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
@@ -63,6 +66,7 @@
           "type": "collection",
           "settings": {
             "collection": "teething-rings",
+            "tag": "",
             "image": "shopify://shop_images/WRGSTSPK_WildTeetherRingSet_ShellPink_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
@@ -72,6 +76,7 @@
           "type": "collection",
           "settings": {
             "collection": "teething-mitts",
+            "tag": "",
             "image": "shopify://shop_images/TMT-005-GHN_01_0eb22df8-2b65-4eb2-9650-4fca323715cc.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
@@ -81,16 +86,8 @@
           "type": "collection",
           "settings": {
             "collection": "teething-charms",
+            "tag": "",
             "image": "shopify://shop_images/TCM-009-BFG_01.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_qDEWF4": {
-          "type": "collection",
-          "settings": {
-            "collection": "teething-sets",
-            "image": "shopify://shop_images/LLAMASETG_01.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -99,6 +96,7 @@
           "type": "collection",
           "settings": {
             "collection": "pacifier-clips",
+            "tag": "",
             "image": "shopify://shop_images/SILCPMON_01.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
@@ -108,6 +106,7 @@
           "type": "collection",
           "settings": {
             "collection": "flash-cards",
+            "tag": "",
             "image": "shopify://shop_images/FCS-CR_01.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
@@ -117,6 +116,7 @@
           "type": "collection",
           "settings": {
             "collection": "stacking-cups",
+            "tag": "",
             "image": "shopify://shop_images/SCSRBW_03.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
@@ -126,6 +126,7 @@
           "type": "collection",
           "settings": {
             "collection": "bath-toys",
+            "tag": "",
             "image": "shopify://shop_images/TCUP-002-BPK_01-388.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
@@ -137,7 +138,6 @@
         "collection_KCViN4",
         "collection_HBGXfQ",
         "collection_ngYLRN",
-        "collection_qDEWF4",
         "collection_nwWhhg",
         "collection_t3MwCY",
         "collection_ndLacp",
@@ -216,38 +216,21 @@
         "button_style": "primary"
       }
     },
-    "product_list_jGJn7D": {
-      "type": "product-list",
-      "name": "Product list",
+    "featured_collection_wriFgJ": {
+      "type": "featured-collection",
+      "name": "Featured collection",
       "settings": {
         "title": "Best Sellers",
         "text": "",
-        "text_alignment": "start",
-        "product_list": [
-          "bath-toy-set-blue",
-          "gem-colour-pop-silicone-wood-pacifier-clip-slate",
-          "pacifier-clip-teether-set-ebi-shrimp",
-          "teether-single-ebi-shrimp",
-          "teething-mitt-elephant",
-          "teething-mitt-bunny",
-          "wild-teether-aly-alligator",
-          "wild-teether-eddie-elephant",
-          "wild-teether-liam-lion",
-          "wild-teether-bailey-bunny",
-          "gem-pacifier-clip-teether-set-llama",
-          "wild-teether-ring-set-pastel",
-          "wild-teether-ring-set-sage-green",
-          "teether-single-taco",
-          "teether-single-sloth",
-          "pacifier-clip-teether-set-sloth",
-          "teether-single-boston-terrier",
-          "pacifier-clip-teether-set-boston-terrier"
-        ],
+        "collection": "best-selling-play",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 5,
+        "rows": 1,
         "color_scheme": "default",
-        "full_width": true
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "start"
       }
     },
     "featured_collection_yhnHaN": {
@@ -276,8 +259,8 @@
         "image": "shopify://shop_images/SILCPSWRBN_Silicone_Pacifier_Clip_Sweetheart-Rainbow_7.jpg",
         "order": false,
         "product_list": [
-          "gem-colour-pop-silicone-wood-pacifier-clip-pink-quartz",
-          "pacifier-clip-beadless-monstera"
+          "pacifier-clip-beadless-monstera",
+          "gem-dariling-pacifier-clip-avocado"
         ],
         "button_label": "Shop Pacifier Clips",
         "link": "shopify://collections/pacifier-clips",
@@ -294,24 +277,7 @@
         "collection": "teething-charms",
         "show_vendor": false,
         "enable_carousel": true,
-        "grid": 5,
-        "rows": 1,
-        "color_scheme": "default",
-        "show_view_all": true,
-        "full_width": false,
-        "text_alignment": "start"
-      }
-    },
-    "featured_collection_gfYhgH": {
-      "type": "featured-collection",
-      "name": "Featured collection",
-      "settings": {
-        "title": "Teething Sets",
-        "text": "",
-        "collection": "teething-sets",
-        "show_vendor": false,
-        "enable_carousel": true,
-        "grid": 5,
+        "grid": 4,
         "rows": 1,
         "color_scheme": "default",
         "show_view_all": true,
@@ -324,10 +290,9 @@
     "main",
     "collection_list_4KKNJE",
     "gallery_xaHCdy",
-    "product_list_jGJn7D",
+    "featured_collection_wriFgJ",
     "featured_collection_yhnHaN",
     "custom_product_highlight_pTqNGi",
-    "featured_collection_YUXjBF",
-    "featured_collection_gfYhgH"
+    "featured_collection_YUXjBF"
   ]
 }

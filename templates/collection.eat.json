@@ -18,6 +18,7 @@
         "heading_image_height": "large",
         "overlay_style": "shadow",
         "coll_desc_pos": "below",
+        "coll_desc_layout": "stacked",
         "coll_num_per_page_int": 30,
         "grid": 4,
         "show_vendor": false,
@@ -43,6 +44,7 @@
         "rel_coll_gall_enable_margin": true,
         "rel_coll_gall_full_width": false,
         "rel_coll_gall_overlay_style": "full image-overlay--bg-shadow",
+        "rel_coll_gall_text_placement": true,
         "rel_coll_gall_text_alignment": "center center",
         "rel_coll_grid_mobile": "2"
       }
@@ -54,6 +56,7 @@
           "type": "collection",
           "settings": {
             "collection": "silicone-bibs",
+            "tag": "",
             "image": "shopify://shop_images/SILBIBSSH_SiliconeBibPrinted_Seashells_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
@@ -63,6 +66,7 @@
           "type": "collection",
           "settings": {
             "collection": "long-sleeve-bibs",
+            "tag": "",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -71,6 +75,7 @@
           "type": "collection",
           "settings": {
             "collection": "suction-plates",
+            "tag": "",
             "image": "shopify://shop_images/SPL-009-BFG_SnackPlate-Sharks_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
@@ -80,6 +85,7 @@
           "type": "collection",
           "settings": {
             "collection": "suction-bowls",
+            "tag": "",
             "image": "shopify://shop_images/SBWL-BPK_02_489a9c8e-5f68-49e8-8619-a28eca926fae.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
@@ -89,42 +95,8 @@
           "type": "collection",
           "settings": {
             "collection": "utensils",
+            "tag": "",
             "image": "shopify://shop_images/LSET-010-MNT_LearningUtensilsSet_Octopus_1.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_nwWhhg": {
-          "type": "collection",
-          "settings": {
-            "collection": "snack-box",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_t3MwCY": {
-          "type": "collection",
-          "settings": {
-            "collection": "placemats",
-            "image": "shopify://shop_images/Place_Mat_Safari.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_ndLacp": {
-          "type": "collection",
-          "settings": {
-            "collection": "snack-cups",
-            "image": "shopify://shop_images/SCP-006-BPK_01_903add63-fc12-4da5-bc69-de2c0d201e78.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_9fk8m7": {
-          "type": "collection",
-          "settings": {
-            "collection": "straw-cups",
-            "image": "shopify://shop_images/TCUP-003-BLU_03_2d33849b-fd20-4cb8-99ab-cdf7eceb6942.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -133,6 +105,7 @@
           "type": "collection",
           "settings": {
             "collection": "burp-cloths",
+            "tag": "",
             "image": "shopify://shop_images/BCLPSH_01_bf1aaac0-7aeb-466c-8b46-da6425131987.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
@@ -145,10 +118,6 @@
         "collection_HBGXfQ",
         "collection_ngYLRN",
         "collection_qDEWF4",
-        "collection_nwWhhg",
-        "collection_t3MwCY",
-        "collection_ndLacp",
-        "collection_9fk8m7",
         "collection_3bVP6j"
       ],
       "name": "Collection list",
@@ -224,36 +193,21 @@
         "button_style": "primary"
       }
     },
-    "product_list_jGJn7D": {
-      "type": "product-list",
-      "name": "Product list",
+    "featured_collection_fCmzQ4": {
+      "type": "featured-collection",
+      "name": "Featured collection",
       "settings": {
         "title": "Best Sellers",
         "text": "",
-        "text_alignment": "start",
-        "product_list": [
-          "silicone-bib-printed-space",
-          "silicone-bib-printed-sushi",
-          "silicone-bib-printed-french-breakfast",
-          "snack-plate-sarah-shark",
-          "snack-plate-bailey-bunny",
-          "learning-utensils-set-elephant",
-          "spoon-bunny",
-          "long-sleeve-bib-ocean-explorer",
-          "long-sleeve-bib-french-breakfast",
-          "long-sleeve-bib-pink-checkerboard",
-          "long-sleeve-bib-seashells",
-          "long-sleeve-bib-safari-jungle",
-          "snack-bowl-blush-pink",
-          "snack-bowl-blue",
-          "cup-with-straw-bunny",
-          "cup-with-straw-elephant"
-        ],
+        "collection": "best-selling-feeding",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 5,
+        "rows": 1,
         "color_scheme": "default",
-        "full_width": true
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "start"
       }
     },
     "featured_collection_yhnHaN": {
@@ -283,7 +237,9 @@
         "order": false,
         "product_list": [
           "silicone-bib-printed-ocean-explorer",
-          "silicone-bib-printed-seashells"
+          "silicone-bib-printed-seashells",
+          "silicone-bib-printed-planets",
+          "silicone-bib-printed-magical-dragons"
         ],
         "button_label": "Shop Silicone Bibs",
         "link": "shopify://collections/silicone-bibs",
@@ -330,7 +286,7 @@
     "main",
     "collection_list_4KKNJE",
     "gallery_xaHCdy",
-    "product_list_jGJn7D",
+    "featured_collection_fCmzQ4",
     "featured_collection_yhnHaN",
     "custom_product_highlight_pTqNGi",
     "featured_collection_YUXjBF",

@@ -18,6 +18,7 @@
         "heading_image_height": "large",
         "overlay_style": "shadow",
         "coll_desc_pos": "below",
+        "coll_desc_layout": "stacked",
         "coll_num_per_page_int": 30,
         "grid": 4,
         "show_vendor": false,
@@ -43,6 +44,7 @@
         "rel_coll_gall_enable_margin": true,
         "rel_coll_gall_full_width": false,
         "rel_coll_gall_overlay_style": "full image-overlay--bg-shadow",
+        "rel_coll_gall_text_placement": true,
         "rel_coll_gall_text_alignment": "center center",
         "rel_coll_grid_mobile": "2"
       }
@@ -54,7 +56,8 @@
           "type": "collection",
           "settings": {
             "collection": "sleep-bags",
-            "image": "shopify://shop_images/BA9003U.SKS_Muslin_Sleep_Bag_-_Lightweight_Sun-kissed_Shoal_1.jpg",
+            "tag": "",
+            "image": "shopify://shop_images/BA9004U.SAF.18_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -63,43 +66,8 @@
           "type": "collection",
           "settings": {
             "collection": "sleepers",
+            "tag": "",
             "image": "shopify://shop_images/BA1002U.SHK_Sleeper_Sharks_1.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_HBGXfQ": {
-          "type": "collection",
-          "settings": {
-            "collection": "pajamas",
-            "image": "shopify://shop_images/KA1006U.MER_ShortSleeveLongPantsPajamaSet_Mermaids_1.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_qDEWF4": {
-          "type": "collection",
-          "settings": {
-            "collection": "swaddles",
-            "image": "shopify://shop_images/SWOCX_MuslinSwaddle_OceanExplorer_1.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_ndLacp": {
-          "type": "collection",
-          "settings": {
-            "collection": "blankets",
-            "image": "shopify://shop_images/QTCZF_02.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_7xaNhx": {
-          "type": "collection",
-          "settings": {
-            "collection": "sleepsuits",
-            "image": "shopify://shop_images/BA9007U.PCB_Sleepsuit_1.0_Tog_Pink_Checkerboard_1.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -108,8 +76,39 @@
           "type": "collection",
           "settings": {
             "collection": "crib-sheets",
-            "image": "shopify://shop_images/CRIBSEL_MuslinFittedCribSheet_Seals_1.jpg",
+            "tag": "",
+            "image": "shopify://shop_images/CRIBBMB_180.jpg",
             "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_HBGXfQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "pajamas",
+            "tag": "",
+            "image": "shopify://shop_images/KA1004U.MGD_1.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_qDEWF4": {
+          "type": "collection",
+          "settings": {
+            "collection": "swaddles",
+            "tag": "",
+            "image": "shopify://shop_images/SWPLANET_2.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_ndLacp": {
+          "type": "collection",
+          "settings": {
+            "collection": "muslin-quilt",
+            "tag": "",
+            "image": "shopify://shop_images/QTUNB_3.jpg",
+            "subheading": "Quilts",
             "button_label": ""
           }
         }
@@ -117,11 +116,10 @@
       "block_order": [
         "collection_4wLe7J",
         "collection_KCViN4",
+        "collection_hTVcdr",
         "collection_HBGXfQ",
         "collection_qDEWF4",
-        "collection_ndLacp",
-        "collection_7xaNhx",
-        "collection_hTVcdr"
+        "collection_ndLacp"
       ],
       "name": "Collection list",
       "settings": {
@@ -196,28 +194,21 @@
         "button_style": "primary"
       }
     },
-    "product_list_jGJn7D": {
-      "type": "product-list",
-      "name": "Product list",
+    "featured_collection_ghj4x8": {
+      "type": "featured-collection",
+      "name": "Featured collection",
       "settings": {
         "title": "Sweet Dreams Are Made With These",
-        "text": "<p>Our bedtime best sellers —must-haves for parents, baby-approved for restful nights</p>",
-        "text_alignment": "start",
-        "product_list": [
-          "sleeper-ice-hockey",
-          "sleeper-smiley-sharks",
-          "muslin-swaddle-usa",
-          "muslin-swaddle-sushi",
-          "muslin-lightweight-sleep-bags-0-5-tog-painterly-seahorses",
-          "muslin-swaddle-ramen",
-          "muslin-swaddle-football",
-          "muslin-lightweight-sleep-bags-0-5-tog-sun-kissed-shoal"
-        ],
+        "text": "<p>Our bedtime best sellers</p>",
+        "collection": "best-selling-sleep",
         "show_vendor": false,
         "enable_carousel": true,
-        "grid": 5,
+        "grid": 4,
+        "rows": 1,
         "color_scheme": "default",
-        "full_width": true
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "start"
       }
     },
     "featured_collection_yhnHaN": {
@@ -243,11 +234,11 @@
       "settings": {
         "title": "Sleeper Stars",
         "text": "<p>Restful nights start with the best sleepers</p>",
-        "image": "shopify://shop_images/Sleeper_All_Aboard__5_3861c2ed-f766-4071-b9c6-55262d743e5f.jpg",
+        "image": "shopify://shop_images/Sleeper_-_Quilt_-_Bumble_Bees_8b5f92f1-4604-41bc-8eaf-56dab4c3e7b9.jpg",
         "order": false,
         "product_list": [
-          "sleeper-ocean-explorer",
-          "sleeper-sun-kissed-shoal"
+          "sleeper-bears-on-bikes",
+          "sleeper-magical-dragons"
         ],
         "button_label": "Shop Sleepers",
         "link": "shopify://collections/sleepers",
@@ -264,7 +255,7 @@
         "collection": "swaddles",
         "show_vendor": false,
         "enable_carousel": true,
-        "grid": 5,
+        "grid": 4,
         "rows": 1,
         "color_scheme": "default",
         "show_view_all": true,
@@ -281,7 +272,7 @@
         "collection": "crib-sheets",
         "show_vendor": false,
         "enable_carousel": true,
-        "grid": 5,
+        "grid": 4,
         "rows": 1,
         "color_scheme": "default",
         "show_view_all": true,
@@ -294,7 +285,7 @@
     "main",
     "collection_list_4KKNJE",
     "gallery_xaHCdy",
-    "product_list_jGJn7D",
+    "featured_collection_ghj4x8",
     "featured_collection_yhnHaN",
     "custom_product_highlight_pTqNGi",
     "featured_collection_YUXjBF",
