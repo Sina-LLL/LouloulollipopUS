@@ -38,9 +38,17 @@
   -%}
   
   
-  {%- if new_label_text -%}
-    <span class="product-label product-label--new-in">
-      <span>{{ new_label_text }}</span>
+  {%- unless product.tags contains "Limited Edition" -%}
+    {%- if new_label_text -%}
+      <span class="product-label product-label--new-in">
+        <span>{{ new_label_text }}</span>
+      </span>
+    {%- endif -%}
+  {%- endunless -%}
+  {%- if product.tags contains "Limited Edition" -%}
+    {%- assign label_count = label_count | plus: 1 -%}
+    <span class="product-label product-label--stock">
+      <span>Limited Edition</span>
     </span>
   {%- endif -%}
 
