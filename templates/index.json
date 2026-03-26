@@ -815,12 +815,12 @@
             "button_label": ""
           }
         },
-        "collection_3ybKnj": {
+        "collection_NPHqF4": {
           "type": "collection",
           "settings": {
-            "collection": "top-rated-sleep",
+            "collection": "top-baby-gifts",
             "tag": "",
-            "image": "shopify://shop_images/DSC00442-2_7ede22b4-5323-438f-8485-7309b9627de9.jpg",
+            "image": "shopify://shop_images/Header_Image_-_SILBIB.png",
             "subheading": "",
             "button_label": ""
           }
@@ -829,7 +829,7 @@
       "block_order": [
         "collection_hnnxPW",
         "collection_fEKXHL",
-        "collection_3ybKnj"
+        "collection_NPHqF4"
       ],
       "settings": {
         "title": "",
