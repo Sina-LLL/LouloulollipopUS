@@ -111,16 +111,6 @@
             "subheading": "Quilts",
             "button_label": ""
           }
-        },
-        "collection_7xaNhx": {
-          "type": "collection",
-          "settings": {
-            "collection": "sleepsuits",
-            "tag": "",
-            "image": "shopify://shop_images/BA9007U.PCB_Sleepsuit_1.0_Tog_Pink_Checkerboard_1.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
         }
       },
       "block_order": [
@@ -129,8 +119,7 @@
         "collection_hTVcdr",
         "collection_HBGXfQ",
         "collection_qDEWF4",
-        "collection_ndLacp",
-        "collection_7xaNhx"
+        "collection_ndLacp"
       ],
       "name": "Collection list",
       "settings": {
