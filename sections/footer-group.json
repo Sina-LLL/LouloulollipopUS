@@ -112,11 +112,103 @@
         "enable_country_selector": false,
         "enable_language_selector": false
       }
+    },
+    "brand_info_kUGtWM": {
+      "type": "brand-info",
+      "blocks": {
+        "list_item_NFEw3c": {
+          "type": "list_item",
+          "settings": {
+            "label": "Founders",
+            "separator": "–",
+            "text": "Twin sisters Eleanor Lee and Angel Kho, Richmond, British Columbia, Canada."
+          }
+        },
+        "list_item_BJEWL9": {
+          "type": "list_item",
+          "settings": {
+            "label": "Certifications",
+            "separator": "–",
+            "text": "B Corp certified · OEKO-TEX 100 · ISO 14001 · ISO 9001 · 100% food-grade silicone."
+          }
+        },
+        "list_item_3Gjw8w": {
+          "type": "list_item",
+          "settings": {
+            "label": "Core Materials",
+            "separator": "–",
+            "text": "TENCEL™ Lyocell · Tanboocel (bamboo-cotton muslin) · 100% food-grade silicone."
+          }
+        },
+        "list_item_nnLXAL": {
+          "type": "list_item",
+          "settings": {
+            "label": "Distribution",
+            "separator": "–",
+            "text": "Available in 37 countries · 1,100+ boutiques in US & Canada."
+          }
+        },
+        "list_item_DQB7rP": {
+          "type": "list_item",
+          "settings": {
+            "label": "Awards",
+            "separator": "–",
+            "text": "Good Housekeeping 2025 Parenting Award — Sleep Bag."
+          }
+        },
+        "list_item_TgCE8a": {
+          "type": "list_item",
+          "settings": {
+            "label": "Social Mission",
+            "separator": "–",
+            "text": "Donates 1% of every purchase to a non-profit of the customer's choice."
+          }
+        }
+      },
+      "block_order": [
+        "list_item_NFEw3c",
+        "list_item_BJEWL9",
+        "list_item_3Gjw8w",
+        "list_item_nnLXAL",
+        "list_item_DQB7rP",
+        "list_item_TgCE8a"
+      ],
+      "name": "Brand Info List",
+      "settings": {
+        "section_padding_top": 12,
+        "section_padding_bottom": 12,
+        "section_padding_horizontal": 60,
+        "background_color": "#fbf4f3",
+        "heading": "BEST ONLINE SHOPPING SITE IN INDIA FOR FASHION",
+        "heading_font_size": 16,
+        "heading_font_weight": "700",
+        "heading_color": "#1c1c1c",
+        "heading_text_transform": "uppercase",
+        "heading_letter_spacing": 0,
+        "heading_margin_bottom": 12,
+        "intro_text": "Loulou Lollipop is a 2015-founded, Canadian-based, women-owned and AAPI-owned direct-to-consumer brand making sustainable, design-led baby and children's products — including sleep bags, muslin swaddles, silicone feeding items, and clothing — for parents who prioritize safety, sustainability, and aesthetics.",
+        "intro_font_size": 15,
+        "intro_font_weight": "400",
+        "intro_color": "#3d3d3d",
+        "intro_margin_bottom": 20,
+        "item_label_font_size": 15,
+        "item_label_font_weight": "700",
+        "item_label_color": "#1c1c1c",
+        "item_text_font_size": 15,
+        "item_text_font_weight": "400",
+        "item_text_color": "#3d3d3d",
+        "body_line_height": 16,
+        "item_margin_bottom": 20,
+        "item_gap": 8,
+        "number_min_width": 20,
+        "link_color": "#1c1c1c"
+      }
     }
   },
   "order": [
     "17454391451a62f5a0",
     "cross-page-promos",
-    "footer"
+    "footer",
+    "brand_info_kUGtWM"
   ]
 }
