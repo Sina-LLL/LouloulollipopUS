@@ -1,0 +1,468 @@
+{% comment %}
+  Section: Brand Info List
+  Style: Myntra-style numbered list (screenshot 1)
+  Content: Loulou Lollipop brand data (screenshot 2)
+{% endcomment %}
+
+<style>
+  .brand-info-list__wrapper {
+    padding: {{ section.settings.section_padding_top }}px {{ section.settings.section_padding_horizontal }}px {{ section.settings.section_padding_bottom }}px;
+    background-color: {{ section.settings.background_color }};
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .brand-info-list__heading {
+    font-size: {{ section.settings.heading_font_size }}px;
+    font-weight: {{ section.settings.heading_font_weight }};
+    color: {{ section.settings.heading_color }};
+    margin-bottom: {{ section.settings.heading_margin_bottom }}px;
+    line-height: 1.3;
+    letter-spacing: calc({{ section.settings.heading_letter_spacing }} * 0.01em);
+    text-transform: {{ section.settings.heading_text_transform }};
+  }
+
+  .brand-info-list__intro {
+    font-size: {{ section.settings.intro_font_size }}px;
+    font-weight: {{ section.settings.intro_font_weight }};
+    color: {{ section.settings.intro_color }};
+    line-height: calc({{ section.settings.body_line_height }} * 0.1);
+    margin-bottom: {{ section.settings.intro_margin_bottom }}px;
+  }
+
+  .brand-info-list__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    counter-reset: brand-list;
+  }
+
+  .brand-info-list__item {
+    counter-increment: brand-list;
+    display: flex;
+    gap: {{ section.settings.item_gap }}px;
+    margin-bottom: {{ section.settings.item_margin_bottom }}px;
+  }
+
+  .brand-info-list__item-number {
+    flex-shrink: 0;
+    font-size: {{ section.settings.item_label_font_size }}px;
+    font-weight: {{ section.settings.item_label_font_weight }};
+    color: {{ section.settings.item_label_color }};
+    min-width: {{ section.settings.number_min_width }}px;
+    padding-top: 1px;
+  }
+
+  .brand-info-list__item-number::before {
+    content: counter(brand-list) ".";
+  }
+
+  .brand-info-list__item-content {}
+
+  .brand-info-list__item-label {
+    display: inline;
+    font-size: {{ section.settings.item_label_font_size }}px;
+    font-weight: {{ section.settings.item_label_font_weight }};
+    color: {{ section.settings.item_label_color }};
+  }
+
+  .brand-info-list__item-text {
+    display: inline;
+    font-size: {{ section.settings.item_text_font_size }}px;
+    font-weight: {{ section.settings.item_text_font_weight }};
+    color: {{ section.settings.item_text_color }};
+    line-height: calc({{ section.settings.body_line_height }} * 0.1);
+  }
+
+  .brand-info-list__item-text a {
+    color: {{ section.settings.link_color }};
+    text-decoration: underline;
+  }
+
+  @media screen and (max-width: 749px) {
+    .brand-info-list__wrapper {
+      padding-left: {{ section.settings.section_padding_horizontal | times: 0.6 | round }}px;
+      padding-right: {{ section.settings.section_padding_horizontal | times: 0.6 | round }}px;
+    }
+    .brand-info-list__heading {
+      font-size: {{ section.settings.heading_font_size | times: 0.85 | round }}px;
+    }
+  }
+</style>
+
+<div class="brand-info-list__wrapper">
+  {%- if section.settings.heading != blank -%}
+    <h2 class="brand-info-list__heading">{{ section.settings.heading }}</h2>
+  {%- endif -%}
+
+  {%- if section.settings.intro_text != blank -%}
+    <p class="brand-info-list__intro">{{ section.settings.intro_text }}</p>
+  {%- endif -%}
+
+  {%- if section.blocks.size > 0 -%}
+    <ol class="brand-info-list__list">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'list_item' -%}
+          <li class="brand-info-list__item" {{ block.shopify_attributes }}>
+            <span class="brand-info-list__item-number" aria-hidden="true"></span>
+            <div class="brand-info-list__item-content">
+              {%- if block.settings.label != blank -%}
+                <span class="brand-info-list__item-label">{{ block.settings.label }} </span>
+                {%- if block.settings.separator != blank -%}
+                  <span class="brand-info-list__item-text">{{ block.settings.separator }} </span>
+                {%- endif -%}
+              {%- endif -%}
+              {%- if block.settings.text != blank -%}
+                <span class="brand-info-list__item-text">{{ block.settings.text }}</span>
+              {%- endif -%}
+            </div>
+          </li>
+        {%- endif -%}
+      {%- endfor -%}
+    </ol>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "Brand Info List",
+  "tag": "section",
+  "class": "brand-info-list-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "label": "Padding Top (px)",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "label": "Padding Bottom (px)",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "section_padding_horizontal",
+      "label": "Padding Horizontal (px)",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "default": 60
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#fbf4f3"
+    },
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "BEST ONLINE SHOPPING SITE IN INDIA FOR FASHION"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "Heading Font Size (px)",
+      "min": 12,
+      "max": 40,
+      "step": 1,
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "heading_font_weight",
+      "label": "Heading Font Weight",
+      "options": [
+        { "value": "400", "label": "Regular (400)" },
+        { "value": "500", "label": "Medium (500)" },
+        { "value": "600", "label": "Semi Bold (600)" },
+        { "value": "700", "label": "Bold (700)" },
+        { "value": "800", "label": "Extra Bold (800)" }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#1c1c1c"
+    },
+    {
+      "type": "select",
+      "id": "heading_text_transform",
+      "label": "Heading Text Transform",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "uppercase", "label": "Uppercase" },
+        { "value": "capitalize", "label": "Capitalize" }
+      ],
+      "default": "uppercase"
+    },
+    {
+      "type": "range",
+      "id": "heading_letter_spacing",
+      "label": "Heading Letter Spacing (em)",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "default": 0,
+      "info": "Value × 0.01em (e.g. 5 = 0.05em)"
+    },
+    {
+      "type": "range",
+      "id": "heading_margin_bottom",
+      "label": "Heading Margin Bottom (px)",
+      "min": 4,
+      "max": 40,
+      "step": 2,
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Intro Text"
+    },
+    {
+      "type": "textarea",
+      "id": "intro_text",
+      "label": "Intro Text",
+      "default": "Loulou Lollipop is a 2015-founded, Canadian-based, women-owned and AAPI-owned direct-to-consumer brand making sustainable, design-led baby and children's products — including sleep bags, muslin swaddles, silicone feeding items, and clothing — for parents who prioritize safety, sustainability, and aesthetics."
+    },
+    {
+      "type": "range",
+      "id": "intro_font_size",
+      "label": "Intro Font Size (px)",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "default": 15
+    },
+    {
+      "type": "select",
+      "id": "intro_font_weight",
+      "label": "Intro Font Weight",
+      "options": [
+        { "value": "300", "label": "Light (300)" },
+        { "value": "400", "label": "Regular (400)" },
+        { "value": "500", "label": "Medium (500)" },
+        { "value": "600", "label": "Semi Bold (600)" }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "color",
+      "id": "intro_color",
+      "label": "Intro Text Color",
+      "default": "#3d3d3d"
+    },
+    {
+      "type": "range",
+      "id": "intro_margin_bottom",
+      "label": "Intro Margin Bottom (px)",
+      "min": 8,
+      "max": 48,
+      "step": 2,
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "List Items"
+    },
+    {
+      "type": "range",
+      "id": "item_label_font_size",
+      "label": "Item Label Font Size (px)",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "default": 15
+    },
+    {
+      "type": "select",
+      "id": "item_label_font_weight",
+      "label": "Item Label Font Weight",
+      "options": [
+        { "value": "400", "label": "Regular (400)" },
+        { "value": "500", "label": "Medium (500)" },
+        { "value": "600", "label": "Semi Bold (600)" },
+        { "value": "700", "label": "Bold (700)" }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "color",
+      "id": "item_label_color",
+      "label": "Item Label Color",
+      "default": "#1c1c1c"
+    },
+    {
+      "type": "range",
+      "id": "item_text_font_size",
+      "label": "Item Body Font Size (px)",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "default": 15
+    },
+    {
+      "type": "select",
+      "id": "item_text_font_weight",
+      "label": "Item Body Font Weight",
+      "options": [
+        { "value": "300", "label": "Light (300)" },
+        { "value": "400", "label": "Regular (400)" },
+        { "value": "500", "label": "Medium (500)" }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "color",
+      "id": "item_text_color",
+      "label": "Item Body Text Color",
+      "default": "#3d3d3d"
+    },
+    {
+      "type": "range",
+      "id": "body_line_height",
+      "label": "Body Line Height",
+      "min": 10,
+      "max": 22,
+      "step": 1,
+      "default": 16,
+      "info": "Value × 0.1 (e.g. 16 = 1.6)"
+    },
+    {
+      "type": "range",
+      "id": "item_margin_bottom",
+      "label": "Space Between Items (px)",
+      "min": 8,
+      "max": 48,
+      "step": 2,
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "item_gap",
+      "label": "Number to Text Gap (px)",
+      "min": 4,
+      "max": 24,
+      "step": 2,
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "number_min_width",
+      "label": "Number Column Width (px)",
+      "min": 10,
+      "max": 40,
+      "step": 2,
+      "default": 20
+    },
+    {
+      "type": "color",
+      "id": "link_color",
+      "label": "Link Color",
+      "default": "#1c1c1c"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "list_item",
+      "name": "List Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Bold Label",
+          "default": "Founders",
+          "info": "Displayed bold. Leave blank for no label."
+        },
+        {
+          "type": "text",
+          "id": "separator",
+          "label": "Separator",
+          "default": "–",
+          "info": "Character between label and body text (e.g. –, :, ·)"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Body Text",
+          "default": "Twin sisters Eleanor Lee and Angel Kho, Richmond, British Columbia, Canada."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Brand Info List",
+      "blocks": [
+        {
+          "type": "list_item",
+          "settings": {
+            "label": "Founders",
+            "separator": "–",
+            "text": "Twin sisters Eleanor Lee and Angel Kho, Richmond, British Columbia, Canada."
+          }
+        },
+        {
+          "type": "list_item",
+          "settings": {
+            "label": "Certifications",
+            "separator": "–",
+            "text": "B Corp certified · OEKO-TEX 100 · ISO 14001 · ISO 9001 · 100% food-grade silicone."
+          }
+        },
+        {
+          "type": "list_item",
+          "settings": {
+            "label": "Core Materials",
+            "separator": "–",
+            "text": "TENCEL™ Lyocell · Tanboocel (bamboo-cotton muslin) · 100% food-grade silicone."
+          }
+        },
+        {
+          "type": "list_item",
+          "settings": {
+            "label": "Distribution",
+            "separator": "–",
+            "text": "Available in 37 countries · 1,100+ boutiques in US & Canada."
+          }
+        },
+        {
+          "type": "list_item",
+          "settings": {
+            "label": "Awards",
+            "separator": "–",
+            "text": "Good Housekeeping 2025 Parenting Award — Sleep Bag."
+          }
+        },
+        {
+          "type": "list_item",
+          "settings": {
+            "label": "Social Mission",
+            "separator": "–",
+            "text": "Donates 1% of every purchase to a non-profit of the customer's choice."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
