@@ -203,69 +203,6 @@
   <meta name="google-site-verification" content="hi3HWj9GvDf8he5e3qfpKdEYOgX4tTQK4MPN-XeBBb8" />
   {% render 'stylux-head' %}
 
-  {% comment %} JSON-LD Schemas {% endcomment %}
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Loulou Lollipop",
-    "url": "https://louloulollipop.com",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://louloulollipop.com/cdn/shop/files/Logo_LLL.png?v=1764797164&width=430"
-    },
-    "description": "B Corp-certified baby lifestyle brand offering safe, sustainable, and adorable products for babies and kids ages 0–6. Founded by twin sisters, made with TENCEL™ Lyocell and 100% food-grade silicone.",
-    "foundingDate": "2015",
-    "sameAs": [
-      "https://www.instagram.com/louloulollipop",
-      "https://www.facebook.com/louloulollipop",
-      "https://www.pinterest.com/louloulollipop"
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "Customer Service",
-      "url": "https://louloulollipop.com/pages/contact-us"
-    }
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Loulou Lollipop",
-    "url": "https://louloulollipop.com",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "https://louloulollipop.com/search?q={search_term_string}"
-      },
-      "query-input": "required name=search_term_string"
-    }
-  }
-  </script>
-
-  {% if template == 'index' %}
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Shop Baby & Kids Products – Loulou Lollipop",
-    "url": "https://louloulollipop.com",
-    "description": "Safe, sustainable baby and toddler products including sleepwear, feeding essentials, teethers, muslin swaddles, and toys for ages 0–6.",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Sleep & Bedding", "url": "https://louloulollipop.com/collections/sleep-bedding" },
-      { "@type": "ListItem", "position": 2, "name": "Clothing", "url": "https://louloulollipop.com/collections/clothing" },
-      { "@type": "ListItem", "position": 3, "name": "Feeding Essentials", "url": "https://louloulollipop.com/collections/feeding-essentials" },
-      { "@type": "ListItem", "position": 4, "name": "Toys & Play", "url": "https://louloulollipop.com/collections/toys-play" },
-      { "@type": "ListItem", "position": 5, "name": "Bundles & Gift Sets", "url": "https://louloulollipop.com/collections/bundles-gift-sets" }
-    ]
-  }
-  </script>
-  {% endif %}
-
  
 </head>
 
