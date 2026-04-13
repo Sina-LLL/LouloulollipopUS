@@ -204,59 +204,39 @@
   {% render 'stylux-head' %}
 
   {% comment %} JsonLd {% endcomment %}
-   {% comment %} ========== LOULOU LOLLIPOP — GLOBAL SCHEMA ========== {% endcomment %}
+{% comment %} ========== LOULOU LOLLIPOP — GLOBAL SCHEMA ========== {% endcomment %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://louloulollipop.com/#organization",
-      "name": "Loulou Lollipop",
-      "url": "https://louloulollipop.com",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://louloulollipop.com/cdn/shop/files/Logo_LLL.png",
-        "width": 430,
-        "height": 120
-      },
-      "description": "B Corp certified baby and children's brand founded in 2015 by twin sisters. Makers of TENCEL sleep bags, muslin swaddles, silicone feeding products, and clothing. Available in 37 countries, 1,100+ boutiques. OEKO-TEX 100 certified, women-owned.",
-      "foundingDate": "2015",
-      "founder": [
-        { "@type": "Person", "name": "Eleanor Lee" },
-        { "@type": "Person", "name": "Angel Kho" }
-      ],
-      "sameAs": [
-        "https://www.instagram.com/louloulollipop/",
-        "https://www.facebook.com/louloulollipop/",
-        "https://www.pinterest.com/louloulollipop/",
-        "https://www.tiktok.com/@louloulollipop"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "Customer Service",
-        "url": "https://louloulollipop.com/pages/contact-us",
-        "areaServed": "US",
-        "availableLanguage": "English"
-      }
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://louloulollipop.com/#website",
-      "url": "https://louloulollipop.com",
-      "name": "Loulou Lollipop",
-      "description": "Baby & children's sleep bags, swaddles, clothing, feeding essentials and toys. Designed to love, made for joy.",
-      "publisher": { "@id": "https://louloulollipop.com/#organization" },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://louloulollipop.com/search?q={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
-      }
+  "@type": "Organization",
+  "name": "Loulou Lollipop",
+  "url": "https://louloulollipop.com",
+  "logo": "{{ settings.logo | image_url: width: 430 }}",
+  "foundingDate": "2015",
+  "foundingLocation": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Richmond",
+      "addressRegion": "BC",
+      "addressCountry": "CA"
     }
-  ]
+  },
+  "description": "Loulou Lollipop is a B Corp-certified, women-owned, AAPI-owned Canadian baby brand founded in 2015, making sustainable sleep bags, muslin swaddles, silicone feeding products, and clothing using TENCEL™ and food-grade silicone materials.",
+  "sameAs": [
+    "https://ca.linkedin.com/company/loulou-lollipop",
+    "https://www.instagram.com/louloulollipop",
+    "https://www.facebook.com/louloulollipop",
+    "https://www.pinterest.com/louloulollipop",
+    "https://www.tiktok.com/@louloulollipop"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Service",
+    "url": "https://louloulollipop.com/pages/contact-us",
+    "areaServed": "US",
+    "availableLanguage": "English"
+  }
 }
 </script>
  
