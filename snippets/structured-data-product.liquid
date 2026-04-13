@@ -1,11 +1,123 @@
 {%- comment -%}
   Parameters:
   - product {Object} - Product object.
+  - current_variant {Object} - Current variant object.
 
   Usage:
-  {% render 'structured-data-product', product: product %}
+  {% render 'structured-data-product', product: product, current_variant: current_variant %}
 {%- endcomment -%}
 
+{%- liquid
+  assign jm_review_count = 100
+  assign jm_rating = 4.9
+  assign jm_count_int = 100
+
+  if product.metafields.custom.material != blank
+    assign material_raw = product.metafields.custom.material.value
+    if material_raw.first != blank
+      assign material_value = material_raw | join: ', '
+    else
+      assign material_value = material_raw | remove: '["' | remove: '"]' | remove: '[' | remove: ']'
+    endif
+  elsif product.tags contains 'TENCEL'
+    assign material_value = 'TENCEL Lyocell'
+  elsif product.tags contains 'muslin'
+    assign material_value = '100% Organic Muslin Cotton'
+  elsif product.tags contains 'silicone'
+    assign material_value = '100% Food-Grade Silicone'
+  elsif product.tags contains 'waffle'
+    assign material_value = 'TENCEL Lyocell Waffle Knit'
+  else
+    assign material_value = product.type
+  endif
+-%}
+
+{% comment %} ========== PRODUCT SCHEMA ========== {% endcomment %}
 <script type="application/ld+json">
-  {{ product | structured_data }}
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": {{ product.title | json }},
+  "url": "{{ shop.url }}{{ product.url }}",
+  "image": {{ product.images | map: 'src' | json }},
+  "description": {{ product.description | strip_html | strip | truncate: 300 | json }},
+  "sku": {{ current_variant.sku | json }},
+  "brand": {
+    "@type": "Brand",
+    "name": "Loulou Lollipop"
+  },
+  "material": {{ material_value | json }},
+  "offers": {
+    "@type": "AggregateOffer",
+    "url": "{{ shop.url }}{{ product.url }}",
+    "priceCurrency": "{{ cart.currency.iso_code }}",
+    "lowPrice": "{{ product.price_min | money_without_currency | remove: ',' }}",
+    "highPrice": "{{ product.price_max | money_without_currency | remove: ',' }}",
+    "offerCount": {{ product.variants.size }},
+    "availability": "{% if product.available %}https://schema.org/InStock{% else %}https://schema.org/OutOfStock{% endif %}",
+    "seller": {
+      "@type": "Organization",
+      "name": "Loulou Lollipop"
+    }
+  }
+  {%- if jm_count_int > 0 -%}
+  ,
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "{{ jm_rating }}",
+    "reviewCount": "{{ jm_review_count }}",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+  {%- endif -%}
+}
 </script>
+
+{% comment %} ========== BREADCRUMB SCHEMA ========== {% endcomment %}
+{% if template == 'product' or template == 'collection' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ shop.url }}"
+    }
+    {% if template == 'collection' %}
+    ,{
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ collection.title | json }},
+      "item": "{{ shop.url }}{{ collection.url }}"
+    }
+    {% endif %}
+    {% if template == 'product' %}
+    {% if collection %}
+    ,{
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ collection.title | json }},
+      "item": "{{ shop.url }}{{ collection.url }}"
+    }
+    ,{
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ product.title | json }},
+      "item": "{{ shop.url }}{{ product.url }}"
+    }
+    {% else %}
+    ,{
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ product.title | json }},
+      "item": "{{ shop.url }}{{ product.url }}"
+    }
+    {% endif %}
+    {% endif %}
+  ]
+}
+</script>
+{% endif %}
