@@ -180,6 +180,28 @@
     {{ 'animate-on-scroll.css' | asset_url | stylesheet_tag: preload: true }}
   {% endif %}
 
+  {{ content_for_header }}
+
+  {%- if settings.custom_html_head -%}
+    <!-- CC Custom Head Start -->
+    {{- settings.custom_html_head -}}
+    <!-- CC Custom Head End -->
+  {%- endif -%}
+    <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "p9v8igh2d9");
+  </script>
+
+{% if current_tags %}
+<meta name="robots" content="noindex, follow">
+{% endif %}
+
+  <meta name="google-site-verification" content="hi3HWj9GvDf8he5e3qfpKdEYOgX4tTQK4MPN-XeBBb8" />
+  {% render 'stylux-head' %}
 {% comment %} JsonLd {% endcomment %}
 <script type="application/ld+json">
 {
@@ -233,33 +255,6 @@
   }
 }
 </script>
-
-
-
-
-  {{ content_for_header }}
-
-  {%- if settings.custom_html_head -%}
-    <!-- CC Custom Head Start -->
-    {{- settings.custom_html_head -}}
-    <!-- CC Custom Head End -->
-  {%- endif -%}
-    <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "p9v8igh2d9");
-  </script>
-
-{% if current_tags %}
-<meta name="robots" content="noindex, follow">
-{% endif %}
-
-  <meta name="google-site-verification" content="hi3HWj9GvDf8he5e3qfpKdEYOgX4tTQK4MPN-XeBBb8" />
-  {% render 'stylux-head' %}
-
   
  
 </head>
