@@ -2049,8 +2049,8 @@ const MainNavigation = class extends HTMLElement {
         const submenu = toggle.nextElementSibling;
     
         if (submenu) {
-          parentItem.classList.remove('navigation__item--open');
-          submenu.style.height = ''; // clear any preset height
+          parentItem.classList.add('navigation__item--open');
+          submenu.style.height = `${submenu.firstElementChild.clientHeight}px`; // clear any preset height
         }
       });
     });
