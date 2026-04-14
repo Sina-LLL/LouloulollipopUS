@@ -103,6 +103,11 @@
       <span class="product-form label js-color-label-prefix">Style: </span>
       <span class="product-form option-selector__label-value js-color-label-value">{{ sibling.metafields.theme.cutline }}</span>
     </div>
+    
+    {%- assign img_sizes = '160px' -%}
+    {%- assign img_widths = '160, 320' -%}
+    {%- assign img_aspect_ratio = 1 -%}
+    {%- assign img_crop_align = settings.swatch_crop_align -%}
 
     {% comment %} Tab Panels {% endcomment %}
 
