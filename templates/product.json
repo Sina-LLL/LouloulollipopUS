@@ -16,13 +16,6 @@
           "type": "title",
           "settings": {}
         },
-        "custom_liquid_W4BPWG": {
-          "type": "custom-liquid",
-          "settings": {
-            "custom_liquid": "{% comment %}\n/snippets/bv-summary.liquid\nBazaarvoice Summary Container\n{% endcomment %}\n{% render 'bv-summary' %}\n{% comment %}\nEnd Bazaarvoice Summary Container\n{% endcomment %}",
-            "show_in_quickbuy": false
-          }
-        },
         "price": {
           "type": "price",
           "settings": {
@@ -146,7 +139,6 @@
       },
       "block_order": [
         "title",
-        "custom_liquid_W4BPWG",
         "price",
         "variant-picker",
         "ethos_exclusive_add_to_cart_UM3MD3",
