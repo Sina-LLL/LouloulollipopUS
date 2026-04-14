@@ -82,7 +82,7 @@
 
               {%- if block.settings.testimonial != blank -%}
                 <div class="testimonial__text">
-                  <h5 class="h5">{{ block.settings.testimonial-title }}</h5>
+                  <h3 class="h5">{{ block.settings.testimonial-title }}</h3>
                   <blockquote class="testimonial__blockquote{% if section.settings.text_caps %} testimonial__blockquote--caps{% endif %} heading-font">{% render 'multiline-text' with block.settings.testimonial %}</blockquote>
                 </div>
               {%- endif -%}
