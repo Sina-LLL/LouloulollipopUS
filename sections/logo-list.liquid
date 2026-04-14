@@ -89,7 +89,7 @@
           {%- comment -%} Duplicate logos for seamless loop {%- endcomment -%}
           {%- for block in section.blocks -%}
             {%- if block.settings.link != blank -%}
-              <a class="logo-list__logo logo-list__logo-{{ forloop.index }} logo-list__link" href="{{ block.settings.link }}" aria-hidden="true">
+              <a class="logo-list__logo logo-list__logo-{{ forloop.index }} logo-list__link" href="{{ block.settings.link }}" aria-hidden="true" tabindex="-1">
             {%- else -%}
               <div class="logo-list__logo logo-list__logo-{{ forloop.index }}" aria-hidden="true">
             {%- endif -%}
