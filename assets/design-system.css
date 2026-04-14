@@ -488,7 +488,7 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
   max-width: 130%;
   max-height: 130%;
   position: absolute;
-  left: -16%;
+  /* left: -16%; */
   top: -16%;
   height: 130%;
 }

@@ -249,6 +249,23 @@
         "full_width": false,
         "show_space": true
       }
+    },
+    "17759719734a0aaf6f": {
+      "type": "apps",
+      "blocks": {
+        "comergent_aeo_ai_seo_faqs_GTGLgw": {
+          "type": "shopify://apps/comergent-aeo-ai-seo/blocks/faqs/019a4daa-4b39-75cd-9fb0-1a15665c4bbe",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "comergent_aeo_ai_seo_faqs_GTGLgw"
+      ],
+      "settings": {
+        "full_width": false,
+        "show_space": true
+      }
     }
   },
   "order": [
@@ -259,6 +276,7 @@
     "related-products",
     "mux_video_embed_h8jKHN",
     "custom_liquid_RMm8G9",
-    "17679080070b08b70b"
+    "17679080070b08b70b",
+    "17759719734a0aaf6f"
   ]
 }
