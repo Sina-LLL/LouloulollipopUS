@@ -98,14 +98,15 @@
           {% if show_image %}
             <div class="testimonial__column testimonial__column--image">
               <figure class="testimonial__image-with-caption">
-                {%- if block.settings.link != blank -%}<a class="testimonial__image-with-caption__link" href="{{ block.settings.link }}">{%- endif -%}
-                <div class="testimonial__image-wrapper">
-                  {% if block.settings.image != blank %}
-                    {%- render 'image' with block.settings.image, size_cols_desktop: 2.5, custom_aspect_ratio: image_aspect_ratio -%}
-                  {% else %}
-                    <div class="placeholder-image" style="padding-top:{{ 100.0 | divided_by: image_aspect_ratio | round }}%">{{ 'image' | placeholder_svg_tag }}</div>
-                  {% endif %}
-                </div>
+                {%- if block.settings.link != blank -%}
+                  <a class="testimonial__image-with-caption__link" href="{{ block.settings.link }}" aria-label="{{ block.settings.image_caption | default: block.settings.author | default: 'View testimonial' | escape }}">
+                {%- endif -%}                <div class="testimonial__image-wrapper">
+                {% if block.settings.image != blank %}
+                  {%- render 'image' with block.settings.image, size_cols_desktop: 2.5, custom_aspect_ratio: image_aspect_ratio -%}
+                {% else %}
+                  <div class="placeholder-image" style="padding-top:{{ 100.0 | divided_by: image_aspect_ratio | round }}%">{{ 'image' | placeholder_svg_tag }}</div>
+                {% endif %}
+                  </div>
 
                 {% if block.settings.image_caption != blank %}
                   <figcaption class="testimonial__image-with-caption__caption{% if block.settings.link != blank %} underline{% endif %}">
