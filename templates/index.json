@@ -334,10 +334,10 @@
         "image": "shopify://shop_images/Gift_Box_1_17a3a045-8191-43e8-be59-df6196f2ae92.jpg",
         "order": true,
         "product_list": [
-          "baby-bath-gift-bundle-smiley-sharks",
-          "newborn-sleep-gift-bundle-safari-jungle",
+          "newborn-sleep-gift-bundle-smiley-sharks",
           "baby-learning-feeding-bundle-seashells",
-          "soothing-development-bundle-bunny"
+          "baby-bath-gift-bundle-mermaids",
+          "soothing-bundle-shark"
         ],
         "button_label": "Shop Bundles",
         "link": "shopify://collections/bundles-and-sets",
