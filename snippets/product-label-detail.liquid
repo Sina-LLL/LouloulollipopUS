@@ -52,6 +52,11 @@
               <span>Limited Edition</span>
             </span>
           {%- endif -%}
+          {%- if personalize-it_text -%}
+            <span class="product-label product-label--personalize">
+              <span>{{ personalize-it_text }}</span>
+            </span>
+          {%- endif -%}
         {%- endif -%}
 
         {% comment %} BOGO label {% endcomment %}
@@ -155,11 +160,7 @@
           <span>BOGO 50% Off</span>
         </span>
       {%- endif -%}
-      {%- if personalize-it_text -%}
-        <span class="product-label product-label--personalize">
-          <span>{{ personalize-it_text }}</span>
-        </span>
-      {%- endif -%}
+      
     {%- endcapture -%}
 
     {%- if all_variants_label_html != blank -%}
