@@ -46,8 +46,8 @@
     {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.2s"' -%}>
 
     <div class="media-gallery__inner{% if section.settings.enable_sticky_columns %} sticky-content-container{% endif %}">
-    {% render 'product-label-detail', product: product, current_variant: current_variant %}
-
+      {% render 'product-label-detail', product: product, current_variant: current_variant %}
+      
       <div class="main-image">
         {%- liquid
           for media in product.media
@@ -257,7 +257,7 @@
               {% render block %}
             </div>
 
-          {% when 'title' %}
+           {% when 'title' %}
              {% comment %}
             /snippets/bv-summary.liquid
             Bazaarvoice Summary Container
@@ -272,7 +272,7 @@
             {% endif %}
             <div class="title-row" {{ block.shopify_attributes }}>
               <h1 class="product-title">
-                {{ product.title }}
+                {{ product.title  }}
               </h1>
             </div>
 
@@ -387,8 +387,7 @@
                     {% endif %}
                   </div>
                 {% endif %}
-              {% render 'product-pr-mentions' %}
-                
+                {% render 'product-pr-mentions' %}
               </div>
               {% if product.metafields.custom.bundle_products != blank %}
                 <div class="bundle-products">
@@ -404,6 +403,7 @@
                   </div>
                 </div>
               {% endif %}
+              
 
             {%- endif -%}
           
@@ -429,8 +429,6 @@
             <div class="product-barcode"{% if current_variant == blank or current_variant.barcode == blank %} hidden{% endif %} {{ block.shopify_attributes }}>
               <span class="product-info-label">{{ 'products.product.barcode' | t }}</span> <span class="product-barcode__value">{% if current_variant %}{{ current_variant.barcode }}{% endif %}</span>
             </div>
-
-
           {% when 'bundle-contents' %}
             {%- assign bundle_products = product.metafields.custom.bundle_products.value -%}
             {%- if bundle_products.size > 0 -%}
@@ -443,7 +441,6 @@
                 </ul>
               </div>
             {%- endif -%}
-
           {% when 'variant-picker' %}
             <div class="input-row variant-picker" {{ block.shopify_attributes }}>
               {%- capture size_chart_icon -%}{%- render 'icon', icon: 'ruler', size: 'small' -%}{%- endcapture -%}
@@ -460,11 +457,10 @@
             </div>
 
           {% when 'buy-buttons' %}
+            {% render 'stylux-pdp' %}
             <buy-buttons class="buy-buttons-row block" {{ block.shopify_attributes }}>
               {% form 'product', product, id: product_form_id, class: 'form js-product-form', data-product-id: product.id %}
                 <input type="hidden" name="id" value="{{ current_variant.id }}" disabled>
-
-
 
                 {% if product.available %}
                   {%- liquid
@@ -510,90 +506,18 @@
                           {%- else -%}
                             {{- 'products.variant.no_stock' | t -}}
                           {%- endif -%}
-                        </button> 
+                        </button>
+                       
                       </div>
-
-                  {% comment %} <div id="mr-add-to-registry-{{ product.id }}" class="shopify-app-block shopify-app-block--mr-add-to-reg">
-                  <button
-                    data-id="btnMrAddtoReg-{{ product.id }}"
-                    class="myregistry-add-button button"
-                    data-product-handle="{{ product.handle }}"
-                    data-sitekey="{{ shop.metafields.myregistry.sitekey.value }}"
-                    data-language="{{ localization.language.iso_code }}"
-                    data-available-languages={{ localization.available_languages | json }}
-                    data-current-variant="{{ product.selected_or_first_available_variant.id }}"
-                    data-config-url="https://cdn.shopify.com/extensions/0199c888-e6d9-7f14-91e7-ca14a5041df3/final-my-registry-69/assets/config.js"
-                    data-root-url="{{ routes.root_url }}"
-                    type="button"
-                    aria-haspopup="dialog"
-                    aria-label="Add to Registry"
-                    onclick="onclick_ev()"
-                  >
-                    <span class="myregistry-add-button-span">
-                      <span class="child-span-registry-button">
-                        <!-- you can swap this SVG for your own icon -->
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-                                <path d="M17.7618 5.42168H16.0018C16.2568 5.03691 16.3933 4.58579 16.3943 4.12419C16.3736 3.45333 16.088 2.81798 15.5999 2.35723C15.1118 1.89649 14.4611 1.6479 13.7902 1.66586C12.9809 1.70493 12.1978 1.96448 11.5254 2.41641C10.853 2.86834 10.3169 3.49548 9.97516 4.23003C9.63331 3.49536 9.09712 2.86813 8.42456 2.41618C7.75201 1.96424 6.96869 1.70478 6.15932 1.66586C5.48837 1.6479 4.83764 1.89649 4.34957 2.35723C3.86151 2.81798 3.57586 3.45333 3.55516 4.12419C3.55599 4.58583 3.69247 5.03699 3.94766 5.42168H2.23849C2.16159 5.42319 2.08576 5.43991 2.01534 5.47084C1.94492 5.50178 1.88132 5.54633 1.82819 5.60194C1.77506 5.65754 1.73344 5.72311 1.70576 5.79486C1.67806 5.86661 1.66483 5.94314 1.66682 6.02003V9.92753C1.66483 10.0044 1.67806 10.0809 1.70576 10.1527C1.73344 10.2244 1.77506 10.29 1.82819 10.3456C1.88132 10.4012 1.94492 10.4458 2.01534 10.4767C2.08576 10.5076 2.16159 10.5243 2.23849 10.5258H2.73349V17.7758C2.73326 17.9278 2.79334 18.0735 2.90052 18.1812C3.00771 18.2888 3.15324 18.3495 3.30516 18.35H16.7143C16.8663 18.3495 17.0118 18.2888 17.119 18.1812C17.2261 18.0735 17.2863 17.9278 17.286 17.7758V10.5258H17.7618C17.8388 10.5243 17.9146 10.5076 17.985 10.4767C18.0555 10.4458 18.119 10.4012 18.1721 10.3456C18.2253 10.29 18.2668 10.2244 18.2946 10.1527C18.3223 10.0809 18.3355 10.0044 18.3335 9.92753V6.02003C18.3355 5.94314 18.3223 5.86661 18.2946 5.79486C18.2668 5.72311 18.2253 5.65754 18.1721 5.60194C18.119 5.54633 18.0555 5.50178 17.985 5.47084C17.9146 5.43991 17.8388 5.42319 17.7618 5.42168ZM17.1901 9.33001H10.5802V6.61834H17.1901V9.33001ZM14.1068 2.82168C14.4612 2.81659 14.8037 2.94989 15.0613 3.19326C15.319 3.43663 15.4717 3.77089 15.4868 4.12501C15.4838 4.46663 15.3474 4.79354 15.1067 5.03596C14.866 5.27838 14.5401 5.41709 14.1985 5.42253H10.936C11.4135 4.38003 12.421 2.82168 14.111 2.82168H14.1068ZM4.46766 4.12084C4.48301 3.76686 4.63574 3.43283 4.89341 3.18963C5.15107 2.94643 5.49337 2.81324 5.84766 2.81836C7.53932 2.81836 8.54349 4.38086 9.02432 5.42253H5.79932C5.62651 5.42449 5.45499 5.39236 5.29462 5.32791C5.13426 5.26348 4.98817 5.16803 4.86477 5.04703C4.74137 4.92603 4.64306 4.78183 4.57549 4.62276C4.50791 4.46368 4.47241 4.29286 4.47099 4.12003L4.46766 4.12084ZM2.80599 6.62084H9.43432V9.33253H2.80932L2.80599 6.62084ZM3.87266 10.5284H9.43432V17.2033H3.87599L3.87266 10.5284ZM16.1393 17.2033H10.5802V10.5242H16.1418L16.1393 17.2033Z" fill="currentColor"></path>
-                            </svg>
-                        <span>Add to Registry</span>
-                      </span>
-                    </span>
-
-                  </button>
-                </div>
-
-                <style>
-  .shopify-app-block--mr-add-to-reg { display:flex; justify-content:center; margin-top:1em; }
-  .myregistry-add-button {
-    width:100%; max-width:280px; padding:.75em 1em;
-    background:#fff!important; color:#8EA7AF!important;
-    border:none; font-size:1em; cursor:pointer; transition:opacity .2s; border-radius: 10px; text-transform: uppercase; letter-spacing: 1px;
-    font-weight: 600;
-  }
-.myregistry-add-button {
-&:hover {
-            border-color: unset !important;
-        }
-}
-
-.shopify-app-block--mr-add-to-reg { 
-  .myregistry-add-button {
-        color: #4f676e !important;
-        background: #fcfcfc !important;
-        border: 1px solid #8ea7af;
-}
-}
-  {% comment %} .myregistry-add-button.opacity { opacity:0; } {% endcomment %}
-  .myregistry-add-button .child-span-registry-button { display:inline-flex; align-items:center; }
-  .myregistry-add-button svg { margin-right:.5em; }
-  #shopify-block-AMVN1a0kvNHQ5RjBZV__advanced_myregistry_functions_add_to_registry_PAyULk {
-    display: none !important;
-}
- #shopify-block-AeXJCbE5TTWVKd2daN__advanced_myregistry_functions_add_to_registry_xEQ3JN {
-    display: none !important;
-} 
-#shopify-block-AZ1pDTGc3b0tCazFRL__advanced_myregistry_functions_add_to_registry_4H4jJ3 {
-    display: none !important;
-}
-#shopify-block-AQXFtbCtwMGNEZXZ3R__advanced_myregistry_functions_add_to_registry_Re4nUd {
-    display: none !important;
-}           
-#shopify-block-AZktBT2Y0K21SM2NvM__advanced_myregistry_functions_add_to_registry_AecqxV {
-    display: none !important;
-}
-#shopify-block-AWDJFbUw3WGd2LzlGL__advanced_myregistry_functions_add_to_registry_yJgEkG {
-    display: none;
-}          
-</style> {% endcomment %}
                       <div class="product-free-shipping__container">
                         <div class="product-free-shipping__messages">
                           {% render 'icon-shipping' %}
                           <p>
-                            Free Shipping for orders over $100+
+                            Free Shipping for orders over $65+
                             <a href="{{ shop.shipping_policy.url }}"class="shipping-info-trigger">Shipping</a>
                           </p>
                           <div class="shipping-info-tooltip">
-                            All CA orders over $100 ship for free!<br>$12 standard shipping in BC, $18 rest of Canada for orders under $100. If you need expedited shipping, the shipping fee will be calculated at checkout.
+                            All US orders over $65 ship for free!<br>Shipping is $7 for orders under $65. If you need expedited shipping, the shipping fee will be calculated at checkout.
                           </div>
                         </div>
                         <div class="wishlist--container">
@@ -840,7 +764,7 @@
 
           {% when 'divider' %}
             <hr {% unless block.settings.show_in_quickbuy %}class="not-in-quickbuy"{% endunless %} {{ block.shopify_attributes }}>
-          
+
           {% when 'swatch_highlight' %}
             {% assign swatch_name = product.metafields.theme.cutline %}
             {% assign swatch_handle = swatch_name | handleize %}
@@ -863,6 +787,7 @@
                 </div>
               {% endif %}
             </div>
+
           {% when 'custom-option' %}
             {%- if block.settings.label != blank -%}
               {%- liquid
@@ -1192,7 +1117,7 @@
   {% endif %}
 {% endif %}
 
-                        
+                    
 <script>
 
   // Shipping hover
@@ -1209,6 +1134,8 @@
   });
 });
 </script>
+
+
 {% schema %}
 {
   "name": "Custom Product pages",
@@ -1582,11 +1509,6 @@
     }
   ],
   "blocks": [
-    {
-      "type": "bundle-contents",
-      "name": "Bundle Contents",
-      "limit": 1
-    },
     {
       "type": "@app"
     },
