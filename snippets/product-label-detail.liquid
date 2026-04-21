@@ -78,7 +78,7 @@
               {%- assign savings = total_regular_price | minus: product.price -%}
               {%- assign percent_saved = savings | times: 100 | divided_by: total_regular_price -%}
               <span class="product-label product-label--sale">
-                <span>Save {{ percent_saved }}%</span>
+                <span>Bundle & {{ percent_saved }}%</span>
               </span>
             {%- endif -%}
           {%- endif -%}
