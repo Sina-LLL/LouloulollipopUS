@@ -23,6 +23,10 @@
             "enable_product_reviews_by_price": true
           }
         },
+        "bundle_contents_3tpkxW": {
+          "type": "bundle-contents",
+          "settings": {}
+        },
         "variant-picker": {
           "type": "variant-picker",
           "settings": {
@@ -141,6 +145,7 @@
       "block_order": [
         "title",
         "price",
+        "bundle_contents_3tpkxW",
         "variant-picker",
         "ethos_exclusive_add_to_cart_UM3MD3",
         "buy-buttons",
