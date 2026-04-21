@@ -33,7 +33,7 @@
 
   {%- for sibling in sibs_collection.products -%}
     {%- unless sibling.tags contains 'hidden' -%}
-      {%- if sibling.tags contains 'new' or sibling.tags contains 'seasonal'-%}
+      {%- if sibling.tags contains 'new' or sibling.tags contains 'Seasonal'-%}
         {%- assign has_new_prints = true -%}
       {%- endif -%}
       {%- if sibling.tags contains 'core' -%}
@@ -56,44 +56,60 @@
     {%- assign show_all_tab = true -%}
   {%- endif -%}
 
+  {%- comment %} Determine which tab the current product belongs to {%- endcomment -%}
+  {%- assign current_tab = '' -%}
+  {%- if product.tags contains 'new' or product.tags contains 'Seasonal' -%}
+    {%- assign current_tab = 'new' -%}
+  {%- elsif product.tags contains 'core' -%}
+    {%- assign current_tab = 'core' -%}
+  {%- elsif product.tags contains 'sale' -%}
+    {%- assign current_tab = 'sale' -%}
+  {%- else -%}
+    {%- if has_new_prints -%}{%- assign current_tab = 'new' -%}
+    {%- elsif has_core_prints -%}{%- assign current_tab = 'core' -%}
+    {%- elsif has_sale_prints -%}{%- assign current_tab = 'sale' -%}
+    {%- endif -%}
+  {%- endif -%}
+
   <div class="sibling-tabs" data-sibling-tabs>
 
     {% comment %} Tab Buttons {% endcomment %}
+     
     <div class="sibling-tabs__nav" role="tablist">
-      {%- if show_all_tab -%}
-        <button
-          class="sibling-tabs__tab is-active"
-          role="tab"
-          aria-selected="true"
-          data-tab="all">
-          All
-        </button>
-      {%- endif -%}
       {%- if has_new_prints -%}
         <button
-          class="sibling-tabs__tab{% unless show_all_tab %} is-active{% endunless %}"
+          class="sibling-tabs__tab{% if current_tab == 'new' %} is-active{% endif %}"
           role="tab"
-          aria-selected="{% unless show_all_tab %}true{% else %}false{% endunless %}"
+          aria-selected="{% if current_tab == 'new' %}true{% else %}false{% endif %}"
           data-tab="new">
           Seasonal
         </button>
       {%- endif -%}
       {%- if has_core_prints -%}
         <button
-          class="sibling-tabs__tab{% unless show_all_tab or has_new_prints %} is-active{% endunless %}"
+          class="sibling-tabs__tab{% if current_tab == 'core' %} is-active{% endif %}"
           role="tab"
-          aria-selected="{% unless show_all_tab or has_new_prints %}true{% else %}false{% endunless %}"
+          aria-selected="{% if current_tab == 'core' %}true{% else %}false{% endif %}"
           data-tab="core">
           Core
         </button>
       {%- endif -%}
       {%- if has_sale_prints -%}
         <button
-          class="sibling-tabs__tab{% unless show_all_tab or has_new_prints or has_core_prints %} is-active{% endunless %}"
+          class="sibling-tabs__tab{% if current_tab == 'sale' %} is-active{% endif %}"
           role="tab"
-          aria-selected="{% unless show_all_tab or has_new_prints or has_core_prints %}true{% else %}false{% endunless %}"
+          aria-selected="{% if current_tab == 'sale' %}true{% else %}false{% endif %}"
           data-tab="sale">
           Sale
+        </button>
+      {%- endif -%}
+      {%- if show_all_tab -%}
+        <button
+          class="sibling-tabs__tab"
+          role="tab"
+          aria-selected="false"
+          data-tab="all">
+          All
         </button>
       {%- endif -%}
     </div>
@@ -103,6 +119,7 @@
       <span class="product-form label js-color-label-prefix">Style: </span>
       <span class="product-form option-selector__label-value js-color-label-value">{{ sibling.metafields.theme.cutline }}</span>
     </div>
+    
     {%- assign img_sizes = '160px' -%}
     {%- assign img_widths = '160, 320' -%}
     {%- assign img_aspect_ratio = 1 -%}
@@ -110,7 +127,7 @@
     {% comment %} Tab Panels {% endcomment %}
 
     {%- if show_all_tab -%}
-      <div class="sibling-tabs__panel is-active" data-panel="all" role="tabpanel">
+      <div class="sibling-tabs__panel" data-panel="all" role="tabpanel">
         <div class="option-selector__btns variant-grid-compact">
 
           {% comment %} 1: New — in stock {% endcomment %}
@@ -211,9 +228,10 @@
       </div>
     {%- endif -%}
 
-    {%- if has_new_prints -%}
-      <div class="sibling-tabs__panel{% unless show_all_tab %} is-active{% endunless %}" data-panel="new" role="tabpanel">
+   {%- if has_new_prints -%}
+      <div class="sibling-tabs__panel{% if current_tab == 'new' %} is-active{% endif %}" data-panel="new" role="tabpanel">
         <div class="option-selector__btns variant-grid-compact">
+
           {% comment %} Seasonal Tab - New prints {% endcomment %}
           {%- for sibling in sibs_collection.products -%}
             {%- unless sibling.tags contains 'hidden' -%}
@@ -240,7 +258,7 @@
           {% comment %} Seasonal Tab - Seasonal prints (not Core) {% endcomment %}
           {%- for sibling in sibs_collection.products -%}
             {%- unless sibling.tags contains 'hidden' -%}
-              {%- if sibling.tags contains 'seasonal' and sibling.available-%}
+              {%- if sibling.tags contains 'Seasonal' and sibling.available-%}
                 <a href="{{ sibling.url }}"
                   class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}"
                   data-color="{{ sibling.metafields.theme.cutline }}"
@@ -263,7 +281,7 @@
           {%- for sibling in sibs_collection.products -%}
             {%- unless sibling.tags contains 'hidden' and sibling.available -%}
               {%- unless sibling.available -%}
-                {%- if sibling.tags contains 'seasonal' or sibling.tags contains 'new'-%}
+                {%- if sibling.tags contains 'Seasonal' or sibling.tags contains 'new'-%}
                   <a href="{{ sibling.url }}"
                     class="opt-label opt-label--image sold-out {% if sibling.handle == product.handle %}is-active{% endif %}"
                     data-color="{{ sibling.metafields.theme.cutline }}"
@@ -288,7 +306,7 @@
     {%- endif -%}
 
     {%- if has_core_prints -%}
-      <div class="sibling-tabs__panel{% unless show_all_tab or has_new_prints %} is-active{% endunless %}" data-panel="core" role="tabpanel">
+      <div class="sibling-tabs__panel{% if current_tab == 'core' %} is-active{% endif %}" data-panel="core" role="tabpanel">
         <div class="option-selector__btns variant-grid-compact">
 
           {% comment %} Core Tab - Core prints {% endcomment %}
@@ -344,7 +362,7 @@
     {%- endif -%}
 
     {%- if has_sale_prints -%}
-      <div class="sibling-tabs__panel{% unless show_all_tab or has_new_prints or has_core_prints %} is-active{% endunless %}" data-panel="sale" role="tabpanel">
+      <div class="sibling-tabs__panel{% if current_tab == 'sale' %} is-active{% endif %}" data-panel="sale" role="tabpanel">
         <div class="option-selector__btns variant-grid-compact">
           {% comment %} 3: Sale — in stock {% endcomment %}
           {%- for sibling in sibs_collection.products -%}
