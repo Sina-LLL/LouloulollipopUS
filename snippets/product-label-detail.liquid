@@ -123,7 +123,7 @@
     {%- endif -%}
   {%- endfor -%}
 
-  {%- if current_variant == false and all_variants_label_html != blank -%}
+  {%- unless current_variant and all_variants_label_html == blank -%}
     <script type="text/template" data-variant="">
       <div class="product-label-container">
         {{- all_variants_label_html -}}
@@ -132,5 +132,5 @@
     <div class="product-label-container">
       {{- all_variants_label_html -}}
     </div>
-  {%- endif -%}
+  {%- endunless -%}
 </variant-content>
