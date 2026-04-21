@@ -25,6 +25,9 @@
               if product.tags contains 'New' or product.tags contains 'new'
                 assign new_label_text = 'products.product.new' | t
               endif
+              if product.tags contains 'personalize-it' or product.tags contains 'Personalize-It'
+                assign personalize-it_text = 'Personalize It'
+              endif
             else
               for collection in product.collections
                 assign split_collection_handle = collection.handle | split: '-'
@@ -32,6 +35,7 @@
                   assign new_label_text = 'products.product.new' | t
                   break
                 endif
+                
               endfor
             endif
           -%}
@@ -149,6 +153,11 @@
       {%- if product.tags contains 'BOGO50' or product.tags contains 'bogo50' -%}
         <span class="product-label product-label--sale">
           <span>BOGO 50% Off</span>
+        </span>
+      {%- endif -%}
+      {%- if personalize-it_text -%}
+        <span class="product-label product-label--personalize">
+          <span>{{ personalize-it_text }}</span>
         </span>
       {%- endif -%}
     {%- endcapture -%}
