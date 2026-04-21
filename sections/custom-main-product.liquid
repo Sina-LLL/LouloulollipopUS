@@ -429,7 +429,18 @@
             <div class="product-barcode"{% if current_variant == blank or current_variant.barcode == blank %} hidden{% endif %} {{ block.shopify_attributes }}>
               <span class="product-info-label">{{ 'products.product.barcode' | t }}</span> <span class="product-barcode__value">{% if current_variant %}{{ current_variant.barcode }}{% endif %}</span>
             </div>
-
+          {% when 'bundle-contents' %}
+            {%- assign bundle_products = product.metafields.custom.bundle_products.value -%}
+            {%- if bundle_products.size > 0 -%}
+              <div class="bundle-contents lightly-spaced-row" {{ block.shopify_attributes }}>
+                <p class="label" style="margin-bottom: 6px;">What's included:</p>
+                <ul class="bundle-contents__list" style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 3px;">
+                  {%- for bp in bundle_products -%}
+                    <li style="font-size: 0.9em; color: #1d1d1d;">— {{ bp.title | split: ' - ' | first }}</li>
+                  {%- endfor -%}
+                </ul>
+              </div>
+            {%- endif -%}
           {% when 'variant-picker' %}
             <div class="input-row variant-picker" {{ block.shopify_attributes }}>
               {%- capture size_chart_icon -%}{%- render 'icon', icon: 'ruler', size: 'small' -%}{%- endcapture -%}
@@ -1498,6 +1509,11 @@
     }
   ],
   "blocks": [
+    {
+      "type": "bundle-contents",
+      "name": "Bundle Contents",
+      "limit": 1
+    },
     {
       "type": "@app"
     },
