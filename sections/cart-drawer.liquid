@@ -459,7 +459,6 @@
         -%}
         {%- if cross_sell_product_list or cross_sell_auto -%}
           <div class="cart-item-upsells">
-            {% render 'stylux-cart' %}
             <cc-cart-cross-sell{% if cross_sell_auto %} data-from="{{ routes.product_recommendations_url }}?section_id=mini-related-products&limit=8&product_id={{ cart.items.first.product.id }}"{% endif %}>
               <carousel-slider class="carousel block collection-slider cart-drawer__content-item use-color-scheme use-color-scheme--{{ section.settings.croll_sell_color_scheme }}">
                 <div class="opposing-items opposing-items--valign-base very-lightly-spaced-row">
@@ -470,7 +469,7 @@
                   </div>
                 </div>
                 <div class="slider slider--no-scrollbar slider--edge-peek">
-                  <ul class="slider__grid product-grid product-grid--carousel product-grid--per-row-3 product-grid--per-row-mob-2">
+                  <ul class="slider__grid product-grid product-grid--carousel product-grid--per-row-2 product-grid--per-row-mob-2">
                     {%- if cross_sell_product_list -%}
                       {%- liquid
                         if settings.prod_thumb_shape == 'portrait-23'
@@ -544,8 +543,21 @@
                 {{- cart.total_price | money -}}
               {%- endif -%}
             </span>
+           
           </div>
-
+          {%- if section.settings.show_tax_and_shipping -%}
+              <div class="cart-policies rte">
+                {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
+                  {{- 'cart.general.taxes_included_shipping_at_checkout_html' | t: link: shop.shipping_policy.url -}}
+                {%- elsif cart.taxes_included -%}
+                  {{- 'cart.general.taxes_included_shipping_at_checkout' | t -}}
+                {%- elsif shop.shipping_policy.body != blank -%}
+                  {{- 'cart.general.taxes_and_shipping_at_checkout_html' | t: link: shop.shipping_policy.url -}}
+                {%- else -%}
+                  {{- 'cart.general.taxes_and_shipping_at_checkout' | t -}}
+                {%- endif -%}
+              </div>
+            {%- endif -%}
 
 
 <!-- Add join from checkout ethos extension -->
@@ -598,7 +610,7 @@
       background: {{ bg_col }};
       position: relative;
       box-sizing: border-box;
-      margin: 0 0 12px 0;
+      margin: 8px 0 4px 0;
       padding: {{ padding_v }}px {{ padding_h }}px;
       border-radius: 6px;
       overflow: hidden;
@@ -813,42 +825,57 @@
 
           
 
-          <div class="lightly-spaced-row">
-            {%- if section.settings.show_tax_and_shipping -%}
-              <div class="cart-policies rte">
-                {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
-                  {{- 'cart.general.taxes_included_shipping_at_checkout_html' | t: link: shop.shipping_policy.url -}}
-                {%- elsif cart.taxes_included -%}
-                  {{- 'cart.general.taxes_included_shipping_at_checkout' | t -}}
-                {%- elsif shop.shipping_policy.body != blank -%}
-                  {{- 'cart.general.taxes_and_shipping_at_checkout_html' | t: link: shop.shipping_policy.url -}}
-                {%- else -%}
-                  {{- 'cart.general.taxes_and_shipping_at_checkout' | t -}}
-                {%- endif -%}
-              </div>
-            {%- endif -%}
+      <div class="lightly-spaced-row" style="margin-bottom: 4px;">
+          
 
-            {% if section.settings.show_order_note %}
-              <div class="cart-note block lightly-spaced-row">  
-                <label>
-                  <input type="checkbox" id="GiftCheckbox" />
-                    Is this a gift?
-                </label>
-              </div>
-              <div class="cart-gift-message lightly-spaced-row cart-note block" id="GiftMessageWrapper" style="display: none;">
-                <label class="block" for="GiftMessage">Gift Message</label>
-                <textarea id="GiftMessage" name="attributes[GiftMessage]"></textarea>
-              </div>  
-              <toggle-target id="CartDrawerNoteToggle" role="button" tabindex="0" class="toggle-target-toggler--is-hidden link underline" data-toggle-target=".cart-drawer__note">{{ 'cart.note.label' | t }}</toggle-target>
+        {% if section.settings.show_order_note %}
+          
+          <div class="cart-note block">
+            <label>
+              <input type="checkbox" id="GiftCheckbox" {% if cart.attributes.is_gift == 'true' %}checked{% endif %} />
+              Is this a gift?
+            </label>
+          </div>
+          <div class="cart-gift-message lightly-spaced-row cart-note block" id="GiftMessageWrapper" style="display: {% if cart.attributes.is_gift == 'true' %}block{% else %}none{% endif %};">
+            <textarea id="GiftMessage" placeholder="Add a gift message...">{{ cart.attributes.GiftMessage }}</textarea>
+          </div>
+          <script>
+            (function() {
+              var checkbox = document.getElementById('GiftCheckbox');
+              var wrapper = document.getElementById('GiftMessageWrapper');
+              var textarea = document.getElementById('GiftMessage');
+              if (!checkbox || checkbox.dataset.giftListenerAttached) return;
+              checkbox.dataset.giftListenerAttached = 'true';
+              checkbox.addEventListener('change', function() {
+                wrapper.style.display = this.checked ? 'block' : 'none';
+                saveGiftToCart(this.checked, textarea ? textarea.value : '');
+              });
+              if (textarea) {
+                textarea.addEventListener('change', function() {
+                  saveGiftToCart(checkbox.checked, this.value);
+                });
+              }
+              function saveGiftToCart(isGift, message) {
+                fetch('/cart/update.js', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ attributes: { is_gift: isGift ? 'true' : '', GiftMessage: message } })
+                });
+              }
+            })();
+          </script>
+
+              {% comment %} <toggle-target id="CartDrawerNoteToggle" role="button" tabindex="0" class="toggle-target-toggler--is-hidden link underline" data-toggle-target=".cart-drawer__note">{{ 'cart.note.label' | t }}</toggle-target>
               <div class="cart-drawer__note toggle-target toggle-target--hidden">
                 <cart-note class="block toggle-target-container">
                   <textarea name="note" aria-labelledby="CartDrawerNoteToggle">{{ cart.note }}</textarea>
                 </cart-note>
-              </div>
+              </div> {% endcomment %}
             {% endif %}
+            
           </div>
         {% endif %}
-      </div>
+      </div>  
 
       {% if section.settings.cart_terms_page != blank %}
         <terms-agreement class="terms-agreement rte">
@@ -1328,7 +1355,7 @@
       "type": "text",
       "id": "cross_sell_title",
       "label": "Heading",
-      "default": "You May Also like"
+      "default": "You may like"
     },
     {
       "type": "product_list",
