@@ -881,10 +881,21 @@ label.filter-group__item.filter-group__item--active:before{
 h4.text-column__title {
     font-size: 20px;
 }
-/* Cart Drawr */
-.subtotal.h4.heading-font.opposing-items,div#CartDrawerModal-Title{
-  font-size: 1.25rem;
+/* Cart Drawer */
+.cart-drawer__footer .h4, .cart-drawer__title.h4{
+  font-size: 1.125rem;
+
 }
+.cart-drawer__footer .h4{
+  margin-bottom: 0;
+}
+.cart-drawer__header{
+  margin-bottom:4px;
+}
+.free-shipping-bar{
+  margin-top:4px;
+}
+
 /* Cart page*/
 #cartform h2.subtotal{
   margin: 0;
