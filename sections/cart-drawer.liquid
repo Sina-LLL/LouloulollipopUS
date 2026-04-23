@@ -839,32 +839,6 @@
           <div class="cart-gift-message lightly-spaced-row cart-note block" id="GiftMessageWrapper" style="display: {% if cart.attributes.is_gift == 'true' %}block{% else %}none{% endif %};">
             <textarea id="GiftMessage" placeholder="Add a gift message...">{{ cart.attributes.GiftMessage }}</textarea>
           </div>
-          <script>
-            (function() {
-              var checkbox = document.getElementById('GiftCheckbox');
-              var wrapper = document.getElementById('GiftMessageWrapper');
-              var textarea = document.getElementById('GiftMessage');
-              if (!checkbox || checkbox.dataset.giftListenerAttached) return;
-              checkbox.dataset.giftListenerAttached = 'true';
-              checkbox.addEventListener('change', function() {
-                wrapper.style.display = this.checked ? 'block' : 'none';
-                saveGiftToCart(this.checked, textarea ? textarea.value : '');
-              });
-              if (textarea) {
-                textarea.addEventListener('change', function() {
-                  saveGiftToCart(checkbox.checked, this.value);
-                });
-              }
-              function saveGiftToCart(isGift, message) {
-                fetch('/cart/update.js', {
-                  method: 'POST',
-                  headers: { 'Content-Type': 'application/json' },
-                  body: JSON.stringify({ attributes: { is_gift: isGift ? 'true' : '', GiftMessage: message } })
-                });
-              }
-            })();
-          </script>
-
               {% comment %} <toggle-target id="CartDrawerNoteToggle" role="button" tabindex="0" class="toggle-target-toggler--is-hidden link underline" data-toggle-target=".cart-drawer__note">{{ 'cart.note.label' | t }}</toggle-target>
               <div class="cart-drawer__note toggle-target toggle-target--hidden">
                 <cart-note class="block toggle-target-container">
@@ -933,6 +907,29 @@
       </div>
     </div>
   </cart-form>
+<script>
+  (function() {
+    if (window._giftHandlerInit) return;
+    window._giftHandlerInit = true;
+    document.addEventListener('change', function(e) {
+      if (e.target && e.target.id === 'GiftCheckbox') {
+        var wrapper = document.getElementById('GiftMessageWrapper');
+        if (wrapper) wrapper.style.display = e.target.checked ? 'block' : 'none';
+        saveGiftToCart(e.target.checked, (document.getElementById('GiftMessage') || {}).value || '');
+      } else if (e.target && e.target.id === 'GiftMessage') {
+        var cb = document.getElementById('GiftCheckbox');
+        if (cb) saveGiftToCart(cb.checked, e.target.value);
+      }
+    });
+    function saveGiftToCart(isGift, message) {
+      fetch('/cart/update.js', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ attributes: { is_gift: isGift ? 'true' : '', GiftMessage: message } })
+      });
+    }
+  })();
+</script>
 </cart-drawer>
 {%- endunless -%}
 
