@@ -54,23 +54,6 @@
         "accessibility_info": ""
       }
     },
-    "featured_collection_BHJeFJ": {
-      "type": "featured-collection",
-      "name": "Featured collection",
-      "settings": {
-        "title": "",
-        "text": "",
-        "collection": "spring-delights",
-        "show_vendor": false,
-        "enable_carousel": true,
-        "grid": 4,
-        "rows": 1,
-        "color_scheme": "default",
-        "show_view_all": true,
-        "full_width": false,
-        "text_alignment": "start"
-      }
-    },
     "logo_list_kYmwNX": {
       "type": "logo-list",
       "blocks": {
@@ -190,6 +173,23 @@
         "color_scheme": "default"
       }
     },
+    "featured_collection_RixHbV": {
+      "type": "featured-collection",
+      "name": "Best Sellers Carousel",
+      "settings": {
+        "title": "Most Loved by Parents",
+        "text": "",
+        "collection": "best-sellers",
+        "show_vendor": false,
+        "enable_carousel": false,
+        "grid": 4,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "center"
+      }
+    },
     "collection_list_8FVzbz": {
       "type": "collection-list",
       "blocks": {
@@ -259,21 +259,24 @@
         "coll_button_style": "primary"
       }
     },
-    "featured_collection_RixHbV": {
-      "type": "featured-collection",
-      "name": "Best Sellers Carousel",
+    "custom_product_highlight_nQBDJ8": {
+      "type": "custom-product-highlight",
+      "name": "Highlighted Collection",
       "settings": {
-        "title": "Most Loved by Parents",
-        "text": "",
-        "collection": "best-sellers",
-        "show_vendor": false,
-        "enable_carousel": false,
-        "grid": 4,
-        "rows": 1,
-        "color_scheme": "default",
-        "show_view_all": true,
-        "full_width": false,
-        "text_alignment": "center"
+        "title": "Gift-able Bundles",
+        "text": "<p>Perfectly paired bundles for easy gifting</p>",
+        "image": "shopify://shop_images/Gift_Box_1_17a3a045-8191-43e8-be59-df6196f2ae92.jpg",
+        "order": true,
+        "product_list": [
+          "newborn-sleep-gift-bundle-smiley-sharks",
+          "baby-learning-feeding-bundle-seashells",
+          "teething-development-bundle-bunny",
+          "baby-sleep-system-bundle-bears-on-bikes"
+        ],
+        "button_label": "Shop Bundles",
+        "link": "shopify://collections/bundles-and-sets",
+        "button_style": "primary",
+        "color_scheme": "default"
       }
     },
     "shop_the_look_ifipFt": {
@@ -323,26 +326,6 @@
         "text_alignment": "top left",
         "mobile_overlay_over": false,
         "overlay_style": "shadow"
-      }
-    },
-    "custom_product_highlight_nQBDJ8": {
-      "type": "custom-product-highlight",
-      "name": "Highlighted Collection",
-      "settings": {
-        "title": "Gift-able Bundles",
-        "text": "<p>Perfectly paired bundles for easy gifting</p>",
-        "image": "shopify://shop_images/Gift_Box_1_17a3a045-8191-43e8-be59-df6196f2ae92.jpg",
-        "order": true,
-        "product_list": [
-          "newborn-sleep-gift-bundle-smiley-sharks",
-          "baby-learning-feeding-bundle-seashells",
-          "baby-bath-gift-bundle-mermaids",
-          "soothing-bundle-shark"
-        ],
-        "button_label": "Shop Bundles",
-        "link": "shopify://collections/bundles-and-sets",
-        "button_style": "primary",
-        "color_scheme": "default"
       }
     },
     "testimonials_VG4FtN": {
@@ -1091,12 +1074,11 @@
   },
   "order": [
     "slideshow_dwrJFr",
-    "featured_collection_BHJeFJ",
     "logo_list_kYmwNX",
-    "collection_list_8FVzbz",
     "featured_collection_RixHbV",
-    "shop_the_look_ifipFt",
+    "collection_list_8FVzbz",
     "custom_product_highlight_nQBDJ8",
+    "shop_the_look_ifipFt",
     "testimonials_VG4FtN",
     "collection_list_pBrVBP",
     "featured_collection_6CcnbR",
