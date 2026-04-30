@@ -10,6 +10,15 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}" dir="{{ lang_dir }}">
 <head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GT-WPDX2DTW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'GT-WPDX2DTW');
+</script>
 <meta name="google-site-verification" content="google9c60a402ae102b9f.html"
 {% assign canonical_path = canonical_url | remove: shop.url %}
 
