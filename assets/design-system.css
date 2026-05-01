@@ -633,7 +633,10 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
   margin: 0;
   font-size: 1.5rem;
 }
+svg.icon.feather.feather-chevron-right path, svg.icon.feather.feather-chevron-left path{
+  stroke:#1d1d1d;
 
+}
 .accordion-toggle .chevron {
   font-size: 28px;
   line-height: 1;
