@@ -633,7 +633,7 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
   margin: 0;
   font-size: 1.5rem;
 }
-[class*="floating"] svg * {
+[class*="floating"] svg path{
   stroke:#1d1d1d !important;
 
 }
