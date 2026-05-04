@@ -633,7 +633,7 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
   margin: 0;
   font-size: 1.5rem;
 }
-svg.icon.feather.feather-chevron-right path, svg.icon.feather.feather-chevron-left path{
+.slider-nav__btn path{
   stroke:#1d1d1d;
 
 }
