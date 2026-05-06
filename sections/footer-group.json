@@ -155,14 +155,6 @@
             "separator": "–",
             "text": "Good Housekeeping 2025 Parenting Award — Sleep Bag."
           }
-        },
-        "list_item_TgCE8a": {
-          "type": "list_item",
-          "settings": {
-            "label": "Social Mission",
-            "separator": "–",
-            "text": "Donates 1% of every purchase to a non-profit of the customer's choice."
-          }
         }
       },
       "block_order": [
@@ -170,8 +162,7 @@
         "list_item_BJEWL9",
         "list_item_3Gjw8w",
         "list_item_nnLXAL",
-        "list_item_DQB7rP",
-        "list_item_TgCE8a"
+        "list_item_DQB7rP"
       ],
       "name": "Brand Info List",
       "settings": {
