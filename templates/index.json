@@ -9,25 +9,25 @@
  */
 {
   "sections": {
-    "slideshow_dwrJFr": {
+    "slideshow_JU4LXr": {
       "type": "slideshow",
       "blocks": {
-        "image_Qfbcc9": {
+        "image_TKJkRj": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Lemon-Hero.png",
-            "mobile_image": "shopify://shop_images/Mobile-Hero_Lemon.png",
+            "image": "shopify://shop_images/Desktop_-_Hero.png",
+            "mobile_image": "shopify://shop_images/Mobile_-_Hero.png",
             "slide_link": "",
             "subheading": "",
-            "title": "Spring Delights",
+            "title": "Premium Sleep Bags",
             "heading_max_width": 12,
             "title_size": 80,
             "title_size_mobile": 34,
             "use_h1": true,
-            "text": "<p><strong>A celebration of all things fresh and feel-good.</strong></p>",
+            "text": "<p><strong>Trusted by Canadian parents for safe, restful sleep.</strong></p>",
             "enlarge_text": true,
-            "button_label_1": "Step Into Spring",
-            "button_url_1": "shopify://collections/spring-delights",
+            "button_label_1": "Shop Sleep Solutions",
+            "button_url_1": "shopify://collections/sleep-bags",
             "button_tag_1": "",
             "button_label_2": "",
             "button_url_2": "",
@@ -37,7 +37,7 @@
         }
       },
       "block_order": [
-        "image_Qfbcc9"
+        "image_TKJkRj"
       ],
       "name": "Slideshow",
       "settings": {
@@ -54,6 +54,26 @@
         "accessibility_info": ""
       }
     },
+    "custom_product_highlight_KJfQCU": {
+      "type": "custom-product-highlight",
+      "name": "Highlighted Collection",
+      "settings": {
+        "title": "Gift-able Bundles",
+        "text": "<p>Complete systems. Everything parents actually need.</p>",
+        "image": "shopify://shop_images/Gift_Box_1_17a3a045-8191-43e8-be59-df6196f2ae92.jpg",
+        "order": true,
+        "product_list": [
+          "newborn-sleep-starter-bundle-safari-jungle",
+          "wild-teether-bundle-llama-bunny",
+          "baby-learning-feeding-bundle-bailey-bunny",
+          "baby-sleep-system-bundle-magical-dragons"
+        ],
+        "button_label": "Shop Bundles",
+        "link": "shopify://collections/bundles-and-sets",
+        "button_style": "primary",
+        "color_scheme": "default"
+      }
+    },
     "logo_list_kYmwNX": {
       "type": "logo-list",
       "blocks": {
@@ -66,30 +86,12 @@
             "title": ""
           }
         },
-        "logo_RidJwp": {
+        "logo_mQKag7": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/Forbes_Logo.webp",
-            "image_width": 160,
-            "link": "https://www.forbes.com/sites/forbes-personal-shopper/article/best-baby-clothes-brands/",
-            "title": ""
-          }
-        },
-        "logo_KwwATQ": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/BabyList-Logo.png",
-            "image_width": 160,
-            "link": "https://www.babylist.com/store/b/loulou-lollipop/919",
-            "title": ""
-          }
-        },
-        "logo_yLUyRU": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/placeholder-buzzfeed-logo.png",
-            "image_width": 160,
-            "link": "https://www.buzzfeed.com/bekoconnell/traveling-with-kids-easier?origin=web-hf",
+            "image": "shopify://shop_images/the-everymom-logo.png",
+            "image_width": 200,
+            "link": "https://theeverymom.com/registry-awards/",
             "title": ""
           }
         },
@@ -97,17 +99,17 @@
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/Parents_idf45riGiK_0.png",
-            "image_width": 190,
+            "image_width": 150,
             "link": "https://www.parents.com/best-for-baby-awards-2025-feeding-11719843",
             "title": ""
           }
         },
-        "logo_CGcCUn": {
+        "logo_KwwATQ": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/Strategist.webp",
-            "image_width": 160,
-            "link": "https://nymag.com/strategist/article/best-gifts-toys-for-a-1-year-old-holiday-2025.html",
+            "image": "shopify://shop_images/BabyList-Logo.png",
+            "image_width": 150,
+            "link": "https://www.babylist.com/store/b/loulou-lollipop/919",
             "title": ""
           }
         },
@@ -115,52 +117,18 @@
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/tinybeans-Logo.png",
-            "image_width": 160,
-            "link": "",
-            "title": ""
-          }
-        },
-        "logo_mQKag7": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/the-everymom-logo.png",
-            "image_width": 190,
-            "link": "https://theeverymom.com/registry-awards/",
-            "title": ""
-          }
-        },
-        "logo_j4Arc7": {
-          "type": "logo",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Momtastic-Logo.png",
-            "image_width": 160,
-            "link": "",
-            "title": ""
-          }
-        },
-        "logo_i3itWL": {
-          "type": "logo",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/8_what_to_expect_226b9ac0-b823-4eff-ba1a-75692a46e19f.png",
-            "image_width": 160,
-            "link": "",
+            "image_width": 150,
+            "link": "https://tinybeans.com/best-gifts-for-newborns/",
             "title": ""
           }
         }
       },
       "block_order": [
         "logo_Pb9irB",
-        "logo_RidJwp",
-        "logo_KwwATQ",
-        "logo_yLUyRU",
-        "logo_3E4WaJ",
-        "logo_CGcCUn",
-        "logo_m3DkDJ",
         "logo_mQKag7",
-        "logo_j4Arc7",
-        "logo_i3itWL"
+        "logo_3E4WaJ",
+        "logo_KwwATQ",
+        "logo_m3DkDJ"
       ],
       "custom_css": [
         ".fully-spaced-row--medium {margin-top: 2em;}"
@@ -168,62 +136,43 @@
       "settings": {
         "title": "As Seen In",
         "enable_carousel": true,
-        "carousel_speed": 35,
+        "carousel_speed": 30,
         "image_opacity": 100,
         "color_scheme": "default"
       }
     },
-    "featured_collection_RixHbV": {
-      "type": "featured-collection",
-      "name": "Best Sellers Carousel",
-      "settings": {
-        "title": "Most Loved by Parents",
-        "text": "",
-        "collection": "best-sellers",
-        "show_vendor": false,
-        "enable_carousel": false,
-        "grid": 4,
-        "rows": 1,
-        "color_scheme": "default",
-        "show_view_all": true,
-        "full_width": false,
-        "text_alignment": "center"
-      }
-    },
-    "collection_list_8FVzbz": {
+    "collection_list_VHgK7g": {
       "type": "collection-list",
       "blocks": {
-        "collection_9jxwmU": {
+        "collection_yYMgCY": {
           "type": "collection",
           "settings": {
-            "collection": "sleep-swaddle",
+            "collection": "sleep-bags",
             "tag": "",
-            "image": "shopify://shop_images/Sleep_Bag_1.0_Tog_-_Hedgehogs_caea21cf-7155-4cb7-98d8-32f859c1ed89.jpg",
-            "subheading": "Sleep & Bedding",
+            "subheading": "Sleep Bags",
             "button_label": ""
           }
         },
-        "collection_bxyhtA": {
+        "collection_hz9HMV": {
           "type": "collection",
           "settings": {
             "collection": "wear",
             "tag": "",
-            "image": "shopify://shop_images/DSC07646_3056e8aa-1461-487c-a89c-7d6577a8c9de.jpg",
             "subheading": "Clothing",
             "button_label": ""
           }
         },
-        "collection_q4E6GY": {
+        "collection_778Cxg": {
           "type": "collection",
           "settings": {
             "collection": "eat",
             "tag": "",
-            "image": "shopify://shop_images/tableware-2.jpg",
+            "image": "shopify://shop_images/Tableware-white-23.jpg",
             "subheading": "Feeding Essentials",
             "button_label": ""
           }
         },
-        "collection_eVgVV6": {
+        "collection_RkFVdV": {
           "type": "collection",
           "settings": {
             "collection": "play",
@@ -235,11 +184,12 @@
         }
       },
       "block_order": [
-        "collection_9jxwmU",
-        "collection_bxyhtA",
-        "collection_q4E6GY",
-        "collection_eVgVV6"
+        "collection_yYMgCY",
+        "collection_hz9HMV",
+        "collection_778Cxg",
+        "collection_RkFVdV"
       ],
+      "disabled": true,
       "settings": {
         "title": "Shop by Category",
         "text": "",
@@ -259,36 +209,624 @@
         "coll_button_style": "primary"
       }
     },
-    "custom_product_highlight_nQBDJ8": {
-      "type": "custom-product-highlight",
-      "name": "Highlighted Collection",
+    "collection_list_aakDiY": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_CULp7a": {
+          "type": "collection",
+          "settings": {
+            "collection": "sleep-bags",
+            "tag": "",
+            "image": "shopify://shop_images/Mobile-Hero_Lemon.png",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_84DAwU": {
+          "type": "collection",
+          "settings": {
+            "collection": "sleepers",
+            "tag": "",
+            "image": "shopify://shop_images/LouLouLollipopMarch2026-03439.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_nLyac9": {
+          "type": "collection",
+          "settings": {
+            "collection": "silicone-bibs",
+            "tag": "",
+            "image": "shopify://shop_images/LouLouLollipopMarch2026-05425.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_PHnrb8": {
+          "type": "collection",
+          "settings": {
+            "collection": "swaddles",
+            "tag": "",
+            "image": "shopify://shop_images/Copy_of_SWSHK_Muslin_Swaddle_Sharks_52.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_caXU8w": {
+          "type": "collection",
+          "settings": {
+            "collection": "long-sleeve-bibs",
+            "tag": "",
+            "image": "shopify://shop_images/LouLouLollipopMarch2026-06428.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_AHpkwx": {
+          "type": "collection",
+          "settings": {
+            "collection": "hooded-towel-sets",
+            "tag": "",
+            "image": "shopify://shop_images/6D3E04F9-60E1-4F67-AC2F-37982EE79577.jpg",
+            "subheading": "Hooded Towels",
+            "button_label": ""
+          }
+        },
+        "collection_j8GdED": {
+          "type": "collection",
+          "settings": {
+            "collection": "muslin-quilt",
+            "tag": "",
+            "image": "shopify://shop_images/DSC00442-2.jpg",
+            "subheading": "Muslin Quilts",
+            "button_label": ""
+          }
+        },
+        "collection_4HbMHd": {
+          "type": "collection",
+          "settings": {
+            "collection": "single-teethers",
+            "tag": "",
+            "image": "shopify://shop_images/WTR-WOF_Wild_Teether_-_Wolfie_51.jpg",
+            "subheading": "Teethers",
+            "button_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_CULp7a",
+        "collection_84DAwU",
+        "collection_nLyac9",
+        "collection_PHnrb8",
+        "collection_caXU8w",
+        "collection_AHpkwx",
+        "collection_j8GdED",
+        "collection_4HbMHd"
+      ],
       "settings": {
-        "title": "Gift-able Bundles",
-        "text": "<p>Perfectly paired bundles for easy gifting</p>",
-        "image": "shopify://shop_images/Gift_Box_1_17a3a045-8191-43e8-be59-df6196f2ae92.jpg",
-        "order": true,
-        "product_list": [
-          "newborn-sleep-gift-bundle-smiley-sharks",
-          "baby-learning-feeding-bundle-seashells",
-          "teething-development-bundle-bunny",
-          "baby-sleep-system-bundle-bears-on-bikes"
-        ],
-        "button_label": "Shop Bundles",
-        "link": "shopify://collections/bundles-and-sets",
+        "title": "Shop by Category",
+        "text": "",
+        "text_alignment": "start",
+        "enable_carousel": false,
+        "grid": 4,
+        "color_scheme": "1",
+        "full_width": true,
+        "coll_grid_image_shape": "square",
+        "coll_grid_image_position": "center center",
+        "coll_thumb_mob_per_row": "2",
+        "coll_grid_show_count": false,
+        "coll_text_position": "below",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_y": "center",
+        "coll_button_style": "primary"
+      }
+    },
+    "featured_collection_RGPeGr": {
+      "type": "featured-collection",
+      "name": "Best Sellers Carousel",
+      "settings": {
+        "title": "Best-Selling Favorites",
+        "text": "",
+        "collection": "best-sellers",
+        "show_vendor": false,
+        "enable_carousel": false,
+        "grid": 4,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "center"
+      }
+    },
+    "testimonials_QcyQ3m": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_GeyPpp": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 5,
+            "testimonial-title": "LOVE the bees!! 🐝",
+            "testimonial": "Super soft, we love the fold over mitts and socks! Couldn’t be more in love with the pattern as well.",
+            "author": "Stacey D",
+            "image": "shopify://shop_images/6f343775-42fa-5aff-8245-6d9a0ec41c98.jpg",
+            "image_caption": "",
+            "link": "shopify://products/sleeper-bumble-bees"
+          }
+        },
+        "testimonial_ReBUHt": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 5,
+            "testimonial-title": "Surprisingly soft",
+            "testimonial": "I am really impressed with this bib! It is the softest waterproof bib we own by far; I don’t know how they managed to make it both soft and functional, but it is definitely both.",
+            "author": "",
+            "image": "shopify://shop_images/22ab6ac7-6f8e-5b3b-a508-6bf3da54680e.jpg",
+            "image_caption": "",
+            "link": "shopify://products/long-sleeve-bib-sweet-treats"
+          }
+        },
+        "testimonial_PAPAeQ": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 5,
+            "testimonial-title": "Love these— go to sleep sack",
+            "testimonial": "I absolutely love these sleep sacks and other LouLou products! The quality is fantastic and has endured many washes!!",
+            "author": "Dcgilmr",
+            "image": "shopify://shop_images/a6aa598a-c4b7-5ce4-a018-d67bd5c85bcb.jpg",
+            "image_caption": "",
+            "link": "shopify://collections/sleep-bags"
+          }
+        },
+        "testimonial_xULPJF": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 5,
+            "testimonial-title": "Softest Muslin",
+            "testimonial": "Love these Muslim swaddles. I use them as lightweight and breathable summer blankets for my 8 month old. Large enough to cover his stroller for nap time or just to keep the sun off him.",
+            "author": "Jasminetara",
+            "image": "shopify://shop_images/500b5d60-9252-53bc-8df9-b53c73d4d475.jpg",
+            "image_caption": "",
+            "link": "shopify://products/muslin-swaddle-sushi"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_GeyPpp",
+        "testimonial_ReBUHt",
+        "testimonial_PAPAeQ",
+        "testimonial_xULPJF"
+      ],
+      "settings": {
+        "title": "The Quality That Lasts",
+        "layout": "image-right",
+        "text_caps": false,
+        "quote_text_size": 24,
+        "quote_text_size_mobile": 16,
+        "image_shape": "square",
+        "color_scheme": "default",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "multi_column_KCzHEY": {
+      "type": "multi-column",
+      "blocks": {
+        "text_block_pmbEg6": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "image": "shopify://shop_images/Heart.svg",
+            "title": "Made by Moms",
+            "text": "<p>Made by twin sisters and self-proclaimed picky moms who get it.</p>",
+            "button_label": "",
+            "link": ""
+          }
+        },
+        "text_block_EgmCLD": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "image": "shopify://shop_images/Happy.svg",
+            "title": "Safe materials",
+            "text": "<p>We only use premium, non-toxic, safety-tested materials—like buttery soft TENCEL™ Lyocell and 100% food-grade silicone.</p>",
+            "button_label": "",
+            "link": ""
+          }
+        },
+        "text_block_tFgzTX": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "image": "shopify://shop_images/Medal.svg",
+            "title": "Trusted Since 2015",
+            "text": "<p>From first smiles to first foods, we’ve been there for the baby moments you’ll never forget.</p>",
+            "button_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_pmbEg6",
+        "text_block_EgmCLD",
+        "text_block_tFgzTX"
+      ],
+      "custom_css": [
+        ".img-ar--cover img {object-fit: fill;}"
+      ],
+      "name": "Company Message",
+      "settings": {
+        "title": "Why Loulou Lollipop",
+        "media_aspect_ratio": "s",
+        "media_width": 60,
+        "text_alignment": "center",
         "button_style": "primary",
         "color_scheme": "default"
       }
     },
-    "shop_the_look_ifipFt": {
+    "logo_list_ywatnw": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_FxPmVy": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/ICON-SM-6.svg",
+            "image_width": 80,
+            "link": "",
+            "title": "Safe for Babies"
+          }
+        },
+        "logo_tawCLk": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Certified_B_Corporation_B_Corp_Logo_2022_Black_RGB_svg.webp",
+            "image_width": 80,
+            "link": "https://www.bcorporation.net/en-us/",
+            "title": "Certified B Corp"
+          }
+        },
+        "logo_D6VaH9": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Benefits-of-Partnering-with-a-WBENC-Certified-Women-Business-Enterprise-Public-Relations-and-Marketing-Agency-feature.webp",
+            "image_width": 130,
+            "link": "https://buywomenowned.com/",
+            "title": "Women-Owned"
+          }
+        },
+        "logo_Yg37w8": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/OEKO_TEX.png",
+            "image_width": 80,
+            "link": "https://www.oeko-tex.com/en/",
+            "title": "Safety Certified"
+          }
+        },
+        "logo_cNXMbY": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/ICON-SM-16.svg",
+            "image_width": 80,
+            "link": "",
+            "title": "Phthalate Free"
+          }
+        }
+      },
+      "block_order": [
+        "logo_FxPmVy",
+        "logo_tawCLk",
+        "logo_D6VaH9",
+        "logo_Yg37w8",
+        "logo_cNXMbY"
+      ],
+      "name": "USP List",
+      "settings": {
+        "title": "Our Commitments",
+        "enable_carousel": false,
+        "carousel_speed": 30,
+        "image_opacity": 100,
+        "color_scheme": "default"
+      }
+    },
+    "collection_list_zhMrUA": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_FhR9Rc": {
+          "type": "collection",
+          "settings": {
+            "collection": "magical-dragons",
+            "tag": "",
+            "subheading": "Magical Dragons",
+            "button_label": ""
+          }
+        },
+        "collection_CXEmHx": {
+          "type": "collection",
+          "settings": {
+            "collection": "safari-jungle",
+            "tag": "",
+            "subheading": "Safari Jungle",
+            "button_label": ""
+          }
+        },
+        "collection_ntR4RL": {
+          "type": "collection",
+          "settings": {
+            "collection": "bumble-bees",
+            "tag": "",
+            "subheading": "Bumble Bees",
+            "button_label": ""
+          }
+        },
+        "collection_dGF3f4": {
+          "type": "collection",
+          "settings": {
+            "collection": "alphabet-smiles",
+            "tag": "",
+            "subheading": "Alphabet Smiles",
+            "button_label": ""
+          }
+        },
+        "collection_3hmwzf": {
+          "type": "collection",
+          "settings": {
+            "collection": "bears-on-bikes",
+            "tag": "",
+            "subheading": "Ocean Explorer",
+            "button_label": ""
+          }
+        },
+        "collection_aHLB8h": {
+          "type": "collection",
+          "settings": {
+            "collection": "smiley-sharks",
+            "tag": "",
+            "subheading": "Smiley Sharks",
+            "button_label": ""
+          }
+        },
+        "collection_eU9Ecq": {
+          "type": "collection",
+          "settings": {
+            "collection": "mermaids",
+            "tag": "",
+            "subheading": "Mermaids",
+            "button_label": ""
+          }
+        },
+        "collection_ExCE9F": {
+          "type": "collection",
+          "settings": {
+            "collection": "stargazing-bears",
+            "tag": "",
+            "subheading": "Stargazing Bear",
+            "button_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_FhR9Rc",
+        "collection_CXEmHx",
+        "collection_ntR4RL",
+        "collection_dGF3f4",
+        "collection_3hmwzf",
+        "collection_aHLB8h",
+        "collection_eU9Ecq",
+        "collection_ExCE9F"
+      ],
+      "custom_css": [
+        ".collection-slider-row {padding-bottom: 0;}"
+      ],
+      "name": "Shop by Print",
+      "settings": {
+        "title": "Shop by Print",
+        "text": "",
+        "text_alignment": "start",
+        "enable_carousel": true,
+        "grid": 5,
+        "color_scheme": "default",
+        "full_width": true,
+        "coll_grid_image_shape": "square",
+        "coll_grid_image_position": "center center",
+        "coll_thumb_mob_per_row": "2",
+        "coll_grid_show_count": false,
+        "coll_text_position": "below",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_y": "center",
+        "coll_button_style": "primary"
+      }
+    },
+    "collection_list_FxKgEx": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_G6gJTM": {
+          "type": "collection",
+          "settings": {
+            "collection": "gifts-under-50",
+            "tag": "",
+            "image": "shopify://shop_images/LSET-010-MNT_Learning_Utensils_Set_Octopus_51.jpg",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
+        "collection_Mri37P": {
+          "type": "collection",
+          "settings": {
+            "collection": "top-newborn-gifts",
+            "tag": "",
+            "image": "shopify://shop_images/MuslinSwaddle-Quilt-BumbleBees.jpg",
+            "subheading": "",
+            "button_label": ""
+          }
+        },
+        "collection_ngccXh": {
+          "type": "collection",
+          "settings": {
+            "collection": "top-baby-gifts",
+            "tag": "",
+            "image": "shopify://shop_images/Header_Image_-_SILBIB.png",
+            "subheading": "",
+            "button_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_G6gJTM",
+        "collection_Mri37P",
+        "collection_ngccXh"
+      ],
+      "settings": {
+        "title": "",
+        "text": "",
+        "text_alignment": "center",
+        "enable_carousel": false,
+        "grid": 3,
+        "color_scheme": "default",
+        "full_width": true,
+        "coll_grid_image_shape": "landscape-54",
+        "coll_grid_image_position": "top center",
+        "coll_thumb_mob_per_row": "1",
+        "coll_grid_show_count": false,
+        "coll_text_position": "over-shadow",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_y": "bottom",
+        "coll_button_style": "primary"
+      }
+    },
+    "1737676593fa7ff914": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_NHdWgb": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "Follow us",
+            "title_color": "#1d1d1d",
+            "title_size_v2": 0,
+            "alignment": "center",
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 0,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": false,
+            "link_alignment": "left",
+            "link_color": "#000000",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_NHdWgb"
+      ],
+      "settings": {
+        "full_width": false,
+        "show_space": true
+      }
+    },
+    "16359276425da8ce46": {
+      "type": "slideshow",
+      "blocks": {
+        "image_LBrG4m": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Summer_hero.png",
+            "mobile_image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._4th_2024_-Web-2.jpg",
+            "slide_link": "",
+            "subheading": "",
+            "title": "Summer Must-Haves",
+            "heading_max_width": 14,
+            "title_size": 60,
+            "title_size_mobile": 32,
+            "use_h1": true,
+            "text": "<p>From breathable fabrics to playful prints, discover must-haves made for sunny days.</p>",
+            "enlarge_text": true,
+            "button_label_1": "Explore Summer Picks",
+            "button_url_1": "shopify://collections/summer-picks",
+            "button_tag_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_tag_2": "",
+            "text_alignment": "center left"
+          }
+        },
+        "image_tApQLT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Alphabet_Smiles_PRINT.png",
+            "slide_link": "",
+            "subheading": "From A to Z, With Love",
+            "title": "Alphabet Smiles Is Here",
+            "heading_max_width": 14,
+            "title_size": 60,
+            "title_size_mobile": 32,
+            "use_h1": false,
+            "text": "<p>Every letter comes with a kind word—because little ones deserve to grow up wrapped in positivity.</p>",
+            "enlarge_text": true,
+            "button_label_1": "Shop the Print",
+            "button_url_1": "shopify://collections/alphabet-smiles",
+            "button_tag_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_tag_2": "",
+            "text_alignment": "center left"
+          }
+        },
+        "16359276425da8ce46-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/lightweight_sleep_bag.png",
+            "slide_link": "",
+            "subheading": "",
+            "title": "The Coolest Sleep of the Summer",
+            "heading_max_width": 16,
+            "title_size": 60,
+            "title_size_mobile": 32,
+            "use_h1": false,
+            "text": "<p>Made for warmer nights, our 0.5 TOG Sleep Bags are breathable, buttery-soft, and baby-approved.</p>",
+            "enlarge_text": true,
+            "button_label_1": "Shop Lightweight Sleep Bags",
+            "button_url_1": "shopify://collections/0-5-tog",
+            "button_tag_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_tag_2": "",
+            "text_alignment": "center left"
+          }
+        }
+      },
+      "block_order": [
+        "image_LBrG4m",
+        "image_tApQLT",
+        "16359276425da8ce46-0"
+      ],
+      "disabled": true,
+      "settings": {
+        "height": "full",
+        "height_desktop": 700,
+        "height_mobile": 700,
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "full image-overlay--bg-shadow",
+        "transition": "fade",
+        "navigation": "dots",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "accessibility_info": ""
+      }
+    },
+    "shop_the_look_HrgpQK": {
       "type": "shop-the-look",
       "blocks": {
-        "subheading_qGCRUV": {
+        "subheading_Mr3wbt": {
           "type": "subheading",
           "settings": {
             "subheading": "The Complete Sleep Set"
           }
         },
-        "heading_MBN7kG": {
+        "heading_3ibApk": {
           "type": "heading",
           "settings": {
             "title": "Our most-loved sleep essentials",
@@ -300,12 +838,12 @@
         }
       },
       "block_order": [
-        "subheading_qGCRUV",
-        "heading_MBN7kG"
+        "subheading_Mr3wbt",
+        "heading_3ibApk"
       ],
+      "disabled": true,
       "name": "Shop the look",
       "settings": {
-        "image": "shopify://shop_images/LuluLollipopEdits-09175_bcfed4bb-a7fd-4006-856b-9f405b6bf0c8.jpg",
         "video_external": "",
         "video_description": "",
         "height": "fixed",
@@ -328,509 +866,102 @@
         "overlay_style": "shadow"
       }
     },
-    "testimonials_VG4FtN": {
-      "type": "testimonials",
-      "blocks": {
-        "testimonial_i8Cnzj": {
-          "type": "testimonial",
-          "settings": {
-            "star_rating": 5,
-            "testimonial-title": "LOVE the bees!! 🐝",
-            "testimonial": "Super soft, we love the fold over mitts and socks! Couldn’t be more in love with the pattern as well.",
-            "author": "Stacey D",
-            "image": "shopify://shop_images/6f343775-42fa-5aff-8245-6d9a0ec41c98.jpg",
-            "image_caption": "",
-            "link": "shopify://products/sleeper-bumble-bees"
-          }
-        },
-        "testimonial_fqGN3w": {
-          "type": "testimonial",
-          "settings": {
-            "star_rating": 5,
-            "testimonial-title": "Surprisingly soft",
-            "testimonial": "I am really impressed with this bib! It is the softest waterproof bib we own by far; I don’t know how they managed to make it both soft and functional, but it is definitely both.",
-            "author": "",
-            "image": "shopify://shop_images/22ab6ac7-6f8e-5b3b-a508-6bf3da54680e.jpg",
-            "image_caption": "",
-            "link": "shopify://products/long-sleeve-bib-sweet-treats"
-          }
-        },
-        "testimonial_hEWEfN": {
-          "type": "testimonial",
-          "settings": {
-            "star_rating": 5,
-            "testimonial-title": "Love these— go to sleep sack",
-            "testimonial": "I absolutely love these sleep sacks and other LouLou products! The quality is fantastic and has endured many washes!!",
-            "author": "Dcgilmr",
-            "image": "shopify://shop_images/a6aa598a-c4b7-5ce4-a018-d67bd5c85bcb.jpg",
-            "image_caption": "",
-            "link": "shopify://collections/sleep-bags"
-          }
-        },
-        "testimonial_LxGPMt": {
-          "type": "testimonial",
-          "settings": {
-            "star_rating": 5,
-            "testimonial-title": "Softest Muslin",
-            "testimonial": "Love these Muslim swaddles. I use them as lightweight and breathable summer blankets for my 8 month old. Large enough to cover his stroller for nap time or just to keep the sun off him.",
-            "author": "Jasminetara",
-            "image": "shopify://shop_images/500b5d60-9252-53bc-8df9-b53c73d4d475.jpg",
-            "image_caption": "",
-            "link": "shopify://products/muslin-swaddle-sushi"
-          }
-        }
-      },
-      "block_order": [
-        "testimonial_i8Cnzj",
-        "testimonial_fqGN3w",
-        "testimonial_hEWEfN",
-        "testimonial_LxGPMt"
-      ],
+    "featured_collection_HNkD47": {
+      "type": "featured-collection",
+      "disabled": true,
+      "name": "Bundles Carousel",
       "settings": {
-        "title": "Real Kid Tested. Parent-Approved.",
-        "layout": "image-right",
-        "text_caps": false,
-        "quote_text_size": 24,
-        "quote_text_size_mobile": 16,
-        "image_shape": "square",
+        "title": "Gift-able Bundles",
+        "text": "<p>Perfectly paired bundles for easy gifting</p>",
+        "collection": "bundles-and-sets",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 4,
+        "rows": 2,
         "color_scheme": "default",
-        "autoplay": true,
-        "autoplay_speed": 5
+        "show_view_all": true,
+        "full_width": true,
+        "text_alignment": "start"
       }
     },
-    "collection_list_pBrVBP": {
+    "custom_liquid_RDK4Gg": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "show_space": true,
+        "code": "<script src=\"https://apps.bazaarvoice.com/deployments/louloulollipop/ca/production/en_US/bv.js\"></script>\n<div id=\"BVSellerRatingsContainer\"></div>\n<script>BV.seller_ratings.render();</script>"
+      }
+    },
+    "custom_product_highlight_JiGaUB": {
+      "type": "custom-product-highlight",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "title": "Mess-less Mealtimes",
+        "text": "<p>Our super smart silicone snack plates feature a strong sticky base even pro food flingers can't beat. Available in a variety of totally a-roar-able animal shapes for more happy snacking with less mess!</p>",
+        "order": true,
+        "product_list": [
+          "snack-plate-sarah-shark",
+          "snack-plate-olly-octopus"
+        ],
+        "button_label": "Shop Snack Plates",
+        "link": "shopify://collections/snack-plate",
+        "button_style": "primary",
+        "color_scheme": "1"
+      }
+    },
+    "collection_list_awHraC": {
       "type": "collection-list",
       "blocks": {
-        "collection_WL7RyC": {
-          "type": "collection",
-          "settings": {
-            "collection": "sleep-bags",
-            "tag": "",
-            "image": "shopify://shop_images/Header_Image_-_Sleepbag.png",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_izQ4fe": {
-          "type": "collection",
-          "settings": {
-            "collection": "sleepers",
-            "tag": "",
-            "image": "shopify://shop_images/DSC01865_1.png",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_yBfKJJ": {
-          "type": "collection",
-          "settings": {
-            "collection": "silicone-bibs",
-            "tag": "",
-            "image": "shopify://shop_images/DSC09680.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_xLD3BM": {
-          "type": "collection",
-          "settings": {
-            "collection": "swaddles",
-            "tag": "",
-            "image": "shopify://shop_images/DSC01126-2.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_KMDkWz": {
-          "type": "collection",
-          "settings": {
-            "collection": "dresses",
-            "tag": "",
-            "image": "shopify://shop_images/DSC07492.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_M8ya9Y": {
-          "type": "collection",
-          "settings": {
-            "collection": "hooded-towel-sets",
-            "tag": "",
-            "image": "shopify://shop_images/DSC09558.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_tBcrJC": {
-          "type": "collection",
-          "settings": {
-            "collection": "single-teethers",
-            "tag": "",
-            "image": "shopify://shop_images/WTR-WOF_Wild_Teether_-_Wolfie_51.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_ph8Tck": {
+        "collection_hHixLy": {
           "type": "collection",
           "settings": {
             "collection": "long-sleeve-bibs",
             "tag": "",
-            "image": "shopify://shop_images/DSC08236-2.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "image": "shopify://shop_images/LSBIBSHK_LongSleeveBib_Sharks_51.jpg",
+            "subheading": "",
             "button_label": ""
           }
         },
-        "collection_6BHgD3": {
+        "collection_JKYbEQ": {
           "type": "collection",
           "settings": {
-            "collection": "pacifier-clips",
+            "collection": "silicone-bibs",
             "tag": "",
-            "image": "shopify://shop_images/loulou-pacifier1.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "image": "shopify://shop_images/Bibs_LouLou_Lollipop-85.jpg",
+            "subheading": "",
             "button_label": ""
           }
         },
-        "collection_AaNCAh": {
+        "collection_UeeFME": {
           "type": "collection",
           "settings": {
-            "collection": "blankets",
+            "collection": "burp-cloths",
             "tag": "",
-            "image": "shopify://shop_images/DSC00442-2_7ede22b4-5323-438f-8485-7309b9627de9.jpg",
-            "subheading": "Blankets",
-            "button_label": ""
-          }
-        },
-        "collection_XwLNq4": {
-          "type": "collection",
-          "settings": {
-            "collection": "bandana-bibs",
-            "tag": "",
-            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._4th_2024_-Web-40.jpg",
-            "subheading": "Bandana Bibs",
+            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._11th_2024_-Web-16.jpg",
+            "subheading": "",
             "button_label": ""
           }
         }
       },
       "block_order": [
-        "collection_WL7RyC",
-        "collection_izQ4fe",
-        "collection_yBfKJJ",
-        "collection_xLD3BM",
-        "collection_KMDkWz",
-        "collection_M8ya9Y",
-        "collection_tBcrJC",
-        "collection_ph8Tck",
-        "collection_6BHgD3",
-        "collection_AaNCAh",
-        "collection_XwLNq4"
+        "collection_hHixLy",
+        "collection_JKYbEQ",
+        "collection_UeeFME"
       ],
       "disabled": true,
-      "settings": {
-        "title": "Shop by Category",
-        "text": "",
-        "text_alignment": "start",
-        "enable_carousel": true,
-        "grid": 5,
-        "color_scheme": "1",
-        "full_width": true,
-        "coll_grid_image_shape": "portrait-23",
-        "coll_grid_image_position": "center center",
-        "coll_thumb_mob_per_row": "2",
-        "coll_grid_show_count": false,
-        "coll_text_position": "below",
-        "coll_text_position_under_mobile": false,
-        "coll_thumb_text_align_x": "center",
-        "coll_thumb_text_align_y": "center",
-        "coll_button_style": "primary"
-      }
-    },
-    "featured_collection_6CcnbR": {
-      "type": "featured-collection",
-      "disabled": true,
-      "name": "Personalization",
-      "settings": {
-        "title": "Made Just for Your Little One",
-        "text": "<p>Add embroidery to create a one-of-a-kind keepsake.</p>",
-        "collection": "personalize-it",
-        "show_vendor": false,
-        "enable_carousel": true,
-        "grid": 4,
-        "rows": 1,
-        "color_scheme": "default",
-        "show_view_all": true,
-        "full_width": false,
-        "text_alignment": "start"
-      }
-    },
-    "collection_list_zhMrUA": {
-      "type": "collection-list",
-      "blocks": {
-        "collection_rEV79r": {
-          "type": "collection",
-          "settings": {
-            "collection": "lemon-squeezy",
-            "tag": "",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_eQzpiL": {
-          "type": "collection",
-          "settings": {
-            "collection": "english-garden",
-            "tag": "",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_dqkine": {
-          "type": "collection",
-          "settings": {
-            "collection": "french-breakfast",
-            "tag": "",
-            "subheading": "French Breakfast",
-            "button_label": ""
-          }
-        },
-        "collection_h3xWfY": {
-          "type": "collection",
-          "settings": {
-            "collection": "tiny-engineers",
-            "tag": "",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_Ukw68h": {
-          "type": "collection",
-          "settings": {
-            "collection": "astro-explorers",
-            "tag": "",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_EUdm88": {
-          "type": "collection",
-          "settings": {
-            "collection": "mini-mathletes",
-            "tag": "",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_ePeJPa": {
-          "type": "collection",
-          "settings": {
-            "collection": "she-shoots-she-scores",
-            "tag": "",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_ExCE9F": {
-          "type": "collection",
-          "settings": {
-            "collection": "stargazing-bears",
-            "tag": "",
-            "subheading": "Stargazing Bear",
-            "button_label": ""
-          }
-        },
-        "collection_BbdfXk": {
-          "type": "collection",
-          "settings": {
-            "collection": "hedgehogs",
-            "tag": "",
-            "subheading": "Dancing Dragonflies",
-            "button_label": ""
-          }
-        },
-        "collection_FhR9Rc": {
-          "type": "collection",
-          "settings": {
-            "collection": "magical-dragons",
-            "tag": "",
-            "subheading": "Magical Dragons",
-            "button_label": ""
-          }
-        },
-        "collection_m7DJDa": {
-          "type": "collection",
-          "settings": {
-            "collection": "unicorn-ballet",
-            "tag": "",
-            "subheading": "Unicorn Ballet",
-            "button_label": ""
-          }
-        },
-        "collection_dGF3f4": {
-          "type": "collection",
-          "settings": {
-            "collection": "alphabet-smiles",
-            "tag": "",
-            "subheading": "Alphabet Smiles",
-            "button_label": ""
-          }
-        },
-        "collection_aHLB8h": {
-          "type": "collection",
-          "settings": {
-            "collection": "smiley-sharks",
-            "tag": "",
-            "subheading": "Smiley Sharks",
-            "button_label": ""
-          }
-        },
-        "collection_eU9Ecq": {
-          "type": "collection",
-          "settings": {
-            "collection": "mermaids",
-            "tag": "",
-            "subheading": "Mermaids",
-            "button_label": ""
-          }
-        },
-        "collection_3hmwzf": {
-          "type": "collection",
-          "settings": {
-            "collection": "bears-on-bikes",
-            "tag": "",
-            "subheading": "Ocean Explorer",
-            "button_label": ""
-          }
-        },
-        "collection_CXEmHx": {
-          "type": "collection",
-          "settings": {
-            "collection": "safari-jungle",
-            "tag": "",
-            "subheading": "Safari Jungle",
-            "button_label": ""
-          }
-        },
-        "collection_FQR9KE": {
-          "type": "collection",
-          "settings": {
-            "collection": "planets",
-            "tag": "",
-            "subheading": "Planets",
-            "button_label": ""
-          }
-        },
-        "collection_rc8zw8": {
-          "type": "collection",
-          "settings": {
-            "collection": "canada",
-            "tag": "",
-            "subheading": "O Canada",
-            "button_label": ""
-          }
-        },
-        "collection_ntR4RL": {
-          "type": "collection",
-          "settings": {
-            "collection": "bumble-bees",
-            "tag": "",
-            "subheading": "Bumble Bees",
-            "button_label": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection_rEV79r",
-        "collection_eQzpiL",
-        "collection_dqkine",
-        "collection_h3xWfY",
-        "collection_Ukw68h",
-        "collection_EUdm88",
-        "collection_ePeJPa",
-        "collection_ExCE9F",
-        "collection_BbdfXk",
-        "collection_FhR9Rc",
-        "collection_m7DJDa",
-        "collection_dGF3f4",
-        "collection_aHLB8h",
-        "collection_eU9Ecq",
-        "collection_3hmwzf",
-        "collection_CXEmHx",
-        "collection_FQR9KE",
-        "collection_rc8zw8",
-        "collection_ntR4RL"
-      ],
-      "custom_css": [
-        ".collection-slider-row {padding-bottom: 0;}"
-      ],
-      "name": "Shop by print",
-      "settings": {
-        "title": "Shop by Print",
-        "text": "",
-        "text_alignment": "start",
-        "enable_carousel": true,
-        "grid": 5,
-        "color_scheme": "default",
-        "full_width": true,
-        "coll_grid_image_shape": "square",
-        "coll_grid_image_position": "center center",
-        "coll_thumb_mob_per_row": "2",
-        "coll_grid_show_count": false,
-        "coll_text_position": "below",
-        "coll_text_position_under_mobile": false,
-        "coll_thumb_text_align_x": "center",
-        "coll_thumb_text_align_y": "center",
-        "coll_button_style": "primary"
-      }
-    },
-    "collection_list_4hPPdd": {
-      "type": "collection-list",
-      "blocks": {
-        "collection_hnnxPW": {
-          "type": "collection",
-          "settings": {
-            "collection": "gifts-under-50",
-            "tag": "",
-            "image": "shopify://shop_images/LSET-010-MNT_Learning_Utensils_Set_Octopus_51_4.jpg",
-            "subheading": "",
-            "button_label": ""
-          }
-        },
-        "collection_fEKXHL": {
-          "type": "collection",
-          "settings": {
-            "collection": "top-newborn-gifts",
-            "tag": "",
-            "image": "shopify://shop_images/MuslinSwaddle-Quilt-BumbleBees_2_3caf242e-9e24-483a-bbdc-4aa88cbc0a7d.jpg",
-            "subheading": "",
-            "button_label": ""
-          }
-        },
-        "collection_NPHqF4": {
-          "type": "collection",
-          "settings": {
-            "collection": "top-baby-gifts",
-            "tag": "",
-            "image": "shopify://shop_images/Header_Image_-_SILBIB.png",
-            "subheading": "",
-            "button_label": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection_hnnxPW",
-        "collection_fEKXHL",
-        "collection_NPHqF4"
-      ],
       "settings": {
         "title": "",
         "text": "",
-        "text_alignment": "center",
+        "text_alignment": "start",
         "enable_carousel": false,
         "grid": 3,
         "color_scheme": "default",
         "full_width": true,
-        "coll_grid_image_shape": "landscape-54",
-        "coll_grid_image_position": "top center",
+        "coll_grid_image_shape": "portrait-45",
+        "coll_grid_image_position": "center center",
         "coll_thumb_mob_per_row": "1",
         "coll_grid_show_count": false,
         "coll_text_position": "over-shadow",
@@ -840,253 +971,84 @@
         "coll_button_style": "primary"
       }
     },
-    "multi_column_gyeJnc": {
+    "featured_collection_eXJhUx": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "text": "",
+        "collection": "snack-plate",
+        "show_vendor": false,
+        "enable_carousel": false,
+        "grid": 5,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": true,
+        "text_alignment": "start"
+      }
+    },
+    "multi_column_MR9q33": {
       "type": "multi-column",
       "blocks": {
-        "text_block_CjCE3F": {
+        "text_block_zy7AYT": {
           "type": "text_block",
           "settings": {
             "enable_media": true,
-            "image": "shopify://shop_images/Heart.svg",
-            "title": "Made by Moms",
-            "text": "<p>Made by twin sisters and self-proclaimed picky moms who get it.</p>",
+            "image": "shopify://shop_images/Muslin_Swaddle_-_Football__4_8959d690-2457-4717-a308-c87fcb045ec6.jpg",
+            "title": "Safety First",
+            "text": "<p>As a company run by moms, we know what it’s like to stress over every detail—and we do the same. Thanks to our thoroughly vetted, non-toxic materials, and meticulous innovation and design process, you can rest assured that we’ve put product safety first, every step of the way.</p>",
             "button_label": "",
             "link": ""
           }
         },
-        "text_block_craMbA": {
+        "text_block_VkTHha": {
           "type": "text_block",
           "settings": {
             "enable_media": true,
-            "image": "shopify://shop_images/Happy.svg",
-            "title": "Safe materials",
-            "text": "<p>We only use premium, non-toxic, safety-tested materials—like buttery soft TENCEL™ Lyocell and 100% food-grade silicone.</p>",
-            "button_label": "",
-            "link": ""
-          }
-        },
-        "text_block_nfX6Kf": {
-          "type": "text_block",
-          "settings": {
-            "enable_media": true,
-            "image": "shopify://shop_images/Medal.svg",
-            "title": "Since 2015",
-            "text": "<p>From first smiles to first foods, we’ve been there for the baby moments you’ll never forget.</p>",
+            "image": "shopify://shop_images/Bibs_LouLou_Lollipop-69.jpg",
+            "title": "Functional Design",
+            "text": "<p>Parenthood is HARD! That's why we have committed to making it easier for parents by bringing you exceptional quality products that are beautiful, functional, and safe.</p>",
             "button_label": "",
             "link": ""
           }
         }
       },
       "block_order": [
-        "text_block_CjCE3F",
-        "text_block_craMbA",
-        "text_block_nfX6Kf"
+        "text_block_zy7AYT",
+        "text_block_VkTHha"
       ],
-      "custom_css": [
-        ".img-ar--cover img {object-fit: fill;}"
-      ],
-      "name": "Company Message",
+      "disabled": true,
       "settings": {
         "title": "",
-        "media_aspect_ratio": "s",
-        "media_width": 60,
+        "media_aspect_ratio": "1.25",
+        "media_width": 700,
         "text_alignment": "center",
         "button_style": "primary",
         "color_scheme": "default"
       }
-    },
-    "logo_list_pgf7FP": {
-      "type": "logo-list",
-      "blocks": {
-        "logo_PyLQJg": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/ICON-SM-6.svg",
-            "image_width": 80,
-            "link": "",
-            "title": ""
-          }
-        },
-        "logo_rQ8D9n": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Certified_B_Corporation_B_Corp_Logo_2022_Black_RGB_svg.webp",
-            "image_width": 80,
-            "link": "https://www.bcorporation.net/en-us/",
-            "title": ""
-          }
-        },
-        "logo_GtMKA4": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Benefits-of-Partnering-with-a-WBENC-Certified-Women-Business-Enterprise-Public-Relations-and-Marketing-Agency-feature.webp",
-            "image_width": 130,
-            "link": "https://buywomenowned.com/",
-            "title": ""
-          }
-        },
-        "logo_Hqdrmf": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/OEKO_TEX.png",
-            "image_width": 80,
-            "link": "https://www.oeko-tex.com/en/",
-            "title": ""
-          }
-        },
-        "logo_DDHT6z": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/ICON-SM-16.svg",
-            "image_width": 80,
-            "link": "",
-            "title": "Phthalate Free"
-          }
-        }
-      },
-      "block_order": [
-        "logo_PyLQJg",
-        "logo_rQ8D9n",
-        "logo_GtMKA4",
-        "logo_Hqdrmf",
-        "logo_DDHT6z"
-      ],
-      "name": "USP list",
-      "settings": {
-        "title": "",
-        "enable_carousel": false,
-        "carousel_speed": 30,
-        "image_opacity": 100,
-        "color_scheme": "default"
-      }
-    },
-    "collection_list_XEbpaa": {
-      "type": "collection-list",
-      "blocks": {
-        "collection_rCGym8": {
-          "type": "collection",
-          "settings": {
-            "collection": "newborn-0-6-months",
-            "tag": "",
-            "image": "shopify://shop_images/Newborn-Swaddle-Tencel-Football.png",
-            "subheading": "Newborn 0-6 Months",
-            "button_label": ""
-          }
-        },
-        "collection_PpVFrp": {
-          "type": "collection",
-          "settings": {
-            "collection": "infant-6-12-months",
-            "tag": "",
-            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._11th_2024_-Web-24.jpg",
-            "subheading": "Baby 6-12 Months",
-            "button_label": ""
-          }
-        },
-        "collection_pK9Rmn": {
-          "type": "collection",
-          "settings": {
-            "collection": "toddler-12-24-months",
-            "tag": "",
-            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._11th_2024_-Web-46.jpg",
-            "subheading": "Toddler 12-24 Months",
-            "button_label": ""
-          }
-        },
-        "collection_hT7mWW": {
-          "type": "collection",
-          "settings": {
-            "collection": "little-kid-2-4-years",
-            "tag": "",
-            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._11th_2024_-Web-4.jpg",
-            "subheading": "Little Kid 2-4 Years",
-            "button_label": ""
-          }
-        },
-        "collection_7rXmQD": {
-          "type": "collection",
-          "settings": {
-            "collection": "big-kid-4-years",
-            "tag": "",
-            "image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Holiday_2024_-Web-41.jpg",
-            "subheading": "Big Kid 4+ years",
-            "button_label": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection_rCGym8",
-        "collection_PpVFrp",
-        "collection_pK9Rmn",
-        "collection_hT7mWW",
-        "collection_7rXmQD"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "Shop by Age",
-        "text": "",
-        "text_alignment": "start",
-        "enable_carousel": true,
-        "grid": 5,
-        "color_scheme": "1",
-        "full_width": true,
-        "coll_grid_image_shape": "portrait-23",
-        "coll_grid_image_position": "center center",
-        "coll_thumb_mob_per_row": "2",
-        "coll_grid_show_count": false,
-        "coll_text_position": "below",
-        "coll_text_position_under_mobile": true,
-        "coll_thumb_text_align_x": "center",
-        "coll_thumb_text_align_y": "center",
-        "coll_button_style": "primary"
-      }
-    },
-    "1737676593fa7ff914": {
-      "type": "apps",
-      "blocks": {
-        "instafeed_app_block_NHdWgb": {
-          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
-          "settings": {
-            "title": "Follow us",
-            "title_color": "#1d1d1d",
-            "title_size_v2": 0,
-            "alignment": "center",
-            "instafeed_margin_top": 0,
-            "instafeed_margin_bottom": 0,
-            "instafeed_margin_sides": 0,
-            "show_instagram_link": false,
-            "link_alignment": "left",
-            "link_color": "#1d1d1d",
-            "background_color": "",
-            "feed_id": "",
-            "html_area": ""
-          }
-        }
-      },
-      "block_order": [
-        "instafeed_app_block_NHdWgb"
-      ],
-      "settings": {
-        "full_width": false,
-        "show_space": true
-      }
     }
   },
   "order": [
-    "slideshow_dwrJFr",
+    "slideshow_JU4LXr",
+    "custom_product_highlight_KJfQCU",
     "logo_list_kYmwNX",
-    "featured_collection_RixHbV",
-    "collection_list_8FVzbz",
-    "custom_product_highlight_nQBDJ8",
-    "shop_the_look_ifipFt",
-    "testimonials_VG4FtN",
-    "collection_list_pBrVBP",
-    "featured_collection_6CcnbR",
+    "collection_list_VHgK7g",
+    "collection_list_aakDiY",
+    "featured_collection_RGPeGr",
+    "testimonials_QcyQ3m",
+    "multi_column_KCzHEY",
+    "logo_list_ywatnw",
     "collection_list_zhMrUA",
-    "collection_list_4hPPdd",
-    "multi_column_gyeJnc",
-    "logo_list_pgf7FP",
-    "collection_list_XEbpaa",
-    "1737676593fa7ff914"
+    "collection_list_FxKgEx",
+    "1737676593fa7ff914",
+    "16359276425da8ce46",
+    "shop_the_look_HrgpQK",
+    "featured_collection_HNkD47",
+    "custom_liquid_RDK4Gg",
+    "custom_product_highlight_JiGaUB",
+    "collection_list_awHraC",
+    "featured_collection_eXJhUx",
+    "multi_column_MR9q33"
   ]
 }
