@@ -22,7 +22,7 @@
             "title": "Premium Sleep Bags",
             "heading_max_width": 12,
             "title_size": 80,
-            "title_size_mobile": 34,
+            "title_size_mobile": 32,
             "use_h1": true,
             "text": "<p><strong>Trusted by parents for a safe, restful sleep and winner of the Good Housekeeping Good for Parenting Awards.<br/></strong></p>",
             "enlarge_text": true,
@@ -474,61 +474,6 @@
         "autoplay_speed": 5
       }
     },
-    "multi_column_KCzHEY": {
-      "type": "multi-column",
-      "blocks": {
-        "text_block_pmbEg6": {
-          "type": "text_block",
-          "settings": {
-            "enable_media": true,
-            "image": "shopify://shop_images/Heart.svg",
-            "title": "Made by Moms",
-            "text": "<p>Made by twin sisters and self-proclaimed picky moms who get it.</p>",
-            "button_label": "",
-            "link": ""
-          }
-        },
-        "text_block_EgmCLD": {
-          "type": "text_block",
-          "settings": {
-            "enable_media": true,
-            "image": "shopify://shop_images/Happy.svg",
-            "title": "Safe materials",
-            "text": "<p>We only use premium, non-toxic, safety-tested materials—like buttery soft TENCEL™ Lyocell and 100% food-grade silicone.</p>",
-            "button_label": "",
-            "link": ""
-          }
-        },
-        "text_block_tFgzTX": {
-          "type": "text_block",
-          "settings": {
-            "enable_media": true,
-            "image": "shopify://shop_images/Medal.svg",
-            "title": "Trusted Since 2015",
-            "text": "<p>From first smiles to first foods, we’ve been there for the baby moments you’ll never forget.</p>",
-            "button_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "text_block_pmbEg6",
-        "text_block_EgmCLD",
-        "text_block_tFgzTX"
-      ],
-      "custom_css": [
-        ".img-ar--cover img {object-fit: fill;}"
-      ],
-      "name": "Company Message",
-      "settings": {
-        "title": "Why Loulou Lollipop",
-        "media_aspect_ratio": "s",
-        "media_width": 60,
-        "text_alignment": "center",
-        "button_style": "primary",
-        "color_scheme": "default"
-      }
-    },
     "collection_list_zhMrUA": {
       "type": "collection-list",
       "blocks": {
@@ -636,6 +581,61 @@
         "coll_thumb_text_align_x": "center",
         "coll_thumb_text_align_y": "center",
         "coll_button_style": "primary"
+      }
+    },
+    "multi_column_KCzHEY": {
+      "type": "multi-column",
+      "blocks": {
+        "text_block_pmbEg6": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "image": "shopify://shop_images/Heart.svg",
+            "title": "Made by Moms",
+            "text": "<p>Made by twin sisters and self-proclaimed picky moms who get it.</p>",
+            "button_label": "",
+            "link": ""
+          }
+        },
+        "text_block_EgmCLD": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "image": "shopify://shop_images/Happy.svg",
+            "title": "Safe materials",
+            "text": "<p>We only use premium, non-toxic, safety-tested materials—like buttery soft TENCEL™ Lyocell and 100% food-grade silicone.</p>",
+            "button_label": "",
+            "link": ""
+          }
+        },
+        "text_block_tFgzTX": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "image": "shopify://shop_images/Medal.svg",
+            "title": "Trusted Since 2015",
+            "text": "<p>From first smiles to first foods, we’ve been there for the baby moments you’ll never forget.</p>",
+            "button_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_pmbEg6",
+        "text_block_EgmCLD",
+        "text_block_tFgzTX"
+      ],
+      "custom_css": [
+        ".img-ar--cover img {object-fit: fill;}"
+      ],
+      "name": "Company Message",
+      "settings": {
+        "title": "Why Loulou Lollipop",
+        "media_aspect_ratio": "s",
+        "media_width": 60,
+        "text_alignment": "center",
+        "button_style": "primary",
+        "color_scheme": "default"
       }
     },
     "collection_list_FxKgEx": {
