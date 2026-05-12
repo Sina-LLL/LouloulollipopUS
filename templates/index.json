@@ -22,9 +22,9 @@
             "title": "Premium Sleep Bags",
             "heading_max_width": 12,
             "title_size": 80,
-            "title_size_mobile": 34,
+            "title_size_mobile": 32,
             "use_h1": true,
-            "text": "<p><strong>Trusted by Canadian parents for safe, restful sleep.</strong></p>",
+            "text": "<p><strong>Trusted by parents for a safe, restful sleep and winner of the Good Housekeeping Good for Parenting Awards.<br/></strong></p>",
             "enlarge_text": true,
             "button_label_1": "Shop Sleep Solutions",
             "button_url_1": "shopify://collections/sleep-bags",
@@ -322,6 +322,71 @@
         "coll_button_style": "primary"
       }
     },
+    "logo_list_ywatnw": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_FxPmVy": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/ICON-SM-6.svg",
+            "image_width": 80,
+            "link": "",
+            "title": "Safe for Babies"
+          }
+        },
+        "logo_tawCLk": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Certified_B_Corporation_B_Corp_Logo_2022_Black_RGB_svg.webp",
+            "image_width": 80,
+            "link": "https://www.bcorporation.net/en-us/",
+            "title": "Certified B Corp"
+          }
+        },
+        "logo_D6VaH9": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Benefits-of-Partnering-with-a-WBENC-Certified-Women-Business-Enterprise-Public-Relations-and-Marketing-Agency-feature.webp",
+            "image_width": 130,
+            "link": "https://buywomenowned.com/",
+            "title": "Women-Owned"
+          }
+        },
+        "logo_Yg37w8": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/OEKO_TEX.png",
+            "image_width": 80,
+            "link": "https://www.oeko-tex.com/en/",
+            "title": "Safety Certified"
+          }
+        },
+        "logo_cNXMbY": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/ICON-SM-16.svg",
+            "image_width": 80,
+            "link": "",
+            "title": "Phthalate Free"
+          }
+        }
+      },
+      "block_order": [
+        "logo_FxPmVy",
+        "logo_tawCLk",
+        "logo_D6VaH9",
+        "logo_Yg37w8",
+        "logo_cNXMbY"
+      ],
+      "name": "USP List",
+      "settings": {
+        "title": "Our Commitments",
+        "enable_carousel": false,
+        "carousel_speed": 30,
+        "image_opacity": 100,
+        "color_scheme": "default"
+      }
+    },
     "featured_collection_RGPeGr": {
       "type": "featured-collection",
       "name": "Best Sellers Carousel",
@@ -336,7 +401,7 @@
         "color_scheme": "default",
         "show_view_all": true,
         "full_width": false,
-        "text_alignment": "center"
+        "text_alignment": "start"
       }
     },
     "testimonials_QcyQ3m": {
@@ -407,126 +472,6 @@
         "color_scheme": "default",
         "autoplay": true,
         "autoplay_speed": 5
-      }
-    },
-    "multi_column_KCzHEY": {
-      "type": "multi-column",
-      "blocks": {
-        "text_block_pmbEg6": {
-          "type": "text_block",
-          "settings": {
-            "enable_media": true,
-            "image": "shopify://shop_images/Heart.svg",
-            "title": "Made by Moms",
-            "text": "<p>Made by twin sisters and self-proclaimed picky moms who get it.</p>",
-            "button_label": "",
-            "link": ""
-          }
-        },
-        "text_block_EgmCLD": {
-          "type": "text_block",
-          "settings": {
-            "enable_media": true,
-            "image": "shopify://shop_images/Happy.svg",
-            "title": "Safe materials",
-            "text": "<p>We only use premium, non-toxic, safety-tested materials—like buttery soft TENCEL™ Lyocell and 100% food-grade silicone.</p>",
-            "button_label": "",
-            "link": ""
-          }
-        },
-        "text_block_tFgzTX": {
-          "type": "text_block",
-          "settings": {
-            "enable_media": true,
-            "image": "shopify://shop_images/Medal.svg",
-            "title": "Trusted Since 2015",
-            "text": "<p>From first smiles to first foods, we’ve been there for the baby moments you’ll never forget.</p>",
-            "button_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "text_block_pmbEg6",
-        "text_block_EgmCLD",
-        "text_block_tFgzTX"
-      ],
-      "custom_css": [
-        ".img-ar--cover img {object-fit: fill;}"
-      ],
-      "name": "Company Message",
-      "settings": {
-        "title": "Why Loulou Lollipop",
-        "media_aspect_ratio": "s",
-        "media_width": 60,
-        "text_alignment": "center",
-        "button_style": "primary",
-        "color_scheme": "default"
-      }
-    },
-    "logo_list_ywatnw": {
-      "type": "logo-list",
-      "blocks": {
-        "logo_FxPmVy": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/ICON-SM-6.svg",
-            "image_width": 80,
-            "link": "",
-            "title": "Safe for Babies"
-          }
-        },
-        "logo_tawCLk": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Certified_B_Corporation_B_Corp_Logo_2022_Black_RGB_svg.webp",
-            "image_width": 80,
-            "link": "https://www.bcorporation.net/en-us/",
-            "title": "Certified B Corp"
-          }
-        },
-        "logo_D6VaH9": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Benefits-of-Partnering-with-a-WBENC-Certified-Women-Business-Enterprise-Public-Relations-and-Marketing-Agency-feature.webp",
-            "image_width": 130,
-            "link": "https://buywomenowned.com/",
-            "title": "Women-Owned"
-          }
-        },
-        "logo_Yg37w8": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/OEKO_TEX.png",
-            "image_width": 80,
-            "link": "https://www.oeko-tex.com/en/",
-            "title": "Safety Certified"
-          }
-        },
-        "logo_cNXMbY": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/ICON-SM-16.svg",
-            "image_width": 80,
-            "link": "",
-            "title": "Phthalate Free"
-          }
-        }
-      },
-      "block_order": [
-        "logo_FxPmVy",
-        "logo_tawCLk",
-        "logo_D6VaH9",
-        "logo_Yg37w8",
-        "logo_cNXMbY"
-      ],
-      "name": "USP List",
-      "settings": {
-        "title": "Our Commitments",
-        "enable_carousel": false,
-        "carousel_speed": 30,
-        "image_opacity": 100,
-        "color_scheme": "default"
       }
     },
     "collection_list_zhMrUA": {
@@ -636,6 +581,61 @@
         "coll_thumb_text_align_x": "center",
         "coll_thumb_text_align_y": "center",
         "coll_button_style": "primary"
+      }
+    },
+    "multi_column_KCzHEY": {
+      "type": "multi-column",
+      "blocks": {
+        "text_block_pmbEg6": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "image": "shopify://shop_images/Heart.svg",
+            "title": "Made by Moms",
+            "text": "<p>Made by twin sisters and self-proclaimed picky moms who get it.</p>",
+            "button_label": "",
+            "link": ""
+          }
+        },
+        "text_block_EgmCLD": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "image": "shopify://shop_images/Happy.svg",
+            "title": "Safe materials",
+            "text": "<p>We only use premium, non-toxic, safety-tested materials—like buttery soft TENCEL™ Lyocell and 100% food-grade silicone.</p>",
+            "button_label": "",
+            "link": ""
+          }
+        },
+        "text_block_tFgzTX": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "image": "shopify://shop_images/Medal.svg",
+            "title": "Trusted Since 2015",
+            "text": "<p>From first smiles to first foods, we’ve been there for the baby moments you’ll never forget.</p>",
+            "button_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_pmbEg6",
+        "text_block_EgmCLD",
+        "text_block_tFgzTX"
+      ],
+      "custom_css": [
+        ".img-ar--cover img {object-fit: fill;}"
+      ],
+      "name": "Company Message",
+      "settings": {
+        "title": "Why Loulou Lollipop",
+        "media_aspect_ratio": "s",
+        "media_width": 60,
+        "text_alignment": "center",
+        "button_style": "primary",
+        "color_scheme": "default"
       }
     },
     "collection_list_FxKgEx": {
@@ -1035,11 +1035,11 @@
     "logo_list_kYmwNX",
     "collection_list_VHgK7g",
     "collection_list_aakDiY",
+    "logo_list_ywatnw",
     "featured_collection_RGPeGr",
     "testimonials_QcyQ3m",
-    "multi_column_KCzHEY",
-    "logo_list_ywatnw",
     "collection_list_zhMrUA",
+    "multi_column_KCzHEY",
     "collection_list_FxKgEx",
     "1737676593fa7ff914",
     "16359276425da8ce46",
