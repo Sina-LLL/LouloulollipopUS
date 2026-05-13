@@ -1,1 +1,127 @@
-{"sections":{"main":{"type":"main-contact","blocks":{"name":{"type":"name_input","settings":{"half_width":true}},"email":{"type":"email_input","settings":{"half_width":true}},"phone_input_yGFV3E":{"type":"phone_input","settings":{"required":true,"half_width":false}},"custom_dropdown_LcQcb6":{"type":"custom_dropdown","settings":{"title":"Reason for Contacting Us","multiple_options":"Product Inquiry\nOrder Delivery\nOrder Payment\/Refund\nPayment Related\nOther","half_width":false}},"message":{"type":"message_input","settings":{"half_width":false}}},"block_order":["name","email","phone_input_yGFV3E","custom_dropdown_LcQcb6","message"],"settings":{"show_page_title":false,"use_columns":true,"contact_title":"Contact us","contact_text":"<p>For when you need to talk with an adult, here’s how to do it.<\/p>"}},"custom_liquid_kKxV38":{"type":"custom-liquid","disabled":true,"custom_css":[],"settings":{"full_width":true,"show_space":true,"code":"<div style=\"margin:0 auto;\" class=\"pxFormGenerator\" id=\"7lU9SKAFmea8puds4_RGzw\"><\/div>"}},"multi_column_B3LYBi":{"type":"multi-column","blocks":{"text_block_rP8Cer":{"type":"text_block","settings":{"enable_media":false,"title":"Email Us","text":"<p><a href=\"mailto:customercare@louloulollipop.ca\" title=\"mailto:customercare@louloulollipop.com\">customercare@louloulollipop.com<\/a><\/p>","button_label":"","link":""}},"text_block_wKi98d":{"type":"text_block","settings":{"enable_media":false,"title":"Call Us","text":"<p><a href=\"tel:18334568568\" title=\"tel:18334568568\">1.833.4LOULOU<\/a><\/p>","button_label":"","link":""}},"text_block_7bpaRF":{"type":"text_block","settings":{"enable_media":false,"title":"Find Us","text":"<p>4311 Viking Way, Unit 130<br\/>Richmond, BC V6V 2K9<br\/>Canada<\/p>","button_label":"","link":""}}},"block_order":["text_block_rP8Cer","text_block_wKi98d","text_block_7bpaRF"],"settings":{"title":"","media_aspect_ratio":"s","media_width":700,"text_alignment":"center","button_style":"primary","color_scheme":"default"}}},"order":["main","custom_liquid_kKxV38","multi_column_B3LYBi"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-contact",
+      "blocks": {
+        "name": {
+          "type": "name_input",
+          "settings": {
+            "half_width": true
+          }
+        },
+        "email": {
+          "type": "email_input",
+          "settings": {
+            "half_width": true
+          }
+        },
+        "phone_input_yGFV3E": {
+          "type": "phone_input",
+          "settings": {
+            "required": true,
+            "half_width": false
+          }
+        },
+        "custom_dropdown_LcQcb6": {
+          "type": "custom_dropdown",
+          "settings": {
+            "title": "Reason for Contacting Us",
+            "multiple_options": "Product Inquiry\nOrder Delivery\nOrder Payment/Refund\nPayment Related\nOther",
+            "half_width": false
+          }
+        },
+        "message": {
+          "type": "message_input",
+          "settings": {
+            "half_width": false
+          }
+        }
+      },
+      "block_order": [
+        "name",
+        "email",
+        "phone_input_yGFV3E",
+        "custom_dropdown_LcQcb6",
+        "message"
+      ],
+      "settings": {
+        "show_page_title": false,
+        "use_columns": true,
+        "contact_title": "Contact us",
+        "contact_text": "<p>For when you need to talk with an adult, here’s how to do it.</p>"
+      }
+    },
+    "custom_liquid_kKxV38": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "full_width": true,
+        "show_space": true,
+        "code": "<div style=\"margin:0 auto;\" class=\"pxFormGenerator\" id=\"7lU9SKAFmea8puds4_RGzw\"></div>"
+      }
+    },
+    "multi_column_B3LYBi": {
+      "type": "multi-column",
+      "blocks": {
+        "text_block_rP8Cer": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": false,
+            "title": "Email Us",
+            "text": "<p><a href=\"mailto:customercare@louloulollipop.ca\" title=\"mailto:customercare@louloulollipop.com\">customercare@louloulollipop.com</a></p>",
+            "button_label": "",
+            "link": ""
+          }
+        },
+        "text_block_wKi98d": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": false,
+            "title": "Call Us",
+            "text": "<p><a href=\"tel:18334568568\" title=\"tel:18334568568\">1.833.4LOULOU</a></p>",
+            "button_label": "",
+            "link": ""
+          }
+        },
+        "text_block_7bpaRF": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": false,
+            "title": "Find Us",
+            "text": "<p>4311 Viking Way, Unit 130<br/>Richmond, BC V6V 2K9<br/>Canada</p>",
+            "button_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_rP8Cer",
+        "text_block_wKi98d",
+        "text_block_7bpaRF"
+      ],
+      "settings": {
+        "title": "",
+        "media_aspect_ratio": "s",
+        "media_width": 700,
+        "text_alignment": "center",
+        "button_style": "primary",
+        "color_scheme": "default"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_kKxV38",
+    "multi_column_B3LYBi"
+  ]
+}
