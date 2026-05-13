@@ -15,19 +15,19 @@
         "image_TKJkRj": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Desktop_-_Hero.png",
-            "mobile_image": "shopify://shop_images/Mobile_-_Hero.png",
+            "image": "shopify://shop_images/OneC_hero.png",
+            "mobile_image": "shopify://shop_images/OneC_hero-mobile.png",
             "slide_link": "",
-            "subheading": "",
-            "title": "Premium Sleep Bags",
-            "heading_max_width": 12,
-            "title_size": 80,
+            "subheading": "Introducing the",
+            "title": "OneC™ Silicone Pacifier Clip",
+            "heading_max_width": 14,
+            "title_size": 54,
             "title_size_mobile": 32,
             "use_h1": true,
-            "text": "<p><strong>Trusted by parents for a safe, restful sleep and winner of the Good Housekeeping Good for Parenting Awards.<br/></strong></p>",
+            "text": "<p><strong>The clip parents have loved for years, Reimagined to be cleaner, stronger, and made for real life.</strong></p>",
             "enlarge_text": true,
-            "button_label_1": "Shop Sleep Solutions",
-            "button_url_1": "shopify://collections/sleep-bags",
+            "button_label_1": "Shop OneC pacifier Clips",
+            "button_url_1": "shopify://collections/onec-silicone-pacifier-clips",
             "button_tag_1": "",
             "button_label_2": "",
             "button_url_2": "",
@@ -52,6 +52,23 @@
         "autoplay": true,
         "autoplay_speed": 7,
         "accessibility_info": ""
+      }
+    },
+    "featured_collection_yN3Jim": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "OneC™  Silicone Pacifier Clips",
+        "text": "<p>Stretchy, durable, and designed to withstand real-life adventures.</p>",
+        "collection": "onec-silicone-pacifier-clips",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 4,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "start"
       }
     },
     "custom_product_highlight_KJfQCU": {
@@ -1031,6 +1048,7 @@
   },
   "order": [
     "slideshow_JU4LXr",
+    "featured_collection_yN3Jim",
     "custom_product_highlight_KJfQCU",
     "logo_list_kYmwNX",
     "collection_list_VHgK7g",
