@@ -41,8 +41,8 @@
 {% endif %}
 
 {% if section.settings.enable_title_overlay == false or section.settings.show_featured_image == false or article.image == blank %}
-  <div class="container" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
-      <div class="page-header cf">
+  <div class="container--reading-width container" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
+      <div class="blog-posts page-header cf">
         <h1 class="majortitle">{{ article.title | escape }}</h1>
       </div>
   </div>
