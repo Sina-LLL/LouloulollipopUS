@@ -58,7 +58,7 @@
 
   {%- comment %} Determine which tab the current product belongs to {%- endcomment -%}
   {%- assign current_tab = '' -%}
-  {%- if product.tags contains 'new' or product.tags contains 'Seasonal' -%}
+  {%- if product.tags contains 'new' or product.tags contains 'seasonal' -%}
     {%- assign current_tab = 'new' -%}
   {%- elsif product.tags contains 'core' -%}
     {%- assign current_tab = 'core' -%}
