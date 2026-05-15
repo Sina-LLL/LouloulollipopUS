@@ -33,7 +33,7 @@
 
   {%- for sibling in sibs_collection.products -%}
     {%- unless sibling.tags contains 'hidden' -%}
-      {%- if sibling.tags contains 'new' or sibling.tags contains 'Seasonal'-%}
+      {%- if sibling.tags contains 'new' or sibling.tags contains 'seasonal'-%}
         {%- assign has_new_prints = true -%}
       {%- endif -%}
       {%- if sibling.tags contains 'core' -%}
