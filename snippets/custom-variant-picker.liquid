@@ -30,7 +30,7 @@
   {%- assign has_new_prints = false -%}
   {%- assign has_core_prints = false -%}
   {%- assign has_sale_prints = false -%}
-
+ 
   {%- for sibling in sibs_collection.products -%}
     {%- unless sibling.tags contains 'hidden' -%}
       {%- if sibling.tags contains 'new' or sibling.tags contains 'seasonal'-%}
