@@ -15,19 +15,19 @@
         "image_TKJkRj": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/OneC_hero.png",
-            "mobile_image": "shopify://shop_images/OneC_hero-mobile.png",
+            "image": "shopify://shop_images/OneC_hero_04f9ff95-3287-4574-af28-dbc0cf3f4c81_1.png",
+            "mobile_image": "shopify://shop_images/OneC_hero-mobile_1.png",
             "slide_link": "",
-            "subheading": "Introducing the",
-            "title": "OneC™ Silicone Pacifier Clip",
+            "subheading": "",
+            "title": "The Beautiful Game",
             "heading_max_width": 14,
-            "title_size": 54,
+            "title_size": 72,
             "title_size_mobile": 32,
             "use_h1": true,
-            "text": "<p><strong>The clip parents have loved for years, reimagined to be cleaner, stronger, and made for real life.</strong></p>",
+            "text": "<p>Our newest soccer-inspired print, has officially entered the lineup.</p>",
             "enlarge_text": true,
-            "button_label_1": "Shop OneC pacifier Clips",
-            "button_url_1": "shopify://collections/onec-silicone-pacifier-clips",
+            "button_label_1": "Shop The Beautiful Game",
+            "button_url_1": "shopify://collections/the-beautiful-game",
             "button_tag_1": "",
             "button_label_2": "",
             "button_url_2": "",
@@ -58,9 +58,9 @@
       "type": "featured-collection",
       "name": "Featured collection",
       "settings": {
-        "title": "OneC™  Silicone Pacifier Clips",
-        "text": "<p>Stretchy, durable, and designed to withstand real-life adventures.</p>",
-        "collection": "onec-silicone-pacifier-clips",
+        "title": "The Beautiful Game",
+        "text": "",
+        "collection": "the-beautiful-game",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 4,
@@ -69,161 +69,6 @@
         "show_view_all": true,
         "full_width": false,
         "text_alignment": "start"
-      }
-    },
-    "custom_product_highlight_KJfQCU": {
-      "type": "custom-product-highlight",
-      "name": "Highlighted Collection",
-      "settings": {
-        "title": "Gift-able Bundles",
-        "text": "<p>Complete systems. Everything parents actually need.</p>",
-        "image": "shopify://shop_images/Gift_Box_1_17a3a045-8191-43e8-be59-df6196f2ae92.jpg",
-        "order": true,
-        "product_list": [
-          "newborn-sleep-starter-bundle-safari-jungle",
-          "wild-teether-bundle-llama-bunny",
-          "baby-learning-feeding-bundle-bailey-bunny",
-          "baby-sleep-system-bundle-magical-dragons"
-        ],
-        "button_label": "Shop Bundles",
-        "link": "shopify://collections/bundles-and-sets",
-        "button_style": "primary",
-        "color_scheme": "default"
-      }
-    },
-    "logo_list_kYmwNX": {
-      "type": "logo-list",
-      "blocks": {
-        "logo_Pb9irB": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/logo.dc34ecc.svg",
-            "image_width": 150,
-            "link": "https://www.goodhousekeeping.com/childrens-products/a65382807/parenting-awards-baby-2025/",
-            "title": ""
-          }
-        },
-        "logo_mQKag7": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/the-everymom-logo.png",
-            "image_width": 200,
-            "link": "https://theeverymom.com/registry-awards/",
-            "title": ""
-          }
-        },
-        "logo_3E4WaJ": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Parents_idf45riGiK_0.png",
-            "image_width": 150,
-            "link": "https://www.parents.com/best-for-baby-awards-2025-feeding-11719843",
-            "title": ""
-          }
-        },
-        "logo_KwwATQ": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/BabyList-Logo.png",
-            "image_width": 150,
-            "link": "https://www.babylist.com/store/b/loulou-lollipop/919",
-            "title": ""
-          }
-        },
-        "logo_m3DkDJ": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/tinybeans-Logo.png",
-            "image_width": 150,
-            "link": "https://tinybeans.com/best-gifts-for-newborns/",
-            "title": ""
-          }
-        }
-      },
-      "block_order": [
-        "logo_Pb9irB",
-        "logo_mQKag7",
-        "logo_3E4WaJ",
-        "logo_KwwATQ",
-        "logo_m3DkDJ"
-      ],
-      "custom_css": [
-        ".fully-spaced-row--medium {margin-top: 2em;}"
-      ],
-      "settings": {
-        "title": "As Seen In",
-        "enable_carousel": true,
-        "carousel_speed": 30,
-        "image_opacity": 100,
-        "color_scheme": "default"
-      }
-    },
-    "collection_list_VHgK7g": {
-      "type": "collection-list",
-      "blocks": {
-        "collection_yYMgCY": {
-          "type": "collection",
-          "settings": {
-            "collection": "sleep-bags",
-            "tag": "",
-            "subheading": "Sleep Bags",
-            "button_label": ""
-          }
-        },
-        "collection_hz9HMV": {
-          "type": "collection",
-          "settings": {
-            "collection": "wear",
-            "tag": "",
-            "subheading": "Clothing",
-            "button_label": ""
-          }
-        },
-        "collection_778Cxg": {
-          "type": "collection",
-          "settings": {
-            "collection": "eat",
-            "tag": "",
-            "image": "shopify://shop_images/Tableware-white-23.jpg",
-            "subheading": "Feeding Essentials",
-            "button_label": ""
-          }
-        },
-        "collection_RkFVdV": {
-          "type": "collection",
-          "settings": {
-            "collection": "play",
-            "tag": "",
-            "image": "shopify://shop_images/Group_3.jpg",
-            "subheading": "Toys & Play",
-            "button_label": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection_yYMgCY",
-        "collection_hz9HMV",
-        "collection_778Cxg",
-        "collection_RkFVdV"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "Shop by Category",
-        "text": "",
-        "text_alignment": "start",
-        "enable_carousel": false,
-        "grid": 4,
-        "color_scheme": "1",
-        "full_width": false,
-        "coll_grid_image_shape": "portrait-23",
-        "coll_grid_image_position": "center center",
-        "coll_thumb_mob_per_row": "2",
-        "coll_grid_show_count": false,
-        "coll_text_position": "below",
-        "coll_text_position_under_mobile": false,
-        "coll_thumb_text_align_x": "center",
-        "coll_thumb_text_align_y": "center",
-        "coll_button_style": "primary"
       }
     },
     "collection_list_aakDiY": {
@@ -320,6 +165,7 @@
         "collection_j8GdED",
         "collection_4HbMHd"
       ],
+      "name": "Shop by Category",
       "settings": {
         "title": "Shop by Category",
         "text": "",
@@ -329,6 +175,161 @@
         "color_scheme": "1",
         "full_width": true,
         "coll_grid_image_shape": "square",
+        "coll_grid_image_position": "center center",
+        "coll_thumb_mob_per_row": "2",
+        "coll_grid_show_count": false,
+        "coll_text_position": "below",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_y": "center",
+        "coll_button_style": "primary"
+      }
+    },
+    "logo_list_kYmwNX": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_Pb9irB": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/logo.dc34ecc.svg",
+            "image_width": 150,
+            "link": "https://www.goodhousekeeping.com/childrens-products/a65382807/parenting-awards-baby-2025/",
+            "title": ""
+          }
+        },
+        "logo_mQKag7": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/the-everymom-logo.png",
+            "image_width": 200,
+            "link": "https://theeverymom.com/registry-awards/",
+            "title": ""
+          }
+        },
+        "logo_3E4WaJ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Parents_idf45riGiK_0.png",
+            "image_width": 150,
+            "link": "https://www.parents.com/best-for-baby-awards-2025-feeding-11719843",
+            "title": ""
+          }
+        },
+        "logo_KwwATQ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/BabyList-Logo.png",
+            "image_width": 150,
+            "link": "https://www.babylist.com/store/b/loulou-lollipop/919",
+            "title": ""
+          }
+        },
+        "logo_m3DkDJ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/tinybeans-Logo.png",
+            "image_width": 150,
+            "link": "https://tinybeans.com/best-gifts-for-newborns/",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_Pb9irB",
+        "logo_mQKag7",
+        "logo_3E4WaJ",
+        "logo_KwwATQ",
+        "logo_m3DkDJ"
+      ],
+      "custom_css": [
+        ".fully-spaced-row--medium {margin-top: 2em;}"
+      ],
+      "settings": {
+        "title": "As Seen In",
+        "enable_carousel": true,
+        "carousel_speed": 30,
+        "image_opacity": 100,
+        "color_scheme": "default"
+      }
+    },
+    "custom_product_highlight_KJfQCU": {
+      "type": "custom-product-highlight",
+      "name": "Highlighted Collection",
+      "settings": {
+        "title": "Gift-able Bundles",
+        "text": "<p>Complete systems. Everything parents actually need.</p>",
+        "image": "shopify://shop_images/Gift_Box_1_17a3a045-8191-43e8-be59-df6196f2ae92.jpg",
+        "order": true,
+        "product_list": [
+          "newborn-sleep-starter-bundle-safari-jungle",
+          "wild-teether-bundle-llama-bunny",
+          "baby-learning-feeding-bundle-bailey-bunny",
+          "baby-sleep-system-bundle-magical-dragons"
+        ],
+        "button_label": "Shop Bundles",
+        "link": "shopify://collections/bundles-and-sets",
+        "button_style": "primary",
+        "color_scheme": "default"
+      }
+    },
+    "collection_list_VHgK7g": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_yYMgCY": {
+          "type": "collection",
+          "settings": {
+            "collection": "sleep-bags",
+            "tag": "",
+            "subheading": "Sleep Bags",
+            "button_label": ""
+          }
+        },
+        "collection_hz9HMV": {
+          "type": "collection",
+          "settings": {
+            "collection": "wear",
+            "tag": "",
+            "subheading": "Clothing",
+            "button_label": ""
+          }
+        },
+        "collection_778Cxg": {
+          "type": "collection",
+          "settings": {
+            "collection": "eat",
+            "tag": "",
+            "image": "shopify://shop_images/Tableware-white-23.jpg",
+            "subheading": "Feeding Essentials",
+            "button_label": ""
+          }
+        },
+        "collection_RkFVdV": {
+          "type": "collection",
+          "settings": {
+            "collection": "play",
+            "tag": "",
+            "image": "shopify://shop_images/Group_3.jpg",
+            "subheading": "Toys & Play",
+            "button_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_yYMgCY",
+        "collection_hz9HMV",
+        "collection_778Cxg",
+        "collection_RkFVdV"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Shop by Category",
+        "text": "",
+        "text_alignment": "start",
+        "enable_carousel": false,
+        "grid": 4,
+        "color_scheme": "1",
+        "full_width": false,
+        "coll_grid_image_shape": "portrait-23",
         "coll_grid_image_position": "center center",
         "coll_thumb_mob_per_row": "2",
         "coll_grid_show_count": false,
@@ -1049,16 +1050,16 @@
   "order": [
     "slideshow_JU4LXr",
     "featured_collection_yN3Jim",
-    "custom_product_highlight_KJfQCU",
-    "logo_list_kYmwNX",
-    "collection_list_VHgK7g",
     "collection_list_aakDiY",
-    "logo_list_ywatnw",
+    "logo_list_kYmwNX",
     "featured_collection_RGPeGr",
-    "testimonials_QcyQ3m",
+    "custom_product_highlight_KJfQCU",
+    "collection_list_VHgK7g",
     "collection_list_zhMrUA",
-    "multi_column_KCzHEY",
+    "logo_list_ywatnw",
     "collection_list_FxKgEx",
+    "multi_column_KCzHEY",
+    "testimonials_QcyQ3m",
     "1737676593fa7ff914",
     "16359276425da8ce46",
     "shop_the_look_HrgpQK",
