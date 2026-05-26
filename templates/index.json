@@ -15,19 +15,19 @@
         "image_TKJkRj": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/OneC_hero.png",
-            "mobile_image": "shopify://shop_images/OneC_hero-mobile.png",
+            "image": "shopify://shop_images/OneC_hero_1_02a6792c-5671-4760-bc99-1382b0edeb41.png",
+            "mobile_image": "shopify://shop_images/OneC_hero-mobile_1.png",
             "slide_link": "",
-            "subheading": "Introducing the",
-            "title": "OneC™ Silicone Pacifier Clip",
+            "subheading": "",
+            "title": "The Beautiful Game",
             "heading_max_width": 14,
-            "title_size": 54,
+            "title_size": 72,
             "title_size_mobile": 32,
             "use_h1": true,
-            "text": "<p><strong>The clip parents have loved for years, reimagined to be cleaner, stronger, and made for real life.</strong></p>",
+            "text": "<p>Our newest soccer-inspired print, has officially entered the lineup.</p>",
             "enlarge_text": true,
-            "button_label_1": "Shop OneC pacifier Clips",
-            "button_url_1": "shopify://collections/onec-silicone-pacifier-clips",
+            "button_label_1": "Shop The Beautiful Game",
+            "button_url_1": "shopify://collections/the-beautiful-game",
             "button_tag_1": "",
             "button_label_2": "",
             "button_url_2": "",
@@ -58,9 +58,9 @@
       "type": "featured-collection",
       "name": "Featured collection",
       "settings": {
-        "title": "OneC™  Silicone Pacifier Clips",
-        "text": "<p>Stretchy, durable, and designed to withstand real-life adventures.</p>",
-        "collection": "onec-silicone-pacifier-clips",
+        "title": "The Beautiful Game",
+        "text": "",
+        "collection": "the-beautiful-game",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 4,
@@ -69,161 +69,6 @@
         "show_view_all": true,
         "full_width": false,
         "text_alignment": "start"
-      }
-    },
-    "custom_product_highlight_KJfQCU": {
-      "type": "custom-product-highlight",
-      "name": "Highlighted Collection",
-      "settings": {
-        "title": "Gift-able Bundles",
-        "text": "<p>Complete systems. Everything parents actually need.</p>",
-        "image": "shopify://shop_images/Gift_Box_1_17a3a045-8191-43e8-be59-df6196f2ae92.jpg",
-        "order": true,
-        "product_list": [
-          "newborn-sleep-starter-bundle-safari-jungle",
-          "wild-teether-bundle-llama-bunny",
-          "baby-learning-feeding-bundle-bailey-bunny",
-          "baby-sleep-system-bundle-magical-dragons"
-        ],
-        "button_label": "Shop Bundles",
-        "link": "shopify://collections/bundles-and-sets",
-        "button_style": "primary",
-        "color_scheme": "default"
-      }
-    },
-    "logo_list_kYmwNX": {
-      "type": "logo-list",
-      "blocks": {
-        "logo_Pb9irB": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/logo.dc34ecc.svg",
-            "image_width": 150,
-            "link": "https://www.goodhousekeeping.com/childrens-products/a65382807/parenting-awards-baby-2025/",
-            "title": ""
-          }
-        },
-        "logo_mQKag7": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/the-everymom-logo.png",
-            "image_width": 200,
-            "link": "https://theeverymom.com/registry-awards/",
-            "title": ""
-          }
-        },
-        "logo_3E4WaJ": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Parents_idf45riGiK_0.png",
-            "image_width": 150,
-            "link": "https://www.parents.com/best-for-baby-awards-2025-feeding-11719843",
-            "title": ""
-          }
-        },
-        "logo_KwwATQ": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/BabyList-Logo.png",
-            "image_width": 150,
-            "link": "https://www.babylist.com/store/b/loulou-lollipop/919",
-            "title": ""
-          }
-        },
-        "logo_m3DkDJ": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/tinybeans-Logo.png",
-            "image_width": 150,
-            "link": "https://tinybeans.com/best-gifts-for-newborns/",
-            "title": ""
-          }
-        }
-      },
-      "block_order": [
-        "logo_Pb9irB",
-        "logo_mQKag7",
-        "logo_3E4WaJ",
-        "logo_KwwATQ",
-        "logo_m3DkDJ"
-      ],
-      "custom_css": [
-        ".fully-spaced-row--medium {margin-top: 2em;}"
-      ],
-      "settings": {
-        "title": "As Seen In",
-        "enable_carousel": true,
-        "carousel_speed": 30,
-        "image_opacity": 100,
-        "color_scheme": "default"
-      }
-    },
-    "collection_list_VHgK7g": {
-      "type": "collection-list",
-      "blocks": {
-        "collection_yYMgCY": {
-          "type": "collection",
-          "settings": {
-            "collection": "sleep-bags",
-            "tag": "",
-            "subheading": "Sleep Bags",
-            "button_label": ""
-          }
-        },
-        "collection_hz9HMV": {
-          "type": "collection",
-          "settings": {
-            "collection": "wear",
-            "tag": "",
-            "subheading": "Clothing",
-            "button_label": ""
-          }
-        },
-        "collection_778Cxg": {
-          "type": "collection",
-          "settings": {
-            "collection": "eat",
-            "tag": "",
-            "image": "shopify://shop_images/Tableware-white-23.jpg",
-            "subheading": "Feeding Essentials",
-            "button_label": ""
-          }
-        },
-        "collection_RkFVdV": {
-          "type": "collection",
-          "settings": {
-            "collection": "play",
-            "tag": "",
-            "image": "shopify://shop_images/Group_3.jpg",
-            "subheading": "Toys & Play",
-            "button_label": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection_yYMgCY",
-        "collection_hz9HMV",
-        "collection_778Cxg",
-        "collection_RkFVdV"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "Shop by Category",
-        "text": "",
-        "text_alignment": "start",
-        "enable_carousel": false,
-        "grid": 4,
-        "color_scheme": "1",
-        "full_width": false,
-        "coll_grid_image_shape": "portrait-23",
-        "coll_grid_image_position": "center center",
-        "coll_thumb_mob_per_row": "2",
-        "coll_grid_show_count": false,
-        "coll_text_position": "below",
-        "coll_text_position_under_mobile": false,
-        "coll_thumb_text_align_x": "center",
-        "coll_thumb_text_align_y": "center",
-        "coll_button_style": "primary"
       }
     },
     "collection_list_aakDiY": {
@@ -320,6 +165,7 @@
         "collection_j8GdED",
         "collection_4HbMHd"
       ],
+      "name": "Shop by Category",
       "settings": {
         "title": "Shop by Category",
         "text": "",
@@ -339,66 +185,68 @@
         "coll_button_style": "primary"
       }
     },
-    "logo_list_ywatnw": {
+    "logo_list_kYmwNX": {
       "type": "logo-list",
       "blocks": {
-        "logo_FxPmVy": {
+        "logo_Pb9irB": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/ICON-SM-6.svg",
-            "image_width": 80,
-            "link": "",
-            "title": "Safe for Babies"
+            "image": "shopify://shop_images/logo.dc34ecc.svg",
+            "image_width": 150,
+            "link": "https://www.goodhousekeeping.com/childrens-products/a65382807/parenting-awards-baby-2025/",
+            "title": ""
           }
         },
-        "logo_tawCLk": {
+        "logo_mQKag7": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/Certified_B_Corporation_B_Corp_Logo_2022_Black_RGB_svg.webp",
-            "image_width": 80,
-            "link": "https://www.bcorporation.net/en-us/",
-            "title": "Certified B Corp"
+            "image": "shopify://shop_images/the-everymom-logo.png",
+            "image_width": 200,
+            "link": "https://theeverymom.com/registry-awards/",
+            "title": ""
           }
         },
-        "logo_D6VaH9": {
+        "logo_3E4WaJ": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/Benefits-of-Partnering-with-a-WBENC-Certified-Women-Business-Enterprise-Public-Relations-and-Marketing-Agency-feature.webp",
-            "image_width": 130,
-            "link": "https://buywomenowned.com/",
-            "title": "Women-Owned"
+            "image": "shopify://shop_images/Parents_idf45riGiK_0.png",
+            "image_width": 150,
+            "link": "https://www.parents.com/best-for-baby-awards-2025-feeding-11719843",
+            "title": ""
           }
         },
-        "logo_Yg37w8": {
+        "logo_KwwATQ": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/OEKO_TEX.png",
-            "image_width": 80,
-            "link": "https://www.oeko-tex.com/en/",
-            "title": "Safety Certified"
+            "image": "shopify://shop_images/BabyList-Logo.png",
+            "image_width": 150,
+            "link": "https://www.babylist.com/store/b/loulou-lollipop/919",
+            "title": ""
           }
         },
-        "logo_cNXMbY": {
+        "logo_m3DkDJ": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/ICON-SM-16.svg",
-            "image_width": 80,
-            "link": "",
-            "title": "Phthalate Free"
+            "image": "shopify://shop_images/tinybeans-Logo.png",
+            "image_width": 150,
+            "link": "https://tinybeans.com/best-gifts-for-newborns/",
+            "title": ""
           }
         }
       },
       "block_order": [
-        "logo_FxPmVy",
-        "logo_tawCLk",
-        "logo_D6VaH9",
-        "logo_Yg37w8",
-        "logo_cNXMbY"
+        "logo_Pb9irB",
+        "logo_mQKag7",
+        "logo_3E4WaJ",
+        "logo_KwwATQ",
+        "logo_m3DkDJ"
       ],
-      "name": "USP List",
+      "custom_css": [
+        ".fully-spaced-row--medium {margin-top: 2em;}"
+      ],
       "settings": {
-        "title": "Our Commitments",
-        "enable_carousel": false,
+        "title": "As Seen In",
+        "enable_carousel": true,
         "carousel_speed": 30,
         "image_opacity": 100,
         "color_scheme": "default"
@@ -421,74 +269,92 @@
         "text_alignment": "start"
       }
     },
-    "testimonials_QcyQ3m": {
-      "type": "testimonials",
+    "custom_product_highlight_KJfQCU": {
+      "type": "custom-product-highlight",
+      "name": "Highlighted Collection",
+      "settings": {
+        "title": "Gift-able Bundles",
+        "text": "<p>Complete systems. Everything parents actually need.</p>",
+        "image": "shopify://shop_images/Gift_Box_1_17a3a045-8191-43e8-be59-df6196f2ae92.jpg",
+        "order": true,
+        "product_list": [
+          "newborn-sleep-starter-bundle-safari-jungle",
+          "wild-teether-bundle-llama-bunny",
+          "baby-learning-feeding-bundle-bailey-bunny",
+          "baby-sleep-system-bundle-magical-dragons"
+        ],
+        "button_label": "Shop Bundles",
+        "link": "shopify://collections/bundles-and-sets",
+        "button_style": "primary",
+        "color_scheme": "default"
+      }
+    },
+    "collection_list_VHgK7g": {
+      "type": "collection-list",
       "blocks": {
-        "testimonial_GeyPpp": {
-          "type": "testimonial",
+        "collection_yYMgCY": {
+          "type": "collection",
           "settings": {
-            "star_rating": 5,
-            "testimonial-title": "LOVE the bees!! 🐝",
-            "testimonial": "Super soft, we love the fold over mitts and socks! Couldn’t be more in love with the pattern as well.",
-            "author": "Stacey D",
-            "image": "shopify://shop_images/6f343775-42fa-5aff-8245-6d9a0ec41c98.jpg",
-            "image_caption": "",
-            "link": "shopify://products/sleeper-bumble-bees"
+            "collection": "sleep-bags",
+            "tag": "",
+            "subheading": "Sleep Bags",
+            "button_label": ""
           }
         },
-        "testimonial_ReBUHt": {
-          "type": "testimonial",
+        "collection_hz9HMV": {
+          "type": "collection",
           "settings": {
-            "star_rating": 5,
-            "testimonial-title": "Surprisingly soft",
-            "testimonial": "I am really impressed with this bib! It is the softest waterproof bib we own by far; I don’t know how they managed to make it both soft and functional, but it is definitely both.",
-            "author": "",
-            "image": "shopify://shop_images/22ab6ac7-6f8e-5b3b-a508-6bf3da54680e.jpg",
-            "image_caption": "",
-            "link": "shopify://products/long-sleeve-bib-sweet-treats"
+            "collection": "wear",
+            "tag": "",
+            "subheading": "Clothing",
+            "button_label": ""
           }
         },
-        "testimonial_PAPAeQ": {
-          "type": "testimonial",
+        "collection_778Cxg": {
+          "type": "collection",
           "settings": {
-            "star_rating": 5,
-            "testimonial-title": "Love these— go to sleep sack",
-            "testimonial": "I absolutely love these sleep sacks and other LouLou products! The quality is fantastic and has endured many washes!!",
-            "author": "Dcgilmr",
-            "image": "shopify://shop_images/a6aa598a-c4b7-5ce4-a018-d67bd5c85bcb.jpg",
-            "image_caption": "",
-            "link": "shopify://collections/sleep-bags"
+            "collection": "eat",
+            "tag": "",
+            "image": "shopify://shop_images/Tableware-white-23.jpg",
+            "subheading": "Feeding Essentials",
+            "button_label": ""
           }
         },
-        "testimonial_xULPJF": {
-          "type": "testimonial",
+        "collection_RkFVdV": {
+          "type": "collection",
           "settings": {
-            "star_rating": 5,
-            "testimonial-title": "Softest Muslin",
-            "testimonial": "Love these Muslim swaddles. I use them as lightweight and breathable summer blankets for my 8 month old. Large enough to cover his stroller for nap time or just to keep the sun off him.",
-            "author": "Jasminetara",
-            "image": "shopify://shop_images/500b5d60-9252-53bc-8df9-b53c73d4d475.jpg",
-            "image_caption": "",
-            "link": "shopify://products/muslin-swaddle-sushi"
+            "collection": "play",
+            "tag": "",
+            "image": "shopify://shop_images/Group_3.jpg",
+            "subheading": "Toys & Play",
+            "button_label": ""
           }
         }
       },
       "block_order": [
-        "testimonial_GeyPpp",
-        "testimonial_ReBUHt",
-        "testimonial_PAPAeQ",
-        "testimonial_xULPJF"
+        "collection_yYMgCY",
+        "collection_hz9HMV",
+        "collection_778Cxg",
+        "collection_RkFVdV"
       ],
+      "disabled": true,
       "settings": {
-        "title": "The Quality That Lasts",
-        "layout": "image-right",
-        "text_caps": false,
-        "quote_text_size": 24,
-        "quote_text_size_mobile": 16,
-        "image_shape": "square",
-        "color_scheme": "default",
-        "autoplay": true,
-        "autoplay_speed": 5
+        "title": "Shop by Category",
+        "text": "",
+        "text_alignment": "start",
+        "enable_carousel": false,
+        "grid": 4,
+        "color_scheme": "1",
+        "full_width": false,
+        "coll_grid_image_shape": "portrait-23",
+        "coll_grid_image_position": "center center",
+        "coll_thumb_mob_per_row": "2",
+        "coll_grid_show_count": false,
+        "coll_text_position": "below",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_y": "center",
+        "coll_button_style": "primary"
       }
     },
     "collection_list_zhMrUA": {
@@ -600,58 +466,68 @@
         "coll_button_style": "primary"
       }
     },
-    "multi_column_KCzHEY": {
-      "type": "multi-column",
+    "logo_list_ywatnw": {
+      "type": "logo-list",
       "blocks": {
-        "text_block_pmbEg6": {
-          "type": "text_block",
+        "logo_FxPmVy": {
+          "type": "logo",
           "settings": {
-            "enable_media": true,
-            "image": "shopify://shop_images/Heart.svg",
-            "title": "Made by Moms",
-            "text": "<p>Made by twin sisters and self-proclaimed picky moms who get it.</p>",
-            "button_label": "",
-            "link": ""
+            "image": "shopify://shop_images/ICON-SM-6.svg",
+            "image_width": 80,
+            "link": "",
+            "title": "Safe for Babies"
           }
         },
-        "text_block_EgmCLD": {
-          "type": "text_block",
+        "logo_tawCLk": {
+          "type": "logo",
           "settings": {
-            "enable_media": true,
-            "image": "shopify://shop_images/Happy.svg",
-            "title": "Safe materials",
-            "text": "<p>We only use premium, non-toxic, safety-tested materials—like buttery soft TENCEL™ Lyocell and 100% food-grade silicone.</p>",
-            "button_label": "",
-            "link": ""
+            "image": "shopify://shop_images/Certified_B_Corporation_B_Corp_Logo_2022_Black_RGB_svg.webp",
+            "image_width": 80,
+            "link": "https://www.bcorporation.net/en-us/",
+            "title": "Certified B Corp"
           }
         },
-        "text_block_tFgzTX": {
-          "type": "text_block",
+        "logo_D6VaH9": {
+          "type": "logo",
           "settings": {
-            "enable_media": true,
-            "image": "shopify://shop_images/Medal.svg",
-            "title": "Trusted Since 2015",
-            "text": "<p>From first smiles to first foods, we’ve been there for the baby moments you’ll never forget.</p>",
-            "button_label": "",
-            "link": ""
+            "image": "shopify://shop_images/Benefits-of-Partnering-with-a-WBENC-Certified-Women-Business-Enterprise-Public-Relations-and-Marketing-Agency-feature.webp",
+            "image_width": 130,
+            "link": "https://buywomenowned.com/",
+            "title": "Women-Owned"
+          }
+        },
+        "logo_Yg37w8": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/OEKO_TEX.png",
+            "image_width": 80,
+            "link": "https://www.oeko-tex.com/en/",
+            "title": "Safety Certified"
+          }
+        },
+        "logo_cNXMbY": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/ICON-SM-16.svg",
+            "image_width": 80,
+            "link": "",
+            "title": "Phthalate Free"
           }
         }
       },
       "block_order": [
-        "text_block_pmbEg6",
-        "text_block_EgmCLD",
-        "text_block_tFgzTX"
+        "logo_FxPmVy",
+        "logo_tawCLk",
+        "logo_D6VaH9",
+        "logo_Yg37w8",
+        "logo_cNXMbY"
       ],
-      "custom_css": [
-        ".img-ar--cover img {object-fit: fill;}"
-      ],
-      "name": "Company Message",
+      "name": "USP List",
       "settings": {
-        "title": "Why Loulou Lollipop",
-        "media_aspect_ratio": "s",
-        "media_width": 60,
-        "text_alignment": "center",
-        "button_style": "primary",
+        "title": "Our Commitments",
+        "enable_carousel": false,
+        "carousel_speed": 30,
+        "image_opacity": 100,
         "color_scheme": "default"
       }
     },
@@ -711,6 +587,131 @@
         "coll_thumb_text_align_x": "center",
         "coll_thumb_text_align_y": "bottom",
         "coll_button_style": "primary"
+      }
+    },
+    "multi_column_KCzHEY": {
+      "type": "multi-column",
+      "blocks": {
+        "text_block_pmbEg6": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "image": "shopify://shop_images/Heart.svg",
+            "title": "Made by Moms",
+            "text": "<p>Made by twin sisters and self-proclaimed picky moms who get it.</p>",
+            "button_label": "",
+            "link": ""
+          }
+        },
+        "text_block_EgmCLD": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "image": "shopify://shop_images/Happy.svg",
+            "title": "Safe materials",
+            "text": "<p>We only use premium, non-toxic, safety-tested materials—like buttery soft TENCEL™ Lyocell and 100% food-grade silicone.</p>",
+            "button_label": "",
+            "link": ""
+          }
+        },
+        "text_block_tFgzTX": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "image": "shopify://shop_images/Medal.svg",
+            "title": "Trusted Since 2015",
+            "text": "<p>From first smiles to first foods, we’ve been there for the baby moments you’ll never forget.</p>",
+            "button_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_pmbEg6",
+        "text_block_EgmCLD",
+        "text_block_tFgzTX"
+      ],
+      "custom_css": [
+        ".img-ar--cover img {object-fit: fill;}"
+      ],
+      "name": "Company Message",
+      "settings": {
+        "title": "Why Loulou Lollipop",
+        "media_aspect_ratio": "s",
+        "media_width": 60,
+        "text_alignment": "center",
+        "button_style": "primary",
+        "color_scheme": "default"
+      }
+    },
+    "testimonials_QcyQ3m": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_GeyPpp": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 5,
+            "testimonial-title": "LOVE the bees!! 🐝",
+            "testimonial": "Super soft, we love the fold over mitts and socks! Couldn’t be more in love with the pattern as well.",
+            "author": "Stacey D",
+            "image": "shopify://shop_images/6f343775-42fa-5aff-8245-6d9a0ec41c98.jpg",
+            "image_caption": "",
+            "link": "shopify://products/sleeper-bumble-bees"
+          }
+        },
+        "testimonial_ReBUHt": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 5,
+            "testimonial-title": "Surprisingly soft",
+            "testimonial": "I am really impressed with this bib! It is the softest waterproof bib we own by far; I don’t know how they managed to make it both soft and functional, but it is definitely both.",
+            "author": "",
+            "image": "shopify://shop_images/22ab6ac7-6f8e-5b3b-a508-6bf3da54680e.jpg",
+            "image_caption": "",
+            "link": "shopify://products/long-sleeve-bib-sweet-treats"
+          }
+        },
+        "testimonial_PAPAeQ": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 5,
+            "testimonial-title": "Love these— go to sleep sack",
+            "testimonial": "I absolutely love these sleep sacks and other LouLou products! The quality is fantastic and has endured many washes!!",
+            "author": "Dcgilmr",
+            "image": "shopify://shop_images/a6aa598a-c4b7-5ce4-a018-d67bd5c85bcb.jpg",
+            "image_caption": "",
+            "link": "shopify://collections/sleep-bags"
+          }
+        },
+        "testimonial_xULPJF": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 5,
+            "testimonial-title": "Softest Muslin",
+            "testimonial": "Love these Muslim swaddles. I use them as lightweight and breathable summer blankets for my 8 month old. Large enough to cover his stroller for nap time or just to keep the sun off him.",
+            "author": "Jasminetara",
+            "image": "shopify://shop_images/500b5d60-9252-53bc-8df9-b53c73d4d475.jpg",
+            "image_caption": "",
+            "link": "shopify://products/muslin-swaddle-sushi"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_GeyPpp",
+        "testimonial_ReBUHt",
+        "testimonial_PAPAeQ",
+        "testimonial_xULPJF"
+      ],
+      "settings": {
+        "title": "The Quality That Lasts",
+        "layout": "image-right",
+        "text_caps": false,
+        "quote_text_size": 24,
+        "quote_text_size_mobile": 16,
+        "image_shape": "square",
+        "color_scheme": "default",
+        "autoplay": true,
+        "autoplay_speed": 5
       }
     },
     "1737676593fa7ff914": {
@@ -1049,16 +1050,16 @@
   "order": [
     "slideshow_JU4LXr",
     "featured_collection_yN3Jim",
-    "custom_product_highlight_KJfQCU",
-    "logo_list_kYmwNX",
-    "collection_list_VHgK7g",
     "collection_list_aakDiY",
-    "logo_list_ywatnw",
+    "logo_list_kYmwNX",
     "featured_collection_RGPeGr",
-    "testimonials_QcyQ3m",
+    "custom_product_highlight_KJfQCU",
+    "collection_list_VHgK7g",
     "collection_list_zhMrUA",
-    "multi_column_KCzHEY",
+    "logo_list_ywatnw",
     "collection_list_FxKgEx",
+    "multi_column_KCzHEY",
+    "testimonials_QcyQ3m",
     "1737676593fa7ff914",
     "16359276425da8ce46",
     "shop_the_look_HrgpQK",
