@@ -30,10 +30,10 @@
   {%- assign has_new_prints = false -%}
   {%- assign has_core_prints = false -%}
   {%- assign has_sale_prints = false -%}
-
+ 
   {%- for sibling in sibs_collection.products -%}
     {%- unless sibling.tags contains 'hidden' -%}
-      {%- if sibling.tags contains 'new' or sibling.tags contains 'Seasonal'-%}
+      {%- if sibling.tags contains 'new' or sibling.tags contains 'seasonal'-%}
         {%- assign has_new_prints = true -%}
       {%- endif -%}
       {%- if sibling.tags contains 'core' -%}
@@ -58,7 +58,7 @@
 
   {%- comment %} Determine which tab the current product belongs to {%- endcomment -%}
   {%- assign current_tab = '' -%}
-  {%- if product.tags contains 'new' or product.tags contains 'Seasonal' -%}
+  {%- if product.tags contains 'new' or product.tags contains 'seasonal' -%}
     {%- assign current_tab = 'new' -%}
   {%- elsif product.tags contains 'core' -%}
     {%- assign current_tab = 'core' -%}
@@ -258,7 +258,7 @@
           {% comment %} Seasonal Tab - Seasonal prints (not Core) {% endcomment %}
           {%- for sibling in sibs_collection.products -%}
             {%- unless sibling.tags contains 'hidden' -%}
-              {%- if sibling.tags contains 'Seasonal' and sibling.available-%}
+              {%- if sibling.tags contains 'seasonal' and sibling.available-%}
                 <a href="{{ sibling.url }}"
                   class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}"
                   data-color="{{ sibling.metafields.theme.cutline }}"
