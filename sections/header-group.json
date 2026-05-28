@@ -132,9 +132,9 @@
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "New & Featured",
-            "image": "shopify://shop_images/Header_Image_-_CC.png",
-            "title": "Curious Cuddles",
-            "link_url": "shopify://collections/curious-cuddles"
+            "image": "shopify://shop_images/OneC_Nav.png",
+            "title": "OneC™ Pacifier Clips",
+            "link_url": "shopify://collections/onec-silicone-pacifier-clips"
           }
         },
         "menu_promotion_small_j7EtDw": {
@@ -146,38 +146,74 @@
             "link_url": "shopify://collections/safari-jungle"
           }
         },
+        "menu_promotion_small_kA794H": {
+          "type": "menu-promotion-small",
+          "settings": {
+            "dropdown_link_title": "New & Featured",
+            "image": "shopify://shop_images/Nav_7.png",
+            "title": "Mermaids",
+            "link_url": "shopify://collections/mermaids"
+          }
+        },
         "menu_promotion_small_tKL9pd": {
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "Sleep & Bedding",
-            "image": "shopify://shop_images/Header_Image_-_Sleepbag.png",
+            "image": "shopify://shop_images/Nav_02.png",
             "title": "Sleep Bags",
             "link_url": "shopify://collections/sleep-bags"
           }
         },
-        "menu_promotion_small_8ghxfY": {
+        "menu_promotion_small_ainHNJ": {
           "type": "menu-promotion-small",
           "settings": {
-            "dropdown_link_title": "Clothing",
-            "image": "shopify://shop_images/Header_Image_-_Pajamas.png",
-            "title": "Pajamas",
-            "link_url": "shopify://collections/pajamas"
+            "dropdown_link_title": "Sleep & Bedding",
+            "image": "shopify://shop_images/Nav_03.png",
+            "title": "Muslin Quilts",
+            "link_url": "shopify://collections/muslin-quilt"
+          }
+        },
+        "menu_promotion_small_aemhfK": {
+          "type": "menu-promotion-small",
+          "settings": {
+            "dropdown_link_title": "Sleep & Bedding",
+            "image": "shopify://shop_images/Nav_01.png",
+            "title": "Swaddles",
+            "link_url": "shopify://collections/swaddles"
           }
         },
         "menu_promotion_small_MfmWBr": {
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "Clothing",
-            "image": "shopify://shop_images/Header_Image_-_Dresses.png",
+            "image": "shopify://shop_images/Dress_Nav.png",
             "title": "Dresses",
             "link_url": "shopify://collections/dresses"
+          }
+        },
+        "menu_promotion_small_f6KPji": {
+          "type": "menu-promotion-small",
+          "settings": {
+            "dropdown_link_title": "Clothing",
+            "image": "shopify://shop_images/Sleeper_Nav.png",
+            "title": "Sleepers",
+            "link_url": "shopify://collections/sleepers"
+          }
+        },
+        "menu_promotion_small_8ghxfY": {
+          "type": "menu-promotion-small",
+          "settings": {
+            "dropdown_link_title": "Clothing",
+            "image": "shopify://shop_images/PJs_Nav.png",
+            "title": "Pajamas",
+            "link_url": "shopify://collections/pajamas"
           }
         },
         "menu_promotion_small_VjUPFk": {
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "Feeding",
-            "image": "shopify://shop_images/Header_Image_-_SILBIB.png",
+            "image": "shopify://shop_images/Nav_4.png",
             "title": "Silicone Bibs",
             "link_url": "shopify://collections/silicone-bibs"
           }
@@ -186,7 +222,7 @@
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "Feeding",
-            "image": "shopify://shop_images/Header_Image_-_Suction_Plates.png",
+            "image": "shopify://shop_images/Nav_5.png",
             "title": "Suction Plates",
             "link_url": "shopify://collections/suction-plates"
           }
@@ -195,7 +231,7 @@
           "type": "menu-promotion-small",
           "settings": {
             "dropdown_link_title": "Feeding",
-            "image": "shopify://shop_images/Long_Sleeve_Bibs_-_Header_Image.png",
+            "image": "shopify://shop_images/Nav_6.png",
             "title": "Long Sleeve Bibs",
             "link_url": "shopify://collections/long-sleeve-bibs"
           }
@@ -227,6 +263,15 @@
             "link_url": "shopify://collections/wet-bags"
           }
         },
+        "menu_promotion_small_TpYzid": {
+          "type": "menu-promotion-small",
+          "settings": {
+            "dropdown_link_title": "Toys & Play",
+            "image": "shopify://shop_images/SILCPOCPQZ_01_b0ff64a5-f5bb-4ee1-9692-e9545270614e.jpg",
+            "title": "Pacifier Clips",
+            "link_url": "shopify://collections/pacifier-clips"
+          }
+        },
         "menu_promotion_small_pTVJy3": {
           "type": "menu-promotion-small",
           "settings": {
@@ -247,6 +292,7 @@
         },
         "menu_promotion_small_9XzrdD": {
           "type": "menu-promotion-small",
+          "disabled": true,
           "settings": {
             "dropdown_link_title": "Top Gifts",
             "image": "shopify://shop_images/loulounewborn-10.jpg",
@@ -256,6 +302,7 @@
         },
         "menu_promotion_small_mgLirm": {
           "type": "menu-promotion-small",
+          "disabled": true,
           "settings": {
             "dropdown_link_title": "Bundles & Gifts",
             "image": "shopify://shop_images/DS-NB001_113.jpg",
@@ -265,6 +312,7 @@
         },
         "menu_promotion_small_9UBNbq": {
           "type": "menu-promotion-small",
+          "disabled": true,
           "settings": {
             "dropdown_link_title": "Bundles & Gifts",
             "image": "shopify://shop_images/Frame_1_719c04ec-ea55-404e-be01-73014c2ccfb9.png",
@@ -274,6 +322,7 @@
         },
         "menu_promotion_small_jbPGfw": {
           "type": "menu-promotion-small",
+          "disabled": true,
           "settings": {
             "dropdown_link_title": "SALE",
             "image": "shopify://shop_images/Muslin_Sleep_Bag_-_Football_0c59d1d0-f7a4-430a-826f-73ab11404543.jpg",
@@ -283,6 +332,7 @@
         },
         "menu_promotion_small_7d9UtM": {
           "type": "menu-promotion-small",
+          "disabled": true,
           "settings": {
             "dropdown_link_title": "Sale",
             "image": "shopify://shop_images/BLBodysuit-RustGeo_11_8b61ad77-2139-40ac-b88d-d18ebbbddb7e.jpg",
@@ -330,15 +380,20 @@
       "block_order": [
         "menu_promotion_small_LfPP96",
         "menu_promotion_small_j7EtDw",
+        "menu_promotion_small_kA794H",
         "menu_promotion_small_tKL9pd",
-        "menu_promotion_small_8ghxfY",
+        "menu_promotion_small_ainHNJ",
+        "menu_promotion_small_aemhfK",
         "menu_promotion_small_MfmWBr",
+        "menu_promotion_small_f6KPji",
+        "menu_promotion_small_8ghxfY",
         "menu_promotion_small_VjUPFk",
         "menu_promotion_small_QhqTw7",
         "menu_promotion_small_JMTpkT",
         "menu_promotion_small_AkrWYN",
         "menu_promotion_small_RmrAtN",
         "menu_promotion_small_FkQ6bx",
+        "menu_promotion_small_TpYzid",
         "menu_promotion_small_pTVJy3",
         "menu_promotion_small_FXciLQ",
         "menu_promotion_small_9XzrdD",
@@ -360,7 +415,7 @@
         "enable_transparent": false,
         "transparent_color": "#ffffff",
         "transparent_logo": "shopify://shop_images/LLL-Logo_4x_a59d88f8-405b-45e2-9a2b-8e05445c7b63.png",
-        "menu_linklist": "2025_main-menu-tarrif-update",
+        "menu_linklist": "main-menu-05-2026-test",
         "menu_layout": "inline-menu-center",
         "nav_featured_link": "Sale",
         "menu_linklist_mobile": "",

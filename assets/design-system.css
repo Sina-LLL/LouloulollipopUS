@@ -167,6 +167,9 @@ a.navigation__link,.menu-promotion__text {
     font-size: var(--nav-text-size);
     line-height: 1.2em;
   }
+  .navigation__item.navigation__column .navigation__link{
+    font-size:1rem;
+  }
 }
 /* End Nav text */
 
