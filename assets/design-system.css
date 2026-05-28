@@ -1026,6 +1026,7 @@ cart-form .page-header:not(.page-header--with-background){
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   align-items: center;
+  overflow:hidden;
 }
 
 .collection-header-sidebyside__content {
