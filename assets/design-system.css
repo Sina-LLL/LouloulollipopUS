@@ -415,6 +415,7 @@ li.slider__item.is-active {
 }
 carousel-slider.mobile-only{
   max-height:500px;
+  overflow:hidden;
 }
 label.opt-label.opt-label--btn.btn.relative.text-center{
   min-height:40px;
