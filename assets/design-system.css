@@ -411,7 +411,7 @@ li.slider__item.is-active {
 }
 .mobile-only .product-media.product-media--image .img-ar--contain img{
   object-fit:cover;
-      max-height: 450px;
+  max-height: 100%;
 }
 carousel-slider.mobile-only{
   max-height:500px;
