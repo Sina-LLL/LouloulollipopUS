@@ -63,20 +63,6 @@
             "show_gift_card_recipient": true
           }
         },
-        "divider_kgTqeY": {
-          "type": "divider",
-          "settings": {
-            "show_in_quickbuy": false
-          }
-        },
-        "complementary_BwbHzJ": {
-          "type": "complementary",
-          "settings": {
-            "heading": "Pairs Perfectly With",
-            "enable_carousel": true,
-            "max_products": 10
-          }
-        },
         "usp_CRdfie": {
           "type": "USP",
           "repeater": "{{ product.metafields.custom.product_template.value.usp_icons.value }}",
@@ -85,6 +71,14 @@
             "icon": "",
             "custom_icon": "{{ block.repeater.icon.value }}",
             "icon_size": "large"
+          }
+        },
+        "complementary_BwbHzJ": {
+          "type": "complementary",
+          "settings": {
+            "heading": "Pairs Perfectly With",
+            "enable_carousel": true,
+            "max_products": 10
           }
         },
         "pr_mentions_4ArHLN": {
@@ -152,9 +146,8 @@
         "variant-picker",
         "ethos_exclusive_add_to_cart_UM3MD3",
         "buy-buttons",
-        "divider_kgTqeY",
-        "complementary_BwbHzJ",
         "usp_CRdfie",
+        "complementary_BwbHzJ",
         "pr_mentions_4ArHLN",
         "description",
         "material_usp_DqQq9A",
