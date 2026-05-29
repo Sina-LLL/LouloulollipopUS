@@ -617,6 +617,9 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
   cursor:pointer;
 }
 /* Mobile carousel wrapper */
+.custom-features-carousel.mobile-only.block{
+  margin-top:20px;
+}
 .custom-features-carousel .slider__grid {
   display: flex;
   scroll-snap-type: x mandatory;
