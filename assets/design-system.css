@@ -670,6 +670,10 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
 .custom-product-feature.container{
   background:none;
 }
+carousel-slider.mobile-only.custom-features-carousel{
+  max-height:unset;
+  overflow:show;
+}
 .accordion-toggle {
   display: flex;
   align-items: center;
