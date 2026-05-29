@@ -755,7 +755,7 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
     font-size: 0.875rem;
   }
   h1.product-title{
-    font-size: 3rem;
+    font-size: 1.5rem;
     line-height: 3.5rem; /* 125% */
   }
   .product-media.product-media--image .img-ar.img-ar--contain{
@@ -806,13 +806,13 @@ hr{
 }
 h1.product-title {
   font-family: avenir-next-lt-pro,sofia-pro,sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 700;
   letter-spacing: -.03rem;
   margin-bottom: 0px;
   margin-top: 4px;
-  line-height: 2rem;
+  line-height: 1.25em;
 }
 
 .overflow_hidden{
