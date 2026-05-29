@@ -39,6 +39,7 @@
           "type": "shopify://apps/ethos/blocks/exclusive-add-to-cart/e6f2bd3b-e2fd-4f16-b73c-bf198b58bb45",
           "disabled": true,
           "settings": {
+            "join_url": "",
             "logged_out_message_product": "This is an exclusive access product. You must be logged in and have an active [MEMBERSHIP_NAME] membership to purchase.",
             "no_access_message": "This is an exclusive access product only available to [MEMBERSHIP_NAME] Members.",
             "join_now_message": "Don't worry though, the [MEMBERSHIP_NAME] Program is free to join! Sign up now and get points, exclusive rewards, and enter contests only for you.",
@@ -62,20 +63,6 @@
             "show_gift_card_recipient": true
           }
         },
-        "divider_wxWQrL": {
-          "type": "divider",
-          "settings": {
-            "show_in_quickbuy": false
-          }
-        },
-        "complementary_BwbHzJ": {
-          "type": "complementary",
-          "settings": {
-            "heading": "Pairs Perfectly With",
-            "enable_carousel": true,
-            "max_products": 10
-          }
-        },
         "usp_CRdfie": {
           "type": "USP",
           "repeater": "{{ product.metafields.custom.product_template.value.usp_icons.value }}",
@@ -86,6 +73,18 @@
             "icon_size": "large"
           }
         },
+        "complementary_BwbHzJ": {
+          "type": "complementary",
+          "settings": {
+            "heading": "Pairs Perfectly With",
+            "enable_carousel": true,
+            "max_products": 10
+          }
+        },
+        "pr_mentions_cC6Npb": {
+          "type": "pr-mentions",
+          "settings": {}
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -94,6 +93,10 @@
             "icon": "",
             "show_in_quickbuy": false
           }
+        },
+        "material_usp_RYqWJy": {
+          "type": "material-usp",
+          "settings": {}
         },
         "swatch_highlight_gzgLHA": {
           "type": "swatch_highlight",
@@ -147,10 +150,11 @@
         "variant-picker",
         "ethos_exclusive_add_to_cart_UM3MD3",
         "buy-buttons",
-        "divider_wxWQrL",
-        "complementary_BwbHzJ",
         "usp_CRdfie",
+        "complementary_BwbHzJ",
+        "pr_mentions_cC6Npb",
         "description",
+        "material_usp_RYqWJy",
         "swatch_highlight_gzgLHA",
         "feature_rating_tdmkCF",
         "accordion_yktgxC",
@@ -168,7 +172,7 @@
         "sticky_atc_behavior": "add_to_cart",
         "sticky_atc_button_style": "primary",
         "gallery_size": "medium",
-        "gallery_layout": "collage-1",
+        "gallery_layout": "columns-2",
         "enable_zoom": true,
         "show_alt_text": false,
         "alt_text_icon": "",

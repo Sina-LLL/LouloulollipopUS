@@ -64,6 +64,9 @@
           <span class="price-value">{{ price_parts[0] }}</span>
           <div class="price-currency">{{ price_parts[1] }}</div>
         {%- endif -%}
+        {% if product.tags contains 'MoreToLoveDiscount' and template.name == 'product' %}
+          <p class="MoreToLove">Buy Any 3 & Save 10%</p>
+        {% endif %}
     </span>
     {% if product.tags contains "sale_on_sale" %} <span class="price-label price-label--sale" style="font-size:14px">{{ sale_on_sale }} </span>{% endif %}
   </div>
