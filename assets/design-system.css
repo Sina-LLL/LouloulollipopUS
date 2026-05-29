@@ -569,6 +569,13 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
 .price-container .MoreToLove{
   display: inline;
 }
+.price.price--on-sale .MoreToLove{
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+  line-height: 1;
+}
 .product-free-shipping__container{
   font-size:14px;
   margin-top:12px;
