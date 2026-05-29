@@ -3639,8 +3639,9 @@ body:not(.reveal-mobile-nav) .mobile-navigation-drawer .mobile-navigation-drawer
 
 shopify-payment-terms {
   display: block;
-  margin-top: 8px;
   margin-bottom: 12px;
+  font-size:14px
+
 }
 
 .product-policies {
