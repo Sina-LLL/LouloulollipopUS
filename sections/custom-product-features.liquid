@@ -1,14 +1,49 @@
 {% if section.blocks.size > 0 %}
   <div class="container custom-product-features">
     <div class="custom-product-features__wrapper">
-      {% if section.settings.section_heading != blank %}
-        <button class="accordion-toggle" type="button" aria-expanded="true">
-          <h2 class="hometitle h2">{{ section.settings.section_heading | escape }}</h2>
-          <span class="chevron">-</span>
-        </button>
-      {% endif %}
+    {% if section.settings.section_heading != blank %}
+      <h2 class="hometitle h2">{{ section.settings.section_heading | escape }}</h2>
+    {% endif %}
 
-      <div class="custom-product-features__grid custom-accordion-content show">
+      {{- 'slideshow.js' | asset_url | script_tag -}}
+
+      <!-- Mobile carousel -->
+        <carousel-slider class="custom-features-carousel mobile-only block" data-dispatch-events="true">
+          <div class="slider slider--no-scrollbar">
+          <div class="slider__grid">
+            {% for block in section.blocks %}
+              <div class="slider__item{% if forloop.first %} is-active{% endif %}" {{ block.shopify_attributes }}>
+                <div class="usp-block">
+                  <div class="image-cont">
+                    {% if block.settings.image != blank %}
+                      <div class="custom-product-features__image">
+                        {% render 'image' with block.settings.image, loading: 'lazy', size_cols_mobile: 1, size_cols_desktop: 4, custom_aspect_ratio: 1, custom_crop: 'center' %}
+                      </div>
+                    {% endif %}
+                  </div>
+                  {% if block.settings.title != blank %}
+                    <h3 class="custom-product-features__heading">{{ block.settings.title | escape }}</h3>
+                  {% endif %}
+                  {% if block.settings.description != blank %}
+                    <p class="custom-product-features__body">{{ block.settings.description | strip_html }}</p>
+                  {% endif %}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <!-- Dot indicators -->
+        <div class="custom-features-carousel__dots">
+          {% for block in section.blocks %}
+            <button class="custom-features-carousel__dot{% if forloop.first %} is-active{% endif %}"
+              aria-label="Slide {{ forloop.index }}"></button>
+          {% endfor %}
+        </div>
+      </carousel-slider>
+
+      <!-- Desktop grid -->
+      <div class="custom-product-features__grid custom-accordion-content show desktop-only">
         {% for block in section.blocks %}
           <div class="usp-block" {{ block.shopify_attributes }}>
             <div class="image-cont">
@@ -18,22 +53,41 @@
                 </div>
               {% endif %}
             </div>
-
             {% if block.settings.title != blank %}
               <h3 class="custom-product-features__heading">{{ block.settings.title | escape }}</h3>
             {% endif %}
-
             {% if block.settings.description != blank %}
               <p class="custom-product-features__body">{{ block.settings.description | strip_html }}</p>
             {% endif %}
           </div>
         {% endfor %}
       </div>
+
     </div>
   </div>
 {% endif %}
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const carousel = document.querySelector('.custom-features-carousel');
+    if (!carousel) return;
 
+    const dots = carousel.querySelectorAll('.custom-features-carousel__dot');
+
+    carousel.addEventListener('on:carousel-slider:select', function (e) {
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('is-active', i === e.detail.index);
+      });
+    });
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', function () {
+        const slides = carousel.querySelectorAll('.slider__item');
+        if (slides[i]) carousel.scrollToElement(slides[i], 'smooth');
+      });
+    });
+  });
+</script>
 {% schema %}
 {
   "name": "Custom Product Features",
