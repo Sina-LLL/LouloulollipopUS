@@ -71,6 +71,37 @@
     <link rel="preload" as="font" href="{{ heading_font | font_url }}" type="font/woff2" crossorigin>
   {%- endunless -%}
 
+  {%- if template.name == 'index' -%}
+    {%- assign lcp_section = sections['hero_carousel_rounded_eyHjac'] -%}
+    {%- assign lcp_block = lcp_section.blocks | first -%}
+    {%- if lcp_block.settings.image != blank -%}
+      {%- assign lcp_img = lcp_block.settings.image -%}
+      <link rel="preload" as="image" fetchpriority="high"
+        href="{{ lcp_img | image_url: width: 1500 }}"
+        imagesrcset="{{ lcp_img | image_url: width: 750 }} 750w, {{ lcp_img | image_url: width: 1100 }} 1100w, {{ lcp_img | image_url: width: 1500 }} 1500w, {{ lcp_img | image_url: width: 1903 }} 1903w"
+        imagesizes="100vw"
+        media="(min-width: 768px)">
+    {%- endif -%}
+    {%- if lcp_block.settings.mobile_image != blank -%}
+      {%- assign lcp_mob = lcp_block.settings.mobile_image -%}
+      <link rel="preload" as="image" fetchpriority="high"
+        href="{{ lcp_mob | image_url: width: 750 }}"
+        imagesrcset="{{ lcp_mob | image_url: width: 375 }} 375w, {{ lcp_mob | image_url: width: 750 }} 750w, {{ lcp_mob | image_url: width: 1100 }} 1100w"
+        imagesizes="100vw"
+        media="(max-width: 767px)">
+    {%- endif -%}
+  {%- endif -%}
+
+  {%- if template.name == 'product' -%}
+    {%- assign lcp_img = product.featured_media.preview_image -%}
+    {%- if lcp_img != blank -%}
+      <link rel="preload" as="image" fetchpriority="high"
+        href="{{ lcp_img | image_url: width: 900 }}"
+        imagesrcset="{{ lcp_img | image_url: width: 450 }} 450w, {{ lcp_img | image_url: width: 900 }} 900w, {{ lcp_img | image_url: width: 1400 }} 1400w"
+        imagesizes="(min-width: 768px) 50vw, 100vw">
+    {%- endif -%}
+  {%- endif -%}
+
   <!-- LoudCrowd --> 
   {% if request.path contains '/pages/shop'or request.path contains '/products' %} 
     <link rel="preload" href="{{ 'loudcrowd.css' | asset_url }}" as="style"> {{ 'loudcrowd.css' | asset_url | stylesheet_tag }} 
