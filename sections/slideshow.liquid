@@ -115,10 +115,8 @@
               assign loading = 'lazy'
               assign fetchpriority = nil
               if forloop.first
-                if section.location == 'header' or section.location == 'template' and section.index == 1
-                  assign loading = 'eager'
-                  assign fetchpriority = 'high'
-                endif
+                assign loading = 'eager'
+                assign fetchpriority = 'high'
               endif
             -%}
 
