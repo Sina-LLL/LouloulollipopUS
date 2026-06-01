@@ -2,7 +2,7 @@
   <div class="container custom-product-features">
     <div class="custom-product-features__wrapper">
     {% if section.settings.section_heading != blank %}
-      <h2 class="hometitle h2">{{ section.settings.section_heading | escape }}</h2>
+      <h2 class="hometitle h3">{{ section.settings.section_heading | escape }}</h2>
     {% endif %}
 
       {{- 'slideshow.js' | asset_url | script_tag -}}
