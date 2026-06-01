@@ -9,6 +9,98 @@
  */
 {
   "sections": {
+    "hero_carousel_rounded_eyHjac": {
+      "type": "hero-carousel-rounded",
+      "blocks": {
+        "image_MfTji8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/OneC_hero_1_6cb50d9d-76ee-49de-b733-7ec1855e05ae.png",
+            "mobile_image": "shopify://shop_images/OneC_hero-mobile_1.png",
+            "slide_link": "",
+            "subheading": "",
+            "title": "The Beautiful Game",
+            "heading_max_width": 17,
+            "title_size": 72,
+            "title_size_mobile": 32,
+            "use_h1": true,
+            "text": "<p>Our newest soccer-inspired print, has officially entered the lineup.</p>",
+            "enlarge_text": false,
+            "button_label_1": "Shop the Beautiful Game",
+            "button_url_1": "shopify://collections/the-beautiful-game",
+            "button_tag_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_tag_2": "",
+            "text_alignment": "bottom left"
+          }
+        },
+        "image_caUwGz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/OneC_hero.png",
+            "mobile_image": "shopify://shop_images/OneC_hero-mobile.png",
+            "slide_link": "",
+            "subheading": "",
+            "title": "The Pacifier Clip, Reinvented",
+            "heading_max_width": 15,
+            "title_size": 60,
+            "title_size_mobile": 30,
+            "use_h1": false,
+            "text": "<p>Made from a single piece of soft silicone for added durability and flexibility.</p>",
+            "enlarge_text": false,
+            "button_label_1": "Shop OneC™ Pacifier Clips",
+            "button_url_1": "shopify://collections/onec-silicone-pacifier-clips",
+            "button_tag_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_tag_2": "",
+            "text_alignment": "bottom left"
+          }
+        },
+        "image_kEiwna": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Desktop_-_Hero.png",
+            "mobile_image": "shopify://shop_images/Mobile_-_Hero.png",
+            "slide_link": "",
+            "subheading": "",
+            "title": "Made for Cozy Summer Sleep",
+            "heading_max_width": 15,
+            "title_size": 60,
+            "title_size_mobile": 32,
+            "use_h1": false,
+            "text": "<p>Soft, breathable, and lightweight to help little ones stay cozy without overheating.</p>",
+            "enlarge_text": false,
+            "button_label_1": "Shop muslin sleep bags",
+            "button_url_1": "shopify://collections/0-5-tog-sleep-bags",
+            "button_tag_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_tag_2": "",
+            "text_alignment": "bottom left"
+          }
+        }
+      },
+      "block_order": [
+        "image_MfTji8",
+        "image_caUwGz",
+        "image_kEiwna"
+      ],
+      "name": "Hero Carousel – Rounded",
+      "settings": {
+        "padding_top": 20,
+        "height": "fixed",
+        "height_desktop": 600,
+        "height_mobile": 600,
+        "slide_max_width": 1400,
+        "border_radius": 16,
+        "peek_size": 32,
+        "peek_size_mobile": 12,
+        "overlay_style": "shadow",
+        "accessibility_info": ""
+      }
+    },
     "slideshow_JU4LXr": {
       "type": "slideshow",
       "blocks": {
@@ -39,6 +131,7 @@
       "block_order": [
         "image_TKJkRj"
       ],
+      "disabled": true,
       "name": "Slideshow",
       "settings": {
         "height": "fixed",
@@ -1048,6 +1141,7 @@
     }
   },
   "order": [
+    "hero_carousel_rounded_eyHjac",
     "slideshow_JU4LXr",
     "featured_collection_yN3Jim",
     "collection_list_aakDiY",

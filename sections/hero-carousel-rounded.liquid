@@ -1,0 +1,659 @@
+{%- assign sid = section.id -%}
+<div id="hcr-{{ sid }}" class="hcr" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.2s"' -%}>
+
+  {% style %}
+  .hcr__slide p{
+    font-size:1.25em;
+  }
+    #hcr-{{ sid }} {
+      margin-top: {{ section.settings.padding_top }}px;
+      margin-bottom: var(--larger-section-padding);
+      overflow: hidden;
+    }
+    @media (max-width: 767px) {
+      #hcr-{{ sid }} {
+        margin-bottom: var(--larger-section-padding-mobile);
+      }
+    }
+    #hcr-{{ sid }} .hcr__slide .image-overlay__over {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+    #hcr-{{ sid }} .hcr__track {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      gap: 10px;
+      padding: 0 {{ section.settings.peek_size_mobile }}px;
+      box-sizing: border-box;
+    }
+    #hcr-{{ sid }} .hcr__track::-webkit-scrollbar { display: none; }
+
+    @media (min-width: 768px) {
+      #hcr-{{ sid }} .hcr__track {
+        gap: 16px;
+        padding: 0 {{ section.settings.peek_size }}px;
+      }
+    }
+
+    {% if section.blocks.size == 1 %}
+      #hcr-{{ sid }} .hcr__track {
+        padding: 0;
+      }
+    {% endif %}
+
+    #hcr-{{ sid }} .hcr__slide {
+      flex: 0 0 calc(100% - {{ section.settings.peek_size_mobile }}px * 2 - 10px);
+      scroll-snap-align: center;
+      position: relative;
+      border-radius: {{ section.settings.border_radius }}px;
+      overflow: hidden;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      opacity: 0.65;
+      transform: scale(0.98);
+      overflow: hidden;
+
+    }
+
+    {% if section.blocks.size == 1 %}
+      #hcr-{{ sid }} .hcr__slide {
+        flex: 0 0 100%;
+        opacity: 1;
+        transform: scale(1);
+      }
+    {% endif %}
+
+    @media (min-width: 768px) {
+      #hcr-{{ sid }} .hcr__slide {
+        flex: 0 0 calc(100% - {{ section.settings.peek_size }}px * 2 - 16px);
+      }
+    }
+
+    #hcr-{{ sid }} .hcr__slide.is-active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    {%- if section.settings.height == 'fixed' -%}
+      #hcr-{{ sid }} .hcr__slide {
+        height: {{ section.settings.height_mobile }}px;
+      }
+      @media (min-width: 768px) {
+        #hcr-{{ sid }} .hcr__slide {
+          height: {{ section.settings.height_desktop }}px;
+        }
+      }
+    {%- else -%}
+      #hcr-{{ sid }} .hcr__slide {
+        aspect-ratio: 1 / 1;
+      }
+      @media (min-width: 768px) {
+        #hcr-{{ sid }} .hcr__slide {
+          aspect-ratio: 16 / 7;
+        }
+      }
+    {%- endif -%}
+
+#hcr-{{ sid }} .hcr__slide-img,
+    #hcr-{{ sid }} .hcr__slide-img img,
+    #hcr-{{ sid }} .hcr__slide-img picture {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    
+
+    /* Per-slide font sizes */
+    {%- for block in section.blocks -%}
+      #hcr-{{ sid }} .hcr__slide-{{ forloop.index }} .text-overlay__title {
+        font-size: {{ block.settings.title_size_mobile }}px;
+        {%- if block.settings.title_size_mobile >= 90 %}line-height: 1em;{%- endif %}
+      }
+    {%- endfor -%}
+    @media (min-width: 768px) {
+      {%- for block in section.blocks -%}
+        {%- assign title_mid = block.settings.title_size | times: 0.7 | at_least: block.settings.title_size_mobile -%}
+        #hcr-{{ sid }} .hcr__slide-{{ forloop.index }} .text-overlay__title {
+          font-size: {{ title_mid }}px;
+          {%- if title_mid >= 90 %}line-height: 1em;{%- endif %}
+        }
+      {%- endfor -%}
+    }
+    @media (min-width: 1100px) {
+      {%- for block in section.blocks -%}
+        #hcr-{{ sid }} .hcr__slide-{{ forloop.index }} .text-overlay__title {
+          font-size: {{ block.settings.title_size }}px;
+          {%- if block.settings.title_size >= 90 %}line-height: 1em;{%- endif %}
+        }
+      {%- endfor -%}
+    }
+
+    /* Arrows */
+    /* Click zones */
+    #hcr-{{ sid }} .hcr__click-prev,
+    #hcr-{{ sid }} .hcr__click-next {
+      display: none;
+    }
+    @media (min-width: 768px) {
+      #hcr-{{ sid }} .hcr__click-prev,
+      #hcr-{{ sid }} .hcr__click-next {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: calc({{ section.settings.peek_size }}px + 16px);
+        z-index: 2;
+        cursor: pointer;
+      }
+      #hcr-{{ sid }} .hcr__click-prev { left: 0; }
+      #hcr-{{ sid }} .hcr__click-next { right: 0; }
+    }
+
+    /* Dot chevrons */
+    #hcr-{{ sid }} .hcr__dots-arrow {
+      background: none;
+      border: none;
+      padding: 0 4px;
+      cursor: pointer;
+      color: #6A8B95;
+      display: flex;
+      align-items: center;
+      transition: opacity 0.2s ease;
+    }
+    #hcr-{{ sid }} .hcr__dots-arrow:hover { opacity: 1; }
+    #hcr-{{ sid }} .hcr__dots-arrow:disabled { opacity: 0.2; cursor: default; }
+
+    /* Dots */
+    #hcr-{{ sid }} .hcr__dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      padding: 10px 0 0;
+    }
+    #hcr-{{ sid }} .hcr__dot {
+      display: block;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: rgb(var(--body-text-color));
+    }
+    #hcr-{{ sid }} .hcr__dot svg { display: block; width: 20px; height: 20px; }
+    #hcr-{{ sid }} .hcr__dot .hcr__dot-bg {
+      transition: fill 0.2s, opacity 0.2s, stroke 0.2s;
+      stroke-width: 1px;
+      stroke: #D9E1E4;
+      fill: #D9E1E4;
+      opacity: 1;
+    }
+    #hcr-{{ sid }} .hcr__dot.is-active .hcr__dot-bg {
+      fill: #6A8B95;
+      stroke: #6A8B95;
+      opacity: 1;
+    }
+    @media (min-width: 768px) {
+      #hcr-{{ sid }} .hcr__slide {
+        max-width: {{ section.settings.slide_max_width }}px;
+      }
+    }
+  {% endstyle %}
+
+  <div class="hcr__inner" style="position: relative;">
+    <div class="hcr__click-prev js-only" id="hcr-prev-{{ sid }}"></div>
+    <div class="hcr__click-next js-only" id="hcr-next-{{ sid }}"></div>
+    <div class="hcr__track" id="hcr-track-{{ sid }}">
+      {%- for block in section.blocks -%}
+        {%- liquid
+          assign show_text = false
+          if block.settings.title != blank or block.settings.subheading != blank or block.settings.text != blank or block.settings.button_label_1 != blank or block.settings.button_label_2 != blank
+            assign show_text = true
+          endif
+          assign v_pos = block.settings.text_alignment | split: ' ' | first
+          assign h_pos = block.settings.text_alignment | split: ' ' | last
+        -%}
+        <div class="hcr__slide hcr__slide-{{ forloop.index }}{% if forloop.first %} is-active{% endif %} image-overlay image-overlay--bg-{{ section.settings.overlay_style }}"
+          {{ block.shopify_attributes }}>
+
+          {%- if block.settings.image != blank -%}
+            {%- liquid
+              assign loading = 'lazy'
+              assign fetchpriority = nil
+              if forloop.first
+                assign loading = 'eager'
+                assign fetchpriority = 'high'
+              endif
+            -%}
+            {%- render 'image-desktop-and-mobile',
+              class: 'hcr__slide-img',
+              desktop_image: block.settings.image,
+              mobile_image: block.settings.mobile_image,
+              loading: loading,
+              fetchpriority: fetchpriority,
+              block: block
+            -%}
+          {%- else -%}
+            <div class="hcr__slide-img placeholder-image dark">
+              {%- capture current %}{% cycle 1, 2 %}{% endcapture -%}
+              {{- 'lifestyle-' | append: current | placeholder_svg_tag: 'placeholder-svg' -}}
+            </div>
+          {%- endif -%}
+
+          {%- if show_text -%}
+            <div class="text-overlay text-overlay--for-banner text-overlay--v-{{ v_pos }} text-overlay--h-{{ h_pos }} image-overlay__over">
+              <div class="text-overlay__inner" style="--heading-max-width: {{ block.settings.heading_max_width }}em">
+                <div class="text-overlay__text">
+                  {%- if block.settings.subheading != blank -%}
+                    <div class="text-overlay__subheading subheading subheading--over">{{ block.settings.subheading | escape }}</div>
+                  {%- endif -%}
+                  {%- if block.settings.title != blank -%}
+                    {%- if block.settings.use_h1 -%}
+                      <h1 class="text-overlay__title">{% render 'multiline-text' with block.settings.title %}</h1>
+                    {%- else -%}
+                      <h2 class="text-overlay__title h1">{% render 'multiline-text' with block.settings.title %}</h2>
+                    {%- endif -%}
+                  {%- endif -%}
+                  {%- if block.settings.text != blank -%}
+                    <div class="text-overlay__rte rte{% if block.settings.enlarge_text %} large-text{% endif %}">{{ block.settings.text }}</div>
+                  {%- endif -%}
+                  {%- if block.settings.button_label_1 != blank or block.settings.button_label_2 != blank -%}
+                    <div class="text-overlay__button-row">
+                      {%- if block.settings.button_label_1 != blank -%}
+                        <a class="text-overlay__button btn btn--primary" href="{{ block.settings.button_url_1 }}{% if block.settings.button_tag_1 != blank %}/{{ block.settings.button_tag_1 | handle }}{% endif %}">{{ block.settings.button_label_1 | escape }}</a>
+                      {%- endif -%}
+                      {%- if block.settings.button_label_2 != blank -%}
+                        <a class="text-overlay__button btn btn--secondary" href="{{ block.settings.button_url_2 }}{% if block.settings.button_tag_2 != blank %}/{{ block.settings.button_tag_2 | handle }}{% endif %}">{{ block.settings.button_label_2 | escape }}</a>
+                      {%- endif -%}
+                    </div>
+                  {%- endif -%}
+                </div>
+              </div>
+            </div>
+          {%- elsif block.settings.slide_link != blank -%}
+            <a class="image-overlay__image-link" href="{{ block.settings.slide_link }}" aria-label="{{ block.settings.title | default: 'Slide' | escape }}"></a>
+          {%- endif -%}
+
+        </div>
+      {%- endfor -%}
+    </div>
+
+    {%- if section.blocks.size > 1 -%}
+      
+      
+    {%- endif -%}
+
+  </div>
+
+  {%- if section.blocks.size > 1 -%}
+    {%- if section.blocks.size > 1 -%}
+      <div class="hcr__dots js-only" id="hcr-dots-{{ sid }}" role="tablist">
+        <button type="button" class="hcr__dots-arrow hcr__dots-arrow--prev" id="hcr-dots-prev-{{ sid }}" aria-label="{{ 'general.slider.previous' | t }}" disabled>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        {%- for block in section.blocks -%}
+          <button class="hcr__dot{% if forloop.first %} is-active{% endif %}"
+            role="tab"
+            data-index="{{ forloop.index0 }}"
+            aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }}">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <circle class="hcr__dot-bg" cx="12" cy="12" r="6" />
+            </svg>
+          </button>
+        {%- endfor -%}
+        <button type="button" class="hcr__dots-arrow hcr__dots-arrow--next" id="hcr-dots-next-{{ sid }}" aria-label="{{ 'general.slider.next' | t }}">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+      </div>
+    {%- endif -%}
+  {%- endif -%}
+
+  {%- if section.blocks.size > 1 -%}
+  <script>
+    (function() {
+      var track        = document.getElementById('hcr-track-{{ sid }}');
+      var clickPrev    = document.getElementById('hcr-prev-{{ sid }}');
+      var clickNext    = document.getElementById('hcr-next-{{ sid }}');
+      var dotsPrev     = document.getElementById('hcr-dots-prev-{{ sid }}');
+      var dotsNext     = document.getElementById('hcr-dots-next-{{ sid }}');
+      var dotContainer = document.getElementById('hcr-dots-{{ sid }}');
+      if (!track) return;
+
+      var slides  = Array.prototype.slice.call(track.children);
+      var dots    = dotContainer ? Array.prototype.slice.call(dotContainer.querySelectorAll('.hcr__dot')) : [];
+      var total   = slides.length;
+      var current = 0;
+
+      function slideWidth() {
+        var slide = slides[0];
+        if (!slide) return 0;
+        var gap = parseFloat(getComputedStyle(track).gap) || 0;
+        return slide.offsetWidth + gap;
+      }
+
+      function goTo(index) {
+        index = Math.max(0, Math.min(total - 1, index));
+        track.scrollTo({ left: slideWidth() * index, behavior: 'smooth' });
+      }
+
+      function update(index) {
+        current = index;
+        slides.forEach(function(s, i) { s.classList.toggle('is-active', i === index); });
+        dots.forEach(function(d, i) { d.classList.toggle('is-active', i === index); });
+        if (clickPrev) clickPrev.style.pointerEvents = index === 0 ? 'none' : 'auto';
+        if (clickNext) clickNext.style.pointerEvents = index === total - 1 ? 'none' : 'auto';
+        if (dotsPrev) dotsPrev.disabled = index === 0;
+        if (dotsNext) dotsNext.disabled = index === total - 1;
+      }
+
+      if (clickPrev) clickPrev.addEventListener('click', function() { goTo(current - 1); });
+      if (clickNext) clickNext.addEventListener('click', function() { goTo(current + 1); });
+      if (dotsPrev) dotsPrev.addEventListener('click', function() { goTo(current - 1); });
+      if (dotsNext) dotsNext.addEventListener('click', function() { goTo(current + 1); });
+
+      dots.forEach(function(dot, i) {
+        dot.addEventListener('click', function() { goTo(i); });
+      });
+
+      var ticking = false;
+      track.addEventListener('scroll', function() {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(function() {
+          var sw = slideWidth();
+          if (sw > 0) update(Math.round(track.scrollLeft / sw));
+          ticking = false;
+        });
+      }, { passive: true });
+
+      update(0);
+    })();
+  </script>
+  {%- endif -%}
+
+</div>
+
+{% schema %}
+{
+  "name": "Hero Carousel – Rounded",
+  "class": "section-hero-carousel-rounded",
+  "disabled_on": { "groups": ["aside"] },
+  "max_blocks": 8,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Top spacing",
+      "default": 8
+    },
+    {
+      "type": "radio",
+      "id": "height",
+      "label": "Slide height",
+      "options": [
+        { "value": "adapt", "label": "Adapt to screen ratio" },
+        { "value": "fixed", "label": "Fixed height" }
+      ],
+      "default": "fixed"
+    },
+    {
+      "type": "range",
+      "id": "height_desktop",
+      "min": 200,
+      "max": 900,
+      "step": 20,
+      "unit": "px",
+      "label": "Desktop fixed height",
+      "default": 560
+    },
+    {
+      "type": "range",
+      "id": "height_mobile",
+      "min": 100,
+      "max": 800,
+      "step": 20,
+      "unit": "px",
+      "label": "Mobile fixed height",
+      "default": 440
+    },
+    {
+      "type": "range",
+      "id": "slide_max_width",
+      "min": 400,
+      "max": 1400,
+      "step": 20,
+      "unit": "px",
+      "label": "Maximum desktop slide width",
+      "default": 1000
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Corner radius",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Peeking next slide"
+    },
+    {
+      "type": "range",
+      "id": "peek_size",
+      "min": 0,
+      "max": 120,
+      "step": 8,
+      "unit": "px",
+      "label": "Desktop peek amount",
+      "info": "How much of the next slide shows on desktop",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "peek_size_mobile",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "label": "Mobile peek amount",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "Overlay"
+    },
+    {
+      "id": "overlay_style",
+      "type": "select",
+      "label": "Overlay style",
+      "default": "shadow",
+      "options": [
+        { "value": "full", "label": "Tint" },
+        { "value": "box", "label": "Box" },
+        { "value": "shadow", "label": "Text shadow" },
+        { "value": "full image-overlay--bg-shadow", "label": "Text shadow and tint" },
+        { "value": "no_background", "label": "No background" }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Accessibility"
+    },
+    {
+      "type": "text",
+      "id": "accessibility_info",
+      "label": "Slideshow description",
+      "info": "Describe the slideshow for screen readers."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Desktop image",
+          "info": "2048 x 1024px recommended"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile image",
+          "info": "1024 x 1024px recommended"
+        },
+        {
+          "type": "url",
+          "id": "slide_link",
+          "label": "Slide link",
+          "info": "Used when no buttons are set"
+        },
+        {
+          "type": "header",
+          "content": "Text"
+        },
+        {
+          "type": "text",
+          "id": "subheading",
+          "label": "Subheading"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "info": "Enter <br> for a line-break",
+          "default": "Slide heading"
+        },
+        {
+          "type": "range",
+          "id": "heading_max_width",
+          "min": 4,
+          "max": 40,
+          "step": 1,
+          "unit": "em",
+          "label": "Maximum heading width",
+          "default": 15
+        },
+        {
+          "type": "range",
+          "id": "title_size",
+          "min": 20,
+          "max": 150,
+          "step": 2,
+          "unit": "px",
+          "label": "Desktop heading size",
+          "default": 72
+        },
+        {
+          "type": "range",
+          "id": "title_size_mobile",
+          "min": 20,
+          "max": 120,
+          "step": 2,
+          "unit": "px",
+          "label": "Mobile heading size",
+          "default": 40
+        },
+        {
+          "type": "checkbox",
+          "id": "use_h1",
+          "label": "Set as primary page heading",
+          "default": false
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Body text"
+        },
+        {
+          "type": "checkbox",
+          "id": "enlarge_text",
+          "label": "Enlarge body text",
+          "default": false
+        },
+        {
+          "type": "header",
+          "content": "Buttons"
+        },
+        {
+          "type": "text",
+          "id": "button_label_1",
+          "label": "Button 1 label"
+        },
+        {
+          "type": "url",
+          "id": "button_url_1",
+          "label": "Button 1 link"
+        },
+        {
+          "type": "text",
+          "id": "button_tag_1",
+          "label": "Button 1 filter by tag"
+        },
+        {
+          "type": "text",
+          "id": "button_label_2",
+          "label": "Button 2 label"
+        },
+        {
+          "type": "url",
+          "id": "button_url_2",
+          "label": "Button 2 link"
+        },
+        {
+          "type": "text",
+          "id": "button_tag_2",
+          "label": "Button 2 filter by tag"
+        },
+        {
+          "type": "header",
+          "content": "Text placement"
+        },
+        {
+          "type": "select",
+          "id": "text_alignment",
+          "label": "Text position",
+          "options": [
+            { "value": "top left",      "label": "Top left" },
+            { "value": "top center",    "label": "Top center" },
+            { "value": "top right",     "label": "Top right" },
+            { "value": "center left",   "label": "Middle left" },
+            { "value": "center center", "label": "Middle center" },
+            { "value": "center right",  "label": "Middle right" },
+            { "value": "bottom left",   "label": "Bottom left" },
+            { "value": "bottom center", "label": "Bottom center" },
+            { "value": "bottom right",  "label": "Bottom right" }
+          ],
+          "default": "center center"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Carousel – Rounded",
+      "blocks": [
+        { "type": "image" },
+        { "type": "image" }
+      ]
+    }
+  ]
+}
+{% endschema %}
