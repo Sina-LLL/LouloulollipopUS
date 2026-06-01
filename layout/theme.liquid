@@ -24,7 +24,9 @@
 <!-- Adobe Fonts -->
 <link rel="preconnect" href="https://use.typekit.net" crossorigin>
 <link rel="preconnect" href="https://p.typekit.net" crossorigin>
-<link rel="stylesheet" href="https://use.typekit.net/kdi1qif.css">   {%- render 'doc-head-core' -%}
+<link rel="stylesheet" href="https://use.typekit.net/kdi1qif.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://use.typekit.net/kdi1qif.css"></noscript>
+{%- render 'doc-head-core' -%}
 
   {%- render 'doc-head-social' -%}
 
