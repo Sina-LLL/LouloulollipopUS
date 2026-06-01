@@ -1,0 +1,225 @@
+{%- assign sid = section.id -%}
+<div id="col-nav-{{ sid }}" class="col-nav">
+  {% style %}
+    #col-nav-{{ sid }} {
+      display: block;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding: {{ section.settings.padding_vertical }}px {{ section.settings.padding_horizontal }}px;
+    }
+    #col-nav-{{ sid }}::-webkit-scrollbar { display: none; }
+
+    @media (min-width: 768px) {
+      #col-nav-{{ sid }} { display: none; }
+    }
+
+    #col-nav-{{ sid }} .col-nav__track {
+      display: flex;
+      gap: {{ section.settings.gap }}px;
+      width: max-content;
+    }
+
+    #col-nav-{{ sid }} .col-nav__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      color: rgb(var(--body-text-color));
+      width: {{ section.settings.item_width }}px;
+      flex-shrink: 0;
+    }
+
+    #col-nav-{{ sid }} .col-nav__image-wrap {
+      width: {{ section.settings.item_width }}px;
+      height: {{ section.settings.item_height }}px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #f0f0f0;
+    }
+
+    #col-nav-{{ sid }} .col-nav__image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    #col-nav-{{ sid }} .col-nav__item:hover .col-nav__image-wrap img {
+      transform: scale(1.05);
+    }
+
+    #col-nav-{{ sid }} .col-nav__label {
+      font-size: {{ section.settings.label_size }}px;
+      font-weight: 600;
+      text-align: center;
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+
+    #col-nav-{{ sid }} .col-nav__item.is-active .col-nav__image-wrap {
+      outline: 2px solid rgb(var(--color-primary));
+      outline-offset: 2px;
+    }
+  {% endstyle %}
+
+  <div class="col-nav__track">
+    {%- assign img_width = section.settings.item_width -%}
+    {%- assign img_width_2x = section.settings.item_width | times: 2 -%}
+
+    {%- for block in section.blocks -%}
+      {%- assign col = collections[block.settings.collection] -%}
+      {%- assign item_image = block.settings.image | default: col.image -%}
+      {%- assign item_label = block.settings.label | default: col.title -%}
+      {%- assign item_url = col.url | default: '#' -%}
+
+      {%- assign loading = 'lazy' -%}
+      {%- assign fetchpriority = nil -%}
+      {%- if forloop.first -%}
+        {%- assign loading = 'eager' -%}
+        {%- assign fetchpriority = 'high' -%}
+      {%- endif -%}
+
+      <a class="col-nav__item"
+        href="{{ item_url }}"
+        {{ block.shopify_attributes }}>
+        <div class="col-nav__image-wrap">
+          {%- if item_image != blank -%}
+            {%- assign img_widths = img_width | append: ', ' | append: img_width_2x -%}
+
+            {%- render 'image' with item_image,
+            loading: loading,
+            fetchpriority: fetchpriority,
+            widths: img_widths,
+            sizes: img_width | append: 'px'
+            -%}
+          {%- else -%}
+            {{ 'collection-1' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+        </div>
+        {%- if item_label != blank -%}
+          <span class="col-nav__label">{{ item_label | escape }}</span>
+        {%- endif -%}
+      </a>
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Mobile Collection Nav",
+  "tag": "section",
+  "class": "mobile-collection-nav",
+  "disabled_on": { "groups": ["aside"] },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "item_width",
+      "min": 60,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Item width",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "item_height",
+      "min": 60,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "label": "Item height",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "min": 4,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Gap between items",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal",
+      "min": 0,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Side padding",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_vertical",
+      "min": 0,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Top / bottom padding",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Label"
+    },
+    {
+      "type": "range",
+      "id": "label_size",
+      "min": 10,
+      "max": 16,
+      "step": 1,
+      "unit": "px",
+      "label": "Label font size",
+      "default": 12
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Custom image",
+          "info": "Overrides the collection image"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Custom label",
+          "info": "Overrides the collection title"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "Mobile Collection Nav",
+      "blocks": [
+        { "type": "collection" },
+        { "type": "collection" },
+        { "type": "collection" },
+        { "type": "collection" },
+        { "type": "collection" }
+      ]
+    }
+  ]
+}
+{% endschema %}
