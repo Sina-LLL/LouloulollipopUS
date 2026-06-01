@@ -76,11 +76,13 @@
                   {%- liquid
                     if forloop.index0 == initial_slide
                       assign loading = 'eager'
+                      assign fetchpriority = 'high'
                     else
                       assign loading = 'lazy'
+                      assign fetchpriority = nil
                     endif
 
-                    render 'media', media: media, product: product, min_aspect_ratio: min_aspect_ratio, loading: loading
+                    render 'media', media: media, product: product, min_aspect_ratio: min_aspect_ratio, loading: loading, fetchpriority: fetchpriority
                   -%}
 
                   {%- if media.media_type == 'image' and section.settings.enable_zoom -%}
@@ -115,13 +117,18 @@
                   <a class="show-gallery" href="{{ media.preview_image | image_url: width: zoom_size }}">
                 {%- endif -%}
                 {%- liquid
-                  if forloop.index < 4
+                  if forloop.index0 == initial_slide
                     assign loading = 'eager'
+                    assign fetchpriority = 'high'
+                  elsif forloop.index < 4
+                    assign loading = 'eager'
+                    assign fetchpriority = nil
                   else
                     assign loading = 'lazy'
+                    assign fetchpriority = nil
                   endif
 
-                  render 'media', media: media, product: product, min_aspect_ratio: min_aspect_ratio, loading: loading, in_collage: true
+                  render 'media', media: media, product: product, min_aspect_ratio: min_aspect_ratio, loading: loading, fetchpriority: fetchpriority, in_collage: true
                 -%}
                 {%- if media.media_type == 'image' and section.settings.enable_zoom -%}
                   </a>

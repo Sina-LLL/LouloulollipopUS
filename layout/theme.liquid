@@ -24,7 +24,9 @@
 <!-- Adobe Fonts -->
 <link rel="preconnect" href="https://use.typekit.net" crossorigin>
 <link rel="preconnect" href="https://p.typekit.net" crossorigin>
-<link rel="stylesheet" href="https://use.typekit.net/kdi1qif.css">   {%- render 'doc-head-core' -%}
+<link rel="stylesheet" href="https://use.typekit.net/kdi1qif.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://use.typekit.net/kdi1qif.css"></noscript>
+{%- render 'doc-head-core' -%}
 
   {%- render 'doc-head-social' -%}
 
@@ -70,6 +72,37 @@
   {%- unless heading_font.system? -%}
     <link rel="preload" as="font" href="{{ heading_font | font_url }}" type="font/woff2" crossorigin>
   {%- endunless -%}
+
+  {%- if template.name == 'index' -%}
+    {%- assign lcp_section = sections['hero_carousel_rounded_eyHjac'] -%}
+    {%- assign lcp_block = lcp_section.blocks | first -%}
+    {%- if lcp_block.settings.image != blank -%}
+      {%- assign lcp_img = lcp_block.settings.image -%}
+      <link rel="preload" as="image" fetchpriority="high"
+        href="{{ lcp_img | image_url: width: 1500, format: 'webp' }}"
+        imagesrcset="{{ lcp_img | image_url: width: 750, format: 'webp' }} 750w, {{ lcp_img | image_url: width: 1100, format: 'webp' }} 1100w, {{ lcp_img | image_url: width: 1500, format: 'webp' }} 1500w, {{ lcp_img | image_url: width: 1903, format: 'webp' }} 1903w"
+        imagesizes="100vw"
+        media="(min-width: 768px)">
+    {%- endif -%}
+    {%- if lcp_block.settings.mobile_image != blank -%}
+      {%- assign lcp_mob = lcp_block.settings.mobile_image -%}
+      <link rel="preload" as="image" fetchpriority="high"
+        href="{{ lcp_mob | image_url: width: 750, format: 'webp' }}"
+        imagesrcset="{{ lcp_mob | image_url: width: 375, format: 'webp' }} 375w, {{ lcp_mob | image_url: width: 750, format: 'webp' }} 750w, {{ lcp_mob | image_url: width: 1100, format: 'webp' }} 1100w"
+        imagesizes="100vw"
+        media="(max-width: 767px)">
+    {%- endif -%}
+  {%- endif -%}
+
+  {%- if template.name == 'product' -%}
+    {%- assign lcp_img = product.featured_media.preview_image -%}
+    {%- if lcp_img != blank -%}
+      <link rel="preload" as="image" fetchpriority="high"
+        href="{{ lcp_img | image_url: width: 900, format: 'webp' }}"
+        imagesrcset="{{ lcp_img | image_url: width: 450, format: 'webp' }} 450w, {{ lcp_img | image_url: width: 900, format: 'webp' }} 900w, {{ lcp_img | image_url: width: 1400, format: 'webp' }} 1400w"
+        imagesizes="(min-width: 768px) 50vw, 100vw">
+    {%- endif -%}
+  {%- endif -%}
 
   <!-- LoudCrowd --> 
   {% if request.path contains '/pages/shop'or request.path contains '/products' %} 
