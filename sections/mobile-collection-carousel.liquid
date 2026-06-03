@@ -18,8 +18,13 @@
       display: flex;
       gap: {{ section.settings.gap }}px;
       width: max-content;
+      cursor: grab;
+
     }
 
+    #col-nav-{{ sid }} .col-nav__track:active {
+      cursor: grabbing;
+    }
     #col-nav-{{ sid }} .col-nav__item {
       display: flex;
       flex-direction: column;
