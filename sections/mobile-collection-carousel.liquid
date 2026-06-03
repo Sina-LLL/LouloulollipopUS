@@ -111,7 +111,43 @@
     {%- endfor -%}
   </div>
 </div>
+<script>
+  (function () {
+    var track = document.querySelector('#col-nav-{{ sid }} .col-nav__track');
+    if (!track) return;
 
+    var isDown = false;
+    var startX;
+    var scrollLeft;
+
+    track.addEventListener('mousedown', function (e) {
+      isDown = true;
+      track.style.cursor = 'grabbing';
+      startX = e.pageX - track.offsetLeft;
+      scrollLeft = track.parentElement.scrollLeft;
+    });
+
+    track.addEventListener('mouseleave', function () {
+      isDown = false;
+      track.style.cursor = 'grab';
+    });
+
+    track.addEventListener('mouseup', function () {
+      isDown = false;
+      track.style.cursor = 'grab';
+    });
+
+    track.addEventListener('mousemove', function (e) {
+      if (!isDown) return;
+      e.preventDefault();
+      var x = e.pageX - track.offsetLeft;
+      var walk = (x - startX) * 1.5;
+      track.parentElement.scrollLeft = scrollLeft - walk;
+    });
+
+    track.style.cursor = 'grab';
+  })();
+</script>
 {% schema %}
 {
   "name": "Mobile Collection Nav",
