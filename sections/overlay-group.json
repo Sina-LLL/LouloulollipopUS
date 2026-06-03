@@ -39,7 +39,7 @@
         "empty_color_background": "",
         "empty_color_background_gradient": "",
         "empty_color_text": "",
-        "enable_cross_sells": true,
+        "enable_cross_sells": false,
         "cross_sell_title": "You May Also Like:",
         "cross_sell_products": [],
         "enable_automatic_cross_sells": true,
