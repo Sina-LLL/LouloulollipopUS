@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="{{ 'collapsible-tabs.css' | asset_url }}" {%- render 'lazy-stylesheet-attrs' %}>
 <div class="container" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
   <div class="collapsible-tabs">
-    {% if section.settings.title != blank %}
+    {% if section.settings.title != blank and section.blocks != blank %}
       <h3 class="collapsible-tabs__heading collapsible-tabs__content" id="faq-{{ section.settings.title | handle }}">{{ section.settings.title | escape }}</h3>
     {% endif %}
 
