@@ -46,6 +46,14 @@ h1, .h1,
   font-weight:600;
 
 }
+@media (max-width: 768px) {
+  h1.majortitle{
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.5rem; 
+  }
+}
 /* End H1 */
 
 /* H2 */
