@@ -8,16 +8,547 @@
  * ------------------------------------------------------------
  */
 {
+  "layout": "theme",
   "sections": {
-    "main": {
-      "type": "main-page",
+    "hero": {
+      "type": "image-with-text",
+      "blocks": {
+        "eyebrow": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Canadian · Award-Winning · Since 2015"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "The Sleep Bag Built for Real Nights",
+            "use_h1": true
+          }
+        },
+        "body": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our award-winning sleep sacks stay on all night — no kicked-off blankets, no disrupted sleep. Available in TENCEL™, and Muslin, from 0.5 to 2.5 TOG.</p>",
+            "enlarge_text": false
+          }
+        },
+        "btn1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Sleep Bags",
+            "button_link": "shopify://collections/sleep-bags",
+            "button_style": "primary"
+          }
+        },
+        "btn2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Why TENCEL?",
+            "button_link": "shopify://pages/tencel-lyocell",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "eyebrow",
+        "heading",
+        "body",
+        "btn1",
+        "btn2"
+      ],
       "settings": {
-        "show_page_title": true,
-        "full_width": false
+        "image": "shopify://shop_images/LouLouLollipopMarch2026-07306_96b209be-b46f-422b-98e6-2dbe22479a7c.jpg",
+        "image_width": 700,
+        "image_link": "",
+        "image_position": "below",
+        "text_alignment": "left",
+        "color_scheme": "default"
+      }
+    },
+    "proof_bar": {
+      "type": "lp-proof-bar",
+      "blocks": {
+        "p1": {
+          "type": "stat",
+          "settings": {
+            "label": "Good Housekeeping",
+            "desc": "2025 Parenting Award Winner"
+          }
+        },
+        "p2": {
+          "type": "stat",
+          "settings": {
+            "label": "Parents Best for Baby",
+            "desc": "Award Winner"
+          }
+        },
+        "p3": {
+          "type": "stat",
+          "settings": {
+            "label": "5,000+ ★★★★★",
+            "desc": "Reviews across sleep products"
+          }
+        },
+        "p4": {
+          "type": "stat",
+          "settings": {
+            "label": "Designed in Vancouver",
+            "desc": "Since 2015"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4"
+      ],
+      "settings": {
+        "bg_color": "#6a8b95",
+        "text_color": "#ffffff",
+        "accent_color": "#ffc748"
+      }
+    },
+    "products": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Shop Sleep Bags",
+        "text": "<p>Every print, every size — all in our buttery-soft TENCEL™ Lyocell or breathable bamboo muslin with the 2-way zip parents actually ask for.</p>",
+        "collection": "sleep-bags",
+        "show_vendor": false,
+        "enable_carousel": false,
+        "grid": 4,
+        "rows": 2,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "center"
+      }
+    },
+    "why_sleep_bags": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Why TENCEL™ for Babies",
+            "use_h1": false
+          }
+        },
+        "body": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Babies sweat. A lot. They can't regulate body temperature like adults, and bad sleepwear makes the problem worse — clammy fabric, restless nights, parents up at 2am with a wide-awake baby.</p><p>TENCEL™ Lyocell solves a real problem. It's a botanic fiber made from eucalyptus wood pulp, and independent testing shows it absorbs moisture roughly <strong>50% more efficiently than cotton</strong>. When cotton gets damp, it clings. TENCEL keeps wicking. That difference matters when your baby is in the same garment for 10–12 hours.</p>",
+            "enlarge_text": false
+          }
+        },
+        "list_item_ip6gNe": {
+          "type": "list_item",
+          "settings": {
+            "number": "1",
+            "use_icon": false,
+            "icon": "check_mark",
+            "title": "Regulates temperature in both directions",
+            "text": "Cool in summer, warm in winter — without bulk."
+          }
+        },
+        "list_item_yQNkrB": {
+          "type": "list_item",
+          "settings": {
+            "number": "2",
+            "use_icon": false,
+            "icon": "check_mark",
+            "title": "Stays dry against the skin",
+            "text": "Less sweat trapped means fewer wakeups from being uncomfortable."
+          }
+        },
+        "list_item_TpjNi7": {
+          "type": "list_item",
+          "settings": {
+            "number": "3",
+            "use_icon": false,
+            "icon": "check_mark",
+            "title": "Gentle on eczema-prone skin",
+            "text": "The National Eczema Society lists TENCEL alongside cotton as suitable for sensitive skin. Smooth fiber surface means less friction."
+          }
+        },
+        "list_item_Wx9fhU": {
+          "type": "list_item",
+          "settings": {
+            "number": "4",
+            "use_icon": false,
+            "icon": "check_mark",
+            "title": "Closed-loop production",
+            "text": "99% of the solvent used is recycled. Less water, less waste than conventional cotton."
+          }
+        },
+        "btn": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Sleep Bags",
+            "button_link": "/collections/sleep-bags",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "body",
+        "list_item_ip6gNe",
+        "list_item_yQNkrB",
+        "list_item_TpjNi7",
+        "list_item_Wx9fhU",
+        "btn"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/image_82.png",
+        "image_width": 700,
+        "image_link": "",
+        "image_position": "below",
+        "text_alignment": "left",
+        "color_scheme": "default"
+      }
+    },
+    "comparison": {
+      "type": "lp-comparison",
+      "blocks": {
+        "r1": {
+          "type": "row",
+          "settings": {
+            "feature": "Wearable fit",
+            "our_value": "Yes — wraps securely around baby",
+            "other_value": "No — loose around baby all night"
+          }
+        },
+        "r2": {
+          "type": "row",
+          "settings": {
+            "feature": "Stays on all night",
+            "our_value": "Always — can't be kicked off",
+            "other_value": "Often kicked off, baby wakes cold"
+          }
+        },
+        "r3": {
+          "type": "row",
+          "settings": {
+            "feature": "Temperature control",
+            "our_value": "TOG-rated for room temperature",
+            "other_value": "Uncontrolled — too hot or too cold"
+          }
+        },
+        "r4": {
+          "type": "row",
+          "settings": {
+            "feature": "Loose fabric in crib",
+            "our_value": "None",
+            "other_value": "Yes — bunches and shifts during sleep"
+          }
+        },
+        "r5": {
+          "type": "row",
+          "settings": {
+            "feature": "Fabric type",
+            "our_value": "TENCEL™ Lyocell — moisture-wicking, breathable",
+            "other_value": "Typically synthetic or treated cotton"
+          }
+        },
+        "r6": {
+          "type": "row",
+          "settings": {
+            "feature": "Sized for babies",
+            "our_value": "Yes — 0–3M up to size 4–5Y",
+            "other_value": "One size — not designed for infants"
+          }
+        }
+      },
+      "block_order": [
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5",
+        "r6"
+      ],
+      "settings": {
+        "bg_color": "#faf9f6",
+        "title": "Sleep Bag vs Loose Blanket",
+        "intro": "Loose blankets have been the default for generations. Here's how they actually stack up.",
+        "col_ours": "Loulou Lollipop Sleep Bag",
+        "col_other": "Loose Blanket",
+        "bottom_line": "Bottom line: Sleep bags are designed to work with babies — wearable, TOG-rated, and built to stay on all night."
+      }
+    },
+    "safety": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Every Detail. Every Night.",
+            "use_h1": false
+          }
+        },
+        "body": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Every Loulou Lollipop sleep bag is built around the details that make a real difference at 2am.</p><ul><li><strong>2-way zipper</strong> — opens from the bottom for quick diaper changes without fully unwrapping baby</li><li><strong>Sleeveless design</strong> — free arm movement for natural sleep positions</li><li><strong>Hidden seams + zipper guard</strong> — smooth against delicate skin, no friction points</li><li><strong>Wearable design</strong> — stays on all night, no loose fabric bunching or shifting</li><li><strong>TOG-rated in 0.5, 1.0, and 2.5</strong> — matched to room temperature so baby is never too hot or too cold</li></ul>",
+            "enlarge_text": false
+          }
+        },
+        "btn": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Sleep Bags",
+            "button_link": "/collections/sleep-bags",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "body",
+        "btn"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/BA9004U.APS_Tencel_Sleep_Bag_1.0_TOG_-_Alphabet_Smiles_52.jpg",
+        "image_width": 700,
+        "image_link": "",
+        "image_position": "left",
+        "text_alignment": "left",
+        "color_scheme": "default"
+      }
+    },
+    "178096046403bd84d9": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_cards_carousel_hxPhx9": {
+          "type": "shopify://apps/judge-me-reviews/blocks/cards_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "show_sample_reviews": true,
+            "reviews_selection": "custom_products",
+            "products": [
+              "muslin-lightweight-sleep-bag-0-5-tog-all-aboard",
+              "muslin-lightweight-sleep-bags-0-5-tog-alphabet-smiles",
+              "muslin-lightweight-sleep-bag-0-5-tog-animal-puzzle",
+              "muslin-lightweight-sleep-bag-0-5-tog-astro-explorers",
+              "muslin-lightweight-sleep-bag-0-5-tog-baby-dinomite",
+              "muslin-lightweight-sleep-bag-0-5-tog-bears-on-bikes",
+              "muslin-lightweight-sleep-bag-0-5-tog-bumble-bees",
+              "muslin-lightweight-sleep-bags-0-5-tog-bunny-meadow",
+              "muslin-lightweight-sleep-bags-0-5-tog-canada",
+              "muslin-lightweight-sleep-bag-0-5-tog-camper-vans"
+            ],
+            "star_rating": "all",
+            "show_review_media": false,
+            "display_order": "most_recent",
+            "no_image_fallback": "review_text_only",
+            "max_reviews": 6,
+            "review_length": "small",
+            "text_size": "medium",
+            "image_ratio": "1",
+            "reviews_shown": 4,
+            "show_reviewer_name": true,
+            "show_product_name": true,
+            "hide_arrows_mobile": true,
+            "arrows_position": "sides",
+            "max_width": 1100,
+            "corner_styling": "soft",
+            "header_text_color": "#1d1d1d",
+            "text_color": "#1d1d1d",
+            "card_color": "#f9f9f9",
+            "stars_color": "",
+            "arrows_color": "#000000",
+            "transition_speed": 10,
+            "header_text": "What Parents Say",
+            "show_average_rating": true
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_cards_carousel_hxPhx9"
+      ],
+      "settings": {
+        "full_width": false,
+        "show_space": true
+      }
+    },
+    "bundles": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Save with a Sleep Starter Bundle",
+        "text": "<p>Pair the sleep bag with the swaddle and fitted sheet your baby will actually use. Same print, fully coordinated.</p>",
+        "collection": "sleep-bedding-bundles",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 4,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "center"
+      }
+    },
+    "care": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "wash": {
+          "type": "question",
+          "settings": {
+            "title": "How do I wash a sleep bag?",
+            "answer": "<p>Machine wash cold on a gentle cycle. Tumble dry low or hang dry. No bleach, no fabric softener — softener coats the fibres and reduces moisture-wicking performance on TENCEL™.</p>"
+          }
+        },
+        "size": {
+          "type": "question",
+          "settings": {
+            "title": "What size should I get?",
+            "answer": "<p>Sleep bags are sized by weight and height, not age. Check the size guide on the product page for exact measurements. When between sizes, size up — there should be room to kick and move.</p>"
+          }
+        },
+        "tog": {
+          "type": "question",
+          "settings": {
+            "title": "Which TOG do I need?",
+            "answer": "<p>0.5 TOG for rooms 24°C and above. 1.0 TOG for year-round use in rooms 20–24°C. 2.5 TOG for cool rooms below 20°C or winter use. Always check room temperature before dressing baby for sleep.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "wash",
+        "size",
+        "tog"
+      ],
+      "settings": {
+        "title": "Care & Sizing"
+      }
+    },
+    "faq": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "title": "When can a baby start using a sleep bag?",
+            "answer": "<p>From birth. Our sleep bags start at 0–3M (3–6kg). Ensure the neck opening is snug enough that baby can't slip inside — check the size guide.</p>"
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "title": "Is TENCEL™ good for babies with sensitive skin?",
+            "answer": "<p>Yes. TENCEL™ Lyocell has a smooth, continuous fibre structure that lies flat against skin — less friction and less irritation than cotton or synthetic fabrics. Its moisture-wicking properties also help keep skin dry throughout the night, which matters for babies who sleep 10–12 hours in the same garment.</p>"
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "title": "Can my baby wear a sleeper under the sleep bag?",
+            "answer": "<p>Yes — most parents do. A fitted TENCEL™ sleeper under a 1.0 TOG bag is the most common combo. Avoid too many layers: one more layer than an adult would wear is a good rule of thumb.</p>"
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "title": "What's the difference between TENCEL, Muslin, and Waffle Knit?",
+            "answer": "<p>TENCEL™ Modal is the softest and most temperature-regulating — great year-round. Bamboo Muslin is ultra-lightweight and breathable, ideal for warm weather (0.5 TOG). Waffle Knit provides gentle insulation with built-in airflow — perfect for the 2.5 TOG winter option.</p>"
+          }
+        },
+        "q5": {
+          "type": "question",
+          "settings": {
+            "title": "Are sleep bags good for babies with eczema?",
+            "answer": "<p>Many parents with eczema-prone babies tell us yes. TENCEL™ Lyocell's smooth fibre structure reduces friction against skin, and its moisture-wicking properties keep skin dry throughout the night — both factors that matter for babies with sensitive or reactive skin. Talk to your paediatrician for your child's specific situation.</p>"
+          }
+        },
+        "q6": {
+          "type": "question",
+          "settings": {
+            "title": "How does TENCEL compare to cotton for babies?",
+            "answer": "<p>For babywear, TENCEL™ Lyocell outperforms cotton in moisture absorption — independent testing shows it absorbs roughly 50% more moisture than cotton. It also has a naturally smooth fibre structure, which means it stays soft wash after wash without pilling or roughening. Cotton tends to get stiffer and more textured over time. For babies in the same garment all night, that difference shows up quickly.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ],
+      "settings": {
+        "title": "Frequently Asked Questions"
+      }
+    },
+    "related": {
+      "type": "collection-list",
+      "blocks": {
+        "c1": {
+          "type": "collection",
+          "settings": {
+            "collection": "sleepers",
+            "tag": "",
+            "subheading": "Footed TENCEL™ Sleepers",
+            "button_label": "Shop Sleepers"
+          }
+        },
+        "c2": {
+          "type": "collection",
+          "settings": {
+            "collection": "swaddles",
+            "tag": "",
+            "image": "shopify://shop_images/Nav_01.png",
+            "subheading": "Breathable Muslin Swaddles",
+            "button_label": "Shop Swaddles"
+          }
+        },
+        "c3": {
+          "type": "collection",
+          "settings": {
+            "collection": "crib-sheets",
+            "tag": "",
+            "subheading": "Cozy Muslin Crib Sheets",
+            "button_label": "Shop Crib Sheets"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "title": "Keep Exploring",
+        "text": "",
+        "text_alignment": "start",
+        "enable_carousel": false,
+        "grid": 3,
+        "color_scheme": "default",
+        "full_width": true,
+        "coll_grid_image_shape": "square",
+        "coll_grid_image_position": "center center",
+        "coll_thumb_mob_per_row": "1",
+        "coll_grid_show_count": false,
+        "coll_text_position": "below",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_y": "center",
+        "coll_button_style": "primary"
       }
     }
   },
   "order": [
-    "main"
+    "hero",
+    "proof_bar",
+    "products",
+    "why_sleep_bags",
+    "comparison",
+    "safety",
+    "178096046403bd84d9",
+    "bundles",
+    "care",
+    "faq",
+    "related"
   ]
 }
