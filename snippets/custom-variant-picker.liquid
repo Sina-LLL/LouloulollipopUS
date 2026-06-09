@@ -281,7 +281,7 @@
           {%- for sibling in sibs_collection.products -%}
             {%- unless sibling.tags contains 'hidden' and sibling.available -%}
               {%- unless sibling.available -%}
-                {%- if sibling.tags contains 'Seasonal' or sibling.tags contains 'new'-%}
+                {%- if sibling.tags contains 'seasonal' or sibling.tags contains 'new'-%}
                   <a href="{{ sibling.url }}"
                     class="opt-label opt-label--image sold-out {% if sibling.handle == product.handle %}is-active{% endif %}"
                     data-color="{{ sibling.metafields.theme.cutline }}"

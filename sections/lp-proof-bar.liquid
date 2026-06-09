@@ -1,0 +1,66 @@
+<div id="section-id-{{ section.id }}" class="lp-proof-bar">
+  <div class="container">
+    <div class="lp-proof-bar__grid">
+      {%- for block in section.blocks -%}
+        <div class="lp-proof-bar__item" {{ block.shopify_attributes }}>
+          <span class="lp-proof-bar__label">{{ block.settings.label }}</span>
+          <span class="lp-proof-bar__desc">{{ block.settings.desc }}</span>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+<style>
+  #section-id-{{ section.id }} {
+    background: {{ section.settings.bg_color }};
+    color: {{ section.settings.text_color }};
+    padding: 22px 0;
+  }
+  #section-id-{{ section.id }} .lp-proof-bar__grid {
+    display: grid;
+    grid-template-columns: repeat({{ section.blocks.size }}, 1fr);
+    gap: 24px;
+    text-align: center;
+  }
+  #section-id-{{ section.id }} .lp-proof-bar__label {
+    display: block;
+    font-family: var(--heading-font-family);
+    font-weight: 600;
+    font-size: 1rem;
+    color: {{ section.settings.accent_color }};
+    margin-bottom: 4px;
+  }
+  #section-id-{{ section.id }} .lp-proof-bar__desc {
+    font-size: 0.8rem;
+    opacity: 0.85;
+  }
+  @media (max-width: 640px) {
+    #section-id-{{ section.id }} .lp-proof-bar__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "LP Proof Bar",
+  "settings": [
+    { "type": "color", "id": "bg_color",     "label": "Background colour", "default": "#6A8B95" },
+    { "type": "color", "id": "text_color",   "label": "Text colour",       "default": "#FAF6F0" },
+    { "type": "color", "id": "accent_color", "label": "Accent colour",     "default": "#FFC748" }
+  ],
+  "blocks": [
+    {
+      "type": "stat",
+      "name": "Stat",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label", "default": "Stat"        },
+        { "type": "text", "id": "desc",  "label": "Description", "default": "Detail" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "LP Proof Bar" }]
+}
+{% endschema %}

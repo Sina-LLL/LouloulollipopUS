@@ -360,6 +360,15 @@
         dot.addEventListener('click', function() { goTo(i); });
       });
 
+      slides.forEach(function(slide, i) {
+        slide.addEventListener('click', function(e) {
+          if (i !== current) {
+            e.preventDefault();
+            goTo(i);
+          }
+        });
+      });
+      
       var ticking = false;
       track.addEventListener('scroll', function() {
         if (ticking) return;

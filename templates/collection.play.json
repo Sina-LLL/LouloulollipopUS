@@ -62,6 +62,25 @@
             "button_label": ""
           }
         },
+        "collection_nwWhhg": {
+          "type": "collection",
+          "settings": {
+            "collection": "pacifier-clips",
+            "tag": "",
+            "image": "shopify://shop_images/SILCPOCPQZ_01_b0ff64a5-f5bb-4ee1-9692-e9545270614e.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_pKhQNN": {
+          "type": "collection",
+          "settings": {
+            "collection": "pacifier-clip-teether-set",
+            "tag": "",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
         "collection_KCViN4": {
           "type": "collection",
           "settings": {
@@ -88,16 +107,6 @@
             "collection": "teething-charms",
             "tag": "",
             "image": "shopify://shop_images/TCM-009-BFG_01.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_nwWhhg": {
-          "type": "collection",
-          "settings": {
-            "collection": "pacifier-clips",
-            "tag": "",
-            "image": "shopify://shop_images/SILCPMON_01.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -135,10 +144,11 @@
       },
       "block_order": [
         "collection_4wLe7J",
+        "collection_nwWhhg",
+        "collection_pKhQNN",
         "collection_KCViN4",
         "collection_HBGXfQ",
         "collection_ngYLRN",
-        "collection_nwWhhg",
         "collection_t3MwCY",
         "collection_ndLacp",
         "collection_9fk8m7"
@@ -256,11 +266,11 @@
       "settings": {
         "title": "Our Favourite Pacifier Clips",
         "text": "",
-        "image": "shopify://shop_images/SILCPSWRBN_Silicone_Pacifier_Clip_Sweetheart-Rainbow_7.jpg",
+        "image": "shopify://shop_images/OneC_Nav.png",
         "order": false,
         "product_list": [
           "pacifier-clip-beadless-monstera",
-          "gem-dariling-pacifier-clip-avocado"
+          "onec-silicone-pacifier-clip-pink-quartz"
         ],
         "button_label": "Shop Pacifier Clips",
         "link": "shopify://collections/pacifier-clips",

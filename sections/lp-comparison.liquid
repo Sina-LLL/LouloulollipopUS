@@ -1,0 +1,132 @@
+<section id="section-id-{{ section.id }}" class="lp-comparison">
+  <div class="container">
+    {%- if section.settings.title != blank or section.settings.intro != blank -%}
+      <div class="lp-comparison__head">
+        {%- if section.settings.title != blank -%}
+          <h2>{{ section.settings.title }}</h2>
+        {%- endif -%}
+        {%- if section.settings.intro != blank -%}
+          <p class="">{{ section.settings.intro }}</p>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+    <div class="lp-comparison__wrap">
+      <table class="lp-comparison__table">
+        <thead>
+          <tr>
+            <th></th>
+            <th class="lp-comparison__col-ours">{{ section.settings.col_ours }}</th>
+            <th>{{ section.settings.col_other }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'row' -%}
+              <tr {{ block.shopify_attributes }}>
+                <td class="lp-comparison__feature">{{ block.settings.feature }}</td>
+                <td class="lp-comparison__col-ours">{{ block.settings.our_value }}</td>
+                <td>{{ block.settings.other_value }}</td>
+              </tr>
+            {%- endif -%}
+          {%- endfor -%}
+        </tbody>
+      </table>
+      {%- if section.settings.bottom_line != blank -%}
+        <div class="lp-comparison__bottom-line">
+          {{ section.settings.bottom_line }}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+<style>
+  #section-id-{{ section.id }} {
+    padding: 72px 0;
+    background: {{ section.settings.bg_color }};
+  }
+  #section-id-{{ section.id }} .lp-comparison__head {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 48px;
+  }
+  #section-id-{{ section.id }} .lp-comparison__intro {
+    font-size: 1.1rem;
+    color: var(--color-text);
+    opacity: 0.7;
+    margin-top: 12px;
+  }
+  #section-id-{{ section.id }} .lp-comparison__wrap {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  #section-id-{{ section.id }} .lp-comparison__table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border: 1px solid #6A8B95;
+    border-radius: 6px;
+    overflow: hidden;
+    font-size: 0.95rem;
+  }
+  #section-id-{{ section.id }} .lp-comparison__table thead {
+    background: #D1E3E6;
+    font-family: var(--heading-font-family);
+  }
+  #section-id-{{ section.id }} .lp-comparison__table th,
+  #section-id-{{ section.id }} .lp-comparison__table td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #6A8B95;
+  }
+  #section-id-{{ section.id }} .lp-comparison__table tbody tr:last-child td {
+    border-bottom: none;
+  }
+  #section-id-{{ section.id }} .lp-comparison__feature { font-weight: 600; }
+  #section-id-{{ section.id }} .lp-comparison__col-ours {
+    background: #BAD5D9;
+    font-weight: 500;
+  }
+  #section-id-{{ section.id }} .lp-comparison__col-ours{
+    font-weight:600;
+  }
+  #section-id-{{ section.id }} .lp-comparison__bottom-line {
+    margin-top: 28px;
+    padding: 18px 22px;
+    background: #D1E3E6;
+    border-left: 4px solid #6A8B95;
+    border-radius: 4px;
+    font-size: 0.95rem;
+  }
+  @media (max-width: 640px) {
+    #section-id-{{ section.id }} { padding: 48px 0; }
+    #section-id-{{ section.id }} .lp-comparison__table th,
+    #section-id-{{ section.id }} .lp-comparison__table td { padding: 10px 12px; font-size: 0.82rem; }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "LP Comparison Table",
+  "settings": [
+    { "type": "color",    "id": "bg_color",     "label": "Background colour", "default": "#FFFFFF" },
+    { "type": "text",     "id": "title",        "label": "Heading"            },
+    { "type": "textarea", "id": "intro",        "label": "Intro text"         },
+    { "type": "text",     "id": "col_ours",     "label": "Our column header", "default": "Loulou Lollipop Sleep Bag" },
+    { "type": "text",     "id": "col_other",    "label": "Other column header","default": "Loose Blanket"            },
+    { "type": "textarea", "id": "bottom_line",  "label": "Bottom-line callout"}
+  ],
+  "blocks": [
+    {
+      "type": "row",
+      "name": "Row",
+      "settings": [
+        { "type": "text", "id": "feature",     "label": "Feature"        },
+        { "type": "text", "id": "our_value",   "label": "Our value"      },
+        { "type": "text", "id": "other_value", "label": "Other value"    }
+      ]
+    }
+  ],
+  "presets": [{ "name": "LP Comparison Table" }]
+}
+{% endschema %}
