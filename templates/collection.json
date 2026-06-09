@@ -47,9 +47,30 @@
         "rel_coll_gall_text_alignment": "bottom left",
         "rel_coll_grid_mobile": "2"
       }
+    },
+    "collapsible_tabs_PDjRcV": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "question_8Db6Cb": {
+          "type": "question",
+          "repeater": "{{ collection.metafields.custom.faqs.value }}",
+          "settings": {
+            "title": "{{ block.repeater.question.value }}",
+            "answer": "{{ block.repeater.answers | metafield_tag }}"
+          }
+        }
+      },
+      "block_order": [
+        "question_8Db6Cb"
+      ],
+      "name": "Collapsible tabs",
+      "settings": {
+        "title": "Collapsible tabs"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "collapsible_tabs_PDjRcV"
   ]
 }
