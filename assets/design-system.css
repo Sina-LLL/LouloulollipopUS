@@ -12,6 +12,7 @@
   --lll-slate-muted: #B3C3C9;   /* disabled / sold-out */
   --lll-slate-border: #D9E1E4;  /* borders, dividers, inactive dots */
   --lll-slate-deep: #4F676E;    /* links, pill text, shipping bar */
+  --lll-slate-action: #587681;  /* AA-compliant slate for small text on fills (4.6:1 vs cream) */
   --lll-cream: #FAF9F6;
   --lll-white: #FFFFFF;
   --lll-blush: #FBF4F3;
@@ -19,7 +20,7 @@
   --lll-peach: #F4D8CA;
 
   /* Color / Semantic */
-  --lll-sale: #DB3F30;
+  --lll-sale: #D03528;          /* darkened from #DB3F30 for AA (4.7:1+ as text and behind white) */
   --lll-success: #78B742;
   --lll-warning: #F2B321;
   --lll-new: #D68161;
@@ -41,6 +42,31 @@
   --lll-duration-fast: 200ms;
   --lll-duration-med: 300ms;
   --lll-duration-slow: 500ms;
+
+  /* ---- Accessibility overrides (WCAG AA) ----
+     Theme buttons & badges. Values mirror the recommended theme-editor
+     settings; these vars win over doc-head-styles because this sheet
+     loads later. Channel format (R G B) matches Symmetry's rgb(var()) usage. */
+  --btn-bg-color: 88 118 129;                              /* slate-action */
+  --btn-border-color: 88 118 129;
+  --btn-bg-hover-color: 79 103 110;                        /* slate-deep: hover darkens, not lightens */
+  --btn-border-hover-color: 79 103 110;
+  --btn-alt-text-color: 88 118 129;
+  --btn_alt_text_hover: 79 103 110;
+  --color-scheme-default-btn-bg-color: 88 118 129;
+  --color-scheme-default-btn-bg-hover-color: 79 103 110;
+  --color-scheme-default-btn-border-color: 88 118 129;
+  --color-scheme-default-btn-border-hover-color: 79 103 110;
+  --color-scheme-default-btn-alt-text-color: 88 118 129;
+  --color-scheme-2-btn-text-color: 88 118 129;
+  --product-label-overlay-stock-text: var(--lll-ink);      /* was white on amber: 1.9:1 */
+  --product-label-overlay-new-text: var(--lll-ink);        /* was white on terracotta: 2.9:1 */
+  --product-label-overlay-meta-text: var(--lll-ink);       /* was white on green: 3.5:1 */
+  --product-label-overlay-reduction-bg: var(--lll-sale);
+  --product-label-sale-text: var(--lll-sale);
+}
+.use-color-scheme--default{
+  --product-label-sale-text: var(--lll-sale); /* scheme block re-sets this; keep AA value */
 }
 
 *{
@@ -486,15 +512,15 @@ label.opt-label.opt-label--btn.btn.relative.text-center{
 }
 .opt-btn:checked+ label.opt-label.opt-label--btn.btn.relative.text-center{
   box-shadow:none;
-  background-color:var(--lll-slate);
+  background-color:var(--lll-slate-action);
   color:var(--lll-white);
-  border:1px solid var(--lll-slate);
+  border:1px solid var(--lll-slate-action);
 
 }
 label.opt-label.opt-label--btn.btn.relative.text-center:hover, .opt-btn.is-unavailable+.opt-label:hover{
-  border:1px solid var(--lll-slate-hover);
+  border:1px solid var(--lll-slate-deep);
   color:var(--lll-white);
-  background-color:var(--lll-slate-hover);
+  background-color:var(--lll-slate-deep);
   
 }
 .add-to-cart-wrapper{
@@ -563,7 +589,7 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
 }
 .opt-label__tag.product-label--sale{
   background-color: var(--product-label-overlay-reduction-bg);
-  color: var(--product-label-overlay-new-text);
+  color: var(--product-label-overlay-reduction-text); /* was borrowing the new-badge text var; sale text is white */
 }
 .opt-btn.is-unavailable+.opt-label,.opt-btn.is-unavailable+.opt-label:hover{
   color:var(--lll-slate-border) !important;
@@ -794,7 +820,7 @@ carousel-slider.mobile-only.custom-features-carousel{
   min-height: 32px;
 }
 .product-material-usp{
-  background-color: var(--lll-slate);
+  background-color: var(--lll-slate-action); /* AA for the 12px white text */
   border-radius: var(--lll-radius-md);
   padding: 24px;
   text-align: center;
@@ -926,7 +952,9 @@ h1.product-title {
 }
 .btn--secondary{
   border:none;
-  font-weight: 600;
+  font-weight:600;
+  /* hover fills slate-deep (via --btn_alt_text_hover); flip text to cream for 5.7:1 */
+  --btn-text-hover-color: 250 249 246;
 }
 .custom-product-features .theme-img{
   border-radius: var(--lll-radius-md);
