@@ -84,11 +84,12 @@ font-size: 3rem;
 line-height: 3.625rem; 
 }
 
-h1, .h1,
+h1, .h1{
+  font-weight:700; /* hierarchy: Display 800 > H1/H2 700 > H3-H6 600 */
+}
 .btn,
 .small-feature-link{
   font-weight:600;
-
 }
 @media (max-width: 768px) {
   h1.majortitle{
@@ -119,7 +120,7 @@ h2.text-overlay__title.h4{
 h3,.h3{
   font-size: 1.75rem;
   font-weight: 600;
-  line-height: 2.5rem; 
+  line-height: 2.25rem; /* was 2.5rem - aligns heading rhythm */ 
 }
 /* End H3 */
 
