@@ -23,7 +23,7 @@
   --lll-sale: #D03528;          /* darkened from #DB3F30 for AA (4.7:1+ as text and behind white) */
   --lll-success: #78B742;
   --lll-warning: #F2B321;
-  --lll-new: #D68161;
+  --lll-new: #D68161;           /* brand decision: white text at 2.9:1 — documented AA exception (decorative badge) */
   --lll-meta: #7A8F78;
   --lll-text-muted: #848484;    /* was-price, secondary text */
 
@@ -60,7 +60,8 @@
   --color-scheme-default-btn-alt-text-color: 88 118 129;
   --color-scheme-2-btn-text-color: 88 118 129;
   --product-label-overlay-stock-text: var(--lll-ink);      /* was white on amber: 1.9:1 */
-  --product-label-overlay-new-text: var(--lll-ink);        /* was white on terracotta: 2.9:1 */
+  --product-label-overlay-new-text: var(--lll-white);
+  --product-label-overlay-new-bg: var(--lll-new);
   --product-label-overlay-meta-text: var(--lll-ink);       /* was white on green: 3.5:1 */
   --product-label-overlay-reduction-bg: var(--lll-sale);
   --product-label-sale-text: var(--lll-sale);
