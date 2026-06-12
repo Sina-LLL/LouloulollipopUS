@@ -58,7 +58,7 @@
         "btn2"
       ],
       "settings": {
-        "image": "shopify://shop_images/LouLouLollipopMarch2026-07306_96b209be-b46f-422b-98e6-2dbe22479a7c.jpg",
+        "image": "shopify://shop_images/Lemon-Hero.png",
         "image_width": 700,
         "image_link": "",
         "image_position": "below",
@@ -153,7 +153,7 @@
         "image_pzw4T6": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/TOG_Chart_b3ae96d7-6832-44c5-a8c0-89017d0216a7.png",
+            "image": "shopify://shop_images/TOG_Chart.png",
             "image_width": 700,
             "url": ""
           }
@@ -501,13 +501,6 @@
             "answer": "<p>Yes — most parents do. A fitted TENCEL™ sleeper under a 1.0 TOG bag is the most common combo. Avoid too many layers: one more layer than an adult would wear is a good rule of thumb.</p>"
           }
         },
-        "q4": {
-          "type": "question",
-          "settings": {
-            "title": "What's the difference between TENCEL, Tanboocel® Bamboo Viscose, and Waffle Knit?",
-            "answer": "<p>TENCEL™ Modal is the softest and most temperature-regulating — great year-round. Tanboocel® Bamboo Viscose is ultra-lightweight and breathable, ideal for warm weather (0.5 TOG). Waffle Knit provides gentle insulation with built-in airflow — perfect for the 2.5 TOG winter option.</p>"
-          }
-        },
         "q5": {
           "type": "question",
           "settings": {
@@ -527,7 +520,6 @@
         "q1",
         "q2",
         "q3",
-        "q4",
         "q5",
         "q6"
       ],
