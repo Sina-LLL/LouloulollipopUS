@@ -82,6 +82,16 @@
     "multi_column_n44cTX": {
       "type": "multi-column",
       "blocks": {
+        "text_block_kQBEbC": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": false,
+            "title": "Our Purpose",
+            "text": "<p>Loulou Lollipop exists to enhance the lives of children and families by<br/>creating safe, sustainable, and beautifully designed products — while<br/>actively working to protect the planet they will inherit.</p>",
+            "button_label": "",
+            "link": ""
+          }
+        },
         "text_block_tikGXJ": {
           "type": "text_block",
           "settings": {
@@ -104,6 +114,7 @@
         }
       },
       "block_order": [
+        "text_block_kQBEbC",
         "text_block_tikGXJ",
         "text_block_XMAN3a"
       ],
@@ -406,6 +417,9 @@
         "media_x7hgem"
       ],
       "settings": {
+        "title": "",
+        "text": "",
+        "text_alignment": "start",
         "grid_desktop": 2,
         "grid_mobile": "1",
         "height": "fixed",
