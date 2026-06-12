@@ -154,7 +154,7 @@
         "tog_image": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/TOG_Chart_b3ae96d7-6832-44c5-a8c0-89017d0216a7.png",
+            "image": "shopify://shop_images/TOG_Chart.png",
             "image_width": 700,
             "url": ""
           }
