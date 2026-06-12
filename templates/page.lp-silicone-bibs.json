@@ -1,0 +1,528 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme",
+  "sections": {
+    "hero": {
+      "type": "image-with-text",
+      "blocks": {
+        "eyebrow": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Best Silicone Baby Tableware · Mothers Always Right 2026"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "The Bib That Catches What Hands Drop.",
+            "use_h1": true
+          }
+        },
+        "body": {
+          "type": "text",
+          "settings": {
+            "text": "<p>100% platinum-cured silicone. Deep front pocket for baby-led weaning. Print cured into the material — not painted on — so it survives 300+ dishwasher cycles without fading. Fits 4 months to 3 years.</p>",
+            "enlarge_text": false
+          }
+        },
+        "btn1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Silicone Bibs",
+            "button_link": "shopify://collections/silicone-bibs",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "eyebrow",
+        "heading",
+        "body",
+        "btn1"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Nav_4.png",
+        "image_2": "shopify://shop_images/LouLouLollipopMarch2026-05567.jpg",
+        "image_width": 700,
+        "image_link": "",
+        "image_position": "below",
+        "text_alignment": "left",
+        "color_scheme": "default"
+      }
+    },
+    "proof_bar": {
+      "type": "lp-proof-bar",
+      "blocks": {
+        "p1": {
+          "type": "stat",
+          "settings": {
+            "label": "Mothers Always Right",
+            "desc": "Best Silicone Baby Tableware 2026"
+          }
+        },
+        "p2": {
+          "type": "stat",
+          "settings": {
+            "label": "OEKO-TEX® Certified",
+            "desc": "Tested against ~350 substances"
+          }
+        },
+        "p3": {
+          "type": "stat",
+          "settings": {
+            "label": "5,000+ ★★★★★",
+            "desc": "Reviews across feeding products"
+          }
+        },
+        "p4": {
+          "type": "stat",
+          "settings": {
+            "label": "Designed in Vancouver",
+            "desc": "Since 2015"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4"
+      ],
+      "settings": {
+        "bg_color": "#6a8b95",
+        "text_color": "#ffffff",
+        "accent_color": "#ffc748"
+      }
+    },
+    "products": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Shop Silicone Bibs",
+        "text": "<p>Printed and solid styles in platinum-cured silicone. Deep pocket, adjustable closure, dishwasher safe. Prints that won't fade after two years of daily use.</p>",
+        "collection": "silicone-bibs",
+        "show_vendor": false,
+        "enable_carousel": false,
+        "grid": 4,
+        "rows": 2,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "center"
+      }
+    },
+    "why_silicone": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Not All Silicone Is the Same",
+            "use_h1": false
+          }
+        },
+        "body": {
+          "type": "text",
+          "settings": {
+            "text": "<p>\"Food-grade silicone\" is doing a lot of work in baby product marketing. There are real grades — platinum-cured silicone, peroxide-cured silicone (cheaper, can degrade under heat), and silicone-PVC blends. Loulou Lollipop uses <strong>platinum-cured silicone</strong> — the highest grade, stable at temperature, and inert against food acids.</p><p>The OEKO-TEX® Standard 100 certification on the <em>finished bib</em> is the load-bearing detail. Most cheaper silicone bibs don't carry it because the finished product can't pass independent testing against ~350 substances. That certification is what separates a marketing claim from a verified one.</p>",
+            "enlarge_text": false
+          }
+        },
+        "list_item_1": {
+          "type": "list_item",
+          "settings": {
+            "number": "1",
+            "use_icon": false,
+            "icon": "check_mark",
+            "title": "Platinum-cured silicone",
+            "text": "Highest grade — stable under heat, dishwasher, and microwave. Doesn't degrade the way peroxide-cured or blended silicone does."
+          }
+        },
+        "list_item_lfgb": {
+          "type": "list_item",
+          "settings": {
+            "number": "2",
+            "use_icon": false,
+            "icon": "check_mark",
+            "title": "LFGB food grade — Germany's highest standard",
+            "text": "Platinum-cured silicone meets LFGB, the German food safety standard — stricter than FDA food-grade and the benchmark used in European medical and food-contact products."
+          }
+        },
+        "list_item_2": {
+          "type": "list_item",
+          "settings": {
+            "number": "3",
+            "use_icon": false,
+            "icon": "check_mark",
+            "title": "Print cured into the material",
+            "text": "Not painted on top. The illustration is applied and heat-cured into the silicone surface — tested through 300+ dishwasher cycles without visible fade."
+          }
+        },
+        "list_item_3": {
+          "type": "list_item",
+          "settings": {
+            "number": "4",
+            "use_icon": false,
+            "icon": "check_mark",
+            "title": "Deep front pocket",
+            "text": "Designed for baby-led weaning — deep enough to catch a whole carrot stick, not just a yogurt drip. Dropped food lands somewhere visible the baby can re-engage with."
+          }
+        },
+        "list_item_4": {
+          "type": "list_item",
+          "settings": {
+            "number": "5",
+            "use_icon": false,
+            "icon": "check_mark",
+            "title": "BPA, PVC, phthalate, and lead free",
+            "text": "OEKO-TEX® Standard 100 certified on the finished bib — independently verified, not self-declared."
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "body",
+        "list_item_1",
+        "list_item_lfgb",
+        "list_item_2",
+        "list_item_3",
+        "list_item_4"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/LouLouLollipopMarch2026-05425.jpg",
+        "image_width": 700,
+        "image_link": "",
+        "image_position": "below",
+        "text_alignment": "left",
+        "color_scheme": "default"
+      }
+    },
+    "comparison": {
+      "type": "lp-comparison",
+      "blocks": {
+        "r1": {
+          "type": "row",
+          "settings": {
+            "feature": "Silicone grade",
+            "our_value": "Platinum-cured — heat-stable, food-safe",
+            "other_value": "Often peroxide-cured or silicone-PVC blend"
+          }
+        },
+        "r2": {
+          "type": "row",
+          "settings": {
+            "feature": "Print durability",
+            "our_value": "Cured into the material — survives 300+ dishwasher cycles",
+            "other_value": "Painted or stamped on — peels and fades within months"
+          }
+        },
+        "r3": {
+          "type": "row",
+          "settings": {
+            "feature": "Safety certification",
+            "our_value": "OEKO-TEX® Standard 100 on finished bib — ~350 substances tested",
+            "other_value": "Self-declared or no certification"
+          }
+        },
+        "r4": {
+          "type": "row",
+          "settings": {
+            "feature": "Pocket depth",
+            "our_value": "Deep enough to catch a whole carrot stick",
+            "other_value": "Shallow — catches drips only, not solid pieces"
+          }
+        },
+        "r5": {
+          "type": "row",
+          "settings": {
+            "feature": "Closure",
+            "our_value": "3-setting adjustable button — fits 4 months to 3 years",
+            "other_value": "Fixed or single-setting — outgrown quickly"
+          }
+        },
+        "r6": {
+          "type": "row",
+          "settings": {
+            "feature": "Cleaning",
+            "our_value": "Dishwasher safe (top rack), wipes clean under tap, rolls for travel",
+            "other_value": "Often hand-wash only — bacteria builds in seams"
+          }
+        }
+      },
+      "block_order": [
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5",
+        "r6"
+      ],
+      "settings": {
+        "bg_color": "#faf9f6",
+        "title": "Loulou Lollipop vs Standard Silicone Bib",
+        "intro": "Silicone bibs look similar on a shelf. The differences show up after six months of daily use.",
+        "col_ours": "Loulou Lollipop Silicone Bib",
+        "col_other": "Standard Silicone Bib",
+        "bottom_line": "Bottom line: Platinum-cured silicone with a cured print and OEKO-TEX® certification on the finished product isn't common at this price point. Most competitors skip at least one of those three."
+      }
+    },
+    "safety": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Designed Around How Babies Actually Eat",
+            "use_h1": false
+          }
+        },
+        "body": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Every detail on this bib is built around the self-feeding phase.</p><ul><li><strong>Deep front pocket</strong> — catches dropped pieces, not just drips. Babies can reach back in and keep eating — reduces waste and frustration for both of you</li><li><strong>Single molded piece</strong> — no seams, no stitching, no crevices for food to hide in. Wipes clean completely</li><li><strong>3-setting button closure</strong> — adjusts from 4 months through approximately 3 years without a bib change</li><li><strong>Rolls up flat</strong> — fits in a diaper bag pocket, no dedicated bib case needed</li><li><strong>Dishwasher safe (top rack)</strong> and microwave safe — runs with the rest of the dishes</li><li><strong>100% platinum-cured silicone</strong> — BPA, PVC, phthalate, and lead free, OEKO-TEX® Standard 100 certified</li></ul>",
+            "enlarge_text": false
+          }
+        },
+        "btn": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Silicone Bibs",
+            "button_link": "/collections/silicone-bibs",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "body",
+        "btn"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/LouLouLollipopMarch2026-07267.jpg",
+        "image_width": 700,
+        "image_link": "",
+        "image_position": "left",
+        "text_alignment": "left",
+        "color_scheme": "default"
+      }
+    },
+    "reviews": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_silicone_carousel": {
+          "type": "shopify://apps/judge-me-reviews/blocks/cards_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "show_sample_reviews": true,
+            "reviews_selection": "custom_products",
+            "products": [
+              "silicone-bib-printed-confetti-blush",
+              "silicone-bib-printed-dino-friends",
+              "silicone-bib-printed-french-breakfast",
+              "silicone-bib-printed-hedgehog-forest",
+              "silicone-bib-printed-smiley-sharks",
+              "silicone-bib-coconut-milk"
+            ],
+            "star_rating": "all",
+            "show_review_media": false,
+            "display_order": "most_recent",
+            "no_image_fallback": "review_text_only",
+            "max_reviews": 6,
+            "review_length": "small",
+            "text_size": "medium",
+            "image_ratio": "1",
+            "reviews_shown": 4,
+            "show_reviewer_name": true,
+            "show_product_name": true,
+            "hide_arrows_mobile": true,
+            "arrows_position": "sides",
+            "max_width": 1100,
+            "corner_styling": "soft",
+            "header_text_color": "#1d1d1d",
+            "text_color": "#1d1d1d",
+            "card_color": "#f9f9f9",
+            "stars_color": "",
+            "arrows_color": "#000000",
+            "transition_speed": 10,
+            "header_text": "What Parents Say",
+            "show_average_rating": true
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_silicone_carousel"
+      ],
+      "settings": {
+        "full_width": false,
+        "show_space": true
+      }
+    },
+    "care": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "wash": {
+          "type": "question",
+          "settings": {
+            "title": "How do I clean a silicone bib?",
+            "answer": "<p>Three options: wipe clean under the tap after meals, run it through the dishwasher on the top rack, or drop it in with the regular dish load. Avoid high heat drying over long periods — top rack dishwasher is fine, but the heating element at the bottom of the machine will degrade silicone faster over time. The single molded construction means no seams or crevices for food or bacteria to hide in.</p>"
+          }
+        },
+        "size": {
+          "type": "question",
+          "settings": {
+            "title": "What age does it fit?",
+            "answer": "<p>The adjustable button closure has three settings and fits approximately 4 months through 3 years. The right time to start: when solids begin and dropped food becomes a factor. Most families use it consistently through the baby-led weaning phase and into toddlerhood.</p>"
+          }
+        },
+        "travel": {
+          "type": "question",
+          "settings": {
+            "title": "Is it good for travel?",
+            "answer": "<p>Yes — it rolls up flat and fits in a diaper bag pocket or purse without a case. Wipes clean at the restaurant table. No need for a plastic bag or separate storage. The single molded piece means it doesn't retain food smell the way fabric bibs do after sitting in a bag.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "wash",
+        "size",
+        "travel"
+      ],
+      "settings": {
+        "title": "Care & Sizing"
+      }
+    },
+    "faq": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "title": "Silicone bib vs long sleeve bib — which one?",
+            "answer": "<p>They solve different problems. Silicone catches dropped food — it's the right bib for self-feeding, snacks, and baby-led weaning where pieces are landing in a pocket. Long sleeve covers the arms — it's the right bib for puree feeding and messy phases where the whole outfit needs protection. Most families use both: the long sleeve bib from month 4 through the purée phase, and the silicone bib once self-feeding clicks at 7–8 months. They're not interchangeable — they're complementary.</p>"
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "title": "Will the print fade in the dishwasher?",
+            "answer": "<p>No. The print is a multi-color illustration applied to the silicone surface and cured into the material at high temperature — not painted or stamped on top. We've tested prior catalog generations through 300+ dishwasher cycles without visible fade. That's the difference between a cured print and a surface print, which is what most competitors use because it's cheaper to produce.</p>"
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "title": "What makes platinum-cured silicone better?",
+            "answer": "<p>Silicone is cured (hardened) using either a platinum catalyst or a peroxide catalyst. Platinum-cured is the higher grade — more chemically stable, doesn't degrade under heat, and doesn't release byproducts the way peroxide-cured silicone can. The third category to avoid is silicone-PVC blends, which are often sold as silicone but contain plasticizers.</p><p>Platinum-cured silicone also meets LFGB — the German food safety standard. LFGB is stricter than FDA food-grade because it tests for substance migration, not just material composition. It's the benchmark used for European medical and food-contact products. Platinum-cured + LFGB + OEKO-TEX® on the finished product is the combination that matters.</p>"
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "title": "Is it good for baby-led weaning?",
+            "answer": "<p>Yes — the deep pocket is specifically why it's one of the most-requested baby-led weaning bibs on parent forums. Dropped food lands in a visible pocket the baby can see and reach back into, which means less frustration and more food actually eaten. The pocket is deep enough to catch a whole carrot stick, not just liquid drips.</p>"
+          }
+        },
+        "q5": {
+          "type": "question",
+          "settings": {
+            "title": "Is it safe — really?",
+            "answer": "<p>Yes. 100% platinum-cured silicone, BPA free, PVC free, phthalate free, lead free. The OEKO-TEX® Standard 100 certification is on the finished bib — meaning the complete product was independently tested against approximately 350 harmful substances and passed. Most cheaper silicone bibs skip this certification because the finished product can't pass it. The certification costs money to obtain, which is why it's a real signal rather than a marketing claim.</p>"
+          }
+        },
+        "q6": {
+          "type": "question",
+          "settings": {
+            "title": "Silicone bib vs cloth bib — do I need both?",
+            "answer": "<p>They serve different phases. Cloth bibs absorb drool — useful from birth through teething and bottle feeding. Silicone bibs catch dropped solid food — useful from month 4 through the self-feeding phase. There's overlap during the transition to solids where both are in rotation. If your baby is in the solids phase and dropping food, silicone is the right tool. If your baby is still primarily drooling, cloth is more practical.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ],
+      "settings": {
+        "title": "Frequently Asked Questions"
+      }
+    },
+    "related": {
+      "type": "collection-list",
+      "blocks": {
+        "c1": {
+          "type": "collection",
+          "settings": {
+            "collection": "long-sleeve-bibs",
+            "tag": "",
+            "subheading": "Full-Coverage Long Sleeve Bibs",
+            "button_label": "Shop Long Sleeve Bibs"
+          }
+        },
+        "c2": {
+          "type": "collection",
+          "settings": {
+            "collection": "suction-plates",
+            "tag": "",
+            "image": "shopify://shop_images/Nav_5.png",
+            "subheading": "Mess-Free Suction plates",
+            "button_label": "Shop Suction Plates"
+          }
+        },
+        "c3": {
+          "type": "collection",
+          "settings": {
+            "collection": "utensils",
+            "tag": "",
+            "image": "shopify://shop_images/Baby-eating-with-lion-utensil.jpg",
+            "subheading": "Easy to Grab Utensils",
+            "button_label": "Shop utensils"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "title": "Keep Exploring",
+        "text": "",
+        "text_alignment": "start",
+        "enable_carousel": false,
+        "grid": 3,
+        "color_scheme": "default",
+        "full_width": true,
+        "coll_grid_image_shape": "square",
+        "coll_grid_image_position": "center center",
+        "coll_thumb_mob_per_row": "1",
+        "coll_grid_show_count": false,
+        "coll_text_position": "below",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_y": "center",
+        "coll_button_style": "primary"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "proof_bar",
+    "products",
+    "why_silicone",
+    "comparison",
+    "safety",
+    "reviews",
+    "care",
+    "faq",
+    "related"
+  ]
+}
