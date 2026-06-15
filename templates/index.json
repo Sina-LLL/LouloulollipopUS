@@ -305,7 +305,6 @@
           "settings": {
             "collection": "swaddles",
             "tag": "",
-            "image": "shopify://shop_images/Copy_of_SWSHK_Muslin_Swaddle_Sharks_52.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
