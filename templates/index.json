@@ -12,6 +12,14 @@
     "mobile_collection_carousel_iBRR9r": {
       "type": "mobile-collection-carousel",
       "blocks": {
+        "collection_HVnHrQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "bundles-and-sets",
+            "image": "shopify://shop_images/DS-NB001_113.jpg",
+            "label": ""
+          }
+        },
         "collection_ff9awC": {
           "type": "collection",
           "settings": {
@@ -66,6 +74,7 @@
         }
       },
       "block_order": [
+        "collection_HVnHrQ",
         "collection_ff9awC",
         "collection_4NymPg",
         "collection_Ua99BU",
@@ -90,19 +99,19 @@
         "image_MfTji8": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/OneC_hero_1_6cb50d9d-76ee-49de-b733-7ec1855e05ae.png",
-            "mobile_image": "shopify://shop_images/OneC_hero-mobile_1.png",
+            "image": "shopify://shop_images/Silicone_hero.png",
+            "mobile_image": "shopify://shop_images/Tableware_Hero.png",
             "slide_link": "",
-            "subheading": "",
-            "title": "The Beautiful Game",
+            "subheading": "SILICONE ESSENTIALS",
+            "title": "For everyday meals",
             "heading_max_width": 17,
             "title_size": 72,
             "title_size_mobile": 32,
             "use_h1": true,
-            "text": "<p>Our newest soccer-inspired print, has officially entered the lineup.</p>",
+            "text": "<p>Thoughtfully designed plates, bowls, and cups with food-grade silicone.</p>",
             "enlarge_text": false,
-            "button_label_1": "Shop the Beautiful Game",
-            "button_url_1": "shopify://collections/the-beautiful-game",
+            "button_label_1": "Shop Tableware",
+            "button_url_1": "shopify://collections/tableware",
             "button_tag_1": "",
             "button_label_2": "",
             "button_url_2": "",
@@ -224,6 +233,7 @@
     },
     "featured_collection_yN3Jim": {
       "type": "featured-collection",
+      "disabled": true,
       "name": "Featured collection",
       "settings": {
         "title": "The Beautiful Game",
@@ -237,6 +247,24 @@
         "show_view_all": true,
         "full_width": false,
         "text_alignment": "start"
+      }
+    },
+    "custom_product_highlight_mEPwaD": {
+      "type": "custom-product-highlight",
+      "name": "Highlighted Collection",
+      "settings": {
+        "title": "Soft Muslin Swaddles",
+        "text": "<p>Our Swaddle works as a swaddle wrap, nursing cover, stroller shade, tummy time mat, and lightweight blanket.</p>",
+        "image": "shopify://shop_images/Copy_of_SWSHK_Muslin_Swaddle_Sharks_52.jpg",
+        "order": true,
+        "product_list": [
+          "muslin-swaddle-magical-dragons",
+          "muslin-swaddle-smiley-sharks"
+        ],
+        "button_label": "Shop Bundles",
+        "link": "shopify://collections/bundles-and-sets",
+        "button_style": "primary",
+        "color_scheme": "default"
       }
     },
     "collection_list_aakDiY": {
@@ -277,7 +305,6 @@
           "settings": {
             "collection": "swaddles",
             "tag": "",
-            "image": "shopify://shop_images/Copy_of_SWSHK_Muslin_Swaddle_Sharks_52.jpg",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
           }
@@ -1220,6 +1247,7 @@
     "hero_carousel_rounded_eyHjac",
     "slideshow_JU4LXr",
     "featured_collection_yN3Jim",
+    "custom_product_highlight_mEPwaD",
     "collection_list_aakDiY",
     "logo_list_kYmwNX",
     "featured_collection_RGPeGr",

@@ -80,6 +80,21 @@
               %}
             </div>
 
+          {%- when 'callout' -%}
+            {% style %}
+              .block-id-{{ block.id }} {
+                padding: 18px 22px;
+                background: #D1E3E6;
+                border-left: 4px solid #6A8B95;
+                border-radius: 4px;
+                font-size: 0.95rem;
+                text-align: left;
+              }
+            {% endstyle %}
+            <div class="block-id-{{ block.id }} lightly-spaced-row" {{ block.shopify_attributes }}>
+              {{ block.settings.text }}
+            </div>
+
         {% endcase %}
       {% endfor %}
     </div>
@@ -500,6 +515,18 @@
           "id": "show_timer_labels",
           "label": "Show labels",
           "default": true
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "name": "Callout",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Bottom line: ...</p>"
         }
       ]
     }
