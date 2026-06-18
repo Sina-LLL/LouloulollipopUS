@@ -75,7 +75,7 @@
         "collection_pKhQNN": {
           "type": "collection",
           "settings": {
-            "collection": "pacifier-clip-teether-set",
+            "collection": "onec-silicone-clip-teether-set",
             "tag": "",
             "subheading": "{{ block.settings.collection.title }}",
             "button_label": ""
