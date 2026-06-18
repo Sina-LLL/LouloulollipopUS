@@ -1273,14 +1273,13 @@ cart-form .page-header:not(.page-header--with-background){
       }
     }
 
-
 /* ============================================================
    TYPOGRAPHY PREVIEW (brand sans-serif) — updated 2026-06-18 (Staging)
    - Headings keep the brand sans fonts (avenir-next-lt-pro display +
      sofia-pro body) at their original weights.
    - Retained: cleaner size scale, systematized line-heights, lighter
      body prose.
-   - Buttons: REVERTED to the theme's default radius (no pill).
+   - Buttons: theme's default radius (no pill).
    - PDP fix: the "Materials & Care" accordion heading now matches
      "Why Parents Love This" — both are h2.h3, but .accordion-toggle h2
      was forcing it to 1.5rem; it now uses the shared h3 size token.
