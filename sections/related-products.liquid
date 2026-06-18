@@ -5,7 +5,7 @@
 
   {% if recommendations.performed and recommendations.products_count > 0 %}
     <div class="container{% if settings.use_fullwidth_layout %} container--no-max{% endif %} fully-spaced-row">
-      <h4 class="align-center hometitle">{{ section.settings.title }}</h4>
+      <h2 class="hometitle h4 align-center">{{ section.settings.title }}</h2>
 
       <div class="collection-listing related-collection">
         <div class="product-grid product-grid--per-row-{{ section.settings.grid }} product-grid--per-row-mob-{{ settings.prod_thumb_mob_per_row }}">
