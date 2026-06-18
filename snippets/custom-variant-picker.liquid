@@ -44,8 +44,13 @@
   {%- for sibling in sibs_collection.products -%}
     {%- assign sib_tags = sibling.tags | join: '|' | downcase | prepend: '|' | append: '|' -%}
     {%- unless sib_tags contains '|hidden|' -%}
-      {%- if sib_tags contains '|new|' or sib_tags contains '|seasonal|' -%}
+      {%- comment %} Seasonal tab shows: seasonal products, or new products that are NOT also core (Core+New lives on the Core tab) {%- endcomment -%}
+      {%- if sib_tags contains '|seasonal|' -%}
         {%- assign has_new_prints = true -%}
+      {%- elsif sib_tags contains '|new|' -%}
+        {%- unless sib_tags contains '|core|' -%}
+          {%- assign has_new_prints = true -%}
+        {%- endunless -%}
       {%- endif -%}
       {%- if sib_tags contains '|core|' -%}
         {%- assign has_core_prints = true -%}
