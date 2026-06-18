@@ -67,9 +67,12 @@
     {%- assign show_all_tab = true -%}
   {%- endif -%}
 
-  {%- comment %} Determine which tab the current product belongs to {%- endcomment -%}
+  {%- comment %} Determine which tab the current product belongs to.
+       Core+New lives on the Core tab only, so it must be checked before New. {%- endcomment -%}
   {%- assign current_tab = '' -%}
-  {%- if product_tags contains '|new|' or product_tags contains '|seasonal|' -%}
+  {%- if product_tags contains '|core|' and product_tags contains '|new|' -%}
+    {%- assign current_tab = 'core' -%}
+  {%- elsif product_tags contains '|new|' or product_tags contains '|seasonal|' -%}
     {%- assign current_tab = 'new' -%}
   {%- elsif product_tags contains '|core|' -%}
     {%- assign current_tab = 'core' -%}
@@ -247,10 +250,10 @@
       <div class="sibling-tabs__panel{% if current_tab == 'new' %} is-active{% endif %}" data-panel="new" role="tabpanel">
         <div class="option-selector__btns variant-grid-compact">
 
-          {% comment %} Seasonal Tab - New prints {% endcomment %}
+          {% comment %} Seasonal Tab - New prints (excludes Core+New — those show on the Core tab only) {% endcomment %}
           {%- for sibling in sibs_collection.products -%}
             {%- assign sib_tags = sibling.tags | join: '|' | downcase | prepend: '|' | append: '|' -%}
-            {%- unless sib_tags contains '|hidden|' -%}
+            {%- unless sib_tags contains '|hidden|' or sib_tags contains '|core|' -%}
               {%- if sib_tags contains '|new|' and sibling.available -%}
                 <a href="{{ sibling.url }}"
                   class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}"
@@ -299,7 +302,9 @@
             {%- assign sib_tags = sibling.tags | join: '|' | downcase | prepend: '|' | append: '|' -%}
             {%- unless sib_tags contains '|hidden|' -%}
               {%- unless sibling.available -%}
-                {%- if sib_tags contains '|seasonal|' or sib_tags contains '|new|' -%}
+                {%- if sib_tags contains '|new|' and sib_tags contains '|core|' -%}
+                  {%- comment %} Core+New sold out — shown on the Core tab only, skip here {%- endcomment -%}
+                {%- elsif sib_tags contains '|seasonal|' or sib_tags contains '|new|' -%}
                   <a href="{{ sibling.url }}"
                     class="opt-label opt-label--image sold-out {% if sibling.handle == product.handle %}is-active{% endif %}"
                     data-color="{{ sibling.metafields.theme.cutline }}"
