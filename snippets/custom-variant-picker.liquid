@@ -11,6 +11,13 @@
 
   Usage:
   {% render 'variant-picker', product: product, product_form_id: product_form_id, block: block %}
+
+  Note on tag matching:
+  Shopify tags are case-sensitive when using Liquid's `contains`. To make this section
+  work regardless of how tags are capitalized (e.g. "Core", "core", "CORE"), each
+  product's tags are joined into a single downcased string wrapped in '|' delimiters,
+  e.g. "|core|new|". We then test for "|core|" instead of using `tags contains 'core'`.
+  The delimiters prevent false matches (e.g. a "newborn" tag won't match "|new|").
 {% endcomment %}
 
 
@@ -26,20 +33,24 @@
 
 {% if has_siblings %}
 
+  {%- comment %} Build a downcased, delimiter-wrapped tag string for the current product {%- endcomment -%}
+  {%- assign product_tags = product.tags | join: '|' | downcase | prepend: '|' | append: '|' -%}
+
   {% comment %} Determine which categories exist {% endcomment %}
   {%- assign has_new_prints = false -%}
   {%- assign has_core_prints = false -%}
   {%- assign has_sale_prints = false -%}
- 
+
   {%- for sibling in sibs_collection.products -%}
-    {%- unless sibling.tags contains 'hidden' -%}
-      {%- if sibling.tags contains 'new' or sibling.tags contains 'seasonal'-%}
+    {%- assign sib_tags = sibling.tags | join: '|' | downcase | prepend: '|' | append: '|' -%}
+    {%- unless sib_tags contains '|hidden|' -%}
+      {%- if sib_tags contains '|new|' or sib_tags contains '|seasonal|' -%}
         {%- assign has_new_prints = true -%}
       {%- endif -%}
-      {%- if sibling.tags contains 'core' -%}
+      {%- if sib_tags contains '|core|' -%}
         {%- assign has_core_prints = true -%}
       {%- endif -%}
-      {%- if sibling.tags contains 'sale' -%}
+      {%- if sib_tags contains '|sale|' -%}
         {%- assign has_sale_prints = true -%}
       {%- endif -%}
     {%- endunless -%}
@@ -58,11 +69,11 @@
 
   {%- comment %} Determine which tab the current product belongs to {%- endcomment -%}
   {%- assign current_tab = '' -%}
-  {%- if product.tags contains 'new' or product.tags contains 'seasonal' -%}
+  {%- if product_tags contains '|new|' or product_tags contains '|seasonal|' -%}
     {%- assign current_tab = 'new' -%}
-  {%- elsif product.tags contains 'core' -%}
+  {%- elsif product_tags contains '|core|' -%}
     {%- assign current_tab = 'core' -%}
-  {%- elsif product.tags contains 'sale' -%}
+  {%- elsif product_tags contains '|sale|' -%}
     {%- assign current_tab = 'sale' -%}
   {%- else -%}
     {%- if has_new_prints -%}{%- assign current_tab = 'new' -%}
@@ -74,7 +85,7 @@
   <div class="sibling-tabs" data-sibling-tabs>
 
     {% comment %} Tab Buttons {% endcomment %}
-     
+
     <div class="sibling-tabs__nav" role="tablist">
       {%- if has_new_prints -%}
         <button
@@ -119,7 +130,7 @@
       <span class="product-form label js-color-label-prefix">Style: </span>
       <span class="product-form option-selector__label-value js-color-label-value">{{ sibling.metafields.theme.cutline }}</span>
     </div>
-    
+
     {%- assign img_sizes = '160px' -%}
     {%- assign img_widths = '160, 320' -%}
     {%- assign img_aspect_ratio = 1 -%}
@@ -132,8 +143,9 @@
 
           {% comment %} 1: New — in stock {% endcomment %}
           {%- for sibling in sibs_collection.products -%}
-            {%- unless sibling.tags contains 'hidden' -%}
-              {%- if sibling.tags contains 'new' and sibling.available -%}
+            {%- assign sib_tags = sibling.tags | join: '|' | downcase | prepend: '|' | append: '|' -%}
+            {%- unless sib_tags contains '|hidden|' -%}
+              {%- if sib_tags contains '|new|' and sibling.available -%}
                 <a href="{{ sibling.url }}"
                   class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}"
                   data-color="{{ sibling.metafields.theme.cutline }}"
@@ -155,8 +167,9 @@
 
           {% comment %} 2: Core (not new, not sale) — in stock {% endcomment %}
           {%- for sibling in sibs_collection.products -%}
-            {%- unless sibling.tags contains 'hidden' -%}
-              {%- unless sibling.tags contains 'new' or sibling.tags contains 'sale' -%}
+            {%- assign sib_tags = sibling.tags | join: '|' | downcase | prepend: '|' | append: '|' -%}
+            {%- unless sib_tags contains '|hidden|' -%}
+              {%- unless sib_tags contains '|new|' or sib_tags contains '|sale|' -%}
                 {%- if sibling.available -%}
                   <a href="{{ sibling.url }}"
                     class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}"
@@ -179,8 +192,9 @@
 
           {% comment %} 3: Sale — in stock {% endcomment %}
           {%- for sibling in sibs_collection.products -%}
-            {%- unless sibling.tags contains 'hidden' -%}
-              {%- if sibling.tags contains 'sale' and sibling.available -%}
+            {%- assign sib_tags = sibling.tags | join: '|' | downcase | prepend: '|' | append: '|' -%}
+            {%- unless sib_tags contains '|hidden|' -%}
+              {%- if sib_tags contains '|sale|' and sibling.available -%}
                 <a href="{{ sibling.url }}"
                   class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}"
                   data-color="{{ sibling.metafields.theme.cutline }}"
@@ -202,13 +216,14 @@
 
           {% comment %} 4: All sold out — last {% endcomment %}
           {%- for sibling in sibs_collection.products -%}
-            {%- unless sibling.tags contains 'hidden' -%}
+            {%- assign sib_tags = sibling.tags | join: '|' | downcase | prepend: '|' | append: '|' -%}
+            {%- unless sib_tags contains '|hidden|' -%}
               {%- unless sibling.available -%}
                 <a href="{{ sibling.url }}"
                   class="opt-label opt-label--image sold-out {% if sibling.handle == product.handle %}is-active{% endif %}"
                   data-color="{{ sibling.metafields.theme.cutline }}"
                   {% if sibling.handle == product.handle %}data-selected="true"{% endif %}>
-                  
+
                   <div class="overflow_hidden">
                     <div class="opt-label__media media">
                       <div class="sold-out-line"></div>
@@ -234,8 +249,9 @@
 
           {% comment %} Seasonal Tab - New prints {% endcomment %}
           {%- for sibling in sibs_collection.products -%}
-            {%- unless sibling.tags contains 'hidden' -%}
-              {%- if sibling.tags contains 'new' and sibling.available -%}
+            {%- assign sib_tags = sibling.tags | join: '|' | downcase | prepend: '|' | append: '|' -%}
+            {%- unless sib_tags contains '|hidden|' -%}
+              {%- if sib_tags contains '|new|' and sibling.available -%}
                 <a href="{{ sibling.url }}"
                   class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}"
                   data-color="{{ sibling.metafields.theme.cutline }}"
@@ -257,8 +273,9 @@
 
           {% comment %} Seasonal Tab - Seasonal prints (not Core) {% endcomment %}
           {%- for sibling in sibs_collection.products -%}
-            {%- unless sibling.tags contains 'hidden' -%}
-              {%- if sibling.tags contains 'seasonal' and sibling.available-%}
+            {%- assign sib_tags = sibling.tags | join: '|' | downcase | prepend: '|' | append: '|' -%}
+            {%- unless sib_tags contains '|hidden|' -%}
+              {%- if sib_tags contains '|seasonal|' and sibling.available -%}
                 <a href="{{ sibling.url }}"
                   class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}"
                   data-color="{{ sibling.metafields.theme.cutline }}"
@@ -279,9 +296,10 @@
 
           {% comment %} Seasonal Tab - Sold Out {% endcomment %}
           {%- for sibling in sibs_collection.products -%}
-            {%- unless sibling.tags contains 'hidden' and sibling.available -%}
+            {%- assign sib_tags = sibling.tags | join: '|' | downcase | prepend: '|' | append: '|' -%}
+            {%- unless sib_tags contains '|hidden|' -%}
               {%- unless sibling.available -%}
-                {%- if sibling.tags contains 'seasonal' or sibling.tags contains 'new'-%}
+                {%- if sib_tags contains '|seasonal|' or sib_tags contains '|new|' -%}
                   <a href="{{ sibling.url }}"
                     class="opt-label opt-label--image sold-out {% if sibling.handle == product.handle %}is-active{% endif %}"
                     data-color="{{ sibling.metafields.theme.cutline }}"
@@ -309,14 +327,16 @@
       <div class="sibling-tabs__panel{% if current_tab == 'core' %} is-active{% endif %}" data-panel="core" role="tabpanel">
         <div class="option-selector__btns variant-grid-compact">
 
-          {% comment %} Core Tab - Core prints {% endcomment %}
+          {% comment %} Core Tab - Core prints (includes Core+New; excludes Sale) — in stock {% endcomment %}
           {%- for sibling in sibs_collection.products -%}
-            {%- unless sibling.tags contains 'hidden' or  sibling.tags contains 'new' or  sibling.tags contains 'sale'-%}
-              {%- if sibling.tags contains 'core' and sibling.available -%}
+            {%- assign sib_tags = sibling.tags | join: '|' | downcase | prepend: '|' | append: '|' -%}
+            {%- unless sib_tags contains '|hidden|' or sib_tags contains '|sale|' -%}
+              {%- if sib_tags contains '|core|' and sibling.available -%}
                 <a href="{{ sibling.url }}"
                   class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}"
                   data-color="{{ sibling.metafields.theme.cutline }}"
                   {% if sibling.handle == product.handle %}data-selected="true"{% endif %}>
+                  {%- if sib_tags contains '|new|' -%}<div class="opt-label__tag product-label--new">NEW</div>{%- endif -%}
                   <div class="overflow_hidden">
                     <div class="opt-label__media media">
                       {%- if sibling.metafields.custom.swatch.value.image.value != blank -%}
@@ -331,13 +351,14 @@
             {%- endunless -%}
           {%- endfor -%}
 
-  
+
 
           {% comment %} Core Tab - sold out prints {% endcomment %}
           {%- for sibling in sibs_collection.products -%}
-            {%- unless sibling.tags contains 'hidden' and sibling.available -%}
+            {%- assign sib_tags = sibling.tags | join: '|' | downcase | prepend: '|' | append: '|' -%}
+            {%- unless sib_tags contains '|hidden|' -%}
               {%- unless sibling.available -%}
-                {%- if sibling.tags contains 'core' -%}
+                {%- if sib_tags contains '|core|' -%}
                   <a href="{{ sibling.url }}"
                     class="opt-label opt-label--image sold-out {% if sibling.handle == product.handle %}is-active{% endif %}"
                     data-color="{{ sibling.metafields.theme.cutline }}"
@@ -366,8 +387,9 @@
         <div class="option-selector__btns variant-grid-compact">
           {% comment %} 3: Sale — in stock {% endcomment %}
           {%- for sibling in sibs_collection.products -%}
-            {%- unless sibling.tags contains 'hidden' -%}
-              {%- if sibling.tags contains 'sale' and sibling.available -%}
+            {%- assign sib_tags = sibling.tags | join: '|' | downcase | prepend: '|' | append: '|' -%}
+            {%- unless sib_tags contains '|hidden|' -%}
+              {%- if sib_tags contains '|sale|' and sibling.available -%}
                 <a href="{{ sibling.url }}"
                   class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}"
                   data-color="{{ sibling.metafields.theme.cutline }}"
@@ -389,9 +411,10 @@
 
           {% comment %} 4: All sold out — last {% endcomment %}
           {%- for sibling in sibs_collection.products -%}
-            {%- unless sibling.tags contains 'hidden' and sibling.available -%}
+            {%- assign sib_tags = sibling.tags | join: '|' | downcase | prepend: '|' | append: '|' -%}
+            {%- unless sib_tags contains '|hidden|' -%}
               {%- unless sibling.available -%}
-                {%- if sibling.tags contains 'sale' -%}
+                {%- if sib_tags contains '|sale|' -%}
                   <a href="{{ sibling.url }}"
                     class="opt-label opt-label--image sold-out {% if sibling.handle == product.handle %}is-active{% endif %}"
                     data-color="{{ sibling.metafields.theme.cutline }}"
@@ -548,12 +571,12 @@
               <legend class="label">{{- option.name -}}{% if is_color_selector %}: <span class="option-selector__label-value js-color-text">{% if section.settings.select_first_variant or product.variants.size == 1 or product.selected_variant %}{{ option.selected_value }}{% endif %}</span>{% endif %}</legend>
             {%- endif -%}
             <div class="option-selector__btns flex flex-wrap">
-              
+
               {%- for value in option.values -%}
                 {%- assign value_index0 = forloop.index0 -%}
                 <input type="radio" class="opt-btn visually-hidden focus-label js-option" name="{{ option_id }}-option" id="{{ option_id }}-opt-{{ value_index0 }}" value="{{ value | escape }}" required{% if section.settings.select_first_variant or product.variants.size == 1 or product.selected_variant %}{% if option.selected_value == value %} checked{% endif %}{% endif %}>
                 {%- if is_variant_image_style -%}
-                  
+
                   {%- for variant in product.variants -%}
                     {%- if variant.options[option_index0] == value -%}
                       <label class="opt-label opt-label--image" for="{{ option_id }}-opt-{{ value_index0 }}">
