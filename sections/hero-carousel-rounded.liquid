@@ -263,7 +263,7 @@
                     <div class="text-overlay__rte rte{% if block.settings.enlarge_text %} large-text{% endif %}">{{ block.settings.text }}</div>
                   {%- endif -%}
                   {%- if block.settings.button_label_1 != blank or block.settings.button_label_2 != blank -%}
-                    <div class="text-overlay__button-row">
+                    <div class="button-row">
                       {%- if block.settings.button_label_1 != blank -%}
                         <a class="text-overlay__button btn btn--primary" href="{{ block.settings.button_url_1 }}{% if block.settings.button_tag_1 != blank %}/{{ block.settings.button_tag_1 | handle }}{% endif %}">{{ block.settings.button_label_1 | escape }}</a>
                       {%- endif -%}

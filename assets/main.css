@@ -679,7 +679,7 @@ button svg {
   display: inline-block;
   height: auto;
   margin: 0;
-  padding: var(--input-btn-padding-top) 2.5rem var(--input-btn-padding-bottom);
+  padding: var(--input-btn-padding-top) 1.5rem var(--input-btn-padding-bottom);
   transition: background-color 100ms, color 100ms, border-color 100ms, opacity 100ms;
   border: 1.5px solid rgb(var(--btn-border-color));
   border-radius: var(--btn-border-radius);
@@ -1603,7 +1603,7 @@ h6,
 }
 @media (max-width: 1299.98px) {
   .hometitle {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 }
 
@@ -8820,7 +8820,7 @@ html:has(.drawer[open]) > body {
   display: flow-root;
 }
 .product-grid .product-block__detail {
-  margin-bottom: 30px;
+  margin-bottom: 12px;
 }
 
 .product-grid--carousel {
