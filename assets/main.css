@@ -8820,7 +8820,7 @@ html:has(.drawer[open]) > body {
   display: flow-root;
 }
 .product-grid .product-block__detail {
-  margin-bottom: 30px;
+  margin-bottom: 12px;
 }
 
 .product-grid--carousel {
