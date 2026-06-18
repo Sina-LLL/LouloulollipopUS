@@ -679,7 +679,7 @@ button svg {
   display: inline-block;
   height: auto;
   margin: 0;
-  padding: var(--input-btn-padding-top) 2.5rem var(--input-btn-padding-bottom);
+  padding: var(--input-btn-padding-top) 1.5rem var(--input-btn-padding-bottom);
   transition: background-color 100ms, color 100ms, border-color 100ms, opacity 100ms;
   border: 1.5px solid rgb(var(--btn-border-color));
   border-radius: var(--btn-border-radius);
