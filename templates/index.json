@@ -176,7 +176,7 @@
         "padding_top": 8,
         "height": "fixed",
         "height_desktop": 600,
-        "height_mobile": 400,
+        "height_mobile": 500,
         "slide_max_width": 1400,
         "border_radius": 12,
         "peek_size": 32,
