@@ -8503,8 +8503,8 @@ carousel-slider[data-dynamic-height=true]:not([inactive]) {
 }
 .slider-nav--floating .slider-nav__btn, .slider-nav--floating .slider-nav__btn:hover, .slider-nav--floating .slider-nav__btn[disabled] {
   padding: 0;
-  border: none !important;
-  color: #1d1d1d !important;
+  border: none;
+  color: #1d1d1d;
   background: white;
   border-radius: 50%;
   /* position: relative; */
