@@ -1489,7 +1489,7 @@ h4, .h4 {
 }
 /* Buttons */
 .section-product-grid .slider-nav__btn,
- .collection-slider__nav-btn, .slider-nav__btn, .slider-nav--floating .slider-nav__btn {
+ .collection-slider__nav-btn, .slider-nav--floating .slider-nav__btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
