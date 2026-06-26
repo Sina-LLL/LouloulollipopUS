@@ -1401,3 +1401,160 @@ h4, .h4 {
 /* ============================================================
    END SPACING SYSTEM
    ============================================================ */
+
+
+/* ============================================================
+   CUSTOM HERO BANNER — added 2026-06-25 (Staging)
+   Styles for sections/custom-hero-banner.liquid — a single-image hero for
+   images that already contain text. The image is shown uncropped
+   (object-fit: contain) and the section height follows the image's natural
+   ratio (height: auto), so nothing is cropped or letterboxed. The desktop /
+   mobile swap is handled by the image-desktop-and-mobile snippet. Every
+   selector is scoped to .custom-hero-banner so no other section is affected.
+   Max image width is supplied per-section via --custom-hero-max-width.
+   REVERSIBLE: delete this block + sections/custom-hero-banner.liquid.
+   ============================================================ */
+.custom-hero-banner__media,
+.custom-hero-banner__media picture {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  max-width: var(--custom-hero-max-width, none);
+}
+.custom-hero-banner__link {
+  display: block;
+}
+/* Override the theme's default img behaviour (cover, via wrapper classes
+   like .img-fill): contain + image-driven height, scoped to this section. */
+.custom-hero-banner__media .theme-img {
+  position: static;
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-width: 100%;
+}
+/* ============================================================
+   END CUSTOM HERO BANNER
+   ============================================================ */
+
+/* ============================================================
+   COLLECTION LIST — 6–8 columns + two-row carousel — added 2026-06-25
+   1) The theme's main.css only defines desktop column counts up to 5
+      (.product-grid--per-row-2 … -5). These add 6–8 so the section's
+      "Collections per row" range (max 8) renders correctly on desktop.
+      Applies to any .product-grid (collection-list, product-list, etc.).
+   2) The "Collections per column = 2" setting (.coll_thumb_per_column-2)
+      previously had NO css. When the carousel is on, give the grid a second
+      template row so items scroll sideways two-up (Quince-style). The
+      carousel already sets grid-auto-flow: column, so one extra row is enough.
+   REVERSIBLE: delete this block.
+   ============================================================ */
+@media (min-width: 768px) {
+  .product-grid--per-row-6 { --product-columns-desktop: 6; }
+  .product-grid--per-row-7 { --product-columns-desktop: 7; }
+  .product-grid--per-row-8 { --product-columns-desktop: 8; }
+}
+.product-grid--carousel.coll_thumb_per_column-2 {
+  grid-template-rows: repeat(2, auto);
+  row-gap: var(--gutter);
+}
+/* ============================================================
+   END COLLECTION LIST
+   ============================================================ */
+
+/* ============================================================
+   CONTENT CAROUSEL ARROWS — unified product-list + collection-list — 2026-06-26
+   Both carousels share one floating side-arrow style. Product list uses the
+   theme's native .slider-nav__btn (+ native slider JS); collection list uses
+   the custom .collection-slider__nav-btn (+ custom paged-scroll JS, since the
+   native nav breaks in its 2-row layout). Scoped to the two section classes so
+   other carousels are untouched. Brand-slate buttons; scheme 1 = white + slate.
+   REVERSIBLE: delete this block (restores native arrows on product list and
+   removes the collection-list arrow styling).
+   ============================================================ */
+/* Positioning context + full-bleed overlay nav (buttons float over the row). */
+.section-product-grid carousel-slider,
+ carousel-slider {
+  position: relative;
+}
+.section-product-grid .slider-nav,
+ .collection-slider__nav {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+/* Buttons */
+.section-product-grid .slider-nav__btn,
+ .collection-slider__nav-btn, .slider-nav__btn, .slider-nav--floating .slider-nav__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--lll-cream);
+  border-radius: var(--lll-radius-full);
+  background:var(--lll-cream);
+  color: var(--lll-slate);
+  cursor: pointer;
+  transition: background var(--lll-duration-fast) ease, opacity var(--lll-duration-fast) ease;
+  box-shadow: 0 3.2px 6.4px 0 rgba(0, 0, 0, .15);
+}
+[class*="floating"] svg path{
+  stroke: var(--lll-slate) !important;
+}
+.section-product-grid .slider-nav__btn[name="prev"],
+ .collection-slider__nav-btn[data-dir="prev"] {
+  left: 8px;
+  right: auto;
+}
+.section-product-grid .slider-nav__btn[name="next"],
+ .collection-slider__nav-btn[data-dir="next"] {
+  right: 8px;
+  left: auto;
+}
+/* .section-product-grid .slider-nav__btn:hover,
+ .collection-slider__nav-btn:hover {
+  background: var(--lll-slate-hover);
+} */
+.section-product-grid .slider-nav__btn[disabled],
+ .collection-slider__nav-btn[disabled] {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+.section-product-grid .slider-nav__btn svg,
+ .collection-slider__nav-btn svg {
+  width: 18px;
+  height: 18px;
+}
+/* Beat the global [class*="floating"] chevron-stroke !important rule so the
+   product-list chevrons (its nav is .slider-nav--floating) stay slate. */
+.section-product-grid .slider-nav__btn svg path,
+ .collection-slider__nav-btn svg path {
+  stroke: currentColor !important;
+}
+/* Color scheme 1: white button, brand-slate chevron. */
+.section-product-grid .use-color-scheme--1 .slider-nav__btn,
+ .use-color-scheme--1 .collection-slider__nav-btn {
+  background: var(--lll-white);
+  border-color: var(--lll-white);
+  color: var(--lll-slate);
+  
+}
+.section-product-grid .use-color-scheme--1 .slider-nav__btn:hover,
+ .use-color-scheme--1 .collection-slider__nav-btn:hover {
+  background: var(--lll-cream);
+}
+/* ============================================================
+   END CONTENT CAROUSEL ARROWS
+   ============================================================ */

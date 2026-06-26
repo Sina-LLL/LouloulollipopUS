@@ -165,6 +165,7 @@
         "coll_grid_image_shape": "portrait-23",
         "coll_grid_image_position": "center center",
         "coll_thumb_mob_per_row": "2",
+        "coll_thumb_per_column": "1",
         "coll_grid_show_count": false,
         "coll_text_position": "below",
         "coll_text_position_under_mobile": false,
