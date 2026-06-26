@@ -16,7 +16,7 @@
    
 
     <div class="collection-listing fade-in-up{% if section.settings.enable_carousel %} slider {% if section.settings.full_width %}slider--edge-peek{% endif %} slider--mobile-container-pad {% endif %}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
-      <div class="product-grid product-grid--per-row-{{ section.settings.grid }} product-grid--per-row-mob-{{ section.settings.coll_thumb_mob_per_row }} product-grid--image-shape-{{ section.settings.coll_grid_image_shape }}{% if section.settings.enable_carousel %} slider__grid product-grid--carousel{% endif %}">
+      <div class="coll_thumb_per_column-{{ section.settings.coll_thumb_per_column }} product-grid product-grid--per-row-{{ section.settings.grid }} product-grid--per-row-mob-{{ section.settings.coll_thumb_mob_per_row }} product-grid--image-shape-{{ section.settings.coll_grid_image_shape }}{% if section.settings.enable_carousel %} slider__grid product-grid--carousel{% endif %}">
         {%- liquid
           if section.blocks.size > 0
             if section.settings.coll_grid_image_shape == 'portrait-23'
@@ -24,6 +24,8 @@
             elsif section.settings.coll_grid_image_shape == 'portrait-45'
               assign chosen_aspect_ratio = 0.8
             elsif section.settings.coll_grid_image_shape == 'square'
+              assign chosen_aspect_ratio = 1.0
+            elsif section.settings.coll_grid_image_shape == 'circle'
               assign chosen_aspect_ratio = 1.0
             elsif section.settings.coll_grid_image_shape == 'landscape-54'
               assign chosen_aspect_ratio = 1.25
@@ -89,14 +91,14 @@
     </div>
 
     {%- if section.settings.enable_carousel -%}
-         <div class="slider-nav slider-nav--floating no-js-hidden">
-          <button type="button" class="slider-nav__btn has-ltr-icon" name="prev" aria-controls="slider-{{ section.id }}">
+        <div class="collection-slider__nav no-js-hidden" id="nav-{{ section.id }}" hidden>
+          <button type="button" class="collection-slider__nav-btn has-ltr-icon" data-dir="prev" aria-controls="slider-{{ section.id }}">
             <span class="visually-hidden">{{ 'general.slider.previous' | t }}</span>
-            {%- render 'icon-chevron-left', stroke_width: 1.5 -%}
+            {%- render 'icon-chevron-left', stroke_width: 2 -%}
           </button>
-          <button type="button" class="slider-nav__btn has-ltr-icon" name="next" aria-controls="slider-{{ section.id }}">
+          <button type="button" class="collection-slider__nav-btn has-ltr-icon" data-dir="next" aria-controls="slider-{{ section.id }}">
             <span class="visually-hidden">{{ 'general.slider.next' | t }}</span>
-            {%- render 'icon-chevron-right', stroke_width: 1.5 -%}
+            {%- render 'icon-chevron-right', stroke_width: 2 -%}
           </button>
         </div>
       </carousel-slider>
@@ -104,6 +106,72 @@
   </div>
 </div>
 
+{%- if section.settings.enable_carousel -%}
+  <script>
+    (function () {
+      var root = document.getElementById('slider-{{ section.id }}');
+      if (!root) return;
+      var scroller = root.querySelector('.slider');
+      var grid = root.querySelector('.slider__grid');
+      var nav = document.getElementById('nav-{{ section.id }}');
+      if (!scroller || !nav) return;
+      var prevBtn = nav.querySelector('[data-dir="prev"]');
+      var nextBtn = nav.querySelector('[data-dir="next"]');
+
+      function maxScroll() {
+        return scroller.scrollWidth - scroller.clientWidth;
+      }
+
+      function gap() {
+        if (!grid) return 0;
+        var g = parseFloat(getComputedStyle(grid).columnGap);
+        return isNaN(g) ? 0 : g;
+      }
+
+      // One "page" = the columns currently in view. The grid sizes columns to
+      // fit the viewport exactly, so a viewport width (+ one gap to land on a
+      // column edge) advances by exactly the number of visible columns.
+      function step() {
+        return scroller.clientWidth + gap();
+      }
+
+      function go(dir) {
+        var target = scroller.scrollLeft + dir * step();
+        // Clamp to the ends: if fewer columns remain than are shown, this lands
+        // exactly at the start/end rather than overscrolling.
+        target = Math.max(0, Math.min(target, maxScroll()));
+        scroller.scrollTo({ left: target, behavior: 'smooth' });
+      }
+
+      function update() {
+        var scrollable = maxScroll() > 1;
+        nav.hidden = !scrollable;
+        if (!scrollable) return;
+        var x = scroller.scrollLeft;
+        prevBtn.disabled = x <= 1;
+        nextBtn.disabled = x >= maxScroll() - 1;
+      }
+
+      prevBtn.addEventListener('click', function () { go(-1); });
+      nextBtn.addEventListener('click', function () { go(1); });
+
+      var raf;
+      scroller.addEventListener('scroll', function () {
+        if (raf) cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(update);
+      }, { passive: true });
+
+      var rt;
+      window.addEventListener('resize', function () {
+        clearTimeout(rt);
+        rt = setTimeout(update, 200);
+      });
+
+      setTimeout(update, 50);
+      setTimeout(update, 450);
+    })();
+  </script>
+{%- endif -%}
 
 {% schema %}
 {
@@ -161,7 +229,7 @@
       "id": "grid",
       "label": "Collections per row",
       "min": 2,
-      "max": 5,
+      "max": 8,
       "step": 1,
       "default": 4
     },
@@ -219,6 +287,10 @@
         {
           "value": "square",
           "label": "Square (1:1)"
+        },
+        {
+          "value": "circle",
+          "label": "Circle (1:1)"
         },
         {
           "value": "portrait-45",
@@ -280,6 +352,30 @@
       "type": "select",
       "id": "coll_thumb_mob_per_row",
       "label": "Collections per row on mobile",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        },
+        {
+          "value": "4",
+          "label": "4"
+        }
+      ],
+      "default": "2"
+    },
+    {
+      "type": "select",
+      "id": "coll_thumb_per_column",
+      "label": "Collections per column",
       "options": [
         {
           "value": "1",
