@@ -93,6 +93,19 @@
         "label_size": 14
       }
     },
+    "custom_hero_banner_CqQiir": {
+      "type": "custom-hero-banner",
+      "name": "Custom Hero Banner",
+      "settings": {
+        "image": "shopify://shop_images/EOSS_-_Hero.png",
+        "mobile_image": "shopify://shop_images/EOSS_-_Mobile_Hero_1.gif",
+        "link": "shopify://collections/end-of-season-sale",
+        "full_width": true,
+        "max_width": 0,
+        "heading": "End of Season Sale - Shop Now",
+        "use_h1": true
+      }
+    },
     "hero_carousel_rounded_eyHjac": {
       "type": "hero-carousel-rounded",
       "blocks": {
@@ -171,6 +184,7 @@
         "image_caUwGz",
         "image_kEiwna"
       ],
+      "disabled": true,
       "name": "Hero Carousel – Rounded",
       "settings": {
         "padding_top": 8,
@@ -185,60 +199,13 @@
         "accessibility_info": ""
       }
     },
-    "slideshow_JU4LXr": {
-      "type": "slideshow",
-      "blocks": {
-        "image_TKJkRj": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/OneC_hero_1_6cb50d9d-76ee-49de-b733-7ec1855e05ae.png",
-            "mobile_image": "shopify://shop_images/OneC_hero-mobile_1.png",
-            "slide_link": "",
-            "subheading": "",
-            "title": "The Beautiful Game",
-            "heading_max_width": 14,
-            "title_size": 72,
-            "title_size_mobile": 32,
-            "use_h1": true,
-            "text": "<p>Our newest soccer-inspired print, has officially entered the lineup.</p>",
-            "enlarge_text": true,
-            "button_label_1": "Shop The Beautiful Game",
-            "button_url_1": "shopify://collections/the-beautiful-game",
-            "button_tag_1": "",
-            "button_label_2": "",
-            "button_url_2": "",
-            "button_tag_2": "",
-            "text_alignment": "center left"
-          }
-        }
-      },
-      "block_order": [
-        "image_TKJkRj"
-      ],
-      "disabled": true,
-      "name": "Slideshow",
-      "settings": {
-        "height": "fixed",
-        "height_desktop": 660,
-        "height_mobile": 600,
-        "full_width": true,
-        "mobile_overlay_under": false,
-        "overlay_style": "shadow",
-        "transition": "fade",
-        "navigation": "dots",
-        "autoplay": true,
-        "autoplay_speed": 7,
-        "accessibility_info": ""
-      }
-    },
-    "featured_collection_yN3Jim": {
+    "featured_collection_ct3anq": {
       "type": "featured-collection",
-      "disabled": true,
       "name": "Featured collection",
       "settings": {
-        "title": "The Beautiful Game",
+        "title": "End of Season Sale!",
         "text": "",
-        "collection": "the-beautiful-game",
+        "collection": "end-of-season-sale",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 4,
@@ -253,18 +220,199 @@
       "type": "custom-product-highlight",
       "name": "Highlighted Collection",
       "settings": {
-        "title": "Soft Muslin Swaddles",
-        "text": "<p>Our Swaddle works as a swaddle wrap, nursing cover, stroller shade, tummy time mat, and lightweight blanket.</p>",
-        "image": "shopify://shop_images/Copy_of_SWSHK_Muslin_Swaddle_Sharks_52.jpg",
+        "title": "For the Big Apple",
+        "text": "",
+        "image": "shopify://shop_images/SWNYC_Muslin_Swaddle_New_York_51.jpg",
         "order": true,
         "product_list": [
-          "muslin-swaddle-magical-dragons",
-          "muslin-swaddle-smiley-sharks"
+          "muslin-swaddle-new-york-city",
+          "onec-silicone-clip-teether-set-yellow-taxi"
         ],
-        "button_label": "Shop Bundles",
-        "link": "shopify://collections/bundles-and-sets",
+        "button_label": "Shop NYC",
+        "link": "shopify://collections/new-york-city",
         "button_style": "primary",
         "color_scheme": "default"
+      }
+    },
+    "collection_list_km4B8h": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_HR6thw": {
+          "type": "collection",
+          "settings": {
+            "collection": "sleep-bags",
+            "tag": "",
+            "image": "shopify://shop_images/BA9004U.LMN_01.jpg",
+            "subheading": "Sleep Bags",
+            "button_label": ""
+          }
+        },
+        "collection_cAdq7E": {
+          "type": "collection",
+          "settings": {
+            "collection": "silicone-bibs",
+            "tag": "",
+            "image": "shopify://shop_images/SILBIBMGD_1_1183a4e3-7ea4-4ca0-9713-3906a39a370b.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_AGTzxi": {
+          "type": "collection",
+          "settings": {
+            "collection": "sleepers",
+            "tag": "",
+            "image": "shopify://shop_images/BA1002U.SAF.4_1_bebfba78-0936-4259-b7fa-cbb7ce9cd33e.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_JYW7iJ": {
+          "type": "collection",
+          "settings": {
+            "collection": "long-sleeve-bibs",
+            "tag": "",
+            "image": "shopify://shop_images/LSBIBUNB_1_396d4b6a-79c7-473e-b468-69d7d4087ce5.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_MT9Fei": {
+          "type": "collection",
+          "settings": {
+            "collection": "swaddles",
+            "tag": "",
+            "image": "shopify://shop_images/SWHGH_233_27d193de-56b7-4c60-9021-30c41b393c6b.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_GHGxgf": {
+          "type": "collection",
+          "settings": {
+            "collection": "hooded-towel-sets",
+            "tag": "",
+            "image": "shopify://shop_images/TWBMB_1_cb3e5817-4828-4ec2-9f0e-e0a136d45d97.jpg",
+            "subheading": "Hooded Towels",
+            "button_label": ""
+          }
+        },
+        "collection_wdaaXX": {
+          "type": "collection",
+          "settings": {
+            "collection": "muslin-quilt",
+            "tag": "",
+            "image": "shopify://shop_images/QTENG_02_3e5a3f7e-6a42-4614-8e25-a7f587a38b81.jpg",
+            "subheading": "Muslin Quilts",
+            "button_label": ""
+          }
+        },
+        "collection_aAwGCA": {
+          "type": "collection",
+          "settings": {
+            "collection": "teethers",
+            "tag": "",
+            "image": "shopify://shop_images/WTR-003-BLU_WildTeether_Elephant_01.jpg",
+            "subheading": "Teethers",
+            "button_label": ""
+          }
+        },
+        "collection_naf6Nh": {
+          "type": "collection",
+          "settings": {
+            "collection": "pacifier-clips",
+            "tag": "",
+            "image": "shopify://shop_images/SILCPOCPQZ_01_b0ff64a5-f5bb-4ee1-9692-e9545270614e.jpg",
+            "subheading": "Pacifier Clips",
+            "button_label": ""
+          }
+        },
+        "collection_7CYUUg": {
+          "type": "collection",
+          "settings": {
+            "collection": "utensils",
+            "tag": "",
+            "image": "shopify://shop_images/LSET-009-BFG_LearningUtensilsSet_Shark_1.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_cUW8LN": {
+          "type": "collection",
+          "settings": {
+            "collection": "crib-sheets",
+            "tag": "",
+            "image": "shopify://shop_images/CRIBFBK_01.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_jcTgNr": {
+          "type": "collection",
+          "settings": {
+            "collection": "pajamas",
+            "tag": "",
+            "image": "shopify://shop_images/KA1006U.ENG_01_0cf0b711-14a4-4b70-a02f-b4ff0a9d3443.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        },
+        "collection_8na3jQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "suction-plates",
+            "tag": "",
+            "image": "shopify://shop_images/SPL-002-BPK_01_827d3333-3955-40c6-9da7-8d166c791513.jpg",
+            "subheading": "Suction Plates",
+            "button_label": ""
+          }
+        },
+        "collection_i9jE4V": {
+          "type": "collection",
+          "settings": {
+            "collection": "bandana-bibs",
+            "tag": "",
+            "image": "shopify://shop_images/BIBSHK_10_04ca628f-d586-41db-9ce0-4bb47856c190.jpg",
+            "subheading": "{{ block.settings.collection.title }}",
+            "button_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_HR6thw",
+        "collection_cAdq7E",
+        "collection_AGTzxi",
+        "collection_JYW7iJ",
+        "collection_MT9Fei",
+        "collection_GHGxgf",
+        "collection_wdaaXX",
+        "collection_aAwGCA",
+        "collection_naf6Nh",
+        "collection_7CYUUg",
+        "collection_cUW8LN",
+        "collection_jcTgNr",
+        "collection_8na3jQ",
+        "collection_i9jE4V"
+      ],
+      "name": "Shop by Category",
+      "settings": {
+        "title": "Shop by Category",
+        "text": "",
+        "text_alignment": "start",
+        "enable_carousel": true,
+        "grid": 7,
+        "color_scheme": "1",
+        "full_width": true,
+        "coll_grid_image_shape": "portrait-45",
+        "coll_grid_image_position": "top center",
+        "coll_thumb_mob_per_row": "3",
+        "coll_thumb_per_column": "2",
+        "coll_grid_show_count": false,
+        "coll_text_position": "below",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_y": "center",
+        "coll_button_style": "primary"
       }
     },
     "collection_list_aakDiY": {
@@ -360,6 +508,7 @@
         "collection_j8GdED",
         "collection_4HbMHd"
       ],
+      "disabled": true,
       "name": "Shop by Category",
       "settings": {
         "title": "Shop by Category",
@@ -1249,10 +1398,11 @@
   },
   "order": [
     "mobile_collection_carousel_iBRR9r",
+    "custom_hero_banner_CqQiir",
     "hero_carousel_rounded_eyHjac",
-    "slideshow_JU4LXr",
-    "featured_collection_yN3Jim",
+    "featured_collection_ct3anq",
     "custom_product_highlight_mEPwaD",
+    "collection_list_km4B8h",
     "collection_list_aakDiY",
     "logo_list_kYmwNX",
     "featured_collection_RGPeGr",
