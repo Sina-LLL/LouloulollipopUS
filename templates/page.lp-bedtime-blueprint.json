@@ -1,0 +1,259 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme",
+  "sections": {
+    "rich_text_DdFdCj": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_UTWGRF": {
+          "type": "heading",
+          "settings": {
+            "title": "Not Sure How to Dress Your Baby for Sleep?",
+            "use_h1": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_UTWGRF"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "height": "medium",
+        "text_alignment": "center",
+        "full_width": false,
+        "color_scheme": "default"
+      }
+    },
+    "hero": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_MDKFBH": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "We made a simple bedtime blueprint for that."
+          }
+        },
+        "body": {
+          "type": "text",
+          "settings": {
+            "text": "<p>From newborn swaddling to TOG ratings and toddler sleep bags, this free guide breaks down exactly what to wear, when—without the overwhelm.</p>",
+            "enlarge_text": false
+          }
+        },
+        "tagline": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Practical sleep guidance for newborns, babies, and toddlers — delivered straight to your inbox.</p>",
+            "enlarge_text": false
+          }
+        },
+        "liquid_6JmR8t": {
+          "type": "liquid",
+          "settings": {
+            "custom_liquid": "<p style=\"font-size:18px; font-weight:600; margin-bottom:8px;\">Get Your Free Sleep Guide\n</p><p style=\"font-size:15px; margin-bottom:24px;\">Enter your email and we'll send the guide straight to your inbox.</p>\n<div class=\"klaviyo-form-UmrqSu\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_MDKFBH",
+        "body",
+        "tagline",
+        "liquid_6JmR8t"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/03_5138cbb3-11ee-4d26-b084-16188ea497dd.png",
+        "image_width": 700,
+        "image_link": "",
+        "image_position": "below",
+        "text_alignment": "left",
+        "color_scheme": "default"
+      }
+    },
+    "proof_bar": {
+      "type": "lp-proof-bar",
+      "blocks": {
+        "p1": {
+          "type": "stat",
+          "settings": {
+            "label": "Good Housekeeping",
+            "desc": "2025 Parenting Award Winner"
+          }
+        },
+        "p2": {
+          "type": "stat",
+          "settings": {
+            "label": "Parents Best for Baby",
+            "desc": "Award Winner"
+          }
+        },
+        "p3": {
+          "type": "stat",
+          "settings": {
+            "label": "5,000+ ★★★★★",
+            "desc": "Reviews across sleep products"
+          }
+        },
+        "p4": {
+          "type": "stat",
+          "settings": {
+            "label": "Trusted Since 2015",
+            "desc": "Canadian-designed baby essentials"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4"
+      ],
+      "settings": {
+        "bg_color": "#6a8b95",
+        "text_color": "#ffffff",
+        "accent_color": "#ffc748"
+      }
+    },
+    "image_with_text_bjp7it": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_gXbWUM": {
+          "type": "heading",
+          "settings": {
+            "title": "Inside the Guide",
+            "use_h1": false
+          }
+        },
+        "text_pFRAAA": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>How to swaddle (and when to stop)</li><li>What TOG actually means</li><li>How to dress baby based on room temperature</li><li>Signs your baby is too hot or too cold</li><li>Sleep bags vs. sleep suits</li><li>Real parent tips that actually help</li></ul>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_gXbWUM",
+        "text_pFRAAA"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Father-holding-swaddled-baby.jpg",
+        "image_2": "shopify://shop_images/TENCEL_Sleep_Bag_1.0_Tog_-_Bumble_Bees_0f0a1375-aada-42a2-96fd-9be42e62bb5a.jpg",
+        "image_width": 700,
+        "image_link": "",
+        "image_position": "left",
+        "text_alignment": "left",
+        "color_scheme": "default"
+      }
+    },
+    "brand_story": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_bs": {
+          "type": "heading",
+          "settings": {
+            "title": "Created by parents who know baby and toddler sleep can feel overwhelming.",
+            "use_h1": false
+          }
+        },
+        "quote_bs": {
+          "type": "text",
+          "settings": {
+            "text": "<p>One of the most common questions new parents ask is:</p><p><em>\"What should my baby wear to sleep tonight?\"</em></p><p>This guide was designed to make that question feel a whole lot simpler.</p><p>No complicated rules. No judgment. Just practical guidance that grows with your baby — from the newborn stage through toddlerhood.</p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_bs",
+        "quote_bs"
+      ],
+      "settings": {
+        "height": "medium",
+        "text_alignment": "center",
+        "full_width": false,
+        "color_scheme": "default"
+      }
+    },
+    "custom_liquid_rGbfL8": {
+      "type": "custom-liquid",
+      "settings": {
+        "full_width": false,
+        "show_space": true,
+        "code": "<div id=\"#section-id-form_top\" style=\"text-align:center; max-width:560px; margin:0 auto;\"><p style=\"font-size:18px; font-weight:600; margin-bottom:8px;\">Get Your Free Sleep Guide\n</p><p style=\"font-size:15px; color:#666; margin-bottom:24px;\">Enter your email and we'll send the guide straight to your inbox.</p><!-- PASTE YOUR KLAVIYO FORM EMBED CODE BELOW -->\n<div class=\"klaviyo-form-UmrqSu\"></div>\n<!-- PASTE YOUR KLAVIYO FORM EMBED CODE ABOVE --></div>"
+      }
+    },
+    "related": {
+      "type": "collection-list",
+      "blocks": {
+        "c1": {
+          "type": "collection",
+          "settings": {
+            "collection": "sleep-bags",
+            "tag": "",
+            "subheading": "TOG-Rated Sleep Bags",
+            "button_label": "Shop Sleep Bags"
+          }
+        },
+        "c2": {
+          "type": "collection",
+          "settings": {
+            "collection": "sleepers-pajamas",
+            "tag": "",
+            "subheading": "TENCEL™ Sleepers & Pajamas",
+            "button_label": "Shop Sleepers"
+          }
+        },
+        "c3": {
+          "type": "collection",
+          "settings": {
+            "collection": "swaddles",
+            "tag": "",
+            "subheading": "Breathable Muslin Swaddles",
+            "button_label": "Shop Swaddles"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "title": "Shop the Sleep Collection",
+        "text": "",
+        "text_alignment": "start",
+        "enable_carousel": false,
+        "grid": 3,
+        "color_scheme": "default",
+        "full_width": true,
+        "coll_grid_image_shape": "square",
+        "coll_grid_image_position": "center center",
+        "coll_thumb_mob_per_row": "1",
+        "coll_thumb_per_column": "1",
+        "coll_grid_show_count": false,
+        "coll_text_position": "below",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_y": "center",
+        "coll_button_style": "primary"
+      }
+    }
+  },
+  "order": [
+    "rich_text_DdFdCj",
+    "hero",
+    "proof_bar",
+    "image_with_text_bjp7it",
+    "brand_story",
+    "custom_liquid_rGbfL8",
+    "related"
+  ]
+}
