@@ -1486,8 +1486,7 @@ h4, .h4 {
   padding: 0;
   pointer-events: none;
   z-index: 2;
-  background-color: unset !important;
-
+  background-color:unset !important;
 }
 /* Buttons */
 .section-product-grid .slider-nav__btn,
