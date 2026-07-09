@@ -198,6 +198,7 @@
           "settings": {
             "collection": "sleep-bags",
             "tag": "",
+            "image": "shopify://shop_images/LouLouLollipopMarch2026-07039-2_5960c50f-9982-4868-81c5-4f79eb4934f1.jpg",
             "subheading": "TOG-Rated Sleep Bags",
             "button_label": "Shop Sleep Bags"
           }
@@ -205,10 +206,10 @@
         "c2": {
           "type": "collection",
           "settings": {
-            "collection": "sleepers-pajamas",
+            "collection": "sleepers",
             "tag": "",
             "image": "shopify://shop_images/Sleeper_-_Quilt_-_Bumble_Bees_8330736c-e622-44b5-bbee-c39adb5c32a0.jpg",
-            "subheading": "TENCEL™ Sleepers & Pajamas",
+            "subheading": "TENCEL™ Sleepers",
             "button_label": "Shop Sleepers"
           }
         },
