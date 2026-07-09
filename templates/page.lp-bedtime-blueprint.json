@@ -207,6 +207,7 @@
           "settings": {
             "collection": "sleepers-pajamas",
             "tag": "",
+            "image": "shopify://shop_images/Sleeper_-_Quilt_-_Bumble_Bees_8330736c-e622-44b5-bbee-c39adb5c32a0.jpg",
             "subheading": "TENCEL™ Sleepers & Pajamas",
             "button_label": "Shop Sleepers"
           }
@@ -216,6 +217,7 @@
           "settings": {
             "collection": "swaddles",
             "tag": "",
+            "image": "shopify://shop_images/SWSHK_Muslin_Swaddle_Sharks_52.jpg",
             "subheading": "Breathable Muslin Swaddles",
             "button_label": "Shop Swaddles"
           }
