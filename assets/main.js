@@ -1755,11 +1755,13 @@ const LinkDropdown = class extends HTMLElement {
     super();
 
     this.open = false;
-    this.button = this.querySelector('.link-dropdown__button');
-    this.button.addEventListener('click', this.toggle.bind(this));
   }
 
   connectedCallback() {
+    this.button = this.querySelector('.link-dropdown__button');
+    if (!this.button) return;
+    this.button.addEventListener('click', this.toggle.bind(this));
+
     if (this.open) {
       this.addDismissListener();
     }
@@ -4206,4 +4208,3 @@ window.onpageshow = () => {
       });
     }
   });
-  
