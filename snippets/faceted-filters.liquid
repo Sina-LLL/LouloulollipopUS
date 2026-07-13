@@ -156,11 +156,11 @@
             -%}
             {%- if filter_values_to_show_count > 0 -%}
               <div class="filter-group{% if filter_group_is_swatch %} filter-group--swatch filter-group--layout-{{ settings.filter_swatch_layout }}{% elsif filter_group_is_button_grid %} filter-group--button-grid filter-group--layout-three-column{% elsif section.settings.filter_two_columns %}{% if filter.type == 'boolean' or filter.type == 'list' %} filter-group--layout-two-column{% endif %}{% endif %}">
-                <toggle-target role="button" tabindex="0" class="filter-group__heading{% if collapse_filters %} toggle-target-toggler--is-hidden{% endif %}" data-toggle-target=".filter-group--{{ forloop.index | plus: 1 }}">
+                <toggle-target role="button" tabindex="0" aria-expanded="{% if collapse_filters %}false{% else %}true{% endif %}" aria-controls="filter-group-items-{{ forloop.index | plus: 1 }}" class="filter-group__heading{% if collapse_filters %} toggle-target-toggler--is-hidden{% endif %}" data-toggle-target=".filter-group--{{ forloop.index | plus: 1 }}">
                   <div class="filter-group__heading__text">{{ filter.label | escape }}</div>
                   <span class="filter-group__heading__indicator">{% render 'icon-chevron-down', stroke_width: 1.3 %}</span>
                 </toggle-target>
-                <div class="filter-group__items filter-group--{{ forloop.index | plus: 1 }} toggle-target{% if collapse_filters %} toggle-target--hidden{% endif %}">
+                <div id="filter-group-items-{{ forloop.index | plus: 1 }}" class="filter-group__items filter-group--{{ forloop.index | plus: 1 }} toggle-target{% if collapse_filters %} toggle-target--hidden{% endif %}">
                   <div class="toggle-target-container">
                     {% case filter.type %}
                     {% when 'boolean' or 'list' %}
@@ -209,11 +209,11 @@
 
       {% if section.settings.show_sort %}
         <div class="filter-group mobile-only">
-          <toggle-target role="button" tabindex="0" class="filter-group__heading" data-toggle-target=".filter-group--sort">
+          <toggle-target role="button" tabindex="0" aria-expanded="true" aria-controls="filter-group-items-sort" class="filter-group__heading" data-toggle-target=".filter-group--sort">
             <div class="filter-group__heading__text">{{ 'products.sorting.sort_by_label' | t }}</div>
             <span class="filter-group__heading__indicator">{% render 'icon-chevron-down', stroke_width: 1.3 %}</span>
           </toggle-target>
-          <div class="filter-group__items filter-group--sort toggle-target">
+          <div id="filter-group-items-sort" class="filter-group__items filter-group--sort toggle-target">
             <div class="toggle-target-container">
               {%- for option in filter_context.sort_options -%}
                 {%- liquid
@@ -260,6 +260,26 @@
           </div>
         </div>
       {% endif %}
+
+      <script>
+        (function () {
+          function initFilterA11y(root) {
+            (root || document).querySelectorAll('.filter-group__heading[role="button"][data-toggle-target]').forEach(function (toggler) {
+              if (toggler.dataset.ariaBound === '1') return;
+              var target = document.querySelector(toggler.getAttribute('data-toggle-target'));
+              if (!target) return;
+              toggler.dataset.ariaBound = '1';
+              var set = function () {
+                toggler.setAttribute('aria-expanded', String(!target.classList.contains('toggle-target--hidden')));
+              };
+              set();
+              new MutationObserver(set).observe(target, { attributes: true, attributeFilter: ['class'] });
+            });
+          }
+          if (document.readyState !== 'loading') initFilterA11y();
+          else document.addEventListener('DOMContentLoaded', function () { initFilterA11y(); });
+        })();
+      </script>
 
       <noscript>
         <button type="submit" class="btn">{{ 'products.filtering.apply' | t }}</button>
