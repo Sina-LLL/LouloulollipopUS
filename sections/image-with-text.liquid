@@ -220,6 +220,8 @@
                     {%- if block.settings.text != blank -%}<p class="iwt-list-item__body">{{ block.settings.text | escape }}</p>{%- endif -%}
                   </div>
                 </div>
+              {%- when 'liquid' -%}
+                <div class="lightly-spaced-row iwt-custom-liquid" {{ block.shopify_attributes }}>{{ block.settings.custom_liquid }}</div>
               {%- when 'countdown' -%}
                 <script src="{{ 'countdown-timer.js' | asset_url }}" defer></script>
                 {% style %}.block-id-{{ block.id }} .countdown { --countdown-desktop-size: {{ block.settings.number_size }}px; }{% endstyle %}
@@ -344,6 +346,8 @@
                   </div>
                 </div>
 
+              {%- when 'liquid' -%}
+                <div class="lightly-spaced-row iwt-custom-liquid" {{ block.shopify_attributes }}>{{ block.settings.custom_liquid }}</div>
               {%- when 'countdown' -%}
                 <script src="{{ 'countdown-timer.js' | asset_url }}" defer></script>
                 {% style %}
@@ -793,6 +797,18 @@
           "type": "text",
           "id": "text",
           "label": "Description"
+        }
+      ]
+    },
+    {
+      "type": "liquid",
+      "name": "Liquid",
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "custom_liquid",
+          "label": "Liquid",
+          "info": "Add app snippets or other Liquid code to create advanced customizations. [Read more](https://help.shopify.com/en/manual/online-store/themes/theme-structure/extend/custom-liquid)"
         }
       ]
     },
