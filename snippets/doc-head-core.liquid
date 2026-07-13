@@ -29,3 +29,22 @@
 {%- if page_description -%}
   <meta name="description" content="{{ page_description | escape }}">
 {%- endif -%}
+
+{%- comment -%}
+  Accessibility (WCAG 2.1 AA — 1.4.3 Contrast Minimum) safeguard for product overlay badges.
+  The merchant badge colours injected via doc-head-styles rendered light text below the
+  4.5:1 minimum on the sale, low-stock, and "new" badges (and the sage "meta" badge on US).
+  These overrides restore AA-compliant colours in the same hue family. Verified ratios:
+    - sale badge:  #cf2f22 bg  -> white 5.14:1 / #faf9f6 4.89:1
+    - new badge:   #a85636 bg  -> white 5.19:1 / #faf9f6 4.93:1
+    - meta badge:  #566b54 bg  -> white 5.79:1   (US only)
+    - low-stock:   dark text #1d1d1d on the amber #f2b321 bg -> 9.03:1
+{%- endcomment -%}
+<style>
+  :root {
+    --product-label-overlay-reduction-bg: #cf2f22 !important;
+    --product-label-overlay-stock-text:   #1d1d1d !important;
+    --product-label-overlay-new-bg:       #a85636 !important;
+    --product-label-overlay-meta-bg:      #566b54 !important;
+  }
+</style>
