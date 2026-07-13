@@ -25,7 +25,7 @@
   --lll-warning: #F2B321;
   --lll-new: #D68161;           /* brand decision: white text at 2.9:1 — documented AA exception (decorative badge) */
   --lll-meta: #7A8F78;
-  --lll-text-muted: #848484;    /* was-price, secondary text */
+  --lll-text-muted: #6E6E6E;    /* was-price, secondary text — was #848484 (3.55:1 fails AA); 4.84:1 on cream */
 
   /* Radius */
   --lll-radius-sm: 4px;         /* labels, swatches, tooltips */
@@ -1558,4 +1558,24 @@ h4, .h4 {
 }
 /* ============================================================
    END CONTENT CAROUSEL ARROWS
+   ============================================================ */
+
+/* ============================================================
+   ACCESSIBILITY — WCAG 2.1 AA CONTRAST FIXES (1.4.3) — 2026-07-13
+   ============================================================ */
+.announcement-bar {
+  /* top bar text failed 3.47:1 (near-white on --lll-slate); use --lll-slate-deep -> 5.70:1 */
+  --text-color: 79, 103, 110 !important;
+  --heading-color: 79, 103, 110 !important;
+  --link-color: 79, 103, 110 !important;
+}
+:root {
+  /* merchant nav_featured_col (#db3f30) failed 4.19:1; reuse --lll-sale -> 4.72:1 */
+  --main-nav-link-featured-col: var(--lll-sale);
+}
+.product-price--block .price__was {
+  opacity: 1; /* was 0.5 — made AA unreachable at any text colour */
+}
+/* ============================================================
+   END ACCESSIBILITY FIXES
    ============================================================ */
