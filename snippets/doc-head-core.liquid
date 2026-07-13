@@ -29,3 +29,40 @@
 {%- if page_description -%}
   <meta name="description" content="{{ page_description | escape }}">
 {%- endif -%}
+
+{%- comment -%}
+  Accessibility (WCAG 2.1 AA — 1.4.3 Contrast Minimum) safeguard, bi-weekly audit 2026-07-13.
+  Three sitewide contrast failures measured on the live storefront (WCAG relative-luminance formula),
+  confirmed against theme source. Independent of the open badge-contrast PR (also appends to this file) —
+  trivial to resolve if both merge; no overlapping selectors.
+
+    1. Top bar (announcement + inline country/language selector, .announcement-bar):
+       near-white text #faf9f6 on the merchant slate fill #6a8b95 -> 3.47:1. Reuses the theme's own
+       pre-darkened token --lll-slate-deep (#4F676E, already labelled "...shipping bar" in
+       design-system.css but never wired up here) -> 5.7:1.
+    2. Was-price / secondary text (--lll-text-muted, design-system.css): #848484 on cream -> 3.55:1,
+       present on every product card (20+ instances per page on collection/search/home). On cards
+       (.product-price--block .price__was) an additional opacity:0.5 compounds this so no text colour
+       could reach AA there, so opacity is neutralised in that scope too. New colour #6e6e6e -> 4.84:1
+       at full opacity (still visually distinct/muted from body copy, which is #5c5c5c).
+    3. "Sale" nav link (--main-nav-link-featured-col, doc-head-styles.liquid): merchant setting
+       nav_featured_col (#db3f30) on cream -> 4.19:1. Reuses the theme's existing pre-darkened
+       --lll-sale token (#D03528, already used for the sale badge) -> 4.72:1.
+
+  All three ratios verified programmatically with the WCAG relative-luminance formula against the
+  live rendered colours on louloulollipop.com and louloulollipop.ca (identical theme + settings).
+{%- endcomment -%}
+<style>
+  :root {
+    --lll-text-muted: #6e6e6e !important;
+    --main-nav-link-featured-col: #D03528 !important;
+  }
+  .announcement-bar {
+    --text-color: 79, 103, 110 !important;
+    --heading-color: 79, 103, 110 !important;
+    --link-color: 79, 103, 110 !important;
+  }
+  .product-price--block .price__was {
+    opacity: 1 !important;
+  }
+</style>
