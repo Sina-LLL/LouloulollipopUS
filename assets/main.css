@@ -9404,7 +9404,7 @@ html:has(.drawer[open]) > body {
 }
 
 .product-label--new-in > span {
-  background: var(--product-label-overlay-new-bg);
+  background: #C45331;
   color: var(--product-label-overlay-new-text);
 }
 
