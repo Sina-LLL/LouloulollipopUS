@@ -11,8 +11,8 @@
   --lll-slate-hover: #8EA7AF;
   --lll-slate-muted: #B3C3C9;   /* disabled / sold-out */
   --lll-slate-border: #D9E1E4;  /* borders, dividers, inactive dots */
-  --lll-slate-deep: #4F676E;    /* links, pill text, shipping bar */
-  --lll-slate-action: #587681;  /* AA-compliant slate for small text on fills (4.6:1 vs cream) */
+  --lll-slate-deep: #59757D;    /* links, pill text, shipping bar */
+  --lll-slate-action: #59757D;  /* AA-compliant slate for small text on fills (4.6:1 vs cream) */
   --lll-cream: #FAF9F6;
   --lll-white: #FFFFFF;
   --lll-blush: #FBF4F3;
@@ -116,7 +116,7 @@ h1, .h1{
 }
 .btn,
 .small-feature-link{
-  font-weight:800;
+  font-weight:600;
 }
 @media (max-width: 768px) {
   h1.majortitle{
@@ -1565,9 +1565,9 @@ h4, .h4 {
    ============================================================ */
 .announcement-bar {
   /* top bar text failed 3.47:1 (near-white on --lll-slate); use --lll-slate-deep -> 5.70:1 */
-  --text-color: 79, 103, 110 !important;
+  /* --text-color: 79, 103, 110 !important;
   --heading-color: 79, 103, 110 !important;
-  --link-color: 79, 103, 110 !important;
+  --link-color: 79, 103, 110 !important; */
 }
 :root {
   /* merchant nav_featured_col (#db3f30) failed 4.19:1; reuse --lll-sale -> 4.72:1 */
