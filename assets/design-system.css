@@ -23,7 +23,7 @@
   --lll-sale: #D03528;          /* darkened from #DB3F30 for AA (4.7:1+ as text and behind white) */
   --lll-success: #78B742;
   --lll-warning: #F2B321;
-  --lll-new: #D68161;           /* brand decision: white text at 2.9:1 — documented AA exception (decorative badge) */
+  --lll-new: #C45331;           /* brand decision: white text at 2.9:1 — documented AA exception (decorative badge) */
   --lll-meta: #7A8F78;
   --lll-text-muted: #6E6E6E;    /* was-price, secondary text — was #848484 (3.55:1 fails AA); 4.84:1 on cream */
 
