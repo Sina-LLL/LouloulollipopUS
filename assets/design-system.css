@@ -47,8 +47,8 @@
      Theme buttons & badges. Values mirror the recommended theme-editor
      settings; these vars win over doc-head-styles because this sheet
      loads later. Channel format (R G B) matches Symmetry's rgb(var()) usage. */
-  --btn-bg-color: 88 118 129;                              /* slate-action */
-  --btn-border-color: 88 118 129;
+  --btn-bg-color: #59757D;                              /* slate-action */
+  --btn-border-color: #59757D;
   --btn-bg-hover-color: 79 103 110;                        /* slate-deep: hover darkens, not lightens */
   --btn-border-hover-color: 79 103 110;
   --btn-alt-text-color: 88 118 129;

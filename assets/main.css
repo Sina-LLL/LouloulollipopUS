@@ -681,9 +681,9 @@ button svg {
   margin: 0;
   padding: var(--input-btn-padding-top) 1.5rem var(--input-btn-padding-bottom);
   transition: background-color 100ms, color 100ms, border-color 100ms, opacity 100ms;
-  border: 1.5px solid rgb(var(--btn-border-color));
+  border: 1.5px solid var(--btn-border-color);
   border-radius: var(--btn-border-radius);
-  background: rgb(var(--btn-bg-color));
+  background: var(--btn-bg-color);
   color: rgb(var(--btn-text-color));
   font-family: var(--base-font-family);
   font-size: var(--button-text-size);
