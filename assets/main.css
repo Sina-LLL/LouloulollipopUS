@@ -7388,7 +7388,7 @@ hotspots-image .image-overlay {
   --btn-border-color: var(--color-scheme-default-btn-border-color);
   --btn-border-hover-color: var(--color-scheme-default-btn-border-hover-color);
   --btn-alt-text-color: var(--color-scheme-default-btn-alt-text-color);
-  --btn-alt-bg-color: var(--color-scheme-default-btn-alt-bg-color);
+  --btn-alt-bg-color: var(--lll-slate);
   --btn-alt-border-color: var(--color-scheme-default-btn-alt-border-color);
   --btn-alt-border-hover-color: var(--color-scheme-default-btn-alt-border-hover-color);
   background: var(--bg);
