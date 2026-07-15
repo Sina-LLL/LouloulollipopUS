@@ -11,8 +11,8 @@
   --lll-slate-hover: #8EA7AF;
   --lll-slate-muted: #B3C3C9;   /* disabled / sold-out */
   --lll-slate-border: #D9E1E4;  /* borders, dividers, inactive dots */
-  --lll-slate-deep: #4F676E;    /* links, pill text, shipping bar */
-  --lll-slate-action: #587681;  /* AA-compliant slate for small text on fills (4.6:1 vs cream) */
+  --lll-slate-deep: #59757D;    /* links, pill text, shipping bar */
+  --lll-slate-action: #59757D;  /* AA-compliant slate for small text on fills (4.6:1 vs cream) */
   --lll-cream: #FAF9F6;
   --lll-white: #FFFFFF;
   --lll-blush: #FBF4F3;
@@ -23,7 +23,7 @@
   --lll-sale: #D03528;          /* darkened from #DB3F30 for AA (4.7:1+ as text and behind white) */
   --lll-success: #78B742;
   --lll-warning: #F2B321;
-  --lll-new: #D68161;           /* brand decision: white text at 2.9:1 — documented AA exception (decorative badge) */
+  --lll-new: #C45331;           /* brand decision: white text at 2.9:1 — documented AA exception (decorative badge) */
   --lll-meta: #7A8F78;
   --lll-text-muted: #6E6E6E;    /* was-price, secondary text — was #848484 (3.55:1 fails AA); 4.84:1 on cream */
 
@@ -46,9 +46,19 @@
   /* ---- Accessibility overrides (WCAG AA) ----
      Theme buttons & badges. Values mirror the recommended theme-editor
      settings; these vars win over doc-head-styles because this sheet
-     loads later. Channel format (R G B) matches Symmetry's rgb(var()) usage. */
-  --btn-bg-color: 88 118 129;                              /* slate-action */
-  --btn-border-color: 88 118 129;
+     loads later.
+     Two token formats are in play here — do not mix them:
+       - --btn-bg-color / --btn-border-color are consumed directly by
+         main.css (`background: var(--btn-bg-color)`), so they must hold
+         a full CSS color (hex or rgb() string).
+       - Every other --btn-*-hover-color / --btn-alt-*-color /
+         --color-scheme-* token is consumed via `rgb(var(--x))`, so it
+         must hold a bare "R G B" channel triplet (Symmetry convention).
+       Mixing the two formats on the same token silently produces an
+       invalid color (see the .btn--secondary and .shipping-info-tooltip
+       fixes below, both caused by exactly this). */
+  --btn-bg-color: #59757D;                              /* slate-action */
+  --btn-border-color: #59757D;
   --btn-bg-hover-color: 79 103 110;                        /* slate-deep: hover darkens, not lightens */
   --btn-border-hover-color: 79 103 110;
   --btn-alt-text-color: 88 118 129;
@@ -76,7 +86,7 @@
 .blog-posts h1{
   font-size: 2em;
   line-height: 1.5em;
- 
+
 }
 .article h2{
   font-size: 1.75rem;
@@ -116,14 +126,14 @@ h1, .h1{
 }
 .btn,
 .small-feature-link{
-  font-weight:800;
+  font-weight:600;
 }
 @media (max-width: 768px) {
   h1.majortitle{
     font-size: 2rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 2.5rem; 
+    line-height: 2.5rem;
   }
 }
 /* End H1 */
@@ -133,12 +143,12 @@ h2,.h2, h2.h1{
   font-size: clamp(1.5rem, 3vw + 0.75rem, 2rem); /* 24px mobile - 32px desktop */
   font-style: normal;
   font-weight: 700;
-  line-height: 1.25; 
+  line-height: 1.25;
 }
 h2.text-overlay__title.h4{
   font-size: 1.5rem;
   font-weight: 600;
-  line-height: 1.25rem; 
+  line-height: 1.25rem;
 }
 /* End H2 */
 
@@ -147,7 +157,7 @@ h2.text-overlay__title.h4{
 h3,.h3{
   font-size: 1.75rem;
   font-weight: 600;
-  line-height: 2.25rem; /* was 2.5rem - aligns heading rhythm */ 
+  line-height: 2.25rem; /* was 2.5rem - aligns heading rhythm */
 }
 /* End H3 */
 
@@ -155,7 +165,7 @@ h3,.h3{
 h4,.h4{
   font-size: 1.5rem;
   font-weight: 600;
-  line-height: 1.75rem; 
+  line-height: 1.75rem;
 }
 h2.text-overlay__title.h4{
     font-size: 1rem !important;
@@ -169,7 +179,7 @@ h2.text-overlay__title.h4{
 h5,.h5{
   font-size: 1.25rem;
   font-weight: 600;
-  line-height: 1.5rem; 
+  line-height: 1.5rem;
   text-transform: uppercase;
 }
 /* End H5 */
@@ -367,7 +377,7 @@ a.opt-label.opt-label--image .opt-label__media.media, a.opt-label.opt-label--ima
 }
 
 .variant-picker{
-  
+
 }
 .product-form .input-row, .buy-buttons-row{
   margin:12px 0;
@@ -437,7 +447,7 @@ li.slider__item.is-active {
 }
 .price-label--sold-out{
   font-weight: 600;
-  
+
 }
 .sold-out-line {
     height: 84.85px;
@@ -522,7 +532,7 @@ label.opt-label.opt-label--btn.btn.relative.text-center:hover, .opt-btn.is-unava
   border:1px solid var(--lll-slate-deep);
   color:var(--lll-white);
   background-color:var(--lll-slate-deep);
-  
+
 }
 .add-to-cart-wrapper{
   display:flex;
@@ -540,7 +550,7 @@ label.opt-label.opt-label--btn.btn.relative.text-center:hover, .opt-btn.is-unava
   background-color: var(--lll-white);
 }
 .quantity-wrapper a{
-  width: fit-content; 
+  width: fit-content;
   min-width: 0;
   border:unset;
   border-radius:unset;
@@ -598,7 +608,7 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
 }
 .is-unavailable+label{
   /* pointer-events: none;*/
-} 
+}
 
 /* Compact grid layout for variant swatches */
 .variant-grid-compact.option-selector__btns {
@@ -620,7 +630,7 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
     width: 60px;
     height: 60px;
   }
-  
+
   .variant-grid-compact.option-selector__btns {
     gap: 6px;
   }
@@ -689,7 +699,10 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
   top: 50px;
   padding: 12px;
   border-radius: var(--lll-radius-sm);
-  background: rgb(var(--btn-bg-color));
+  /* was rgb(var(--btn-bg-color)) -- --btn-bg-color holds a full hex value
+     here, not an "R G B" triplet, so wrapping it in rgb() produced an
+     invalid color and the tooltip rendered with no background. */
+  background: var(--btn-bg-color);
   color: var(--lll-white);
 }
 
@@ -868,7 +881,7 @@ carousel-slider.mobile-only.custom-features-carousel{
     grid-template-columns: 1fr 1fr 1fr;
   }
   .product-form .option-selector{
-     margin-bottom:32px; 
+     margin-bottom:32px;
   }
   .quantity-wrapper{
     display: flex;
@@ -902,7 +915,7 @@ carousel-slider.mobile-only.custom-features-carousel{
   .container.custom-product-features{
     background:none;
   }
-  
+
 }
 .product-usp-block{
   font-family: var(--lll-font-display);
@@ -954,6 +967,13 @@ h1.product-title {
 .btn--secondary{
   border:none;
   font-weight:600;
+  /* main.css maps this variant's --btn-bg-color to --btn-alt-bg-color ->
+     --color-scheme-*-btn-alt-bg-color, and none of those are defined
+     anywhere in this theme -- so every .btn--secondary (including the
+     "Shop All" button in .swatch-highlight-container) rendered with no
+     background at all. Set it directly instead of relying on that
+     undefined chain. */
+  --btn-bg-color: var(--lll-white);
   /* hover fills slate-deep (via --btn_alt_text_hover); flip text to cream for 5.7:1 */
   --btn-text-hover-color: 250 249 246;
 }
@@ -961,7 +981,7 @@ h1.product-title {
   border-radius: var(--lll-radius-md);
 }
 .related-collection-links--buttons {
-  justify-content: space-around; 
+  justify-content: space-around;
 }
 
 
@@ -1092,7 +1112,7 @@ cart-form .page-header:not(.page-header--with-background){
 }
 @media (max-width: 768px) {
   .slider--no-max.for-collections .carousel.block.collection-slider{
-     padding-left:0; 
+     padding-left:0;
   }
 }
 
@@ -1154,6 +1174,7 @@ cart-form .page-header:not(.page-header--with-background){
 .swatch-highlight-btn{
   position: absolute;
   bottom: 0;
+  left: 0;
   display: flex;
   width: 100%;
   margin-bottom: 24px;
@@ -1238,17 +1259,17 @@ cart-form .page-header:not(.page-header--with-background){
       align-items: center;
       justify-content: space-around;
     }
-    
+
     .publication-link {
       display: block;
       transition: opacity var(--lll-duration-fast) ease, transform var(--lll-duration-fast) ease;
     }
-    
+
     .publication-link:hover {
       opacity: 0.7;
       transform: translateY(-2px);
     }
-    
+
     .publication-logo {
       max-width: 128px;
       max-height: 72px;
@@ -1257,16 +1278,16 @@ cart-form .page-header:not(.page-header--with-background){
       object-fit: contain;
       transition: filter var(--lll-duration-fast) ease;
     }
-    
+
     .publication-link:hover .publication-logo {
       filter: grayscale(0%);
     }
-    
+
     @media screen and (max-width: 768px) {
       .publications-grid {
         gap: 1.5rem;
       }
-      
+
       .publication-logo {
         max-width: 100px;
         max-height: 60px;
@@ -1550,7 +1571,7 @@ h4, .h4 {
   background: var(--lll-white);
   border-color: var(--lll-white);
   color: var(--lll-slate);
-  
+
 }
 .section-product-grid .use-color-scheme--1 .slider-nav__btn:hover,
  .use-color-scheme--1 .collection-slider__nav-btn:hover {
@@ -1565,9 +1586,9 @@ h4, .h4 {
    ============================================================ */
 .announcement-bar {
   /* top bar text failed 3.47:1 (near-white on --lll-slate); use --lll-slate-deep -> 5.70:1 */
-  --text-color: 79, 103, 110 !important;
+  /* --text-color: 79, 103, 110 !important;
   --heading-color: 79, 103, 110 !important;
-  --link-color: 79, 103, 110 !important;
+  --link-color: 79, 103, 110 !important; */
 }
 :root {
   /* merchant nav_featured_col (#db3f30) failed 4.19:1; reuse --lll-sale -> 4.72:1 */
