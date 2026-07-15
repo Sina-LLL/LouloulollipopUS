@@ -23,7 +23,7 @@
   --lll-sale: #D03528;          /* darkened from #DB3F30 for AA (4.7:1+ as text and behind white) */
   --lll-success: #78B742;
   --lll-warning: #F2B321;
-  --lll-new: #C45331;           /* brand decision: white text at 2.9:1 — documented AA exception (decorative badge) */
+  --lll-new: #D68161;           /* brand decision: white text at 2.9:1 — documented AA exception (decorative badge) */
   --lll-meta: #7A8F78;
   --lll-text-muted: #6E6E6E;    /* was-price, secondary text — was #848484 (3.55:1 fails AA); 4.84:1 on cream */
 
@@ -48,7 +48,7 @@
      settings; these vars win over doc-head-styles because this sheet
      loads later. Channel format (R G B) matches Symmetry's rgb(var()) usage. */
   --btn-bg-color: #59757D;                              /* slate-action */
-  --btn-border-color: #59757D;
+  --btn-border-color: #;
   --btn-bg-hover-color: 79 103 110;                        /* slate-deep: hover darkens, not lightens */
   --btn-border-hover-color: 79 103 110;
   --btn-alt-text-color: 88 118 129;
