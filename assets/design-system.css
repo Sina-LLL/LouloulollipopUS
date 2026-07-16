@@ -50,25 +50,34 @@
      Two token formats are in play here — do not mix them:
        - --btn-bg-color / --btn-border-color are consumed directly by
          main.css (`background: var(--btn-bg-color)`), so they must hold
-         a full CSS color (hex or rgb() string).
+         a full CSS color -> point these straight at the hex brand
+         tokens above.
        - Every other --btn-*-hover-color / --btn-alt-*-color /
          --color-scheme-* token is consumed via `rgb(var(--x))`, so it
-         must hold a bare "R G B" channel triplet (Symmetry convention).
+         must hold a bare "R G B" channel triplet (Symmetry convention)
+         -> point these at the *-rgb companions below instead of
+         retyping the channels by hand. (The old hand-typed triplets
+         drifted from the real hex values -- "88 118 129" was meant to
+         be --lll-slate-action/#59757D but is actually #587681, a few
+         shades off. Referencing the token instead of a copy makes that
+         drift structurally impossible.)
        Mixing the two formats on the same token silently produces an
        invalid color (see the .btn--secondary and .shipping-info-tooltip
        fixes below, both caused by exactly this). */
-  --btn-bg-color: #59757D;                              /* slate-action */
-  --btn-border-color: #59757D;
-  --btn-bg-hover-color: 79 103 110;                        /* slate-deep: hover darkens, not lightens */
-  --btn-border-hover-color: 79 103 110;
-  --btn-alt-text-color: 88 118 129;
-  --btn_alt_text_hover: 79 103 110;
-  --color-scheme-default-btn-bg-color: 88 118 129;
-  --color-scheme-default-btn-bg-hover-color: 79 103 110;
-  --color-scheme-default-btn-border-color: 88 118 129;
-  --color-scheme-default-btn-border-hover-color: 79 103 110;
-  --color-scheme-default-btn-alt-text-color: 88 118 129;
-  --color-scheme-2-btn-text-color: 88 118 129;
+  --lll-slate-action-rgb: 89 117 125;      /* rgb() triplet for --lll-slate-action / --lll-slate-deep (#59757D) */
+  --lll-slate-deep-hover-rgb: 79 103 110;  /* deliberately darker hover shade -- no hex brand token for this one yet */
+  --btn-bg-color: var(--lll-slate-action);
+  --btn-border-color: var(--lll-slate-action);
+  --btn-bg-hover-color: var(--lll-slate-deep-hover-rgb);
+  --btn-border-hover-color: var(--lll-slate-deep-hover-rgb);
+  --btn-alt-text-color: var(--lll-slate-action-rgb);
+  --btn_alt_text_hover: var(--lll-slate-deep-hover-rgb);
+  --color-scheme-default-btn-bg-color: var(--lll-slate-action-rgb);
+  --color-scheme-default-btn-bg-hover-color: var(--lll-slate-deep-hover-rgb);
+  --color-scheme-default-btn-border-color: var(--lll-slate-action-rgb);
+  --color-scheme-default-btn-border-hover-color: var(--lll-slate-deep-hover-rgb);
+  --color-scheme-default-btn-alt-text-color: var(--lll-slate-action-rgb);
+  --color-scheme-2-btn-text-color: var(--lll-slate-action-rgb);
   --product-label-overlay-stock-text: var(--lll-ink);      /* was white on amber: 1.9:1 */
   --product-label-overlay-new-text: var(--lll-white);
   --product-label-overlay-new-bg: var(--lll-new);
