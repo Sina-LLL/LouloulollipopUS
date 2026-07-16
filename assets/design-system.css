@@ -75,6 +75,37 @@
   --product-label-overlay-meta-text: var(--lll-ink);       /* was white on green: 3.5:1 */
   --product-label-overlay-reduction-bg: var(--lll-sale);
   --product-label-sale-text: var(--lll-sale);
+
+  /* Type scale — single source of truth (fluid: mobile -> desktop).
+     Consumed by the heading rules under "HEADING TYPE SCALE" below. */
+  --lll-text-h1:   clamp(2.25rem, 3vw + 1rem, 3.25rem);    /* ~36 -> 52px */
+  --lll-text-h2:   clamp(1.75rem, 2vw + 0.9rem, 2.375rem); /* ~28 -> 38px */
+  --lll-text-h3:   clamp(1.5rem, 1vw + 0.9rem, 1.75rem);   /* ~24 -> 28px */
+  --lll-text-h4:   1.375rem;                               /* 22px */
+  --lll-leading-heading: 1.2;
+  --lll-leading-snug: 1.3;
+  --lll-leading-body: 1.55;
+  --lll-weight-heading: 700;
+  --lll-weight-subhead: 600;
+
+  /* Spacing scale (base-4) — single source of truth. Consumed by the
+     off-grid value cleanups under "SPACING SYSTEM" below. */
+  --lll-space-1: 4px;
+  --lll-space-2: 8px;
+  --lll-space-3: 12px;
+  --lll-space-4: 16px;
+  --lll-space-5: 20px;
+  --lll-space-6: 24px;
+  --lll-space-8: 32px;
+  --lll-space-10: 40px;
+  --lll-space-12: 48px;
+  --lll-space-16: 64px;
+  --gutter-large: 32px;         /* normalized from Symmetry's 30px */
+  --section-padding: 48px;      /* normalized from Symmetry's 50px */
+  --largest-section-padding: 112px; /* normalized from Symmetry's 110px */
+
+  /* Nav */
+  --main-nav-link-featured-col: var(--lll-sale); /* merchant nav_featured_col (#db3f30) failed 4.19:1 AA */
 }
 .use-color-scheme--default{
   --product-label-sale-text: var(--lll-sale); /* scheme block re-sets this; keep AA value */
@@ -116,14 +147,8 @@ h2.text-overlay__title.h1 {
 /* End Display 1 */
 
 /* H1 */
-h1, .h1{
-font-size: clamp(2rem, 5vw + 1rem, 3rem); /* 32px mobile - 48px desktop */
-line-height: 1.2;
-}
-
-h1, .h1{
-  font-weight:700; /* hierarchy: Display 800 > H1/H2 700 > H3-H6 600 */
-}
+/* Base h1 font-size/weight/line-height live in the "HEADING TYPE SCALE"
+   rules further down this file (uses --lll-text-h1). */
 .btn,
 .small-feature-link{
   font-weight:600;
@@ -139,12 +164,8 @@ h1, .h1{
 /* End H1 */
 
 /* H2 */
-h2,.h2, h2.h1{
-  font-size: clamp(1.5rem, 3vw + 0.75rem, 2rem); /* 24px mobile - 32px desktop */
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.25;
-}
+/* Base h2 font-size/weight/line-height live in the "HEADING TYPE SCALE"
+   rules further down this file (uses --lll-text-h2). */
 h2.text-overlay__title.h4{
   font-size: 1.5rem;
   font-weight: 600;
@@ -154,19 +175,13 @@ h2.text-overlay__title.h4{
 
 
 /* H3 */
-h3,.h3{
-  font-size: 1.75rem;
-  font-weight: 600;
-  line-height: 2.25rem; /* was 2.5rem - aligns heading rhythm */
-}
+/* Base h3 font-size/weight/line-height live in the "HEADING TYPE SCALE"
+   rules further down this file (uses --lll-text-h3). */
 /* End H3 */
 
 /* H4 */
-h4,.h4{
-  font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 1.75rem;
-}
+/* Base h4 font-size/weight/line-height live in the "HEADING TYPE SCALE"
+   rules further down this file (uses --lll-text-h4). */
 h2.text-overlay__title.h4{
     font-size: 1rem !important;
 }
@@ -322,7 +337,7 @@ a.navigation__link,.menu-promotion__text {
   text-transform: uppercase;
 }
 .opt-label{
-  padding:11px 11px;
+  padding: var(--lll-space-3); /* was 11px 11px, off-grid */
 }
 a.opt-label.opt-label--image .opt-label__media.media, a.opt-label.opt-label--image .opt-label__media.media img{
   height:100%
@@ -424,8 +439,8 @@ li.slider__item.is-active {
   height:60px;
   width:60px;
   border-radius: var(--lll-radius-sm);
-  margin-right: 12px;
-  margin-top: 12px;
+  margin-right: var(--lll-space-3);
+  margin-top: var(--lll-space-3);
 }
 .swatch-style-icon_square .option-selector .opt-label--image .theme-img{
   border-radius:0;
@@ -696,7 +711,8 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
   z-index: 30;
   display:none;
   position: absolute;
-  top: 50px;
+  top: var(--lll-space-12); /* was 50px hardcoded, then overridden again in the
+    old SPACING SYSTEM block; consolidated to one declaration */
   padding: 12px;
   border-radius: var(--lll-radius-sm);
   /* was rgb(var(--btn-bg-color)) -- --btn-bg-color holds a full hex value
@@ -782,10 +798,9 @@ carousel-slider.mobile-only.custom-features-carousel{
   margin: 0;
   font-size: 1.5rem;
 }
-[class*="floating"] svg path{
-  stroke:var(--lll-ink) !important;
-
-}
+/* [class*="floating"] svg path stroke color is set once, in the
+   CONTENT CAROUSEL ARROWS block further down this file (it supersedes
+   this location). */
 .accordion-toggle .chevron {
   font-size: 28px;
   line-height: 1;
@@ -1295,31 +1310,17 @@ cart-form .page-header:not(.page-header--with-background){
     }
 
 /* ============================================================
-   TYPOGRAPHY PREVIEW (brand sans-serif) — updated 2026-06-18 (Staging)
+   HEADING TYPE SCALE (brand sans-serif) — updated 2026-06-18
    - Headings keep the brand sans fonts (avenir-next-lt-pro display +
      sofia-pro body) at their original weights.
-   - Retained: cleaner size scale, systematized line-heights, lighter
-     body prose.
+   - Cleaner size scale, systematized line-heights, lighter body prose.
    - Buttons: theme's default radius (no pill).
    - PDP fix: the "Materials & Care" accordion heading now matches
      "Why Parents Love This" — both are h2.h3, but .accordion-toggle h2
      was forcing it to 1.5rem; it now uses the shared h3 size token.
-   AA color tokens untouched.
-   REVERSIBLE: delete everything below this banner to restore original.
+   AA color tokens untouched. Tokens (--lll-text-h1..h4, --lll-leading-*,
+   --lll-weight-*) live in the top :root block.
    ============================================================ */
-:root {
-  /* Type scale tokens — single source of truth (fluid: mobile -> desktop) */
-  --lll-text-h1:   clamp(2.25rem, 3vw + 1rem, 3.25rem);    /* ~36 -> 52px */
-  --lll-text-h2:   clamp(1.75rem, 2vw + 0.9rem, 2.375rem); /* ~28 -> 38px */
-  --lll-text-h3:   clamp(1.5rem, 1vw + 0.9rem, 1.75rem);   /* ~24 -> 28px */
-  --lll-text-h4:   1.375rem;                               /* 22px */
-  --lll-leading-heading: 1.2;
-  --lll-leading-snug: 1.3;
-  --lll-leading-body: 1.55;
-  /* Brand heading weights preserved */
-  --lll-weight-heading: 700;
-  --lll-weight-subhead: 600;
-}
 
 /* H1 — brand sans, original weight, cleaner size/leading */
 h1, .h1 {
@@ -1368,34 +1369,19 @@ h4, .h4 {
   line-height: var(--lll-leading-body);
 }
 /* ============================================================
-   END TYPOGRAPHY PREVIEW
+   END HEADING TYPE SCALE
    ============================================================ */
 
 /* ============================================================
-   SPACING SYSTEM (base-4) — added 2026-06-18 (Staging)
+   SPACING SYSTEM (base-4) — added 2026-06-18
    Normalizes the theme's spacing tokens to a 4px scale and fixes a
    few off-grid values so grids and sections read consistently.
-   These win because this sheet loads after main.css + doc-head-styles.
-   REVERSIBLE: delete everything below this banner to restore.
+   Tokens (--lll-space-*, --gutter-large, --section-padding,
+   --largest-section-padding) live in the top :root block. The
+   .opt-label / swatch-margin / shipping-tooltip off-grid fixes are now
+   applied directly at their original declarations earlier in this file
+   instead of as separate overrides here.
    ============================================================ */
-:root {
-  /* Base-4 spacing scale — reference these going forward */
-  --lll-space-1: 4px;
-  --lll-space-2: 8px;
-  --lll-space-3: 12px;
-  --lll-space-4: 16px;
-  --lll-space-5: 20px;
-  --lll-space-6: 24px;
-  --lll-space-8: 32px;
-  --lll-space-10: 40px;
-  --lll-space-12: 48px;
-  --lll-space-16: 64px;
-
-  /* Normalize Symmetry's spacing tokens to base-4 (were 30 / 50 / 110) */
-  --gutter-large: 32px;
-  --section-padding: 48px;
-  --largest-section-padding: 112px;
-}
 
 /* Font-independent row spacing (theme used margin-bottom: 1em, which
    drifts with the surrounding font size). */
@@ -1404,25 +1390,14 @@ h4, .h4 {
 /* Product highlight: the off-grid gap is the image COLUMN's stacking
    margin (.custom-product-highlight__image-container) when it sits above
    the product grid on mobile — not the inner image. Scope a clean 24px to
-   this section's image column and zero the inner image to avoid doubling. */
+   this section's image column (the inner image already has
+   margin-bottom: 0 at its main declaration above). */
 .custom-product-highlight__container .custom-product-highlight__image-container {
   margin-bottom: var(--lll-space-6);
 }
-.custom-product-highlight__image {
-  margin-bottom: 0;
-}
-
-/* Off-grid value cleanups (grids read cleaner on a 4px rhythm) */
-.opt-label { padding: var(--lll-space-3); }                 /* was 11px 11px */
-.swatch-style-icon_square .option-selector .opt-label--image {
-  margin-right: var(--lll-space-3);                          /* was 10px */
-  margin-top: var(--lll-space-3);                            /* was 10px */
-}
-.shipping-info-tooltip { top: var(--lll-space-12); }         /* was 50px */
 /* ============================================================
    END SPACING SYSTEM
    ============================================================ */
-
 
 /* ============================================================
    CUSTOM HERO BANNER — added 2026-06-25 (Staging)
@@ -1583,16 +1558,13 @@ h4, .h4 {
 
 /* ============================================================
    ACCESSIBILITY — WCAG 2.1 AA CONTRAST FIXES (1.4.3) — 2026-07-13
+   (--main-nav-link-featured-col now lives in the top :root block)
    ============================================================ */
 .announcement-bar {
   /* top bar text failed 3.47:1 (near-white on --lll-slate); use --lll-slate-deep -> 5.70:1 */
   /* --text-color: 79, 103, 110 !important;
   --heading-color: 79, 103, 110 !important;
   --link-color: 79, 103, 110 !important; */
-}
-:root {
-  /* merchant nav_featured_col (#db3f30) failed 4.19:1; reuse --lll-sale -> 4.72:1 */
-  --main-nav-link-featured-col: var(--lll-sale);
 }
 .product-price--block .price__was {
   opacity: 1; /* was 0.5 — made AA unreachable at any text colour */
