@@ -619,7 +619,7 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
   margin: auto;
 }
 .op-label__tag.product-label--new-in,.opt-label__tag.product-label--new{
-  background-color:var(--product-label-overlay-new-bg);
+  background-color:var(--lll-new);
   color:var(--product-label-overlay-new-text);
 }
 .opt-label__tag.product-label--sale{
