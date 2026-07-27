@@ -1581,3 +1581,26 @@ h4, .h4 {
 /* ============================================================
    END ACCESSIBILITY FIXES
    ============================================================ */
+
+/* ============================================================
+   ACCESSIBILITY — WCAG 2.1 AA CONTRAST FIX (1.4.3) — 2026-07-27
+   Collection tile subheading ("Sleep Bags", "Silicone Bibs", etc. -- the
+   below-image text position rendered via snippets/collection-block.liquid /
+   onboarding-collection-block.liquid) inherits the --lll-cream text colour.
+   That is fine on the default cream page background, but this text
+   position also renders inside sections that use a custom section
+   background colour (e.g. the homepage collection-list row set to
+   --lll-slate #6A8B95) -- verified live: cream-on-slate measures 3.47:1,
+   below the 4.5:1 minimum for normal text (14 tiles affected on a single
+   homepage load, mirrored on both storefronts). Unlike the "--over"
+   variant (.subheading--over, used when text sits directly on a photo
+   with its own scrim), this "below image" position always renders in
+   normal document flow, so the dark ink token is safe everywhere it
+   appears: ~19:1 on cream, ~4.6:1 on this slate section background.
+   ============================================================ */
+.product-block__detail .subheading {
+  color: var(--lll-ink);
+}
+/* ============================================================
+   END ACCESSIBILITY FIX — collection tile subheading
+   ============================================================ */
