@@ -7,7 +7,7 @@
 {% if publications != blank and publications.size > 0 %}
   <hr {% unless block.settings.show_in_quickbuy %}class="not-in-quickbuy"{% endunless %} {{ block.shopify_attributes }}>
   <div class="publications-section">
-    <h3 class="h4 align-center">As Featured In</h3>
+    <h2 class="h4 align-center">As Featured In</h2>
     
     <div class="publications-grid">
       {% for publication in publications %}
