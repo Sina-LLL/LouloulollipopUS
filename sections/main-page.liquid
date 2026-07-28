@@ -1,4 +1,6 @@
 <div class="container{% unless section.settings.full_width %} container--reading-width{% endunless %}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
+  {% render 'breadcrumbs' %}
+
   {%- if section.settings.show_page_title -%}
     <div class="page-header">
       <h1 class="majortitle">{{ page.title }}</h1>

@@ -5,7 +5,11 @@
 
 
 <div data-section-id="{{ section.id }}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%} class="">
+<div class="container">
+  {% render 'breadcrumbs' %}
+</div>
 {% paginate collection.products by section.settings.coll_num_per_page_int %}
+{% render 'structured-data-collection', collection: collection %}
 
 {%- liquid
   if section.settings.show_image_behind_heading and collection.image

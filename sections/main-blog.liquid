@@ -1,5 +1,7 @@
 {% paginate blog.articles by 12 %}
 <div class="container">
+  {% render 'breadcrumbs' %}
+
   {% if section.settings.show_page_title %}
     <div class="page-header" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
       <h1 class="majortitle">{{ blog.title }}</h1>
