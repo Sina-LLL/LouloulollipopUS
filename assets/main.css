@@ -10469,7 +10469,7 @@ a .state {
   display: block;
   position: relative;
   max-width: 100%;
-  height: 0;
+  height: 100%;
   padding-bottom: var(--video-ar-pad, 56.25%);
   overflow: hidden;
 }
