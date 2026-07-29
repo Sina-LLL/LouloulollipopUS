@@ -10464,7 +10464,9 @@ a .state {
   width: 1em;
   text-align: center;
 }
-
+.product-media-wrapper{
+  height:100%;
+}
 .product-media--frame {
   display: block;
   position: relative;
