@@ -5,6 +5,7 @@
 
 {%- assign organization_id = shop.url | append: '/#organization' -%}
 {%- assign website_id = shop.url | append: '/#website' -%}
+{%- assign search_action_url = shop.url | append: routes.search_url | append: "?q={search_term_string}" -%}
 
 {% capture sameAs_json %}
   {%- if settings.social_facebook_url != blank -%}
@@ -107,7 +108,7 @@
         "@type": "SearchAction",
         "target": {
           "@type": "EntryPoint",
-          "urlTemplate": {{ shop.url | append: routes.search_url | append: "?q={search_term_string}" | json }}
+          "urlTemplate": {{ search_action_url | json }}
         },
         "query-input": "required name=search_term_string"
       }
