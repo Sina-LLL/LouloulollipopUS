@@ -10466,12 +10466,14 @@ a .state {
   width: 1em;
   text-align: center;
 }
-
+.product-media-wrapper{
+  height:100%;
+}
 .product-media--frame {
   display: block;
   position: relative;
   max-width: 100%;
-  height: 0;
+  height: 100%;
   padding-bottom: var(--video-ar-pad, 56.25%);
   overflow: hidden;
 }

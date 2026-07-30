@@ -187,7 +187,7 @@
                         </div>
                       {% endif %}
                       <div class="text-cont">
-                        <h6 class="page-block__title"><a href="{{ item.url }}">{{ item.title }}</a></h6>
+                        <h2 class="page-block__title h6"><a href="{{ item.url }}">{{ item.title }}</a></h2>
                         {% unless item.object_type == 'article' and item.image %}
                           <p>{{ item.content | strip_html | truncatewords: 20 }}</p>
                         {% endunless %}
