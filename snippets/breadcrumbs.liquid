@@ -167,9 +167,9 @@ endif
 {%- capture crumbs_html -%}
 <nav class="breadcrumbs" aria-label="{{ breadcrumbs_title }}">
   <ol class="breadcrumbs-list">
-    <!-- <li class="breadcrumbs-list__item">
+    <li class="breadcrumbs-list__item">
       <a class="breadcrumbs-list__link" href="{{ routes.root_url }}">{{ home_title | escape }}</a> {{ divider }}
-    </li> -->
+    </li> 
 
     {%- if template.name == 'collection' and collection.handle -%}
       {%- if show_collection_listing_link -%}

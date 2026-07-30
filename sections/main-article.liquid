@@ -1,3 +1,7 @@
+<div class="container">
+  {% render 'breadcrumbs' %}
+</div>
+
 {% if section.settings.show_featured_image and article.image != blank %}
   <div class="article-image article-image--large align-center {% unless section.settings.full_width_image %}container{% endunless %}">
     {% if section.settings.featured_image_height == 'natural' %}
