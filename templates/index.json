@@ -20,6 +20,14 @@
             "label": ""
           }
         },
+        "collection_PkyyWJ": {
+          "type": "collection",
+          "settings": {
+            "collection": "swaddle-wrap",
+            "image": "shopify://shop_images/Baby_Sleep_Sack_Swaddle_Wrap_Zipper_Detail_-_Magical_Dragons_1d96c667-1095-4b84-bc0c-89379a5b3bef.jpg",
+            "label": ""
+          }
+        },
         "collection_ff9awC": {
           "type": "collection",
           "settings": {
@@ -75,6 +83,7 @@
       },
       "block_order": [
         "collection_HVnHrQ",
+        "collection_PkyyWJ",
         "collection_ff9awC",
         "collection_4NymPg",
         "collection_Ua99BU",
@@ -95,6 +104,7 @@
     },
     "custom_hero_banner_CqQiir": {
       "type": "custom-hero-banner",
+      "disabled": true,
       "name": "Custom Hero Banner",
       "settings": {
         "image": "shopify://shop_images/EOSS_-_Hero.png",
@@ -109,68 +119,45 @@
     "hero_carousel_rounded_eyHjac": {
       "type": "hero-carousel-rounded",
       "blocks": {
-        "image_MfTji8": {
+        "image_HLhwCt": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/LSBIBSHK_LongSleeveBib_Sharks_54.jpg",
-            "mobile_image": "shopify://shop_images/Tableware_Hero.png",
+            "image": "shopify://shop_images/Baby_Swaddle_Wrap_and_1.0_Tog_Sleep_Sack_-_Safari_Jungle_20f19798-3b46-4843-9689-53bf16d54504.jpg",
+            "mobile_image": "shopify://shop_images/Baby_Sleep_Sack_Swaddle_Wrap_Zipper_-_Safari_Jungle.jpg",
             "slide_link": "",
             "subheading": "",
-            "title": "Fun, Less Messy Meals",
+            "title": "Easiest way to swaddle.",
+            "heading_max_width": 15,
+            "title_size": 48,
+            "title_size_mobile": 32,
+            "use_h1": true,
+            "text": "<p>Meet the <strong>NEW Big Dream Swaddle Wrap</strong></p>",
+            "enlarge_text": false,
+            "button_label_1": "Shop Swaddle Wraps",
+            "button_url_1": "shopify://collections/swaddle-wrap",
+            "button_tag_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_tag_2": "",
+            "text_alignment": "bottom left"
+          }
+        },
+        "image_WdHzi6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/SWSGB_Muslin_Swaddle_-_Stargazing_Bear_51.jpg",
+            "mobile_image": "shopify://shop_images/SWSGB_Muslin_Swaddle_-_Stargazing_Bear_51.jpg",
+            "slide_link": "",
+            "subheading": "",
+            "title": "End of Season Sale",
             "heading_max_width": 17,
             "title_size": 52,
-            "title_size_mobile": 30,
-            "use_h1": true,
-            "text": "<p>Platinum food-grade silicone that make eating fun</p>",
-            "enlarge_text": false,
-            "button_label_1": "Shop Tableware",
-            "button_url_1": "shopify://collections/tableware",
-            "button_tag_1": "",
-            "button_label_2": "",
-            "button_url_2": "",
-            "button_tag_2": "",
-            "text_alignment": "bottom left"
-          }
-        },
-        "image_caUwGz": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/OneC_hero.png",
-            "mobile_image": "shopify://shop_images/OneC_hero-mobile.png",
-            "slide_link": "",
-            "subheading": "",
-            "title": "A New Upgraded Pacifier Clip",
-            "heading_max_width": 15,
-            "title_size": 52,
-            "title_size_mobile": 30,
+            "title_size_mobile": 32,
             "use_h1": false,
-            "text": "<p>Solid food-grade silicone for added safety</p>",
-            "enlarge_text": false,
-            "button_label_1": "Shop OneC™ Pacifier Clips",
-            "button_url_1": "shopify://collections/onec-silicone-pacifier-clips",
-            "button_tag_1": "",
-            "button_label_2": "",
-            "button_url_2": "",
-            "button_tag_2": "",
-            "text_alignment": "bottom left"
-          }
-        },
-        "image_kEiwna": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Desktop_-_Hero.png",
-            "mobile_image": "shopify://shop_images/Mobile_-_Hero.png",
-            "slide_link": "",
-            "subheading": "",
-            "title": "Sleepy Summer Nights",
-            "heading_max_width": 15,
-            "title_size": 52,
-            "title_size_mobile": 30,
-            "use_h1": false,
-            "text": "<p>Premium Moisture Wicking Tanboocell Bamboo Fabrics</p>",
-            "enlarge_text": false,
-            "button_label_1": "Shop muslin sleep bags",
-            "button_url_1": "shopify://collections/0-5-tog-sleep-bags",
+            "text": "<p><strong>40% OFF</strong></p>",
+            "enlarge_text": true,
+            "button_label_1": "Shop the Sale",
+            "button_url_1": "shopify://collections/end-of-season-sale",
             "button_tag_1": "",
             "button_label_2": "",
             "button_url_2": "",
@@ -180,11 +167,9 @@
         }
       },
       "block_order": [
-        "image_MfTji8",
-        "image_caUwGz",
-        "image_kEiwna"
+        "image_HLhwCt",
+        "image_WdHzi6"
       ],
-      "disabled": true,
       "name": "Hero Carousel – Rounded",
       "settings": {
         "padding_top": 8,
@@ -197,6 +182,24 @@
         "peek_size_mobile": 12,
         "overlay_style": "shadow",
         "accessibility_info": ""
+      }
+    },
+    "custom_product_highlight_JbY3qf": {
+      "type": "custom-product-highlight",
+      "name": "Highlighted Collection",
+      "settings": {
+        "title": "Swaddling Made Simple",
+        "text": "<ul><li>Quiet Secure Closures</li><li>Two-Way Zipper</li><li>Grows With Baby</li><li>Premium comfort</li></ul>",
+        "image": "shopify://shop_images/Swaddle_Wrap_zoomed_out_1.gif",
+        "order": true,
+        "product_list": [
+          "swaddle-wrap-1-0-tog-safari-jungle",
+          "swaddle-wrap-1-0-tog-magical-dragons"
+        ],
+        "button_label": "Shop Swaddle Wraps",
+        "link": "shopify://collections/swaddle-wrap",
+        "button_style": "primary",
+        "color_scheme": "default"
       }
     },
     "featured_collection_ct3anq": {
@@ -415,121 +418,6 @@
         "coll_button_style": "primary"
       }
     },
-    "collection_list_aakDiY": {
-      "type": "collection-list",
-      "blocks": {
-        "collection_CULp7a": {
-          "type": "collection",
-          "settings": {
-            "collection": "sleep-bags",
-            "tag": "",
-            "image": "shopify://shop_images/Mobile-Hero_Lemon.png",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_84DAwU": {
-          "type": "collection",
-          "settings": {
-            "collection": "sleepers",
-            "tag": "",
-            "image": "shopify://shop_images/LouLouLollipopMarch2026-03439.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_nLyac9": {
-          "type": "collection",
-          "settings": {
-            "collection": "silicone-bibs",
-            "tag": "",
-            "image": "shopify://shop_images/LouLouLollipopMarch2026-05425.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_PHnrb8": {
-          "type": "collection",
-          "settings": {
-            "collection": "swaddles",
-            "tag": "",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_caXU8w": {
-          "type": "collection",
-          "settings": {
-            "collection": "long-sleeve-bibs",
-            "tag": "",
-            "image": "shopify://shop_images/LouLouLollipopMarch2026-06428.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
-            "button_label": ""
-          }
-        },
-        "collection_AHpkwx": {
-          "type": "collection",
-          "settings": {
-            "collection": "hooded-towel-sets",
-            "tag": "",
-            "image": "shopify://shop_images/6D3E04F9-60E1-4F67-AC2F-37982EE79577.jpg",
-            "subheading": "Hooded Towels",
-            "button_label": ""
-          }
-        },
-        "collection_j8GdED": {
-          "type": "collection",
-          "settings": {
-            "collection": "muslin-quilt",
-            "tag": "",
-            "image": "shopify://shop_images/DSC00442-2.jpg",
-            "subheading": "Muslin Quilts",
-            "button_label": ""
-          }
-        },
-        "collection_4HbMHd": {
-          "type": "collection",
-          "settings": {
-            "collection": "single-teethers",
-            "tag": "",
-            "image": "shopify://shop_images/WTR-WOF_Wild_Teether_-_Wolfie_51.jpg",
-            "subheading": "Teethers",
-            "button_label": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection_CULp7a",
-        "collection_84DAwU",
-        "collection_nLyac9",
-        "collection_PHnrb8",
-        "collection_caXU8w",
-        "collection_AHpkwx",
-        "collection_j8GdED",
-        "collection_4HbMHd"
-      ],
-      "disabled": true,
-      "name": "Shop by Category",
-      "settings": {
-        "title": "Shop by Category",
-        "text": "",
-        "text_alignment": "start",
-        "enable_carousel": true,
-        "grid": 4,
-        "color_scheme": "1",
-        "full_width": true,
-        "coll_grid_image_shape": "square",
-        "coll_grid_image_position": "center center",
-        "coll_thumb_mob_per_row": "2",
-        "coll_thumb_per_column": "2",
-        "coll_grid_show_count": false,
-        "coll_text_position": "below",
-        "coll_text_position_under_mobile": false,
-        "coll_thumb_text_align_x": "center",
-        "coll_thumb_text_align_y": "center",
-        "coll_button_style": "primary"
-      }
-    },
     "logo_list_kYmwNX": {
       "type": "logo-list",
       "blocks": {
@@ -632,75 +520,6 @@
         "link": "shopify://collections/bundles-and-sets",
         "button_style": "primary",
         "color_scheme": "default"
-      }
-    },
-    "collection_list_VHgK7g": {
-      "type": "collection-list",
-      "blocks": {
-        "collection_yYMgCY": {
-          "type": "collection",
-          "settings": {
-            "collection": "sleep-bags",
-            "tag": "",
-            "subheading": "Sleep Bags",
-            "button_label": ""
-          }
-        },
-        "collection_hz9HMV": {
-          "type": "collection",
-          "settings": {
-            "collection": "wear",
-            "tag": "",
-            "subheading": "Clothing",
-            "button_label": ""
-          }
-        },
-        "collection_778Cxg": {
-          "type": "collection",
-          "settings": {
-            "collection": "eat",
-            "tag": "",
-            "image": "shopify://shop_images/Tableware-white-23.jpg",
-            "subheading": "Feeding Essentials",
-            "button_label": ""
-          }
-        },
-        "collection_RkFVdV": {
-          "type": "collection",
-          "settings": {
-            "collection": "play",
-            "tag": "",
-            "image": "shopify://shop_images/Group_3.jpg",
-            "subheading": "Toys & Play",
-            "button_label": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection_yYMgCY",
-        "collection_hz9HMV",
-        "collection_778Cxg",
-        "collection_RkFVdV"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "Shop by Category",
-        "text": "",
-        "text_alignment": "start",
-        "enable_carousel": false,
-        "grid": 4,
-        "color_scheme": "1",
-        "full_width": false,
-        "coll_grid_image_shape": "portrait-23",
-        "coll_grid_image_position": "center center",
-        "coll_thumb_mob_per_row": "2",
-        "coll_thumb_per_column": "2",
-        "coll_grid_show_count": false,
-        "coll_text_position": "below",
-        "coll_text_position_under_mobile": false,
-        "coll_thumb_text_align_x": "center",
-        "coll_thumb_text_align_y": "center",
-        "coll_button_style": "primary"
       }
     },
     "collection_list_zhMrUA": {
@@ -1400,14 +1219,13 @@
     "mobile_collection_carousel_iBRR9r",
     "custom_hero_banner_CqQiir",
     "hero_carousel_rounded_eyHjac",
+    "custom_product_highlight_JbY3qf",
     "featured_collection_ct3anq",
     "custom_product_highlight_mEPwaD",
     "collection_list_km4B8h",
-    "collection_list_aakDiY",
     "logo_list_kYmwNX",
     "featured_collection_RGPeGr",
     "custom_product_highlight_KJfQCU",
-    "collection_list_VHgK7g",
     "collection_list_zhMrUA",
     "logo_list_ywatnw",
     "collection_list_FxKgEx",
