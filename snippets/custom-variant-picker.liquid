@@ -713,7 +713,9 @@
   font-family: avenir-next-lt-pro, sofia-pro, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  color: #848484;
+  color: var(--lll-text-muted); /* was hardcoded #848484 (3.55:1 fails WCAG 2.1 AA 1.4.3) --
+     the July 2026 --lll-text-muted token update to #6E6E6E (4.84:1 on cream) never reached
+     this inline style block, so the Seasonal/Core/Sale/All tabs on the PDP kept failing. */
   transition: color 0.2s, border-color 0.2s;
 }
 

@@ -1,0 +1,45 @@
+{%- comment -%}
+  Emits a page-level WebPage/SearchResultsPage JSON-LD node for templates that
+  otherwise have no page-level schema. Rendered globally (from sections/header.liquid)
+  and self-gates by request.page_type/page.handle so it's a no-op everywhere else.
+
+  Deliberately skipped:
+  - index    -> covered by WebSite (structured-data-header.liquid)
+  - product  -> covered by Product (structured-data-product.liquid)
+  - article  -> covered by BlogPosting (structured-data-article.liquid)
+  - collection -> covered by CollectionPage (structured-data-collection.liquid)
+  - cart, customers, password -> not meaningful indexable entities
+{%- endcomment -%}
+
+{%- liquid
+  assign webpage_type = blank
+
+  if request.page_type == 'search'
+    assign webpage_type = 'SearchResultsPage'
+    assign webpage_name = 'general.search.title' | t | append: ': ' | append: search.terms
+  elsif request.page_type == 'page'
+    assign contact_handles = 'contact-us, contact' | split: ', '
+    assign about_handles = 'our-story, our-mission, story, about, about-us' | split: ', '
+
+    if contact_handles contains page.handle
+      assign webpage_type = 'ContactPage'
+    elsif about_handles contains page.handle
+      assign webpage_type = 'AboutPage'
+    else
+      assign webpage_type = 'WebPage'
+    endif
+    assign webpage_name = page.title
+  endif
+-%}
+
+{%- if webpage_type != blank -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": {{ webpage_type | json }},
+  "name": {{ webpage_name | json }},
+  "url": {{ shop.url | append: request.path | json }},
+  "isPartOf": { "@id": {{ shop.url | append: '/#website' | json }} }
+}
+</script>
+{%- endif -%}

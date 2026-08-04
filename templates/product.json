@@ -171,8 +171,8 @@
         "enable_zoom": true,
         "show_alt_text": false,
         "alt_text_icon": "",
-        "enable_video_autoplay": false,
-        "enable_video_looping": false,
+        "enable_video_autoplay": true,
+        "enable_video_looping": true,
         "enable_media_grouping": false,
         "media_grouping_option": "Color,Colour,Couleur,Farbe"
       }
