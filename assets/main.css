@@ -8489,7 +8489,7 @@ carousel-slider {
   display: none;
 }
 @media (max-width: 768px) {
-  carousel-slider{
+  .carousel-slider{
     max-height:520px;
   }
 }
