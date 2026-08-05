@@ -169,17 +169,24 @@
       {% for media in product.media %}
         <li class="slider__item{% if forloop.index0 == initial_slide %} is-active{% endif %}" data-media-id="{{ media.id }}">
           
+          {%- comment -%}
+            Desktop: real thumbnail image (carousel/carousel-beside layouts only).
+            Mobile: dot indicator, same as the columns/collage mobile fallback.
+            Both are rendered and toggled with the desktop-only / mobile-only
+            utility classes so the swap happens at the CSS breakpoint, not at
+            render time -- otherwise a carousel layout never gets a mobile dot
+            and a columns layout never gets a desktop thumbnail.
+          {%- endcomment -%}
           {%- if section.settings.gallery_layout contains 'carousel' -%}
-            <a class="thumbnail thumbnail--media-{{ media.media_type }}" href="{% if section.settings.enable_zoom %}{{ media.preview_image | image_url: width: zoom_size }}{% else %}#{% endif %}">
+            <a class="thumbnail thumbnail--media-{{ media.media_type }} desktop-only" href="{% if section.settings.enable_zoom %}{{ media.preview_image | image_url: width: zoom_size }}{% else %}#{% endif %}">
               {%- liquid
                 assign custom_aspect_ratio = media.preview_image.aspect_ratio | at_least: min_aspect_ratio
                 render 'image' with media.preview_image, sizes: '65px', widths: '65px, 130px', custom_aspect_ratio: custom_aspect_ratio, custom_crop: 'contain'
               -%}
             </a>
-          {%- else -%}
-            <!-- Mobile: Show circles instead of images -->
-            <span class="slider__indicator{% if forloop.index0 == initial_slide %} is-active{% endif %}"></span>
           {%- endif -%}
+          <!-- Mobile: Show circles instead of images -->
+          <span class="slider__indicator mobile-only{% if forloop.index0 == initial_slide %} is-active{% endif %}"></span>
 
           {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
             <div class="thumbnail__badge">
