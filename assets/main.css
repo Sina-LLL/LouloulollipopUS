@@ -8490,7 +8490,7 @@ carousel-slider {
 }
 
 carousel-slider[data-dynamic-height=true]:not([inactive]) {
-  height: 520px;
+  height: var(--current-slide-height, auto);
   overflow: hidden;
   transition: height 500ms ease;
 }
