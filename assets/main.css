@@ -8448,15 +8448,6 @@ html:has(.modal[open]) > body {
     border-inline-end: var(--gutter) solid transparent;
   }
 }
-@media (max-width: 768px) {
-  .carousel-slider{
-    max-height:520px;
-  }
-  .slider.is-grabbable img{
-    object-fit: cover;
-    max-height: 100%;
-  }
-}
 @media (--page-up) {
   .slider:not(.slider--no-container)::-webkit-scrollbar-track {
     margin: 0 calc(var(--scrollbar-border-width) * -1);
