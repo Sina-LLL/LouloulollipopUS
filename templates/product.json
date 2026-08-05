@@ -167,7 +167,7 @@
         "sticky_atc_behavior": "add_to_cart",
         "sticky_atc_button_style": "primary",
         "gallery_size": "medium",
-        "gallery_layout": "collage-1",
+        "gallery_layout": "carousel-beside",
         "enable_zoom": true,
         "show_alt_text": false,
         "alt_text_icon": "",
