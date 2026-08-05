@@ -437,7 +437,7 @@ button.btn.btn--large.no-stock {
     max-height: 100%;
   }
   carousel-slider {
-    max-height: 520px;
+    max-height: 500px;
     overflow: hidden;
   }
 }
