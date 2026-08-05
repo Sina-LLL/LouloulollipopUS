@@ -8488,7 +8488,11 @@ carousel-slider {
 .carousel[inactive] .slider-nav {
   display: none;
 }
-
+@media (max-width: 768px) {
+  carousel-slider{
+    max-height:520px;
+  }
+}
 carousel-slider[data-dynamic-height=true]:not([inactive]) {
   height: var(--current-slide-height, auto);
   overflow: hidden;
