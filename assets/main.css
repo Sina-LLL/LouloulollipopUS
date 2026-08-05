@@ -7654,7 +7654,7 @@ hotspots-image .image-overlay {
 }
 .thumbnails .slider__item {
   flex: 0 0 auto;
-  width: 65px;
+  width: 100px;
   padding-inline-end: 5px;
   list-style: none;
 }
