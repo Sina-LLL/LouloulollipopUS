@@ -436,7 +436,7 @@ button.btn.btn--large.no-stock {
     object-fit: cover;
     max-height: 100%;
   }
-  carousel-slider {
+  .carousel-slider {
     max-height: 520px;
     overflow: hidden;
   }
