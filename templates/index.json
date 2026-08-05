@@ -122,6 +122,29 @@
         "image_HLhwCt": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/E1358C97-DFB9-45E6-8729-747BBFC64523_1_105_c.png",
+            "mobile_image": "shopify://shop_images/Mobile_ddd8b11f-9a55-4509-8736-88b99eb2cb25.jpg",
+            "slide_link": "",
+            "subheading": "",
+            "title": "OneC™ Silicone Pacifier Clip",
+            "heading_max_width": 15,
+            "title_size": 48,
+            "title_size_mobile": 32,
+            "use_h1": true,
+            "text": "<p>A 2026 Good Housekeeping Parenting Awards Winner, as seen on Good Morning America</p>",
+            "enlarge_text": false,
+            "button_label_1": "Shop Pacifier Clips",
+            "button_url_1": "shopify://collections/onec-silicone-pacifier-clips",
+            "button_tag_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_tag_2": "",
+            "text_alignment": "bottom left"
+          }
+        },
+        "image_t7KHdh": {
+          "type": "image",
+          "settings": {
             "image": "shopify://shop_images/Hero.png",
             "mobile_image": "shopify://shop_images/Baby_Sleep_Sack_Swaddle_Wrap_Zipper_-_Safari_Jungle.jpg",
             "slide_link": "",
@@ -168,6 +191,7 @@
       },
       "block_order": [
         "image_HLhwCt",
+        "image_t7KHdh",
         "image_WdHzi6"
       ],
       "name": "Hero Carousel – Rounded",
@@ -180,8 +204,25 @@
         "border_radius": 12,
         "peek_size": 32,
         "peek_size_mobile": 12,
-        "overlay_style": "shadow",
+        "overlay_style": "full image-overlay--bg-shadow",
         "accessibility_info": ""
+      }
+    },
+    "featured_collection_ct3anq": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "End of Season Sale!",
+        "text": "",
+        "collection": "onec-silicone-pacifier-clips",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 4,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "start"
       }
     },
     "custom_product_highlight_JbY3qf": {
@@ -202,25 +243,9 @@
         "color_scheme": "default"
       }
     },
-    "featured_collection_ct3anq": {
-      "type": "featured-collection",
-      "name": "Featured collection",
-      "settings": {
-        "title": "End of Season Sale!",
-        "text": "",
-        "collection": "end-of-season-sale",
-        "show_vendor": false,
-        "enable_carousel": true,
-        "grid": 4,
-        "rows": 1,
-        "color_scheme": "default",
-        "show_view_all": true,
-        "full_width": false,
-        "text_alignment": "start"
-      }
-    },
     "custom_product_highlight_mEPwaD": {
       "type": "custom-product-highlight",
+      "disabled": true,
       "name": "Highlighted Collection",
       "settings": {
         "title": "For the Big Apple",
@@ -1219,8 +1244,8 @@
     "mobile_collection_carousel_iBRR9r",
     "custom_hero_banner_CqQiir",
     "hero_carousel_rounded_eyHjac",
-    "custom_product_highlight_JbY3qf",
     "featured_collection_ct3anq",
+    "custom_product_highlight_JbY3qf",
     "custom_product_highlight_mEPwaD",
     "collection_list_km4B8h",
     "logo_list_kYmwNX",
