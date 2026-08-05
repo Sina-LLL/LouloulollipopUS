@@ -529,7 +529,7 @@ button.btn.btn--large.no-stock {
   line-height: 1.96306rem; /* 261.739% */
 }
 .price-container .price-value{
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 500;
   line-height: 2.656rem; /* 151.77% */
 }
@@ -622,7 +622,7 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
   position: absolute;
   z-index: 1000;
   bottom: -10px;
-  left: 25%;
+  left: 24%;
   font-weight: 700;
   font-size: 10px;
   padding: 4px;
@@ -653,7 +653,7 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
 
 @media (min-width: 768px) {
   .variant-grid-compact.option-selector__btns {
-    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(52px, 1fr));
     gap: 8px;
   }
 }
@@ -989,7 +989,7 @@ h1.product-title {
   letter-spacing: -.03rem;
   margin-bottom: 0px;
   margin-top: 4px;
-  line-height: 1.25em;
+  line-height: 1.5em;
 }
 
 .overflow_hidden{
