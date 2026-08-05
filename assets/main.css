@@ -8492,6 +8492,10 @@ carousel-slider {
   .carousel-slider{
     max-height:520px;
   }
+  .slider.is-grabbable img{
+    object-fit: cover;
+    max-height: 100%;
+  }
 }
 carousel-slider[data-dynamic-height=true]:not([inactive]) {
   height: var(--current-slide-height, auto);
