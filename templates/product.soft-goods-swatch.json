@@ -75,6 +75,7 @@
         },
         "complementary_BwbHzJ": {
           "type": "complementary",
+          "disabled": true,
           "settings": {
             "heading": "Pairs Perfectly With",
             "enable_carousel": true,
@@ -172,7 +173,7 @@
         "sticky_atc_behavior": "add_to_cart",
         "sticky_atc_button_style": "primary",
         "gallery_size": "medium",
-        "gallery_layout": "columns-2",
+        "gallery_layout": "collage-1",
         "enable_zoom": true,
         "show_alt_text": false,
         "alt_text_icon": "",

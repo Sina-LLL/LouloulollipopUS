@@ -410,26 +410,36 @@ button.btn.btn--large.no-stock {
     background-color: var(--lll-slate-muted);
     border-color: var(--lll-slate-muted);
 }
-carousel-slider.carousel.block.thumbnails.mobile-only {
-  position: absolute;
-  bottom: 0;
-  width:100%;
-}
-.thumbnails .slider__item {
-  height: 10px;
-  width: 10px;
-  border-radius: var(--lll-radius-pill);
-  background-color: var(--lll-slate-border);
-  margin:0 4px
-}
-li.slider__item.is-active {
-  border: 1px solid  var(--lll-slate-border);
-  background: var(--lll-white);
-  width: 36px;
-}
-.thumbnails .slider__grid{
-  width:fit-content;
-  margin: auto;
+@media (max-width: 768px) {
+  carousel-slider.carousel.block.thumbnails {
+    position: absolute;
+    bottom: 0;
+    width:100%;
+  }
+  .thumbnails .slider__item {
+    height: 10px;
+    width: 10px;
+    border-radius: var(--lll-radius-pill);
+    background-color: var(--lll-slate-border);
+    margin:0 4px
+  }
+  li.slider__item.is-active {
+    border: 1px solid  var(--lll-slate-border);
+    background: var(--lll-white);
+    width: 36px;
+  }
+  .thumbnails .slider__grid{
+    width:fit-content;
+    margin: auto;
+  }
+  .product-media.product-media--image .img-ar--contain img {
+    object-fit: cover;
+    max-height: 100%;
+  }
+  carousel-slider {
+    max-height: 500px;
+    overflow: hidden;
+  }
 }
 
 .opt-label__media.media{
@@ -519,7 +529,7 @@ li.slider__item.is-active {
   line-height: 1.96306rem; /* 261.739% */
 }
 .price-container .price-value{
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 500;
   line-height: 2.656rem; /* 151.77% */
 }
@@ -612,7 +622,7 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
   position: absolute;
   z-index: 1000;
   bottom: -10px;
-  left: 25%;
+  left: 24%;
   font-weight: 700;
   font-size: 10px;
   padding: 4px;
@@ -637,13 +647,13 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
 /* Compact grid layout for variant swatches */
 .variant-grid-compact.option-selector__btns {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(52px, 1fr));
   gap: 6px;
 }
 
 @media (min-width: 768px) {
   .variant-grid-compact.option-selector__btns {
-    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(52px, 1fr));
     gap: 8px;
   }
 }
@@ -979,7 +989,7 @@ h1.product-title {
   letter-spacing: -.03rem;
   margin-bottom: 0px;
   margin-top: 4px;
-  line-height: 1.25em;
+  line-height: 1.5em;
 }
 
 .overflow_hidden{
