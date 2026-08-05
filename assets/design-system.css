@@ -432,6 +432,10 @@ button.btn.btn--large.no-stock {
     width:fit-content;
     margin: auto;
   }
+  .product-media.product-media--image .img-ar--contain img {
+    object-fit: cover;
+    max-height: 100%;
+  }
 }
 
 .opt-label__media.media{
