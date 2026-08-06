@@ -122,8 +122,31 @@
         "image_HLhwCt": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Hero.png",
-            "mobile_image": "shopify://shop_images/Baby_Sleep_Sack_Swaddle_Wrap_Zipper_-_Safari_Jungle.jpg",
+            "image": "shopify://shop_images/E1358C97-DFB9-45E6-8729-747BBFC64523_1_105_c.png",
+            "mobile_image": "shopify://shop_images/Mobile_25b50a85-0080-4c63-b2cc-e21514309801.png",
+            "slide_link": "",
+            "subheading": "",
+            "title": "OneC™ Silicone Pacifier Clip",
+            "heading_max_width": 15,
+            "title_size": 48,
+            "title_size_mobile": 28,
+            "use_h1": true,
+            "text": "<p>A 2026 Good Housekeeping Parenting Awards Winner, as seen on <strong>Good Morning America</strong></p>",
+            "enlarge_text": false,
+            "button_label_1": "Shop Pacifier Clips",
+            "button_url_1": "shopify://collections/onec-silicone-pacifier-clips",
+            "button_tag_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_tag_2": "",
+            "text_alignment": "bottom left"
+          }
+        },
+        "image_t7KHdh": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Hero_5db9f364-6a92-41a0-b336-5e9cc87198ab.jpg",
+            "mobile_image": "shopify://shop_images/mobiile.jpg",
             "slide_link": "",
             "subheading": "",
             "title": "Easiest way to swaddle.",
@@ -168,6 +191,7 @@
       },
       "block_order": [
         "image_HLhwCt",
+        "image_t7KHdh",
         "image_WdHzi6"
       ],
       "name": "Hero Carousel – Rounded",
@@ -180,8 +204,25 @@
         "border_radius": 12,
         "peek_size": 32,
         "peek_size_mobile": 12,
-        "overlay_style": "shadow",
+        "overlay_style": "full image-overlay--bg-shadow",
         "accessibility_info": ""
+      }
+    },
+    "featured_collection_ct3anq": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "One Piece Silicone Pacifier Clip",
+        "text": "",
+        "collection": "onec-silicone-pacifier-clips",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 4,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "start"
       }
     },
     "custom_product_highlight_JbY3qf": {
@@ -202,25 +243,9 @@
         "color_scheme": "default"
       }
     },
-    "featured_collection_ct3anq": {
-      "type": "featured-collection",
-      "name": "Featured collection",
-      "settings": {
-        "title": "End of Season Sale!",
-        "text": "",
-        "collection": "end-of-season-sale",
-        "show_vendor": false,
-        "enable_carousel": true,
-        "grid": 4,
-        "rows": 1,
-        "color_scheme": "default",
-        "show_view_all": true,
-        "full_width": false,
-        "text_alignment": "start"
-      }
-    },
     "custom_product_highlight_mEPwaD": {
       "type": "custom-product-highlight",
+      "disabled": true,
       "name": "Highlighted Collection",
       "settings": {
         "title": "For the Big Apple",
@@ -513,8 +538,8 @@
         "product_list": [
           "newborn-sleep-starter-bundle-safari-jungle",
           "wild-teether-bundle-llama-bunny",
-          "baby-learning-feeding-bundle-bailey-bunny",
-          "baby-sleep-system-bundle-magical-dragons"
+          "baby-sleep-system-bundle-magical-dragons",
+          "baby-learning-feeding-bundle-eddie-elephant"
         ],
         "button_label": "Shop Bundles",
         "link": "shopify://collections/bundles-and-sets",
@@ -1219,8 +1244,8 @@
     "mobile_collection_carousel_iBRR9r",
     "custom_hero_banner_CqQiir",
     "hero_carousel_rounded_eyHjac",
-    "custom_product_highlight_JbY3qf",
     "featured_collection_ct3anq",
+    "custom_product_highlight_JbY3qf",
     "custom_product_highlight_mEPwaD",
     "collection_list_km4B8h",
     "logo_list_kYmwNX",
