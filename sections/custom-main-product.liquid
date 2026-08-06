@@ -47,6 +47,7 @@
 
     <div class="media-gallery__inner{% if section.settings.enable_sticky_columns %} sticky-content-container{% endif %}">
     {% render 'product-label-detail', product: product, current_variant: current_variant %}
+    {% render 'product-award-badge', product: product %}
 
       <div class="main-image">
         {%- liquid
@@ -87,6 +88,10 @@
 
                   {%- if media.media_type == 'image' and section.settings.enable_zoom -%}
                     </a>
+                  {%- endif -%}
+
+                  {%- if forloop.index0 == initial_slide -%}
+                    {% render 'product-award-badge', product: product, context: 'slide' %}
                   {%- endif -%}
 
                 </div>
