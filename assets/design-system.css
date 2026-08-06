@@ -1591,3 +1591,79 @@ h4, .h4 {
 /* ============================================================
    END ACCESSIBILITY FIXES
    ============================================================ */
+/* ============================================================
+   PRODUCT AWARD BADGES — circular seals over the main PDP image
+   Sourced from product_awards metaobjects (publication/awards_name/
+   color) linked via product_template.product_awards
+   ============================================================ */
+.product-award-badges {
+  position: absolute;
+  top: 7.5px;
+  left: 7.5px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  pointer-events: none;
+}
+
+.product-award-badge {
+  --award-badge-color: var(--lll-warning);
+  width: 100px;
+  height: 100px;
+  border-radius: var(--lll-radius-full);
+  background: var(--award-badge-color);
+  border: 4px solid var(--lll-white);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6px;
+}
+
+.product-award-badge__publication {
+  font-family: var(--lll-font-display);
+  font-weight: 800;
+  font-size: 11px;
+  line-height: 1.15;
+  color: var(--lll-ink);
+}
+
+.product-award-badge__name {
+  font-family: var(--lll-font-body);
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.15;
+  color: var(--lll-ink);
+  margin-top: 2px;
+}
+
+/* ============================================================
+   PRODUCT AWARD BADGES — mobile carousel behavior
+   On mobile the gallery is a swipeable carousel (not the static
+   desktop collage), so the badge is duplicated into the first
+   slide itself (context: 'slide') and scrolls away with it
+   instead of staying pinned over whichever slide is in view.
+   ============================================================ */
+.media-gallery .main-image .slider__item {
+  position: relative;
+}
+
+@media (max-width: 767.98px) {
+  /* the pinned instance is redundant on mobile — the slide-scoped one covers it */
+  .product-award-badges:not(.product-award-badges--slide) {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  /* the slide-scoped instance is only needed for the mobile carousel */
+  .product-award-badges--slide {
+    display: none;
+  }
+}
+
