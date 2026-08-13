@@ -89,9 +89,15 @@
   {%- endif -%}
 
   {%- if sale_label_text -%}
-    <span class="product-label product-label--sale">
-      <span>{{ sale_label_text }}</span>
-    </span>
+      {%- if product.tags contains 'EOSS26' -%}
+        <span class="product-label product-label--sale">
+          <span>Promo: {{ sale_label_text }}</span>
+        </span>
+      {% else %}
+      <span class="product-label product-label--sale">
+        <span>{{ sale_label_text }}</span>
+      </span>
+      {%- endif -%}
   {%- endif -%}
 
   {%- if personalize-it_text -%}
