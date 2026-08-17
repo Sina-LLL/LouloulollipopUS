@@ -119,6 +119,29 @@
     "hero_carousel_rounded_eyHjac": {
       "type": "hero-carousel-rounded",
       "blocks": {
+        "image_z6UnWg": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Sushi_-_home.png",
+            "mobile_image": "shopify://shop_images/Mobile-sushi.png",
+            "slide_link": "",
+            "subheading": "",
+            "title": "Now serving more Sushi",
+            "heading_max_width": 15,
+            "title_size": 48,
+            "title_size_mobile": 32,
+            "use_h1": true,
+            "text": "<p>Your fave print just got <strong>NEW additions.</strong></p>",
+            "enlarge_text": false,
+            "button_label_1": "Shop Sushi",
+            "button_url_1": "shopify://collections/sushi",
+            "button_tag_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_tag_2": "",
+            "text_alignment": "bottom left"
+          }
+        },
         "image_46miLY": {
           "type": "image",
           "settings": {
@@ -144,6 +167,7 @@
         },
         "image_HLhwCt": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/E1358C97-DFB9-45E6-8729-747BBFC64523_1_105_c.png",
             "mobile_image": "shopify://shop_images/Mobile_25b50a85-0080-4c63-b2cc-e21514309801.png",
@@ -214,6 +238,7 @@
         }
       },
       "block_order": [
+        "image_z6UnWg",
         "image_46miLY",
         "image_HLhwCt",
         "image_WdHzi6",
