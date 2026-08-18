@@ -9,11 +9,11 @@
     indexable, and its temperature bands contradicted the body copy
     (two rows both started at 71F). Bands now live in section blocks,
     so copy and chart cannot drift apart -- there is only one source.
-  - Celsius drives the slider; Fahrenheit is derived at render time and
-    in JS, so the two can never disagree. Both are always on screen. The
-    page's previous TOG copy quoted the two units in that same order --
-    but a US audience reads thermostats in Fahrenheit, so flipping which
-    unit is primary is worth revisiting.
+  - Fahrenheit drives the slider; Celsius is derived at render time and
+    in JS, so the two can never disagree. Both are always on screen.
+    Flipped 2026-08-18 (was Celsius-primary) since a US audience reads
+    thermostats in Fahrenheit -- the body copy already led with F, only
+    the interactive slider itself hadn't caught up.
   - Each band points at its own TOG collection (0-5-tog / 1-0-tog /
     2-5-tog) rather than matching on TOG *tags*. The tags are incomplete
     and inconsistently capitalised across the catalogue ("1.0 Tog" vs
@@ -75,8 +75,8 @@
         </p>
 
         <div class="lp-tog__temp" aria-live="polite">
-          <span class="lp-tog__temp-c" data-tog-temp-c>{{ section.settings.temp_default }}&deg;C</span>
-          <span class="lp-tog__temp-f" data-tog-temp-f></span>
+          <span class="lp-tog__temp-f" data-tog-temp-f>{{ section.settings.temp_default }}&deg;F</span>
+          <span class="lp-tog__temp-c" data-tog-temp-c></span>
         </div>
 
         <input
@@ -92,9 +92,9 @@
           aria-describedby="tog-why-{{ section.id }}"
         >
         <div class="lp-tog__range-legend" aria-hidden="true">
-          <span>{{ section.settings.temp_min }}&deg;C</span>
-          <span>{{ section.settings.temp_default }}&deg;C</span>
-          <span>{{ section.settings.temp_max }}&deg;C</span>
+          <span>{{ section.settings.temp_min }}&deg;F</span>
+          <span>{{ section.settings.temp_default }}&deg;F</span>
+          <span>{{ section.settings.temp_max }}&deg;F</span>
         </div>
 
         {%- comment -%}
@@ -353,14 +353,14 @@
     gap: var(--lll-space-3);
     flex-wrap: wrap;
   }
-  #section-id-{{ section.id }} .lp-tog__temp-c {
+  #section-id-{{ section.id }} .lp-tog__temp-f {
     font-family: var(--lll-font-display);
     font-size: clamp(2.5rem, 4vw + 1rem, 3.5rem);
     font-weight: var(--lll-weight-heading);
     line-height: 1;
     font-variant-numeric: tabular-nums;
   }
-  #section-id-{{ section.id }} .lp-tog__temp-f {
+  #section-id-{{ section.id }} .lp-tog__temp-c {
     font-size: 1rem;
     color: var(--lll-text-muted);
     font-variant-numeric: tabular-nums;
@@ -645,16 +645,16 @@
     }
 
     function render() {
-      var c = parseInt(range.value, 10);
-      var f = Math.round((c * 9) / 5 + 32);
+      var f = parseInt(range.value, 10);
+      var c = Math.round(((f - 32) * 5) / 9);
       var active = bandFor(c);
       var tog = active.dataset.tog;
 
-      if (outC) outC.textContent = c + '°C';
       if (outF) outF.textContent = f + '°F';
+      if (outC) outC.textContent = c + '°C';
       range.setAttribute(
         'aria-valuetext',
-        c + '°C, ' + f + '°F — we recommend ' + tog + ' TOG'
+        f + '°F, ' + c + '°C — we recommend ' + tog + ' TOG'
       );
 
       bands.forEach(function (b) {
@@ -741,15 +741,15 @@
 
     { "type": "header", "content": "Temperature control" },
     { "type": "text", "id": "temp_label", "label": "Slider label", "default": "Your nursery temperature" },
-    { "type": "range", "id": "temp_min", "label": "Minimum (°C)", "min": 10, "max": 20, "step": 1, "default": 15 },
-    { "type": "range", "id": "temp_max", "label": "Maximum (°C)", "min": 24, "max": 32, "step": 1, "default": 27 },
-    { "type": "range", "id": "temp_default", "label": "Starting value (°C)", "min": 10, "max": 32, "step": 1, "default": 21 },
+    { "type": "range", "id": "temp_min", "label": "Minimum (°F)", "min": 50, "max": 68, "step": 1, "default": 59 },
+    { "type": "range", "id": "temp_max", "label": "Maximum (°F)", "min": 75, "max": 90, "step": 1, "default": 81 },
+    { "type": "range", "id": "temp_default", "label": "Starting value (°F)", "min": 50, "max": 90, "step": 1, "default": 70 },
     { "type": "text", "id": "layer_label", "label": "Layer prefix", "default": "Wear underneath:" },
 
     { "type": "header", "content": "Gift default" },
     { "type": "paragraph", "content": "A gift buyer cannot answer the temperature question. This gives them a safe default rather than a dead end. Leave the label blank to hide it." },
     { "type": "text", "id": "gift_label", "label": "Link text", "default": "Not sure — buying as a gift?" },
-    { "type": "range", "id": "gift_temp", "label": "Temperature to assume (°C)", "min": 10, "max": 32, "step": 1, "default": 21 },
+    { "type": "range", "id": "gift_temp", "label": "Temperature to assume (°F)", "min": 50, "max": 90, "step": 1, "default": 70 },
     { "type": "text", "id": "gift_size", "label": "Size to preselect", "info": "Must match one of the sizes above exactly.", "default": "6-18 M" },
     { "type": "textarea", "id": "gift_note", "label": "Note shown after clicking" },
 
