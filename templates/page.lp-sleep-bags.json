@@ -597,9 +597,9 @@
         "comfort_check": "<p><strong>Comfort check:</strong> baby's chest and tummy should feel warm and dry — not clammy, sweaty, or cold. Hands and feet run cooler and aren't a reliable guide. If your room temperature changes between seasons, adjust the layer underneath before you change the TOG.</p>",
         "anchor_id": "tog-picker",
         "temp_label": "Your nursery temperature",
-        "temp_min": 15,
-        "temp_max": 27,
-        "temp_default": 21,
+        "temp_min": 59,
+        "temp_max": 81,
+        "temp_default": 70,
         "layer_label": "Wear underneath:",
         "size_label": "Your baby's size",
         "size_all_label": "All sizes",
@@ -616,7 +616,7 @@
         "padding_bottom": 40,
         "filter_tag": "sleep_bag",
         "gift_label": "Not sure — buying as a gift?",
-        "gift_temp": 21,
+        "gift_temp": 70,
         "gift_size": "6-18 M",
         "gift_note": "1.0 TOG in 6–18 M suits most homes and most babies, and it's the weight and size parents reorder most. Sizing goes by height and weight rather than the age label — the chart below has the exact ranges. Don't buy a size up to grow into: a sleep bag needs to be snug at the neck and armholes so baby can't slip down inside."
       }
