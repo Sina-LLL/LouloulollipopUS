@@ -1,0 +1,798 @@
+{%- comment -%}
+  LP TOG Picker
+  -------------
+  Replaces the static TOG chart PNG with an interactive picker:
+  room temperature -> TOG -> size -> matching products.
+
+  Why this exists:
+  - The old chart was a flat PNG: no alt text, not responsive, not
+    indexable, and its temperature bands contradicted the body copy
+    (two rows both started at 71F). Bands now live in section blocks,
+    so copy and chart cannot drift apart -- there is only one source.
+  - Celsius drives the slider; Fahrenheit is derived at render time and
+    in JS, so the two can never disagree. Both are always on screen. The
+    page's previous TOG copy quoted the two units in that same order --
+    but a US audience reads thermostats in Fahrenheit, so flipping which
+    unit is primary is worth revisiting.
+  - Each band points at its own TOG collection (0-5-tog / 1-0-tog /
+    2-5-tog) rather than matching on TOG *tags*. The tags are incomplete
+    and inconsistently capitalised across the catalogue ("1.0 Tog" vs
+    "2.5 tog"), and Liquid `contains` is case-sensitive, so tag matching
+    silently dropped entire weights. The collections are curated and
+    complete; the tags are not.
+  - Those collections are "Sleep Wear", so they also carry sleepsuits.
+    `filter_tag` (default: sleep_bag) narrows them to sleep bags, matched
+    case-insensitively and on whole tags, not substrings.
+  - Rendered server-side with the theme's own 'product-block' snippet,
+    so cards look identical to every other grid on the site.
+
+  No-JS / pre-hydration: every band and every product group renders
+  visible with a heading. The JS only *narrows* what is shown.
+{%- endcomment -%}
+
+{%- liquid
+  assign coll = collections[section.settings.collection]
+  assign band_count = 0
+  for block in section.blocks
+    if block.type == 'band'
+      assign band_count = band_count | plus: 1
+    endif
+  endfor
+-%}
+
+<section
+  id="section-id-{{ section.id }}"
+  class="lp-tog"
+  data-lp-tog
+>
+  {%- comment -%}
+    Stable anchor. Shopify generates the section id at render time, so
+    CTAs elsewhere on the page cannot link to #section-id-...; they
+    link to #tog-picker instead.
+  {%- endcomment -%}
+  <span id="{{ section.settings.anchor_id | default: 'tog-picker' }}" class="lp-tog__anchor" aria-hidden="true"></span>
+
+  <div class="container">
+    {%- if section.settings.title != blank or section.settings.intro != blank -%}
+      <div class="lp-tog__head">
+        {%- if section.settings.eyebrow != blank -%}
+          <p class="lp-tog__eyebrow">{{ section.settings.eyebrow }}</p>
+        {%- endif -%}
+        {%- if section.settings.title != blank -%}
+          <h2>{{ section.settings.title }}</h2>
+        {%- endif -%}
+        {%- if section.settings.intro != blank -%}
+          <div class="lp-tog__intro rte">{{ section.settings.intro }}</div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <div class="lp-tog__panel">
+      {%- comment -%} ---- Step 1: temperature ---- {%- endcomment -%}
+      <div class="lp-tog__step">
+        <p class="lp-tog__step-label" id="tog-temp-label-{{ section.id }}">
+          {{ section.settings.temp_label | default: 'Your nursery temperature' }}
+        </p>
+
+        <div class="lp-tog__temp" aria-live="polite">
+          <span class="lp-tog__temp-c" data-tog-temp-c>{{ section.settings.temp_default }}&deg;C</span>
+          <span class="lp-tog__temp-f" data-tog-temp-f></span>
+        </div>
+
+        <input
+          type="range"
+          class="lp-tog__range"
+          data-tog-range
+          id="tog-range-{{ section.id }}"
+          min="{{ section.settings.temp_min }}"
+          max="{{ section.settings.temp_max }}"
+          step="1"
+          value="{{ section.settings.temp_default }}"
+          aria-labelledby="tog-temp-label-{{ section.id }}"
+          aria-describedby="tog-why-{{ section.id }}"
+        >
+        <div class="lp-tog__range-legend" aria-hidden="true">
+          <span>{{ section.settings.temp_min }}&deg;C</span>
+          <span>{{ section.settings.temp_default }}&deg;C</span>
+          <span>{{ section.settings.temp_max }}&deg;C</span>
+        </div>
+
+        {%- comment -%}
+          Gift escape hatch. A gift buyer has never stood in the nursery,
+          so the temperature question is unanswerable for them and the
+          picker silently fails. This gives them a safe default instead
+          of a dead end.
+        {%- endcomment -%}
+        {%- if section.settings.gift_label != blank -%}
+          <div class="lp-tog__gift">
+            <button type="button" class="lp-tog__gift-btn" data-tog-gift
+              data-gift-temp="{{ section.settings.gift_temp }}"
+              data-gift-size="{{ section.settings.gift_size | downcase | escape }}">
+              {{ section.settings.gift_label }}
+            </button>
+            {%- if section.settings.gift_note != blank -%}
+              <p class="lp-tog__gift-note" data-tog-gift-note hidden>{{ section.settings.gift_note }}</p>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      </div>
+
+      {%- comment -%} ---- Step 2: the recommendation ---- {%- endcomment -%}
+      <div class="lp-tog__result">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'band' -%}
+            <div
+              class="lp-tog__band"
+              data-tog-band
+              data-tog="{{ block.settings.tog | escape }}"
+              data-min="{{ block.settings.temp_min_c }}"
+              data-max="{{ block.settings.temp_max_c }}"
+              {{ block.shopify_attributes }}
+            >
+              <div class="lp-tog__badge">
+                <span class="lp-tog__badge-num">{{ block.settings.tog }}</span>
+                <span class="lp-tog__badge-unit">TOG</span>
+              </div>
+              <div class="lp-tog__band-copy">
+                <h3>{{ block.settings.title }}</h3>
+                <p class="lp-tog__band-range">
+                  {{ block.settings.temp_min_c }}&ndash;{{ block.settings.temp_max_c }}&deg;C
+                  <span aria-hidden="true">&middot;</span>
+                  {%- assign f_min = block.settings.temp_min_c | times: 9 | divided_by: 5.0 | plus: 32 | round -%}
+                  {%- assign f_max = block.settings.temp_max_c | times: 9 | divided_by: 5.0 | plus: 32 | round -%}
+                  {{ f_min }}&ndash;{{ f_max }}&deg;F
+                </p>
+                {%- if block.settings.body != blank -%}
+                  <p class="lp-tog__band-body" id="tog-why-{{ section.id }}">{{ block.settings.body }}</p>
+                {%- endif -%}
+                {%- if block.settings.layer != blank -%}
+                  <p class="lp-tog__layer">
+                    <span>{{ section.settings.layer_label | default: 'Wear underneath:' }}</span>
+                    <strong>{{ block.settings.layer }}</strong>
+                  </p>
+                {%- endif -%}
+              </div>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+
+      {%- comment -%} ---- Step 3: size ---- {%- endcomment -%}
+      {%- if section.settings.sizes != blank -%}
+        <div class="lp-tog__step lp-tog__step--sizes">
+          <p class="lp-tog__step-label" id="tog-size-label-{{ section.id }}">
+            {{ section.settings.size_label | default: "Your baby's size" }}
+          </p>
+          <div class="lp-tog__sizes" role="group" aria-labelledby="tog-size-label-{{ section.id }}">
+            {%- assign size_list = section.settings.sizes | split: ',' -%}
+            <button type="button" class="lp-tog__chip" data-tog-size="" aria-pressed="true">
+              {{ section.settings.size_all_label | default: 'All sizes' }}
+            </button>
+            {%- for size in size_list -%}
+              {%- assign s = size | strip -%}
+              {%- if s != blank -%}
+                <button type="button" class="lp-tog__chip" data-tog-size="{{ s | downcase | escape }}" aria-pressed="false">
+                  {{ s }}
+                </button>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        </div>
+      {%- endif -%}
+
+      {%- comment -%} ---- Step 4: matching products ---- {%- endcomment -%}
+      {%- if coll != blank -%}
+        <div class="lp-tog__matches">
+          <div class="lp-tog__matches-head">
+            <p class="lp-tog__count" data-tog-count-wrap aria-live="polite">
+              <span data-tog-count>{{ coll.products_count }}</span>
+              {{ section.settings.match_noun | default: 'sleep bags' }}
+              <span data-tog-count-suffix></span>
+            </p>
+            <a class="lp-tog__viewall" href="{{ coll.url }}" data-tog-viewall>
+              <span data-tog-viewall-label>{{ section.settings.view_all_label | default: 'See all' }}</span>
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+
+          {%- comment -%}
+            Whole-tag, case-insensitive match. Tags are joined and padded
+            with delimiters so "sleep" cannot match "sleep_bag", and so
+            inconsistent capitalisation in the catalogue cannot silently
+            drop products the way the old tag matching did.
+          {%- endcomment -%}
+          {%- assign filter_tag = section.settings.filter_tag | downcase | strip -%}
+          {%- assign needle = filter_tag | prepend: '||' | append: '||' -%}
+
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'band' -%}
+              {%- assign band_coll = collections[block.settings.collection] -%}
+              <div
+                class="lp-tog__group"
+                data-tog-group="{{ block.settings.tog | escape }}"
+                data-view-all="{{ band_coll.url | default: coll.url }}"
+                data-view-all-label="{{ section.settings.view_all_label | default: 'See all' }} {{ block.settings.tog }} TOG"
+              >
+                <h3 class="lp-tog__group-title">{{ block.settings.tog }} TOG</h3>
+                <div class="product-grid product-grid--per-row-{{ section.settings.grid }} product-grid--per-row-mob-{{ settings.prod_thumb_mob_per_row }}">
+                  {%- comment -%}
+                    Liquid caps an unpaginated collection.products at 50.
+                    Every TOG collection is well under that today; if one
+                    grows past it, the tail simply is not scanned.
+                  {%- endcomment -%}
+                  {%- assign shown = 0 -%}
+                  {%- for product in band_coll.products -%}
+                    {%- comment -%}
+                      Resolved into a single boolean first. Liquid has no
+                      parentheses and evaluates and/or right-to-left, so a
+                      compound condition here would not mean what it looks
+                      like it means.
+                    {%- endcomment -%}
+                    {%- liquid
+                      assign tags_lower = product.tags | join: '||' | downcase | prepend: '||' | append: '||'
+                      assign matches = false
+                      if filter_tag == blank
+                        assign matches = true
+                      elsif tags_lower contains needle
+                        assign matches = true
+                      endif
+                      assign room = false
+                      if shown < section.settings.limit
+                        assign room = true
+                      endif
+                    -%}
+                    {%- if matches and room -%}
+                      {%- liquid
+                        assign shown = shown | plus: 1
+                        assign size_data = ''
+                        for v in product.variants
+                          if v.available
+                            assign size_data = size_data | append: v.title | append: '|'
+                          endif
+                        endfor
+                        assign size_data = size_data | downcase
+                      -%}
+                      <div class="lp-tog__item" data-tog-item data-sizes="{{ size_data | escape }}">
+                        {%- comment -%}
+                          No custom_aspect_ratio: the snippet treats 0 as a
+                          real value and would emit --aspect-ratio: 0.
+                          Letting it fall back keeps these cards identical
+                          to every other product grid in the theme.
+                        {%- endcomment -%}
+                        {%- render 'product-block',
+                          product: product,
+                          collection: band_coll,
+                          grid: section.settings.grid
+                        -%}
+                      </div>
+                    {%- endif -%}
+                  {%- endfor -%}
+                  {%- if shown == 0 -%}
+                    <p class="lp-tog__empty">
+                      {{ section.settings.empty_text
+                        | default: 'Nothing in this weight is in stock right now. Try the next weight up or down.' }}
+                    </p>
+                  {%- endif -%}
+                </div>
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+
+          <p class="lp-tog__empty lp-tog__empty--size" data-tog-size-empty hidden>
+            {{ section.settings.size_empty_text
+              | default: 'No bags in that size are in stock in this weight right now.' }}
+          </p>
+        </div>
+      {%- endif -%}
+
+      {%- if section.settings.comfort_check != blank -%}
+        <div class="lp-tog__comfort rte">
+          {{ section.settings.comfort_check }}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+<style>
+  #section-id-{{ section.id }} {
+    padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
+    background: {{ section.settings.bg_color }};
+  }
+  #section-id-{{ section.id }} .lp-tog__anchor {
+    display: block;
+    height: 0;
+    /* clears the sticky header when jumped to from a CTA */
+    scroll-margin-top: 90px;
+  }
+  #section-id-{{ section.id }} .lp-tog__head {
+    max-width: 640px;
+    margin: 0 0 var(--lll-space-8);
+  }
+  #section-id-{{ section.id }} .lp-tog__eyebrow {
+    font-size: 0.6875rem;
+    font-weight: var(--lll-weight-subhead);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--lll-slate-deep);
+    margin: 0 0 var(--lll-space-3);
+  }
+  #section-id-{{ section.id }} .lp-tog__head h2 {
+    margin: 0;
+  }
+  #section-id-{{ section.id }} .lp-tog__intro {
+    margin-top: var(--lll-space-4);
+    line-height: var(--lll-leading-body);
+    max-width: 60ch;
+  }
+
+  #section-id-{{ section.id }} .lp-tog__panel {
+    background: var(--lll-white);
+    border: 1px solid var(--lll-slate-border);
+    border-radius: var(--lll-radius-lg);
+    padding: var(--lll-space-8);
+  }
+
+  #section-id-{{ section.id }} .lp-tog__step-label {
+    font-size: 0.6875rem;
+    font-weight: var(--lll-weight-subhead);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--lll-text-muted);
+    margin: 0 0 var(--lll-space-3);
+  }
+  #section-id-{{ section.id }} .lp-tog__step--sizes {
+    margin-top: var(--lll-space-8);
+    padding-top: var(--lll-space-6);
+    border-top: 1px solid var(--lll-slate-border);
+  }
+
+  #section-id-{{ section.id }} .lp-tog__temp {
+    display: flex;
+    align-items: baseline;
+    gap: var(--lll-space-3);
+    flex-wrap: wrap;
+  }
+  #section-id-{{ section.id }} .lp-tog__temp-c {
+    font-family: var(--lll-font-display);
+    font-size: clamp(2.5rem, 4vw + 1rem, 3.5rem);
+    font-weight: var(--lll-weight-heading);
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  #section-id-{{ section.id }} .lp-tog__temp-f {
+    font-size: 1rem;
+    color: var(--lll-text-muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  #section-id-{{ section.id }} .lp-tog__range {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 34px;
+    background: transparent;
+    margin: var(--lll-space-2) 0 0;
+    cursor: pointer;
+  }
+  {%- comment -%}
+    Vendor-prefixed pseudo-elements MUST each get their own rule.
+    A comma-separated group is discarded wholesale by any browser that
+    does not recognise one of its selectors -- grouping the -webkit- and
+    -moz- track selectors meant Chrome dropped both and the slider
+    rendered with no visible track at all.
+  {%- endcomment -%}
+  #section-id-{{ section.id }} .lp-tog__range::-webkit-slider-runnable-track {
+    height: 8px;
+    border-radius: var(--lll-radius-pill);
+    background: linear-gradient(90deg, #8FB0C4 0%, var(--lll-slate-border) 30%, var(--lll-peach) 70%, #D98F6E 100%);
+  }
+  #section-id-{{ section.id }} .lp-tog__range::-moz-range-track {
+    height: 8px;
+    border-radius: var(--lll-radius-pill);
+    background: linear-gradient(90deg, #8FB0C4 0%, var(--lll-slate-border) 30%, var(--lll-peach) 70%, #D98F6E 100%);
+  }
+  #section-id-{{ section.id }} .lp-tog__range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 28px;
+    height: 28px;
+    margin-top: -10px;
+    border-radius: var(--lll-radius-full);
+    background: var(--lll-white);
+    border: 1px solid var(--lll-slate-border);
+    box-shadow: 0 2px 8px rgba(89, 117, 125, 0.22);
+    transition: transform var(--lll-duration-fast) ease;
+  }
+  #section-id-{{ section.id }} .lp-tog__range::-moz-range-thumb {
+    width: 28px;
+    height: 28px;
+    border-radius: var(--lll-radius-full);
+    background: var(--lll-white);
+    border: 1px solid var(--lll-slate-border);
+    box-shadow: 0 2px 8px rgba(89, 117, 125, 0.22);
+  }
+  #section-id-{{ section.id }} .lp-tog__range:hover::-webkit-slider-thumb { transform: scale(1.08); }
+  #section-id-{{ section.id }} .lp-tog__range:active::-webkit-slider-thumb { transform: scale(0.96); }
+  #section-id-{{ section.id }} .lp-tog__range-legend {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.78rem;
+    color: var(--lll-text-muted);
+  }
+
+  #section-id-{{ section.id }} .lp-tog__gift {
+    margin-top: var(--lll-space-4);
+  }
+  #section-id-{{ section.id }} .lp-tog__gift-btn {
+    font-family: var(--lll-font-body);
+    font-size: 0.875rem;
+    background: none;
+    border: 0;
+    padding: 0;
+    color: var(--lll-slate-deep);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    cursor: pointer;
+    transition: color var(--lll-duration-fast) ease;
+  }
+  #section-id-{{ section.id }} .lp-tog__gift-btn:hover { color: var(--lll-ink); }
+  #section-id-{{ section.id }} .lp-tog__gift-note {
+    margin: var(--lll-space-3) 0 0;
+    padding: var(--lll-space-3) var(--lll-space-4);
+    background: var(--lll-cream);
+    border-radius: var(--lll-radius-md);
+    font-size: 0.875rem;
+    line-height: var(--lll-leading-body);
+    max-width: 58ch;
+  }
+  #section-id-{{ section.id }} .lp-tog__gift-note[hidden] { display: none; }
+
+  #section-id-{{ section.id }} .lp-tog__result {
+    margin-top: var(--lll-space-6);
+    padding-top: var(--lll-space-6);
+    border-top: 1px solid var(--lll-slate-border);
+  }
+  #section-id-{{ section.id }} .lp-tog__band {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--lll-space-5);
+    align-items: start;
+  }
+  #section-id-{{ section.id }} .lp-tog__band + .lp-tog__band {
+    margin-top: var(--lll-space-6);
+  }
+  #section-id-{{ section.id }} .lp-tog__badge {
+    background: #D1E3E6;
+    border-radius: var(--lll-radius-md);
+    padding: var(--lll-space-4) var(--lll-space-5);
+    text-align: center;
+    min-width: 116px;
+  }
+  #section-id-{{ section.id }} .lp-tog__badge-num {
+    display: block;
+    font-family: var(--lll-font-display);
+    font-size: 2rem;
+    font-weight: var(--lll-weight-heading);
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  #section-id-{{ section.id }} .lp-tog__badge-unit {
+    display: block;
+    font-size: 0.6875rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: var(--lll-weight-subhead);
+    color: var(--lll-slate-deep);
+    margin-top: var(--lll-space-1);
+  }
+  #section-id-{{ section.id }} .lp-tog__band-copy h3 {
+    margin: 0 0 var(--lll-space-1);
+    font-size: var(--lll-text-h4);
+    line-height: var(--lll-leading-snug);
+  }
+  #section-id-{{ section.id }} .lp-tog__band-range {
+    margin: 0 0 var(--lll-space-2);
+    font-size: 0.875rem;
+    color: var(--lll-text-muted);
+    font-variant-numeric: tabular-nums;
+  }
+  #section-id-{{ section.id }} .lp-tog__band-body {
+    margin: 0;
+    line-height: var(--lll-leading-body);
+    max-width: 58ch;
+  }
+  #section-id-{{ section.id }} .lp-tog__layer {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0 var(--lll-space-2);
+    margin: var(--lll-space-3) 0 0;
+    padding: var(--lll-space-2) var(--lll-space-4);
+    background: var(--lll-cream);
+    border-radius: var(--lll-radius-pill);
+    font-size: 0.875rem;
+  }
+
+  #section-id-{{ section.id }} .lp-tog__sizes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--lll-space-2);
+  }
+  #section-id-{{ section.id }} .lp-tog__chip {
+    font-family: var(--lll-font-body);
+    font-size: 0.875rem;
+    background: transparent;
+    border: 1px solid var(--lll-slate-border);
+    border-radius: var(--lll-radius-pill);
+    padding: var(--lll-space-2) var(--lll-space-4);
+    color: var(--lll-text-muted);
+    cursor: pointer;
+    transition: background-color var(--lll-duration-fast) ease,
+                color var(--lll-duration-fast) ease,
+                border-color var(--lll-duration-fast) ease;
+  }
+  #section-id-{{ section.id }} .lp-tog__chip:hover {
+    border-color: var(--lll-slate);
+    color: var(--lll-ink);
+  }
+  #section-id-{{ section.id }} .lp-tog__chip[aria-pressed="true"] {
+    background: var(--lll-slate-action);
+    border-color: var(--lll-slate-action);
+    color: var(--lll-cream);
+  }
+
+  #section-id-{{ section.id }} .lp-tog__matches {
+    margin-top: var(--lll-space-8);
+    padding-top: var(--lll-space-6);
+    border-top: 1px solid var(--lll-slate-border);
+  }
+  #section-id-{{ section.id }} .lp-tog__matches-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--lll-space-4);
+    flex-wrap: wrap;
+    margin-bottom: var(--lll-space-5);
+  }
+  #section-id-{{ section.id }} .lp-tog__count { margin: 0; font-size: 0.9rem; color: var(--lll-text-muted); }
+  #section-id-{{ section.id }} .lp-tog__count [data-tog-count] { color: var(--lll-ink); font-weight: var(--lll-weight-subhead); }
+  #section-id-{{ section.id }} .lp-tog__viewall {
+    font-size: 0.9rem;
+    font-weight: var(--lll-weight-subhead);
+    color: var(--lll-slate-deep);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 1px;
+  }
+  #section-id-{{ section.id }} .lp-tog__group + .lp-tog__group { margin-top: var(--lll-space-8); }
+  #section-id-{{ section.id }} .lp-tog__group-title {
+    font-size: var(--lll-text-h4);
+    margin: 0 0 var(--lll-space-4);
+  }
+  #section-id-{{ section.id }} .lp-tog__empty {
+    grid-column: 1 / -1;
+    margin: 0;
+    color: var(--lll-text-muted);
+    font-size: 0.9rem;
+  }
+  #section-id-{{ section.id }} .lp-tog__empty--size { margin-top: var(--lll-space-4); }
+
+  #section-id-{{ section.id }} .lp-tog__comfort {
+    margin-top: var(--lll-space-8);
+    padding: var(--lll-space-4) var(--lll-space-5);
+    background: #D1E3E6;
+    border-left: 4px solid var(--lll-slate);
+    border-radius: var(--lll-radius-sm);
+    font-size: 0.95rem;
+  }
+  #section-id-{{ section.id }} .lp-tog__comfort p:last-child { margin-bottom: 0; }
+
+  /* JS-enhanced: narrow to one band + one group. Without JS every band
+     and every group stays visible, which is still a usable page. */
+  #section-id-{{ section.id }}.is-interactive .lp-tog__band[hidden],
+  #section-id-{{ section.id }}.is-interactive .lp-tog__group[hidden],
+  #section-id-{{ section.id }}.is-interactive .lp-tog__item[hidden] { display: none; }
+  #section-id-{{ section.id }}.is-interactive .lp-tog__group-title { display: none; }
+  #section-id-{{ section.id }}.is-interactive .lp-tog__band + .lp-tog__band { margin-top: 0; }
+
+  @media (max-width: 767.98px) {
+    #section-id-{{ section.id }} {
+      padding: {{ section.settings.padding_top | times: 0.7 | round }}px 0 {{ section.settings.padding_bottom | times: 0.7 | round }}px;
+    }
+    #section-id-{{ section.id }} .lp-tog__panel { padding: var(--lll-space-5); }
+    #section-id-{{ section.id }} .lp-tog__band { grid-template-columns: 1fr; gap: var(--lll-space-4); }
+    #section-id-{{ section.id }} .lp-tog__badge { justify-self: start; min-width: 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #section-id-{{ section.id }} .lp-tog__range::-webkit-slider-thumb { transition: none; }
+  }
+</style>
+
+<script>
+  (function () {
+    var root = document.getElementById('section-id-{{ section.id }}');
+    if (!root) return;
+
+    var range = root.querySelector('[data-tog-range]');
+    var outC = root.querySelector('[data-tog-temp-c]');
+    var outF = root.querySelector('[data-tog-temp-f]');
+    var bands = Array.prototype.slice.call(root.querySelectorAll('[data-tog-band]'));
+    var groups = Array.prototype.slice.call(root.querySelectorAll('[data-tog-group]'));
+    var chips = Array.prototype.slice.call(root.querySelectorAll('[data-tog-size]'));
+    var countEl = root.querySelector('[data-tog-count]');
+    var suffixEl = root.querySelector('[data-tog-count-suffix]');
+    var sizeEmpty = root.querySelector('[data-tog-size-empty]');
+    var viewAll = root.querySelector('[data-tog-viewall]');
+    var viewAllLabel = root.querySelector('[data-tog-viewall-label]');
+
+    if (!range || !bands.length) return;
+
+    // Only hide things once we know JS is running.
+    root.classList.add('is-interactive');
+
+    var activeSize = '';
+
+    function bandFor(c) {
+      for (var i = 0; i < bands.length; i++) {
+        var min = parseFloat(bands[i].dataset.min);
+        var max = parseFloat(bands[i].dataset.max);
+        if (c >= min && c <= max) return bands[i];
+      }
+      // Below the coldest band -> warmest TOG; above the warmest -> lightest.
+      var first = bands[0], last = bands[bands.length - 1];
+      return c < parseFloat(first.dataset.min) ? first : last;
+    }
+
+    function render() {
+      var c = parseInt(range.value, 10);
+      var f = Math.round((c * 9) / 5 + 32);
+      var active = bandFor(c);
+      var tog = active.dataset.tog;
+
+      if (outC) outC.textContent = c + '°C';
+      if (outF) outF.textContent = f + '°F';
+      range.setAttribute(
+        'aria-valuetext',
+        c + '°C, ' + f + '°F — we recommend ' + tog + ' TOG'
+      );
+
+      bands.forEach(function (b) {
+        if (b === active) { b.removeAttribute('hidden'); }
+        else { b.setAttribute('hidden', ''); }
+      });
+
+      var visible = 0;
+      groups.forEach(function (g) {
+        var match = g.dataset.togGroup === tog;
+        if (match) { g.removeAttribute('hidden'); } else { g.setAttribute('hidden', ''); }
+        if (!match) return;
+
+        // Point "see all" at the collection for the weight on screen.
+        if (viewAll && g.dataset.viewAll) viewAll.href = g.dataset.viewAll;
+        if (viewAllLabel && g.dataset.viewAllLabel) viewAllLabel.textContent = g.dataset.viewAllLabel;
+
+        Array.prototype.slice.call(g.querySelectorAll('[data-tog-item]')).forEach(function (item) {
+          var ok = !activeSize || (item.dataset.sizes || '').indexOf(activeSize) !== -1;
+          if (ok) { item.removeAttribute('hidden'); visible++; }
+          else { item.setAttribute('hidden', ''); }
+        });
+      });
+
+      if (countEl) countEl.textContent = visible;
+      if (suffixEl) {
+        suffixEl.textContent =
+          'in ' + tog + ' TOG' + (activeSize ? ', size ' + activeSize.toUpperCase() : '');
+      }
+      if (sizeEmpty) {
+        if (visible === 0) { sizeEmpty.removeAttribute('hidden'); }
+        else { sizeEmpty.setAttribute('hidden', ''); }
+      }
+    }
+
+    range.addEventListener('input', render);
+
+    // Gift default: answer the temperature question on their behalf.
+    var giftBtn = root.querySelector('[data-tog-gift]');
+    var giftNote = root.querySelector('[data-tog-gift-note]');
+    if (giftBtn) {
+      giftBtn.addEventListener('click', function () {
+        var t = parseInt(giftBtn.dataset.giftTemp, 10);
+        if (!isNaN(t)) range.value = t;
+
+        var wanted = (giftBtn.dataset.giftSize || '').trim();
+        if (wanted) {
+          chips.forEach(function (c) {
+            var isMatch = (c.dataset.togSize || '') === wanted;
+            c.setAttribute('aria-pressed', isMatch ? 'true' : 'false');
+            if (isMatch) activeSize = wanted;
+          });
+        }
+
+        if (giftNote) giftNote.removeAttribute('hidden');
+        render();
+      });
+    }
+
+    chips.forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        chips.forEach(function (c) { c.setAttribute('aria-pressed', 'false'); });
+        chip.setAttribute('aria-pressed', 'true');
+        activeSize = chip.dataset.togSize || '';
+        render();
+      });
+    });
+
+    render();
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "LP TOG Picker",
+  "tag": "section",
+  "settings": [
+    { "type": "header", "content": "Content" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "info": "Optional. Leave blank unless it earns its place -- avoid step numbering, since these sections are not a wizard." },
+    { "type": "text", "id": "title", "label": "Heading", "default": "Which TOG do I need?" },
+    { "type": "richtext", "id": "intro", "label": "Intro" },
+    { "type": "richtext", "id": "comfort_check", "label": "Comfort-check callout" },
+    { "type": "text", "id": "anchor_id", "label": "Anchor id", "info": "CTAs elsewhere on the page link to #this.", "default": "tog-picker" },
+
+    { "type": "header", "content": "Temperature control" },
+    { "type": "text", "id": "temp_label", "label": "Slider label", "default": "Your nursery temperature" },
+    { "type": "range", "id": "temp_min", "label": "Minimum (°C)", "min": 10, "max": 20, "step": 1, "default": 15 },
+    { "type": "range", "id": "temp_max", "label": "Maximum (°C)", "min": 24, "max": 32, "step": 1, "default": 27 },
+    { "type": "range", "id": "temp_default", "label": "Starting value (°C)", "min": 10, "max": 32, "step": 1, "default": 21 },
+    { "type": "text", "id": "layer_label", "label": "Layer prefix", "default": "Wear underneath:" },
+
+    { "type": "header", "content": "Gift default" },
+    { "type": "paragraph", "content": "A gift buyer cannot answer the temperature question. This gives them a safe default rather than a dead end. Leave the label blank to hide it." },
+    { "type": "text", "id": "gift_label", "label": "Link text", "default": "Not sure — buying as a gift?" },
+    { "type": "range", "id": "gift_temp", "label": "Temperature to assume (°C)", "min": 10, "max": 32, "step": 1, "default": 21 },
+    { "type": "text", "id": "gift_size", "label": "Size to preselect", "info": "Must match one of the sizes above exactly.", "default": "6-18 M" },
+    { "type": "textarea", "id": "gift_note", "label": "Note shown after clicking" },
+
+    { "type": "header", "content": "Sizes" },
+    { "type": "text", "id": "size_label", "label": "Size group label", "default": "Your baby's size" },
+    { "type": "text", "id": "size_all_label", "label": "\"All sizes\" chip label", "default": "All sizes" },
+    { "type": "text", "id": "sizes", "label": "Sizes (comma separated)", "info": "Must match variant titles, e.g. 0-6 M, 6-18 M, 18-36 M. Leave blank to hide the size step.", "default": "0-6 M, 6-18 M, 18-36 M" },
+    { "type": "text", "id": "size_empty_text", "label": "No-results text", "default": "No bags in that size are in stock in this weight right now." },
+
+    { "type": "header", "content": "Matching products" },
+    { "type": "collection", "id": "collection", "label": "Fallback collection", "info": "Used for the \"see all\" link before a weight is chosen. Each band supplies its own collection." },
+    { "type": "text", "id": "filter_tag", "label": "Narrow to tag", "info": "The TOG collections are \"Sleep Wear\" and include sleepsuits. Matched case-insensitively on whole tags. Leave blank to show everything in each collection.", "default": "sleep_bag" },
+    { "type": "range", "id": "limit", "label": "Max products per TOG", "min": 2, "max": 12, "step": 1, "default": 4 },
+    { "type": "range", "id": "grid", "label": "Products per row", "min": 2, "max": 5, "step": 1, "default": 4 },
+    { "type": "text", "id": "match_noun", "label": "Product noun", "default": "sleep bags" },
+    { "type": "text", "id": "view_all_label", "label": "View-all label", "default": "See all" },
+    { "type": "text", "id": "empty_text", "label": "Empty-weight text", "default": "Nothing in this weight is in stock right now. Try the next weight up or down." },
+
+    { "type": "header", "content": "Appearance" },
+    { "type": "color", "id": "bg_color", "label": "Background colour", "default": "#FAF9F6" },
+    { "type": "range", "id": "padding_top", "label": "Padding top", "min": 0, "max": 120, "step": 4, "default": 64, "unit": "px" },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 0, "max": 120, "step": 4, "default": 64, "unit": "px" }
+  ],
+  "blocks": [
+    {
+      "type": "band",
+      "name": "TOG band",
+      "settings": [
+        { "type": "text", "id": "tog", "label": "TOG value", "info": "Shown on the badge, e.g. 1.0", "default": "1.0" },
+        { "type": "collection", "id": "collection", "label": "Collection for this weight", "info": "e.g. \"1.0 TOG Sleep Wear\". Collections are used rather than TOG tags because the tags are incomplete and inconsistently capitalised across the catalogue." },
+        { "type": "range", "id": "temp_min_c", "label": "From (°C)", "min": 10, "max": 32, "step": 1, "default": 20 },
+        { "type": "range", "id": "temp_max_c", "label": "To (°C)", "min": 10, "max": 32, "step": 1, "default": 24 },
+        { "type": "text", "id": "title", "label": "Heading", "default": "Spring, fall and most heated homes" },
+        { "type": "textarea", "id": "body", "label": "Description" },
+        { "type": "text", "id": "layer", "label": "Layer underneath" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "LP TOG Picker",
+      "blocks": [{ "type": "band" }]
+    }
+  ]
+}
+{% endschema %}
