@@ -1,0 +1,282 @@
+{%- comment -%}
+  LP Size Guide
+  -------------
+  A real sizing table on the landing page.
+
+  Why this exists:
+  - Sizing is the most frustrated query cluster in this category.
+    Competitors rank with titles like "Sleep Sack Size Chart + Fit Tips
+    (No More Guessing)". This page previously had one FAQ line, and the
+    claim in it was wrong.
+  - Figures come from the store's own size chart page
+    (/pages/size-chart-sleep-bags), which is the chart every sleep bag
+    PDP links to via the custom.size_chart metafield. It lists imperial
+    only. Metric is a direct unit conversion of those same figures,
+    added because this is the .ca storefront -- no new claims.
+  - The "go by weight, not the age label" rule follows that chart.
+  - The snug-neck note is a safety point, not a fit preference: an
+    oversized opening is what lets a baby slip down inside the bag. It is
+    deliberately phrased so it cannot be read as "bigger is safer".
+
+  This section is a summary that links out to the full chart. It is
+  deliberately NOT a rewrite of the sizing blog post -- duplicating that
+  content here would put this page in competition with an article that
+  already ranks.
+{%- endcomment -%}
+
+<section id="section-id-{{ section.id }}" class="lp-size" {%- if section.settings.anchor_id != blank %} data-lp-size{% endif -%}>
+  <span id="{{ section.settings.anchor_id | default: 'sizing' }}" class="lp-size__anchor" aria-hidden="true"></span>
+
+  <div class="container">
+    <div class="lp-size__head">
+      {%- if section.settings.title != blank -%}
+        <h2>{{ section.settings.title }}</h2>
+      {%- endif -%}
+      {%- if section.settings.intro != blank -%}
+        <div class="lp-size__intro rte">{{ section.settings.intro }}</div>
+      {%- endif -%}
+    </div>
+
+    {%- assign rows = 0 -%}
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'size' -%}{%- assign rows = rows | plus: 1 -%}{%- endif -%}
+    {%- endfor -%}
+
+    {%- if rows > 0 -%}
+      <div class="lp-size__wrap">
+        <table class="lp-size__table">
+          <caption class="lp-size__caption">
+            {{ section.settings.table_caption | default: 'Sleep bag sizes by height and weight' }}
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">{{ section.settings.col_size   | default: 'Size' }}</th>
+              <th scope="col">{{ section.settings.col_height | default: 'Height' }}</th>
+              <th scope="col">{{ section.settings.col_weight | default: 'Weight' }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {%- for block in section.blocks -%}
+              {%- if block.type == 'size' -%}
+                <tr {{ block.shopify_attributes }}>
+                  <th scope="row" class="lp-size__name">{{ block.settings.size }}</th>
+                  <td data-label="{{ section.settings.col_height | default: 'Height' | escape }}">
+                    {{ block.settings.height }}
+                    {%- if block.settings.height_metric != blank -%}
+                      <span class="lp-size__alt">{{ block.settings.height_metric }}</span>
+                    {%- endif -%}
+                  </td>
+                  <td data-label="{{ section.settings.col_weight | default: 'Weight' | escape }}">
+                    {{ block.settings.weight }}
+                    {%- if block.settings.weight_metric != blank -%}
+                      <span class="lp-size__alt">{{ block.settings.weight_metric }}</span>
+                    {%- endif -%}
+                  </td>
+                </tr>
+              {%- endif -%}
+            {%- endfor -%}
+          </tbody>
+        </table>
+      </div>
+    {%- endif -%}
+
+    {%- if section.settings.rule != blank -%}
+      <div class="lp-size__rule rte">{{ section.settings.rule }}</div>
+    {%- endif -%}
+
+    {%- if section.settings.safety_note != blank -%}
+      <div class="lp-size__safety rte">{{ section.settings.safety_note }}</div>
+    {%- endif -%}
+
+    {%- if section.settings.link_url != blank and section.settings.link_label != blank -%}
+      <p class="lp-size__more">
+        <a href="{{ section.settings.link_url }}">
+          {{ section.settings.link_label }} <span aria-hidden="true">&rarr;</span>
+        </a>
+      </p>
+    {%- endif -%}
+  </div>
+</section>
+
+<style>
+  #section-id-{{ section.id }} {
+    padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
+    background: {{ section.settings.bg_color }};
+  }
+  #section-id-{{ section.id }} .lp-size__anchor {
+    display: block;
+    height: 0;
+    scroll-margin-top: 90px;
+  }
+  /* One centred column at a single width. Every neighbouring section on
+     this template (comparison table, rich text) is centred, so a
+     flush-left block here reads as a layout bug and leaves ~740px of
+     dead space on a wide viewport. Head, table, rule, callout and link
+     all share the same max-width so their left edges line up. */
+  #section-id-{{ section.id }} .lp-size__head {
+    max-width: 720px;
+    margin: 0 auto var(--lll-space-6);
+  }
+  #section-id-{{ section.id }} .lp-size__head h2 { margin: 0; }
+  #section-id-{{ section.id }} .lp-size__intro {
+    margin-top: var(--lll-space-4);
+    line-height: var(--lll-leading-body);
+  }
+
+  #section-id-{{ section.id }} .lp-size__wrap {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #section-id-{{ section.id }} .lp-size__table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--lll-white);
+    border: 1px solid var(--lll-slate-border);
+    border-radius: var(--lll-radius-md);
+    overflow: hidden;
+    font-variant-numeric: tabular-nums;
+  }
+  #section-id-{{ section.id }} .lp-size__caption {
+    caption-side: top;
+    text-align: left;
+    font-size: 0.6875rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: var(--lll-weight-subhead);
+    color: var(--lll-text-muted);
+    padding-bottom: var(--lll-space-3);
+  }
+  #section-id-{{ section.id }} .lp-size__table th,
+  #section-id-{{ section.id }} .lp-size__table td {
+    padding: var(--lll-space-4) var(--lll-space-5);
+    text-align: left;
+    border-bottom: 1px solid var(--lll-slate-border);
+  }
+  #section-id-{{ section.id }} .lp-size__table thead th {
+    background: #D1E3E6;
+    font-family: var(--lll-font-display);
+    font-size: 0.8125rem;
+    letter-spacing: 0.04em;
+    font-weight: var(--lll-weight-subhead);
+  }
+  #section-id-{{ section.id }} .lp-size__table tbody tr:last-child th,
+  #section-id-{{ section.id }} .lp-size__table tbody tr:last-child td { border-bottom: 0; }
+  #section-id-{{ section.id }} .lp-size__name {
+    font-family: var(--lll-font-display);
+    font-weight: var(--lll-weight-heading);
+    white-space: nowrap;
+  }
+  #section-id-{{ section.id }} .lp-size__alt {
+    display: block;
+    font-size: 0.8125rem;
+    color: var(--lll-text-muted);
+  }
+
+  #section-id-{{ section.id }} .lp-size__rule {
+    margin: var(--lll-space-6) auto 0;
+    max-width: 720px;
+    line-height: var(--lll-leading-body);
+  }
+  #section-id-{{ section.id }} .lp-size__safety {
+    margin: var(--lll-space-5) auto 0;
+    padding: var(--lll-space-4) var(--lll-space-5);
+    background: #D1E3E6;
+    border-left: 4px solid var(--lll-slate);
+    border-radius: var(--lll-radius-sm);
+    font-size: 0.95rem;
+    line-height: var(--lll-leading-body);
+    max-width: 720px;
+  }
+  #section-id-{{ section.id }} .lp-size__safety p:last-child { margin-bottom: 0; }
+  #section-id-{{ section.id }} .lp-size__more {
+    margin: var(--lll-space-6) auto 0;
+    max-width: 720px;
+    font-size: 0.9rem;
+    font-weight: var(--lll-weight-subhead);
+  }
+  #section-id-{{ section.id }} .lp-size__more a {
+    color: var(--lll-slate-deep);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 1px;
+  }
+
+  @media (max-width: 640px) {
+    #section-id-{{ section.id }} {
+      padding: {{ section.settings.padding_top | times: 0.7 | round }}px 0 {{ section.settings.padding_bottom | times: 0.7 | round }}px;
+    }
+    /* Stay a real table. The job here is comparing three rows to find the
+       one that matches your baby, and stacked cards make that comparison
+       harder, not easier -- you lose the shared column alignment.
+       Verified at 320/360/390/430px: no page or table overflow.
+
+       The previous revision stacked to cards, which also broke the
+       <caption>: with the table set to display:block the caption has no
+       table box to size against, so it shrank to its longest word and
+       rendered one word per line inside the card. Keeping display:table
+       avoids that class of bug entirely. */
+    #section-id-{{ section.id }} .lp-size__table { font-size: 0.95rem; }
+    #section-id-{{ section.id }} .lp-size__table th,
+    #section-id-{{ section.id }} .lp-size__table td {
+      padding: var(--lll-space-3) var(--lll-space-2);
+    }
+    /* Keep the outer edges breathing while the inner gutters tighten. */
+    #section-id-{{ section.id }} .lp-size__table th:first-child,
+    #section-id-{{ section.id }} .lp-size__table td:first-child { padding-left: var(--lll-space-4); }
+    #section-id-{{ section.id }} .lp-size__table th:last-child,
+    #section-id-{{ section.id }} .lp-size__table td:last-child { padding-right: var(--lll-space-4); }
+    #section-id-{{ section.id }} .lp-size__caption { letter-spacing: 0.08em; }
+    #section-id-{{ section.id }} .lp-size__table thead th {
+      font-size: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+    #section-id-{{ section.id }} .lp-size__name { font-size: 0.95rem; }
+    #section-id-{{ section.id }} .lp-size__alt { font-size: 0.75rem; }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "LP Size Guide",
+  "tag": "section",
+  "settings": [
+    { "type": "header", "content": "Content" },
+    { "type": "text", "id": "title", "label": "Heading", "default": "What size do I need?" },
+    { "type": "richtext", "id": "intro", "label": "Intro" },
+    { "type": "text", "id": "anchor_id", "label": "Anchor id", "default": "sizing" },
+    { "type": "richtext", "id": "rule", "label": "Choosing rule" },
+    { "type": "richtext", "id": "safety_note", "label": "Fit / safety callout" },
+    { "type": "text", "id": "link_label", "label": "Link label", "default": "Read the full sizing guide" },
+    { "type": "url", "id": "link_url", "label": "Link URL", "info": "Point at the existing guide rather than repeating it here." },
+
+    { "type": "header", "content": "Table" },
+    { "type": "text", "id": "table_caption", "label": "Table caption", "default": "Sleep bag sizes by height and weight" },
+    { "type": "text", "id": "col_size",   "label": "Column 1 heading", "default": "Size" },
+    { "type": "text", "id": "col_height", "label": "Column 2 heading", "default": "Height" },
+    { "type": "text", "id": "col_weight", "label": "Column 3 heading", "default": "Weight" },
+
+    { "type": "header", "content": "Appearance" },
+    { "type": "color", "id": "bg_color", "label": "Background colour", "default": "#FAF9F6" },
+    { "type": "range", "id": "padding_top", "label": "Padding top", "min": 0, "max": 120, "step": 4, "default": 48, "unit": "px" },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 0, "max": 120, "step": 4, "default": 48, "unit": "px" }
+  ],
+  "blocks": [
+    {
+      "type": "size",
+      "name": "Size row",
+      "settings": [
+        { "type": "text", "id": "size",          "label": "Size",              "default": "0–6 M" },
+        { "type": "text", "id": "height",        "label": "Height (primary)",  "default": "23–26\"" },
+        { "type": "text", "id": "height_metric", "label": "Height (secondary)","default": "58–66 cm" },
+        { "type": "text", "id": "weight",        "label": "Weight (primary)",  "default": "10–16 lbs" },
+        { "type": "text", "id": "weight_metric", "label": "Weight (secondary)","default": "4.5–7.3 kg" }
+      ]
+    }
+  ],
+  "presets": [
+    { "name": "LP Size Guide", "blocks": [{ "type": "size" }] }
+  ]
+}
+{% endschema %}
