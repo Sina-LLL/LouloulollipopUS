@@ -37,9 +37,7 @@
             endif
           -%}
           {%- for product in recommendations.products -%}{% comment %}start BSS Commerce Hide Price{% endcomment %}{% capture bss_lock_check %}{% render 'bss-lock-condition', scope: 'subject', subject: product, variable: 'transparent' %}{% endcapture %}{% if bss_lock_check contains 'true' %}{% continue %}<div style="display:none" class="bss-hpc-lock"></div>{% endif %}{% comment %}end BSS Commerce Hide Price{% endcomment %}
-            {%- unless product.tags contains "EXCLUDED" %}  
              {% render 'product-block', product: product, custom_aspect_ratio: chosen_aspect_ratio %}
-            {% endunless -%}
           {%- endfor -%}
 
         </div>
