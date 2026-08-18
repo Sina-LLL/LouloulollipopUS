@@ -10,6 +10,13 @@
 {
   "layout": "theme",
   "sections": {
+    "crumbs": {
+      "type": "main-page",
+      "settings": {
+        "show_page_title": false,
+        "full_width": false
+      }
+    },
     "hero": {
       "type": "image-with-text",
       "blocks": {
@@ -108,6 +115,138 @@
         "bg_color": "#6a8b95",
         "text_color": "#ffffff",
         "accent_color": "#ffc748"
+      }
+    },
+    "tog_picker": {
+      "type": "lp-tog-picker",
+      "blocks": {
+        "band_25": {
+          "type": "band",
+          "settings": {
+            "tog": "2.5",
+            "collection": "2-5-tog",
+            "temp_min_c": 16,
+            "temp_max_c": 20,
+            "title": "Winter and Cool Rooms",
+            "body": "Extra warmth for cold bedrooms or winter nights. If the room drops below 61°F (16°C), add a warmer layer underneath rather than a warmer bag.",
+            "layer": "a full-coverage sleeper"
+          }
+        },
+        "band_10": {
+          "type": "band",
+          "settings": {
+            "tog": "1.0",
+            "collection": "1-0-tog",
+            "temp_min_c": 20,
+            "temp_max_c": 24,
+            "title": "Spring, Fall and Mild Rooms",
+            "body": "Our most popular weight and the safe default — most homes sit between 68–75°F (20–24°C) year-round. Versatile enough for three-season use.",
+            "layer": "a long-sleeve bodysuit or fitted sleeper"
+          }
+        },
+        "band_05": {
+          "type": "band",
+          "settings": {
+            "tog": "0.5",
+            "collection": "0-5-tog",
+            "temp_min_c": 24,
+            "temp_max_c": 27,
+            "title": "Summer and Warm Rooms",
+            "body": "Lightweight and breathable. Ideal when room temperature stays above 75°F (24°C) — top-floor bedrooms, heatwaves, and rooms without air conditioning.",
+            "layer": "a short-sleeve bodysuit or light onesie"
+          }
+        }
+      },
+      "block_order": [
+        "band_25",
+        "band_10",
+        "band_05"
+      ],
+      "settings": {
+        "eyebrow": "",
+        "title": "Which TOG Do I Need?",
+        "intro": "<p>TOG (Thermal Overall Grade) measures how warm a sleep bag keeps your baby. The right TOG depends on your room temperature — not the season. The ideal sleep temperature is 65–68°F (18–20°C). Set your nursery temperature below and we'll show you the weight, the layer underneath, and the bags that match.</p>",
+        "comfort_check": "<p><strong>Comfort check:</strong> baby's chest and tummy should feel warm and dry — not clammy, sweaty, or cold. Hands and feet run cooler and aren't a reliable guide. If your room temperature changes between seasons, adjust the layer underneath before you change the TOG.</p>",
+        "anchor_id": "tog-picker",
+        "temp_label": "Your nursery temperature",
+        "temp_min": 15,
+        "temp_max": 27,
+        "temp_default": 21,
+        "layer_label": "Wear underneath:",
+        "gift_label": "Not sure — buying as a gift?",
+        "gift_temp": 21,
+        "gift_size": "6-18 M",
+        "gift_note": "1.0 TOG in 6–18 M suits most homes and most babies, and it's the weight and size parents reorder most. Sizing goes by height and weight rather than the age label — the chart below has the exact ranges. Don't buy a size up to grow into: a sleep bag needs to be snug at the neck and armholes so baby can't slip down inside.",
+        "size_label": "Your baby's size",
+        "size_all_label": "All sizes",
+        "sizes": "0-6 M, 6-18 M, 18-36 M",
+        "size_empty_text": "No bags in that size are in stock in this weight right now.",
+        "collection": "sleep-bags",
+        "filter_tag": "sleep_bag",
+        "limit": 8,
+        "grid": 4,
+        "match_noun": "sleep bags",
+        "view_all_label": "See All Sleep Bags",
+        "empty_text": "Nothing in this weight is in stock right now. Try the next weight up or down.",
+        "bg_color": "#faf9f6",
+        "padding_top": 48,
+        "padding_bottom": 40
+      }
+    },
+    "size_guide": {
+      "type": "lp-size-guide",
+      "blocks": {
+        "s1": {
+          "type": "size",
+          "settings": {
+            "size": "0–6 M",
+            "height": "23–26\"",
+            "height_metric": "58–66 cm",
+            "weight": "10–16 lbs",
+            "weight_metric": "4.5–7.3 kg"
+          }
+        },
+        "s2": {
+          "type": "size",
+          "settings": {
+            "size": "6–18 M",
+            "height": "26–34\"",
+            "height_metric": "66–86 cm",
+            "weight": "16–26 lbs",
+            "weight_metric": "7.3–11.8 kg"
+          }
+        },
+        "s3": {
+          "type": "size",
+          "settings": {
+            "size": "18–36 M",
+            "height": "34–40\"",
+            "height_metric": "86–102 cm",
+            "weight": "26–40 lbs",
+            "weight_metric": "11.8–18.1 kg"
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "settings": {
+        "title": "What Size Sleep Bag Do I Need?",
+        "intro": "<p>Sleep bags come in three sizes: 0–6 M, 6–18 M and 18–36 M. The age on the label is a rough guide — babies of the same age vary a lot. Measure instead.</p>",
+        "anchor_id": "sizing",
+        "rule": "<p><strong>If your baby falls between two sizes, go by weight rather than the age label.</strong> Weight is the better predictor of fit around the chest and shoulders, which is the part of a sleep bag that has to be right.</p>",
+        "safety_note": "<p><strong>How it should fit:</strong> snug at the top, roomy at the bottom. The neck opening and armholes should be small enough that your baby can't slip down inside the bag, and the bottom should be wide enough for free hip and leg movement. This is why buying a size up \"to grow into\" isn't the safer choice it sounds like.</p>",
+        "link_label": "See the Full Size Chart",
+        "link_url": "shopify://pages/size-chart-sleep-bags",
+        "table_caption": "Sleep bag size chart — height and weight",
+        "col_size": "Size",
+        "col_height": "Height",
+        "col_weight": "Weight",
+        "bg_color": "#ffffff",
+        "padding_top": 48,
+        "padding_bottom": 48
       }
     },
     "products": {
@@ -288,6 +427,60 @@
         "bottom_line": "Bottom line: Sleep bags are designed to work with babies — wearable, TOG-rated, and built to stay on all night."
       }
     },
+    "sleep_safety": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Are Sleep Bags Safe?",
+            "use_h1": false
+          }
+        },
+        "body": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A sleep bag is a wearable blanket. It keeps your baby warm without putting anything loose in the crib — which is the reason pediatric guidance points to them in the first place.</p><p>The American Academy of Pediatrics' 2022 safe sleep recommendations put it directly: if you're worried about your baby getting cold, you can dress them in layers of clothing or use a wearable blanket. The same guidance notes that a baby needs only one more layer than you would wear in the same environment to be comfortable, and advises against weighted swaddles, weighted sleep sacks, and weighted objects placed on or near a sleeping baby. None of our sleep bags are weighted.</p><p><strong>The rules that matter, every night:</strong></p><ul><li><strong>Back to sleep, on a firm flat surface.</strong> A sleep bag doesn't change this — baby still goes down on their back, in a crib or bassinet that meets current safety standards.</li><li><strong>Nothing else in the crib.</strong> A fitted sheet and the sleep bag. No pillows, bumpers, positioners, or loose blankets.</li><li><strong>Safe once your baby rolls.</strong> Sleep bags leave the arms free, so unlike a swaddle they don't have to be stopped when your baby starts rolling. Rolling is usually the signal to move from a swaddle into a sleep bag.</li><li><strong>Snug at the top, roomy at the bottom.</strong> The neck opening and armholes should be small enough that baby can't slip down inside; the bottom should be wide enough for free hip and leg movement.</li><li><strong>Don't over-layer.</strong> Check your baby's chest or back — it should feel warm and dry, not damp or hot. Hands and feet run cooler and aren't a reliable guide.</li></ul>",
+            "enlarge_text": false
+          }
+        },
+        "callout": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>This is general information, not medical advice. For guidance specific to your baby, talk to your pediatrician. The full recommendations are published by the American Academy of Pediatrics at <a href=\"https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/a-parents-guide-to-safe-sleep.aspx\" target=\"_blank\" rel=\"noopener\">healthychildren.org</a>.</p>"
+          }
+        },
+        "btn1": {
+          "type": "button",
+          "settings": {
+            "button_label": "When Can Babies Start Using a Sleep Bag?",
+            "button_link": "/blogs/the-lastest-scoop/when-can-babies-start-using-sleep-sacks",
+            "button_style": "link"
+          }
+        },
+        "btn2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Moving From a Swaddle to a Sleep Bag",
+            "button_link": "/blogs/the-lastest-scoop/when-to-transition-out-of-a-swaddle",
+            "button_style": "link"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "body",
+        "callout",
+        "btn1",
+        "btn2"
+      ],
+      "settings": {
+        "height": "medium",
+        "text_alignment": "left",
+        "full_width": false,
+        "color_scheme": "default"
+      }
+    },
     "safety": {
       "type": "image-with-text",
       "blocks": {
@@ -348,6 +541,9 @@
               "muslin-lightweight-sleep-bags-0-5-tog-canada",
               "muslin-lightweight-sleep-bag-0-5-tog-camper-vans"
             ],
+            "filter_pinned": false,
+            "filter_featured": false,
+            "filter_custom_tags": "",
             "star_rating": "all",
             "show_review_media": false,
             "display_order": "most_recent",
@@ -370,7 +566,8 @@
             "arrows_color": "#000000",
             "transition_speed": 10,
             "header_text": "What Parents Say",
-            "show_average_rating": true
+            "show_average_rating": true,
+            "rating_display": "default"
           }
         }
       },
@@ -530,205 +727,13 @@
         "coll_grid_image_shape": "square",
         "coll_grid_image_position": "center center",
         "coll_thumb_mob_per_row": "1",
+        "coll_thumb_per_column": "2",
         "coll_grid_show_count": false,
         "coll_text_position": "below",
         "coll_text_position_under_mobile": false,
         "coll_thumb_text_align_x": "center",
         "coll_thumb_text_align_y": "center",
         "coll_button_style": "primary"
-      }
-    },
-    "crumbs": {
-      "type": "main-page",
-      "settings": {
-        "show_page_title": false,
-        "full_width": false
-      }
-    },
-    "tog_picker": {
-      "type": "lp-tog-picker",
-      "blocks": {
-        "band_25": {
-          "type": "band",
-          "settings": {
-            "tog": "2.5",
-            "temp_min_c": 16,
-            "temp_max_c": 20,
-            "title": "Winter and Cool Rooms",
-            "body": "Extra warmth for cold bedrooms or winter nights. If the room drops below 61°F (16°C), add a warmer layer underneath rather than a warmer bag.",
-            "layer": "a full-coverage sleeper",
-            "collection": "2-5-tog"
-          }
-        },
-        "band_10": {
-          "type": "band",
-          "settings": {
-            "tog": "1.0",
-            "temp_min_c": 20,
-            "temp_max_c": 24,
-            "title": "Spring, Fall and Mild Rooms",
-            "body": "Our most popular weight and the safe default — most homes sit between 68–75°F (20–24°C) year-round. Versatile enough for three-season use.",
-            "layer": "a long-sleeve bodysuit or fitted sleeper",
-            "collection": "1-0-tog"
-          }
-        },
-        "band_05": {
-          "type": "band",
-          "settings": {
-            "tog": "0.5",
-            "temp_min_c": 24,
-            "temp_max_c": 27,
-            "title": "Summer and Warm Rooms",
-            "body": "Lightweight and breathable. Ideal when room temperature stays above 75°F (24°C) — top-floor bedrooms, heatwaves, and rooms without air conditioning.",
-            "layer": "a short-sleeve bodysuit or light onesie",
-            "collection": "0-5-tog"
-          }
-        }
-      },
-      "block_order": [
-        "band_25",
-        "band_10",
-        "band_05"
-      ],
-      "settings": {
-        "eyebrow": "",
-        "title": "Which TOG Do I Need?",
-        "intro": "<p>TOG (Thermal Overall Grade) measures how warm a sleep bag keeps your baby. The right TOG depends on your room temperature — not the season. The ideal sleep temperature is 65–68°F (18–20°C). Set your nursery temperature below and we'll show you the weight, the layer underneath, and the bags that match.</p>",
-        "comfort_check": "<p><strong>Comfort check:</strong> baby's chest and tummy should feel warm and dry — not clammy, sweaty, or cold. Hands and feet run cooler and aren't a reliable guide. If your room temperature changes between seasons, adjust the layer underneath before you change the TOG.</p>",
-        "anchor_id": "tog-picker",
-        "temp_label": "Your nursery temperature",
-        "temp_min": 15,
-        "temp_max": 27,
-        "temp_default": 21,
-        "layer_label": "Wear underneath:",
-        "size_label": "Your baby's size",
-        "size_all_label": "All sizes",
-        "sizes": "0-6 M, 6-18 M, 18-36 M",
-        "size_empty_text": "No bags in that size are in stock in this weight right now.",
-        "collection": "sleep-bags",
-        "limit": 4,
-        "grid": 4,
-        "match_noun": "sleep bags",
-        "view_all_label": "See All Sleep Bags",
-        "empty_text": "Nothing in this weight is in stock right now. Try the next weight up or down.",
-        "bg_color": "#FAF9F6",
-        "padding_top": 48,
-        "padding_bottom": 40,
-        "filter_tag": "sleep_bag",
-        "gift_label": "Not sure — buying as a gift?",
-        "gift_temp": 21,
-        "gift_size": "6-18 M",
-        "gift_note": "1.0 TOG in 6–18 M suits most homes and most babies, and it's the weight and size parents reorder most. Sizing goes by height and weight rather than the age label — the chart below has the exact ranges. Don't buy a size up to grow into: a sleep bag needs to be snug at the neck and armholes so baby can't slip down inside."
-      }
-    },
-    "size_guide": {
-      "type": "lp-size-guide",
-      "blocks": {
-        "s1": {
-          "type": "size",
-          "settings": {
-            "size": "0–6 M",
-            "height": "23–26\"",
-            "height_metric": "58–66 cm",
-            "weight": "10–16 lbs",
-            "weight_metric": "4.5–7.3 kg"
-          }
-        },
-        "s2": {
-          "type": "size",
-          "settings": {
-            "size": "6–18 M",
-            "height": "26–34\"",
-            "height_metric": "66–86 cm",
-            "weight": "16–26 lbs",
-            "weight_metric": "7.3–11.8 kg"
-          }
-        },
-        "s3": {
-          "type": "size",
-          "settings": {
-            "size": "18–36 M",
-            "height": "34–40\"",
-            "height_metric": "86–102 cm",
-            "weight": "26–40 lbs",
-            "weight_metric": "11.8–18.1 kg"
-          }
-        }
-      },
-      "block_order": [
-        "s1",
-        "s2",
-        "s3"
-      ],
-      "settings": {
-        "title": "What Size Sleep Bag Do I Need?",
-        "intro": "<p>Sleep bags come in three sizes: 0–6 M, 6–18 M and 18–36 M. The age on the label is a rough guide — babies of the same age vary a lot. Measure instead.</p>",
-        "anchor_id": "sizing",
-        "table_caption": "Sleep bag size chart — height and weight",
-        "col_size": "Size",
-        "col_height": "Height",
-        "col_weight": "Weight",
-        "rule": "<p><strong>If your baby falls between two sizes, go by weight rather than the age label.</strong> Weight is the better predictor of fit around the chest and shoulders, which is the part of a sleep bag that has to be right.</p>",
-        "safety_note": "<p><strong>How it should fit:</strong> snug at the top, roomy at the bottom. The neck opening and armholes should be small enough that your baby can't slip down inside the bag, and the bottom should be wide enough for free hip and leg movement. This is why buying a size up \"to grow into\" isn't the safer choice it sounds like.</p>",
-        "link_label": "See the Full Size Chart",
-        "link_url": "shopify://pages/size-chart-sleep-bags",
-        "bg_color": "#ffffff",
-        "padding_top": 48,
-        "padding_bottom": 48
-      }
-    },
-    "sleep_safety": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "title": "Are Sleep Bags Safe?",
-            "use_h1": false
-          }
-        },
-        "body": {
-          "type": "text",
-          "settings": {
-            "text": "<p>A sleep bag is a wearable blanket. It keeps your baby warm without putting anything loose in the crib — which is the reason pediatric guidance points to them in the first place.</p><p>The American Academy of Pediatrics' 2022 safe sleep recommendations put it directly: if you're worried about your baby getting cold, you can dress them in layers of clothing or use a wearable blanket. The same guidance notes that a baby needs only one more layer than you would wear in the same environment to be comfortable, and advises against weighted swaddles, weighted sleep sacks, and weighted objects placed on or near a sleeping baby. None of our sleep bags are weighted.</p><p><strong>The rules that matter, every night:</strong></p><ul><li><strong>Back to sleep, on a firm flat surface.</strong> A sleep bag doesn't change this — baby still goes down on their back, in a crib or bassinet that meets current safety standards.</li><li><strong>Nothing else in the crib.</strong> A fitted sheet and the sleep bag. No pillows, bumpers, positioners, or loose blankets.</li><li><strong>Safe once your baby rolls.</strong> Sleep bags leave the arms free, so unlike a swaddle they don't have to be stopped when your baby starts rolling. Rolling is usually the signal to move from a swaddle into a sleep bag.</li><li><strong>Snug at the top, roomy at the bottom.</strong> The neck opening and armholes should be small enough that baby can't slip down inside; the bottom should be wide enough for free hip and leg movement.</li><li><strong>Don't over-layer.</strong> Check your baby's chest or back — it should feel warm and dry, not damp or hot. Hands and feet run cooler and aren't a reliable guide.</li></ul>",
-            "enlarge_text": false
-          }
-        },
-        "callout": {
-          "type": "callout",
-          "settings": {
-            "text": "<p>This is general information, not medical advice. For guidance specific to your baby, talk to your pediatrician. The full recommendations are published by the American Academy of Pediatrics at <a href=\"https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/a-parents-guide-to-safe-sleep.aspx\" target=\"_blank\" rel=\"noopener\">healthychildren.org</a>.</p>"
-          }
-        },
-        "btn1": {
-          "type": "button",
-          "settings": {
-            "button_label": "When Can Babies Start Using a Sleep Bag?",
-            "button_link": "/blogs/the-lastest-scoop/when-can-babies-start-using-sleep-sacks",
-            "button_style": "link"
-          }
-        },
-        "btn2": {
-          "type": "button",
-          "settings": {
-            "button_label": "Moving From a Swaddle to a Sleep Bag",
-            "button_link": "/blogs/the-lastest-scoop/when-to-transition-out-of-a-swaddle",
-            "button_style": "link"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "body",
-        "callout",
-        "btn1",
-        "btn2"
-      ],
-      "settings": {
-        "height": "medium",
-        "text_alignment": "left",
-        "full_width": false,
-        "color_scheme": "default"
       }
     }
   },
