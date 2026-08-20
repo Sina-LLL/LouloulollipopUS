@@ -1,0 +1,210 @@
+<section
+  class="lp-fabric"
+  style="--fab-bg: {{ section.settings.bg_color }}; --fab-padding-top: {{ section.settings.padding_top | default: 72 }}px; --fab-padding-bottom: {{ section.settings.padding_bottom | default: 72 }}px;"
+>
+  <div class="lp-fabric__container">
+    {%- if section.settings.title != blank or section.settings.intro != blank -%}
+      <div class="lp-fabric__head">
+        {%- if section.settings.title != blank -%}
+          <h2>{{ section.settings.title }}</h2>
+        {%- endif -%}
+        {%- if section.settings.intro != blank -%}
+          <p>{{ section.settings.intro }}</p>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <input type="radio" class="lp-fabric__radio" name="lp-fabric-tabs" id="lp-fabric-tab1" checked>
+    <input type="radio" class="lp-fabric__radio" name="lp-fabric-tabs" id="lp-fabric-tab2">
+
+    <div class="lp-fabric__switch" role="tablist">
+      <label class="lp-fabric__switch-label btn btn--secondary" for="lp-fabric-tab1" role="tab">{{ section.settings.tab1_label }}</label>
+      <label class="lp-fabric__switch-label btn btn--secondary" for="lp-fabric-tab2" role="tab">{{ section.settings.tab2_label }}</label>
+    </div>
+
+    <div class="lp-fabric__panel" data-panel="1" role="tabpanel">
+      <div class="lp-fabric__wrap">
+        <div class="lp-fabric__scroll desktop-only">
+          <table class="lp-fabric__table">
+            <thead>
+              <tr>
+                <th></th>
+                <th class="lp-fabric__col-ours">{{ section.settings.tab1_col_ours }}</th>
+                <th>{{ section.settings.tab1_col_other_1 }}</th>
+                <th>{{ section.settings.tab1_col_other_2 }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {%- for block in section.blocks -%}
+                {%- if block.type == 'row' and block.settings.tab == 'tab1' -%}
+                  <tr {{ block.shopify_attributes }}>
+                    <td class="lp-fabric__feature">{{ block.settings.feature }}</td>
+                    <td class="lp-fabric__col-ours">{{ block.settings.our_value }}</td>
+                    <td>{{ block.settings.other_value_1 }}</td>
+                    <td>{{ block.settings.other_value_2 }}</td>
+                  </tr>
+                {%- endif -%}
+              {%- endfor -%}
+            </tbody>
+          </table>
+        </div>
+        <div class="lp-fabric__accordion mobile-only">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'row' and block.settings.tab == 'tab1' -%}
+              <details-disclosure {{ block.shopify_attributes }}>
+                <details class="disclosure lp-fabric__accordion-row">
+                  <summary class="disclosure__title">{{ block.settings.feature }}</summary>
+                  <div class="disclosure__panel has-motion">
+                    <div class="disclosure__content">
+                      <div class="lp-fabric__accordion-item lp-fabric__accordion-item--ours">
+                        <span class="lp-fabric__accordion-label">{{ section.settings.tab1_col_ours }}</span>
+                        <span class="lp-fabric__accordion-value">{{ block.settings.our_value }}</span>
+                      </div>
+                      <div class="lp-fabric__accordion-item">
+                        <span class="lp-fabric__accordion-label">{{ section.settings.tab1_col_other_1 }}</span>
+                        <span class="lp-fabric__accordion-value">{{ block.settings.other_value_1 }}</span>
+                      </div>
+                      <div class="lp-fabric__accordion-item">
+                        <span class="lp-fabric__accordion-label">{{ section.settings.tab1_col_other_2 }}</span>
+                        <span class="lp-fabric__accordion-value">{{ block.settings.other_value_2 }}</span>
+                      </div>
+                    </div>
+                  </div>
+                </details>
+              </details-disclosure>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+        {%- if section.settings.bottom_line_1 != blank -%}
+          <div class="lp-fabric__bottom-line">
+            {{ section.settings.bottom_line_1 }}
+          </div>
+        {%- endif -%}
+        {%- if section.settings.cta_label_1 != blank -%}
+          <div class="lp-fabric__cta">
+            <a href="{{ section.settings.cta_link_1 }}" class="btn btn--primary">{{ section.settings.cta_label_1 }}</a>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+
+    <div class="lp-fabric__panel" data-panel="2" role="tabpanel">
+      <div class="lp-fabric__wrap">
+        <div class="lp-fabric__scroll desktop-only">
+          <table class="lp-fabric__table">
+            <thead>
+              <tr>
+                <th></th>
+                <th class="lp-fabric__col-ours">{{ section.settings.tab2_col_ours }}</th>
+                <th>{{ section.settings.tab2_col_other_1 }}</th>
+                <th>{{ section.settings.tab2_col_other_2 }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {%- for block in section.blocks -%}
+                {%- if block.type == 'row' and block.settings.tab == 'tab2' -%}
+                  <tr {{ block.shopify_attributes }}>
+                    <td class="lp-fabric__feature">{{ block.settings.feature }}</td>
+                    <td class="lp-fabric__col-ours">{{ block.settings.our_value }}</td>
+                    <td>{{ block.settings.other_value_1 }}</td>
+                    <td>{{ block.settings.other_value_2 }}</td>
+                  </tr>
+                {%- endif -%}
+              {%- endfor -%}
+            </tbody>
+          </table>
+        </div>
+        <div class="lp-fabric__accordion mobile-only">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'row' and block.settings.tab == 'tab2' -%}
+              <details-disclosure {{ block.shopify_attributes }}>
+                <details class="disclosure lp-fabric__accordion-row">
+                  <summary class="disclosure__title">{{ block.settings.feature }}</summary>
+                  <div class="disclosure__panel has-motion">
+                    <div class="disclosure__content">
+                      <div class="lp-fabric__accordion-item lp-fabric__accordion-item--ours">
+                        <span class="lp-fabric__accordion-label">{{ section.settings.tab2_col_ours }}</span>
+                        <span class="lp-fabric__accordion-value">{{ block.settings.our_value }}</span>
+                      </div>
+                      <div class="lp-fabric__accordion-item">
+                        <span class="lp-fabric__accordion-label">{{ section.settings.tab2_col_other_1 }}</span>
+                        <span class="lp-fabric__accordion-value">{{ block.settings.other_value_1 }}</span>
+                      </div>
+                      <div class="lp-fabric__accordion-item">
+                        <span class="lp-fabric__accordion-label">{{ section.settings.tab2_col_other_2 }}</span>
+                        <span class="lp-fabric__accordion-value">{{ block.settings.other_value_2 }}</span>
+                      </div>
+                    </div>
+                  </div>
+                </details>
+              </details-disclosure>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+        {%- if section.settings.bottom_line_2 != blank -%}
+          <div class="lp-fabric__bottom-line">
+            {{ section.settings.bottom_line_2 }}
+          </div>
+        {%- endif -%}
+        {%- if section.settings.cta_label_2 != blank -%}
+          <div class="lp-fabric__cta">
+            <a href="{{ section.settings.cta_link_2 }}" class="btn btn--primary">{{ section.settings.cta_label_2 }}</a>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "LP Comparison Tabs",
+  "settings": [
+    { "type": "color",    "id": "bg_color",       "label": "Background colour", "default": "#FAF9F6" },
+    { "type": "text",     "id": "title",           "label": "Heading" },
+    { "type": "textarea", "id": "intro",           "label": "Intro text" },
+    { "type": "header",   "content": "Tab 1" },
+    { "type": "text",     "id": "tab1_label",       "label": "Tab 1 label", "default": "TENCEL™ vs Bamboo vs Polyester" },
+    { "type": "text",     "id": "tab1_col_ours",    "label": "Tab 1 – our column header", "default": "TENCEL™ Lyocell" },
+    { "type": "text",     "id": "tab1_col_other_1", "label": "Tab 1 – competitor column 1", "default": "Bamboo Viscose/Rayon" },
+    { "type": "text",     "id": "tab1_col_other_2", "label": "Tab 1 – competitor column 2", "default": "Polyester" },
+    { "type": "textarea", "id": "bottom_line_1",    "label": "Tab 1 – bottom-line callout", "info": "Type the full sentence, e.g. \"Bottom line: ...\"" },
+    { "type": "text",     "id": "cta_label_1",      "label": "Tab 1 – CTA label" },
+    { "type": "url",      "id": "cta_link_1",       "label": "Tab 1 – CTA link" },
+    { "type": "header",   "content": "Tab 2" },
+    { "type": "text",     "id": "tab2_label",       "label": "Tab 2 label", "default": "Tanboocel® vs Bamboo vs Polyester" },
+    { "type": "text",     "id": "tab2_col_ours",    "label": "Tab 2 – our column header", "default": "Tanboocel®" },
+    { "type": "text",     "id": "tab2_col_other_1", "label": "Tab 2 – competitor column 1", "default": "Bamboo Viscose/Rayon" },
+    { "type": "text",     "id": "tab2_col_other_2", "label": "Tab 2 – competitor column 2", "default": "Polyester" },
+    { "type": "textarea", "id": "bottom_line_2",    "label": "Tab 2 – bottom-line callout", "info": "Type the full sentence, e.g. \"Bottom line: ...\"" },
+    { "type": "text",     "id": "cta_label_2",      "label": "Tab 2 – CTA label" },
+    { "type": "url",      "id": "cta_link_2",       "label": "Tab 2 – CTA link" },
+    { "type": "header",   "content": "Spacing" },
+    { "type": "range", "id": "padding_top",    "label": "Padding top",    "min": 0, "max": 120, "step": 4, "default": 72, "unit": "px" },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 0, "max": 120, "step": 4, "default": 72, "unit": "px" }
+  ],
+  "blocks": [
+    {
+      "type": "row",
+      "name": "Row",
+      "settings": [
+        {
+          "type": "select",
+          "id": "tab",
+          "label": "Belongs to tab",
+          "default": "tab1",
+          "options": [
+            { "value": "tab1", "label": "Tab 1" },
+            { "value": "tab2", "label": "Tab 2" }
+          ]
+        },
+        { "type": "text", "id": "feature",       "label": "Feature" },
+        { "type": "text", "id": "our_value",     "label": "Our value" },
+        { "type": "text", "id": "other_value_1", "label": "Competitor 1 value" },
+        { "type": "text", "id": "other_value_2", "label": "Competitor 2 value" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "LP Comparison Tabs" }]
+}
+{% endschema %}

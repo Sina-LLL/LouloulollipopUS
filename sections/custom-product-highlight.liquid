@@ -1,88 +1,70 @@
+{%- liquid
+  assign product_count = section.settings.product_list | size
+  if section.settings.products_per_row == 'auto'
+    if product_count > 0 and product_count <= 4
+      assign per_row = 2
+    else
+      assign per_row = 3
+    endif
+  else
+    assign per_row = section.settings.products_per_row | plus: 0
+  endif
+-%}
+
 <div id="section-id-{{ section.id }}" class="{% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }} fully-padded-row--medium{% else %}fully-spaced-row--medium{% endif %}">
   <div class="custom-product-highlight__container container container--no-max">
-    <div class="flexible-layout flexible-layout--variable-columns valign-top ">
-      <div class="desktop-only custom-product-highlight__image-container column text-column fade-in-up {% if section.settings.order %}column--order-push-desktop{% endif %}" {%- render 'animation-attrs', attrs: animation_attrs -%}>
-        <div class="text-column__image lightly-spaced-row custom-product-highlight__image">  
-        {%- if section.settings.image != blank -%}
-            {%- render 'image' with section.settings.image, sizes: sizes, widths: widths, size_cols_desktop: size_cols_desktop, custom_aspect_ratio: 1-%}
-        {%- else -%}
-          <div class="placeholder-image">
-            {{- 'image' | placeholder_svg_tag: 'placeholder-svg' -}}
+    <div class="custom-product-highlight__layout{% if section.settings.order %} custom-product-highlight__layout--reverse{% endif %}">
+
+      <div class="custom-product-highlight__media height--adapt image-overlay image-overlay--bg-shadow fade-in-up" style="--aspect-ratio: 0.8;" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
+        {%- if section.settings.link != blank -%}<a class="image-overlay__image-link" href="{{ section.settings.link }}">{%- endif -%}
+        <div class="height__image image-overlay__image">
+          {%- if section.settings.image != blank -%}
+            {%- render 'image' with section.settings.image, sizes: '(min-width: 900px) 46vw, 100vw', widths: '640, 960, 1280, 1600', custom_aspect_ratio: 0.8 -%}
+          {%- else -%}
+            <div class="placeholder-image dark">{{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}</div>
+          {%- endif -%}
+        </div>
+        {%- if section.settings.link != blank -%}</a>{%- endif -%}
+
+        <div class="text-overlay text-overlay--for-banner text-overlay--v-bottom text-overlay--h-left image-overlay__over">
+          <div class="text-overlay__inner">
+            <div class="text-overlay__text">
+              {%- if section.settings.title != blank -%}
+                <h2 class="text-overlay__title custom-product-highlight__overlay-title">{{ section.settings.title | escape }}</h2>
+              {%- endif -%}
+              {%- if section.settings.text != blank -%}
+                <div class="text-overlay__rte rte">{{ section.settings.text }}</div>
+              {%- endif -%}
+              {%- if section.settings.button_label != blank -%}
+                <div class="text-overlay__button-row button-row">
+                  <a class="text-overlay__button button-row__btn {% if section.settings.button_style != 'link' %}btn btn--{{ section.settings.button_style }}{% else %}small-feature-link{% endif %}" href="{{ section.settings.link }}">{{ section.settings.button_label | escape }}</a>
+                </div>
+              {%- endif -%}
+            </div>
           </div>
-        {%- endif -%}
         </div>
       </div>
-      <div class="column text-column fade-in-up" {%- render 'animation-attrs', attrs: animation_attrs -%}>
-        <div class="text-column__image lightly-spaced-row">
-          <h2 class=" h4" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}>
-              <a class="has-paging__title" href="{{ section.settings.link }}">{{ section.settings.title | escape }}</a>
-            </h2>
-            {% if section.settings.text != blank %}
-              <div class="text-column__text rte" {%- render 'animation-attrs', attrs: animation_attrs -%}>{{ section.settings.text }}</div>
-            {% endif %}
-          </div> 
-        <div class="mobile-only custom-product-highlight__image-container column text-column fade-in-up {% if section.settings.order %}column--order-push-desktop{% endif %}" {%- render 'animation-attrs', attrs: animation_attrs -%}>
-          <div class="text-column__image lightly-spaced-row custom-product-highlight__image">  
-          {%- if section.settings.image != blank -%}
-              {%- render 'image' with section.settings.image, sizes: sizes, widths: widths, size_cols_desktop: size_cols_desktop, custom_aspect_ratio: 1-%}
-          {%- else -%}
-            <div class="placeholder-image">
-              {{- 'image' | placeholder_svg_tag: 'placeholder-svg' -}}
+
+      <div class="custom-product-highlight__products fade-in-up" style="--product-highlight-cols: {{ per_row }};" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
+        <carousel-slider class="carousel block" style="width: 100%;">
+          <div class="collection-listing slider">
+            <div class="product-grid product-grid--per-row-{{ per_row }} product-grid--per-row-mob-2 slider__grid product-grid--carousel">
+              {%- if section.settings.product_list == blank -%}
+                {%- for i in (1..6) -%}
+                  {%- render 'onboarding-product-block', forloop: forloop -%}
+                {%- endfor -%}
+              {%- else -%}
+                {%- for product in section.settings.product_list limit: 6 -%}
+                  <div class="slider__item">
+                    {%- render 'product-block', product: product, custom_aspect_ratio: 0.8, no_swiping: true, no_quick_buy_markup: true -%}
+                  </div>
+                {%- endfor -%}
+              {%- endif -%}
             </div>
-          {%- endif -%}
           </div>
-        </div>
-          <div class="collection-listing fade-in-up" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
-            <div class="product-grid product-grid--per-row-{{ section.settings.grid }} product-grid--per-row-mob-{{ settings.prod_thumb_mob_per_row }}">
-              {%- liquid
-                if section.settings.product_list == blank
-                  for i in (1..4)
-                    
-                    render 'onboarding-product-block', forloop: forloop
-                   
-                  endfor
-                else
-                  if settings.prod_thumb_shape == 'portrait-23'
-                    assign chosen_aspect_ratio = 0.67
-                  elsif settings.prod_thumb_shape == 'portrait-45'
-                    assign chosen_aspect_ratio = 0.8
-                  elsif settings.prod_thumb_shape == 'square'
-                    assign chosen_aspect_ratio = 1.0
-                  elsif settings.prod_thumb_shape == 'landscape-54'
-                    assign chosen_aspect_ratio = 1.25
-                  elsif settings.prod_thumb_shape == 'landscape-32'
-                    assign chosen_aspect_ratio = 1.50
-                  elsif settings.prod_thumb_shape == 'tallest'
-                    assign chosen_aspect_ratio = 99
-                    for product in section.settings.product_list
-                      if product.featured_media.preview_image.aspect_ratio < chosen_aspect_ratio
-                        assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
-                      endif
-                    endfor
-                  else
-                    assign chosen_aspect_ratio = 0
-                    for product in section.settings.product_list
-                      if product.featured_media.preview_image.aspect_ratio > chosen_aspect_ratio
-                        assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
-                      endif
-                    endfor
-                  endif
-                  for product in section.settings.product_list
-                    
-                    render 'product-block', product: product, custom_aspect_ratio: 0.8, no_swiping: section.settings.enable_carousel, no_quick_buy_markup: section.settings.enable_carousel
-                    
-                  endfor
-                endif
-              -%}
-             
-            </div>
-                        {% if section.settings.button_label != blank %}
-            <div class="button-row--{{ section.settings.button_style }}">
-              <a class="text-column__button {% if section.settings.button_style != 'link' %}btn btn--{{ section.settings.button_style }}{% else %}small-feature-link{% endif %}" href="{{ section.settings.link }}">{{ section.settings.button_label | escape }}</a>
-            </div>
-            {% endif %}
-          </div>
-        </div>
+        </carousel-slider>
+      </div>
+
     </div>
   </div>
 </div>
@@ -110,13 +92,15 @@
     {
       "type": "richtext",
       "id": "text",
-      "label": "Text",
-      "default": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>"
+      "label": "Subtitle text",
+      "info": "Keep it short — this sits over the photo, like a one-line subtitle.",
+      "default": "<p>Share a short line about this collection.</p>"
     },
     {
       "type": "image_picker",
       "id": "image",
-      "label": "Image"
+      "label": "Image",
+      "info": "Always cropped to a square."
     },
     {
       "type": "checkbox",
@@ -128,12 +112,25 @@
       "type": "product_list",
       "id": "product_list",
       "label": "Product list",
-      "limit": 4
+      "limit": 6
+    },
+    {
+      "type": "select",
+      "id": "products_per_row",
+      "label": "Products per row (desktop)",
+      "info": "Auto uses 2 columns for 2–4 products and 3 columns for 5–6.",
+      "default": "auto",
+      "options": [
+        { "value": "auto", "label": "Auto" },
+        { "value": "2", "label": "2 columns" },
+        { "value": "3", "label": "3 columns" }
+      ]
     },
     {
       "type": "text",
       "id": "button_label",
-      "label": "Button label"
+      "label": "Button label",
+      "default": "Shop Now"
     },
     {
       "type": "url",
