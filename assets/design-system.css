@@ -1667,3 +1667,302 @@ h4, .h4 {
   }
 }
 
+
+/* ============================================================
+   FABRIC COMPARISON CHART (lp-comparison-tabs.liquid) — homepage
+   "Better Fabrics, By Design" section.
+   Matches sections/lp-comparison.liquid (the sibling "vs" chart used
+   on lp-sleep-bags and other landing pages) class-for-class, extended
+   with a tab switch for two tables and a third competitor column.
+   Uses that component's own border/tint system (#6A8B95 / #D1E3E6 /
+   #BAD5D9, 6px radius) rather than the --lll-* tokens above — this
+   component predates the token system and lp-sleep-bags is the
+   explicit design reference, not design-system.css itself.
+   ============================================================ */
+.lp-fabric {
+  background: var(--fab-bg, #FAF9F6);
+  padding: var(--fab-padding-top, 72px) 0 var(--fab-padding-bottom, 72px);
+}
+
+.lp-fabric__container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.lp-fabric__head {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 48px;
+}
+
+.lp-fabric__head p {
+  font-size: 1.1rem;
+  margin-top: 12px;
+}
+
+.lp-fabric__switch {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.lp-fabric__radio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Base look comes from the real .btn / .btn--secondary classes applied
+   in the markup (radius, padding, font, hover, focus — all real).
+   This only adds layout (flex/gap) and the active-state override,
+   using the real --lll-* tokens the button system itself resolves to
+   (--lll-slate-action for primary bg/border, --lll-cream for its text). */
+.lp-fabric__switch-label {
+  cursor: pointer;
+  padding: 14px 24px;
+  text-align: center;
+  user-select: none;
+}
+
+#lp-fabric-tab1:checked ~ .lp-fabric__switch label[for="lp-fabric-tab1"],
+#lp-fabric-tab2:checked ~ .lp-fabric__switch label[for="lp-fabric-tab2"] {
+  background-color: var(--lll-slate-action);
+  border-color: var(--lll-slate-action);
+  color: var(--lll-cream);
+}
+
+#lp-fabric-tab1:focus-visible ~ .lp-fabric__switch label[for="lp-fabric-tab1"],
+#lp-fabric-tab2:focus-visible ~ .lp-fabric__switch label[for="lp-fabric-tab2"] {
+  outline: 2px solid var(--lll-slate-action);
+  outline-offset: 2px;
+}
+
+.lp-fabric__panel {
+  display: none;
+}
+
+#lp-fabric-tab1:checked ~ .lp-fabric__panel[data-panel="1"],
+#lp-fabric-tab2:checked ~ .lp-fabric__panel[data-panel="2"] {
+  display: block;
+}
+
+.lp-fabric__wrap {
+  margin: 0 auto;
+}
+
+.lp-fabric__scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.lp-fabric__table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid #6A8B95;
+  border-radius: 6px;
+  overflow: hidden;
+  font-size: 0.95rem;
+}
+
+.lp-fabric__table thead {
+  background: #D1E3E6;
+  font-family: var(--heading-font-family);
+}
+
+.lp-fabric__table th,
+.lp-fabric__table td {
+  padding: 15px 20px;
+  text-align: left;
+  border-bottom: 1px solid #6A8B95;
+}
+
+.lp-fabric__table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.lp-fabric__feature {
+  font-weight: 600;
+}
+
+.lp-fabric__col-ours {
+  background: #BAD5D9;
+  font-weight: 600;
+}
+
+.lp-fabric__bottom-line {
+  margin-top: 28px;
+  padding: 18px 22px;
+  background: #D1E3E6;
+  border-left: 4px solid #6A8B95;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.lp-fabric__cta {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.lp-fabric__accordion-row.disclosure {
+  margin-bottom: 0;
+  border-top: none;
+  border-bottom: 1px solid var(--lll-slate-border, #D9E1E4);
+}
+
+.lp-fabric__accordion-row.disclosure:first-child {
+  border-top: 1px solid var(--lll-slate-border, #D9E1E4);
+}
+
+.lp-fabric__accordion-row .disclosure__title {
+  padding: 18px 0;
+  font-family: var(--lll-font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.lp-fabric__accordion-row .disclosure__content {
+  padding: 0 0 22px;
+  color: inherit;
+}
+
+.lp-fabric__accordion-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 0;
+}
+
+.lp-fabric__accordion-item + .lp-fabric__accordion-item {
+  border-top: 1px solid var(--lll-slate-border, #D9E1E4);
+}
+
+.lp-fabric__accordion-item--ours {
+  background: #BAD5D9;
+  border-radius: var(--lll-radius-sm, 4px);
+  padding: 12px 14px;
+  margin: 4px 0;
+}
+
+.lp-fabric__accordion-item--ours + .lp-fabric__accordion-item {
+  border-top: none;
+}
+
+.lp-fabric__accordion-label {
+  color: #6A8B95;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.lp-fabric__accordion-item--ours .lp-fabric__accordion-label {
+  color: #3E5960;
+  font-weight: 600;
+}
+
+.lp-fabric__accordion-value {
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.lp-fabric__accordion-item--ours .lp-fabric__accordion-value {
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .lp-fabric {
+    padding: calc(var(--fab-padding-top, 72px) * 0.67) 0 calc(var(--fab-padding-bottom, 72px) * 0.67);
+  }
+  .lp-fabric__table th,
+  .lp-fabric__table td {
+    padding: 10px 12px;
+    font-size: 0.82rem;
+  }
+  .lp-fabric__switch-label {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lp-fabric__switch-label {
+    transition: none;
+  }
+}
+
+/* ============================================================
+   PRODUCT HIGHLIGHT (custom-product-highlight.liquid) — homepage
+   "Swaddling Made Simple" / "Gift-able Bundles" sections. Image with
+   text overlaid on it (title/subtitle/Shop Now button, bottom-left)
+   beside a product grid (2 or 3 columns depending on count), a
+   swipeable single row on mobile.
+   Reuses real components rather than inventing new ones: the
+   text-over-image markup/classes come from image-with-text-overlay.liquid
+   (.image-overlay / .height--adapt / .text-overlay), the product row
+   comes from featured-collection.liquid's real carousel
+   (.product-grid--carousel / .slider__grid / carousel-slider). This
+   only adds the two-column layout, the image radius, and the desktop
+   override that turns the carousel into a static grid.
+   ============================================================ */
+.custom-product-highlight__layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gutter, 24px);
+}
+
+@media (min-width: 900px) {
+  .custom-product-highlight__layout {
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1fr);
+    align-items: start;
+  }
+  .custom-product-highlight__layout--reverse {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
+  }
+  .custom-product-highlight__layout--reverse .custom-product-highlight__media {
+    order: 2;
+  }
+}
+
+.custom-product-highlight__media {
+  position: relative;
+  border-radius: var(--lll-radius-lg, 12px);
+  overflow: hidden;
+}
+
+/* The overlay title inherits font-family/weight from the site's h2 rule
+   automatically (it's still an <h2>) — this only reins in the size, since
+   the bare .h1 class here inherited the full hero-banner scale. */
+.custom-product-highlight__overlay-title {
+  font-size: var(--lll-text-h3, 1.75rem);
+}
+
+.custom-product-highlight__products {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.custom-product-highlight__products carousel-slider {
+  min-width: 0;
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  .custom-product-highlight__products .product-grid--carousel {
+    display: grid;
+    grid-template-columns: repeat(var(--product-highlight-cols, 3), 1fr);
+    grid-auto-flow: row;
+    gap: var(--gutter, 24px);
+    overflow: visible;
+    width: 100%;
+  }
+  .custom-product-highlight__products .slider__item {
+    flex: none;
+    width: auto;
+  }
+}
