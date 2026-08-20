@@ -579,6 +579,11 @@
         "type": "shopify://apps/consentmo-gdpr/blocks/gdpr_cookie_consent/4fbe573f-a377-4fea-9801-3ee0858cae41",
         "disabled": true,
         "settings": {}
+      },
+      "14815887870077050570": {
+        "type": "shopify://apps/bazaarvoice-reviews-photos/blocks/bvjs_block/766ed9d3-b120-48f3-8444-448f45152f47",
+        "disabled": false,
+        "settings": {}
       }
     }
   }
