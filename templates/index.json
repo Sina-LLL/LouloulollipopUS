@@ -267,16 +267,17 @@
         "collection": "onec-silicone-pacifier-clips",
         "show_vendor": false,
         "enable_carousel": true,
-        "grid": 4,
+        "grid": 5,
         "rows": 1,
         "color_scheme": "default",
         "show_view_all": true,
-        "full_width": false,
+        "full_width": true,
         "text_alignment": "start"
       }
     },
     "custom_product_highlight_JbY3qf": {
       "type": "custom-product-highlight",
+      "disabled": true,
       "name": "Highlighted Collection",
       "settings": {
         "title": "Swaddling Made Simple",
@@ -287,9 +288,96 @@
           "swaddle-wrap-1-0-tog-safari-jungle",
           "swaddle-wrap-1-0-tog-magical-dragons"
         ],
+        "products_per_row": "auto",
         "button_label": "Shop Swaddle Wraps",
         "link": "shopify://collections/swaddle-wrap",
         "button_style": "primary",
+        "color_scheme": "default"
+      }
+    },
+    "rich_text_materialsIntro": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_materialsIntro": {
+          "type": "heading",
+          "settings": {
+            "title": "Made from the Good Stuff",
+            "use_h1": false
+          }
+        },
+        "text_materialsIntro": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Loulou Lollipop started with two sisters and one teether. From there we've focused on better materials, like TENCEL™ and Tanboocel® fabrics, and LFGB-certified food-grade silicone. More than a decade later, we’re still committed to making products parents can trust.</p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_materialsIntro",
+        "text_materialsIntro"
+      ],
+      "name": "Materials Intro",
+      "settings": {
+        "height": "small",
+        "text_alignment": "center",
+        "full_width": false,
+        "color_scheme": "default"
+      }
+    },
+    "multi_column_materialsUSP": {
+      "type": "multi-column",
+      "blocks": {
+        "text_block_tencel": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "image": "shopify://shop_images/tencel-certification-862.png",
+            "title": "TENCEL™ Lyocell",
+            "text": "<p>Made from sustainably harvested wood pulp, TENCEL™ Lyocell is naturally temperature-regulating and buttery-soft against sensitive skin — the fabric behind our sleepers, pajamas, and swaddle wraps.</p>",
+            "button_label": "Shop TENCEL™",
+            "link": "shopify://collections/sleepers"
+          }
+        },
+        "text_block_tanboocel": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "image": "shopify://shop_images/ICON-bamboo.svg",
+            "title": "Tanboocel® Viscose from Bamboo",
+            "text": "<p>Naturally breathable and hypoallergenic, our Tanboocel® bamboo viscose stays cool through the night — the fabric behind our muslin swaddles, quilts, and crib sheets.</p>",
+            "button_label": "Shop Tanboocel®",
+            "link": "shopify://collections/swaddles"
+          }
+        },
+        "text_block_silicone": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "image": "shopify://shop_images/Food_Grade_Silicone.svg",
+            "title": "LFGB Food-Grade Silicone",
+            "text": "<p>Every feeding piece is made from LFGB-certified, phthalate-free silicone — safe enough to chew, durable enough for daily mealtime chaos.</p>",
+            "button_label": "Shop Feeding",
+            "link": "shopify://collections/eat"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_tencel",
+        "text_block_tanboocel",
+        "text_block_silicone"
+      ],
+      "custom_css": [
+        ".img-ar--cover img {object-fit: fill;}",
+        ".strongly-spaced-row,.fully-spaced-row--medium {margin-top: 40px;}"
+      ],
+      "name": "Our Materials",
+      "settings": {
+        "title": "",
+        "media_aspect_ratio": "s",
+        "media_width": 210,
+        "text_alignment": "center",
+        "button_style": "link",
         "color_scheme": "default"
       }
     },
@@ -322,7 +410,7 @@
             "collection": "sleepers",
             "tag": "",
             "image": "shopify://shop_images/BA1002U.SAF.4_1_bebfba78-0936-4259-b7fa-cbb7ce9cd33e.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "subheading": "Sleepers",
             "button_label": ""
           }
         },
@@ -342,7 +430,7 @@
             "collection": "swaddles",
             "tag": "",
             "image": "shopify://shop_images/SWHGH_233_27d193de-56b7-4c60-9021-30c41b393c6b.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "subheading": "Swaddles",
             "button_label": ""
           }
         },
@@ -402,7 +490,7 @@
             "collection": "crib-sheets",
             "tag": "",
             "image": "shopify://shop_images/CRIBFBK_01.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "subheading": "Crib Sheets",
             "button_label": ""
           }
         },
@@ -412,7 +500,7 @@
             "collection": "pajamas",
             "tag": "",
             "image": "shopify://shop_images/KA1006U.ENG_01_0cf0b711-14a4-4b70-a02f-b4ff0a9d3443.jpg",
-            "subheading": "{{ block.settings.collection.title }}",
+            "subheading": "Pajamas",
             "button_label": ""
           }
         },
@@ -549,13 +637,218 @@
         "text": "",
         "collection": "best-sellers",
         "show_vendor": false,
-        "enable_carousel": false,
-        "grid": 4,
+        "enable_carousel": true,
+        "grid": 5,
         "rows": 1,
         "color_scheme": "default",
         "show_view_all": true,
-        "full_width": false,
+        "full_width": true,
         "text_alignment": "start"
+      }
+    },
+    "lp_comparison_tabs_fabrics": {
+      "type": "lp-comparison-tabs",
+      "blocks": {
+        "row_t_source": {
+          "type": "row",
+          "settings": {
+            "tab": "tab1",
+            "feature": "Fibre Source",
+            "our_value": "Sustainably harvested eucalyptus wood, from FSC Certified forests",
+            "other_value_1": "Bamboo plant, but heavily chemically processed",
+            "other_value_2": "Petroleum-based synthetic fiber"
+          }
+        },
+        "row_t_made": {
+          "type": "row",
+          "settings": {
+            "tab": "tab1",
+            "feature": "How It's Made",
+            "our_value": "Closed-loop process — reuses 99.8% of water & solvents",
+            "other_value_1": "Chemically intensive process, with potential environmental impact",
+            "other_value_2": "Made from fossil fuels; non-renewable source"
+          }
+        },
+        "row_t_breathability": {
+          "type": "row",
+          "settings": {
+            "tab": "tab1",
+            "feature": "Breathability",
+            "our_value": "Excellent — regulates temperature well",
+            "other_value_1": "Good, but not as consistent as TENCEL™",
+            "other_value_2": "Poor — traps heat and moisture against skin"
+          }
+        },
+        "row_t_wicking": {
+          "type": "row",
+          "settings": {
+            "tab": "tab1",
+            "feature": "Moisture-Wicking",
+            "our_value": "Keeps baby dry and comfy thanks to high moisture-wicking properties",
+            "other_value_1": "Moderate — can retain moisture under layers",
+            "other_value_2": "Doesn't wick moisture; can feel damp against skin"
+          }
+        },
+        "row_t_softness": {
+          "type": "row",
+          "settings": {
+            "tab": "tab1",
+            "feature": "Softness",
+            "our_value": "Silky soft, even after multiple washes",
+            "other_value_1": "Very soft initially, but may pill or lose softness over time",
+            "other_value_2": "Can feel synthetic; prone to static and pilling"
+          }
+        },
+        "row_t_durability": {
+          "type": "row",
+          "settings": {
+            "tab": "tab1",
+            "feature": "Durability",
+            "our_value": "Strong and durable, holds shape after washing",
+            "other_value_1": "Less durable, prone to stretching and pilling",
+            "other_value_2": "Durable, but doesn't soften over time and can trap odor"
+          }
+        },
+        "row_t_hypoallergenic": {
+          "type": "row",
+          "settings": {
+            "tab": "tab1",
+            "feature": "Hypoallergenic",
+            "our_value": "Naturally hypoallergenic, dermatologist recommended",
+            "other_value_1": "Generally gentle, but chemical processing may leave residue",
+            "other_value_2": "Can trigger irritation in sensitive or eczema-prone skin"
+          }
+        },
+        "row_t_cert": {
+          "type": "row",
+          "settings": {
+            "tab": "tab1",
+            "feature": "Certifications",
+            "our_value": "Certified by OEKO-TEX®, tested free from 1,000+ harmful substances",
+            "other_value_1": "Not all bamboo viscose is certified; depends on manufacturer",
+            "other_value_2": "Rarely certified for chemical safety"
+          }
+        },
+        "row_b_source": {
+          "type": "row",
+          "settings": {
+            "tab": "tab2",
+            "feature": "Fibre Source",
+            "our_value": "Bamboo pulp, sourced and processed specifically for Tanboocel® fabric",
+            "other_value_1": "Bamboo plant, but heavily chemically processed",
+            "other_value_2": "Petroleum-based synthetic fiber"
+          }
+        },
+        "row_b_made": {
+          "type": "row",
+          "settings": {
+            "tab": "tab2",
+            "feature": "How It's Made",
+            "our_value": "OEKO-TEX® Standard 100 certified — independently tested for harmful substances",
+            "other_value_1": "Chemically intensive process, with potential environmental impact",
+            "other_value_2": "Made from fossil fuels; non-renewable source"
+          }
+        },
+        "row_b_breathability": {
+          "type": "row",
+          "settings": {
+            "tab": "tab2",
+            "feature": "Breathability",
+            "our_value": "Naturally moisture-wicking and temperature-regulating",
+            "other_value_1": "Good, but not as consistent as Tanboocel®",
+            "other_value_2": "Poor — traps heat and moisture against skin"
+          }
+        },
+        "row_b_wicking": {
+          "type": "row",
+          "settings": {
+            "tab": "tab2",
+            "feature": "Moisture-Wicking",
+            "our_value": "Keeps baby dry and comfy thanks to high moisture-wicking properties",
+            "other_value_1": "Moderate — can retain moisture under layers",
+            "other_value_2": "Doesn't wick moisture; can feel damp against skin"
+          }
+        },
+        "row_b_softness": {
+          "type": "row",
+          "settings": {
+            "tab": "tab2",
+            "feature": "Softness",
+            "our_value": "Silky soft, consistent quality every wash",
+            "other_value_1": "Very soft initially, but may pill or lose softness over time",
+            "other_value_2": "Can feel synthetic; prone to static and pilling"
+          }
+        },
+        "row_b_durability": {
+          "type": "row",
+          "settings": {
+            "tab": "tab2",
+            "feature": "Durability",
+            "our_value": "Strong and durable, holds shape after washing",
+            "other_value_1": "Less durable, prone to stretching and pilling",
+            "other_value_2": "Durable, but doesn't soften over time and can trap odor"
+          }
+        },
+        "row_b_hypoallergenic": {
+          "type": "row",
+          "settings": {
+            "tab": "tab2",
+            "feature": "Hypoallergenic",
+            "our_value": "Naturally hypoallergenic and gentle on sensitive skin",
+            "other_value_1": "Generally gentle, but chemical processing may leave residue",
+            "other_value_2": "Can trigger irritation in sensitive or eczema-prone skin"
+          }
+        },
+        "row_b_cert": {
+          "type": "row",
+          "settings": {
+            "tab": "tab2",
+            "feature": "Certifications",
+            "our_value": "Certified by OEKO-TEX®, tested free from 1,000+ harmful substances",
+            "other_value_1": "Not all bamboo viscose is certified; depends on manufacturer",
+            "other_value_2": "Rarely certified for chemical safety"
+          }
+        }
+      },
+      "block_order": [
+        "row_t_source",
+        "row_t_made",
+        "row_t_breathability",
+        "row_t_wicking",
+        "row_t_softness",
+        "row_t_durability",
+        "row_t_hypoallergenic",
+        "row_t_cert",
+        "row_b_source",
+        "row_b_made",
+        "row_b_breathability",
+        "row_b_wicking",
+        "row_b_softness",
+        "row_b_durability",
+        "row_b_hypoallergenic",
+        "row_b_cert"
+      ],
+      "name": "Fabric Comparison Tabs",
+      "settings": {
+        "bg_color": "rgba(0,0,0,0)",
+        "title": "Better Fabrics, By Design",
+        "intro": "Not all “soft” and “sustainable” claims are equal. See what sets our TENCEL™ and Tanboocel® apart from the fabrics other baby brands use.",
+        "tab1_label": "TENCEL™ Lyocell",
+        "tab1_col_ours": "TENCEL™ Lyocell",
+        "tab1_col_other_1": "Bamboo Viscose/Rayon",
+        "tab1_col_other_2": "Polyester",
+        "bottom_line_1": "Bottom line: TENCEL™ is the fabric behind our sleepers, pajamas, sleep bags, and swaddle wraps — soft enough for the most sensitive skin.",
+        "cta_label_1": "Shop TENCEL™",
+        "cta_link_1": "shopify://collections/made-with-tencel-fibres",
+        "tab2_label": "Tanboocel®",
+        "tab2_col_ours": "Tanboocel®",
+        "tab2_col_other_1": "Bamboo Viscose/Rayon",
+        "tab2_col_other_2": "Polyester",
+        "bottom_line_2": "Bottom line: Tanboocel® is the fabric behind our muslin swaddles, quilts, and crib sheets — breathable enough for every season.",
+        "cta_label_2": "Shop Tanboocel®",
+        "cta_link_2": "shopify://collections/made-with-tanboocel",
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "custom_product_highlight_KJfQCU": {
@@ -572,6 +865,7 @@
           "baby-sleep-system-bundle-magical-dragons",
           "baby-learning-feeding-bundle-eddie-elephant"
         ],
+        "products_per_row": "auto",
         "button_label": "Shop Bundles",
         "link": "shopify://collections/bundles-and-sets",
         "button_style": "primary",
@@ -867,6 +1161,45 @@
         "color_scheme": "default"
       }
     },
+    "image_with_text_foundersHome": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_foundersHome": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Family First"
+          }
+        },
+        "heading_foundersHome": {
+          "type": "heading",
+          "settings": {
+            "title": "A Note From Our Founders",
+            "use_h1": false
+          }
+        },
+        "text_foundersHome": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Loulou Lollipop started in 2015 with twin sisters Eleanor and Angel, two teether designs, and a mission to make safer, softer essentials for the babies they loved most.</p><p>As twins ourselves, family is our reason for everything we do — and we hope what you find here helps you make many more sweet memories.</p><p><a href=\"/pages/about-us\">Read Our Story →</a></p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "subheading_foundersHome",
+        "heading_foundersHome",
+        "text_foundersHome"
+      ],
+      "name": "Founders Spotlight",
+      "settings": {
+        "image": "shopify://shop_images/about_portrait.png",
+        "image_width": 700,
+        "image_link": "",
+        "image_position": "right",
+        "text_alignment": "left",
+        "color_scheme": "default"
+      }
+    },
     "testimonials_QcyQ3m": {
       "type": "testimonials",
       "blocks": {
@@ -1137,6 +1470,7 @@
           "snack-plate-sarah-shark",
           "snack-plate-olly-octopus"
         ],
+        "products_per_row": "auto",
         "button_label": "Shop Snack Plates",
         "link": "shopify://collections/snack-plate",
         "button_style": "primary",
@@ -1197,332 +1531,6 @@
         "media_width": 700,
         "text_alignment": "center",
         "button_style": "primary",
-        "color_scheme": "default"
-      }
-    },
-    "rich_text_materialsIntro": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_materialsIntro": {
-          "type": "heading",
-          "settings": {
-            "title": "Made from the Good Stuff",
-            "use_h1": false
-          }
-        },
-        "text_materialsIntro": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Loulou Lollipop started with two sisters and one teether. From there we've focused on better materials, like TENCEL™ and Tanboocel® fabrics, and LFGB-certified food-grade silicone. More than a decade later, we’re still committed to making products parents can trust.</p>",
-            "enlarge_text": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_materialsIntro",
-        "text_materialsIntro"
-      ],
-      "name": "Materials Intro",
-      "settings": {
-        "height": "small",
-        "text_alignment": "center",
-        "full_width": false,
-        "color_scheme": "default"
-      }
-    },
-    "multi_column_materialsUSP": {
-      "type": "multi-column",
-      "blocks": {
-        "text_block_tencel": {
-          "type": "text_block",
-          "settings": {
-            "enable_media": true,
-            "image": "shopify://shop_images/BA1002U.SAF.4_1.jpg",
-            "title": "TENCEL™ Lyocell",
-            "text": "<p>Made from sustainably harvested wood pulp, TENCEL™ Lyocell is naturally temperature-regulating and buttery-soft against sensitive skin — the fabric behind our sleepers, pajamas, and swaddle wraps.</p>",
-            "button_label": "Shop TENCEL™",
-            "link": "shopify://collections/sleepers"
-          }
-        },
-        "text_block_tanboocel": {
-          "type": "text_block",
-          "settings": {
-            "enable_media": true,
-            "image": "shopify://shop_images/SWUNB_1.jpg",
-            "title": "Tanboocel® Viscose from Bamboo",
-            "text": "<p>Naturally breathable and hypoallergenic, our Tanboocel® bamboo viscose stays cool through the night — the fabric behind our muslin swaddles, quilts, and crib sheets.</p>",
-            "button_label": "Shop Tanboocel®",
-            "link": "shopify://collections/swaddles"
-          }
-        },
-        "text_block_silicone": {
-          "type": "text_block",
-          "settings": {
-            "enable_media": true,
-            "image": "shopify://shop_images/SILBIBPLANET_1.jpg",
-            "title": "LFGB Food-Grade Silicone",
-            "text": "<p>Every feeding piece is made from LFGB-certified, phthalate-free silicone — safe enough to chew, durable enough for daily mealtime chaos.</p>",
-            "button_label": "Shop Feeding",
-            "link": "shopify://collections/eat"
-          }
-        }
-      },
-      "block_order": [
-        "text_block_tencel",
-        "text_block_tanboocel",
-        "text_block_silicone"
-      ],
-      "name": "Our Materials",
-      "settings": {
-        "title": "",
-        "media_aspect_ratio": "1",
-        "media_width": 400,
-        "text_alignment": "center",
-        "button_style": "link",
-        "color_scheme": "default"
-      }
-    },
-    "lp_comparison_tabs_fabrics": {
-      "type": "lp-comparison-tabs",
-      "blocks": {
-        "row_t_source": {
-          "type": "row",
-          "settings": {
-            "tab": "tab1",
-            "feature": "Fibre Source",
-            "our_value": "Sustainably harvested eucalyptus wood, from FSC Certified forests",
-            "other_value_1": "Bamboo plant, but heavily chemically processed",
-            "other_value_2": "Petroleum-based synthetic fiber"
-          }
-        },
-        "row_t_made": {
-          "type": "row",
-          "settings": {
-            "tab": "tab1",
-            "feature": "How It's Made",
-            "our_value": "Closed-loop process — reuses 99.8% of water & solvents",
-            "other_value_1": "Chemically intensive process, with potential environmental impact",
-            "other_value_2": "Made from fossil fuels; non-renewable source"
-          }
-        },
-        "row_t_breathability": {
-          "type": "row",
-          "settings": {
-            "tab": "tab1",
-            "feature": "Breathability",
-            "our_value": "Excellent — regulates temperature well",
-            "other_value_1": "Good, but not as consistent as TENCEL™",
-            "other_value_2": "Poor — traps heat and moisture against skin"
-          }
-        },
-        "row_t_wicking": {
-          "type": "row",
-          "settings": {
-            "tab": "tab1",
-            "feature": "Moisture-Wicking",
-            "our_value": "Keeps baby dry and comfy thanks to high moisture-wicking properties",
-            "other_value_1": "Moderate — can retain moisture under layers",
-            "other_value_2": "Doesn't wick moisture; can feel damp against skin"
-          }
-        },
-        "row_t_softness": {
-          "type": "row",
-          "settings": {
-            "tab": "tab1",
-            "feature": "Softness",
-            "our_value": "Silky soft, even after multiple washes",
-            "other_value_1": "Very soft initially, but may pill or lose softness over time",
-            "other_value_2": "Can feel synthetic; prone to static and pilling"
-          }
-        },
-        "row_t_durability": {
-          "type": "row",
-          "settings": {
-            "tab": "tab1",
-            "feature": "Durability",
-            "our_value": "Strong and durable, holds shape after washing",
-            "other_value_1": "Less durable, prone to stretching and pilling",
-            "other_value_2": "Durable, but doesn't soften over time and can trap odor"
-          }
-        },
-        "row_t_hypoallergenic": {
-          "type": "row",
-          "settings": {
-            "tab": "tab1",
-            "feature": "Hypoallergenic",
-            "our_value": "Naturally hypoallergenic, dermatologist recommended",
-            "other_value_1": "Generally gentle, but chemical processing may leave residue",
-            "other_value_2": "Can trigger irritation in sensitive or eczema-prone skin"
-          }
-        },
-        "row_t_cert": {
-          "type": "row",
-          "settings": {
-            "tab": "tab1",
-            "feature": "Certifications",
-            "our_value": "Certified by OEKO-TEX®, tested free from 1,000+ harmful substances",
-            "other_value_1": "Not all bamboo viscose is certified; depends on manufacturer",
-            "other_value_2": "Rarely certified for chemical safety"
-          }
-        },
-        "row_b_source": {
-          "type": "row",
-          "settings": {
-            "tab": "tab2",
-            "feature": "Fibre Source",
-            "our_value": "Bamboo pulp, sourced and processed specifically for Tanboocel® fabric",
-            "other_value_1": "Bamboo plant, but heavily chemically processed",
-            "other_value_2": "Petroleum-based synthetic fiber"
-          }
-        },
-        "row_b_made": {
-          "type": "row",
-          "settings": {
-            "tab": "tab2",
-            "feature": "How It's Made",
-            "our_value": "OEKO-TEX® Standard 100 certified — independently tested for harmful substances",
-            "other_value_1": "Chemically intensive process, with potential environmental impact",
-            "other_value_2": "Made from fossil fuels; non-renewable source"
-          }
-        },
-        "row_b_breathability": {
-          "type": "row",
-          "settings": {
-            "tab": "tab2",
-            "feature": "Breathability",
-            "our_value": "Naturally moisture-wicking and temperature-regulating",
-            "other_value_1": "Good, but not as consistent as Tanboocel®",
-            "other_value_2": "Poor — traps heat and moisture against skin"
-          }
-        },
-        "row_b_wicking": {
-          "type": "row",
-          "settings": {
-            "tab": "tab2",
-            "feature": "Moisture-Wicking",
-            "our_value": "Keeps baby dry and comfy thanks to high moisture-wicking properties",
-            "other_value_1": "Moderate — can retain moisture under layers",
-            "other_value_2": "Doesn't wick moisture; can feel damp against skin"
-          }
-        },
-        "row_b_softness": {
-          "type": "row",
-          "settings": {
-            "tab": "tab2",
-            "feature": "Softness",
-            "our_value": "Silky soft, consistent quality every wash",
-            "other_value_1": "Very soft initially, but may pill or lose softness over time",
-            "other_value_2": "Can feel synthetic; prone to static and pilling"
-          }
-        },
-        "row_b_durability": {
-          "type": "row",
-          "settings": {
-            "tab": "tab2",
-            "feature": "Durability",
-            "our_value": "Strong and durable, holds shape after washing",
-            "other_value_1": "Less durable, prone to stretching and pilling",
-            "other_value_2": "Durable, but doesn't soften over time and can trap odor"
-          }
-        },
-        "row_b_hypoallergenic": {
-          "type": "row",
-          "settings": {
-            "tab": "tab2",
-            "feature": "Hypoallergenic",
-            "our_value": "Naturally hypoallergenic and gentle on sensitive skin",
-            "other_value_1": "Generally gentle, but chemical processing may leave residue",
-            "other_value_2": "Can trigger irritation in sensitive or eczema-prone skin"
-          }
-        },
-        "row_b_cert": {
-          "type": "row",
-          "settings": {
-            "tab": "tab2",
-            "feature": "Certifications",
-            "our_value": "Certified by OEKO-TEX®, tested free from 1,000+ harmful substances",
-            "other_value_1": "Not all bamboo viscose is certified; depends on manufacturer",
-            "other_value_2": "Rarely certified for chemical safety"
-          }
-        }
-      },
-      "block_order": [
-        "row_t_source",
-        "row_t_made",
-        "row_t_breathability",
-        "row_t_wicking",
-        "row_t_softness",
-        "row_t_durability",
-        "row_t_hypoallergenic",
-        "row_t_cert",
-        "row_b_source",
-        "row_b_made",
-        "row_b_breathability",
-        "row_b_wicking",
-        "row_b_softness",
-        "row_b_durability",
-        "row_b_hypoallergenic",
-        "row_b_cert"
-      ],
-      "name": "Fabric Comparison Tabs",
-      "settings": {
-        "bg_color": "rgba(0,0,0,0)",
-        "title": "Better Fabrics, By Design",
-        "intro": "Not all “soft” and “sustainable” claims are equal. See what sets our TENCEL™ and Tanboocel® apart from the fabrics other baby brands use.",
-        "tab1_label": "TENCEL™ Lyocell",
-        "tab1_col_ours": "TENCEL™ Lyocell",
-        "tab1_col_other_1": "Bamboo Viscose/Rayon",
-        "tab1_col_other_2": "Polyester",
-        "bottom_line_1": "Bottom line: TENCEL™ is the fabric behind our sleepers, pajamas, sleep bags, and swaddle wraps — soft enough for the most sensitive skin.",
-        "cta_label_1": "Shop TENCEL™",
-        "cta_link_1": "shopify://collections/made-with-tencel-fibres",
-        "tab2_label": "Tanboocel®",
-        "tab2_col_ours": "Tanboocel®",
-        "tab2_col_other_1": "Bamboo Viscose/Rayon",
-        "tab2_col_other_2": "Polyester",
-        "bottom_line_2": "Bottom line: Tanboocel® is the fabric behind our muslin swaddles, quilts, and crib sheets — breathable enough for every season.",
-        "cta_label_2": "Shop Tanboocel®",
-        "cta_link_2": "shopify://collections/made-with-tanboocel",
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
-    "image_with_text_foundersHome": {
-      "type": "image-with-text",
-      "blocks": {
-        "subheading_foundersHome": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "Family First"
-          }
-        },
-        "heading_foundersHome": {
-          "type": "heading",
-          "settings": {
-            "title": "A Note From Our Founders",
-            "use_h1": false
-          }
-        },
-        "text_foundersHome": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Loulou Lollipop started in 2015 with twin sisters Eleanor and Angel, two teether designs, and a mission to make safer, softer essentials for the babies they loved most.</p><p>As twins ourselves, family is our reason for everything we do — and we hope what you find here helps you make many more sweet memories.</p><p><a href=\"/pages/about-us\">Read Our Story →</a></p>",
-            "enlarge_text": false
-          }
-        }
-      },
-      "block_order": [
-        "subheading_foundersHome",
-        "heading_foundersHome",
-        "text_foundersHome"
-      ],
-      "name": "Founders Spotlight",
-      "settings": {
-        "image": "shopify://shop_images/about_portrait.png",
-        "image_width": 700,
-        "image_link": "",
-        "image_position": "right",
-        "text_alignment": "left",
         "color_scheme": "default"
       }
     }
