@@ -1966,3 +1966,7 @@ h4, .h4 {
     width: auto;
   }
 }
+
+.section-image-with-text .flexible-layout .column{
+  margin-bottom: 0;
+}
