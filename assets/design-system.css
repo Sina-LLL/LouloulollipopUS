@@ -643,7 +643,9 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
 .is-unavailable+label{
   /* pointer-events: none;*/
 }
-
+.custom-product-highlight__media  .text-overlay__inner{
+  padding:20px;
+}
 /* Compact grid layout for variant swatches */
 .variant-grid-compact.option-selector__btns {
   display: grid;
