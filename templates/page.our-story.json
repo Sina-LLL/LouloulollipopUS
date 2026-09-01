@@ -30,7 +30,7 @@
         "subheading_4hbbxP": {
           "type": "subheading",
           "settings": {
-            "subheading": "The LouLou Lollipop journey"
+            "subheading": "The Loulou Lollipop Journey"
           }
         },
         "heading_Aqrawh": {
@@ -173,6 +173,8 @@
       ],
       "settings": {
         "title": "Featured in",
+        "enable_carousel": false,
+        "carousel_speed": 30,
         "image_opacity": 100,
         "color_scheme": "2"
       }
@@ -441,6 +443,9 @@
         "media_RKmLw7"
       ],
       "settings": {
+        "title": "",
+        "text": "",
+        "text_alignment": "start",
         "grid_desktop": 2,
         "grid_mobile": "2",
         "height": "fixed",
