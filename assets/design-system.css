@@ -1972,3 +1972,281 @@ h4, .h4 {
 .section-image-with-text .flexible-layout .column{
   margin-bottom: 0;
 }
+
+/* ==========================================================================
+   Collection content blocks
+   Paste this whole block at the end of design-system.css.
+   Pairs with sections/collection-content.liquid.
+   Uses existing --lll-* tokens only; adds no new ones.
+   ========================================================================== */
+
+.cc-sections {
+  --cc-measure: var(--reading-container-width, 720px);
+  --cc-wide: 60rem;
+}
+
+/* --- section shell + banding ---------------------------------------------- */
+
+.cc {
+  padding-block: var(--cc-pt, 48px) var(--cc-pb, 48px);
+}
+.cc[id] {
+  scroll-margin-top: 96px;
+}
+
+.cc--band-cream { background: var(--lll-cream); }
+.cc--band-white { background: var(--lll-white); }
+.cc--band-blush { background: var(--lll-blush); }
+
+/* --- headings -------------------------------------------------------------- */
+
+.cc__h2 {
+  margin: 0 0 var(--lll-space-4);
+  color: var(--lll-ink);
+  font-family: var(--lll-font-display);
+  font-weight: var(--lll-weight-heading);
+  font-size: var(--lll-text-h2);
+  line-height: var(--lll-leading-heading);
+  text-wrap: balance;
+}
+
+/* --- body copy (rich text, all layouts) ------------------------------------ */
+
+.cc__body {
+  color: var(--lll-ink);
+  font-family: var(--lll-font-body);
+  line-height: var(--lll-leading-body);
+}
+/* metafield_tag wraps rich text in its own div — collapse it out of the box
+   tree so every ".cc__body > *" rule below still reaches the real
+   paragraphs/lists instead of this one wrapper. */
+.cc__body > .metafield-rich_text_field {
+  display: contents;
+}
+.cc__body > * { margin: 0; }
+.cc__body > * + * { margin-top: var(--lll-space-4); }
+
+.cc__body a {
+  color: var(--lll-slate-deep);
+  text-underline-offset: 0.18em;
+}
+.cc__body a:hover { color: var(--lll-ink); }
+
+.cc__body h3 {
+  margin-top: var(--lll-space-6);
+  font-family: var(--lll-font-display);
+  font-weight: var(--lll-weight-subhead);
+  font-size: var(--lll-text-h4);
+  line-height: var(--lll-leading-snug);
+}
+
+.cc__body ul,
+.cc__body ol {
+  padding-left: var(--lll-space-5);
+}
+.cc__body li + li { margin-top: var(--lll-space-2); }
+
+/* --- layout: prose --------------------------------------------------------- */
+
+.cc--prose .cc__h2,
+.cc--prose .cc__body {
+  max-width: var(--cc-measure);
+}
+
+/* --- layout: prose_split --------------------------------------------------- */
+
+.cc--prose_split .cc__h2 { max-width: var(--cc-measure); }
+
+@media (min-width: 769px) {
+  .cc--prose_split .cc__body {
+    /* max-width: var(--cc-wide); */
+    columns: 2;
+    column-gap: var(--lll-space-12);
+  }
+  .cc--prose_split .cc__body > * { break-inside: avoid; }
+}
+
+/* --- layout: definition_list ----------------------------------------------- */
+/* The UL in the rich text becomes a row of cards. Bold the term at the start
+   of each list item and it renders as the card's large label.               */
+
+.cc--definition_list .cc__h2,
+.cc--definition_list .cc__body > p {
+  max-width: var(--cc-measure);
+}
+
+.cc--definition_list .cc__body ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--lll-space-4);
+  margin-top: var(--lll-space-6);
+  /* .rte ul sets margin-inline-start: 2em — reset it so the row lines up
+     with the heading above, not indented 32px from it. */
+  margin-inline-start: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cc--definition_list .cc__body ul li {
+  margin: 0;
+  padding: var(--lll-space-6) var(--lll-space-5);
+  background: var(--lll-white);
+  border: 1px solid var(--lll-slate-border);
+  border-radius: var(--lll-radius-lg);
+  /* list-style-type is inherited from the ul's "none" above, but the theme's
+     .rte ul li sets it directly on this element, and a direct declaration
+     always wins over an inherited one — so it has to be reset here too. */
+  list-style: none;
+}
+.cc--band-white.cc--definition_list .cc__body ul li { background: var(--lll-cream); }
+
+.cc--definition_list .cc__body ul li > strong:first-child,
+.cc--definition_list .cc__body ul li > b:first-child {
+  display: block;
+  margin-bottom: var(--lll-space-3);
+  color: var(--lll-ink);
+  font-family: var(--lll-font-display);
+  font-weight: var(--lll-weight-heading);
+  font-size: var(--lll-text-h4);
+  line-height: 1;
+}
+
+/* --- layout: numbered_list -------------------------------------------------- */
+
+.cc--numbered_list .cc__h2,
+.cc--numbered_list .cc__body > p {
+  max-width: var(--cc-measure);
+}
+
+.cc--numbered_list .cc__body ol {
+  counter-reset: cc-step;
+  max-width: var(--cc-wide);
+  margin-top: var(--lll-space-6);
+  margin-inline-start: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--lll-slate-border);
+}
+
+.cc--numbered_list .cc__body ol li {
+  counter-increment: cc-step;
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: var(--lll-space-5);
+  margin: 0;
+  padding-block: var(--lll-space-5);
+  border-bottom: 1px solid var(--lll-slate-border);
+  /* same inherited-vs-direct fight as definition_list — .rte ol li sets its
+     own decimal marker directly on the element, overriding the ol's "none". */
+  list-style: none;
+}
+
+.cc--numbered_list .cc__body ol li::before {
+  content: counter(cc-step, decimal-leading-zero);
+  padding-top: 0.2em;
+  color: var(--lll-slate-deep);
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- layout: two_up --------------------------------------------------------- */
+
+.cc--two_up .cc__h2,
+.cc--two_up .cc__body > p {
+  max-width: var(--cc-measure);
+}
+
+.cc--two_up .cc__body ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--lll-space-4);
+  margin-top: var(--lll-space-6);
+  margin-inline-start: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cc--two_up .cc__body ul li {
+  margin: 0;
+  padding: var(--lll-space-6);
+  background: var(--lll-white);
+  border: 1px solid var(--lll-slate-border);
+  border-radius: var(--lll-radius-lg);
+  list-style: none;
+}
+.cc--band-white.cc--two_up .cc__body ul li { background: var(--lll-cream); }
+
+/* --- layouts: media_split + emphasis_band ----------------------------------- */
+
+.cc--media_split .cc__inner,
+.cc--emphasis_band.cc--has-media .cc__inner {
+  display: grid;
+  gap: var(--lll-space-12);
+  align-items: center;
+}
+
+.cc--emphasis_band .cc__col { max-width: var(--cc-measure); }
+
+.cc__img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--lll-radius-lg);
+}
+
+@media (min-width: 769px) {
+  .cc--media_split .cc__inner { grid-template-columns: 1fr 1fr; }
+  .cc--emphasis_band.cc--has-media .cc__inner { grid-template-columns: 1.15fr 0.85fr; }
+  .cc--media_split.cc--flip .cc__media { order: 2; }
+}
+
+/* --- jump links -------------------------------------------------------------- */
+
+.cc-toc {
+  background: var(--lll-cream);
+  padding-block: var(--lll-space-6);
+}
+.cc-toc__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--lll-space-2);
+}
+.cc-toc__link {
+  padding: 0.5rem 0.8125rem;
+  color: var(--lll-slate-deep);
+  background: var(--lll-white);
+  border: 1px solid var(--lll-slate-border);
+  border-radius: var(--lll-radius-pill);
+  font-size: 0.8125rem;
+  line-height: 1.3;
+  text-decoration: none;
+  transition: border-color var(--lll-duration-fast), color var(--lll-duration-fast);
+}
+.cc-toc__link:hover {
+  color: var(--lll-ink);
+  border-color: var(--lll-slate);
+}
+
+.cc-toc__link:focus-visible,
+.cc__body a:focus-visible {
+  outline: 2px solid var(--lll-slate-deep);
+  outline-offset: 2px;
+}
+
+/* --- small screens ------------------------------------------------------------ */
+
+@media (max-width: 768px) {
+  .cc {
+    padding-block: calc(var(--cc-pt, 48px) * 0.75) calc(var(--cc-pb, 48px) * 0.75);
+  }
+  .cc--numbered_list .cc__body ol li {
+    grid-template-columns: 2.25rem 1fr;
+    gap: var(--lll-space-4);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cc-toc__link { transition: none; }
+}
