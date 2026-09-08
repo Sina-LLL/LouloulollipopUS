@@ -17,7 +17,7 @@
           "settings": {
             "collection": "bundles-and-sets",
             "image": "shopify://shop_images/DS-NB001_113.jpg",
-            "label": ""
+            "label": "Gif Sets"
           }
         },
         "collection_PkyyWJ": {
@@ -25,7 +25,7 @@
           "settings": {
             "collection": "swaddle-wrap",
             "image": "shopify://shop_images/Baby_Sleep_Sack_Swaddle_Wrap_Zipper_Detail_-_Magical_Dragons_1d96c667-1095-4b84-bc0c-89379a5b3bef.jpg",
-            "label": ""
+            "label": "Swaddle Wraps"
           }
         },
         "collection_ff9awC": {
@@ -40,21 +40,21 @@
           "type": "collection",
           "settings": {
             "collection": "sleepers",
-            "label": "baby Sleepers"
+            "label": "Sleepers"
           }
         },
         "collection_Ua99BU": {
           "type": "collection",
           "settings": {
             "collection": "long-sleeve-bibs",
-            "label": ""
+            "label": "Long Sleeve Bibs"
           }
         },
         "collection_9kFYgk": {
           "type": "collection",
           "settings": {
             "collection": "silicone-bibs",
-            "label": ""
+            "label": "Silicone Bibs"
           }
         },
         "collection_hxABiN": {
@@ -62,7 +62,7 @@
           "settings": {
             "collection": "pacifier-clips",
             "image": "shopify://shop_images/SILCPOCWHT_Pacifier_Clip_-_OneC_-_White_51WEB.jpg",
-            "label": ""
+            "label": "Pacifier Clips"
           }
         },
         "collection_qMEwLP": {
@@ -70,7 +70,7 @@
           "settings": {
             "collection": "swaddles",
             "image": "shopify://shop_images/SWBMB_Muslin_Swaddle_Bumble_Bees_53_b63480d2-1523-4cc0-8d3a-4d0e49c10338.jpg",
-            "label": "Baby Swaddles"
+            "label": "Swaddles"
           }
         },
         "collection_MJm6Ta": {
