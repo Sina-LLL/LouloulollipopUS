@@ -59,6 +59,7 @@
             "media_type": "image",
             "media_position": "left",
             "content_position": "center",
+            "image": "shopify://shop_images/Kids_Pajama_in_TENCEL_Lyocell_-_Llama_Adventures_d126e0ba-67f3-4658-9ac1-1f417270a5bb.jpg",
             "use_global_colors": false,
             "background_color": "",
             "headline_color": "",
@@ -82,6 +83,7 @@
         "ethos_landing_page_members_editorial_VNt9nH": {
           "type": "shopify://apps/ethos/blocks/landing-page-members-editorial/e6f2bd3b-e2fd-4f16-b73c-bf198b58bb45",
           "settings": {
+            "image": "shopify://shop_images/Sushi_-_home_2a71b1c0-3d42-4d21-b707-917cbc2d20df.png",
             "image_position": "right",
             "content_padding": 56,
             "list_gap": 8,
@@ -101,7 +103,7 @@
             "body_text_color": ""
           }
         },
-        "ethos_landing_page_earn_points_mME4dr": {
+        "ethos_landing_page_earn_points_6wxTXG": {
           "type": "shopify://apps/ethos/blocks/landing-page-earn-points/e6f2bd3b-e2fd-4f16-b73c-bf198b58bb45",
           "settings": {
             "layout": "grid",
@@ -132,7 +134,7 @@
             "margin_bottom": 0
           }
         },
-        "ethos_landing_page_redeem_points_irKGhq": {
+        "ethos_landing_page_redeem_points_P3Pemw": {
           "type": "shopify://apps/ethos/blocks/landing-page-redeem-points/e6f2bd3b-e2fd-4f16-b73c-bf198b58bb45",
           "settings": {
             "layout": "grid",
@@ -206,8 +208,8 @@
         "ethos_landing_page_join_login_7C8B8b",
         "ethos_landing_page_numbered_list_9WpXMA",
         "ethos_landing_page_members_editorial_VNt9nH",
-        "ethos_landing_page_earn_points_mME4dr",
-        "ethos_landing_page_redeem_points_irKGhq",
+        "ethos_landing_page_earn_points_6wxTXG",
+        "ethos_landing_page_redeem_points_P3Pemw",
         "ethos_landing_page_table_d4yB8A"
       ],
       "settings": {
