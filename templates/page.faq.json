@@ -193,6 +193,13 @@
             "title": "What should I do if an item is damaged or defective?",
             "answer": "<p>If your order was incorrectly shipped or an item is damaged, please <a href=\"https://louloulollipop.com/pages/contact-us\" title=\"Contact Us\"><span style=\"text-decoration:underline\">reach out to us</span></a> within 7 days of delivery so we can help sort it out!</p><p>If you believe your item is faulty, or otherwise defective, we offer a 3-month warranty* from the date of purchase and would be happy to help you replace the item.  Contact us <a href=\"https://louloulollipop.com/pages/contact-us\" title=\"Contact Us\"><span style=\"text-decoration:underline\">here</span></a> and our customer support team will take care of you.  </p><p><em>*Warranty applies only to manufacturers defects and </em><em><strong>does not</strong></em><em> cover normal wear and tear or improper use.  Please follow the cleaning & care instructions located on the product packaging or care tag(s) to ensure the longevity of your items. Pacifier clips </em><em><strong>cannot</strong></em><em> be sterilized.</em></p>"
           }
+        },
+        "question_Ntdkdg": {
+          "type": "question",
+          "settings": {
+            "title": "What happens if I do not receive my shipment?",
+            "answer": "<p>Efforts will be made to locate your order. If we determine a package is definitely lost or stolen and unlikely to be delivered, we will file a claim with the carrier on your behalf, and we may ask the recipient to file a police report (local authorities non-emergency line or online reporting) to be eligible for reshipment or store credit. </p>"
+          }
         }
       },
       "block_order": [
@@ -200,7 +207,8 @@
         "question_fqwjxq",
         "question_E6izyb",
         "question_GdcNLX",
-        "question_dLnhVL"
+        "question_dLnhVL",
+        "question_Ntdkdg"
       ],
       "settings": {
         "title": "Returns & Exchanges"
