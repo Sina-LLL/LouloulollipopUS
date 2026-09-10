@@ -17,6 +17,15 @@
         "full_width": false
       }
     },
+    "custom_liquid_ezgbg8": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "show_space": true,
+        "code": "<style>\n.strongly-spaced-row, .fully-spaced-row--medium {\n    margin-top: 0px;\n    margin-bottom: 0px;\n}\n</style>"
+      }
+    },
     "17889739686fa02880": {
       "type": "apps",
       "blocks": {
@@ -220,6 +229,7 @@
   },
   "order": [
     "main",
+    "custom_liquid_ezgbg8",
     "17889739686fa02880"
   ]
 }
