@@ -17,6 +17,15 @@
         "full_width": false
       }
     },
+    "custom_liquid_fQ6m9K": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "show_space": true,
+        "code": "<style>\n.strongly-spaced-row, .fully-spaced-row--medium {\n    margin-top: 0px;\n    margin-bottom: 0px;\n}\n</style>"
+      }
+    },
     "1788974512465cef7e": {
       "type": "apps",
       "blocks": {
@@ -45,9 +54,9 @@
             "card_background_color": "#59757d",
             "card_text_color": "",
             "progress_track_color": "",
-            "progress_fill_color": "#97AEB5",
+            "progress_fill_color": "#97aeb5",
             "progress_divider_color": "",
-            "action_background_color": "#59757D",
+            "action_background_color": "#59757d",
             "action_text_color": "",
             "credit_accent_color": "",
             "block_corner_radius": 18,
@@ -144,6 +153,7 @@
   },
   "order": [
     "main",
+    "custom_liquid_fQ6m9K",
     "1788974512465cef7e"
   ]
 }
