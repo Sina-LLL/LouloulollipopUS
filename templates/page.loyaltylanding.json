@@ -23,7 +23,7 @@
       "settings": {
         "full_width": true,
         "show_space": true,
-        "code": "<style>\n.strongly-spaced-row, .fully-spaced-row--medium {\n    margin-top: 0px;\n    margin-bottom: 0px;\n}\n.landing-join-login--block .landing-join-login__button--primary {\n    box-shadow: none;\n    padding-bottom: 2px;\n}\n.landing-join-login--block .landing-join-login__button:not(.landing-join-login__button--loading):hover {\n    transform: translateY(0px) !important;\n    box-shadow: none !important;\n}\n</style>"
+        "code": "<style>\n.strongly-spaced-row, .fully-spaced-row--medium {\n    margin-top: 0px;\n    margin-bottom: 0px;\n}\n.landing-join-login--block .landing-join-login__button--primary {\n    box-shadow: none !important;\n    padding-bottom: 2px !important;\n}\n.landing-join-login--block .landing-join-login__button:not(.landing-join-login__button--loading):hover {\n    transform: translateY(0px) !important;\n    box-shadow: none !important;\n}\n</style>"
       }
     },
     "17889739686fa02880": {
