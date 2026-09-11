@@ -33,7 +33,7 @@
           "type": "shopify://apps/ethos/blocks/landing-page-join-login/e6f2bd3b-e2fd-4f16-b73c-bf198b58bb45",
           "settings": {
             "layout": "centered",
-            "membership_page": "",
+            "membership_page": "club-loulou-member",
             "background_media_type": "image",
             "min_height": 420,
             "padding_top": 80,
