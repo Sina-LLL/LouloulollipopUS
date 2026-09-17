@@ -750,6 +750,38 @@
               </div>
             {%- endif -%}
 
+          {% when 'auto_usp_grid' %}
+            {%- liquid
+              assign product_template = product.metafields.custom.product_template.value
+              assign usp_icons = blank
+              if product_template
+                assign usp_icons = product_template.usp_icons.value
+              endif
+            -%}
+            {%- if usp_icons != blank -%}
+              {%- assign usp_is_odd = false -%}
+              {%- assign usp_odd_check = usp_icons.size | modulo: 2 -%}
+              {%- if usp_odd_check == 1 -%}
+                {%- assign usp_is_odd = true -%}
+              {%- endif -%}
+              <div class="product-usp-grid not-in-quickbuy" {{ block.shopify_attributes }}>
+                {%- for usp in usp_icons -%}
+                  {%- assign usp_title = usp.title.value -%}
+                  {%- assign usp_icon = usp.icon.value -%}
+                  <div class="product-usp-grid__item{% if usp_is_odd and forloop.last %} product-usp-grid__item--centered{% endif %}">
+                    {%- if usp_icon != blank -%}
+                      <div class="product-usp-grid__icon">
+                        {{- usp_icon | image_url: width: 128 | image_tag: loading: 'lazy', widths: '64, 128', sizes: '64px', class: 'product-usp-grid__icon-img', alt: usp_title | escape -}}
+                      </div>
+                    {%- endif -%}
+                    {%- if usp_title != blank -%}
+                      <p class="product-usp-grid__label">{{ usp_title | escape }}</p>
+                    {%- endif -%}
+                  </div>
+                {%- endfor -%}
+              </div>
+            {%- endif -%}
+
           {% when 'USP' %}
             {% if block.settings.text != blank %}
               <div class="lightly-spaced-row not-in-quickbuy" {{ block.shopify_attributes }}>
@@ -2288,6 +2320,16 @@
           "id": "show_in_quickbuy",
           "label": "Show in quick buy",
           "default": false
+        }
+      ]
+    },
+    {
+      "type": "auto_usp_grid",
+      "name": "Product USPs (auto)",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Automatically pulls icons and titles from this product's Product Template metaobject (custom.product_template → USP Icons). Nothing to configure here — to change which icons show, edit the usp_icons list on the product's Product Template entry in Content → Metaobjects, or add/edit entries under Product Feature Icons."
         }
       ]
     },
