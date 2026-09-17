@@ -69,7 +69,7 @@
     {%- break -%}
   {%- endif -%}
 {%- endfor -%}
-<div class="{% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }} fully-padded-row--medium{% else %}fully-spaced-row--medium{% endif %}">
+<div class="{% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }} fully-padded-row--medium{% else %}fully-spaced-row--medium{% endif %}{% if section.settings.mobile_image_below and image_below == false %} iwt-row--mobile-image-bleed{% endif %}">
   <div class="container">
 
     {%- if image_below -%}
@@ -202,6 +202,32 @@
                 <div class="lightly-spaced-row" {{ block.shopify_attributes }}>
                   <span class="large-light-icon">{% render 'icon', icon: block.settings.icon, size: 'medium' %}</span>
                 </div>
+              {%- when 'icon_row_item' -%}
+                <div class="lightly-spaced-row iwt-icon-row" {{ block.shopify_attributes }}>
+                  <div class="iwt-icon-row__item">
+                    {%- if block.settings.icon != blank -%}
+                      <div class="iwt-icon-row__icon">
+                        {{- block.settings.icon | image_url: width: 112 | image_tag: loading: 'lazy', widths: '56, 112', sizes: '56px', class: 'iwt-icon-row__icon-img', alt: block.settings.label | escape -}}
+                      </div>
+                    {%- endif -%}
+                    {%- if block.settings.label != blank -%}<p class="iwt-icon-row__label">{{ block.settings.label | escape }}</p>{%- endif -%}
+                  </div>
+                  {%- for next_block in section.blocks offset: forloop.index -%}
+                    {%- if next_block.type == 'icon_row_item' -%}
+                      {%- assign skip_block_count = skip_block_count | plus: 1 -%}
+                      <div class="iwt-icon-row__item" {{ next_block.shopify_attributes }}>
+                        {%- if next_block.settings.icon != blank -%}
+                          <div class="iwt-icon-row__icon">
+                            {{- next_block.settings.icon | image_url: width: 112 | image_tag: loading: 'lazy', widths: '56, 112', sizes: '56px', class: 'iwt-icon-row__icon-img', alt: next_block.settings.label | escape -}}
+                          </div>
+                        {%- endif -%}
+                        {%- if next_block.settings.label != blank -%}<p class="iwt-icon-row__label">{{ next_block.settings.label | escape }}</p>{%- endif -%}
+                      </div>
+                    {%- else -%}
+                      {%- break -%}
+                    {%- endif -%}
+                  {%- endfor -%}
+                </div>
               {%- when 'list_item' -%}
                 {%- unless iwt_list_css_done_below -%}
                   {%- assign iwt_list_css_done_below = true -%}
@@ -237,7 +263,7 @@
     {%- else -%}
 
     <div class="flexible-layout valign-middle">
-      <div class="column column--half {% if section.settings.image_position == 'right' %}column--order-push-desktop{% endif %}">
+      <div class="column column--half {% if section.settings.image_position == 'right' %}column--order-push-desktop{% endif %}{% if section.settings.mobile_image_below %} column--order-push-mobile{% endif %}">
         {% if section.settings.image_link != blank %}<a class="block-link" href="{{ section.settings.image_link }}">{% endif %}
           <div class="image-overlap" style="max-width: {{ section.settings.image_width }}px">
             <div class="image-overlap__image image-overlap__image-1">
@@ -327,6 +353,32 @@
                   </span>
                 </div>
 
+              {%- when 'icon_row_item' -%}
+                <div class="lightly-spaced-row iwt-icon-row" {{ block.shopify_attributes }}>
+                  <div class="iwt-icon-row__item">
+                    {%- if block.settings.icon != blank -%}
+                      <div class="iwt-icon-row__icon">
+                        {{- block.settings.icon | image_url: width: 112 | image_tag: loading: 'lazy', widths: '56, 112', sizes: '56px', class: 'iwt-icon-row__icon-img', alt: block.settings.label | escape -}}
+                      </div>
+                    {%- endif -%}
+                    {%- if block.settings.label != blank -%}<p class="iwt-icon-row__label">{{ block.settings.label | escape }}</p>{%- endif -%}
+                  </div>
+                  {%- for next_block in section.blocks offset: forloop.index -%}
+                    {%- if next_block.type == 'icon_row_item' -%}
+                      {%- assign skip_block_count = skip_block_count | plus: 1 -%}
+                      <div class="iwt-icon-row__item" {{ next_block.shopify_attributes }}>
+                        {%- if next_block.settings.icon != blank -%}
+                          <div class="iwt-icon-row__icon">
+                            {{- next_block.settings.icon | image_url: width: 112 | image_tag: loading: 'lazy', widths: '56, 112', sizes: '56px', class: 'iwt-icon-row__icon-img', alt: next_block.settings.label | escape -}}
+                          </div>
+                        {%- endif -%}
+                        {%- if next_block.settings.label != blank -%}<p class="iwt-icon-row__label">{{ next_block.settings.label | escape }}</p>{%- endif -%}
+                      </div>
+                    {%- else -%}
+                      {%- break -%}
+                    {%- endif -%}
+                  {%- endfor -%}
+                </div>
               {%- when 'list_item' -%}
                 <div class="iwt-list-item" {{ block.shopify_attributes }}>
                   <div class="iwt-list-item__marker">
@@ -433,6 +485,13 @@
           "label": "Below heading (mobile only)"
         }
       ]
+    },
+    {
+      "type": "checkbox",
+      "id": "mobile_image_below",
+      "label": "Move image below content on mobile",
+      "info": "Only affects the Left/Right image alignment options above (not \"Below heading\"). Desktop layout is unaffected.",
+      "default": false
     },
     {
       "type": "text_alignment",
@@ -725,6 +784,27 @@
           "type": "url",
           "id": "url",
           "label": "Link"
+        }
+      ]
+    },
+    {
+      "type": "icon_row_item",
+      "name": "Icon row item",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Consecutive \"Icon row item\" blocks display together in one row, wrapping on smaller screens."
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Label"
         }
       ]
     },
