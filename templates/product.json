@@ -116,24 +116,55 @@
         },
         "accordion_yktgxC": {
           "type": "accordion",
-          "disabled": true,
           "settings": {
-            "title": "Materials & Care",
+            "title": "Why We Love It",
             "icon": "",
             "content": "",
             "page": "",
-            "custom_liquid": "{{ product.metafields.custom.materials_care.value }}",
+            "custom_liquid": "{{ product.metafields.custom.product_template.value.why_we_love_it | metafield_tag }}",
             "open": false,
             "show_in_quickbuy": false
           }
         },
         "accordion_KqCkWX": {
           "type": "accordion",
-          "disabled": true,
           "settings": {
             "title": "Shipping & Returns",
             "icon": "",
             "content": "<p>All US orders over $65 ship for free! Shipping is $7 for orders under $65.</p><p>If you need expedited shipping, the shipping fee will be calculated at checkout.</p>",
+            "page": "",
+            "custom_liquid": "",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        },
+        "accordion_theDetailsUS1": {
+          "type": "accordion",
+          "settings": {
+            "title": "The Details",
+            "icon": "",
+            "content": "",
+            "page": "",
+            "custom_liquid": "{{ product.metafields.custom.product_template.value.the_details | metafield_tag }}",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        },
+        "auto_materials_care_us1": {
+          "type": "auto_materials_care",
+          "settings": {
+            "title": "Materials & Care",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        },
+        "accordion_designUS1": {
+          "type": "accordion",
+          "settings": {
+            "title": "{{ product.metafields.custom.design.value.name.value }}",
+            "icon": "",
+            "content": "<p>{{ product.metafields.custom.design.value.design_description | metafield_tag }}</p>",
+            "image": "{{ product.metafields.custom.design.value.colour_pattern.value.image.value }}",
             "page": "",
             "custom_liquid": "",
             "open": false,
@@ -154,6 +185,9 @@
         "material_usp_DqQq9A",
         "feature_rating_tdmkCF",
         "accordion_yktgxC",
+        "accordion_theDetailsUS1",
+        "auto_materials_care_us1",
+        "accordion_designUS1",
         "accordion_KqCkWX"
       ],
       "settings": {
@@ -183,7 +217,7 @@
       "blocks": {
         "feature_gaaBJH": {
           "type": "feature",
-          "repeater": "{{ product.metafields.custom.product_template.value.features.value }}",
+          "repeater": "{{ product.metafields.custom.material_new.value.material_features.value }}",
           "settings": {
             "image": "{{ block.repeater.image.value }}",
             "title": "{{ block.repeater.title.value }}",
@@ -195,13 +229,7 @@
         "feature_gaaBJH"
       ],
       "settings": {
-        "section_heading": "Why Parents Love This"
-      }
-    },
-    "custom_product_material_care_jFczeg": {
-      "type": "custom-product-material-care",
-      "settings": {
-        "section_heading": "Material & Care"
+        "section_heading": "Made from the Good Stuff"
       }
     },
     "custom_product_list_by_print_fGCmUV": {
@@ -253,17 +281,37 @@
         "full_width": false,
         "show_space": true
       }
+    },
+    "collapsible_tabs_us1": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "question_us1": {
+          "type": "question",
+          "repeater": "{{ product.metafields.custom.product_template.value.faqs.value }}",
+          "settings": {
+            "title": "{{ block.repeater.question.value }}",
+            "answer": "{{ block.repeater.answers | metafield_tag }}"
+          }
+        }
+      },
+      "block_order": [
+        "question_us1"
+      ],
+      "name": "Collapsible tabs",
+      "settings": {
+        "title": "FAQs"
+      }
     }
   },
   "order": [
     "main",
     "custom_product_features_J4Txgz",
-    "custom_product_material_care_jFczeg",
     "custom_product_list_by_print_fGCmUV",
     "related-products",
     "mux_video_embed_h8jKHN",
     "custom_liquid_RMm8G9",
     "17679080070b08b70b",
-    "17759719734a0aaf6f"
+    "17759719734a0aaf6f",
+    "collapsible_tabs_us1"
   ]
 }
