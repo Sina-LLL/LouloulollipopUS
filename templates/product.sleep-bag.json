@@ -176,6 +176,16 @@
             "open": false,
             "show_in_quickbuy": false
           }
+        },
+        "tog_guide_TWMDE3": {
+          "type": "tog_guide",
+          "settings": {
+            "heading": "Recommended Room Temperature",
+            "cool_label": "Cool",
+            "warm_label": "Warm",
+            "info_link": "shopify://blogs/the-lastest-scoop/what-is-tog-dressing-your-baby-for-great-sleep",
+            "link_label": "Choosing the right TOG"
+          }
         }
       },
       "block_order": [
@@ -195,7 +205,8 @@
         "accordion_theDetailsUS1",
         "auto_materials_care_us1",
         "accordion_designUS1",
-        "accordion_KqCkWX"
+        "accordion_KqCkWX",
+        "tog_guide_TWMDE3"
       ],
       "settings": {
         "show_breadcrumbs": true,
