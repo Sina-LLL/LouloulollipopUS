@@ -91,7 +91,8 @@
         },
         "material_usp_DqQq9A": {
           "type": "material-usp",
-          "settings": {}
+          "settings": {},
+          "disabled": true
         },
         "feature_rating_tdmkCF": {
           "type": "feature-rating",
