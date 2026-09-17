@@ -16,6 +16,17 @@
           "type": "title",
           "settings": {}
         },
+        "text_hook_us1": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.custom.product_template.value.hook.value }}",
+            "icon": "",
+            "icon_size": "small",
+            "enable_box": false,
+            "box_color": "#e0f4d5",
+            "show_in_quickbuy": false
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -91,8 +102,8 @@
         },
         "material_usp_DqQq9A": {
           "type": "material-usp",
-          "settings": {},
-          "disabled": true
+          "disabled": true,
+          "settings": {}
         },
         "feature_rating_tdmkCF": {
           "type": "feature-rating",
@@ -117,18 +128,6 @@
             "content": "",
             "page": "",
             "custom_liquid": "{{ product.metafields.custom.product_template.value.why_we_love_it | metafield_tag }}",
-            "open": false,
-            "show_in_quickbuy": false
-          }
-        },
-        "accordion_KqCkWX": {
-          "type": "accordion",
-          "settings": {
-            "title": "Shipping & Returns",
-            "icon": "",
-            "content": "<p>All US orders over $65 ship for free! Shipping is $7 for orders under $65.</p><p>If you need expedited shipping, the shipping fee will be calculated at checkout.</p>",
-            "page": "",
-            "custom_liquid": "",
             "open": false,
             "show_in_quickbuy": false
           }
@@ -166,14 +165,15 @@
             "show_in_quickbuy": false
           }
         },
-        "text_hook_us1": {
-          "type": "text",
+        "accordion_KqCkWX": {
+          "type": "accordion",
           "settings": {
-            "text": "{{ product.metafields.custom.product_template.value.hook.value }}",
+            "title": "Shipping & Returns",
             "icon": "",
-            "icon_size": "small",
-            "enable_box": false,
-            "box_color": "#e0f4d5",
+            "content": "<p>All US orders over $65 ship for free! Shipping is $7 for orders under $65.</p><p>If you need expedited shipping, the shipping fee will be calculated at checkout.</p>",
+            "page": "",
+            "custom_liquid": "",
+            "open": false,
             "show_in_quickbuy": false
           }
         }
@@ -219,6 +219,76 @@
         "media_grouping_option": "Color,Colour,Couleur,Farbe"
       }
     },
+    "logo_list_Bt6EMt": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_RxrV3i": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Certified_B_Corporation_B_Corp_Logo_2022_Black_RGB_svg.webp",
+            "image_width": 80,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_qkJ9ce": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Benefits-of-Partnering-with-a-WBENC-Certified-Women-Business-Enterprise-Public-Relations-and-Marketing-Agency-feature.webp",
+            "image_width": 120,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_UKWxcV": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/OEKO_TEX.png",
+            "image_width": 80,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_wm8HyP": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/30Day_Return.png",
+            "image_width": 90,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_DNaddA": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Free_ShippingUS.png",
+            "image_width": 90,
+            "link": "",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_RxrV3i",
+        "logo_qkJ9ce",
+        "logo_UKWxcV",
+        "logo_wm8HyP",
+        "logo_DNaddA"
+      ],
+      "custom_css": [
+        "#section-id-template--18966821830759__logo_list_rDpCbA {padding: 2px 0;}",
+        "#section-id-template--18966821830759__logo_list_rDpCbA .logo-list {margin-bottom: 0;}"
+      ],
+      "name": "Logo list",
+      "settings": {
+        "title": "",
+        "enable_carousel": false,
+        "carousel_speed": 30,
+        "image_opacity": 100,
+        "color_scheme": "2"
+      }
+    },
     "custom_product_features_J4Txgz": {
       "type": "custom-product-features",
       "blocks": {
@@ -237,6 +307,62 @@
       ],
       "settings": {
         "section_heading": "Made from the Good Stuff"
+      }
+    },
+    "custom_product_safety_us1": {
+      "type": "custom-product-safety",
+      "blocks": {
+        "icon_row_item_us1": {
+          "type": "icon_row_item",
+          "settings": {
+            "icon": "shopify://shop_images/ICON-SM-7.svg",
+            "label": "BPA Free"
+          }
+        },
+        "icon_row_item_us2": {
+          "type": "icon_row_item",
+          "settings": {
+            "icon": "shopify://shop_images/ICON-SM-16.svg",
+            "label": "Phthalate Free"
+          }
+        },
+        "icon_row_item_us3": {
+          "type": "icon_row_item",
+          "settings": {
+            "icon": "shopify://shop_images/ICON-SM-8.svg",
+            "label": "OEKO TEX Certified"
+          }
+        },
+        "icon_row_item_us4": {
+          "type": "icon_row_item",
+          "settings": {
+            "icon": "shopify://shop_images/ICON-SM-2.svg",
+            "label": "Hypo-allergenic"
+          }
+        },
+        "button_us1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read the safety report",
+            "button_link": "shopify://pages/safety",
+            "button_style": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "icon_row_item_us1",
+        "icon_row_item_us2",
+        "icon_row_item_us3",
+        "icon_row_item_us4",
+        "button_us1"
+      ],
+      "name": "Custom Safety Info",
+      "settings": {
+        "heading": "Our Safety Standards",
+        "image_width": 700,
+        "image_position": "right",
+        "text_alignment": "left",
+        "color_scheme": "2"
       }
     },
     "custom_product_list_by_print_fGCmUV": {
@@ -308,66 +434,11 @@
       "settings": {
         "title": "FAQs"
       }
-    },
-    "custom_product_safety_us1": {
-      "type": "custom-product-safety",
-      "blocks": {
-        "icon_row_item_us1": {
-          "type": "icon_row_item",
-          "settings": {
-            "icon": "shopify://shop_images/ICON-SM-7.svg",
-            "label": "BPA Free"
-          }
-        },
-        "icon_row_item_us2": {
-          "type": "icon_row_item",
-          "settings": {
-            "icon": "shopify://shop_images/ICON-SM-16.svg",
-            "label": "Phthalate Free"
-          }
-        },
-        "icon_row_item_us3": {
-          "type": "icon_row_item",
-          "settings": {
-            "icon": "shopify://shop_images/ICON-SM-8.svg",
-            "label": "OEKO TEX Certified"
-          }
-        },
-        "icon_row_item_us4": {
-          "type": "icon_row_item",
-          "settings": {
-            "icon": "shopify://shop_images/ICON-SM-2.svg",
-            "label": "Hypo-allergenic"
-          }
-        },
-        "button_us1": {
-          "type": "button",
-          "settings": {
-            "button_label": "Read the safety report",
-            "button_link": "shopify://pages/safety",
-            "button_style": "secondary"
-          }
-        }
-      },
-      "block_order": [
-        "icon_row_item_us1",
-        "icon_row_item_us2",
-        "icon_row_item_us3",
-        "icon_row_item_us4",
-        "button_us1"
-      ],
-      "name": "Custom Safety Info",
-      "settings": {
-        "heading": "Our Safety Standards",
-        "image_width": 700,
-        "image_position": "right",
-        "text_alignment": "left",
-        "color_scheme": "2"
-      }
     }
   },
   "order": [
     "main",
+    "logo_list_Bt6EMt",
     "custom_product_features_J4Txgz",
     "custom_product_safety_us1",
     "custom_product_list_by_print_fGCmUV",
