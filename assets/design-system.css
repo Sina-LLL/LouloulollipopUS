@@ -2431,7 +2431,7 @@ h1.product-title{
 .tog-guide {
   background: var(--lll-cream);
   border-radius: var(--lll-radius-lg);
-  padding: var(--lll-space-6) var(--lll-space-5);
+  /* padding: var(--lll-space-6) var(--lll-space-5); */
 }
 
 .tog-guide__header {
