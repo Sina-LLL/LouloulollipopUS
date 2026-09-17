@@ -8606,7 +8606,7 @@ carousel-slider[inactive] .slider-nav__btn {
   font-size: var(--base-text-size);
 }
 .product-price--large .price__default {
-  font-size: calc(3 * var(--font-scale) + var(--base-text-size));
+  /* font-size: calc(3 * var(--font-scale) + var(--base-text-size)); */
 }
 .product-price--large .price__was {
   margin-left: 8px;
