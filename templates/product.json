@@ -170,7 +170,7 @@
           "settings": {
             "title": "Shipping & Returns",
             "icon": "",
-            "content": "<p>All US orders over $65 ship for free! Shipping is $7 for orders under $65.</p><p>If you need expedited shipping, the shipping fee will be calculated at checkout.</p>",
+            "content": "<p>All US orders over <strong>$65 ship for free! </strong>Shipping is $7 for orders under $65.</p><p>If you need expedited shipping, the shipping fee will be calculated at checkout.</p><p>Change your mind? Regular-priced items can be <strong>returned within 30 days of purchase</strong>, as long as they're unworn, unwashed, and unused with original tags and packaging intact. Sale and marked-down items are final sale.</p>",
             "page": "",
             "custom_liquid": "",
             "open": false,
