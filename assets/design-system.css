@@ -1972,3 +1972,100 @@ h4, .h4 {
 .section-image-with-text .flexible-layout .column{
   margin-bottom: 0;
 }
+
+/* --- Ported from CA Staging: PDP accordion image, materials-care icon grid, image-with-text mobile reorder + icon row --- */
+.product-info-accordion__image {
+  margin-bottom: 16px;
+}
+.product-info-accordion__image img {
+  display: block;
+}
+
+.product-care-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 16px;
+  row-gap: 20px;
+  margin-top: 16px;
+}
+.product-care-grid__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+.product-care-grid__icon {
+  width: 40px;
+  height: 40px;
+}
+.product-care-grid__icon-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.product-care-grid__label {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+/* Image with text: move image below content on mobile (section setting "mobile_image_below") */
+@media (max-width: 767.98px) {
+  .column--order-push-mobile {
+    order: 1;
+  }
+  /* Full-bleed the pushed image: break out of .container padding to the viewport edges
+     and drop its own bottom margin so it touches the bottom of the section. */
+  .flexible-layout .column.column--order-push-mobile {
+    width: 100vw !important;
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    margin-bottom: 0;
+  }
+  .column--order-push-mobile .image-overlap {
+    max-width: 100vw !important;
+    margin: 0;
+  }
+  /* Section wrapper uses padding (not margin) for spacing when a color scheme is set;
+     drop its bottom padding so the full-bleed image touches the section's bottom edge. */
+  .iwt-row--mobile-image-bleed {
+    padding-bottom: 0;
+  }
+}
+
+/* Image with text: "Icon row item" blocks */
+.iwt-icon-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  column-gap: 32px;
+  row-gap: 24px;
+}
+.iwt-icon-row__item {
+  display: flex;
+  flex: 1 1 0;
+  min-width: 50px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+.iwt-icon-row__icon {
+  width: 56px;
+  height: 56px;
+}
+.iwt-icon-row__icon-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.iwt-icon-row__label {
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.3;
+}
+
