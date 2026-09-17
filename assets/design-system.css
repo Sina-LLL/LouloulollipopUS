@@ -2073,3 +2073,39 @@ h4, .h4 {
 .section-custom-product-safety .use-color-scheme--2 {
   background-color: #D1E3E6;
 }
+
+.product-usp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 24px;
+  row-gap: 32px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.product-usp-grid__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+.product-usp-grid__item--centered {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+.product-usp-grid__icon {
+  width: 64px;
+  height: 64px;
+}
+.product-usp-grid__icon-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.product-usp-grid__label {
+  margin: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.35;
+}
