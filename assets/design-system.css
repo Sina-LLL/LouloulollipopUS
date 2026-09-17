@@ -831,7 +831,7 @@ carousel-slider.mobile-only.custom-features-carousel{
 .custom-product-features__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 16px;
+  gap: 32px;
   justify-items: stretch;
   opacity: 0;
   max-height: 0;
@@ -2072,6 +2072,45 @@ h4, .h4 {
 .section-custom-product-safety.use-color-scheme--2,
 .section-custom-product-safety .use-color-scheme--2 {
   background-color: #D1E3E6;
+}
+
+/* PDP Update */
+.product-info-block{
+  font-size: 14px;
+  margin-bottom: 12px;
+
+}
+.product-form .lightly-spaced-row{
+  margin-bottom: 4px;
+  margin-top: 4px;
+
+}
+.price-descriptors{
+  display:none;
+}
+.MoreToLove{
+color: var(--lll-cream);
+text-align: center;
+font-family: "Avenir Next";
+font-size: 0.75rem;
+font-style: normal;
+font-weight: 600;
+line-height: 0.73344rem; /* 97.792% */
+letter-spacing: 0.00375rem;
+text-transform: uppercase;
+background-color: var(--lll-sale);
+border-radius: 0.25rem;
+padding: 4px 8px;
+}
+.disclosure{
+      border-top: 0.5px solid rgb(var(--body-text-color) );
+    border-bottom: 0.5px solid rgb(var(--body-text-color) );
+}
+.disclosure__content.rte.cf{
+  color: var(--lll-ink)
+}
+h1.product-title{
+  margin-bottom: 8px;
 }
 
 .product-usp-grid {
