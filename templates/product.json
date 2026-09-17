@@ -434,10 +434,15 @@
       "settings": {
         "title": "FAQs"
       }
+    },
+    "tog_guide_test": {
+      "type": "tog-temperature-guide",
+      "settings": {}
     }
   },
   "order": [
     "main",
+    "tog_guide_test",
     "logo_list_Bt6EMt",
     "custom_product_features_J4Txgz",
     "custom_product_safety_us1",
