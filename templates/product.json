@@ -176,10 +176,6 @@
             "open": false,
             "show_in_quickbuy": false
           }
-        },
-        "tog_guide_test1": {
-          "type": "tog_guide",
-          "settings": {}
         }
       },
       "block_order": [
@@ -199,7 +195,6 @@
         "accordion_theDetailsUS1",
         "auto_materials_care_us1",
         "accordion_designUS1",
-        "tog_guide_test1",
         "accordion_KqCkWX"
       ],
       "settings": {
