@@ -46,24 +46,6 @@
             "size_chart_page": "{{ product.metafields.custom.size_chart.value }}"
           }
         },
-        "ethos_exclusive_add_to_cart_UM3MD3": {
-          "type": "shopify://apps/ethos/blocks/exclusive-add-to-cart/e6f2bd3b-e2fd-4f16-b73c-bf198b58bb45",
-          "disabled": true,
-          "settings": {
-            "join_url": "",
-            "logged_out_message_product": "This is an exclusive access product. You must be logged in and have an active [MEMBERSHIP_NAME] membership to purchase.",
-            "no_access_message": "This is an exclusive access product only available to [MEMBERSHIP_NAME] Members.",
-            "join_now_message": "Don't worry though, the [MEMBERSHIP_NAME] Program is free to join! Sign up now and get points, exclusive rewards, and enter contests only for you.",
-            "access_granted_message": "You've unlocked an exclusive access product because you're a [MEMBERSHIP_NAME] member. Enjoy!",
-            "button_background_color": "#000000",
-            "button_border_color": "#000000",
-            "button_text_color": "#ffffff",
-            "button_hover_text_color": "#ffffff",
-            "button_hover_background_color": "#333333",
-            "button_hover_border_color": "#333333",
-            "buy_button_css_class": ".your-custom-button-class"
-          }
-        },
         "buy-buttons": {
           "type": "buy-buttons",
           "settings": {
@@ -78,15 +60,6 @@
           "type": "auto_usp_grid",
           "settings": {}
         },
-        "complementary_BwbHzJ": {
-          "type": "complementary",
-          "disabled": true,
-          "settings": {
-            "heading": "Pairs Perfectly With",
-            "enable_carousel": true,
-            "max_products": 10
-          }
-        },
         "pr_mentions_4ArHLN": {
           "type": "pr-mentions",
           "settings": {}
@@ -97,26 +70,6 @@
             "show_in_tab": true,
             "open_tab": false,
             "icon": "",
-            "show_in_quickbuy": false
-          }
-        },
-        "material_usp_DqQq9A": {
-          "type": "material-usp",
-          "disabled": true,
-          "settings": {}
-        },
-        "feature_rating_tdmkCF": {
-          "type": "feature-rating",
-          "disabled": true,
-          "settings": {
-            "heading": "0.5 lightweight",
-            "segments": 5,
-            "active_segment": "4",
-            "fill_segments": true,
-            "show_labels": true,
-            "label_left": "Cold",
-            "label_middle": "Breazy",
-            "label_right": "Warm",
             "show_in_quickbuy": false
           }
         },
@@ -176,6 +129,16 @@
             "open": false,
             "show_in_quickbuy": false
           }
+        },
+        "tog_guide_ybVY8p": {
+          "type": "tog_guide",
+          "settings": {
+            "heading": "Recommended Room Temperature",
+            "cool_label": "Cool",
+            "warm_label": "Warm",
+            "info_link": "",
+            "link_label": "Choosing the right TOG"
+          }
         }
       },
       "block_order": [
@@ -183,19 +146,16 @@
         "text_hook_us1",
         "price",
         "variant-picker",
-        "ethos_exclusive_add_to_cart_UM3MD3",
         "buy-buttons",
         "usp_CRdfie",
-        "complementary_BwbHzJ",
         "pr_mentions_4ArHLN",
         "description",
-        "material_usp_DqQq9A",
-        "feature_rating_tdmkCF",
         "accordion_yktgxC",
         "accordion_theDetailsUS1",
         "auto_materials_care_us1",
         "accordion_designUS1",
-        "accordion_KqCkWX"
+        "accordion_KqCkWX",
+        "tog_guide_ybVY8p"
       ],
       "settings": {
         "show_breadcrumbs": true,
