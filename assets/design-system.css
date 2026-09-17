@@ -2427,32 +2427,26 @@ h1.product-title{
   .cc-toc__link { transition: none; }
 }
 
-/* TOG Temperature Guide — sections/tog-temperature-guide.liquid */
+/* TOG Temperature Guide (interactive) — sections/custom-main-product.liquid, block type "tog_guide" */
 .tog-guide {
-  padding-block: var(--lll-space-8);
-}
-.tog-guide__inner {
   background: var(--lll-cream);
   border-radius: var(--lll-radius-lg);
-  padding: var(--lll-space-10) var(--lll-space-8);
-}
-.use-color-scheme .tog-guide__inner {
-  background: rgb(var(--color-scheme-bg, 250 249 246));
+  padding: var(--lll-space-6) var(--lll-space-5);
 }
 
 .tog-guide__header {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  gap: var(--lll-space-4);
-  margin-bottom: var(--lll-space-10);
+  gap: var(--lll-space-3);
+  margin-bottom: var(--lll-space-6);
 }
 .tog-guide__label {
   margin: 0;
   font-family: var(--lll-font-display);
   font-weight: var(--lll-weight-heading);
-  font-size: 0.8125rem;
-  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
   color: var(--lll-ink);
 }
@@ -2460,24 +2454,20 @@ h1.product-title{
   margin: 0;
   font-family: var(--lll-font-display);
   font-weight: var(--lll-weight-heading);
-  font-size: var(--lll-text-h4);
+  font-size: 1.375rem;
   color: var(--lll-ink);
   white-space: nowrap;
-}
-
-.tog-guide__slider {
-  max-width: 30rem;
-  margin: 0 auto;
+  transition: opacity var(--lll-duration-fast) ease;
 }
 
 .tog-guide__endpoints {
   display: flex;
   justify-content: space-between;
-  margin-bottom: var(--lll-space-3);
+  margin-bottom: var(--lll-space-2);
 }
 .tog-guide__endpoint-label {
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
+  font-size: 0.6875rem;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
   color: var(--lll-text-muted);
 }
@@ -2487,7 +2477,14 @@ h1.product-title{
   height: 6px;
   border-radius: var(--lll-radius-pill);
   background: linear-gradient(90deg, var(--lll-slate) 0%, var(--lll-blush) 50%, var(--lll-new) 100%);
-  margin-bottom: var(--lll-space-4);
+  margin-bottom: var(--lll-space-3);
+  cursor: pointer;
+  touch-action: none;
+}
+.tog-guide__track:focus-visible {
+  outline: 2px solid var(--lll-slate-deep);
+  outline-offset: 4px;
+  border-radius: var(--lll-radius-pill);
 }
 .tog-guide__endpoint-dot {
   position: absolute;
@@ -2498,6 +2495,7 @@ h1.product-title{
   background: var(--lll-white);
   box-shadow: 0 0 0 1px rgba(29, 29, 29, 0.12);
   transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 .tog-guide__endpoint-dot--start { left: 0; }
 .tog-guide__endpoint-dot--end { left: 100%; }
@@ -2509,9 +2507,14 @@ h1.product-title{
   border-radius: var(--lll-radius-full);
   background: var(--lll-white);
   border: 1px solid var(--lll-slate-border);
-  box-shadow: 0 2px 6px rgba(29, 29, 29, 0.18);
+  box-shadow: 0 2px 6px rgba(29, 29, 29, 0.2);
   transform: translate(-50%, -50%);
-  transition: left var(--lll-duration-med) ease;
+  transition: left var(--lll-duration-fast) ease;
+  cursor: grab;
+}
+.tog-guide__thumb:active {
+  cursor: grabbing;
+  box-shadow: 0 2px 10px rgba(29, 29, 29, 0.3);
 }
 
 .tog-guide__scale {
@@ -2519,8 +2522,24 @@ h1.product-title{
   justify-content: space-between;
 }
 .tog-guide__tog {
-  font-size: 0.8125rem;
+  appearance: none;
+  background: none;
+  border: none;
+  padding: var(--lll-space-1) var(--lll-space-1);
+  margin: calc(var(--lll-space-1) * -1);
+  font-family: inherit;
+  font-size: 0.75rem;
   color: var(--lll-text-muted);
+  cursor: pointer;
+  transition: color var(--lll-duration-fast) ease;
+}
+.tog-guide__tog:hover {
+  color: var(--lll-slate-deep);
+}
+.tog-guide__tog:focus-visible {
+  outline: 2px solid var(--lll-slate-deep);
+  outline-offset: 2px;
+  border-radius: var(--lll-radius-sm);
 }
 .tog-guide__tog.is-active {
   font-weight: var(--lll-weight-heading);
@@ -2529,13 +2548,15 @@ h1.product-title{
 
 .tog-guide__footer {
   text-align: center;
-  margin-top: var(--lll-space-8);
+  margin-top: var(--lll-space-5);
+  padding-top: var(--lll-space-4);
+  border-top: 1px solid var(--lll-slate-border);
 }
 .tog-guide__link {
   display: inline-flex;
   align-items: center;
   gap: var(--lll-space-2);
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: var(--lll-slate-deep);
   text-decoration: underline;
   text-underline-offset: 0.18em;
@@ -2545,19 +2566,7 @@ h1.product-title{
   color: var(--lll-ink);
 }
 .tog-guide__info-icon {
-  width: 14px;
-  height: 14px;
+  width: 13px;
+  height: 13px;
   flex-shrink: 0;
-}
-
-@media (max-width: 767.98px) {
-  .tog-guide__inner {
-    padding: var(--lll-space-6) var(--lll-space-5);
-  }
-  .tog-guide__header {
-    margin-bottom: var(--lll-space-8);
-  }
-  .tog-guide__range {
-    font-size: 1.25rem;
-  }
 }
