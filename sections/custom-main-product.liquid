@@ -306,6 +306,9 @@
             {% endif %} {% endcomment %}
             <div class="price-container" {{ block.shopify_attributes }}>
               <div class="product-info__price product-price product-price--large">
+                {% if product.tags contains "MoreToLoveDiscount" %}
+                  <p class="MoreToLove">Buy Any 3 & Save 10%</p>
+                {% endif %} 
                 {% render 'price', product: product, show_currency_code: settings.product_currency_code_enabled, for_variant_picker: true, current_variant: current_variant %}
                 {% comment %} {% if product.tags contains "MoreToLoveDiscount" %}
                   <p>Buy 3, get 10% off!</p>
@@ -668,8 +671,13 @@
                 assign content = pages[block.settings.page].content
               endif
               assign content = content | append: block.settings.custom_liquid
+
+              assign accordion_image = block.settings.image
+              if block.id == 'accordion_xTzVna' and product.metafields.custom.product_template.value.hide_swatch_image.value
+                assign accordion_image = blank
+              endif
             -%}
-            {%- if content != blank -%}
+            {%- if content != blank or accordion_image != blank -%}
               <div class="product-info-accordion{% unless block.settings.show_in_quickbuy %} not-in-quickbuy{% endunless %}" {{ block.shopify_attributes }}>
                 <details-disclosure>
                   <details class="disclosure"{% if block.settings.open %} open{% endif %}>
@@ -685,6 +693,11 @@
                     </summary>
                     <div class="disclosure__panel has-motion">
                       <div class="disclosure__content rte cf">
+                        {%- if accordion_image != blank -%}
+                          <div class="product-info-accordion__image">
+                            {{- accordion_image | image_url: width: 600 | image_tag: loading: 'lazy', widths: '300, 600', sizes: '(min-width: 769px) 300px, 90vw', alt: accordion_image.alt | default: block.settings.title | escape -}}
+                          </div>
+                        {%- endif -%}
                         {{- content -}}
                       </div>
                     </div>
@@ -692,7 +705,86 @@
                 </details-disclosure>
               </div>
             {%- endif -%}
-           
+
+          {% when 'auto_materials_care' %}
+            {%- liquid
+              assign material = product.metafields.custom.material_new.value
+              assign care_text = blank
+              assign care_icons = blank
+              if material
+                assign care_text = material.materials_care_instructions
+                assign care_icons = material.care_icons.value
+              endif
+            -%}
+            {%- if care_text != blank or care_icons != blank -%}
+              <div class="product-info-accordion{% unless block.settings.show_in_quickbuy %} not-in-quickbuy{% endunless %}" {{ block.shopify_attributes }}>
+                <details-disclosure>
+                  <details class="disclosure"{% if block.settings.open %} open{% endif %}>
+                    <summary class="disclosure__title">
+                      {{- block.settings.title | escape -}}
+                    </summary>
+                    <div class="disclosure__panel has-motion">
+                      <div class="disclosure__content rte cf">
+                        {%- if care_text != blank -%}
+                          {{- care_text | metafield_tag -}}
+                        {%- endif -%}
+                        {%- if care_icons != blank -%}
+                          <div class="product-care-grid">
+                            {%- for ci in care_icons -%}
+                              {%- assign ci_title = ci.title.value -%}
+                              {%- assign ci_icon = ci.icon.value -%}
+                              <div class="product-care-grid__item">
+                                {%- if ci_icon != blank -%}
+                                  <div class="product-care-grid__icon">
+                                    {{- ci_icon | image_url: width: 96 | image_tag: loading: 'lazy', widths: '48, 96', sizes: '48px', class: 'product-care-grid__icon-img', alt: ci_title | escape -}}
+                                  </div>
+                                {%- endif -%}
+                                {%- if ci_title != blank -%}
+                                  <p class="product-care-grid__label">{{ ci_title | escape }}</p>
+                                {%- endif -%}
+                              </div>
+                            {%- endfor -%}
+                          </div>
+                        {%- endif -%}
+                      </div>
+                    </div>
+                  </details>
+                </details-disclosure>
+              </div>
+            {%- endif -%}
+
+          {% when 'auto_usp_grid' %}
+            {%- liquid
+              assign product_template = product.metafields.custom.product_template.value
+              assign usp_icons = blank
+              if product_template
+                assign usp_icons = product_template.usp_icons.value
+              endif
+            -%}
+            {%- if usp_icons != blank -%}
+              {%- assign usp_is_odd = false -%}
+              {%- assign usp_odd_check = usp_icons.size | modulo: 2 -%}
+              {%- if usp_odd_check == 1 -%}
+                {%- assign usp_is_odd = true -%}
+              {%- endif -%}
+              <div class="product-usp-grid not-in-quickbuy" {{ block.shopify_attributes }}>
+                {%- for usp in usp_icons -%}
+                  {%- assign usp_title = usp.title.value -%}
+                  {%- assign usp_icon = usp.icon.value -%}
+                  <div class="product-usp-grid__item{% if usp_is_odd and forloop.last %} product-usp-grid__item--centered{% endif %}">
+                    {%- if usp_icon != blank -%}
+                      <div class="product-usp-grid__icon">
+                        {{- usp_icon | image_url: width: 128 | image_tag: loading: 'lazy', widths: '64, 128', sizes: '64px', class: 'product-usp-grid__icon-img', alt: usp_title | escape -}}
+                      </div>
+                    {%- endif -%}
+                    {%- if usp_title != blank -%}
+                      <p class="product-usp-grid__label">{{ usp_title | escape }}</p>
+                    {%- endif -%}
+                  </div>
+                {%- endfor -%}
+              </div>
+            {%- endif -%}
+
           {% when 'USP' %}
             {% if block.settings.text != blank %}
               <div class="lightly-spaced-row not-in-quickbuy" {{ block.shopify_attributes }}>
@@ -867,13 +959,19 @@
             <hr {% unless block.settings.show_in_quickbuy %}class="not-in-quickbuy"{% endunless %} {{ block.shopify_attributes }}>
           
           {% when 'swatch_highlight' %}
-            {% assign swatch_name = product.metafields.theme.cutline %}
-            {% assign swatch_handle = swatch_name | handleize %}
-            {% assign swatch_collection = collections[swatch_handle] %}
+            {% liquid
+              assign swatch_design = product.metafields.custom.design.value
+              assign swatch_name = swatch_design.name.value
+              assign swatch_collection = swatch_design.design_collection.value
+              assign swatch_highlight_image = swatch_design.colour_pattern.value.image.value
+              if swatch_highlight_image == blank
+                assign swatch_highlight_image = product.featured_image
+              endif
+            %}
 
             <div class="swatch-highlight-container lightly-spaced-row inline-width-container{% unless block.settings.show_in_quickbuy %} not-in-quickbuy{% endunless %}" {{ block.shopify_attributes }}>
               {%- render 'image',
-                image: product.metafields.custom.swatch.value.image.value,
+                image: swatch_highlight_image,
                 sizes: img_sizes,
                 widths: img_widths,
                 custom_aspect_ratio: img_aspect_ratio,
@@ -1184,12 +1282,12 @@
 {% endcomment %}
 
 {% comment %}
-  Section: Related Products by Cutline Metafield using product_recommendations
-  Filters recommendations to match a tag = product.metafields.theme.cutline
+  Section: Related Products by Design Metafield using product_recommendations
+  Filters recommendations to match a tag = product.metafields.custom.design.value.name
 {% endcomment %}
 
-{% if product.metafields.theme.cutline.value %}
-  {% assign cutline_tag = product.metafields.theme.cutline.value | downcase %}
+{% if product.metafields.custom.design.value.name.value %}
+  {% assign cutline_tag = product.metafields.custom.design.value.name.value | downcase %}
 
   {% if product_recommendations.products.size > 0 %}
     <div class="related-products">
@@ -2199,6 +2297,12 @@
           "default": "<p>Collapsible tab content</p>"
         },
         {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Tab image",
+          "info": "Optional. Use \"Connect dynamic source\" to bind this to a metaobject's image field (e.g. a design/swatch metaobject)."
+        },
+        {
           "type": "page",
           "id": "page",
           "label": "Tab content from page"
@@ -2207,6 +2311,44 @@
           "type": "liquid",
           "id": "custom_liquid",
           "label": "Liquid code"
+        },
+        {
+          "type": "checkbox",
+          "id": "open",
+          "label": "Open",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "show_in_quickbuy",
+          "label": "Show in quick buy",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "auto_usp_grid",
+      "name": "Product USPs (auto)",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Automatically pulls icons and titles from this product's Product Template metaobject (custom.product_template → USP Icons). Nothing to configure here — to change which icons show, edit the usp_icons list on the product's Product Template entry in Content → Metaobjects, or add/edit entries under Product Feature Icons."
+        }
+      ]
+    },
+    {
+      "type": "auto_materials_care",
+      "name": "Materials & Care (auto)",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Automatically pulls the materials & care text and a 3-column care icon grid from this product's Material metaobject (custom.material_new). To change what shows, edit the product's Material entry in Content → Metaobjects, or merge it with a different one."
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Materials & Care"
         },
         {
           "type": "checkbox",

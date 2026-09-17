@@ -1,8 +1,7 @@
 {%- liquid
-  assign current_swatch = product.metafields.theme.cutline
-  assign swatch_slug = current_swatch | handleize
-
-  assign swatch_collection = collections[swatch_slug]
+  assign current_design = product.metafields.custom.design.value
+  assign current_swatch = current_design.name.value
+  assign swatch_collection = current_design.design_collection.value
 
   if swatch_collection and swatch_collection.products_count > 0
     assign related_products = swatch_collection.products | where: 'id', product.id, false | limit: 8

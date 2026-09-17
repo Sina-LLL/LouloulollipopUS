@@ -16,6 +16,17 @@
           "type": "title",
           "settings": {}
         },
+        "text_hook_us1": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.custom.product_template.value.hook.value }}",
+            "icon": "",
+            "icon_size": "small",
+            "enable_box": false,
+            "box_color": "#e0f4d5",
+            "show_in_quickbuy": false
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -64,14 +75,8 @@
           }
         },
         "usp_CRdfie": {
-          "type": "USP",
-          "repeater": "{{ product.metafields.custom.product_template.value.usp_icons.value }}",
-          "settings": {
-            "text": "{{ block.repeater.title.value }}",
-            "icon": "",
-            "custom_icon": "{{ block.repeater.icon.value }}",
-            "icon_size": "large"
-          }
+          "type": "auto_usp_grid",
+          "settings": {}
         },
         "complementary_BwbHzJ": {
           "type": "complementary",
@@ -89,14 +94,15 @@
         "description": {
           "type": "description",
           "settings": {
-            "show_in_tab": false,
-            "open_tab": true,
+            "show_in_tab": true,
+            "open_tab": false,
             "icon": "",
             "show_in_quickbuy": false
           }
         },
         "material_usp_DqQq9A": {
           "type": "material-usp",
+          "disabled": true,
           "settings": {}
         },
         "feature_rating_tdmkCF": {
@@ -116,20 +122,51 @@
         },
         "accordion_yktgxC": {
           "type": "accordion",
-          "disabled": true,
           "settings": {
-            "title": "Materials & Care",
+            "title": "Why We Love It",
             "icon": "",
             "content": "",
             "page": "",
-            "custom_liquid": "{{ product.metafields.custom.materials_care.value }}",
+            "custom_liquid": "{{ product.metafields.custom.product_template.value.why_we_love_it | metafield_tag }}",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        },
+        "accordion_theDetailsUS1": {
+          "type": "accordion",
+          "settings": {
+            "title": "The Details",
+            "icon": "",
+            "content": "",
+            "page": "",
+            "custom_liquid": "{{ product.metafields.custom.product_template.value.the_details | metafield_tag }}",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        },
+        "auto_materials_care_us1": {
+          "type": "auto_materials_care",
+          "settings": {
+            "title": "Materials & Care",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        },
+        "accordion_designUS1": {
+          "type": "accordion",
+          "settings": {
+            "title": "{{ product.metafields.custom.design.value.name.value }}",
+            "icon": "",
+            "content": "<p>{{ product.metafields.custom.design.value.design_description | metafield_tag }}</p>",
+            "image": "{{ product.metafields.custom.design.value.colour_pattern.value.image.value }}",
+            "page": "",
+            "custom_liquid": "",
             "open": false,
             "show_in_quickbuy": false
           }
         },
         "accordion_KqCkWX": {
           "type": "accordion",
-          "disabled": true,
           "settings": {
             "title": "Shipping & Returns",
             "icon": "",
@@ -143,6 +180,7 @@
       },
       "block_order": [
         "title",
+        "text_hook_us1",
         "price",
         "variant-picker",
         "ethos_exclusive_add_to_cart_UM3MD3",
@@ -154,6 +192,9 @@
         "material_usp_DqQq9A",
         "feature_rating_tdmkCF",
         "accordion_yktgxC",
+        "accordion_theDetailsUS1",
+        "auto_materials_care_us1",
+        "accordion_designUS1",
         "accordion_KqCkWX"
       ],
       "settings": {
@@ -178,12 +219,82 @@
         "media_grouping_option": "Color,Colour,Couleur,Farbe"
       }
     },
+    "logo_list_Bt6EMt": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_RxrV3i": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Certified_B_Corporation_B_Corp_Logo_2022_Black_RGB_svg.webp",
+            "image_width": 80,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_qkJ9ce": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Benefits-of-Partnering-with-a-WBENC-Certified-Women-Business-Enterprise-Public-Relations-and-Marketing-Agency-feature.webp",
+            "image_width": 120,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_UKWxcV": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/OEKO_TEX.png",
+            "image_width": 80,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_wm8HyP": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/30Day_Return.png",
+            "image_width": 90,
+            "link": "",
+            "title": ""
+          }
+        },
+        "logo_DNaddA": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Free_ShippingUS.png",
+            "image_width": 90,
+            "link": "",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_RxrV3i",
+        "logo_qkJ9ce",
+        "logo_UKWxcV",
+        "logo_wm8HyP",
+        "logo_DNaddA"
+      ],
+      "custom_css": [
+        "#section-id-template--18966821830759__logo_list_rDpCbA {padding: 2px 0;}",
+        "#section-id-template--18966821830759__logo_list_rDpCbA .logo-list {margin-bottom: 0;}"
+      ],
+      "name": "Logo list",
+      "settings": {
+        "title": "",
+        "enable_carousel": false,
+        "carousel_speed": 30,
+        "image_opacity": 100,
+        "color_scheme": "2"
+      }
+    },
     "custom_product_features_J4Txgz": {
       "type": "custom-product-features",
       "blocks": {
         "feature_gaaBJH": {
           "type": "feature",
-          "repeater": "{{ product.metafields.custom.product_template.value.features.value }}",
+          "repeater": "{{ product.metafields.custom.material_new.value.material_features.value }}",
           "settings": {
             "image": "{{ block.repeater.image.value }}",
             "title": "{{ block.repeater.title.value }}",
@@ -195,13 +306,63 @@
         "feature_gaaBJH"
       ],
       "settings": {
-        "section_heading": "Why Parents Love This"
+        "section_heading": "Made from the Good Stuff"
       }
     },
-    "custom_product_material_care_jFczeg": {
-      "type": "custom-product-material-care",
+    "custom_product_safety_us1": {
+      "type": "custom-product-safety",
+      "blocks": {
+        "icon_row_item_us1": {
+          "type": "icon_row_item",
+          "settings": {
+            "icon": "shopify://shop_images/ICON-SM-7.svg",
+            "label": "BPA Free"
+          }
+        },
+        "icon_row_item_us2": {
+          "type": "icon_row_item",
+          "settings": {
+            "icon": "shopify://shop_images/ICON-SM-16.svg",
+            "label": "Phthalate Free"
+          }
+        },
+        "icon_row_item_us3": {
+          "type": "icon_row_item",
+          "settings": {
+            "icon": "shopify://shop_images/ICON-SM-8.svg",
+            "label": "OEKO TEX Certified"
+          }
+        },
+        "icon_row_item_us4": {
+          "type": "icon_row_item",
+          "settings": {
+            "icon": "shopify://shop_images/ICON-SM-2.svg",
+            "label": "Hypo-allergenic"
+          }
+        },
+        "button_us1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read the safety report",
+            "button_link": "shopify://pages/safety",
+            "button_style": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "icon_row_item_us1",
+        "icon_row_item_us2",
+        "icon_row_item_us3",
+        "icon_row_item_us4",
+        "button_us1"
+      ],
+      "name": "Custom Safety Info",
       "settings": {
-        "section_heading": "Material & Care"
+        "heading": "Our Safety Standards",
+        "image_width": 700,
+        "image_position": "right",
+        "text_alignment": "left",
+        "color_scheme": "2"
       }
     },
     "custom_product_list_by_print_fGCmUV": {
@@ -253,17 +414,39 @@
         "full_width": false,
         "show_space": true
       }
+    },
+    "collapsible_tabs_us1": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "question_us1": {
+          "type": "question",
+          "repeater": "{{ product.metafields.custom.product_template.value.faqs.value }}",
+          "settings": {
+            "title": "{{ block.repeater.question.value }}",
+            "answer": "{{ block.repeater.answers | metafield_tag }}"
+          }
+        }
+      },
+      "block_order": [
+        "question_us1"
+      ],
+      "name": "Collapsible tabs",
+      "settings": {
+        "title": "FAQs"
+      }
     }
   },
   "order": [
     "main",
+    "logo_list_Bt6EMt",
     "custom_product_features_J4Txgz",
-    "custom_product_material_care_jFczeg",
+    "custom_product_safety_us1",
     "custom_product_list_by_print_fGCmUV",
     "related-products",
     "mux_video_embed_h8jKHN",
     "custom_liquid_RMm8G9",
     "17679080070b08b70b",
-    "17759719734a0aaf6f"
+    "17759719734a0aaf6f",
+    "collapsible_tabs_us1"
   ]
 }

@@ -1,0 +1,211 @@
+{%- liquid
+  assign product_template = product.metafields.custom.product_template.value
+  assign safety_text = product_template.safety_message
+  assign safety_image = product_template.safety_message_image
+-%}
+{%- if safety_text.value != blank and safety_image.value != blank -%}
+
+<div class="{% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }} fully-padded-row--medium{% else %}fully-spaced-row--medium{% endif %} iwt-row--mobile-image-bleed">
+  <div class="container">
+    <div class="flexible-layout valign-middle">
+      <div class="column column--half {% if section.settings.image_position == 'right' %}column--order-push-desktop{% endif %} column--order-push-mobile">
+        <div class="image-overlap" style="max-width: {{ section.settings.image_width }}px">
+          <div class="image-overlap__image image-overlap__image-1">
+            <div class="fade-in-up" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.1s"' -%}>
+              {%- render 'image' with safety_image.value, size_cols_desktop: 2 -%}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column column--half align-ltr-{{ section.settings.text_alignment }}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
+        <div class="feature-text-paired">
+          {%- if section.settings.heading != blank -%}
+            <h2 class="majortitle in-content h1">{{ section.settings.heading | escape }}</h2>
+          {%- endif -%}
+
+          <div class="rte lightly-spaced-row">{{ safety_text | metafield_tag }}</div>
+
+          {%- assign skip_block_count = 0 -%}
+          {%- for block in section.blocks -%}
+            {%- liquid
+              if skip_block_count > 0
+                assign skip_block_count = skip_block_count | minus: 1
+                continue
+              endif
+            -%}
+            {%- case block.type -%}
+              {%- when 'icon_row_item' -%}
+                <div class="lightly-spaced-row iwt-icon-row" {{ block.shopify_attributes }}>
+                  <div class="iwt-icon-row__item">
+                    {%- if block.settings.icon != blank -%}
+                      <div class="iwt-icon-row__icon">
+                        {{- block.settings.icon | image_url: width: 112 | image_tag: loading: 'lazy', widths: '56, 112', sizes: '56px', class: 'iwt-icon-row__icon-img', alt: block.settings.label | escape -}}
+                      </div>
+                    {%- endif -%}
+                    {%- if block.settings.label != blank -%}<p class="iwt-icon-row__label">{{ block.settings.label | escape }}</p>{%- endif -%}
+                  </div>
+                  {%- for next_block in section.blocks offset: forloop.index -%}
+                    {%- if next_block.type == 'icon_row_item' -%}
+                      {%- assign skip_block_count = skip_block_count | plus: 1 -%}
+                      <div class="iwt-icon-row__item" {{ next_block.shopify_attributes }}>
+                        {%- if next_block.settings.icon != blank -%}
+                          <div class="iwt-icon-row__icon">
+                            {{- next_block.settings.icon | image_url: width: 112 | image_tag: loading: 'lazy', widths: '56, 112', sizes: '56px', class: 'iwt-icon-row__icon-img', alt: next_block.settings.label | escape -}}
+                          </div>
+                        {%- endif -%}
+                        {%- if next_block.settings.label != blank -%}<p class="iwt-icon-row__label">{{ next_block.settings.label | escape }}</p>{%- endif -%}
+                      </div>
+                    {%- else -%}
+                      {%- break -%}
+                    {%- endif -%}
+                  {%- endfor -%}
+                </div>
+              {%- when 'button' -%}
+                <div class="lightly-spaced-row button-row" {{ block.shopify_attributes }}>
+                  <a class="{% if block.settings.button_style != 'link' %}btn btn--{{ block.settings.button_style }}{% else %}small-feature-link{% endif %} button-row__btn" href="{{ block.settings.button_link }}">{{ block.settings.button_label | escape }}</a>
+                  {%- assign skip_block_count = 0 -%}
+                  {%- for next_block in section.blocks offset: forloop.index -%}
+                    {%- if next_block.type == 'button' -%}
+                      {%- assign skip_block_count = skip_block_count | plus: 1 -%}
+                      <a class="{% if next_block.settings.button_style != 'link' %}btn btn--{{ next_block.settings.button_style }}{% else %}small-feature-link{% endif %} button-row__btn" href="{{ next_block.settings.button_link }}" {{ next_block.shopify_attributes }}>{{ next_block.settings.button_label | escape }}</a>
+                    {%- else -%}
+                      {%- break -%}
+                    {%- endif -%}
+                  {%- endfor -%}
+                </div>
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Custom Safety Info",
+  "tag": "section",
+  "class": "section-custom-product-safety",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Our Safety Standards"
+    },
+    {
+      "type": "range",
+      "id": "image_width",
+      "min": 150,
+      "max": 700,
+      "step": 10,
+      "unit": "px",
+      "label": "Image width",
+      "default": 700
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image alignment (desktop)",
+      "default": "right",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" }
+      ]
+    },
+    {
+      "type": "text_alignment",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "default",
+      "options": [
+        { "value": "default", "label": "Default" },
+        { "value": "1", "label": "1" },
+        { "value": "2", "label": "2" }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "This section only renders when the product's Product Template metaobject has both a Safety Message and a Safety Message Image set. Otherwise it outputs nothing."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "icon_row_item",
+      "name": "Icon row item",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Consecutive \"Icon row item\" blocks display together in one row, wrapping on smaller screens."
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Label"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Consecutive buttons will show on the same row"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button",
+          "default": "Button text"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        },
+        {
+          "type": "select",
+          "id": "button_style",
+          "label": "Button style",
+          "default": "secondary",
+          "options": [
+            { "label": "Primary", "value": "primary" },
+            { "label": "Secondary", "value": "secondary" },
+            { "label": "Link", "value": "link" }
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Safety Info",
+      "category": "Product",
+      "settings": {},
+      "blocks": [
+        { "type": "icon_row_item" },
+        { "type": "icon_row_item" },
+        { "type": "icon_row_item" },
+        { "type": "icon_row_item" },
+        { "type": "button" }
+      ]
+    }
+  ]
+}
+{% endschema %}
