@@ -16,7 +16,7 @@
   assign has_siblings = false
   if product.metafields.theme.siblings.value != blank and product.metafields.theme.siblings.type == 'single_line_text_field'
     assign has_siblings = true
-    assign cutline = product.metafields.theme.cutline
+    assign cutline = product.metafields.custom.design.value.name
     assign sibs_collection = collections[product.metafields.theme.siblings.value]
   endif
 %}
