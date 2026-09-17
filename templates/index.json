@@ -334,7 +334,7 @@
             "enable_media": true,
             "image": "shopify://shop_images/tencel-certification-862.png",
             "title": "TENCEL™ Lyocell",
-            "text": "<p>Made from sustainably harvested wood pulp, TENCEL™ Lyocell is naturally temperature-regulating and buttery-soft against sensitive skin — the fabric behind our sleepers, pajamas, and swaddle wraps.</p>",
+            "text": "<p>Made from sustainably harvested wood pulp, TENCEL™ Lyocell is naturally temperature-regulating and buttery-soft against sensitive skin</p>",
             "button_label": "Shop TENCEL™",
             "link": "shopify://collections/sleepers"
           }
@@ -345,7 +345,7 @@
             "enable_media": true,
             "image": "shopify://shop_images/ICON-bamboo.svg",
             "title": "Tanboocel® Viscose from Bamboo",
-            "text": "<p>Naturally breathable and hypoallergenic, our Tanboocel® bamboo viscose stays cool through the night — the fabric behind our muslin swaddles, quilts, and crib sheets.</p>",
+            "text": "<p>Naturally breathable and hypoallergenic, our Tanboocel® bamboo viscose stays cool through the night</p>",
             "button_label": "Shop Tanboocel®",
             "link": "shopify://collections/swaddles"
           }
@@ -356,7 +356,7 @@
             "enable_media": true,
             "image": "shopify://shop_images/Food_Grade_Silicone.svg",
             "title": "LFGB Food-Grade Silicone",
-            "text": "<p>Every feeding piece is made from LFGB-certified, phthalate-free silicone — safe enough to chew, durable enough for daily mealtime chaos.</p>",
+            "text": "<p>Every feeding piece is made from LFGB-certified, phthalate-free silicone</p>",
             "button_label": "Shop Feeding",
             "link": "shopify://collections/eat"
           }
@@ -1196,6 +1196,7 @@
         "image_width": 700,
         "image_link": "",
         "image_position": "right",
+        "mobile_image_below": false,
         "text_alignment": "left",
         "color_scheme": "default"
       }
