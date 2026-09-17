@@ -2431,7 +2431,6 @@ h1.product-title{
 .tog-guide {
   background: var(--lll-cream);
   border-radius: var(--lll-radius-lg);
-  /* padding: var(--lll-space-6) var(--lll-space-5); */
 }
 
 .tog-guide__header {
@@ -2443,11 +2442,12 @@ h1.product-title{
 }
 .tog-guide__label {
   margin: 0;
-  font-family: var(--lll-font-display);
-  font-weight: var(--lll-weight-heading);
-  font-size: 0.75rem;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
+  font-family: var(--lll-font-body);
+  font-weight: var(--lll-weight-subhead);
+  font-size: 1rem;
+  line-height: 1.4;
+  letter-spacing: normal;
+  text-transform: none;
   color: var(--lll-ink);
 }
 .tog-guide__range {
