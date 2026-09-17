@@ -2106,6 +2106,10 @@ padding: 4px 8px;
       border-top: 0.5px solid rgb(var(--body-text-color) );
     border-bottom: 0.5px solid rgb(var(--body-text-color) );
 }
+.disclosure__title-text {
+  margin: 0;
+  font: inherit;
+}
 .disclosure__content.rte.cf{
   color: var(--lll-ink)
 }
