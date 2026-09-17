@@ -1,0 +1,118 @@
+{%- liquid
+  assign title_l = product.title | downcase
+  assign tog_value = blank
+  assign temp_range = blank
+  assign dot_position = 50
+
+  if title_l contains '0.5 tog'
+    assign tog_value = '0.5'
+    assign temp_range = '75–81°F'
+    assign dot_position = 88
+  elsif title_l contains '1.0 tog'
+    assign tog_value = '1.0'
+    assign temp_range = '69–73°F'
+    assign dot_position = 50
+  elsif title_l contains '2.5 tog'
+    assign tog_value = '2.5'
+    assign temp_range = '61–68°F'
+    assign dot_position = 12
+  endif
+-%}
+{%- if tog_value != blank -%}
+  <div class="tog-guide {% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }}{% endif %}">
+    <div class="tog-guide__inner container">
+      <div class="tog-guide__header">
+        <p class="tog-guide__label">{{ section.settings.heading | default: 'Recommended Room Temperature' }}</p>
+        <p class="tog-guide__range">{{ temp_range }}</p>
+      </div>
+
+      <div class="tog-guide__slider">
+        <div class="tog-guide__endpoints">
+          <span class="tog-guide__endpoint-label">{{ section.settings.cool_label | default: 'Cool' }}</span>
+          <span class="tog-guide__endpoint-label">{{ section.settings.warm_label | default: 'Warm' }}</span>
+        </div>
+
+        <div class="tog-guide__track">
+          <span class="tog-guide__endpoint-dot tog-guide__endpoint-dot--start"></span>
+          <span class="tog-guide__endpoint-dot tog-guide__endpoint-dot--end"></span>
+          <span class="tog-guide__thumb" style="left: {{ dot_position }}%;"></span>
+        </div>
+
+        <div class="tog-guide__scale">
+          <span class="tog-guide__tog{% if tog_value == '2.5' %} is-active{% endif %}">2.5 TOG</span>
+          <span class="tog-guide__tog{% if tog_value == '1.0' %} is-active{% endif %}">1.0 TOG</span>
+          <span class="tog-guide__tog{% if tog_value == '0.5' %} is-active{% endif %}">0.5 TOG</span>
+        </div>
+      </div>
+
+      {%- if section.settings.info_link != blank -%}
+        <div class="tog-guide__footer">
+          <a href="{{ section.settings.info_link }}" class="tog-guide__link">
+            {{ section.settings.link_label | default: 'Choosing the right TOG' }}
+            <svg class="tog-guide__info-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.1"/>
+              <path d="M8 7.25V11.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+              <circle cx="8" cy="4.85" r="0.85" fill="currentColor"/>
+            </svg>
+          </a>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "TOG Temperature Guide",
+  "class": "section-tog-guide",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Automatically detects 0.5 / 1.0 / 2.5 TOG from the product title and shows the matching recommended room temperature. Renders nothing on products without a TOG rating in the title."
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Recommended Room Temperature"
+    },
+    {
+      "type": "text",
+      "id": "cool_label",
+      "label": "Cool-end label",
+      "default": "Cool"
+    },
+    {
+      "type": "text",
+      "id": "warm_label",
+      "label": "Warm-end label",
+      "default": "Warm"
+    },
+    {
+      "type": "url",
+      "id": "info_link",
+      "label": "\"Choosing the right TOG\" link"
+    },
+    {
+      "type": "text",
+      "id": "link_label",
+      "label": "Link label",
+      "default": "Choosing the right TOG"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "default",
+      "options": [
+        { "value": "default", "label": "Default" },
+        { "value": "1", "label": "1" },
+        { "value": "2", "label": "2" }
+      ]
+    }
+  ],
+  "presets": [
+    { "name": "TOG Temperature Guide" }
+  ]
+}
+{% endschema %}
