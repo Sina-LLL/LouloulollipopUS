@@ -313,11 +313,68 @@
       "settings": {
         "title": "FAQs"
       }
+    },
+    "custom_product_safety_us1": {
+      "type": "custom-product-safety",
+      "blocks": {
+        "icon_row_item_us1": {
+          "type": "icon_row_item",
+          "settings": {
+            "icon": "shopify://shop_images/ICON-SM-7.svg",
+            "label": "BPA Free"
+          }
+        },
+        "icon_row_item_us2": {
+          "type": "icon_row_item",
+          "settings": {
+            "icon": "shopify://shop_images/ICON-SM-16.svg",
+            "label": "Phthalate Free"
+          }
+        },
+        "icon_row_item_us3": {
+          "type": "icon_row_item",
+          "settings": {
+            "icon": "shopify://shop_images/ICON-SM-8.svg",
+            "label": "OEKO TEX Certified"
+          }
+        },
+        "icon_row_item_us4": {
+          "type": "icon_row_item",
+          "settings": {
+            "icon": "shopify://shop_images/ICON-SM-2.svg",
+            "label": "Hypo-allergenic"
+          }
+        },
+        "button_us1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read the safety report",
+            "button_link": "shopify://pages/safety",
+            "button_style": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "icon_row_item_us1",
+        "icon_row_item_us2",
+        "icon_row_item_us3",
+        "icon_row_item_us4",
+        "button_us1"
+      ],
+      "name": "Custom Safety Info",
+      "settings": {
+        "heading": "Our Safety Standards",
+        "image_width": 700,
+        "image_position": "right",
+        "text_alignment": "left",
+        "color_scheme": "2"
+      }
     }
   },
   "order": [
     "main",
     "custom_product_features_J4Txgz",
+    "custom_product_safety_us1",
     "custom_product_list_by_print_fGCmUV",
     "related-products",
     "mux_video_embed_h8jKHN",
