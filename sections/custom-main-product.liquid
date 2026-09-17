@@ -386,11 +386,11 @@
                     <details class="disclosure"{% if block.settings.open_tab %} open{% endif %}>
                       <summary class="disclosure__title">
                         {%- if block.settings.icon == blank -%}
-                          {{- 'products.product.description' | t -}}
+                          <h3 class="disclosure__title-text">{{ 'products.product.description' | t }}</h3>
                         {%- else -%}
                           <div class="with-icon">
                             {% render 'icon', icon: block.settings.icon, size: 'small' %}
-                            <span class="with-icon__beside">{{ 'products.product.description' | t }}</span>
+                            <h3 class="with-icon__beside disclosure__title-text">{{ 'products.product.description' | t }}</h3>
                           </div>
                         {%- endif -%}
                       </summary>
@@ -683,11 +683,11 @@
                   <details class="disclosure"{% if block.settings.open %} open{% endif %}>
                     <summary class="disclosure__title">
                       {%- if block.settings.icon == blank -%}
-                        {{- block.settings.title | escape -}}
+                        <h3 class="disclosure__title-text">{{ block.settings.title | escape }}</h3>
                       {%- else -%}
                         <div class="with-icon">
                           {% render 'icon', icon: block.settings.icon, size: 'small' %}
-                          <span class="with-icon__beside">{{ block.settings.title | escape }}</span>
+                          <h3 class="with-icon__beside disclosure__title-text">{{ block.settings.title | escape }}</h3>
                         </div>
                       {%- endif -%}
                     </summary>
@@ -721,7 +721,7 @@
                 <details-disclosure>
                   <details class="disclosure"{% if block.settings.open %} open{% endif %}>
                     <summary class="disclosure__title">
-                      {{- block.settings.title | escape -}}
+                      <h3 class="disclosure__title-text">{{ block.settings.title | escape }}</h3>
                     </summary>
                     <div class="disclosure__panel has-motion">
                       <div class="disclosure__content rte cf">
@@ -751,6 +751,138 @@
                   </details>
                 </details-disclosure>
               </div>
+            {%- endif -%}
+
+          {% when 'tog_guide' %}
+            {%- liquid
+              assign title_l = product.title | downcase
+              assign tog_value = blank
+
+              if title_l contains '0.5 tog'
+                assign tog_value = '0.5'
+              elsif title_l contains '1.0 tog'
+                assign tog_value = '1.0'
+              elsif title_l contains '2.5 tog'
+                assign tog_value = '2.5'
+              endif
+            -%}
+            {%- if tog_value != blank -%}
+              {%- assign guide_uid = section.id | append: '-' | append: block.id -%}
+              <div class="tog-guide" data-tog-guide id="tog-guide-{{ guide_uid }}" {{ block.shopify_attributes }}>
+                <div class="tog-guide__header">
+                  <h3 class="tog-guide__label">{{ block.settings.heading | default: 'Recommended Room Temperature' }}</h3>
+                  <p class="tog-guide__range" data-tog-guide-range>69–73°F</p>
+                </div>
+
+                <div class="tog-guide__slider">
+                  <div class="tog-guide__endpoints">
+                    <span class="tog-guide__endpoint-label">{{ block.settings.cool_label | default: 'Cool' }}</span>
+                    <span class="tog-guide__endpoint-label">{{ block.settings.warm_label | default: 'Warm' }}</span>
+                  </div>
+
+                  <div class="tog-guide__track" data-tog-guide-track tabindex="0" role="slider" aria-label="TOG selector" aria-valuemin="0.5" aria-valuemax="2.5" aria-valuenow="{{ tog_value }}">
+                    <span class="tog-guide__endpoint-dot tog-guide__endpoint-dot--start"></span>
+                    <span class="tog-guide__endpoint-dot tog-guide__endpoint-dot--end"></span>
+                    <span class="tog-guide__thumb" data-tog-guide-thumb></span>
+                  </div>
+
+                  <div class="tog-guide__scale">
+                    <button type="button" class="tog-guide__tog" data-tog-guide-option data-tog="2.5" data-temp="61–68°F" data-position="0">2.5 TOG</button>
+                    <button type="button" class="tog-guide__tog" data-tog-guide-option data-tog="1.0" data-temp="69–73°F" data-position="50">1.0 TOG</button>
+                    <button type="button" class="tog-guide__tog" data-tog-guide-option data-tog="0.5" data-temp="75–81°F" data-position="100">0.5 TOG</button>
+                  </div>
+                </div>
+
+                {%- if block.settings.info_link != blank -%}
+                  <div class="tog-guide__footer">
+                    <a href="{{ block.settings.info_link }}" class="tog-guide__link">
+                      {{ block.settings.link_label | default: 'Choosing the right TOG' }}
+                      <svg class="tog-guide__info-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.1"/>
+                        <path d="M8 7.25V11.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+                        <circle cx="8" cy="4.85" r="0.85" fill="currentColor"/>
+                      </svg>
+                    </a>
+                  </div>
+                {%- endif -%}
+              </div>
+
+              <script>
+                (function () {
+                  var root = document.getElementById('tog-guide-{{ guide_uid }}');
+                  if (!root || root.dataset.togGuideInit) return;
+                  root.dataset.togGuideInit = 'true';
+
+                  var track = root.querySelector('[data-tog-guide-track]');
+                  var thumb = root.querySelector('[data-tog-guide-thumb]');
+                  var range = root.querySelector('[data-tog-guide-range]');
+                  var options = Array.prototype.slice.call(root.querySelectorAll('[data-tog-guide-option]'));
+
+                  function setActive(option) {
+                    options.forEach(function (opt) {
+                      opt.classList.toggle('is-active', opt === option);
+                    });
+                    thumb.style.left = option.dataset.position + '%';
+                    range.textContent = option.dataset.temp;
+                    track.setAttribute('aria-valuenow', option.dataset.tog);
+                  }
+
+                  var initial = options.filter(function (o) { return o.dataset.tog === '{{ tog_value }}'; })[0] || options[1];
+                  setActive(initial);
+
+                  options.forEach(function (opt) {
+                    opt.addEventListener('click', function () { setActive(opt); });
+                  });
+
+                  function nearestOption(clientX) {
+                    var rect = track.getBoundingClientRect();
+                    var pct = ((clientX - rect.left) / rect.width) * 100;
+                    var closest = options[0];
+                    var closestDist = Infinity;
+                    options.forEach(function (opt) {
+                      var dist = Math.abs(parseFloat(opt.dataset.position) - pct);
+                      if (dist < closestDist) {
+                        closestDist = dist;
+                        closest = opt;
+                      }
+                    });
+                    return closest;
+                  }
+
+                  var dragging = false;
+                  function onPointerMove(e) {
+                    if (!dragging) return;
+                    var clientX = e.touches ? e.touches[0].clientX : e.clientX;
+                    setActive(nearestOption(clientX));
+                  }
+                  function onPointerUp() {
+                    dragging = false;
+                    document.removeEventListener('mousemove', onPointerMove);
+                    document.removeEventListener('mouseup', onPointerUp);
+                    document.removeEventListener('touchmove', onPointerMove);
+                    document.removeEventListener('touchend', onPointerUp);
+                  }
+                  function onPointerDown(e) {
+                    dragging = true;
+                    var clientX = e.touches ? e.touches[0].clientX : e.clientX;
+                    setActive(nearestOption(clientX));
+                    document.addEventListener('mousemove', onPointerMove);
+                    document.addEventListener('mouseup', onPointerUp);
+                    document.addEventListener('touchmove', onPointerMove, { passive: true });
+                    document.addEventListener('touchend', onPointerUp);
+                  }
+                  thumb.addEventListener('mousedown', onPointerDown);
+                  thumb.addEventListener('touchstart', onPointerDown, { passive: true });
+                  track.addEventListener('mousedown', onPointerDown);
+                  track.addEventListener('touchstart', onPointerDown, { passive: true });
+
+                  track.addEventListener('keydown', function (e) {
+                    var idx = options.indexOf(options.filter(function (o) { return o.classList.contains('is-active'); })[0]);
+                    if (e.key === 'ArrowRight' && idx < options.length - 1) { setActive(options[idx + 1]); e.preventDefault(); }
+                    if (e.key === 'ArrowLeft' && idx > 0) { setActive(options[idx - 1]); e.preventDefault(); }
+                  });
+                })();
+              </script>
             {%- endif -%}
 
           {% when 'auto_usp_grid' %}
@@ -2323,6 +2455,45 @@
           "id": "show_in_quickbuy",
           "label": "Show in quick buy",
           "default": false
+        }
+      ]
+    },
+    {
+      "type": "tog_guide",
+      "name": "TOG Temperature Guide",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Auto-detects 0.5 / 1.0 / 2.5 TOG from the product title and shows the matching recommended room temperature. Interactive — shoppers can click a TOG or drag the slider to compare. Renders nothing on products without a TOG rating in the title."
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Recommended Room Temperature"
+        },
+        {
+          "type": "text",
+          "id": "cool_label",
+          "label": "Cool-end label",
+          "default": "Cool"
+        },
+        {
+          "type": "text",
+          "id": "warm_label",
+          "label": "Warm-end label",
+          "default": "Warm"
+        },
+        {
+          "type": "url",
+          "id": "info_link",
+          "label": "\"Choosing the right TOG\" link"
+        },
+        {
+          "type": "text",
+          "id": "link_label",
+          "label": "Link label",
+          "default": "Choosing the right TOG"
         }
       ]
     },
