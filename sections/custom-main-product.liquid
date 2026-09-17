@@ -713,6 +713,7 @@
                 assign care_icons = material.care_icons.value
               endif
             -%}
+            <p>DEBUG-MC: material=[{{ material }}] care_text=[{{ care_text }}] care_icons=[{{ care_icons }}] material_new_raw=[{{ product.metafields.custom.material_new }}]</p>
             {%- if care_text != blank or care_icons != blank -%}
               <div class="product-info-accordion{% unless block.settings.show_in_quickbuy %} not-in-quickbuy{% endunless %}" {{ block.shopify_attributes }}>
                 <details-disclosure>
