@@ -64,14 +64,8 @@
           }
         },
         "usp_CRdfie": {
-          "type": "USP",
-          "repeater": "{{ product.metafields.custom.product_template.value.usp_icons.value }}",
-          "settings": {
-            "text": "{{ block.repeater.title.value }}",
-            "icon": "",
-            "custom_icon": "{{ block.repeater.icon.value }}",
-            "icon_size": "large"
-          }
+          "type": "auto_usp_grid",
+          "settings": {}
         },
         "complementary_BwbHzJ": {
           "type": "complementary",
