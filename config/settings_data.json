@@ -584,6 +584,23 @@
         "type": "shopify://apps/bazaarvoice-reviews-photos/blocks/bvjs_block/766ed9d3-b120-48f3-8444-448f45152f47",
         "disabled": false,
         "settings": {}
+      },
+      "6225119484267483809": {
+        "type": "shopify://apps/ethos/blocks/loyalty-color-config/e6f2bd3b-e2fd-4f16-b73c-bf198b58bb45",
+        "disabled": false,
+        "settings": {
+          "background_color": "",
+          "text_color": "",
+          "headline_color": "",
+          "primary_button_background": "#59757D",
+          "primary_button_text_color": "#FFFFFF",
+          "secondary_button_background": "#59757D",
+          "secondary_button_text_color": "#FFFFFF",
+          "card_background_color": "",
+          "border_color": "",
+          "accent_color": "",
+          "accent_text_color": ""
+        }
       }
     }
   }

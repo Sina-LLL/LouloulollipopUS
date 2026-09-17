@@ -1,0 +1,212 @@
+{% comment %}
+  ---------------------------------------------------------------------------
+  Collection content
+  Renders collection.metafields.custom.content_blocks — a list of
+  `collection_content_blocks` metaobject entries.
+
+  Each entry supplies: headline (text) · body (rich text) · layout (choice) · image (file)
+
+  The section decides banding, image side, and layout fallbacks. Nothing here
+  is collection-specific, and no layout requires copy the writer didn't supply.
+
+  Styles live in design-system.css under "Collection content blocks".
+  ---------------------------------------------------------------------------
+{% endcomment %}
+{%- liquid
+  assign blocks = collection.metafields.custom.content_blocks.value
+  assign prev_layout = ''
+  assign media_count = 0
+-%}
+
+{%- if blocks != blank -%}
+  <div
+    class="cc-sections"
+    style="--cc-pt: {{ section.settings.padding_top }}px; --cc-pb: {{ section.settings.padding_bottom }}px;"
+  >
+
+    {%- if section.settings.show_toc -%}
+      <nav class="cc-toc" aria-label="{{ section.settings.toc_label | escape }}">
+        <div class="container cc-toc__row">
+          {%- for b in blocks -%}
+            {%- assign h = b.headline.value -%}
+            {%- if h != blank -%}
+              <a class="cc-toc__link" href="#{{ h | handleize }}">{{ h }}</a>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </nav>
+    {%- endif -%}
+
+    {%- for b in blocks -%}
+      {%- liquid
+        assign heading = b.headline.value
+        assign img     = b.image.value
+        assign layout  = b.layout.value | first | default: 'prose'
+
+        # a media layout with no image is just prose
+        if layout == 'media_split' and img == blank
+          assign layout = 'prose'
+        endif
+
+        # never two identical layouts back to back
+        if layout == prev_layout and layout != 'prose'
+          assign layout = 'prose'
+        endif
+
+        # banding derives from position, not from a field
+        assign mod  = forloop.index0 | modulo: 2
+        assign band = 'cream'
+        if layout == 'emphasis_band'
+          assign band = 'blush'
+        elsif mod == 1
+          assign band = 'white'
+        endif
+
+        # alternate which side the image sits on, split to split
+        assign flip = false
+        if layout == 'media_split'
+          assign side = media_count | modulo: 2
+          if side == 1
+            assign flip = true
+          endif
+          assign media_count = media_count | plus: 1
+        endif
+
+        assign has_media = false
+        if layout == 'emphasis_band' and img != blank
+          assign has_media = true
+        endif
+
+        assign anchor      = heading | handleize
+        assign prev_layout = layout
+      -%}
+
+      <section
+        {% if anchor != blank %}id="{{ anchor }}"{% endif %}
+        class="cc cc--{{ layout }} cc--band-{{ band }}{% if flip %} cc--flip{% endif %}{% if has_media %} cc--has-media{% endif %}"
+        {% if section.settings.animate %}data-cc-animate{% endif %}
+      >
+        <div class="container cc__inner">
+
+          {%- case layout -%}
+
+            {%- when 'media_split' -%}
+              <div class="cc__media">
+                {{
+                  img
+                  | image_url: width: 1200
+                  | image_tag:
+                      loading: 'lazy',
+                      widths: '400,600,800,1000,1200',
+                      sizes: '(min-width: 769px) 46vw, 92vw',
+                      class: 'cc__img',
+                      alt: img.alt
+                }}
+              </div>
+              <div class="cc__col">
+                {%- if heading != blank -%}<h2 class="cc__h2">{{ heading }}</h2>{%- endif -%}
+                <div class="cc__body rte">{{ b.body | metafield_tag }}</div>
+              </div>
+
+            {%- when 'emphasis_band' -%}
+              <div class="cc__col">
+                {%- if heading != blank -%}<h2 class="cc__h2">{{ heading }}</h2>{%- endif -%}
+                <div class="cc__body rte">{{ b.body | metafield_tag }}</div>
+              </div>
+              {%- if has_media -%}
+                <div class="cc__media">
+                  {{
+                    img
+                    | image_url: width: 1000
+                    | image_tag:
+                        loading: 'lazy',
+                        widths: '400,600,800,1000',
+                        sizes: '(min-width: 769px) 38vw, 92vw',
+                        class: 'cc__img',
+                        alt: img.alt
+                  }}
+                </div>
+              {%- endif -%}
+
+            {%- else -%}
+              {%- comment -%} prose · prose_split · definition_list · numbered_list · two_up {%- endcomment -%}
+              {%- if heading != blank -%}<h2 class="cc__h2">{{ heading }}</h2>{%- endif -%}
+              <div class="cc__body rte">{{ b.body | metafield_tag }}</div>
+
+          {%- endcase -%}
+
+        </div>
+      </section>
+    {%- endfor -%}
+
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Collection content",
+  "tag": "div",
+  "class": "shopify-section--collection-content",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Renders the blocks attached to this collection's custom.content_blocks metafield. Add blocks in Content → Metaobjects, then attach them on the collection page."
+    },
+    {
+      "type": "header",
+      "content": "Jump links"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_toc",
+      "label": "Show jump links",
+      "info": "Links to each block, using the block heading as the label.",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "toc_label",
+      "label": "Jump links screen-reader label",
+      "default": "On this page"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "animate",
+      "label": "Animate on scroll",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 48
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection content"
+    }
+  ],
+  "enabled_on": {
+    "templates": ["collection"]
+  }
+}
+{% endschema %}
