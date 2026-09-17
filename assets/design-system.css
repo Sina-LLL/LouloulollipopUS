@@ -1980,6 +1980,18 @@ h4, .h4 {
 .product-info-accordion__image img {
   display: block;
 }
+.product-info-accordion__shop-link {
+  display: inline-block;
+  margin-top: var(--lll-space-4);
+  font-size: 0.875rem;
+  font-weight: var(--lll-weight-subhead);
+  color: var(--lll-slate-deep);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+.product-info-accordion__shop-link:hover {
+  color: var(--lll-ink);
+}
 
 .product-care-grid {
   display: grid;
