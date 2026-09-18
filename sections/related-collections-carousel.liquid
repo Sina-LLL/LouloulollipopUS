@@ -44,18 +44,32 @@
               endfor
             endif
 
-            for loop_collection in related
-              if section.settings.enable_carousel
-                echo '<div class="slider__item">'
-              endif
-
-              render 'collection-block', collection: loop_collection, custom_aspect_ratio: chosen_aspect_ratio, settings_object: section.settings
-
-              if section.settings.enable_carousel
-                echo '</div>'
-              endif
-            endfor
           -%}
+          {%- for loop_collection in related -%}
+            {%- if section.settings.enable_carousel -%}<div class="slider__item">{%- endif -%}
+            <div class="product-block collection-block" data-collection-id="{{ loop_collection.id }}">
+              <div class="block-inner">
+                <a class="product-link" href="{{ loop_collection.url }}">
+                  <div class="image-cont">
+                    {%- if loop_collection.featured_image -%}
+                      <div class="product-block__image image-overlay__image img-stretch product-block__image--primary product-block__image--active">
+                        {%- render 'image' with loop_collection.featured_image, loading: 'lazy', size_cols_mobile: section.settings.coll_thumb_mob_per_row, size_cols_desktop: section.settings.grid, custom_aspect_ratio: chosen_aspect_ratio, custom_crop: section.settings.coll_grid_image_position -%}
+                      </div>
+                    {%- else -%}
+                      <div class="image-overlay__image placeholder-image placeholder-image--shape-{{ section.settings.coll_grid_image_shape }}">{{ 'collection-1' | placeholder_svg_tag }}</div>
+                    {%- endif -%}
+                  </div>
+                  <div class="product-block__detail align-{{ section.settings.coll_thumb_text_align_x }}">
+                    <div class="product-block__title">{{ loop_collection.title }}</div>
+                    {%- if section.settings.coll_grid_show_count and loop_collection.all_products_count > 0 -%}
+                      <div class="small">{{ 'sections.collection.product_count' | t: count: loop_collection.all_products_count }}</div>
+                    {%- endif -%}
+                  </div>
+                </a>
+              </div>
+            </div>
+            {%- if section.settings.enable_carousel -%}</div>{%- endif -%}
+          {%- endfor -%}
         </div>
       </div>
 
@@ -246,43 +260,10 @@
       "default": true
     },
     {
-      "id": "coll_text_position",
-      "type": "select",
-      "label": "Text position",
-      "default": "below",
-      "options": [
-        { "value": "below", "label": "Below" },
-        { "value": "over-full", "label": "Over - Tint" },
-        { "value": "over-box", "label": "Over - Box" }
-      ]
-    },
-    {
       "type": "text_alignment",
       "id": "coll_thumb_text_align_x",
       "label": "Text alignment",
       "default": "center"
-    },
-    {
-      "type": "select",
-      "id": "coll_thumb_text_align_y",
-      "label": "Text overlay alignment",
-      "options": [
-        { "value": "top", "label": "Top" },
-        { "value": "center", "label": "Center" },
-        { "value": "bottom", "label": "Bottom" }
-      ],
-      "default": "center"
-    },
-    {
-      "type": "select",
-      "id": "coll_button_style",
-      "label": "Button style (where shown)",
-      "default": "link",
-      "options": [
-        { "label": "Primary", "value": "primary" },
-        { "label": "Secondary", "value": "secondary" },
-        { "label": "Link", "value": "link" }
-      ]
     }
   ],
   "presets": [
