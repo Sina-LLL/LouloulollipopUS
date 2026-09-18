@@ -22,13 +22,27 @@
       <div class="collection-listing fade-in-up{% if section.settings.enable_carousel %} slider {% if section.settings.full_width %}slider--edge-peek{% endif %} slider--mobile-container-pad {% endif %}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
         <div class="coll_thumb_per_column-1 product-grid product-grid--per-row-{{ section.settings.grid }} product-grid--per-row-mob-{{ section.settings.coll_thumb_mob_per_row }} product-grid--image-shape-{{ section.settings.coll_grid_image_shape }}{% if section.settings.enable_carousel %} slider__grid product-grid--carousel{% endif %}">
           {%- liquid
-            assign chosen_aspect_ratio = 0
-            for loop_collection in related
-              assign collection_image = loop_collection.featured_image
-              if collection_image and collection_image.aspect_ratio > chosen_aspect_ratio
-                assign chosen_aspect_ratio = collection_image.aspect_ratio
-              endif
-            endfor
+            if section.settings.coll_grid_image_shape == 'portrait-23'
+              assign chosen_aspect_ratio = 0.67
+            elsif section.settings.coll_grid_image_shape == 'portrait-45'
+              assign chosen_aspect_ratio = 0.8
+            elsif section.settings.coll_grid_image_shape == 'square'
+              assign chosen_aspect_ratio = 1.0
+            elsif section.settings.coll_grid_image_shape == 'circle'
+              assign chosen_aspect_ratio = 1.0
+            elsif section.settings.coll_grid_image_shape == 'landscape-54'
+              assign chosen_aspect_ratio = 1.25
+            elsif section.settings.coll_grid_image_shape == 'landscape-32'
+              assign chosen_aspect_ratio = 1.50
+            else
+              assign chosen_aspect_ratio = 0
+              for loop_collection in related
+                assign collection_image = loop_collection.featured_image
+                if collection_image and collection_image.aspect_ratio > chosen_aspect_ratio
+                  assign chosen_aspect_ratio = collection_image.aspect_ratio
+                endif
+              endfor
+            endif
 
             for loop_collection in related
               if section.settings.enable_carousel
