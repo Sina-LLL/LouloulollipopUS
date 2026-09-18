@@ -83,7 +83,9 @@
           {%- if subheading != blank -%}
             <div class="subheading lightly-spaced-row">{{ subheading | escape }}</div>
           {%- endif -%}
+          <!-- 
           <div class="product-block__title">{{ collection.title }}</div>
+         -->
           {%- if settings_object.coll_grid_show_count and collection.all_products_count > 0 -%}
             <div class="small">{{ 'sections.collection.product_count' | t: count: collection.all_products_count }}</div>
           {%- endif -%}
