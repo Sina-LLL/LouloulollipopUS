@@ -1,0 +1,278 @@
+{%- liquid
+  assign related = collection.metafields.custom.related_collections.value
+  assign related_count = 0
+  if related != blank
+    for loop_collection in related
+      assign related_count = related_count | plus: 1
+    endfor
+  endif
+-%}
+{%- if related_count > 0 -%}
+  <div class="section-id-{{ section.id }} collection-slider-row for-collections {% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }}{% endif %}{% if section.settings.full_width %} slider--no-max{% endif %}">
+    <div class="container{% if section.settings.full_width %} container--no-max{% endif %}">
+      <div class="hometitle">
+        <h2 class=" h4 text-{{ section.settings.text_alignment}} has-paging__title" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.3s"' -%}>
+          {{ section.settings.title | escape }}
+        </h2>
+      </div>
+      {%- if section.settings.enable_carousel -%}
+        <carousel-slider class="carousel block collection-slider" id="slider-{{ section.id }}">
+      {%- endif -%}
+
+      <div class="collection-listing fade-in-up{% if section.settings.enable_carousel %} slider {% if section.settings.full_width %}slider--edge-peek{% endif %} slider--mobile-container-pad {% endif %}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
+        <div class="coll_thumb_per_column-1 product-grid product-grid--per-row-{{ section.settings.grid }} product-grid--per-row-mob-{{ section.settings.coll_thumb_mob_per_row }} product-grid--image-shape-{{ section.settings.coll_grid_image_shape }}{% if section.settings.enable_carousel %} slider__grid product-grid--carousel{% endif %}">
+          {%- liquid
+            assign chosen_aspect_ratio = 0
+            for loop_collection in related
+              assign collection_image = loop_collection.featured_image
+              if collection_image and collection_image.aspect_ratio > chosen_aspect_ratio
+                assign chosen_aspect_ratio = collection_image.aspect_ratio
+              endif
+            endfor
+
+            for loop_collection in related
+              if section.settings.enable_carousel
+                echo '<div class="slider__item">'
+              endif
+
+              render 'collection-block', collection: loop_collection, custom_aspect_ratio: chosen_aspect_ratio, settings_object: section.settings
+
+              if section.settings.enable_carousel
+                echo '</div>'
+              endif
+            endfor
+          -%}
+        </div>
+      </div>
+
+      {%- if section.settings.enable_carousel -%}
+          <div class="collection-slider__nav no-js-hidden" id="nav-{{ section.id }}" hidden>
+            <button type="button" class="collection-slider__nav-btn has-ltr-icon" data-dir="prev" aria-controls="slider-{{ section.id }}">
+              <span class="visually-hidden">{{ 'general.slider.previous' | t }}</span>
+              {%- render 'icon-chevron-left', stroke_width: 2 -%}
+            </button>
+            <button type="button" class="collection-slider__nav-btn has-ltr-icon" data-dir="next" aria-controls="slider-{{ section.id }}">
+              <span class="visually-hidden">{{ 'general.slider.next' | t }}</span>
+              {%- render 'icon-chevron-right', stroke_width: 2 -%}
+            </button>
+          </div>
+        </carousel-slider>
+      {%- endif -%}
+    </div>
+  </div>
+
+  {%- if section.settings.enable_carousel -%}
+    <script>
+      (function () {
+        var root = document.getElementById('slider-{{ section.id }}');
+        if (!root) return;
+        var scroller = root.querySelector('.slider');
+        var grid = root.querySelector('.slider__grid');
+        var nav = document.getElementById('nav-{{ section.id }}');
+        if (!scroller || !nav) return;
+        var prevBtn = nav.querySelector('[data-dir="prev"]');
+        var nextBtn = nav.querySelector('[data-dir="next"]');
+
+        function maxScroll() {
+          return scroller.scrollWidth - scroller.clientWidth;
+        }
+
+        function gap() {
+          if (!grid) return 0;
+          var g = parseFloat(getComputedStyle(grid).columnGap);
+          return isNaN(g) ? 0 : g;
+        }
+
+        function step() {
+          return scroller.clientWidth + gap();
+        }
+
+        function go(dir) {
+          var target = scroller.scrollLeft + dir * step();
+          target = Math.max(0, Math.min(target, maxScroll()));
+          scroller.scrollTo({ left: target, behavior: 'smooth' });
+        }
+
+        function update() {
+          var scrollable = maxScroll() > 1;
+          nav.hidden = !scrollable;
+          if (!scrollable) return;
+          var x = scroller.scrollLeft;
+          prevBtn.disabled = x <= 1;
+          nextBtn.disabled = x >= maxScroll() - 1;
+        }
+
+        prevBtn.addEventListener('click', function () { go(-1); });
+        nextBtn.addEventListener('click', function () { go(1); });
+
+        var raf;
+        scroller.addEventListener('scroll', function () {
+          if (raf) cancelAnimationFrame(raf);
+          raf = requestAnimationFrame(update);
+        }, { passive: true });
+
+        var rt;
+        window.addEventListener('resize', function () {
+          clearTimeout(rt);
+          rt = setTimeout(update, 200);
+        });
+
+        setTimeout(update, 50);
+        setTimeout(update, 450);
+      })();
+    </script>
+  {%- endif -%}
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Related Collections",
+  "class": "section-related-collections-carousel",
+  "disabled_on": {
+    "templates": ["password"],
+    "groups": ["aside"]
+  },
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Automatically pulls collections from this collection's Related Collections metafield (custom.related_collections). Renders nothing if that field is empty. To change which collections show, edit the metafield on this collection in Content → Collections."
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "You May Also Like"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        { "value": "start", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "end", "label": "Right" }
+      ],
+      "default": "start"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_carousel",
+      "label": "Enable carousel",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "grid",
+      "label": "Collections per row",
+      "min": 2,
+      "max": 8,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "default",
+      "options": [
+        { "value": "default", "label": "Default" },
+        { "value": "1", "label": "1" },
+        { "value": "2", "label": "2" }
+      ]
+    },
+    {
+      "id": "full_width",
+      "type": "checkbox",
+      "label": "Full page width",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Collection cards"
+    },
+    {
+      "type": "select",
+      "id": "coll_grid_image_shape",
+      "label": "Image shape",
+      "options": [
+        { "value": "square", "label": "Square (1:1)" },
+        { "value": "landscape-32", "label": "Landscape (3:2)" },
+        { "value": "landscape-54", "label": "Landscape (5:4)" },
+        { "value": "portrait-45", "label": "Portrait (4:5)" },
+        { "value": "portrait-23", "label": "Portrait (2:3)" },
+        { "value": "circle", "label": "Circle (1:1)" }
+      ],
+      "default": "square"
+    },
+    {
+      "type": "select",
+      "id": "coll_grid_image_position",
+      "label": "Image alignment",
+      "default": "center center",
+      "options": [
+        { "value": "top center", "label": "Top center" },
+        { "value": "center center", "label": "Middle center" },
+        { "value": "bottom center", "label": "Bottom center" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "coll_thumb_mob_per_row",
+      "label": "Collections per row on mobile",
+      "options": [
+        { "value": "1", "label": "1" },
+        { "value": "2", "label": "2" }
+      ],
+      "default": "2"
+    },
+    {
+      "type": "checkbox",
+      "id": "coll_grid_show_count",
+      "label": "Show product count",
+      "default": true
+    },
+    {
+      "id": "coll_text_position",
+      "type": "select",
+      "label": "Text position",
+      "default": "below",
+      "options": [
+        { "value": "below", "label": "Below" },
+        { "value": "over-full", "label": "Over - Tint" },
+        { "value": "over-box", "label": "Over - Box" }
+      ]
+    },
+    {
+      "type": "text_alignment",
+      "id": "coll_thumb_text_align_x",
+      "label": "Text alignment",
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "coll_thumb_text_align_y",
+      "label": "Text overlay alignment",
+      "options": [
+        { "value": "top", "label": "Top" },
+        { "value": "center", "label": "Center" },
+        { "value": "bottom", "label": "Bottom" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "coll_button_style",
+      "label": "Button style (where shown)",
+      "default": "link",
+      "options": [
+        { "label": "Primary", "value": "primary" },
+        { "label": "Secondary", "value": "secondary" },
+        { "label": "Link", "value": "link" }
+      ]
+    }
+  ],
+  "presets": [
+    { "name": "Related Collections" }
+  ]
+}
+{% endschema %}
