@@ -479,9 +479,21 @@ button.btn.btn--large.no-stock {
 .price.price--on-sale.price--sold-out .price__default{
   display:flex;
 }
+.price__default{
+  line-height:0;
+}
 .price-label--sold-out{
   font-weight: 600;
 
+}
+.price.price--on-sale{
+  margin-top:8px;
+}
+.product-block__title{
+  line-height:1.25rem;
+}
+.price.price--on-sale .price__current{
+    margin-top:8px;
 }
 .sold-out-line {
     height: 84.85px;
@@ -1979,18 +1991,6 @@ h4, .h4 {
 }
 .product-info-accordion__image img {
   display: block;
-}
-.product-info-accordion__shop-link {
-  display: inline-block;
-  margin-top: var(--lll-space-4);
-  font-size: 0.875rem;
-  font-weight: var(--lll-weight-subhead);
-  color: var(--lll-slate-deep);
-  text-decoration: underline;
-  text-underline-offset: 0.18em;
-}
-.product-info-accordion__shop-link:hover {
-  color: var(--lll-ink);
 }
 
 .product-care-grid {
