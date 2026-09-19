@@ -479,21 +479,9 @@ button.btn.btn--large.no-stock {
 .price.price--on-sale.price--sold-out .price__default{
   display:flex;
 }
-.price__default{
-  line-height:0;
-}
 .price-label--sold-out{
   font-weight: 600;
 
-}
-.price.price--on-sale{
-  margin-top:8px;
-}
-.product-block__title{
-  line-height:1.25rem;
-}
-.price.price--on-sale .price__current{
-    margin-top:8px;
 }
 .sold-out-line {
     height: 84.85px;
