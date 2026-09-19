@@ -70,11 +70,11 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "klaviyo_email_marketing_sms_form_embed_block_7b7TzR": {
-          "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
-          "disabled": true,
+        "menu_aebHwa": {
+          "type": "menu",
           "settings": {
-            "formId": "<div class=\"klaviyo-form-SEVbuc\"></div>"
+            "title": "Top Products",
+            "menu": "top-collections"
           }
         },
         "1601308671932": {
@@ -100,7 +100,7 @@
         }
       },
       "block_order": [
-        "klaviyo_email_marketing_sms_form_embed_block_7b7TzR",
+        "menu_aebHwa",
         "1601308671932",
         "menu_BybNNi",
         "custom_liquid_XQrHGw"
