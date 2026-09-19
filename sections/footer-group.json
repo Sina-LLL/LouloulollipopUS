@@ -77,18 +77,18 @@
             "menu": "top-collections"
           }
         },
-        "1601308671932": {
-          "type": "menu",
-          "settings": {
-            "title": "Help",
-            "menu": "help"
-          }
-        },
         "menu_BybNNi": {
           "type": "menu",
           "settings": {
             "title": "Company",
             "menu": "company"
+          }
+        },
+        "1601308671932": {
+          "type": "menu",
+          "settings": {
+            "title": "Help",
+            "menu": "help"
           }
         },
         "custom_liquid_XQrHGw": {
@@ -101,8 +101,8 @@
       },
       "block_order": [
         "menu_aebHwa",
-        "1601308671932",
         "menu_BybNNi",
+        "1601308671932",
         "custom_liquid_XQrHGw"
       ],
       "settings": {
