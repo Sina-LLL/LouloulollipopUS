@@ -104,11 +104,10 @@
     },
     "custom_hero_banner_CqQiir": {
       "type": "custom-hero-banner",
-      "disabled": true,
       "name": "Custom Hero Banner",
       "settings": {
-        "image": "shopify://shop_images/EOSS_-_Hero.png",
-        "mobile_image": "shopify://shop_images/EOSS_-_Mobile_Hero_1.gif",
+        "image": "shopify://shop_images/Crib_Sheet_-_Hero.png",
+        "mobile_image": "shopify://shop_images/Crib_Sheet_-_Hero-1.png",
         "link": "shopify://collections/end-of-season-sale",
         "full_width": true,
         "max_width": 0,
@@ -116,268 +115,68 @@
         "use_h1": true
       }
     },
-    "hero_carousel_rounded_eyHjac": {
-      "type": "hero-carousel-rounded",
+    "logo_list_ywatnw": {
+      "type": "logo-list",
       "blocks": {
-        "image_z6UnWg": {
-          "type": "image",
+        "logo_FxPmVy": {
+          "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/Sushi_-_home.png",
-            "mobile_image": "shopify://shop_images/Mobile-sushi.png",
-            "slide_link": "",
-            "subheading": "",
-            "title": "Now serving more Sushi",
-            "heading_max_width": 15,
-            "title_size": 48,
-            "title_size_mobile": 32,
-            "use_h1": true,
-            "text": "<p>Your fave print just got <strong>NEW additions.</strong></p>",
-            "enlarge_text": false,
-            "button_label_1": "Shop Sushi",
-            "button_url_1": "shopify://collections/sushi",
-            "button_tag_1": "",
-            "button_label_2": "",
-            "button_url_2": "",
-            "button_tag_2": "",
-            "text_alignment": "bottom left"
+            "image": "shopify://shop_images/ICON-SM-6.svg",
+            "image_width": 80,
+            "link": "",
+            "title": "Safe for Babies"
           }
         },
-        "image_46miLY": {
-          "type": "image",
+        "logo_tawCLk": {
+          "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/Hero_649f24a6-f679-41e5-b0fa-37ed69155127.png",
-            "mobile_image": "shopify://shop_images/LoulouJune2026Edits-04901.jpg",
-            "slide_link": "",
-            "subheading": "",
-            "title": "Adventure starts here.",
-            "heading_max_width": 15,
-            "title_size": 48,
-            "title_size_mobile": 32,
-            "use_h1": true,
-            "text": "<p><strong>Meet our newest print: Llama Adventures.</strong></p>",
-            "enlarge_text": false,
-            "button_label_1": "Shop Llama Adventures",
-            "button_url_1": "shopify://collections/llama-adventures",
-            "button_tag_1": "",
-            "button_label_2": "",
-            "button_url_2": "",
-            "button_tag_2": "",
-            "text_alignment": "bottom left"
+            "image": "shopify://shop_images/Certified_B_Corporation_B_Corp_Logo_2022_Black_RGB_svg.webp",
+            "image_width": 80,
+            "link": "https://www.bcorporation.net/en-us/",
+            "title": "Certified B Corp"
           }
         },
-        "image_HLhwCt": {
-          "type": "image",
-          "disabled": true,
+        "logo_D6VaH9": {
+          "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/E1358C97-DFB9-45E6-8729-747BBFC64523_1_105_c.png",
-            "mobile_image": "shopify://shop_images/Mobile_25b50a85-0080-4c63-b2cc-e21514309801.png",
-            "slide_link": "",
-            "subheading": "",
-            "title": "OneC™ Silicone Pacifier Clip",
-            "heading_max_width": 15,
-            "title_size": 48,
-            "title_size_mobile": 28,
-            "use_h1": true,
-            "text": "<p>A 2026 Good Housekeeping Parenting Awards Winner, as seen on <strong>Good Morning America</strong></p>",
-            "enlarge_text": false,
-            "button_label_1": "Shop Pacifier Clips",
-            "button_url_1": "shopify://collections/onec-silicone-pacifier-clips",
-            "button_tag_1": "",
-            "button_label_2": "",
-            "button_url_2": "",
-            "button_tag_2": "",
-            "text_alignment": "bottom left"
+            "image": "shopify://shop_images/Benefits-of-Partnering-with-a-WBENC-Certified-Women-Business-Enterprise-Public-Relations-and-Marketing-Agency-feature.webp",
+            "image_width": 130,
+            "link": "https://buywomenowned.com/",
+            "title": "Women-Owned"
           }
         },
-        "image_WdHzi6": {
-          "type": "image",
-          "disabled": true,
+        "logo_Yg37w8": {
+          "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/SWSGB_Muslin_Swaddle_-_Stargazing_Bear_51.jpg",
-            "mobile_image": "shopify://shop_images/SWSGB_Muslin_Swaddle_-_Stargazing_Bear_51.jpg",
-            "slide_link": "",
-            "subheading": "",
-            "title": "End of Season Sale",
-            "heading_max_width": 17,
-            "title_size": 52,
-            "title_size_mobile": 32,
-            "use_h1": false,
-            "text": "<p><strong>40% OFF</strong></p>",
-            "enlarge_text": true,
-            "button_label_1": "Shop the Sale",
-            "button_url_1": "shopify://collections/end-of-season-sale",
-            "button_tag_1": "",
-            "button_label_2": "",
-            "button_url_2": "",
-            "button_tag_2": "",
-            "text_alignment": "bottom left"
+            "image": "shopify://shop_images/OEKO_TEX.png",
+            "image_width": 80,
+            "link": "https://www.oeko-tex.com/en/",
+            "title": "Safety Certified"
           }
         },
-        "image_t7KHdh": {
-          "type": "image",
+        "logo_cNXMbY": {
+          "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/Hero_5db9f364-6a92-41a0-b336-5e9cc87198ab.jpg",
-            "mobile_image": "shopify://shop_images/mobiile.jpg",
-            "slide_link": "",
-            "subheading": "",
-            "title": "Easiest way to swaddle.",
-            "heading_max_width": 15,
-            "title_size": 48,
-            "title_size_mobile": 32,
-            "use_h1": true,
-            "text": "<p>Meet the <strong>NEW Big Dream Swaddle Wrap</strong></p>",
-            "enlarge_text": false,
-            "button_label_1": "Shop Swaddle Wraps",
-            "button_url_1": "shopify://collections/swaddle-wrap",
-            "button_tag_1": "",
-            "button_label_2": "",
-            "button_url_2": "",
-            "button_tag_2": "",
-            "text_alignment": "bottom left"
+            "image": "shopify://shop_images/Free_ShippingUS.png",
+            "image_width": 80,
+            "link": "",
+            "title": "Free Shipping Over $65"
           }
         }
       },
       "block_order": [
-        "image_z6UnWg",
-        "image_46miLY",
-        "image_HLhwCt",
-        "image_WdHzi6",
-        "image_t7KHdh"
+        "logo_FxPmVy",
+        "logo_tawCLk",
+        "logo_D6VaH9",
+        "logo_Yg37w8",
+        "logo_cNXMbY"
       ],
-      "name": "Hero Carousel – Rounded",
-      "settings": {
-        "padding_top": 8,
-        "height": "fixed",
-        "height_desktop": 600,
-        "height_mobile": 500,
-        "slide_max_width": 1400,
-        "border_radius": 12,
-        "peek_size": 32,
-        "peek_size_mobile": 12,
-        "overlay_style": "full image-overlay--bg-shadow",
-        "accessibility_info": ""
-      }
-    },
-    "featured_collection_ct3anq": {
-      "type": "featured-collection",
-      "name": "Featured collection",
-      "settings": {
-        "title": "One Piece Silicone Pacifier Clip",
-        "text": "",
-        "collection": "onec-silicone-pacifier-clips",
-        "show_vendor": false,
-        "enable_carousel": true,
-        "grid": 5,
-        "rows": 1,
-        "color_scheme": "default",
-        "show_view_all": true,
-        "full_width": true,
-        "text_alignment": "start"
-      }
-    },
-    "custom_product_highlight_JbY3qf": {
-      "type": "custom-product-highlight",
-      "disabled": true,
-      "name": "Highlighted Collection",
-      "settings": {
-        "title": "Swaddling Made Simple",
-        "text": "<ul><li>Quiet Secure Closures</li><li>Two-Way Zipper</li><li>Grows With Baby</li><li>Premium comfort</li></ul>",
-        "image": "shopify://shop_images/Swaddle_Wrap_zoomed_out_1.gif",
-        "order": true,
-        "product_list": [
-          "swaddle-wrap-1-0-tog-safari-jungle",
-          "swaddle-wrap-1-0-tog-magical-dragons"
-        ],
-        "products_per_row": "auto",
-        "button_label": "Shop Swaddle Wraps",
-        "link": "shopify://collections/swaddle-wrap",
-        "button_style": "primary",
-        "color_scheme": "default"
-      }
-    },
-    "rich_text_materialsIntro": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_materialsIntro": {
-          "type": "heading",
-          "settings": {
-            "title": "Made from the Good Stuff",
-            "use_h1": false
-          }
-        },
-        "text_materialsIntro": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Loulou Lollipop started with two sisters and one teether. From there we've focused on better materials, like TENCEL™ and Tanboocel® fabrics, and LFGB-certified food-grade silicone. More than a decade later, we’re still committed to making products parents can trust.</p>",
-            "enlarge_text": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_materialsIntro",
-        "text_materialsIntro"
-      ],
-      "name": "Materials Intro",
-      "settings": {
-        "height": "small",
-        "text_alignment": "center",
-        "full_width": false,
-        "color_scheme": "default"
-      }
-    },
-    "multi_column_materialsUSP": {
-      "type": "multi-column",
-      "blocks": {
-        "text_block_tencel": {
-          "type": "text_block",
-          "settings": {
-            "enable_media": true,
-            "image": "shopify://shop_images/tencel-certification-862.png",
-            "title": "TENCEL™ Lyocell",
-            "text": "<p>Made from sustainably harvested wood pulp, TENCEL™ Lyocell is naturally temperature-regulating and buttery-soft against sensitive skin</p>",
-            "button_label": "Shop TENCEL™",
-            "link": "shopify://collections/sleepers"
-          }
-        },
-        "text_block_tanboocel": {
-          "type": "text_block",
-          "settings": {
-            "enable_media": true,
-            "image": "shopify://shop_images/ICON-bamboo.svg",
-            "title": "Tanboocel® Viscose from Bamboo",
-            "text": "<p>Naturally breathable and hypoallergenic, our Tanboocel® bamboo viscose stays cool through the night</p>",
-            "button_label": "Shop Tanboocel®",
-            "link": "shopify://collections/swaddles"
-          }
-        },
-        "text_block_silicone": {
-          "type": "text_block",
-          "settings": {
-            "enable_media": true,
-            "image": "shopify://shop_images/Food_Grade_Silicone.svg",
-            "title": "LFGB Food-Grade Silicone",
-            "text": "<p>Every feeding piece is made from LFGB-certified, phthalate-free silicone</p>",
-            "button_label": "Shop Feeding",
-            "link": "shopify://collections/eat"
-          }
-        }
-      },
-      "block_order": [
-        "text_block_tencel",
-        "text_block_tanboocel",
-        "text_block_silicone"
-      ],
-      "custom_css": [
-        ".img-ar--cover img {object-fit: fill;}",
-        ".strongly-spaced-row,.fully-spaced-row--medium {margin-top: 40px;}"
-      ],
-      "name": "Our Materials",
+      "name": "USP List",
       "settings": {
         "title": "",
-        "media_aspect_ratio": "s",
-        "media_width": 210,
-        "text_alignment": "center",
-        "button_style": "link",
+        "enable_carousel": false,
+        "carousel_speed": 30,
+        "image_opacity": 100,
         "color_scheme": "default"
       }
     },
@@ -562,6 +361,126 @@
         "coll_button_style": "primary"
       }
     },
+    "featured_collection_RGPeGr": {
+      "type": "featured-collection",
+      "name": "Best Sellers Carousel",
+      "settings": {
+        "title": "Best-Selling Favorites",
+        "text": "",
+        "collection": "best-sellers",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 5,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": true,
+        "text_alignment": "start"
+      }
+    },
+    "rich_text_materialsIntro": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_materialsIntro": {
+          "type": "heading",
+          "settings": {
+            "title": "Made from the Good Stuff",
+            "use_h1": false
+          }
+        },
+        "text_materialsIntro": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A decade of choosing better materials — TENCEL™, Tanboocel®, and food-grade silicone — so you don't have to second-guess what's touching your baby's skin.</p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_materialsIntro",
+        "text_materialsIntro"
+      ],
+      "name": "Materials Intro",
+      "settings": {
+        "height": "small",
+        "text_alignment": "center",
+        "full_width": false,
+        "color_scheme": "default"
+      }
+    },
+    "multi_column_materialsUSP": {
+      "type": "multi-column",
+      "blocks": {
+        "text_block_tencel": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "image": "shopify://shop_images/tencel-certification-862.png",
+            "title": "TENCEL™ Lyocell",
+            "text": "<p>Naturally temperature-regulating and buttery-soft — the fabric in our sleepers, pajamas, and swaddle wraps.</p>",
+            "button_label": "Shop TENCEL™",
+            "link": "shopify://collections/sleepers"
+          }
+        },
+        "text_block_tanboocel": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "image": "shopify://shop_images/ICON-bamboo.svg",
+            "title": "Tanboocel® Viscose from Bamboo",
+            "text": "<p>Naturally breathable and hypoallergenic — the fabric in our muslin swaddles, quilts, and crib sheets.</p>",
+            "button_label": "Shop Tanboocel®",
+            "link": "shopify://collections/swaddles"
+          }
+        },
+        "text_block_silicone": {
+          "type": "text_block",
+          "settings": {
+            "enable_media": true,
+            "image": "shopify://shop_images/Food_Grade_Silicone.svg",
+            "title": "LFGB Food-Grade Silicone",
+            "text": "<p>Safe enough to chew, tough enough for daily mealtime chaos.</p>",
+            "button_label": "Shop Feeding",
+            "link": "shopify://collections/eat"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_tencel",
+        "text_block_tanboocel",
+        "text_block_silicone"
+      ],
+      "custom_css": [
+        ".img-ar--cover img {object-fit: fill;}",
+        ".strongly-spaced-row,.fully-spaced-row--medium {margin-top: 40px;}"
+      ],
+      "name": "Our Materials",
+      "settings": {
+        "title": "",
+        "media_aspect_ratio": "s",
+        "media_width": 210,
+        "text_alignment": "center",
+        "button_style": "link",
+        "color_scheme": "default"
+      }
+    },
+    "featured_collection_ct3anq": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "One Piece Silicone Pacifier Clip",
+        "text": "",
+        "collection": "onec-silicone-pacifier-clips",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 5,
+        "rows": 1,
+        "color_scheme": "2",
+        "show_view_all": true,
+        "full_width": true,
+        "text_alignment": "start"
+      }
+    },
     "logo_list_kYmwNX": {
       "type": "logo-list",
       "blocks": {
@@ -629,23 +548,6 @@
         "color_scheme": "default"
       }
     },
-    "featured_collection_RGPeGr": {
-      "type": "featured-collection",
-      "name": "Best Sellers Carousel",
-      "settings": {
-        "title": "Best-Selling Favorites",
-        "text": "",
-        "collection": "best-sellers",
-        "show_vendor": false,
-        "enable_carousel": true,
-        "grid": 5,
-        "rows": 1,
-        "color_scheme": "default",
-        "show_view_all": true,
-        "full_width": true,
-        "text_alignment": "start"
-      }
-    },
     "lp_comparison_tabs_fabrics": {
       "type": "lp-comparison-tabs",
       "blocks": {
@@ -671,6 +573,7 @@
         },
         "row_t_breathability": {
           "type": "row",
+          "disabled": true,
           "settings": {
             "tab": "tab1",
             "feature": "Breathability",
@@ -691,6 +594,7 @@
         },
         "row_t_softness": {
           "type": "row",
+          "disabled": true,
           "settings": {
             "tab": "tab1",
             "feature": "Softness",
@@ -701,6 +605,7 @@
         },
         "row_t_durability": {
           "type": "row",
+          "disabled": true,
           "settings": {
             "tab": "tab1",
             "feature": "Durability",
@@ -751,6 +656,7 @@
         },
         "row_b_breathability": {
           "type": "row",
+          "disabled": true,
           "settings": {
             "tab": "tab2",
             "feature": "Breathability",
@@ -771,6 +677,7 @@
         },
         "row_b_softness": {
           "type": "row",
+          "disabled": true,
           "settings": {
             "tab": "tab2",
             "feature": "Softness",
@@ -781,6 +688,7 @@
         },
         "row_b_durability": {
           "type": "row",
+          "disabled": true,
           "settings": {
             "tab": "tab2",
             "feature": "Durability",
@@ -832,7 +740,7 @@
       "settings": {
         "bg_color": "rgba(0,0,0,0)",
         "title": "Better Fabrics, By Design",
-        "intro": "Not all “soft” and “sustainable” claims are equal. See what sets our TENCEL™ and Tanboocel® apart from the fabrics other baby brands use.",
+        "intro": "",
         "tab1_label": "TENCEL™ Lyocell",
         "tab1_col_ours": "TENCEL™ Lyocell",
         "tab1_col_other_1": "Bamboo Viscose/Rayon",
@@ -853,6 +761,7 @@
     },
     "custom_product_highlight_KJfQCU": {
       "type": "custom-product-highlight",
+      "disabled": true,
       "name": "Highlighted Collection",
       "settings": {
         "title": "Gift-able Bundles",
@@ -982,71 +891,6 @@
         "coll_button_style": "primary"
       }
     },
-    "logo_list_ywatnw": {
-      "type": "logo-list",
-      "blocks": {
-        "logo_FxPmVy": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/ICON-SM-6.svg",
-            "image_width": 80,
-            "link": "",
-            "title": "Safe for Babies"
-          }
-        },
-        "logo_tawCLk": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Certified_B_Corporation_B_Corp_Logo_2022_Black_RGB_svg.webp",
-            "image_width": 80,
-            "link": "https://www.bcorporation.net/en-us/",
-            "title": "Certified B Corp"
-          }
-        },
-        "logo_D6VaH9": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Benefits-of-Partnering-with-a-WBENC-Certified-Women-Business-Enterprise-Public-Relations-and-Marketing-Agency-feature.webp",
-            "image_width": 130,
-            "link": "https://buywomenowned.com/",
-            "title": "Women-Owned"
-          }
-        },
-        "logo_Yg37w8": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/OEKO_TEX.png",
-            "image_width": 80,
-            "link": "https://www.oeko-tex.com/en/",
-            "title": "Safety Certified"
-          }
-        },
-        "logo_cNXMbY": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/ICON-SM-16.svg",
-            "image_width": 80,
-            "link": "",
-            "title": "Phthalate Free"
-          }
-        }
-      },
-      "block_order": [
-        "logo_FxPmVy",
-        "logo_tawCLk",
-        "logo_D6VaH9",
-        "logo_Yg37w8",
-        "logo_cNXMbY"
-      ],
-      "name": "USP List",
-      "settings": {
-        "title": "Our Commitments",
-        "enable_carousel": false,
-        "carousel_speed": 30,
-        "image_opacity": 100,
-        "color_scheme": "default"
-      }
-    },
     "collection_list_FxKgEx": {
       "type": "collection-list",
       "blocks": {
@@ -1148,6 +992,7 @@
         "text_block_EgmCLD",
         "text_block_tFgzTX"
       ],
+      "disabled": true,
       "custom_css": [
         ".img-ar--cover img {object-fit: fill;}"
       ],
@@ -1539,21 +1384,19 @@
   "order": [
     "mobile_collection_carousel_iBRR9r",
     "custom_hero_banner_CqQiir",
-    "hero_carousel_rounded_eyHjac",
-    "featured_collection_ct3anq",
-    "custom_product_highlight_JbY3qf",
+    "logo_list_ywatnw",
+    "collection_list_km4B8h",
+    "featured_collection_RGPeGr",
     "rich_text_materialsIntro",
     "multi_column_materialsUSP",
-    "collection_list_km4B8h",
+    "featured_collection_ct3anq",
     "logo_list_kYmwNX",
-    "featured_collection_RGPeGr",
     "lp_comparison_tabs_fabrics",
     "custom_product_highlight_KJfQCU",
     "collection_list_zhMrUA",
-    "logo_list_ywatnw",
+    "image_with_text_foundersHome",
     "collection_list_FxKgEx",
     "multi_column_KCzHEY",
-    "image_with_text_foundersHome",
     "testimonials_QcyQ3m",
     "1737676593fa7ff914",
     "16359276425da8ce46",
