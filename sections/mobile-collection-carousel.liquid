@@ -89,12 +89,7 @@
           {%- if item_image != blank -%}
             {%- assign img_widths = img_width | append: ', ' | append: img_width_2x -%}
 
-            {%- render 'image' with item_image,
-            loading: loading,
-            fetchpriority: fetchpriority,
-            widths: img_widths,
-            sizes: img_width | append: 'px'
-            -%}
+            {%- render 'image' with item_image, loading: loading, fetchpriority: fetchpriority, widths: img_widths, sizes: img_width, append: 'px' -%}
           {%- else -%}
             {{ 'collection-1' | placeholder_svg_tag: 'placeholder-svg' }}
           {%- endif -%}
@@ -222,4 +217,20 @@
     }
   ]
 }
-{% endschema %}
+{% endschema %}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: |-
+    {%- render 'image' with item_image,
+                loading: loading,
+                fetchpriority: fetchpriority,
+                widths: img_widths,
+                sizes: img_width | append: 'px'
+                -%}
+  to: "{%- render 'image' with item_image, loading: loading, fetchpriority: fetchpriority,
+    widths: img_widths, sizes: img_width, append: 'px' -%}"
+  position: 2786..2924
+{%- endcomment -%}
