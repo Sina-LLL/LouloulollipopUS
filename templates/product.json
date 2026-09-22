@@ -185,7 +185,7 @@
         "novel_shoppable_video_novel_product_Dj4LiJ": {
           "type": "shopify://apps/novel-shoppable-video/blocks/novel-product/67e3531b-60c1-40d3-83d1-8f5aba7081ef",
           "settings": {
-            "journeyid": "6ab16270264710000235492b"
+            "journeyid": "{{ product.metafields.custom.product_template.value.ugc_video_code.value }}"
           }
         }
       },
