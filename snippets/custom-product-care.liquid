@@ -1,13 +1,11 @@
-{% assign care_list = product.metafields.custom.care_instructions.value %}
-
-{% if care_list != blank %}
+{% if care_icons != blank %}
   <div class="product-material__icons-wrapper">
-      {% for item in care_list %}
+      {% for item in care_icons %}
         <div class="product-material-care__icons">
-          {% if item.icon != blank %}
-            <img src="{{ item.icon | image_url: width: 48 }}" alt="{{ item.label }}" loading="lazy" height="40px" width="40px">
+          {% if item.icon.value != blank %}
+            <img src="{{ item.icon.value | image_url: width: 48 }}" alt="{{ item.title.value | escape }}" loading="lazy" height="40px" width="40px">
           {% endif %}
-          <p>{{ item.title }}</p>
+          <p>{{ item.title.value }}</p>
         </div>
 
       {% endfor %}

@@ -140,14 +140,6 @@
             "enable_carousel": true,
             "max_products": 10
           }
-        },
-        "auto_materials_care_bnd1": {
-          "type": "auto_materials_care",
-          "settings": {
-            "title": "Materials & Care",
-            "open": false,
-            "show_in_quickbuy": false
-          }
         }
       },
       "block_order": [
@@ -162,7 +154,6 @@
         "description",
         "feature_rating_tdmkCF",
         "accordion_yktgxC",
-        "auto_materials_care_bnd1",
         "accordion_KqCkWX",
         "complementary_BwbHzJ"
       ],
@@ -212,8 +203,7 @@
       "type": "custom-product-material-care",
       "settings": {
         "section_heading": "Material & Care"
-      },
-      "disabled": true
+      }
     },
     "custom_product_list_by_print_fGCmUV": {
       "type": "custom-product-list-by-print",
