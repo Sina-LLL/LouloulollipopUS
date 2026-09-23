@@ -1,4 +1,13 @@
-{% if product.metafields.custom.materials_care != blank %}
+{%- liquid
+  assign material = product.metafields.custom.material_new.value
+  assign care_text = blank
+  assign care_icons = blank
+  if material
+    assign care_text = material.materials_care_instructions
+    assign care_icons = material.care_icons.value
+  endif
+-%}
+{% if care_text != blank %}
 
 <div class="container custom-product-features">
   <div class="custom-product-features__wrapper">
@@ -10,18 +19,16 @@
     {% endif %}
 
     <div class="custom-product-features__grid custom-accordion-content show">
-      {% if product.metafields.custom.materials_care != blank %}
-        <div class="material-info__Wrapper">
-          <div class="material-info__Material">
-          {{ product.metafields.custom.materials_care.value  }}
-          </div>  
+      <div class="material-info__Wrapper">
+        <div class="material-info__Material">
+        {{ care_text | metafield_tag }}
         </div>
-       {% render 'custom-product-care', material_care: product.metafields.custom.material.value %}
-      {% endif %}
+      </div>
+      {% render 'custom-product-care', care_icons: care_icons %}
       {% if section.settings.care_image %}
         <div class="material-image">
             <div class="image-cont">
-              
+
                 <div class="custom-product_features__image">
                   {%- liquid
                     assign care_image = section.settings.care_image
