@@ -46,7 +46,9 @@
     "@type": "Brand",
     "name": {{ shop.name | json }}
   },
+  {%- if material_value != blank %}
   "material": {{ material_value | json }},
+  {%- endif %}
   "offers": {
     "@type": "AggregateOffer",
     "url": "{{ shop.url }}{{ product.url }}",
