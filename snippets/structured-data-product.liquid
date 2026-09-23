@@ -8,6 +8,16 @@
 {%- endcomment -%}
 
 {%- liquid
+  assign schema_category = product.type
+  if product.category != blank
+    assign schema_category = product.category.ancestors | map: 'name' | reverse | join: ' > '
+    if schema_category != blank
+      assign schema_category = schema_category | append: ' > ' | append: product.category.name
+    else
+      assign schema_category = product.category.name
+    endif
+  endif
+
   assign rating_count = product.metafields.reviews.rating_count | plus: 0
   assign rating_value = product.metafields.reviews.rating.value
 
@@ -47,6 +57,9 @@
   "image": [{{ image_list_json }}],
   "description": {{ product.description | strip_html | strip | truncate: 300 | json }},
   "sku": {{ current_variant.sku | json }},
+  {%- if schema_category != blank %}
+  "category": {{ schema_category | json }},
+  {%- endif %}
   "brand": {
     "@type": "Brand",
     "name": {{ shop.name | json }}
