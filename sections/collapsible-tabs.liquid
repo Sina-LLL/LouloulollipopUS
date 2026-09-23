@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{ 'collapsible-tabs.css' | asset_url }}" {%- render 'lazy-stylesheet-attrs' %}>
+{{ 'collapsible-tabs.css' | asset_url | stylesheet_tag }}
 <div class="container" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
   <div class="collapsible-tabs">
     {% if section.settings.title != blank and section.blocks != blank %}
