@@ -70,18 +70,11 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "klaviyo_email_marketing_sms_form_embed_block_7b7TzR": {
-          "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
-          "disabled": true,
-          "settings": {
-            "formId": "<div class=\"klaviyo-form-SEVbuc\"></div>"
-          }
-        },
-        "1601308671932": {
+        "menu_aebHwa": {
           "type": "menu",
           "settings": {
-            "title": "Help",
-            "menu": "help"
+            "title": "Top Products",
+            "menu": "top-collections"
           }
         },
         "menu_BybNNi": {
@@ -89,6 +82,13 @@
           "settings": {
             "title": "Company",
             "menu": "company"
+          }
+        },
+        "1601308671932": {
+          "type": "menu",
+          "settings": {
+            "title": "Help",
+            "menu": "help"
           }
         },
         "custom_liquid_XQrHGw": {
@@ -100,9 +100,9 @@
         }
       },
       "block_order": [
-        "klaviyo_email_marketing_sms_form_embed_block_7b7TzR",
-        "1601308671932",
+        "menu_aebHwa",
         "menu_BybNNi",
+        "1601308671932",
         "custom_liquid_XQrHGw"
       ],
       "settings": {

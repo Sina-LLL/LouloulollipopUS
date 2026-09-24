@@ -2574,3 +2574,10 @@ h1.product-title{
   height: 13px;
   flex-shrink: 0;
 }
+
+/* USP icon list (logo-list): force 3-up/2-up on mobile for 5-icon rows instead of the default 2-up/2-up/1-up */
+@media (max-width: 767.98px) {
+  .logo-list--count-5 .logo-list__logo {
+    flex: 0 0 calc(33.3% - 40px);
+  }
+}

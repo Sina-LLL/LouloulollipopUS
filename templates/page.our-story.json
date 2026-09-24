@@ -79,6 +79,7 @@
         "image_width": 360,
         "image_link": "",
         "image_position": "left",
+        "mobile_image_below": false,
         "text_alignment": "left",
         "color_scheme": "default"
       }
@@ -111,6 +112,7 @@
         "image_width": 700,
         "image_link": "",
         "image_position": "right",
+        "mobile_image_below": false,
         "text_alignment": "left",
         "color_scheme": "default"
       }
@@ -294,7 +296,7 @@
             "bg_color": "#faf9f6",
             "bg_gradient": "",
             "text_color": "#1d1d1d",
-            "heading": "Today: Global LouLou Love",
+            "heading": "Today: Global Loulou Love",
             "text": "<p>Loulou Lollipop is now available in 37 countries worldwide, and in over 1,100 boutiques in the United States and Canada. Where will you find us next?</p>",
             "show_segments": false,
             "segments": 5,
@@ -359,6 +361,7 @@
         "image_width": 700,
         "image_link": "",
         "image_position": "right",
+        "mobile_image_below": false,
         "text_alignment": "left",
         "color_scheme": "default"
       }
