@@ -676,6 +676,12 @@
               if block.id == 'accordion_xTzVna' and product.metafields.custom.product_template.value.hide_swatch_image.value
                 assign accordion_image = blank
               endif
+
+              assign design_obj = product.metafields.custom.design.value
+              assign shop_collection = blank
+              if design_obj and block.settings.title == design_obj.name.value and design_obj.design_collection.value
+                assign shop_collection = design_obj.design_collection.value
+              endif
             -%}
             {%- if content != blank or accordion_image != blank -%}
               <div class="product-info-accordion{% unless block.settings.show_in_quickbuy %} not-in-quickbuy{% endunless %}" {{ block.shopify_attributes }}>
@@ -699,6 +705,9 @@
                           </div>
                         {%- endif -%}
                         {{- content -}}
+                        {%- if shop_collection != blank -%}
+                          <a href="{{ shop_collection.url }}" class="product-info-accordion__shop-link">Shop All {{ shop_collection.title }}</a>
+                        {%- endif -%}
                       </div>
                     </div>
                   </details>
