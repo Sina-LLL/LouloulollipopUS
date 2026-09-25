@@ -115,6 +115,24 @@
         "use_h1": true
       }
     },
+    "1790361037c0907608": {
+      "type": "apps",
+      "blocks": {
+        "novel_shoppable_video_novel_product_UYTqiX": {
+          "type": "shopify://apps/novel-shoppable-video/blocks/novel-product/67e3531b-60c1-40d3-83d1-8f5aba7081ef",
+          "settings": {
+            "journeyid": "6ab6bd5aa611c10002103c8d"
+          }
+        }
+      },
+      "block_order": [
+        "novel_shoppable_video_novel_product_UYTqiX"
+      ],
+      "settings": {
+        "full_width": false,
+        "show_space": true
+      }
+    },
     "logo_list_ywatnw": {
       "type": "logo-list",
       "blocks": {
@@ -750,7 +768,7 @@
         "cta_link_1": "shopify://collections/made-with-tencel-fibres",
         "tab2_label": "Tanboocel®",
         "tab2_col_ours": "Tanboocel®",
-        "tab2_col_other_1": "Bamboo Viscose/Rayon",
+        "tab2_col_other_1": "Conventional Bamboo Viscose/Rayon",
         "tab2_col_other_2": "Polyester",
         "bottom_line_2": "Bottom line: Tanboocel® is the fabric behind our muslin swaddles, quilts, and crib sheets — breathable enough for every season.",
         "cta_label_2": "Shop Tanboocel®",
@@ -1384,8 +1402,9 @@
   "order": [
     "mobile_collection_carousel_iBRR9r",
     "custom_hero_banner_CqQiir",
-    "logo_list_ywatnw",
+    "1790361037c0907608",
     "collection_list_km4B8h",
+    "logo_list_ywatnw",
     "featured_collection_RGPeGr",
     "rich_text_materialsIntro",
     "multi_column_materialsUSP",
