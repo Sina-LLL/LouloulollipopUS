@@ -27,7 +27,7 @@
   "description": {{ collection.description | strip_html | strip | truncate: 300 | json }},
   "mainEntity": {
     "@type": "ItemList",
-    "numberOfItems": {{ paginate.items }},
+    "numberOfItems": {{ collection.products.size }},
     "itemListElement": [{{ item_list_json }}]
   }
 }
