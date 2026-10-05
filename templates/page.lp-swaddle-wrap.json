@@ -68,6 +68,7 @@
         "image_width": 700,
         "image_link": "",
         "image_position": "below",
+        "mobile_image_below": false,
         "text_alignment": "left",
         "color_scheme": "default"
       }
@@ -110,6 +111,7 @@
         "p3",
         "p4"
       ],
+      "disabled": true,
       "settings": {
         "bg_color": "#6a8b95",
         "text_color": "#ffffff",
@@ -219,6 +221,7 @@
         "image_width": 700,
         "image_link": "",
         "image_position": "below",
+        "mobile_image_below": false,
         "text_alignment": "left",
         "color_scheme": "default"
       }
@@ -245,29 +248,21 @@
           "settings": {
             "button_label": "Shop 1.0 TOG sleep bags",
             "button_link": "shopify://collections/1-0-tog",
-            "button_style": "secondary"
-          }
-        },
-        "btn2": {
-          "type": "button",
-          "settings": {
-            "button_label": "When to transition out of a swaddle",
-            "button_link": "/blogs/the-lastest-scoop/when-to-transition-out-of-a-swaddle",
-            "button_style": "link"
+            "button_style": "primary"
           }
         }
       },
       "block_order": [
         "heading",
         "body",
-        "btn1",
-        "btn2"
+        "btn1"
       ],
       "settings": {
         "image": "shopify://shop_images/Baby_Swaddle_Wrap_and_1.0_Tog_Sleep_Sack_-_Safari_Jungle.jpg",
         "image_width": 700,
         "image_link": "",
         "image_position": "right",
+        "mobile_image_below": false,
         "text_alignment": "left",
         "color_scheme": "default"
       }
@@ -421,6 +416,7 @@
         "image_width": 700,
         "image_link": "",
         "image_position": "left",
+        "mobile_image_below": false,
         "text_alignment": "left",
         "color_scheme": "default"
       }
@@ -461,6 +457,7 @@
         "image_width": 700,
         "image_link": "",
         "image_position": "left",
+        "mobile_image_below": false,
         "text_alignment": "left",
         "color_scheme": "default"
       }
