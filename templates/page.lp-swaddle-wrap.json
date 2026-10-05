@@ -1,0 +1,669 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "crumbs": {
+      "type": "main-page",
+      "settings": {
+        "show_page_title": false,
+        "full_width": false
+      }
+    },
+    "hero": {
+      "type": "image-with-text",
+      "blocks": {
+        "eyebrow": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Award-Winning · Since 2015"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "The Easiest Way to Swaddle",
+            "use_h1": true
+          }
+        },
+        "body": {
+          "type": "text",
+          "settings": {
+            "text": "<p>No complicated folding, no loose blankets, no guesswork. The Swaddle Wrap gives your newborn the snug security of a traditional swaddle with the ease of a wearable sleep bag, in breathable 1.0 TOG TENCEL™ Lyocell.</p>",
+            "enlarge_text": false
+          }
+        },
+        "btn1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop swaddle wraps",
+            "button_link": "shopify://collections/swaddle-wrap",
+            "button_style": "primary"
+          }
+        },
+        "btn2": {
+          "type": "button",
+          "settings": {
+            "button_label": "How it works",
+            "button_link": "/pages/swaddle-wrap#how-it-works",
+            "button_style": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "eyebrow",
+        "heading",
+        "body",
+        "btn1",
+        "btn2"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Baby_Swaddle_Wrap_-_Magical_Dragons.jpg",
+        "image_width": 700,
+        "image_link": "",
+        "image_position": "below",
+        "text_alignment": "left",
+        "color_scheme": "default"
+      }
+    },
+    "proof_bar": {
+      "type": "lp-proof-bar",
+      "blocks": {
+        "p1": {
+          "type": "stat",
+          "settings": {
+            "label": "Good Housekeeping",
+            "desc": "2025 Parenting Award Winner"
+          }
+        },
+        "p2": {
+          "type": "stat",
+          "settings": {
+            "label": "Parents Best for Baby",
+            "desc": "Award Winner"
+          }
+        },
+        "p3": {
+          "type": "stat",
+          "settings": {
+            "label": "5.0 ★★★★★",
+            "desc": "Average parent rating"
+          }
+        },
+        "p4": {
+          "type": "stat",
+          "settings": {
+            "label": "1.0 TOG TENCEL™",
+            "desc": "Year-round comfort at 70–75°F"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4"
+      ],
+      "settings": {
+        "bg_color": "#6a8b95",
+        "text_color": "#ffffff",
+        "accent_color": "#ffc748"
+      }
+    },
+    "products": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Shop swaddle wraps",
+        "text": "<p>Every print in buttery-soft TENCEL™ Lyocell, sized for 0–4 months.</p>",
+        "collection": "swaddle-wrap",
+        "show_vendor": false,
+        "enable_carousel": false,
+        "grid": 3,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "center"
+      }
+    },
+    "how_it_works": {
+      "type": "image-with-text",
+      "blocks": {
+        "anchor": {
+          "type": "liquid",
+          "settings": {
+            "custom_liquid": "<span id=\"how-it-works\"></span>"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Why parents love the Swaddle Wrap",
+            "use_h1": false
+          }
+        },
+        "body": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Every detail was designed for real life with a newborn, especially the 2am parts.</p>",
+            "enlarge_text": false
+          }
+        },
+        "li1": {
+          "type": "list_item",
+          "settings": {
+            "number": "1",
+            "use_icon": false,
+            "icon": "check_mark",
+            "title": "Snug fit in seconds",
+            "text": "The built-in wrap creates a secure, comforting swaddle in seconds. No folding, no loose blankets, no guesswork."
+          }
+        },
+        "li2": {
+          "type": "list_item",
+          "settings": {
+            "number": "2",
+            "use_icon": false,
+            "icon": "check_mark",
+            "title": "Convertible shoulder design",
+            "text": "Zip in for arms-in swaddling, or convert to arms-up sleep as baby grows, for an easier transition out of swaddling."
+          }
+        },
+        "li3": {
+          "type": "list_item",
+          "settings": {
+            "number": "3",
+            "use_icon": false,
+            "icon": "check_mark",
+            "title": "Whisper-quiet closures",
+            "text": "Secure, silent fasteners that won't startle baby awake, even during a middle-of-the-night change."
+          }
+        },
+        "li4": {
+          "type": "list_item",
+          "settings": {
+            "number": "4",
+            "use_icon": false,
+            "icon": "check_mark",
+            "title": "Two-way zipper",
+            "text": "Unzip from the bottom for diaper changes without unswaddling."
+          }
+        },
+        "btn": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop swaddle wraps",
+            "button_link": "shopify://collections/swaddle-wrap",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "anchor",
+        "heading",
+        "body",
+        "li1",
+        "li2",
+        "li3",
+        "li4",
+        "btn"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Baby_Sleep_Sack_Swaddle_Wrap_Zipper_Detail_-_Magical_Dragons.jpg",
+        "image_width": 700,
+        "image_link": "",
+        "image_position": "below",
+        "text_alignment": "left",
+        "color_scheme": "default"
+      }
+    },
+    "grows_with_baby": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Arms in today, arms up tomorrow",
+            "use_h1": false
+          }
+        },
+        "body": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Babies' sleep preferences change fast. The convertible shoulders let the same Swaddle Wrap go from a classic arms-in swaddle to arms-up sleep, so you're not buying a new product the moment your baby wants more freedom. When it's time to stop swaddling, the 1.0 TOG Sleep Bag in the same prints is the natural next step.</p>",
+            "enlarge_text": false
+          }
+        },
+        "btn1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop 1.0 TOG sleep bags",
+            "button_link": "shopify://collections/1-0-tog",
+            "button_style": "secondary"
+          }
+        },
+        "btn2": {
+          "type": "button",
+          "settings": {
+            "button_label": "When to transition out of a swaddle",
+            "button_link": "/blogs/the-lastest-scoop/when-to-transition-out-of-a-swaddle",
+            "button_style": "link"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "body",
+        "btn1",
+        "btn2"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Baby_Swaddle_Wrap_and_1.0_Tog_Sleep_Sack_-_Safari_Jungle.jpg",
+        "image_width": 700,
+        "image_link": "",
+        "image_position": "right",
+        "text_alignment": "left",
+        "color_scheme": "default"
+      }
+    },
+    "comparison": {
+      "type": "lp-comparison",
+      "blocks": {
+        "r1": {
+          "type": "row",
+          "settings": {
+            "feature": "Time to swaddle",
+            "our_value": "Seconds, with the built-in wrap",
+            "other_value": "Folding and tucking every time"
+          }
+        },
+        "r2": {
+          "type": "row",
+          "settings": {
+            "feature": "Stays snug all night",
+            "our_value": "Yes, with secure closures",
+            "other_value": "Can loosen as baby wiggles"
+          }
+        },
+        "r3": {
+          "type": "row",
+          "settings": {
+            "feature": "Diaper changes",
+            "our_value": "Two-way zipper, no unswaddling",
+            "other_value": "Unwrap and re-wrap"
+          }
+        },
+        "r4": {
+          "type": "row",
+          "settings": {
+            "feature": "Arms-up option",
+            "our_value": "Yes, convertible shoulders",
+            "other_value": "Arms-in only"
+          }
+        },
+        "r5": {
+          "type": "row",
+          "settings": {
+            "feature": "Temperature guidance",
+            "our_value": "1.0 TOG, rated for 70–75°F rooms",
+            "other_value": "No TOG rating"
+          }
+        },
+        "r6": {
+          "type": "row",
+          "settings": {
+            "feature": "Fabric",
+            "our_value": "TENCEL™ Lyocell, breathable and moisture-wicking",
+            "other_value": "Varies"
+          }
+        }
+      },
+      "block_order": [
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5",
+        "r6"
+      ],
+      "settings": {
+        "bg_color": "#faf9f6",
+        "title": "Swaddle Wrap vs traditional swaddle blanket",
+        "intro": "Swaddle blankets work, once you've mastered the fold. Here's how the Swaddle Wrap compares.",
+        "col_ours": "Loulou Lollipop Swaddle Wrap",
+        "col_other": "Swaddle Blanket",
+        "bottom_line": "Bottom line: the Swaddle Wrap gives you the same snug swaddle without the folding, and it stays put all night."
+      }
+    },
+    "why_tencel": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Why TENCEL™ for newborns",
+            "use_h1": false
+          }
+        },
+        "body": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Newborns can't regulate their temperature like adults can. TENCEL™ Lyocell moves heat and moisture away from skin instead of trapping it.</p>",
+            "enlarge_text": false
+          }
+        },
+        "li1": {
+          "type": "list_item",
+          "settings": {
+            "number": "1",
+            "use_icon": false,
+            "icon": "check_mark",
+            "title": "Naturally temperature-regulating",
+            "text": "Keeps baby comfortable in any season, without bulk."
+          }
+        },
+        "li2": {
+          "type": "list_item",
+          "settings": {
+            "number": "2",
+            "use_icon": false,
+            "icon": "check_mark",
+            "title": "Buttery-soft on sensitive skin",
+            "text": "Silky soft against even the most sensitive skin, and naturally hypoallergenic."
+          }
+        },
+        "li3": {
+          "type": "list_item",
+          "settings": {
+            "number": "3",
+            "use_icon": false,
+            "icon": "check_mark",
+            "title": "Built for frequent washing",
+            "text": "Keeps its softness and shape through the two or three washes a week a newborn's wardrobe demands."
+          }
+        },
+        "li4": {
+          "type": "list_item",
+          "settings": {
+            "number": "4",
+            "use_icon": false,
+            "icon": "check_mark",
+            "title": "Sustainably made",
+            "text": "FSC-certified eucalyptus wood pulp, made in a closed-loop process that reuses 99.5% of solvents."
+          }
+        },
+        "btn_tencel": {
+          "type": "button",
+          "settings": {
+            "button_label": "More on TENCEL™ Lyocell",
+            "button_link": "shopify://pages/tencel-lyocell",
+            "button_style": "link"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "body",
+        "li1",
+        "li2",
+        "li3",
+        "li4",
+        "btn_tencel"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Macro_238.jpg",
+        "image_width": 700,
+        "image_link": "",
+        "image_position": "left",
+        "text_alignment": "left",
+        "color_scheme": "default"
+      }
+    },
+    "details": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Every detail, every night",
+            "use_h1": false
+          }
+        },
+        "body": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li><strong>1.0 TOG:</strong> year-round comfort in nurseries between 70–75°F</li><li><strong>Two-way zipper</strong> for easier night changes</li><li><strong>Whisper-quiet closures</strong> that won't startle a sleeping baby</li><li><strong>94% TENCEL™ Lyocell, 6% spandex</strong> for a soft, snug stretch</li><li><strong>Machine washable</strong> and dryer safe on low</li></ul><p><strong>Safety and certification:</strong> tested to U.S. flammability standards (16 CFR Part 1610), and to CPSIA and ASTM standards. The material is certified to OEKO-TEX Standard 100, and Loulou Lollipop is a Certified B Corporation.</p>",
+            "enlarge_text": false
+          }
+        },
+        "btn": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop swaddle wraps",
+            "button_link": "shopify://collections/swaddle-wrap",
+            "button_style": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "body",
+        "btn"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/LoulouJune2026Edits-03846.jpg",
+        "image_width": 700,
+        "image_link": "",
+        "image_position": "left",
+        "text_alignment": "left",
+        "color_scheme": "default"
+      }
+    },
+    "reviews": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_cards_carousel_hxPhx9": {
+          "type": "shopify://apps/judge-me-reviews/blocks/cards_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "show_sample_reviews": false,
+            "reviews_selection": "custom_products",
+            "products": [
+              "swaddle-wrap-1-0-tog-magical-dragons",
+              "swaddle-wrap-1-0-tog-safari-jungle",
+              "swaddle-wrap-1-0-tog-english-garden"
+            ],
+            "filter_pinned": false,
+            "filter_featured": false,
+            "filter_custom_tags": "",
+            "star_rating": "all",
+            "show_review_media": false,
+            "display_order": "most_recent",
+            "no_image_fallback": "review_text_only",
+            "max_reviews": 6,
+            "review_length": "small",
+            "text_size": "medium",
+            "image_ratio": "1",
+            "reviews_shown": 4,
+            "show_reviewer_name": true,
+            "show_product_name": true,
+            "hide_arrows_mobile": true,
+            "arrows_position": "sides",
+            "max_width": 1100,
+            "corner_styling": "soft",
+            "header_text_color": "#1d1d1d",
+            "text_color": "#1d1d1d",
+            "card_color": "#f9f9f9",
+            "stars_color": "",
+            "arrows_color": "#000000",
+            "transition_speed": 10,
+            "header_text": "What Parents Say",
+            "show_average_rating": true,
+            "rating_display": "default"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_cards_carousel_hxPhx9"
+      ],
+      "settings": {
+        "full_width": false,
+        "show_space": true
+      }
+    },
+    "care": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "wash": {
+          "type": "question",
+          "settings": {
+            "title": "How do I wash the Swaddle Wrap?",
+            "answer": "<p>Machine wash cold with like colors on a gentle cycle, and tumble dry on low heat. Use only non-chlorine bleach, don't dry clean, and don't iron the printed areas. TENCEL™ is built for the two or three washes a week that baby laundry demands.</p>"
+          }
+        },
+        "size": {
+          "type": "question",
+          "settings": {
+            "title": "What size is it?",
+            "answer": "<p>The Swaddle Wrap is sized for 0–4 months. It should be snug around the chest and roomy at the hips and legs.</p>"
+          }
+        },
+        "layers": {
+          "type": "question",
+          "settings": {
+            "title": "What should my baby wear underneath?",
+            "answer": "<p>At 1.0 TOG in a 70–75°F room, a long-sleeve bodysuit or fitted sleeper is usually right. Check the back of baby's neck or chest: it should feel warm and dry, not hot or sweaty.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "wash",
+        "size",
+        "layers"
+      ],
+      "settings": {
+        "title": "Care & Sizing"
+      }
+    },
+    "faq": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "title": "How is the Swaddle Wrap different from a muslin swaddle?",
+            "answer": "<p>A muslin swaddle is a blanket you fold around baby. The Swaddle Wrap is wearable: the wrap is built in and closes with quiet fasteners, so you get a snug swaddle in seconds with no loose fabric and no folding technique to learn.</p>"
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "title": "When should I stop swaddling arms-in?",
+            "answer": "<p>Most guidance says to stop swaddling with arms in once your baby shows signs of starting to roll. The convertible shoulders let you switch to arms-up sleep in the same wrap, and the 1.0 TOG Sleep Bag is the next step after that. This is general information, not medical advice. For guidance specific to your baby, talk to your pediatrician.</p>"
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "title": "Can I change a diaper without unswaddling?",
+            "answer": "<p>Yes. The two-way zipper opens from the bottom, so you can change baby while their arms stay snug.</p>"
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "title": "Is TENCEL™ good for babies with sensitive skin?",
+            "answer": "<p>Yes. TENCEL™ Lyocell is silky smooth and naturally hypoallergenic, so there's less friction against delicate newborn skin.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4"
+      ],
+      "settings": {
+        "title": "Frequently Asked Questions"
+      }
+    },
+    "related": {
+      "type": "collection-list",
+      "blocks": {
+        "c1": {
+          "type": "collection",
+          "settings": {
+            "collection": "1-0-tog",
+            "tag": "",
+            "image": "shopify://shop_images/BA9004U.APS_Tencel_Sleep_Bag_1.0_TOG_-_Alphabet_Smiles_52.jpg",
+            "subheading": "The Next Step: 1.0 TOG Sleep Bags",
+            "button_label": "Shop Sleep Bags"
+          }
+        },
+        "c2": {
+          "type": "collection",
+          "settings": {
+            "collection": "swaddles",
+            "tag": "",
+            "image": "shopify://shop_images/Nav_01.png",
+            "subheading": "Breathable Muslin Swaddles",
+            "button_label": "Shop Swaddles"
+          }
+        },
+        "c3": {
+          "type": "collection",
+          "settings": {
+            "collection": "sleepers",
+            "tag": "",
+            "subheading": "Footed TENCEL™ Sleepers",
+            "button_label": "Shop Sleepers"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "title": "Keep Exploring",
+        "text": "",
+        "text_alignment": "start",
+        "enable_carousel": false,
+        "grid": 3,
+        "color_scheme": "default",
+        "full_width": true,
+        "coll_grid_image_shape": "square",
+        "coll_grid_image_position": "center center",
+        "coll_thumb_mob_per_row": "1",
+        "coll_thumb_per_column": "2",
+        "coll_grid_show_count": false,
+        "coll_text_position": "below",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_y": "center",
+        "coll_button_style": "primary"
+      }
+    }
+  },
+  "order": [
+    "crumbs",
+    "hero",
+    "proof_bar",
+    "products",
+    "how_it_works",
+    "grows_with_baby",
+    "comparison",
+    "why_tencel",
+    "details",
+    "reviews",
+    "care",
+    "faq",
+    "related"
+  ]
+}
