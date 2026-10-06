@@ -41,7 +41,7 @@
 {% capture faq_entities_json %}
   {%- for block in question_blocks -%}
     {%- assign faq_question = block.settings.title | strip_html | strip -%}
-    {%- assign faq_answer = block.settings.answer | strip_html | strip -%}
+    {%- assign faq_answer = block.settings.answer | strip_html | replace: '&nbsp;', ' ' | strip_newlines | strip -%}
     {%- if faq_question != blank and faq_answer != blank -%}
       {%- if faq_count > 0 -%},{%- endif -%}
       {%- assign faq_count = faq_count | plus: 1 -%}
@@ -50,7 +50,7 @@
         "name": {{ faq_question | json }},
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": {{ block.settings.answer | json }}
+          "text": {{ faq_answer | json }}
         }
       }
     {%- endif -%}
