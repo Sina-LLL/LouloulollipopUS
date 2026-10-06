@@ -314,6 +314,24 @@
         "coll_button_style": "primary"
       }
     },
+    "apps_wcGYtk": {
+      "type": "apps",
+      "blocks": {
+        "novel_shoppable_video_novel_product_7WJPn8": {
+          "type": "shopify://apps/novel-shoppable-video/blocks/novel-product/67e3531b-60c1-40d3-83d1-8f5aba7081ef",
+          "settings": {
+            "journeyid": "6ac57c6dde1e5a00026a636f"
+          }
+        }
+      },
+      "block_order": [
+        "novel_shoppable_video_novel_product_7WJPn8"
+      ],
+      "settings": {
+        "full_width": false,
+        "show_space": true
+      }
+    },
     "logo_list_ywatnw": {
       "type": "logo-list",
       "blocks": {
@@ -1404,6 +1422,7 @@
     "custom_hero_banner_CqQiir",
     "1790361037c0907608",
     "collection_list_km4B8h",
+    "apps_wcGYtk",
     "logo_list_ywatnw",
     "featured_collection_RGPeGr",
     "rich_text_materialsIntro",
