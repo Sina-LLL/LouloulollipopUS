@@ -1,0 +1,166 @@
+{%- liquid
+  assign scheme_class = 'fully-spaced-row--medium'
+  if section.settings.color_scheme != 'default'
+    assign scheme_class = 'use-color-scheme use-color-scheme--' | append: section.settings.color_scheme | append: ' fully-padded-row--medium'
+  endif
+-%}
+{%- if section.settings.hide_app_title -%}
+  <script src="{{ 'video-feature.js' | asset_url }}" defer></script>
+{%- endif -%}
+<div class="video-feature-section {{ scheme_class }}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
+  <div class="container">
+    <div class="video-feature video-feature--video-{{ section.settings.video_position }} video-feature--align-{{ section.settings.text_alignment }}{% if section.settings.hide_app_title %} video-feature--hide-app-title{% endif %}">
+      <div class="video-feature__content">
+        {%- if section.settings.eyebrow != blank -%}
+          <div class="subheading subheading--over">{{ section.settings.eyebrow | escape }}</div>
+        {%- endif -%}
+        {%- if section.settings.title != blank -%}
+          <h2 class="majortitle in-content h1">{{ section.settings.title | escape }}</h2>
+        {%- endif -%}
+        {%- if section.settings.text != blank -%}
+          <div class="rte lightly-spaced-row">{{ section.settings.text }}</div>
+        {%- endif -%}
+        {%- if section.settings.button_label != blank or section.settings.button2_label != blank -%}
+          <div class="button-row lightly-spaced-row">
+            {%- if section.settings.button_label != blank -%}
+              <a class="{% if section.settings.button_style != 'link' %}btn btn--{{ section.settings.button_style }}{% else %}small-feature-link{% endif %} button-row__btn" href="{{ section.settings.button_link }}">{{ section.settings.button_label | escape }}</a>
+            {%- endif -%}
+            {%- if section.settings.button2_label != blank -%}
+              <a class="{% if section.settings.button2_style != 'link' %}btn btn--{{ section.settings.button2_style }}{% else %}small-feature-link{% endif %} button-row__btn" href="{{ section.settings.button2_link }}">{{ section.settings.button2_label | escape }}</a>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      </div>
+      <div class="video-feature__media">
+        {%- for block in section.blocks -%}
+          {% render block %}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Video feature",
+  "class": "section-video-feature",
+  "max_blocks": 1,
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Add your video app (e.g. Novel Shoppable Video) as a block in this section."
+    },
+    {
+      "type": "select",
+      "id": "video_position",
+      "label": "Video position on desktop",
+      "default": "left",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" }
+      ],
+      "info": "On mobile the text shows first, then the video."
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "default": "left",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_app_title",
+      "label": "Hide the video app's own title",
+      "default": true,
+      "info": "Use the heading below instead, so the title doesn't show twice."
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "default",
+      "options": [
+        { "value": "default", "label": "Default" },
+        { "value": "1", "label": "1" },
+        { "value": "2", "label": "2" }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Fall Favorites"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "header",
+      "content": "Buttons"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button style",
+      "default": "primary",
+      "options": [
+        { "value": "primary", "label": "Primary" },
+        { "value": "secondary", "label": "Secondary" },
+        { "value": "link", "label": "Link" }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "button2_label",
+      "label": "Second button label"
+    },
+    {
+      "type": "url",
+      "id": "button2_link",
+      "label": "Second button link"
+    },
+    {
+      "type": "select",
+      "id": "button2_style",
+      "label": "Second button style",
+      "default": "secondary",
+      "options": [
+        { "value": "primary", "label": "Primary" },
+        { "value": "secondary", "label": "Secondary" },
+        { "value": "link", "label": "Link" }
+      ]
+    }
+  ],
+  "blocks": [
+    { "type": "@app" }
+  ],
+  "presets": [
+    { "name": "Video feature" }
+  ]
+}
+{% endschema %}

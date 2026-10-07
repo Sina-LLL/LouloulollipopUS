@@ -17,7 +17,7 @@
           "settings": {
             "collection": "bundles-and-sets",
             "image": "shopify://shop_images/DS-NB001_113.jpg",
-            "label": "Gif Sets"
+            "label": "Gift Sets"
           }
         },
         "collection_PkyyWJ": {
@@ -106,78 +106,31 @@
       "type": "custom-hero-banner",
       "name": "Custom Hero Banner",
       "settings": {
-        "image": "shopify://shop_images/Crib_Sheet_-_Hero.png",
-        "mobile_image": "shopify://shop_images/Crib_Sheet_-_Hero-1.png",
-        "link": "shopify://collections/crib-sheets",
+        "image": "shopify://shop_images/Swaddle_Wrap_Hero.png",
+        "mobile_image": "shopify://shop_images/Swaddle_Wrap_Hero-1.png",
+        "link": "shopify://collections/swaddle-wrap",
         "full_width": true,
         "max_width": 0,
-        "heading": "Gets Softer With Every Wash - Tanboocel Crib Sheets",
+        "heading": "The easiest way to swaddle - Shop swaddle wraps",
         "use_h1": true
       }
     },
-    "logo_list_ywatnw": {
-      "type": "logo-list",
+    "1790361037c0907608": {
+      "type": "apps",
       "blocks": {
-        "logo_FxPmVy": {
-          "type": "logo",
+        "novel_shoppable_video_novel_product_UYTqiX": {
+          "type": "shopify://apps/novel-shoppable-video/blocks/novel-product/67e3531b-60c1-40d3-83d1-8f5aba7081ef",
           "settings": {
-            "image": "shopify://shop_images/ICON-SM-6.svg",
-            "image_width": 80,
-            "link": "",
-            "title": "Safe for Babies"
-          }
-        },
-        "logo_tawCLk": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Certified_B_Corporation_B_Corp_Logo_2022_Black_RGB_svg.webp",
-            "image_width": 80,
-            "link": "https://www.bcorporation.net/en-us/",
-            "title": "Certified B Corp"
-          }
-        },
-        "logo_D6VaH9": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Benefits-of-Partnering-with-a-WBENC-Certified-Women-Business-Enterprise-Public-Relations-and-Marketing-Agency-feature.webp",
-            "image_width": 130,
-            "link": "https://buywomenowned.com/",
-            "title": "Women-Owned"
-          }
-        },
-        "logo_Yg37w8": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/OEKO_TEX.png",
-            "image_width": 80,
-            "link": "https://www.oeko-tex.com/en/",
-            "title": "Safety Certified"
-          }
-        },
-        "logo_cNXMbY": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Free_ShippingUS.png",
-            "image_width": 80,
-            "link": "",
-            "title": "Free Shipping Over $65"
+            "journeyid": "6ab6bd5aa611c10002103c8d"
           }
         }
       },
       "block_order": [
-        "logo_FxPmVy",
-        "logo_tawCLk",
-        "logo_D6VaH9",
-        "logo_Yg37w8",
-        "logo_cNXMbY"
+        "novel_shoppable_video_novel_product_UYTqiX"
       ],
-      "name": "USP List",
       "settings": {
-        "title": "",
-        "enable_carousel": false,
-        "carousel_speed": 30,
-        "image_opacity": 100,
-        "color_scheme": "default"
+        "full_width": false,
+        "show_space": true
       }
     },
     "collection_list_km4B8h": {
@@ -359,6 +312,71 @@
         "coll_thumb_text_align_x": "center",
         "coll_thumb_text_align_y": "center",
         "coll_button_style": "primary"
+      }
+    },
+    "logo_list_ywatnw": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_FxPmVy": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/ICON-SM-6.svg",
+            "image_width": 80,
+            "link": "",
+            "title": "Safe for Babies"
+          }
+        },
+        "logo_tawCLk": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Certified_B_Corporation_B_Corp_Logo_2022_Black_RGB_svg.webp",
+            "image_width": 80,
+            "link": "https://www.bcorporation.net/en-us/",
+            "title": "Certified B Corp"
+          }
+        },
+        "logo_D6VaH9": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Benefits-of-Partnering-with-a-WBENC-Certified-Women-Business-Enterprise-Public-Relations-and-Marketing-Agency-feature.webp",
+            "image_width": 130,
+            "link": "https://buywomenowned.com/",
+            "title": "Women-Owned"
+          }
+        },
+        "logo_Yg37w8": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/OEKO_TEX.png",
+            "image_width": 80,
+            "link": "https://www.oeko-tex.com/en/",
+            "title": "Safety Certified"
+          }
+        },
+        "logo_cNXMbY": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Free_ShippingUS.png",
+            "image_width": 80,
+            "link": "",
+            "title": "Free Shipping Over $65"
+          }
+        }
+      },
+      "block_order": [
+        "logo_FxPmVy",
+        "logo_tawCLk",
+        "logo_D6VaH9",
+        "logo_Yg37w8",
+        "logo_cNXMbY"
+      ],
+      "name": "USP List",
+      "settings": {
+        "title": "",
+        "enable_carousel": false,
+        "carousel_speed": 30,
+        "image_opacity": 100,
+        "color_scheme": "default"
       }
     },
     "featured_collection_RGPeGr": {
@@ -750,7 +768,7 @@
         "cta_link_1": "shopify://collections/made-with-tencel-fibres",
         "tab2_label": "Tanboocel®",
         "tab2_col_ours": "Tanboocel®",
-        "tab2_col_other_1": "Bamboo Viscose/Rayon",
+        "tab2_col_other_1": "Conventional Bamboo Viscose/Rayon",
         "tab2_col_other_2": "Polyester",
         "bottom_line_2": "Bottom line: Tanboocel® is the fabric behind our muslin swaddles, quilts, and crib sheets — breathable enough for every season.",
         "cta_label_2": "Shop Tanboocel®",
@@ -1379,13 +1397,44 @@
         "button_style": "primary",
         "color_scheme": "default"
       }
+    },
+    "video_feature_fall": {
+      "type": "video-feature",
+      "blocks": {
+        "novel_shoppable_video_novel_product_7WJPn8": {
+          "type": "shopify://apps/novel-shoppable-video/blocks/novel-product/67e3531b-60c1-40d3-83d1-8f5aba7081ef",
+          "settings": {
+            "journeyid": "6ac57c6dde1e5a00026a636f"
+          }
+        }
+      },
+      "block_order": [
+        "novel_shoppable_video_novel_product_7WJPn8"
+      ],
+      "settings": {
+        "video_position": "left",
+        "text_alignment": "left",
+        "hide_app_title": true,
+        "color_scheme": "default",
+        "eyebrow": "New for the Season",
+        "title": "Fall Favorites",
+        "text": "<p>Cozy picks for crisp mornings and cooler nights. Watch the team share the pieces they're loving this season, and shop them right from the video.</p>",
+        "button_label": "Shop new arrivals",
+        "button_link": "shopify://collections/new-arrivals",
+        "button_style": "primary",
+        "button2_label": "",
+        "button2_link": "",
+        "button2_style": "secondary"
+      }
     }
   },
   "order": [
     "mobile_collection_carousel_iBRR9r",
     "custom_hero_banner_CqQiir",
-    "logo_list_ywatnw",
+    "1790361037c0907608",
     "collection_list_km4B8h",
+    "video_feature_fall",
+    "logo_list_ywatnw",
     "featured_collection_RGPeGr",
     "rich_text_materialsIntro",
     "multi_column_materialsUSP",

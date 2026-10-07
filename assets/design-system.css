@@ -2593,3 +2593,36 @@ h1.product-title{
     flex: 0 0 calc(33.3% - 40px);
   }
 }
+
+/* ===== Video feature section (sections/video-feature.liquid) ===== */
+.video-feature {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+}
+.video-feature__media {
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+}
+.video-feature__media > * {
+  width: 100%;
+}
+.video-feature__content > :first-child {
+  margin-top: 0;
+}
+.video-feature--align-center .video-feature__content {
+  text-align: center;
+}
+.video-feature--align-center .video-feature__content .button-row {
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .video-feature {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+  .video-feature--video-left .video-feature__media {
+    order: -1;
+  }
+}
