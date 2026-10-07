@@ -106,12 +106,12 @@
       "type": "custom-hero-banner",
       "name": "Custom Hero Banner",
       "settings": {
-        "image": "shopify://shop_images/Swaddle_Wrap_Hero.png",
-        "mobile_image": "shopify://shop_images/Swaddle_Wrap_Hero-1.png",
-        "link": "shopify://collections/swaddle-wrap",
+        "image": "shopify://shop_images/Silicone_Sale_-_US.png",
+        "mobile_image": "shopify://shop_images/Silicone_Sale_-_US-1.png",
+        "link": "shopify://collections/super-silicone-sale",
         "full_width": true,
         "max_width": 0,
-        "heading": "The easiest way to swaddle - Shop swaddle wraps",
+        "heading": "Super silicone sale - Save up to $70 on silicone favorites",
         "use_h1": true
       }
     },
@@ -312,6 +312,35 @@
         "coll_thumb_text_align_x": "center",
         "coll_thumb_text_align_y": "center",
         "coll_button_style": "primary"
+      }
+    },
+    "video_feature_fall": {
+      "type": "video-feature",
+      "blocks": {
+        "novel_shoppable_video_novel_product_7WJPn8": {
+          "type": "shopify://apps/novel-shoppable-video/blocks/novel-product/67e3531b-60c1-40d3-83d1-8f5aba7081ef",
+          "settings": {
+            "journeyid": "6ac57c6dde1e5a00026a636f"
+          }
+        }
+      },
+      "block_order": [
+        "novel_shoppable_video_novel_product_7WJPn8"
+      ],
+      "settings": {
+        "video_position": "left",
+        "text_alignment": "left",
+        "hide_app_title": true,
+        "color_scheme": "default",
+        "eyebrow": "New for the Season",
+        "title": "Fall Favorites",
+        "text": "<p>Cozy picks for crisp mornings and cooler nights. Watch the team share the pieces they're loving this season, and shop them right from the video.</p>",
+        "button_label": "Shop new arrivals",
+        "button_link": "shopify://collections/new-arrivals",
+        "button_style": "primary",
+        "button2_label": "",
+        "button2_link": "",
+        "button2_style": "secondary"
       }
     },
     "logo_list_ywatnw": {
@@ -1396,35 +1425,6 @@
         "text_alignment": "center",
         "button_style": "primary",
         "color_scheme": "default"
-      }
-    },
-    "video_feature_fall": {
-      "type": "video-feature",
-      "blocks": {
-        "novel_shoppable_video_novel_product_7WJPn8": {
-          "type": "shopify://apps/novel-shoppable-video/blocks/novel-product/67e3531b-60c1-40d3-83d1-8f5aba7081ef",
-          "settings": {
-            "journeyid": "6ac57c6dde1e5a00026a636f"
-          }
-        }
-      },
-      "block_order": [
-        "novel_shoppable_video_novel_product_7WJPn8"
-      ],
-      "settings": {
-        "video_position": "left",
-        "text_alignment": "left",
-        "hide_app_title": true,
-        "color_scheme": "default",
-        "eyebrow": "New for the Season",
-        "title": "Fall Favorites",
-        "text": "<p>Cozy picks for crisp mornings and cooler nights. Watch the team share the pieces they're loving this season, and shop them right from the video.</p>",
-        "button_label": "Shop new arrivals",
-        "button_link": "shopify://collections/new-arrivals",
-        "button_style": "primary",
-        "button2_label": "",
-        "button2_link": "",
-        "button2_style": "secondary"
       }
     }
   },
