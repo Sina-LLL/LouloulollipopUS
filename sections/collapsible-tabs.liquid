@@ -36,36 +36,6 @@
   </div>
 </div>
 
-{%- assign question_blocks = section.blocks | where: 'type', 'question' -%}
-{%- assign faq_count = 0 -%}
-{% capture faq_entities_json %}
-  {%- for block in question_blocks -%}
-    {%- assign faq_question = block.settings.title | strip_html | strip -%}
-    {%- assign faq_answer = block.settings.answer | strip_html | replace: '&nbsp;', ' ' | replace: '&#39;', "'" | replace: '&quot;', '"' | replace: '&amp;', '&' | strip_newlines | strip -%}
-    {%- if faq_question != blank and faq_answer != blank -%}
-      {%- if faq_count > 0 -%},{%- endif -%}
-      {%- assign faq_count = faq_count | plus: 1 -%}
-      {
-        "@type": "Question",
-        "name": {{ faq_question | json }},
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": {{ faq_answer | json }}
-        }
-      }
-    {%- endif -%}
-  {%- endfor -%}
-{% endcapture %}
-{%- if section.settings.output_faq_schema and faq_count > 0 -%}
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [{{ faq_entities_json }}]
-  }
-  </script>
-{%- endif -%}
-
 {% schema %}
 {
   "name": "Collapsible tabs",
@@ -81,13 +51,6 @@
       "id": "title",
       "label": "Heading",
       "default": "Collapsible tabs"
-    },
-    {
-      "type": "checkbox",
-      "id": "output_faq_schema",
-      "label": "Output FAQ structured data",
-      "info": "Google allows one FAQPage per page. Uncheck on all but one collapsible tabs section per page.",
-      "default": true
     }
   ],
   "blocks": [
