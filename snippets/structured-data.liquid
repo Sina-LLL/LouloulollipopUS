@@ -25,14 +25,14 @@
   - Before enabling on a client store, audit for duplicate schema from
     review apps (Judge.me, Yotpo, etc.) or AEO/SEO apps that may already
     output Product / FAQPage / Organization schema.
-  - FIX (see CHANGELOG below): the PLP ItemList no longer embeds a full
-    "@type": "Product" node per item. It previously reused the exact same
-    @id as the PDP's real Product node ("{{ shop.url }}{{ product.url }}#product")
-    but without offers/aggregateRating, which caused rating mismatches /
-    missing-field warnings when parsers resolved the two same-@id nodes
-    against each other. ItemList items now use the Google-recommended
-    "position" + "url" pattern only. The PDP (section 2) remains the sole
-    source of Product / offers / aggregateRating.
+  - FIX: the PLP ItemList no longer embeds a full "@type": "Product" node
+    per item. It previously reused the exact same @id as the PDP's real
+    Product node ("{{ shop.url }}{{ product.url }}#product") but without
+    offers/aggregateRating, which caused rating mismatches / missing-field
+    warnings when parsers resolved the two same-@id nodes against each
+    other. ItemList items now use the Google-recommended "position" + "url"
+    pattern only. The PDP (section 2) remains the sole source of
+    Product / offers / aggregateRating.
   - UPDATE: PLP FAQ (3b) now reads collection.metafields.custom.faqs, a
     list of metaobject references (each with question + answer fields),
     instead of a JSON list in custom.faq.
@@ -310,7 +310,7 @@
 
 {%- comment -%} ================= 2b. PDP FAQ (Comergent.productFaqs metafield) ================= {%- endcomment -%}
 {%- comment -%}
-  Metafield: product.metafields.Comergent.productFaqs (namespace: custom, key: faq)
+  Metafield: product.metafields.Comergent.productFaqs
   Type: JSON list of objects, each shaped like {"question": "...", "answer": "..."}
 {%- endcomment -%}
 {%- if request.page_type == 'product' and product.metafields.Comergent.productFaqs.value != blank -%}
@@ -417,21 +417,24 @@
 {%- endif -%}
 
 
-{%- comment -%} ================= 3b. PLP FAQ (separate script, optional) ================= {%- endcomment -%}
+{%- comment -%} ================= 3b. PLP FAQ (metaobject list: custom.faqs) ================= {%- endcomment -%}
 {%- comment -%}
   Metafield: collection.metafields.custom.faqs (namespace: custom, key: faqs)
-  Type: List of metaobject references (each entry is a FAQ metaobject).
-  Each metaobject is expected to have two fields:
+  Type: List of metaobject references (definition: "Collection FAQ").
+  Metaobject definition "Collection FAQ" (type: collection_faq) fields:
     - question  (single line text)
-    - answer    (multi-line text, single line text, or rich text)
-  If your metaobject definition uses different field keys, change
-  `faq.question` / `faq.answer` below to match.
+    - answers   (rich text)
+  `metafield_text` converts the rich text answer to plain text, so the
+  schema never contains the rich text JSON. If the field keys are ever
+  renamed in the definition, update `faq.question` / `faq.answers` below.
 
-  The metaobject definition must have Storefront access enabled
-  (Settings > Custom data > Metaobjects > [definition] > Access >
-  Storefronts), otherwise the entries render blank.
+  Requirements:
+    - Storefront access enabled on the Collection FAQ metaobject definition
+    - Entries set to Active (not draft)
+    - FAQ content should also be visibly rendered on the collection page
 {%- endcomment -%}
-{%- if request.page_type == 'collection' and collection.metafields.custom.faqs.value != blank -%}
+{%- assign plp_faqs = collection.metafields.custom.faqs.value -%}
+{%- if request.page_type == 'collection' and plp_faqs != blank -%}
   {%- assign faq_started = false -%}
 <script type="application/ld+json">
 {
@@ -439,9 +442,9 @@
   "@type": "FAQPage",
   "@id": "{{ shop.url }}{{ collection.url }}#faq",
   "mainEntity": [
-    {%- for faq in collection.metafields.custom.faqs.value -%}
+    {%- for faq in plp_faqs -%}
       {%- assign faq_q = faq.question | metafield_text | strip_html | strip_newlines | strip -%}
-      {%- assign faq_a = faq.answer | metafield_text | strip_html | strip_newlines | strip -%}
+      {%- assign faq_a = faq.answers | metafield_text | strip_html | strip_newlines | strip -%}
       {%- if faq_q != blank and faq_a != blank -%}
         {%- if faq_started -%},{%- endif -%}
         {%- assign faq_started = true -%}
