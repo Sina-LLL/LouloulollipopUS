@@ -10,9 +10,9 @@
   Sections included:
     1. Homepage   -> Organization, WebSite, SearchAction, WebPage
     2. PDP         -> BreadcrumbList, WebPage/ItemPage, Product, AggregateOffer
-    2b. PDP FAQ    -> FAQPage, built from product.metafields.custom.faq (JSON list)
+    2b. PDP FAQ    -> FAQPage, built from product.metafields.Comergent.productFaqs (JSON list)
     3. PLP         -> BreadcrumbList, WebPage/CollectionPage, ItemList
-    3b. PLP FAQ    -> FAQPage, from collection.metafields.custom.faq (JSON list)
+    3b. PLP FAQ    -> FAQPage, from collection.metafields.custom.faqs (metaobject list)
 
   Notes:
   - Uses the Liquid `json` filter for all free-text fields (handles quotes/
@@ -33,6 +33,9 @@
     against each other. ItemList items now use the Google-recommended
     "position" + "url" pattern only. The PDP (section 2) remains the sole
     source of Product / offers / aggregateRating.
+  - UPDATE: PLP FAQ (3b) now reads collection.metafields.custom.faqs, a
+    list of metaobject references (each with question + answer fields),
+    instead of a JSON list in custom.faq.
 {%- endcomment -%}
 
 
@@ -309,7 +312,6 @@
 {%- comment -%}
   Metafield: product.metafields.Comergent.productFaqs (namespace: custom, key: faq)
   Type: JSON list of objects, each shaped like {"question": "...", "answer": "..."}
-  Same shape/key as the collection FAQ metafield (section 3b).
 {%- endcomment -%}
 {%- if request.page_type == 'product' and product.metafields.Comergent.productFaqs.value != blank -%}
 <script type="application/ld+json">
@@ -417,25 +419,41 @@
 
 {%- comment -%} ================= 3b. PLP FAQ (separate script, optional) ================= {%- endcomment -%}
 {%- comment -%}
-  Metafield: collection.metafields.custom.faq (namespace: custom, key: faq)
-  Type: JSON list of objects, each shaped like {"question": "...", "answer": "..."}
+  Metafield: collection.metafields.custom.faqs (namespace: custom, key: faqs)
+  Type: List of metaobject references (each entry is a FAQ metaobject).
+  Each metaobject is expected to have two fields:
+    - question  (single line text)
+    - answer    (multi-line text, single line text, or rich text)
+  If your metaobject definition uses different field keys, change
+  `faq.question` / `faq.answer` below to match.
+
+  The metaobject definition must have Storefront access enabled
+  (Settings > Custom data > Metaobjects > [definition] > Access >
+  Storefronts), otherwise the entries render blank.
 {%- endcomment -%}
-{%- if request.page_type == 'collection' and collection.metafields.custom.faq.value != blank -%}
+{%- if request.page_type == 'collection' and collection.metafields.custom.faqs.value != blank -%}
+  {%- assign faq_started = false -%}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "@id": "{{ shop.url }}{{ collection.url }}#faq",
   "mainEntity": [
-    {%- for faq in collection.metafields.custom.faq.value -%}
+    {%- for faq in collection.metafields.custom.faqs.value -%}
+      {%- assign faq_q = faq.question | metafield_text | strip_html | strip_newlines | strip -%}
+      {%- assign faq_a = faq.answer | metafield_text | strip_html | strip_newlines | strip -%}
+      {%- if faq_q != blank and faq_a != blank -%}
+        {%- if faq_started -%},{%- endif -%}
+        {%- assign faq_started = true -%}
     {
       "@type": "Question",
-      "name": {{ faq.question | strip_html | strip_newlines | json }},
+      "name": {{ faq_q | json }},
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": {{ faq.answer | strip_html | strip_newlines | json }}
+        "text": {{ faq_a | json }}
       }
-    }{% unless forloop.last %},{% endunless %}
+    }
+      {%- endif -%}
     {%- endfor -%}
   ]
 }
