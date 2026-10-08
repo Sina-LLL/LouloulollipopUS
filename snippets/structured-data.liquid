@@ -1,0 +1,461 @@
+{%- comment -%}
+  snippets/structured-data.liquid
+  ------------------------------------------------------------
+  Sitewide JSON-LD structured data.
+  Renders the correct schema graph based on request.page_type.
+  Call once from layout/theme.liquid, right before </head>:
+
+    {%- render 'structured-data' -%}
+
+  Sections included:
+    1. Homepage   -> Organization, WebSite, SearchAction, WebPage
+    2. PDP         -> BreadcrumbList, WebPage/ItemPage, Product, AggregateOffer
+    2b. PDP FAQ    -> FAQPage, built from product.metafields.Comergent.productFaqs (JSON list)
+    3. PLP         -> BreadcrumbList, WebPage/CollectionPage, ItemList
+    3b. PLP FAQ    -> FAQPage, from collection.metafields.custom.faqs (metaobject list)
+
+  Notes:
+  - Uses the Liquid `json` filter for all free-text fields (handles quotes/
+    apostrophes/special chars safely) instead of manual escaping.
+  - GTIN is mapped by barcode length rather than assuming gtin13.
+  - aggregateRating / review only output when metafields are present.
+  - FAQ schema only outputs when the corresponding metafield content is present,
+    and should only be added if the FAQ content is visibly rendered on
+    the page (see FAQ protocol notes below).
+  - Before enabling on a client store, audit for duplicate schema from
+    review apps (Judge.me, Yotpo, etc.) or AEO/SEO apps that may already
+    output Product / FAQPage / Organization schema.
+  - FIX (see CHANGELOG below): the PLP ItemList no longer embeds a full
+    "@type": "Product" node per item. It previously reused the exact same
+    @id as the PDP's real Product node ("{{ shop.url }}{{ product.url }}#product")
+    but without offers/aggregateRating, which caused rating mismatches /
+    missing-field warnings when parsers resolved the two same-@id nodes
+    against each other. ItemList items now use the Google-recommended
+    "position" + "url" pattern only. The PDP (section 2) remains the sole
+    source of Product / offers / aggregateRating.
+  - UPDATE: PLP FAQ (3b) now reads collection.metafields.custom.faqs, a
+    list of metaobject references (each with question + answer fields),
+    instead of a JSON list in custom.faq.
+{%- endcomment -%}
+
+
+{%- comment -%}
+  ================= 1. HOMEPAGE =================
+  LocalBusiness block below is OPTIONAL and only renders when
+  shop.metafields.custom.local_business_type is populated (e.g. "Store",
+  "ClothingStore", "JewelryStore" -- any valid schema.org LocalBusiness
+  subtype). This keeps the block safely off for online-only stores with
+  no physical storefront/showroom.
+
+  Required metafields (Settings > Custom data > Shop, namespace: custom):
+    local_business_type       (single line text)  e.g. "JewelryStore"
+    local_business_street     (single line text)
+    local_business_city       (single line text)
+    local_business_region     (single line text)  e.g. state/province
+    local_business_postal     (single line text)
+    local_business_country    (single line text)  ISO 3166-1 alpha-2, e.g. "IN"
+    local_business_lat        (number, decimal)    optional but recommended
+    local_business_lng        (number, decimal)    optional but recommended
+    local_business_hours      (single line text)   optional, schema.org format
+                                 e.g. "Mo-Sa 10:00-19:00"
+    local_business_pricerange (single line text)   optional, e.g. "$$"
+{%- endcomment -%}
+{%- if request.page_type == 'index' -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{ shop.url }}#organization",
+      "name": {{ shop.name | json }},
+      "url": "{{ shop.url }}",
+      "logo": {
+        "@type": "ImageObject",
+        {%- if shop.brand and shop.brand.logo -%}
+        "url": "{{ shop.brand.logo | image_url: width: 300 | prepend: 'https:' }}",
+        "width": {{ shop.brand.logo.width }},
+        "height": {{ shop.brand.logo.height }}
+        {%- elsif settings.logo -%}
+        "url": "{{ settings.logo | image_url: width: 300 | prepend: 'https:' }}",
+        "width": 300,
+        "height": 300
+        {%- else -%}
+        "url": "{{ 'logo.png' | asset_url | prepend: 'https:' }}",
+        "width": 300,
+        "height": 300
+        {%- endif -%}
+      }
+      {%- comment -%}
+        sameAs: add real brand social profile URLs, e.g.
+        , "sameAs": ["https://www.instagram.com/yourbrand", "https://www.facebook.com/yourbrand"]
+        Omit entirely if not available.
+      {%- endcomment -%}
+      {%- if shop.phone != blank or shop.email != blank -%},
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service"
+          {%- if shop.phone != blank -%},
+          "telephone": {{ shop.phone | json }}
+          {%- endif -%}
+          {%- if shop.email != blank -%},
+          "email": {{ shop.email | json }}
+          {%- endif -%},
+          "areaServed": "US",
+          "availableLanguage": ["en"]
+        }
+      ]
+      {%- endif -%}
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ shop.url }}#website",
+      "url": "{{ shop.url }}",
+      "name": {{ shop.name | json }},
+      "publisher": { "@id": "{{ shop.url }}#organization" },
+      "inLanguage": "{{ request.locale.iso_code | default: 'en' }}",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "{{ shop.url }}/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "{{ shop.url }}#webpage",
+      "url": "{{ shop.url }}",
+      "name": {{ shop.name | json }},
+      "description": {{ page_description | default: shop.description | default: shop.name | strip_html | strip_newlines | truncate: 300 | json }},
+      "isPartOf": { "@id": "{{ shop.url }}#website" },
+      "about": { "@id": "{{ shop.url }}#organization" },
+      "inLanguage": "{{ request.locale.iso_code | default: 'en' }}"
+    }
+    {%- if shop.metafields.custom.local_business_type != blank -%},
+    {
+      "@type": {{ shop.metafields.custom.local_business_type | json }},
+      "@id": "{{ shop.url }}#localbusiness",
+      "name": {{ shop.name | json }},
+      "url": "{{ shop.url }}",
+      "image": {
+        {%- if shop.brand and shop.brand.logo -%}
+        "@type": "ImageObject",
+        "url": "{{ shop.brand.logo | image_url: width: 300 | prepend: 'https:' }}"
+        {%- elsif settings.logo -%}
+        "@type": "ImageObject",
+        "url": "{{ settings.logo | image_url: width: 300 | prepend: 'https:' }}"
+        {%- else -%}
+        "@type": "ImageObject",
+        "url": "{{ 'logo.png' | asset_url | prepend: 'https:' }}"
+        {%- endif -%}
+      },
+      "parentOrganization": { "@id": "{{ shop.url }}#organization" }
+      {%- if shop.phone != blank -%},
+      "telephone": {{ shop.phone | json }}
+      {%- endif -%}
+      {%- if shop.email != blank -%},
+      "email": {{ shop.email | json }}
+      {%- endif -%}
+      {%- if shop.metafields.custom.local_business_pricerange != blank -%},
+      "priceRange": {{ shop.metafields.custom.local_business_pricerange.value | json }}
+      {%- endif -%}
+      {%- if shop.metafields.custom.local_business_street != blank -%},
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": {{ shop.metafields.custom.local_business_street.value | json }},
+        "addressLocality": {{ shop.metafields.custom.local_business_city.value | json }},
+        "addressRegion": {{ shop.metafields.custom.local_business_region.value | json }},
+        "postalCode": {{ shop.metafields.custom.local_business_postal.value | json }},
+        "addressCountry": {{ shop.metafields.custom.local_business_country.value | json }}
+      }
+      {%- endif -%}
+      {%- if shop.metafields.custom.local_business_lat != blank and shop.metafields.custom.local_business_lng != blank -%},
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": {{ shop.metafields.custom.local_business_lat.value }},
+        "longitude": {{ shop.metafields.custom.local_business_lng.value }}
+      }
+      {%- endif -%}
+      {%- if shop.metafields.custom.local_business_hours != blank -%},
+      "openingHours": {{ shop.metafields.custom.local_business_hours.value | json }}
+      {%- endif -%}
+    }
+    {%- endif -%}
+  ]
+}
+</script>
+{%- endif -%}
+
+
+{%- comment -%} ================= 2. PRODUCT (PDP) ================= {%- endcomment -%}
+{%- if request.page_type == 'product' and product -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": "{{ shop.url }}{{ product.url }}#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "{{ shop.url }}"
+        }
+        {%- if collection -%},
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ collection.title | json }},
+          "item": "{{ shop.url }}{{ collection.url }}"
+        }
+        {%- endif -%},
+        {
+          "@type": "ListItem",
+          "position": {% if collection %}3{% else %}2{% endif %},
+          "name": {{ product.title | json }},
+          "item": "{{ shop.url }}{{ product.url }}"
+        }
+      ]
+    },
+    {
+      "@type": ["WebPage", "ItemPage"],
+      "@id": "{{ shop.url }}{{ product.url }}#webpage",
+      "url": "{{ shop.url }}{{ product.url }}",
+      "name": {{ product.title | json }},
+      "description": {{ product.description | strip_html | strip_newlines | truncate: 500 | json }},
+      "inLanguage": "{{ request.locale.iso_code | default: 'en' }}",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "{{ shop.url }}#website",
+        "name": {{ shop.name | json }},
+        "url": "{{ shop.url }}"
+      },
+      "breadcrumb": { "@id": "{{ shop.url }}{{ product.url }}#breadcrumbs" },
+      "mainEntity": { "@id": "{{ shop.url }}{{ product.url }}#product" }
+    },
+    {
+      "@type": "Product",
+      "@id": "{{ shop.url }}{{ product.url }}#product",
+      "name": {{ product.title | json }},
+      "description": {{ product.description | strip_html | strip_newlines | truncate: 1000 | json }},
+      "url": "{{ shop.url }}{{ product.url }}",
+      "image": [
+        {%- for image in product.images limit: 5 -%}
+        "{{ image | image_url: width: 1200 | prepend: 'https:' }}"{% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      ],
+      {%- if product.selected_or_first_available_variant.sku != blank -%}
+      "sku": {{ product.selected_or_first_available_variant.sku | json }},
+      {%- endif -%}
+      "brand": {
+        "@type": "Brand",
+        "name": {% if product.vendor != blank %}{{ product.vendor | json }}{% else %}{{ shop.name | json }}{% endif %}
+      }
+      {%- if product.collections.first -%},
+      "category": {{ product.collections.first.title | json }}
+      {%- endif -%},
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "{{ shop.currency }}",
+        "offerCount": {{ product.variants.size }},
+        "lowPrice": {{ product.price_min | times: 0.01 | round: 2 }},
+        "highPrice": {{ product.price_max | times: 0.01 | round: 2 }},
+        "offers": [
+          {%- for v in product.variants -%}
+          {
+            "@type": "Offer",
+            "url": "{{ shop.url }}{{ product.url }}?variant={{ v.id }}",
+            "priceCurrency": "{{ shop.currency }}",
+            "price": {{ v.price | times: 0.01 | round: 2 }},
+            "availability": "https://schema.org/{% if v.available %}InStock{% else %}OutOfStock{% endif %}"
+            {%- if v.sku != blank -%},"sku": {{ v.sku | json }}{%- endif -%}
+            {%- assign bc = v.barcode | strip -%}
+            {%- if bc != blank -%}
+              {%- assign bc_len = bc | size -%}
+              {%- if bc_len == 14 -%},"gtin14": {{ bc | json }}{%- endif -%}
+              {%- if bc_len == 13 -%},"gtin13": {{ bc | json }}{%- endif -%}
+              {%- if bc_len == 12 -%},"gtin12": {{ bc | json }}{%- endif -%}
+              {%- if bc_len == 8 -%},"gtin8": {{ bc | json }}{%- endif -%}
+            {%- endif -%},
+            "itemCondition": "https://schema.org/NewCondition",
+            "seller": {
+              "@type": "Organization",
+              "@id": "{{ shop.url }}#organization",
+              "name": {{ shop.name | json }}
+            }
+          }{% unless forloop.last %},{% endunless %}
+          {%- endfor -%}
+        ]
+      }
+      {%- if product.metafields.reviews.rating_value != blank and product.metafields.reviews.rating_count != blank -%},
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": {{ product.metafields.reviews.rating_value }},
+        "ratingCount": {{ product.metafields.reviews.rating_count }},
+        "bestRating": 5,
+        "worstRating": 1
+      }
+      {%- endif -%}
+      {%- if product.metafields.reviews.recent_json != blank -%},
+      "review": {{ product.metafields.reviews.recent_json }}
+      {%- endif -%}
+    }
+  ]
+}
+</script>
+{%- endif -%}
+
+
+{%- comment -%} ================= 2b. PDP FAQ (Comergent.productFaqs metafield) ================= {%- endcomment -%}
+{%- comment -%}
+  Metafield: product.metafields.Comergent.productFaqs (namespace: custom, key: faq)
+  Type: JSON list of objects, each shaped like {"question": "...", "answer": "..."}
+{%- endcomment -%}
+{%- if request.page_type == 'product' and product.metafields.Comergent.productFaqs.value != blank -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "{{ shop.url }}{{ product.url }}#faq",
+  "mainEntity": [
+    {%- for faq in product.metafields.Comergent.productFaqs.value -%}
+    {
+      "@type": "Question",
+      "name": {{ faq.question | strip_html | strip_newlines | json }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ faq.answer | strip_html | strip_newlines | json }}
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  ]
+}
+</script>
+{%- endif -%}
+
+
+{%- comment -%} ================= 3. COLLECTION (PLP) ================= {%- endcomment -%}
+{%- comment -%}
+  FIXED: itemListElement entries used to embed a full "@type": "Product"
+  node reusing the PDP's exact @id ("...#product") but without offers/
+  aggregateRating. That @id collision between an incomplete collection-page
+  stub and the complete PDP node is what caused wrong/missing aggregate
+  rating results. Per Google's guidance for listing/carousel pages, each
+  ListItem now carries "position" + "url" + "name" + "image" directly on
+  itself (no nested "item" object, no "@type": "Product", no @id) -- so
+  the listing page still surfaces product name/image for rich results
+  without ever declaring a competing Product entity. The PDP (section 2)
+  stays the only place Product / offers / aggregateRating are declared.
+{%- endcomment -%}
+{%- if request.page_type == 'collection' and collection -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": "{{ shop.url }}{{ collection.url }}#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "{{ shop.url }}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ collection.title | json }},
+          "item": "{{ shop.url }}{{ collection.url }}"
+        }
+      ]
+    },
+    {
+      "@type": ["WebPage", "CollectionPage"],
+      "@id": "{{ shop.url }}{{ collection.url }}#webpage",
+      "url": "{{ shop.url }}{{ collection.url }}",
+      "name": {{ collection.title | json }},
+      "description": {{ collection.description | strip_html | strip_newlines | truncate: 500 | json }},
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "{{ shop.url }}#website",
+        "name": {{ shop.name | json }},
+        "url": "{{ shop.url }}"
+      },
+      "inLanguage": "{{ request.locale.iso_code | default: 'en' }}",
+      "breadcrumb": { "@id": "{{ shop.url }}{{ collection.url }}#breadcrumbs" },
+      "about": {
+        "@type": "Thing",
+        "name": {{ collection.title | json }}
+      },
+      "mainEntity": { "@id": "{{ shop.url }}{{ collection.url }}#itemlist" }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "{{ shop.url }}{{ collection.url }}#itemlist",
+      "url": "{{ shop.url }}{{ collection.url }}",
+      "numberOfItems": {{ collection.products_count }},
+      "itemListElement": [
+        {%- for product in collection.products -%}
+        {
+          "@type": "ListItem",
+          "position": {{ forloop.index }},
+          "url": "{{ shop.url }}{{ product.url }}",
+          "name": {{ product.title | json }}
+          {%- if product.featured_image -%},
+          "image": "{{ product.featured_image | image_url: width: 1024 | prepend: 'https:' }}"
+          {%- endif -%}
+        }{% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      ]
+    }
+  ]
+}
+</script>
+{%- endif -%}
+
+
+{%- comment -%} ================= 3b. PLP FAQ (separate script, optional) ================= {%- endcomment -%}
+{%- comment -%}
+  Metafield: collection.metafields.custom.faqs (namespace: custom, key: faqs)
+  Type: List of metaobject references (each entry is a FAQ metaobject).
+  Each metaobject is expected to have two fields:
+    - question  (single line text)
+    - answer    (multi-line text, single line text, or rich text)
+  If your metaobject definition uses different field keys, change
+  `faq.question` / `faq.answer` below to match.
+
+  The metaobject definition must have Storefront access enabled
+  (Settings > Custom data > Metaobjects > [definition] > Access >
+  Storefronts), otherwise the entries render blank.
+{%- endcomment -%}
+{%- if request.page_type == 'collection' and collection.metafields.custom.faqs.value != blank -%}
+  {%- assign faq_started = false -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "{{ shop.url }}{{ collection.url }}#faq",
+  "mainEntity": [
+    {%- for faq in collection.metafields.custom.faqs.value -%}
+      {%- assign faq_q = faq.question | metafield_text | strip_html | strip_newlines | strip -%}
+      {%- assign faq_a = faq.answer | metafield_text | strip_html | strip_newlines | strip -%}
+      {%- if faq_q != blank and faq_a != blank -%}
+        {%- if faq_started -%},{%- endif -%}
+        {%- assign faq_started = true -%}
+    {
+      "@type": "Question",
+      "name": {{ faq_q | json }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ faq_a | json }}
+      }
+    }
+      {%- endif -%}
+    {%- endfor -%}
+  ]
+}
+</script>
+{%- endif -%}
