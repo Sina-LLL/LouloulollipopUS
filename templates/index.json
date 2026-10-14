@@ -106,13 +106,30 @@
       "type": "custom-hero-banner",
       "name": "Custom Hero Banner",
       "settings": {
-        "image": "shopify://shop_images/Silicone_Sale_-_US.png",
-        "mobile_image": "shopify://shop_images/Silicone_Sale_-_US-1.png",
+        "image": "shopify://shop_images/Sleep_Bag_Hero.png",
+        "mobile_image": "shopify://shop_images/Sleep_Bag_Hero_-_mobile.png",
         "link": "shopify://collections/super-silicone-sale",
         "full_width": true,
         "max_width": 0,
         "heading": "Super silicone sale - Save up to $70 on silicone favorites",
         "use_h1": true
+      }
+    },
+    "featured_collection_BnRqrB": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "Silicone Teethers",
+        "text": "",
+        "collection": "single-teethers",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 5,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": true,
+        "text_alignment": "start"
       }
     },
     "1790361037c0907608": {
@@ -1192,245 +1209,12 @@
         "full_width": false,
         "show_space": true
       }
-    },
-    "16359276425da8ce46": {
-      "type": "slideshow",
-      "blocks": {
-        "image_LBrG4m": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Summer_hero.png",
-            "mobile_image": "shopify://shop_images/Elza_Photographie_Loulou_Lollipop_Sept._4th_2024_-Web-2.jpg",
-            "slide_link": "",
-            "subheading": "",
-            "title": "Summer Must-Haves",
-            "heading_max_width": 14,
-            "title_size": 60,
-            "title_size_mobile": 32,
-            "use_h1": true,
-            "text": "<p>From breathable fabrics to playful prints, discover must-haves made for sunny days.</p>",
-            "enlarge_text": true,
-            "button_label_1": "Explore Summer Picks",
-            "button_url_1": "shopify://collections/summer-picks",
-            "button_tag_1": "",
-            "button_label_2": "",
-            "button_url_2": "",
-            "button_tag_2": "",
-            "text_alignment": "center left"
-          }
-        },
-        "image_tApQLT": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Alphabet_Smiles_PRINT.png",
-            "slide_link": "",
-            "subheading": "From A to Z, With Love",
-            "title": "Alphabet Smiles Is Here",
-            "heading_max_width": 14,
-            "title_size": 60,
-            "title_size_mobile": 32,
-            "use_h1": false,
-            "text": "<p>Every letter comes with a kind word—because little ones deserve to grow up wrapped in positivity.</p>",
-            "enlarge_text": true,
-            "button_label_1": "Shop the Print",
-            "button_url_1": "shopify://collections/alphabet-smiles",
-            "button_tag_1": "",
-            "button_label_2": "",
-            "button_url_2": "",
-            "button_tag_2": "",
-            "text_alignment": "center left"
-          }
-        },
-        "16359276425da8ce46-0": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/lightweight_sleep_bag.png",
-            "slide_link": "",
-            "subheading": "",
-            "title": "The Coolest Sleep of the Summer",
-            "heading_max_width": 16,
-            "title_size": 60,
-            "title_size_mobile": 32,
-            "use_h1": false,
-            "text": "<p>Made for warmer nights, our 0.5 TOG Sleep Bags are breathable, buttery-soft, and baby-approved.</p>",
-            "enlarge_text": true,
-            "button_label_1": "Shop Lightweight Sleep Bags",
-            "button_url_1": "shopify://collections/0-5-tog",
-            "button_tag_1": "",
-            "button_label_2": "",
-            "button_url_2": "",
-            "button_tag_2": "",
-            "text_alignment": "center left"
-          }
-        }
-      },
-      "block_order": [
-        "image_LBrG4m",
-        "image_tApQLT",
-        "16359276425da8ce46-0"
-      ],
-      "disabled": true,
-      "settings": {
-        "height": "full",
-        "height_desktop": 700,
-        "height_mobile": 700,
-        "full_width": true,
-        "mobile_overlay_under": false,
-        "overlay_style": "full image-overlay--bg-shadow",
-        "transition": "fade",
-        "navigation": "dots",
-        "autoplay": true,
-        "autoplay_speed": 7,
-        "accessibility_info": ""
-      }
-    },
-    "shop_the_look_HrgpQK": {
-      "type": "shop-the-look",
-      "blocks": {
-        "subheading_Mr3wbt": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "The Complete Sleep Set"
-          }
-        },
-        "heading_3ibApk": {
-          "type": "heading",
-          "settings": {
-            "title": "Our most-loved sleep essentials",
-            "heading_max_width": 13,
-            "title_size": 44,
-            "title_size_mobile": 30,
-            "use_h1": false
-          }
-        }
-      },
-      "block_order": [
-        "subheading_Mr3wbt",
-        "heading_3ibApk"
-      ],
-      "disabled": true,
-      "name": "Shop the look",
-      "settings": {
-        "video_external": "",
-        "video_description": "",
-        "height": "fixed",
-        "height_desktop": 600,
-        "height_mobile": 460,
-        "product_list": [
-          "sleeper-magical-dragons",
-          "long-sleeve-pajama-set-magical-dragons",
-          "muslin-quilt-magical-dragons",
-          "muslin-fitted-crib-sheet-magical-dragons",
-          "muslin-swaddle-magical-dragons",
-          "tencel-sleep-bag-1-0-tog-magical-dragons"
-        ],
-        "products_alignment": "bottom right",
-        "product_card_layout": "portrait",
-        "show_swatches": true,
-        "full_width": true,
-        "text_alignment": "top left",
-        "mobile_overlay_over": false,
-        "overlay_style": "shadow"
-      }
-    },
-    "featured_collection_HNkD47": {
-      "type": "featured-collection",
-      "disabled": true,
-      "name": "Bundles Carousel",
-      "settings": {
-        "title": "Gift-able Bundles",
-        "text": "<p>Perfectly paired bundles for easy gifting</p>",
-        "collection": "bundles-and-sets",
-        "show_vendor": false,
-        "enable_carousel": true,
-        "grid": 4,
-        "rows": 2,
-        "color_scheme": "default",
-        "show_view_all": true,
-        "full_width": true,
-        "text_alignment": "start"
-      }
-    },
-    "custom_product_highlight_JiGaUB": {
-      "type": "custom-product-highlight",
-      "disabled": true,
-      "custom_css": [],
-      "settings": {
-        "title": "Mess-less Mealtimes",
-        "text": "<p>Our super smart silicone snack plates feature a strong sticky base even pro food flingers can't beat. Available in a variety of totally a-roar-able animal shapes for more happy snacking with less mess!</p>",
-        "order": true,
-        "product_list": [
-          "snack-plate-sarah-shark",
-          "snack-plate-olly-octopus"
-        ],
-        "products_per_row": "auto",
-        "button_label": "Shop Snack Plates",
-        "link": "shopify://collections/snack-plate",
-        "button_style": "primary",
-        "color_scheme": "1"
-      }
-    },
-    "featured_collection_eXJhUx": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "title": "",
-        "text": "",
-        "collection": "snack-plate",
-        "show_vendor": false,
-        "enable_carousel": false,
-        "grid": 5,
-        "rows": 1,
-        "color_scheme": "default",
-        "show_view_all": true,
-        "full_width": true,
-        "text_alignment": "start"
-      }
-    },
-    "multi_column_MR9q33": {
-      "type": "multi-column",
-      "blocks": {
-        "text_block_zy7AYT": {
-          "type": "text_block",
-          "settings": {
-            "enable_media": true,
-            "image": "shopify://shop_images/Muslin_Swaddle_-_Football__4_8959d690-2457-4717-a308-c87fcb045ec6.jpg",
-            "title": "Safety First",
-            "text": "<p>As a company run by moms, we know what it’s like to stress over every detail—and we do the same. Thanks to our thoroughly vetted, non-toxic materials, and meticulous innovation and design process, you can rest assured that we’ve put product safety first, every step of the way.</p>",
-            "button_label": "",
-            "link": ""
-          }
-        },
-        "text_block_VkTHha": {
-          "type": "text_block",
-          "settings": {
-            "enable_media": true,
-            "image": "shopify://shop_images/Bibs_LouLou_Lollipop-69.jpg",
-            "title": "Functional Design",
-            "text": "<p>Parenthood is HARD! That's why we have committed to making it easier for parents by bringing you exceptional quality products that are beautiful, functional, and safe.</p>",
-            "button_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "text_block_zy7AYT",
-        "text_block_VkTHha"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "",
-        "media_aspect_ratio": "1.25",
-        "media_width": 700,
-        "text_alignment": "center",
-        "button_style": "primary",
-        "color_scheme": "default"
-      }
     }
   },
   "order": [
     "mobile_collection_carousel_iBRR9r",
     "custom_hero_banner_CqQiir",
+    "featured_collection_BnRqrB",
     "1790361037c0907608",
     "collection_list_km4B8h",
     "video_feature_fall",
@@ -1447,12 +1231,6 @@
     "collection_list_FxKgEx",
     "multi_column_KCzHEY",
     "testimonials_QcyQ3m",
-    "1737676593fa7ff914",
-    "16359276425da8ce46",
-    "shop_the_look_HrgpQK",
-    "featured_collection_HNkD47",
-    "custom_product_highlight_JiGaUB",
-    "featured_collection_eXJhUx",
-    "multi_column_MR9q33"
+    "1737676593fa7ff914"
   ]
 }
