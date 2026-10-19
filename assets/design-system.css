@@ -2103,7 +2103,7 @@ h4, .h4 {
 .MoreToLove{
 color: var(--lll-cream);
 text-align: center;
-font-family: "Avenir Next";
+font-family: var(--lll-font-display);
 font-size: 0.75rem;
 font-style: normal;
 font-weight: 600;
