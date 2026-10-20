@@ -22,6 +22,7 @@
         },
         "collection_PkyyWJ": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "swaddle-wrap",
             "image": "shopify://shop_images/Baby_Sleep_Sack_Swaddle_Wrap_Zipper_Detail_-_Magical_Dragons_1d96c667-1095-4b84-bc0c-89379a5b3bef.jpg",
