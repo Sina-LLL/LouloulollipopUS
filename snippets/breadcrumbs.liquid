@@ -16,7 +16,6 @@
 
 {%- liquid
 assign show_crumbs = true
-assign show_structured_data = true
 assign show_collection_listing_link = false
 assign breadcrumbs_title = 'general.breadcrumbs.title' | t
 assign home_title = 'general.breadcrumbs.home' | t
@@ -33,15 +32,12 @@ elsif template.name == 'collection' or template.name == 'product'
 elsif template.name == 'search'
   assign item_title = 'general.search.title' | t
   assign item_url = routes.search_url
-  assign show_structured_data = false
 elsif template.name == 'cart'
   assign item_title = 'cart.general.title' | t
   assign item_url = routes.cart_url
-  assign show_structured_data = false
 elsif template.directory == 'customers'
   assign item_title = 'customer.account.title' | t
   assign item_url = routes.account_url
-  assign show_structured_data = false
 endif
 -%}
 
@@ -60,109 +56,6 @@ endif
 {%- unless next_icon -%}
   {%- capture next_icon -%}<span class="icon">{% render 'icon-chevron-right' %}</span>{%- endcapture -%}
 {%- endunless -%}
-
-{%- capture crumbs_structured_data -%}
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": {{ home_title | json }},
-        "item": {{ shop.url | append: routes.root_url | json }}
-      },
-
-      {%- if template.name == 'collection' and collection.handle -%}
-        {%- assign collection_position = 2 -%}
-        {%- if show_collection_listing_link -%}
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": {{ collections_title | json }},
-            "item": {{ shop.url | append: routes.collections_url | json }}
-          },
-          {%- assign collection_position = 3 -%}
-        {%- endif -%}
-        {
-          "@type": "ListItem",
-          "position": {{ collection_position }},
-          "name": {{ collection.title | json }},
-          "item": {{ shop.url | append: collection.url | json }}
-        }
-
-      {%- elsif template.name == 'product' -%}
-        {%- assign product_position = 2 -%}
-        {%- if collection -%}
-          {%- if show_collection_listing_link -%}
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": {{ collections_title | json }},
-              "item": {{ shop.url | append: routes.collections_url | json }}
-            },
-            {%- assign product_position = 3 -%}
-          {%- endif -%}
-          {
-            "@type": "ListItem",
-            "position": {{ product_position }},
-            "name": {{ collection.title | json }},
-            "item": {{ shop.url | append: collection.url | json }}
-          },
-          {%- if show_collection_listing_link -%}
-            {%- assign product_position = 4 -%}
-          {%- else -%}
-            {%- assign product_position = 3 -%}
-          {%- endif -%}
-        {%- endif -%}
-        {
-          "@type": "ListItem",
-          "position": {{ product_position }},
-          "name": {{ product.title | json }},
-          "item": {{ shop.url | append: product.url | json }}
-        }
-
-      {%- elsif template.name == 'blog' and current_tags -%}
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": {{ blog.title | json }},
-          "item": {{ shop.url | append: blog.url | json }}
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": {{ current_tags | join: ", " | json }},
-          "item": {{ shop.url | append: blog_tag_url | json }}
-        }
-
-      {%- elsif template.name == 'article' -%}
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": {{ blog.title | json }},
-          "item": {{ shop.url | append: blog.url | json }}
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": {{ article.title | json }},
-          "item": {{ shop.url | append: article.url | json }}
-        }
-
-      {%- else -%}
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": {{ item_title | json }},
-          "item": {{ shop.url | append: item_url | json }}
-        }
-      {%- endif -%}
-    ]
-  }
-</script>
-{%- endcapture -%}
 
 {%- capture crumbs_html -%}
 <nav class="breadcrumbs" aria-label="{{ breadcrumbs_title }}">
@@ -246,9 +139,6 @@ endif
 {%- endcapture -%}
 
 {%- if show_crumbs -%}
-  {%- if show_structured_data -%}
-    {{ crumbs_structured_data }}
-  {%- endif -%}
   {{ crumbs_html }}
 {%- endif -%}
 {% comment %}
