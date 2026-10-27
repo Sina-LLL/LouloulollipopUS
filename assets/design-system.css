@@ -2626,3 +2626,124 @@ h1.product-title{
     order: -1;
   }
 }
+
+/* ==========================================================================
+   Size guides
+   Pages with handle size-guide-* (one per soft-goods style), rendered inside
+   the PDP size chart popup (.modal__content.rte) and at /pages/<handle>.
+   Selectors are prefixed with .ll-sg so the theme's .rte table/list rules
+   don't leak in.
+   ========================================================================== */
+.ll-sg {
+  max-width: 640px;
+  margin: 0 auto;
+  font-family: var(--lll-font-body);
+  color: var(--lll-ink);
+  font-size: 15px;
+  line-height: 1.5;
+}
+.ll-sg .ll-sg__eyebrow {
+  margin: 0 0 4px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--lll-slate-action);
+}
+.ll-sg .ll-sg__title {
+  margin: 0 0 6px;
+  font-family: var(--lll-font-display);
+  font-size: 24px;
+  line-height: 1.2;
+}
+.ll-sg .ll-sg__lede {
+  margin: 0 0 20px;
+  color: var(--lll-text-muted);
+}
+.ll-sg .ll-sg__table-wrap {
+  overflow: hidden;
+  border: 1px solid var(--lll-slate-border);
+  border-radius: var(--lll-radius-md);
+}
+.ll-sg table.ll-sg__table {
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.ll-sg .ll-sg__table th,
+.ll-sg .ll-sg__table td {
+  padding: 12px 14px;
+  border: 0;
+  border-top: 1px solid var(--lll-slate-border);
+  text-align: left;
+  vertical-align: top;
+}
+.ll-sg .ll-sg__table thead th {
+  border-top: 0;
+  background: var(--lll-blush);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--lll-slate-action);
+}
+.ll-sg .ll-sg__table tbody th {
+  width: 28%;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.ll-sg .ll-sg__table tbody tr:nth-child(even) {
+  background: var(--lll-cream);
+}
+.ll-sg .ll-sg__val,
+.ll-sg .ll-sg__alt {
+  display: block;
+  white-space: nowrap;
+}
+.ll-sg .ll-sg__alt {
+  font-size: 13px;
+  color: var(--lll-text-muted);
+}
+.ll-sg .ll-sg__h {
+  margin: 24px 0 8px;
+  font-family: var(--lll-font-display);
+  font-size: 16px;
+}
+.ll-sg ul.ll-sg__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ll-sg ul.ll-sg__list li {
+  position: relative;
+  margin: 0 0 8px;
+  padding-left: 18px;
+}
+.ll-sg ul.ll-sg__list li::before {
+  content: "";
+  position: absolute;
+  top: 0.6em;
+  left: 2px;
+  width: 6px;
+  height: 6px;
+  border-radius: var(--lll-radius-full);
+  background: var(--lll-slate);
+}
+.ll-sg .ll-sg__help {
+  margin: 24px 0 0;
+  padding: 14px 16px;
+  border-radius: var(--lll-radius-md);
+  background: var(--lll-blush);
+  font-size: 14px;
+}
+.ll-sg .ll-sg__help a {
+  color: var(--lll-slate-deep);
+  text-decoration: underline;
+}
+@media (max-width: 480px) {
+  .ll-sg .ll-sg__title { font-size: 21px; }
+  .ll-sg .ll-sg__table th,
+  .ll-sg .ll-sg__table td { padding: 10px; }
+}
