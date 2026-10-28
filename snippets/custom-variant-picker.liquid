@@ -45,13 +45,9 @@
   {%- for sibling in sibs_collection.products -%}
     {%- assign sib_tags = sibling.tags | join: '|' | downcase | prepend: '|' | append: '|' -%}
     {%- unless sib_tags contains '|hidden|' -%}
-      {%- comment %} Seasonal tab shows: seasonal products, or new products that are NOT also core (Core+New lives on the Core tab) {%- endcomment -%}
-      {%- if sib_tags contains '|seasonal|' -%}
+      {%- comment %} Seasonal tab shows: all new products (including Core+New) and seasonal products {%- endcomment -%}
+      {%- if sib_tags contains '|seasonal|' or sib_tags contains '|new|' -%}
         {%- assign has_new_prints = true -%}
-      {%- elsif sib_tags contains '|new|' -%}
-        {%- unless sib_tags contains '|core|' -%}
-          {%- assign has_new_prints = true -%}
-        {%- endunless -%}
       {%- endif -%}
       {%- if sib_tags contains '|core|' -%}
         {%- assign has_core_prints = true -%}
@@ -256,10 +252,10 @@
       <div class="sibling-tabs__panel{% if current_tab == 'new' %} is-active{% endif %}" data-panel="new" role="tabpanel">
         <div class="option-selector__btns variant-grid-compact">
 
-          {% comment %} Seasonal Tab - New prints (excludes Core+New — those show on the Core tab only) {% endcomment %}
+          {% comment %} Seasonal Tab - New prints (all new, including Core+New) {% endcomment %}
           {%- for sibling in sibs_collection.products -%}
             {%- assign sib_tags = sibling.tags | join: '|' | downcase | prepend: '|' | append: '|' -%}
-            {%- unless sib_tags contains '|hidden|' or sib_tags contains '|core|' -%}
+            {%- unless sib_tags contains '|hidden|' -%}
               {%- if sib_tags contains '|new|' and sibling.available -%}
                 <a href="{{ sibling.url }}"
                   class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}"
@@ -280,12 +276,10 @@
             {%- endunless -%}
           {%- endfor -%}
 
-          {% comment %} Seasonal Tab - Seasonal prints (skips Seasonal+New already shown in the New loop above) {% endcomment %}
+          {% comment %} Seasonal Tab - Seasonal prints (skips New, already shown in the New loop above) {% endcomment %}
           {%- for sibling in sibs_collection.products -%}
             {%- assign sib_tags = sibling.tags | join: '|' | downcase | prepend: '|' | append: '|' -%}
-            {%- assign shown_as_new = false -%}
-            {%- if sib_tags contains '|new|' -%}{%- unless sib_tags contains '|core|' -%}{%- assign shown_as_new = true -%}{%- endunless -%}{%- endif -%}
-            {%- unless sib_tags contains '|hidden|' or shown_as_new -%}
+            {%- unless sib_tags contains '|hidden|' or sib_tags contains '|new|' -%}
               {%- if sib_tags contains '|seasonal|' and sibling.available -%}
                 <a href="{{ sibling.url }}"
                   class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}"
@@ -310,9 +304,7 @@
             {%- assign sib_tags = sibling.tags | join: '|' | downcase | prepend: '|' | append: '|' -%}
             {%- unless sib_tags contains '|hidden|' -%}
               {%- unless sibling.available -%}
-                {%- if sib_tags contains '|new|' and sib_tags contains '|core|' -%}
-                  {%- comment %} Core+New sold out — shown on the Core tab only, skip here {%- endcomment -%}
-                {%- elsif sib_tags contains '|seasonal|' or sib_tags contains '|new|' -%}
+                {%- if sib_tags contains '|seasonal|' or sib_tags contains '|new|' -%}
                   <a href="{{ sibling.url }}"
                     class="opt-label opt-label--image sold-out {% if sibling.handle == product.handle %}is-active{% endif %}"
                     data-color="{{ sibling.metafields.custom.design.value.name.value | default: sibling.title | split: ' - ' | last | strip }}"
