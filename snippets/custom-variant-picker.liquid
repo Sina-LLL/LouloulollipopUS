@@ -280,10 +280,12 @@
             {%- endunless -%}
           {%- endfor -%}
 
-          {% comment %} Seasonal Tab - Seasonal prints (not Core) {% endcomment %}
+          {% comment %} Seasonal Tab - Seasonal prints (skips Seasonal+New already shown in the New loop above) {% endcomment %}
           {%- for sibling in sibs_collection.products -%}
             {%- assign sib_tags = sibling.tags | join: '|' | downcase | prepend: '|' | append: '|' -%}
-            {%- unless sib_tags contains '|hidden|' -%}
+            {%- assign shown_as_new = false -%}
+            {%- if sib_tags contains '|new|' -%}{%- unless sib_tags contains '|core|' -%}{%- assign shown_as_new = true -%}{%- endunless -%}{%- endif -%}
+            {%- unless sib_tags contains '|hidden|' or shown_as_new -%}
               {%- if sib_tags contains '|seasonal|' and sibling.available -%}
                 <a href="{{ sibling.url }}"
                   class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}"
