@@ -1,0 +1,21 @@
+{%- comment -%}
+  Returns the size-guide-* page handle for a product option that names a sized item,
+  e.g. bundle options "Sleeper Size", "0.5 TOG Sleep Bag Size", "Sleeper - Mermaids (Size)".
+  Outputs nothing when no guide applies. Used by custom-variant-picker and product-popups.
+{%- endcomment -%}
+{%- liquid
+  assign option_name_down = option_name | downcase
+  if option_name_down contains 'size'
+    if option_name_down contains 'sleep bag'
+      if option_name_down contains '0.5'
+        echo 'size-guide-muslin-sleep-bag-0-5-tog'
+      elsif option_name_down contains '2.5'
+        echo 'size-guide-tencel-sleep-bag-2-5-tog'
+      else
+        echo 'size-guide-tencel-sleep-bag-1-0-tog'
+      endif
+    elsif option_name_down contains 'sleeper'
+      echo 'size-guide-sleeper'
+    endif
+  endif
+-%}

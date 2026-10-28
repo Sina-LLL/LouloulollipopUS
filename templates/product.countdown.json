@@ -32,7 +32,7 @@
             "enable_size_chart": true,
             "size_chart_label": "What size do I get?",
             "size_chart_variant": "Size",
-            "size_chart_page": "size-chart-clothing"
+            "size_chart_page": "{{ product.metafields.custom.size_chart.value }}"
           }
         },
         "buy-buttons": {

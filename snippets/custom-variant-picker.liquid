@@ -505,21 +505,33 @@
             assign is_dropdown = true
           endif
 
+          assign size_chart_modal = 'size-chart-' | append: product.id | append: '-' | append: section.id
+          assign size_chart_url = block.settings.size_chart_page.url
           if block.settings.enable_size_chart and block.settings.size_chart_variant == option.name and block.settings.size_chart_page != blank
             assign show_size_chart = true
+          elsif block.settings.enable_size_chart
+            # Bundle options name the item they size ("Sleeper Size", "0.5 TOG Sleep Bag Size")
+            capture option_guide
+              render 'size-guide-handle', option_name: option.name
+            endcapture
+            if option_guide != blank and pages[option_guide].id != blank
+              assign show_size_chart = true
+              assign size_chart_modal = 'size-guide-' | append: option_guide | append: '-' | append: product.id | append: '-' | append: section.id
+              assign size_chart_url = pages[option_guide].url
+            endif
           endif
         -%}
 
         {%- if show_size_chart -%}
           {%- capture size_chart_link -%}
-            <modal-opener class="no-js-hidden" data-modal="size-chart-{{ product.id }}-{{ section.id }}">
+            <modal-opener class="no-js-hidden" data-modal="{{ size_chart_modal }}">
               <button type="button" class="link block text-sm size-chart-link" aria-haspopup="dialog">
                 <span class="size-chart-link__icon">{%- render 'icon', icon: 'ruler', size: 'small' -%}</span>
                 <span class="size-chart-link__text underline">{{- block.settings.size_chart_label -}}</span>
               </button>
             </modal-opener>
             <noscript>
-              <a href="{{ block.settings.size_chart_page.url }}" class="link">{{ block.settings.size_chart_label }}</a>
+              <a href="{{ size_chart_url }}" class="link">{{ block.settings.size_chart_label }}</a>
             </noscript>
           {%- endcapture -%}
         {%- endif -%}
