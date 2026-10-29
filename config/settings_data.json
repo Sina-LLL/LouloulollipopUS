@@ -611,6 +611,15 @@
         "type": "shopify://apps/awin-affiliate-marketing/blocks/awin-tracking-embed/01a0d37a-d839-76c7-b7a0-3e69c49eab8b",
         "disabled": false,
         "settings": {}
+      },
+      "11015274795786323183": {
+        "type": "shopify://apps/multiscount/blocks/autogift-embed/e991b375-762d-4bff-8308-d0a28e464f1a",
+        "disabled": false,
+        "settings": {
+          "auto_remove_gift": true,
+          "auto_refresh": true,
+          "debug": false
+        }
       }
     }
   }
