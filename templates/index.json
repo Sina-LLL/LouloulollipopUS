@@ -105,6 +105,7 @@
     },
     "custom_hero_banner_CqQiir": {
       "type": "custom-hero-banner",
+      "disabled": true,
       "name": "Custom Hero Banner",
       "settings": {
         "image": "shopify://shop_images/Sleep_Bag_Hero.png",
@@ -114,6 +115,51 @@
         "max_width": 0,
         "heading": "Wrapped in Softness - Shop Sleep Bags",
         "use_h1": true
+      }
+    },
+    "slideshow_cdhQj4": {
+      "type": "slideshow",
+      "blocks": {
+        "image_8zK6nR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2.5_Tog.png",
+            "mobile_image": "shopify://shop_images/2.5_Tog-mobile.png",
+            "slide_link": "",
+            "subheading": "",
+            "title": "Cozy Nights Ahead",
+            "heading_max_width": 15,
+            "title_size": 60,
+            "title_size_mobile": 32,
+            "use_h1": false,
+            "text": "<p>New 2.5 TOG sleep bags are finally here!</p>",
+            "enlarge_text": true,
+            "button_label_1": "Shop 2.5 TOG Sleep Bags",
+            "button_url_1": "shopify://collections/2-5-tog-sleep-bags",
+            "button_tag_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "button_tag_2": "",
+            "text_alignment": "center left"
+          }
+        }
+      },
+      "block_order": [
+        "image_8zK6nR"
+      ],
+      "name": "Slideshow",
+      "settings": {
+        "height": "adapt",
+        "height_desktop": 600,
+        "height_mobile": 600,
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow",
+        "transition": "fade",
+        "navigation": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "accessibility_info": ""
       }
     },
     "featured_collection_BnRqrB": {
@@ -332,35 +378,6 @@
         "coll_button_style": "primary"
       }
     },
-    "video_feature_fall": {
-      "type": "video-feature",
-      "blocks": {
-        "novel_shoppable_video_novel_product_7WJPn8": {
-          "type": "shopify://apps/novel-shoppable-video/blocks/novel-product/67e3531b-60c1-40d3-83d1-8f5aba7081ef",
-          "settings": {
-            "journeyid": "6ac57c6dde1e5a00026a636f"
-          }
-        }
-      },
-      "block_order": [
-        "novel_shoppable_video_novel_product_7WJPn8"
-      ],
-      "settings": {
-        "video_position": "left",
-        "text_alignment": "left",
-        "hide_app_title": true,
-        "color_scheme": "default",
-        "eyebrow": "New for the Season",
-        "title": "Fall Favorites",
-        "text": "<p>Cozy picks for crisp mornings and cooler nights. Watch the team share the pieces they're loving this season, and shop them right from the video.</p>",
-        "button_label": "Shop new arrivals",
-        "button_link": "shopify://collections/new-arrivals",
-        "button_style": "primary",
-        "button2_label": "",
-        "button2_link": "",
-        "button2_style": "secondary"
-      }
-    },
     "logo_list_ywatnw": {
       "type": "logo-list",
       "blocks": {
@@ -370,7 +387,7 @@
             "image": "shopify://shop_images/ICON-SM-6.svg",
             "image_width": 80,
             "link": "",
-            "title": "Safe for Babies"
+            "title": ""
           }
         },
         "logo_tawCLk": {
@@ -379,7 +396,7 @@
             "image": "shopify://shop_images/Certified_B_Corporation_B_Corp_Logo_2022_Black_RGB_svg.webp",
             "image_width": 80,
             "link": "https://www.bcorporation.net/en-us/",
-            "title": "Certified B Corp"
+            "title": ""
           }
         },
         "logo_D6VaH9": {
@@ -388,7 +405,7 @@
             "image": "shopify://shop_images/Benefits-of-Partnering-with-a-WBENC-Certified-Women-Business-Enterprise-Public-Relations-and-Marketing-Agency-feature.webp",
             "image_width": 130,
             "link": "https://buywomenowned.com/",
-            "title": "Women-Owned"
+            "title": ""
           }
         },
         "logo_Yg37w8": {
@@ -397,7 +414,7 @@
             "image": "shopify://shop_images/OEKO_TEX.png",
             "image_width": 80,
             "link": "https://www.oeko-tex.com/en/",
-            "title": "Safety Certified"
+            "title": ""
           }
         },
         "logo_cNXMbY": {
@@ -406,7 +423,7 @@
             "image": "shopify://shop_images/Free_ShippingUS.png",
             "image_width": 80,
             "link": "",
-            "title": "Free Shipping Over $65"
+            "title": ""
           }
         }
       },
@@ -801,6 +818,7 @@
         "row_b_hypoallergenic",
         "row_b_cert"
       ],
+      "disabled": true,
       "name": "Fabric Comparison Tabs",
       "settings": {
         "bg_color": "rgba(0,0,0,0)",
@@ -1215,10 +1233,10 @@
   "order": [
     "mobile_collection_carousel_iBRR9r",
     "custom_hero_banner_CqQiir",
+    "slideshow_cdhQj4",
     "featured_collection_BnRqrB",
     "1790361037c0907608",
     "collection_list_km4B8h",
-    "video_feature_fall",
     "logo_list_ywatnw",
     "featured_collection_RGPeGr",
     "rich_text_materialsIntro",
