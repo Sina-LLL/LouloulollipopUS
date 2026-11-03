@@ -29,7 +29,7 @@
 
           {%- comment -%} Icons come from product_template.safety_icons (Product Feature Icons). Icon row item blocks are only a fallback while a template's list is empty. {%- endcomment -%}
           {%- if safety_icons != blank -%}
-            <div class="lightly-spaced-row iwt-icon-row">
+            <div class="lightly-spaced-row iwt-icon-row iwt-icon-row--start">
               {%- for safety_icon in safety_icons -%}
                 {%- assign safety_icon_title = safety_icon.title.value -%}
                 {%- assign safety_icon_image = safety_icon.icon.value -%}
