@@ -332,16 +332,39 @@
       <div class="sibling-tabs__panel{% if current_tab == 'core' %} is-active{% endif %}" data-panel="core" role="tabpanel">
         <div class="option-selector__btns variant-grid-compact">
 
-          {% comment %} Core Tab - Core prints (includes Core+New; excludes Sale) — in stock {% endcomment %}
+          {% comment %} Core Tab - Core+New prints first (matches All tab ordering) — in stock {% endcomment %}
           {%- for sibling in sibs_collection.products -%}
             {%- assign sib_tags = sibling.tags | join: '|' | downcase | prepend: '|' | append: '|' -%}
             {%- unless sib_tags contains '|hidden|' or sib_tags contains '|sale|' -%}
+              {%- if sib_tags contains '|core|' and sib_tags contains '|new|' and sibling.available -%}
+                <a href="{{ sibling.url }}"
+                  class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}"
+                  data-color="{{ sibling.metafields.custom.design.value.name.value | default: sibling.title | split: ' - ' | last | strip }}"
+                  {% if sibling.handle == product.handle %}data-selected="true"{% endif %}>
+                  <div class="opt-label__tag product-label--new">NEW</div>
+                  <div class="overflow_hidden">
+                    <div class="opt-label__media media">
+                      {%- if sibling.metafields.custom.design.value.colour_pattern.value.image.value != blank and sibling.metafields.custom.product_template.value.hide_swatch_image.value != true -%}
+                        {%- render 'image', image: sibling.metafields.custom.design.value.colour_pattern.value.image.value, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
+                      {%- else -%}
+                        {%- render 'image', image: sibling.images.first, sizes: img_sizes, widths: img_widths, custom_aspect_ratio: img_aspect_ratio, custom_crop: img_crop_align -%}
+                      {%- endif -%}
+                    </div>
+                  </div>
+                </a>
+              {%- endif -%}
+            {%- endunless -%}
+          {%- endfor -%}
+
+          {% comment %} Core Tab - remaining Core prints (not new, not sale) — in stock {% endcomment %}
+          {%- for sibling in sibs_collection.products -%}
+            {%- assign sib_tags = sibling.tags | join: '|' | downcase | prepend: '|' | append: '|' -%}
+            {%- unless sib_tags contains '|hidden|' or sib_tags contains '|sale|' or sib_tags contains '|new|' -%}
               {%- if sib_tags contains '|core|' and sibling.available -%}
                 <a href="{{ sibling.url }}"
                   class="opt-label opt-label--image {% if sibling.handle == product.handle %}is-active{% endif %}"
                   data-color="{{ sibling.metafields.custom.design.value.name.value | default: sibling.title | split: ' - ' | last | strip }}"
                   {% if sibling.handle == product.handle %}data-selected="true"{% endif %}>
-                  {%- if sib_tags contains '|new|' -%}<div class="opt-label__tag product-label--new">NEW</div>{%- endif -%}
                   <div class="overflow_hidden">
                     <div class="opt-label__media media">
                       {%- if sibling.metafields.custom.design.value.colour_pattern.value.image.value != blank and sibling.metafields.custom.product_template.value.hide_swatch_image.value != true -%}
