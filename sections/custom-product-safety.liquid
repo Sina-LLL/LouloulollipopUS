@@ -2,6 +2,7 @@
   assign product_template = product.metafields.custom.product_template.value
   assign safety_text = product_template.safety_message
   assign safety_image = product_template.safety_message_image
+  assign safety_icons = product_template.safety_icons.value
 -%}
 {%- if safety_text.value != blank and safety_image.value != blank -%}
 
@@ -26,6 +27,24 @@
 
           <div class="rte lightly-spaced-row">{{ safety_text | metafield_tag }}</div>
 
+          {%- comment -%} Icons come from product_template.safety_icons (Product Feature Icons). Icon row item blocks are only a fallback while a template's list is empty. {%- endcomment -%}
+          {%- if safety_icons != blank -%}
+            <div class="lightly-spaced-row iwt-icon-row">
+              {%- for safety_icon in safety_icons -%}
+                {%- assign safety_icon_title = safety_icon.title.value -%}
+                {%- assign safety_icon_image = safety_icon.icon.value -%}
+                <div class="iwt-icon-row__item">
+                  {%- if safety_icon_image != blank -%}
+                    <div class="iwt-icon-row__icon">
+                      {{- safety_icon_image | image_url: width: 112 | image_tag: loading: 'lazy', widths: '56, 112', sizes: '56px', class: 'iwt-icon-row__icon-img', alt: safety_icon_title | escape -}}
+                    </div>
+                  {%- endif -%}
+                  {%- if safety_icon_title != blank -%}<p class="iwt-icon-row__label">{{ safety_icon_title | escape }}</p>{%- endif -%}
+                </div>
+              {%- endfor -%}
+            </div>
+          {%- endif -%}
+
           {%- assign skip_block_count = 0 -%}
           {%- for block in section.blocks -%}
             {%- liquid
@@ -36,6 +55,7 @@
             -%}
             {%- case block.type -%}
               {%- when 'icon_row_item' -%}
+                {%- if safety_icons != blank -%}{%- continue -%}{%- endif -%}
                 <div class="lightly-spaced-row iwt-icon-row" {{ block.shopify_attributes }}>
                   <div class="iwt-icon-row__item">
                     {%- if block.settings.icon != blank -%}
@@ -145,7 +165,7 @@
       "settings": [
         {
           "type": "paragraph",
-          "content": "Consecutive \"Icon row item\" blocks display together in one row, wrapping on smaller screens."
+          "content": "Fallback only. Icons normally come from the product's Product Template metaobject (Safety icons). These blocks show only when that list is empty."
         },
         {
           "type": "image_picker",
