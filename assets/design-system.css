@@ -628,9 +628,15 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
   padding: 4px;
   margin: auto;
 }
-.op-label__tag.product-label--new-in,.opt-label__tag.product-label--new{
-  background-color:var(--lll-new);
-  color:var(--product-label-overlay-new-text);
+/* Badge colours flipped 2026-11-04: New = amber, Low stock = terracotta */
+.op-label__tag.product-label--new-in,.opt-label__tag.product-label--new,
+.product-label--new-in > span{
+  background-color:#f2b321;
+  color:var(--lll-ink);
+}
+.product-label--stock > span{
+  background-color:#c45331;
+  color:var(--lll-white);
 }
 .opt-label__tag.product-label--sale{
   background-color: var(--product-label-overlay-reduction-bg);
