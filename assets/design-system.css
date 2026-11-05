@@ -2824,6 +2824,9 @@ h1.product-title{
     max-width: 480px;
   }
 }
+.flexible-layout.product-video > .column--half:first-child {
+  margin-bottom: 0;
+}
 /* Mobile: text first, video below it */
 @media (max-width: 767.98px) {
   .flexible-layout.product-video > .column--half:first-child {
