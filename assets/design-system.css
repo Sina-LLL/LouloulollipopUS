@@ -2807,9 +2807,30 @@ h1.product-title{
 .product-video__sound[aria-pressed='true'] .product-video__icon-sound {
   display: block;
 }
+/* Desktop: size both columns to their content and centre them as a pair, so the text sits next to the video */
+@media (min-width: 768px) {
+  .flexible-layout.product-video {
+    justify-content: center;
+    column-gap: 64px;
+  }
+  .flexible-layout.product-video > .column--half {
+    flex: 0 1 auto;
+    width: auto;
+  }
+  .flexible-layout.product-video > .column--half:first-child {
+    flex: 0 0 360px;
+  }
+  .flexible-layout.product-video > .column--half:last-child {
+    max-width: 480px;
+  }
+}
+/* Mobile: text first, video below it */
 @media (max-width: 767.98px) {
+  .flexible-layout.product-video > .column--half:first-child {
+    order: 2;
+  }
   .product-video__frame {
     max-width: 300px;
-    margin-bottom: 24px;
+    margin-top: 8px;
   }
 }
