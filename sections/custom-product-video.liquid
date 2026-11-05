@@ -1,0 +1,103 @@
+{%- liquid
+  assign product_template = product.metafields.custom.product_template.value
+  assign featured_video = product_template.featured_video.value
+  assign featured_video_text = product_template.featured_video_text
+-%}
+{%- if featured_video != blank -%}
+
+<div class="{% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }} fully-padded-row--medium{% else %}fully-spaced-row--medium{% endif %}">
+  <div class="container">
+    <div class="flexible-layout valign-middle product-video">
+      <div class="column column--half {% if section.settings.video_position == 'right' %}column--order-push-desktop{% endif %}">
+        <div class="product-video__frame fade-in-up" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.1s"' -%}>
+          {{- featured_video | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, controls: false, preload: 'metadata', image_size: '720x', class: 'product-video__video' -}}
+          <button type="button" class="product-video__sound" aria-pressed="false" aria-label="Turn sound on">
+            <svg class="product-video__icon-muted" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="M17 9l5 6M22 9l-5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <svg class="product-video__icon-sound" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="column column--half align-ltr-{{ section.settings.text_alignment }}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
+        <div class="feature-text-paired">
+          {%- if section.settings.heading != blank -%}
+            <h2 class="majortitle in-content h1">{{ section.settings.heading | escape }}</h2>
+          {%- endif -%}
+          {%- if featured_video_text.value != blank -%}
+            <div class="rte lightly-spaced-row">{{ featured_video_text | metafield_tag }}</div>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (() => {
+    const section = document.getElementById('shopify-section-{{ section.id }}');
+    const video = section && section.querySelector('.product-video__video');
+    const button = section && section.querySelector('.product-video__sound');
+    if (!video || !button) return;
+    button.addEventListener('click', () => {
+      video.muted = !video.muted;
+      if (!video.muted) video.play();
+      button.setAttribute('aria-pressed', String(!video.muted));
+      button.setAttribute('aria-label', video.muted ? 'Turn sound on' : 'Turn sound off');
+    });
+  })();
+</script>
+
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Custom Featured Video",
+  "tag": "section",
+  "class": "section-custom-product-video",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "See why it's better"
+    },
+    {
+      "type": "select",
+      "id": "video_position",
+      "label": "Video alignment (desktop)",
+      "default": "left",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" }
+      ]
+    },
+    {
+      "type": "text_alignment",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "default",
+      "options": [
+        { "value": "default", "label": "Default" },
+        { "value": "1", "label": "1" },
+        { "value": "2", "label": "2" }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "This section only renders when the product's Product Template metaobject has a Featured Video set. The text comes from Featured Video Text on the same metaobject."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Featured Video",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}
