@@ -87,6 +87,11 @@
     {%- endif -%}
   {%- endif -%}
 
+  {%- comment %} The All tab opens by default whenever it is shown. The current product is highlighted inside it. {%- endcomment -%}
+  {%- if show_all_tab -%}
+    {%- assign current_tab = 'all' -%}
+  {%- endif -%}
+
   <div class="sibling-tabs" data-sibling-tabs>
 
     {% comment %} Tab Buttons {% endcomment %}
@@ -121,9 +126,9 @@
       {%- endif -%}
       {%- if show_all_tab -%}
         <button
-          class="sibling-tabs__tab"
+          class="sibling-tabs__tab{% if current_tab == 'all' %} is-active{% endif %}"
           role="tab"
-          aria-selected="false"
+          aria-selected="{% if current_tab == 'all' %}true{% else %}false{% endif %}"
           data-tab="all">
           All
         </button>
@@ -143,7 +148,7 @@
     {% comment %} Tab Panels {% endcomment %}
 
     {%- if show_all_tab -%}
-      <div class="sibling-tabs__panel" data-panel="all" role="tabpanel">
+      <div class="sibling-tabs__panel{% if current_tab == 'all' %} is-active{% endif %}" data-panel="all" role="tabpanel">
         <div class="option-selector__btns variant-grid-compact">
 
           {% comment %} 1: New — in stock {% endcomment %}
