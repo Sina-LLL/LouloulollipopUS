@@ -632,7 +632,7 @@ a.opt-label.opt-label--image .opt-label__media.media img.theme-img{
 .op-label__tag.product-label--new-in,.opt-label__tag.product-label--new,
 .product-label--new-in > span{
   background-color:#f2b321;
-  color:var(--lll-ink);
+  color:var(--lll-white);
 }
 .product-label--stock > span{
   background-color:#c45331;
