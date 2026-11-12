@@ -46,12 +46,20 @@
             "label": "Gift sets & bundles",
             "link": "shopify://collections/bundles-and-sets"
           }
+        },
+        "p5": {
+          "type": "price_link",
+          "settings": {
+            "label": "Under $100",
+            "link": "shopify://collections/gifts-under-100"
+          }
         }
       },
       "block_order": [
         "p1",
         "p2",
         "p3",
+        "p5",
         "p4"
       ],
       "settings": {
@@ -99,19 +107,30 @@
             "subheading": "",
             "button_label": "Under $50"
           }
+        },
+        "c4": {
+          "type": "collection",
+          "settings": {
+            "collection": "gifts-under-100",
+            "tag": "",
+            "image": "",
+            "subheading": "",
+            "button_label": "Under $100"
+          }
         }
       },
       "block_order": [
         "c1",
         "c2",
-        "c3"
+        "c3",
+        "c4"
       ],
       "settings": {
         "title": "Shop gifts by price",
         "text": "",
         "text_alignment": "start",
         "enable_carousel": false,
-        "grid": 3,
+        "grid": 4,
         "color_scheme": "default",
         "full_width": false,
         "coll_grid_image_shape": "square",
@@ -134,7 +153,7 @@
         "collection": "top-gifts",
         "show_vendor": false,
         "enable_carousel": true,
-        "grid": 4,
+        "grid": 5,
         "rows": 1,
         "color_scheme": "default",
         "show_view_all": true,
@@ -208,7 +227,7 @@
         "text": "",
         "text_alignment": "start",
         "enable_carousel": true,
-        "grid": 4,
+        "grid": 5,
         "color_scheme": "default",
         "full_width": true,
         "coll_grid_image_shape": "portrait-45",
