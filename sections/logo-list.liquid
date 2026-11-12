@@ -45,9 +45,11 @@
   {%- endstyle -%}
 
   <div class="container">
-    <h2 class="hometitle h4 align-center spaced-row" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.15s"' -%}>
-      {{ section.settings.title | escape }}
-    </h2>
+    {%- if section.settings.title != blank -%}
+      <h2 class="hometitle h4 align-center spaced-row" {%- render 'animation-attrs', attrs: 'data-cc-animate data-cc-animate-delay="0.15s"' -%}>
+        {{ section.settings.title | escape }}
+      </h2>
+    {%- endif -%}
 
     {%- if section.settings.enable_carousel -%}
       <div class="logo-list-container logo-list--carousel">
