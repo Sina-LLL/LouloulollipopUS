@@ -2871,3 +2871,48 @@ h2.bundle-product-title {
   text-transform: inherit;
   text-align: left;
 }
+
+/* Holiday gift guide (2026-11-12): sections holiday-gift-guide-hero + holiday-shipping-deadlines */
+.hgg-hero { background: var(--lll-blush); padding: var(--lll-space-12, 48px) 0; }
+.hgg-hero__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.hgg-hero__inner--no-media { grid-template-columns: minmax(0, 720px); justify-content: center; text-align: center; }
+.hgg-eyebrow { font-family: var(--lll-font-body); font-size: 0.8125rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--lll-slate-action); margin: 0 0 12px; font-weight: 600; }
+.hgg-hero__title { font-size: var(--lll-text-h1); line-height: var(--lll-leading-heading); margin: 0 0 16px; color: var(--lll-ink); }
+.hgg-hero__body { margin-bottom: 16px; color: var(--lll-ink); }
+.hgg-hero__body p { margin: 0; }
+.hgg-hero__deadline { display: inline-block; background: var(--lll-white); border: 1px solid var(--lll-blush-border); border-radius: var(--lll-radius-md); padding: 10px 14px; margin: 0 0 24px; color: var(--lll-ink); font-size: 0.9375rem; }
+.hgg-hero__buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 28px; }
+.hgg-hero__inner--no-media .hgg-hero__buttons, .hgg-hero__inner--no-media .hgg-price__list { justify-content: center; }
+.hgg-price__label { font-weight: 600; margin: 0 0 10px; color: var(--lll-ink); }
+.hgg-price__list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.hgg-price__pill { display: inline-block; padding: 8px 16px; border: 1px solid var(--lll-slate-action); border-radius: var(--lll-radius-pill); color: var(--lll-slate-action); background: var(--lll-white); text-decoration: none; font-size: 0.9375rem; transition: background var(--lll-duration-fast), color var(--lll-duration-fast); }
+.hgg-price__pill:hover, .hgg-price__pill:focus-visible { background: var(--lll-slate-action); color: var(--lll-white); }
+.hgg-hero__media { border-radius: var(--lll-radius-lg); overflow: hidden; }
+.hgg-hero__img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
+.hgg-deadlines { background: var(--lll-cream); padding: var(--lll-space-12, 48px) 0; scroll-margin-top: 120px; }
+.hgg-deadlines__inner { max-width: 820px; }
+.hgg-deadlines__title { text-align: center; margin: 0 0 12px; }
+.hgg-deadlines__intro { text-align: center; margin-bottom: 24px; }
+.hgg-deadlines__table { width: 100%; border-collapse: collapse; background: var(--lll-white); border: 1px solid var(--lll-slate-border); border-radius: var(--lll-radius-md); overflow: hidden; }
+.hgg-deadlines__table th, .hgg-deadlines__table td { padding: 14px 18px; text-align: left; border-bottom: 1px solid var(--lll-slate-border); font-size: 1rem; color: var(--lll-ink); }
+.hgg-deadlines__table thead th { background: var(--lll-slate-action); color: var(--lll-white); font-weight: 600; font-size: 0.875rem; letter-spacing: 0.04em; text-transform: uppercase; }
+.hgg-deadlines__table tbody th { font-weight: 600; }
+.hgg-deadlines__table td { font-weight: 600; white-space: nowrap; }
+.hgg-deadlines__table tbody tr:last-child th, .hgg-deadlines__table tbody tr:last-child td { border-bottom: 0; }
+.hgg-deadlines__note { display: block; font-weight: 400; font-size: 0.875rem; color: var(--lll-ink); }
+.hgg-deadlines__small { margin-top: 12px; font-size: 0.875rem; text-align: center; }
+.hgg-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 32px; }
+.hgg-card { background: var(--lll-white); border: 1px solid var(--lll-slate-border); border-radius: var(--lll-radius-md); padding: 24px; }
+.hgg-card__title { font-size: var(--lll-text-h4); margin: 0 0 8px; }
+.hgg-card__text { margin-bottom: 16px; }
+.hgg-card__text p { margin: 0; }
+@media (max-width: 989px) {
+  .hgg-hero__inner { grid-template-columns: 1fr; gap: 28px; }
+  .hgg-hero__media { order: -1; }
+  .hgg-hero__img { aspect-ratio: 4 / 3; }
+}
+@media (max-width: 640px) {
+  .hgg-hero, .hgg-deadlines { padding: 32px 0; }
+  .hgg-cards { grid-template-columns: 1fr; }
+  .hgg-deadlines__table th, .hgg-deadlines__table td { padding: 12px 14px; }
+}
