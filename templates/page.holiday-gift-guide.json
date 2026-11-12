@@ -1,0 +1,363 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "crumbs": {
+      "type": "main-page",
+      "settings": {
+        "show_page_title": false,
+        "full_width": false
+      }
+    },
+    "hero": {
+      "type": "holiday-gift-guide-hero",
+      "blocks": {
+        "p1": {
+          "type": "price_link",
+          "settings": {
+            "label": "Under $15",
+            "link": "shopify://collections/gifts-under-15"
+          }
+        },
+        "p2": {
+          "type": "price_link",
+          "settings": {
+            "label": "Under $25",
+            "link": "shopify://collections/gifts-under-25"
+          }
+        },
+        "p3": {
+          "type": "price_link",
+          "settings": {
+            "label": "Under $50",
+            "link": "shopify://collections/gifts-under-50"
+          }
+        },
+        "p4": {
+          "type": "price_link",
+          "settings": {
+            "label": "Gift sets & bundles",
+            "link": "shopify://collections/bundles-and-sets"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4"
+      ],
+      "settings": {
+        "eyebrow": "Holiday Gift Guide",
+        "heading": "Gifts for the littlest people on your list",
+        "text": "<p>Soft, safe and made to be used every day. Easy to love for parents, easy to get right for you.</p>",
+        "deadline_text": "Order by <strong>December 14</strong> with USPS or FedEx, or by <strong>December 18</strong> with UPS Express, for delivery before Christmas.",
+        "image": "shopify://shop_images/MuslinSwaddle-Quilt-BumbleBees.jpg",
+        "button_label": "Shop top gifts",
+        "button_link": "shopify://collections/top-gifts",
+        "button2_label": "Shipping deadlines",
+        "button2_link": "#holiday-deadlines",
+        "price_label": "Shop by price"
+      }
+    },
+    "by_age": {
+      "type": "collection-list",
+      "blocks": {
+        "c1": {
+          "type": "collection",
+          "settings": {
+            "collection": "top-newborn-gifts",
+            "tag": "",
+            "image": "shopify://shop_images/SWHGH_233_27d193de-56b7-4c60-9021-30c41b393c6b.jpg",
+            "subheading": "",
+            "button_label": "Shop now"
+          }
+        },
+        "c2": {
+          "type": "collection",
+          "settings": {
+            "collection": "top-baby-gifts",
+            "tag": "",
+            "image": "shopify://shop_images/Header_Image_-_SILBIB.png",
+            "subheading": "",
+            "button_label": "Shop now"
+          }
+        },
+        "c3": {
+          "type": "collection",
+          "settings": {
+            "collection": "top-toddler-gifts",
+            "tag": "",
+            "image": "shopify://shop_images/KA1004U.ENG.11_61.jpg",
+            "subheading": "",
+            "button_label": "Shop now"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "title": "Shop gifts by age",
+        "text": "",
+        "text_alignment": "start",
+        "enable_carousel": false,
+        "grid": 3,
+        "color_scheme": "default",
+        "full_width": true,
+        "coll_grid_image_shape": "portrait-45",
+        "coll_grid_image_position": "top center",
+        "coll_thumb_mob_per_row": "2",
+        "coll_thumb_per_column": "1",
+        "coll_grid_show_count": false,
+        "coll_text_position": "below",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_y": "center",
+        "coll_button_style": "primary"
+      }
+    },
+    "top_gifts": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Top gifts this season",
+        "text": "<p>Our most-loved gifts, picked by parents.</p>",
+        "collection": "top-gifts",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 4,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "center"
+      }
+    },
+    "by_category": {
+      "type": "collection-list",
+      "blocks": {
+        "c1": {
+          "type": "collection",
+          "settings": {
+            "collection": "top-sleep-gifts",
+            "tag": "",
+            "image": "shopify://shop_images/BA9004U.LMN_01.jpg",
+            "subheading": "",
+            "button_label": "Shop now"
+          }
+        },
+        "c2": {
+          "type": "collection",
+          "settings": {
+            "collection": "top-clothing-gifts",
+            "tag": "",
+            "image": "shopify://shop_images/BA1002U.SAF.4_1_bebfba78-0936-4259-b7fa-cbb7ce9cd33e.jpg",
+            "subheading": "",
+            "button_label": "Shop now"
+          }
+        },
+        "c3": {
+          "type": "collection",
+          "settings": {
+            "collection": "top-feeding-gifts",
+            "tag": "",
+            "image": "shopify://shop_images/SILBIBMGD_1_1183a4e3-7ea4-4ca0-9713-3906a39a370b.jpg",
+            "subheading": "",
+            "button_label": "Shop now"
+          }
+        },
+        "c4": {
+          "type": "collection",
+          "settings": {
+            "collection": "top-bathe-gifts",
+            "tag": "",
+            "image": "shopify://shop_images/TWBMB_1_cb3e5817-4828-4ec2-9f0e-e0a136d45d97.jpg",
+            "subheading": "",
+            "button_label": "Shop now"
+          }
+        },
+        "c5": {
+          "type": "collection",
+          "settings": {
+            "collection": "top-play-gifts",
+            "tag": "",
+            "image": "shopify://shop_images/WTR-003-BLU_WildTeether_Elephant_01.jpg",
+            "subheading": "",
+            "button_label": "Shop now"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5"
+      ],
+      "settings": {
+        "title": "Shop gifts by category",
+        "text": "",
+        "text_alignment": "start",
+        "enable_carousel": true,
+        "grid": 4,
+        "color_scheme": "default",
+        "full_width": true,
+        "coll_grid_image_shape": "portrait-45",
+        "coll_grid_image_position": "top center",
+        "coll_thumb_mob_per_row": "2",
+        "coll_thumb_per_column": "1",
+        "coll_grid_show_count": false,
+        "coll_text_position": "below",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_y": "center",
+        "coll_button_style": "primary"
+      }
+    },
+    "gift_sets": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Gift sets and bundles",
+        "text": "<p>Coordinated sets in one print. The easiest gift to get right.</p>",
+        "collection": "bundles-and-sets",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 4,
+        "rows": 1,
+        "color_scheme": "default",
+        "show_view_all": true,
+        "full_width": false,
+        "text_alignment": "center"
+      }
+    },
+    "deadlines": {
+      "type": "holiday-shipping-deadlines",
+      "blocks": {
+        "d1": {
+          "type": "deadline",
+          "settings": {
+            "carrier": "USPS / FedEx",
+            "date": "December 14",
+            "note": ""
+          }
+        },
+        "d2": {
+          "type": "deadline",
+          "settings": {
+            "carrier": "UPS",
+            "date": "December 18",
+            "note": "Express shipping only"
+          }
+        },
+        "card1": {
+          "type": "card",
+          "settings": {
+            "title": "Add a gift note",
+            "text": "<p>Add a gift note at checkout. We print it on a card and tuck it in with your order.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "card2": {
+          "type": "card",
+          "settings": {
+            "title": "Missed the deadline?",
+            "text": "<p>Send a gift card instead. It's delivered by email, so it always arrives in time.</p>",
+            "button_label": "Shop gift cards",
+            "button_link": "shopify://products/gift-cards"
+          }
+        }
+      },
+      "block_order": [
+        "d1",
+        "d2",
+        "card1",
+        "card2"
+      ],
+      "settings": {
+        "heading": "Holiday shipping deadlines",
+        "intro": "<p>Order by these dates for delivery before Christmas.</p>",
+        "col_carrier": "Shipping method",
+        "col_date": "Order by",
+        "small_print": "<p>Free standard shipping on orders $65+.</p>"
+      }
+    },
+    "faq": {
+      "type": "collapsible-tabs",
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "title": "When do I need to order for Christmas delivery?",
+            "answer": "<p>USPS and FedEx: order by <strong>December 14</strong>.<br>UPS Express: order by <strong>December 18</strong>.</p><p>Orders placed after these dates may not arrive before Christmas.</p>"
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "title": "Can I add a gift message?",
+            "answer": "<p>Yes. Add a gift note at checkout and we'll print it on a card and include it in the package.</p>"
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "title": "Do you offer gift wrapping?",
+            "answer": "<p>Not at the moment. You can add a printed gift note at checkout.</p>"
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "title": "What if I miss the shipping deadline?",
+            "answer": "<p>Send a <a href=\"/products/gift-cards\" title=\"Gift Card\">gift card</a>. It's delivered by email, so it arrives in time.</p>"
+          }
+        },
+        "q5": {
+          "type": "question",
+          "settings": {
+            "title": "Do you offer free shipping?",
+            "answer": "<p>Yes. Standard shipping is free on orders $65+.</p>"
+          }
+        },
+        "q6": {
+          "type": "question",
+          "settings": {
+            "title": "Can gifts be returned or exchanged?",
+            "answer": "<p>Yes. See our <a href=\"/pages/returns\" title=\"Returns & Exchanges\">Returns & Exchanges</a> page for details.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ],
+      "settings": {
+        "title": "Holiday gifting FAQs"
+      }
+    }
+  },
+  "order": [
+    "crumbs",
+    "hero",
+    "by_age",
+    "top_gifts",
+    "by_category",
+    "gift_sets",
+    "deadlines",
+    "faq"
+  ]
+}

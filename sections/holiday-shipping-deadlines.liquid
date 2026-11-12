@@ -1,0 +1,85 @@
+<section class="hgg-deadlines" id="holiday-deadlines">
+  <div class="container hgg-deadlines__inner">
+    <h2 class="hgg-deadlines__title">{{ section.settings.heading | escape }}</h2>
+    {%- if section.settings.intro != blank -%}
+      <div class="hgg-deadlines__intro rte">{{ section.settings.intro }}</div>
+    {%- endif -%}
+
+    {%- assign rows = section.blocks | where: 'type', 'deadline' -%}
+    {%- if rows.size > 0 -%}
+      <table class="hgg-deadlines__table">
+        <thead>
+          <tr>
+            <th scope="col">{{ section.settings.col_carrier | escape }}</th>
+            <th scope="col">{{ section.settings.col_date | escape }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {%- for block in rows -%}
+            <tr {{ block.shopify_attributes }}>
+              <th scope="row">
+                {{ block.settings.carrier | escape }}
+                {%- if block.settings.note != blank -%}<span class="hgg-deadlines__note">{{ block.settings.note | escape }}</span>{%- endif -%}
+              </th>
+              <td>{{ block.settings.date | escape }}</td>
+            </tr>
+          {%- endfor -%}
+        </tbody>
+      </table>
+    {%- endif -%}
+
+    {%- if section.settings.small_print != blank -%}
+      <div class="hgg-deadlines__small rte">{{ section.settings.small_print }}</div>
+    {%- endif -%}
+
+    {%- assign cards = section.blocks | where: 'type', 'card' -%}
+    {%- if cards.size > 0 -%}
+      <div class="hgg-cards">
+        {%- for block in cards -%}
+          <div class="hgg-card" {{ block.shopify_attributes }}>
+            <h3 class="hgg-card__title">{{ block.settings.title | escape }}</h3>
+            {%- if block.settings.text != blank -%}<div class="hgg-card__text rte">{{ block.settings.text }}</div>{%- endif -%}
+            {%- if block.settings.button_label != blank -%}
+              <a class="btn btn--secondary" href="{{ block.settings.button_link | default: '#' }}">{{ block.settings.button_label | escape }}</a>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Holiday deadlines",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Holiday shipping deadlines" },
+    { "type": "richtext", "id": "intro", "label": "Intro" },
+    { "type": "text", "id": "col_carrier", "label": "Carrier column heading", "default": "Shipping method" },
+    { "type": "text", "id": "col_date", "label": "Date column heading", "default": "Order by" },
+    { "type": "richtext", "id": "small_print", "label": "Small print" }
+  ],
+  "blocks": [
+    {
+      "type": "deadline",
+      "name": "Deadline",
+      "settings": [
+        { "type": "text", "id": "carrier", "label": "Carrier / method", "default": "Canada Post" },
+        { "type": "text", "id": "date", "label": "Order by date", "default": "December 10" },
+        { "type": "text", "id": "note", "label": "Note (optional)", "info": "e.g. Express only" }
+      ]
+    },
+    {
+      "type": "card",
+      "name": "Info card",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Add a gift note" },
+        { "type": "richtext", "id": "text", "label": "Text" },
+        { "type": "text", "id": "button_label", "label": "Button label" },
+        { "type": "url", "id": "button_link", "label": "Button link" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Holiday deadlines" }]
+}
+{% endschema %}
