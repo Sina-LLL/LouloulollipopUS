@@ -2873,7 +2873,8 @@ h2.bundle-product-title {
 }
 
 /* Holiday gift guide (2026-11-12): sections holiday-gift-guide-hero + holiday-shipping-deadlines */
-.hgg-hero { background: var(--lll-blush); padding: var(--lll-space-12, 48px) 0; }
+.hgg-hero { padding: var(--lll-space-12, 48px) 0; }
+.hgg-hero .btn--secondary, .hgg-card .btn--secondary { box-shadow: inset 0 0 0 1px var(--lll-slate-action); }
 .hgg-hero__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
 .hgg-hero__inner--no-media { grid-template-columns: minmax(0, 720px); justify-content: center; text-align: center; }
 .hgg-eyebrow { font-family: var(--lll-font-body); font-size: 0.8125rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--lll-slate-action); margin: 0 0 12px; font-weight: 600; }

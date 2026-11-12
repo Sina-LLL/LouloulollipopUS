@@ -73,31 +73,31 @@
         "c1": {
           "type": "collection",
           "settings": {
-            "collection": "top-newborn-gifts",
+            "collection": "gifts-under-15",
             "tag": "",
-            "image": "shopify://shop_images/SWHGH_233_27d193de-56b7-4c60-9021-30c41b393c6b.jpg",
+            "image": "shopify://shop_images/WTR-003-BLU_WildTeether_Elephant_01.jpg",
             "subheading": "",
-            "button_label": "Shop newborn"
+            "button_label": "Under $15"
           }
         },
         "c2": {
           "type": "collection",
           "settings": {
-            "collection": "top-baby-gifts",
+            "collection": "gifts-under-25",
             "tag": "",
-            "image": "shopify://shop_images/Header_Image_-_SILBIB.png",
+            "image": "shopify://shop_images/SILBIBMGD_1_1183a4e3-7ea4-4ca0-9713-3906a39a370b.jpg",
             "subheading": "",
-            "button_label": "Shop baby"
+            "button_label": "Under $25"
           }
         },
         "c3": {
           "type": "collection",
           "settings": {
-            "collection": "top-toddler-gifts",
+            "collection": "gifts-under-50",
             "tag": "",
-            "image": "shopify://shop_images/KA1004U.ENG.11_61.jpg",
+            "image": "shopify://shop_images/LSET-010-MNT_Learning_Utensils_Set_Octopus_51.jpg",
             "subheading": "",
-            "button_label": "Shop toddler"
+            "button_label": "Under $50"
           }
         }
       },
@@ -107,13 +107,13 @@
         "c3"
       ],
       "settings": {
-        "title": "Shop gifts by age",
+        "title": "Shop gifts by price",
         "text": "",
         "text_alignment": "start",
         "enable_carousel": false,
         "grid": 3,
         "color_scheme": "default",
-        "full_width": true,
+        "full_width": false,
         "coll_grid_image_shape": "square",
         "coll_grid_image_position": "top center",
         "coll_thumb_mob_per_row": "2",
