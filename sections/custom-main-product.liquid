@@ -386,11 +386,11 @@
                     <details class="disclosure"{% if block.settings.open_tab %} open{% endif %}>
                       <summary class="disclosure__title">
                         {%- if block.settings.icon == blank -%}
-                          <h3 class="disclosure__title-text">{{ 'products.product.description' | t }}</h3>
+                          <h2 class="disclosure__title-text">{{ 'products.product.description' | t }}</h2>
                         {%- else -%}
                           <div class="with-icon">
                             {% render 'icon', icon: block.settings.icon, size: 'small' %}
-                            <h3 class="with-icon__beside disclosure__title-text">{{ 'products.product.description' | t }}</h3>
+                            <h2 class="with-icon__beside disclosure__title-text">{{ 'products.product.description' | t }}</h2>
                           </div>
                         {%- endif -%}
                       </summary>
@@ -419,7 +419,7 @@
               </div>
               {% if product.metafields.custom.bundle_products != blank %}
                 <div class="bundle-products">
-                  <h3 class="bundle-product-title">Bundle Includes:</h3>
+                  <h2 class="bundle-product-title">Bundle Includes:</h2>
                   <div class="product-grid product-grid--per-row-2 product-grid--per-row-mob-2">
                     {% assign bundled_products = product.metafields.custom.bundle_products.value %}
                     {% for bundled_product in bundled_products %}
@@ -689,11 +689,11 @@
                   <details class="disclosure"{% if block.settings.open %} open{% endif %}>
                     <summary class="disclosure__title">
                       {%- if block.settings.icon == blank -%}
-                        <h3 class="disclosure__title-text">{{ block.settings.title | escape }}</h3>
+                        <h2 class="disclosure__title-text">{{ block.settings.title | escape }}</h2>
                       {%- else -%}
                         <div class="with-icon">
                           {% render 'icon', icon: block.settings.icon, size: 'small' %}
-                          <h3 class="with-icon__beside disclosure__title-text">{{ block.settings.title | escape }}</h3>
+                          <h2 class="with-icon__beside disclosure__title-text">{{ block.settings.title | escape }}</h2>
                         </div>
                       {%- endif -%}
                     </summary>
@@ -730,7 +730,7 @@
                 <details-disclosure>
                   <details class="disclosure"{% if block.settings.open %} open{% endif %}>
                     <summary class="disclosure__title">
-                      <h3 class="disclosure__title-text">{{ block.settings.title | escape }}</h3>
+                      <h2 class="disclosure__title-text">{{ block.settings.title | escape }}</h2>
                     </summary>
                     <div class="disclosure__panel has-motion">
                       <div class="disclosure__content rte cf">
@@ -779,7 +779,7 @@
               {%- assign guide_uid = section.id | append: '-' | append: block.id -%}
               <div class="tog-guide" data-tog-guide id="tog-guide-{{ guide_uid }}" {{ block.shopify_attributes }}>
                 <div class="tog-guide__header">
-                  <h3 class="tog-guide__label">{{ block.settings.heading | default: 'Recommended Room Temperature' }}</h3>
+                  <h2 class="tog-guide__label">{{ block.settings.heading | default: 'Recommended Room Temperature' }}</h2>
                   <p class="tog-guide__range" data-tog-guide-range>69–73°F</p>
                 </div>
 

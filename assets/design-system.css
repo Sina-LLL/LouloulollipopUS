@@ -2846,3 +2846,28 @@ h1.product-title{
     margin-top: 8px;
   }
 }
+
+/* PDP heading outline (2026-11-12): product tabs are h2, subheadings inside
+   tabs are h3. These keep the visual sizes the same as before the tag change. */
+.product-info-accordion .disclosure__content h3 {
+  font-size: var(--lll-text-h4);
+  line-height: 1.35;
+  font-weight: var(--heading-font-weight);
+}
+h2.bundle-product-title {
+  font-size: 1.25rem;
+  font-weight: var(--lll-weight-subhead);
+  line-height: var(--lll-leading-snug);
+}
+/* "Material & Care" section: h2 now wraps the toggle button (a heading
+   inside a <button> loses its heading role). */
+.accordion-toggle__heading {
+  margin: 0;
+}
+.accordion-toggle {
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  text-align: left;
+}

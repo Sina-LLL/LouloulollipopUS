@@ -2,7 +2,7 @@
 <div class="container" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%}>
   <div class="collapsible-tabs">
     {% if section.settings.title != blank and section.blocks != blank %}
-      <h3 class="collapsible-tabs__heading collapsible-tabs__content" id="faq-{{ section.settings.title | handle }}">{{ section.settings.title | escape }}</h3>
+      <h2 class="h3 collapsible-tabs__heading collapsible-tabs__content" id="faq-{{ section.settings.title | handle }}">{{ section.settings.title | escape }}</h2>
     {% endif %}
 
     {%- for block in section.blocks -%}
@@ -20,7 +20,7 @@
             <details-disclosure>
               <details class="disclosure">
                 <summary class="disclosure__title">
-                  {{- block.settings.title | escape -}}
+                  <h3 class="disclosure__title-text">{{- block.settings.title | escape -}}</h3>
                 </summary>
                 <div class="disclosure__panel has-motion">
                   <div class="disclosure__content rte">

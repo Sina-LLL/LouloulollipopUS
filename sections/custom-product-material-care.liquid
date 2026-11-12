@@ -12,10 +12,12 @@
 <div class="container custom-product-features">
   <div class="custom-product-features__wrapper">
     {% if section.settings.section_heading != blank %}
-      <button class="accordion-toggle" type="button" aria-expanded="true">
-        <h2 class="hometitle h3">{{ section.settings.section_heading | escape }}</h2>
-        <span class="chevron">−</span>
-      </button>
+      <h2 class="hometitle h3 accordion-toggle__heading">
+        <button class="accordion-toggle" type="button" aria-expanded="true">
+          <span>{{ section.settings.section_heading | escape }}</span>
+          <span class="chevron" aria-hidden="true">−</span>
+        </button>
+      </h2>
     {% endif %}
 
     <div class="custom-product-features__grid custom-accordion-content show">
