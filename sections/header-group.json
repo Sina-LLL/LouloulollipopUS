@@ -63,9 +63,26 @@
             "bg_gradient": "",
             "text_color": "#ffffff"
           }
+        },
+        "announcement_holiday": {
+          "type": "announcement",
+          "settings": {
+            "text": "<a href=\"/pages/holiday-gift-guide\" title=\"Holiday Gift Guide\">Holiday Gift Guide + shipping deadlines</a>",
+            "show_countdown": false,
+            "hide_on_end": false,
+            "end_date": "",
+            "end_time": "",
+            "number_font": "base",
+            "countdown_separator": "box",
+            "use_custom_colors": false,
+            "bg_color": "#202020",
+            "bg_gradient": "",
+            "text_color": "#ffffff"
+          }
         }
       },
       "block_order": [
+        "announcement_holiday",
         "announcement-2",
         "announcement_gLBKkX",
         "announcement-1"
