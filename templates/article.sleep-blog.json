@@ -1,0 +1,146 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "settings": {
+        "show_date": true,
+        "show_author": true,
+        "show_article_tags": true,
+        "show_sharing_icons": true,
+        "show_twitter": true,
+        "show_facebook": true,
+        "show_pinterest": true,
+        "show_featured_image": false,
+        "full_width_image": true,
+        "featured_image_height": "huge",
+        "enable_title_overlay": false,
+        "overlay_style": "shadow"
+      }
+    },
+    "sleep_collections": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_swaddle_wrap": {
+          "type": "collection",
+          "settings": {
+            "collection": "swaddle-wrap",
+            "tag": "",
+            "subheading": "Swaddle Wraps",
+            "button_label": ""
+          }
+        },
+        "collection_sleep_bags": {
+          "type": "collection",
+          "settings": {
+            "collection": "sleep-bags",
+            "tag": "",
+            "subheading": "Sleep Bags",
+            "button_label": "",
+            "image": "shopify://shop_images/BA9004U.LMN_01.jpg"
+          }
+        },
+        "collection_sleepers": {
+          "type": "collection",
+          "settings": {
+            "collection": "sleepers",
+            "tag": "",
+            "subheading": "Sleepers",
+            "button_label": "",
+            "image": "shopify://shop_images/BA1002U.SAF.4_1_bebfba78-0936-4259-b7fa-cbb7ce9cd33e.jpg"
+          }
+        },
+        "collection_pajamas": {
+          "type": "collection",
+          "settings": {
+            "collection": "pajamas",
+            "tag": "",
+            "subheading": "Pajamas",
+            "button_label": "",
+            "image": "shopify://shop_images/KA1004U.ENG.11_61.jpg"
+          }
+        },
+        "collection_swaddles": {
+          "type": "collection",
+          "settings": {
+            "collection": "swaddles",
+            "tag": "",
+            "subheading": "Swaddles",
+            "button_label": "",
+            "image": "shopify://shop_images/SWHGH_233_27d193de-56b7-4c60-9021-30c41b393c6b.jpg"
+          }
+        },
+        "collection_muslin_quilt": {
+          "type": "collection",
+          "settings": {
+            "collection": "muslin-quilt",
+            "tag": "",
+            "subheading": "Muslin Quilts",
+            "button_label": "",
+            "image": "shopify://shop_images/QTENG_02_3e5a3f7e-6a42-4614-8e25-a7f587a38b81.jpg"
+          }
+        },
+        "collection_crib_sheets": {
+          "type": "collection",
+          "settings": {
+            "collection": "crib-sheets",
+            "tag": "",
+            "subheading": "Crib Sheets",
+            "button_label": "",
+            "image": "shopify://shop_images/CRIBFBK_01.jpg"
+          }
+        },
+        "collection_sleepsuits": {
+          "type": "collection",
+          "settings": {
+            "collection": "sleepsuits",
+            "tag": "",
+            "subheading": "Sleepsuits",
+            "button_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_swaddle_wrap",
+        "collection_sleep_bags",
+        "collection_sleepers",
+        "collection_pajamas",
+        "collection_swaddles",
+        "collection_muslin_quilt",
+        "collection_crib_sheets",
+        "collection_sleepsuits"
+      ],
+      "settings": {
+        "title": "Shop Sleep & Bedding",
+        "text": "",
+        "text_alignment": "start",
+        "enable_carousel": true,
+        "grid": 4,
+        "color_scheme": "default",
+        "full_width": true,
+        "coll_grid_image_shape": "portrait-45",
+        "coll_grid_image_position": "top center",
+        "coll_thumb_mob_per_row": "2",
+        "coll_thumb_per_column": "1",
+        "coll_grid_show_count": false,
+        "coll_text_position": "below",
+        "coll_text_position_under_mobile": false,
+        "coll_thumb_text_align_x": "center",
+        "coll_thumb_text_align_y": "center",
+        "coll_button_style": "primary"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "sleep_collections"
+  ]
+}
