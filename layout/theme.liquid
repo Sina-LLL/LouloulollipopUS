@@ -70,12 +70,31 @@
   {%- endif -%}
 
   {%- if template.name == 'product' -%}
-    {%- assign lcp_img = product.featured_media.preview_image -%}
-    {%- if lcp_img != blank -%}
+    {%- comment -%}
+      LCP preload. Must build the same URLs as the gallery image (snippets/media.liquid -> snippets/image.liquid:
+      same media, webp, same widths, same sizes) or the browser downloads the photo twice.
+    {%- endcomment -%}
+    {%- assign lcp_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media -%}
+    {%- if lcp_media.media_type == 'image' -%}
+      {%- liquid
+        assign lcp_img = lcp_media.preview_image
+        assign lcp_w = lcp_img.width | at_most: 5760
+        assign lcp_srcset = ''
+        assign lcp_widths = '340,480,740,980,1200,1400,1600,1920,2560,3200,4000' | append: ',' | append: lcp_w | split: ','
+        for w in lcp_widths
+          assign w_num = w | times: 1
+          if w_num <= lcp_w
+            assign lcp_url = lcp_img | image_url: width: w_num, format: 'webp'
+            assign lcp_srcset = lcp_srcset | append: lcp_url | append: ' ' | append: w_num | append: 'w, '
+          endif
+        endfor
+        assign lcp_srcset = lcp_srcset | remove_last: ', '
+        assign lcp_wide = settings.max_page_width | divided_by: 2
+      -%}
       <link rel="preload" as="image" fetchpriority="high"
-        href="{{ lcp_img | image_url: width: 900, format: 'webp' }}"
-        imagesrcset="{{ lcp_img | image_url: width: 450, format: 'webp' }} 450w, {{ lcp_img | image_url: width: 900, format: 'webp' }} 900w, {{ lcp_img | image_url: width: 1400, format: 'webp' }} 1400w"
-        imagesizes="(min-width: 768px) 50vw, 100vw">
+        href="{{ lcp_img | image_url: width: lcp_w, format: 'webp' }}"
+        imagesrcset="{{ lcp_srcset }}"
+        imagesizes="(min-width: {{ settings.max_page_width }}px) {{ lcp_wide }}px, (min-width: 768px) 50vw, 100vw">
     {%- endif -%}
   {%- endif -%}
 
