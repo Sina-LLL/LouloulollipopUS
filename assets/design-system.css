@@ -2919,10 +2919,10 @@ h2.bundle-product-title {
 }
 
 /* Video with text, full page width option (sections/video-with-text.liquid): keep the video's own ratio, max 500px tall */
-.video-with-text--full .video-section .image-overlay { height: auto; padding-top: 0 !important; display: flex; justify-content: center; }
-.video-with-text--full .video-section .image-overlay::before { display: none; padding-top: 0; }
-.video-with-text--full .video-section .image-overlay__image { position: relative; height: auto; width: auto; }
+.video-with-text--full .video-section .image-overlay { height: auto !important; padding-top: 0 !important; display: flex; justify-content: center; }
+.video-with-text--full .video-section .image-overlay::before { display: none !important; padding-top: 0 !important; }
+.video-with-text--full .video-section .image-overlay__image,
 .video-with-text--full .video-section deferred-media,
-.video-with-text--full .video-section video-component { display: block; height: auto; }
+.video-with-text--full .video-section video-component { position: relative !important; inset: auto !important; display: block; width: auto !important; height: auto !important; }
 .video-with-text--full .video-section video,
-.video-with-text--full .video-section img { display: block; width: auto; height: auto; max-width: 100%; max-height: 500px; object-fit: contain; }
+.video-with-text--full .video-section .image-overlay__image img { position: static !important; display: block; height: 500px !important; width: auto !important; max-width: 100%; object-fit: contain; }
