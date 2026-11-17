@@ -43,7 +43,7 @@
                       data-description="{{ section.settings.video_description | escape }}">
                     {%- if using_video_tag -%}
                       {%- if section.settings.autoplay -%}
-                        {{ section.settings.video_shopify | video_tag: playsinline: true, controls: false, autoplay: true, muted: true, loop: true, poster: '' | replace: '<img ', '<img loading="lazy" hidden ' }}
+                        {{ section.settings.video_shopify | video_tag: playsinline: true, controls: section.settings.show_controls, autoplay: true, muted: true, loop: true, poster: '' | replace: '<img ', '<img loading="lazy" hidden ' }}
                       {%- else -%}
                         {{ section.settings.video_shopify | video_tag: playsinline: true, controls: true, autoplay: false, muted: false, loop: false, poster: '' | replace: '<img ', '<img loading="lazy" hidden ' }}
                       {%- endif -%}
@@ -202,6 +202,13 @@
       "id": "autoplay",
       "label": "Autoplay",
       "info": "Video will be muted",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_controls",
+      "label": "Show video controls when autoplaying",
+      "info": "Adds play/pause and sound controls. Video still starts muted.",
       "default": false
     },
     {

@@ -47,12 +47,14 @@
         "autoplay": true,
         "video_position": "right",
         "text_alignment": "left",
-        "color_scheme": "default"
+        "color_scheme": "default",
+        "show_controls": true
       },
       "custom_css": [
         ".flexible-layout{justify-content:center}",
-        "@media(min-width:768px){.feature-text-paired{margin-left:0}.column--order-push-desktop{max-width:30%}}",
-        "@media(max-width:767px){.column:not(.column--order-push-desktop),.feature-text-paired{display:contents}.majortitle{order:1;width:100%}.column--order-push-desktop{order:2;width:100%}.column--order-push-desktop video{width:100%;height:auto}.feature-text-paired .rte{order:3;width:100%;margin-bottom:30px}}"
+        ".majortitle{font-size:var(--lll-text-h3);line-height:var(--lll-leading-snug)}",
+        "@media(min-width:768px){.feature-text-paired{margin-left:0}.column:first-child{max-width:20%}}",
+        "@media(max-width:767px){.column+.column,.feature-text-paired{display:contents;text-align:center}.majortitle{order:1;width:100%}.column:first-child{order:2;width:60%;margin:0 auto}.column:first-child video{width:100%;height:auto}.rte{order:3;width:100%;margin-bottom:30px}}"
       ]
     },
     "main": {
