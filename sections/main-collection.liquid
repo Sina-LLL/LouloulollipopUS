@@ -5,11 +5,9 @@
 
 
 <div data-section-id="{{ section.id }}" {%- render 'animation-attrs', attrs: 'data-cc-animate' -%} class="">
-{% if section.settings.show_breadcrumbs %}
 <div class="container container--no-max">
   {% render 'breadcrumbs' %}
 </div>
-{% endif %}
 {% paginate collection.products by section.settings.coll_num_per_page_int %}
 {% render 'structured-data-collection', collection: collection %}
 
@@ -410,12 +408,6 @@
     {
       "type": "header",
       "content": "Heading"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_breadcrumbs",
-      "label": "Show breadcrumbs",
-      "default": true
     },
     {
       "type": "checkbox",
