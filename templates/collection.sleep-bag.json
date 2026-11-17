@@ -52,7 +52,7 @@
       "custom_css": [
         ".flexible-layout{justify-content:center}",
         "@media(min-width:768px){.feature-text-paired{margin-left:0}.column--order-push-desktop{max-width:30%}}",
-        "@media(max-width:767px){.column:not(.column--order-push-desktop),.feature-text-paired{display:contents}.majortitle{order:1;width:100%;padding-left:30px}.column--order-push-desktop{order:2;width:100%}.column--order-push-desktop video{width:100%;height:auto}.feature-text-paired .rte{order:3;width:100%;padding-left:30px;margin-bottom:30px}}"
+        "@media(max-width:767px){.column:not(.column--order-push-desktop),.feature-text-paired{display:contents}.majortitle{order:1;width:100%}.column--order-push-desktop{order:2;width:100%}.column--order-push-desktop video{width:100%;height:auto}.feature-text-paired .rte{order:3;width:100%;margin-bottom:30px}}"
       ]
     },
     "main": {
