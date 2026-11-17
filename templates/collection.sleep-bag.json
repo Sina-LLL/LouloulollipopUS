@@ -15,14 +15,14 @@
         "heading_3pKXVQ": {
           "type": "heading",
           "settings": {
-            "title": "{{ collection.title }}",
+            "title": "Video with text{{ collection.title }}",
             "use_h1": false
           }
         },
         "text_KJjUtn": {
           "type": "text",
           "settings": {
-            "text": "{{ collection.description }}",
+            "text": "<p>Pair text with a video to give customers insight into your brand. Tell a story, explain a product detail, or describe a new promotion.</p>{{ collection.description }}",
             "enlarge_text": false
           }
         }
@@ -31,6 +31,7 @@
         "heading_3pKXVQ",
         "text_KJjUtn"
       ],
+      "disabled": true,
       "name": "Video with text",
       "settings": {
         "video_shopify": "shopify://files/videos/tencel-sleep-bag-better.mp4",
@@ -39,8 +40,7 @@
         "autoplay": true,
         "video_position": "right",
         "text_alignment": "left",
-        "color_scheme": "default",
-        "full_width": true
+        "color_scheme": "default"
       }
     },
     "main": {
@@ -79,8 +79,7 @@
         "rel_coll_gall_overlay_style": "no_background",
         "rel_coll_gall_text_placement": true,
         "rel_coll_gall_text_alignment": "bottom left",
-        "rel_coll_grid_mobile": "2",
-        "show_breadcrumbs": false
+        "rel_coll_grid_mobile": "2"
       }
     },
     "related_collections_auto": {
@@ -129,18 +128,9 @@
       "settings": {
         "title": "FAQs"
       }
-    },
-    "sleepbag_breadcrumbs": {
-      "type": "custom-liquid",
-      "settings": {
-        "full_width": false,
-        "show_space": false,
-        "code": "{% render 'breadcrumbs' %}"
-      }
     }
   },
   "order": [
-    "sleepbag_breadcrumbs",
     "video_with_text_4Dqdyi",
     "main",
     "related_collections_auto",
