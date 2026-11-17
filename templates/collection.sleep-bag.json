@@ -15,14 +15,14 @@
         "heading_3pKXVQ": {
           "type": "heading",
           "settings": {
-            "title": "Video with text{{ collection.title }}",
+            "title": "{{ collection.title }}",
             "use_h1": false
           }
         },
         "text_KJjUtn": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with a video to give customers insight into your brand. Tell a story, explain a product detail, or describe a new promotion.</p>{{ collection.description }}",
+            "text": "{{ collection.description }}",
             "enlarge_text": false
           }
         }
