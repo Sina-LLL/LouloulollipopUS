@@ -31,7 +31,6 @@
         "heading_3pKXVQ",
         "text_KJjUtn"
       ],
-      "disabled": true,
       "name": "Video with text",
       "settings": {
         "video_shopify": "shopify://files/videos/tencel-sleep-bag-better.mp4",
@@ -40,7 +39,8 @@
         "autoplay": true,
         "video_position": "right",
         "text_alignment": "left",
-        "color_scheme": "default"
+        "color_scheme": "default",
+        "full_width": true
       }
     },
     "main": {
@@ -137,26 +137,10 @@
         "show_space": false,
         "code": "{% render 'breadcrumbs' %}"
       }
-    },
-    "sleepbag_video": {
-      "type": "collection-video-banner",
-      "settings": {
-        "video": "shopify://files/videos/tencel-sleep-bag-better.mp4",
-        "height_desktop": 480,
-        "height_mobile": 60,
-        "focus": 50,
-        "heading": "",
-        "text": "",
-        "button_label": "",
-        "button_link": "",
-        "text_position": "center",
-        "overlay": 25
-      }
     }
   },
   "order": [
     "sleepbag_breadcrumbs",
-    "sleepbag_video",
     "video_with_text_4Dqdyi",
     "main",
     "related_collections_auto",
