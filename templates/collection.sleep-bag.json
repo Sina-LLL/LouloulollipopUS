@@ -9,6 +9,40 @@
  */
 {
   "sections": {
+    "video_with_text_4Dqdyi": {
+      "type": "video-with-text",
+      "blocks": {
+        "heading_3pKXVQ": {
+          "type": "heading",
+          "settings": {
+            "title": "Video with text{{ collection.title }}",
+            "use_h1": false
+          }
+        },
+        "text_KJjUtn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with a video to give customers insight into your brand. Tell a story, explain a product detail, or describe a new promotion.</p>{{ collection.description }}",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_3pKXVQ",
+        "text_KJjUtn"
+      ],
+      "disabled": true,
+      "name": "Video with text",
+      "settings": {
+        "video_shopify": "shopify://files/videos/tencel-sleep-bag-better.mp4",
+        "video_external": "",
+        "video_description": "",
+        "autoplay": true,
+        "video_position": "right",
+        "text_alignment": "left",
+        "color_scheme": "default"
+      }
+    },
     "main": {
       "type": "main-collection",
       "settings": {
@@ -97,6 +131,7 @@
     }
   },
   "order": [
+    "video_with_text_4Dqdyi",
     "main",
     "related_collections_auto",
     "custom_collection_content_F7d8FN",
