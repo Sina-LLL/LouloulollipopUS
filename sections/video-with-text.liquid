@@ -1,5 +1,5 @@
 <div class="{% if section.settings.color_scheme != 'default' %}use-color-scheme use-color-scheme--{{ section.settings.color_scheme }} fully-padded-row--medium{% else %}fully-spaced-row--medium{% endif %}">
-  <div class="container{% if section.settings.full_width %} container--no-max video-with-text--full{% endif %}">
+  <div class="container">
     <div class="flexible-layout valign-middle">
       <div class="column column--half {% if section.settings.video_position == 'right' %}column--order-push-desktop{% endif %}">
 
@@ -209,12 +209,6 @@
       "type": "image_picker",
       "label": "Custom placeholder image",
       "info": "Required for External videos. Choose an image the same shape as your video."
-    },
-    {
-      "type": "checkbox",
-      "id": "full_width",
-      "label": "Full page width",
-      "default": false
     },
     {
       "type": "select",
