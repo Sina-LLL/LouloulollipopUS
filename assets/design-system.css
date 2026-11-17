@@ -2924,5 +2924,5 @@ h2.bundle-product-title {
 .video-with-text--full .video-section .image-overlay__image,
 .video-with-text--full .video-section deferred-media,
 .video-with-text--full .video-section video-component { position: relative !important; inset: auto !important; display: block; width: auto !important; height: auto !important; }
-.video-with-text--full .video-section video,
-.video-with-text--full .video-section .image-overlay__image img { position: static !important; display: block; height: 500px !important; width: auto !important; max-width: 100%; object-fit: contain; }
+.video-with-text--full .video-section video { position: static !important; display: block; height: 500px !important; width: auto !important; max-width: 100%; object-fit: contain; }
+.video-with-text--full .video-section .video-played-hidden { display: none !important; }
