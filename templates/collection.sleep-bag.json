@@ -60,6 +60,7 @@
     "main": {
       "type": "main-collection",
       "settings": {
+        "show_breadcrumbs": false,
         "show_title": false,
         "show_image_behind_heading": false,
         "heading_image_height": "large",
