@@ -159,7 +159,7 @@
       ],
       "settings": {
         "show_breadcrumbs": true,
-        "select_first_variant": true,
+        "select_first_variant": false,
         "show_location_underneath": false,
         "inventory_transfers_enable": true,
         "enable_sticky_columns": true,
@@ -179,11 +179,20 @@
         "media_grouping_option": "Color,Colour,Couleur,Farbe"
       }
     },
+    "custom_product_video": {
+      "type": "custom-product-video",
+      "settings": {
+        "heading": "See why Loulou Lollipop is better",
+        "video_position": "left",
+        "text_alignment": "left",
+        "color_scheme": "default"
+      }
+    },
     "1790010142ddc968be": {
       "type": "apps",
       "blocks": {
         "novel_shoppable_video_novel_product_Dj4LiJ": {
-          "type": "shopify://apps/novel-shoppable-video/blocks/novel-product/67e3531b-60c1-40d3-83d1-8f5aba7081ef",
+          "type": "shopify://apps/partnrup-shoppable-video-ugc/blocks/novel-product/67e3531b-60c1-40d3-83d1-8f5aba7081ef",
           "settings": {
             "journeyid": "{{ product.metafields.custom.product_template.value.ugc_video_code.value }}"
           }
@@ -411,15 +420,6 @@
       "name": "Collapsible tabs",
       "settings": {
         "title": "FAQs"
-      }
-    },
-    "custom_product_video": {
-      "type": "custom-product-video",
-      "settings": {
-        "heading": "See why Loulou Lollipop is better",
-        "video_position": "left",
-        "text_alignment": "left",
-        "color_scheme": "default"
       }
     }
   },
