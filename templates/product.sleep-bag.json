@@ -210,7 +210,7 @@
       ],
       "settings": {
         "show_breadcrumbs": true,
-        "select_first_variant": true,
+        "select_first_variant": false,
         "show_location_underneath": false,
         "inventory_transfers_enable": true,
         "enable_sticky_columns": true,
