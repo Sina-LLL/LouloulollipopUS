@@ -2917,3 +2917,15 @@ h2.bundle-product-title {
   .hgg-cards { grid-template-columns: 1fr; }
   .hgg-deadlines__table th, .hgg-deadlines__table td { padding: 12px 14px; }
 }
+
+/* Size nudge (assets/size-nudge.js): short shake of the size buttons when Add to cart is clicked without a size */
+@keyframes ll-size-nudge {
+  0%, 100% { transform: translateX(0); }
+  15% { transform: translateX(-6px); }
+  30% { transform: translateX(5px); }
+  45% { transform: translateX(-4px); }
+  60% { transform: translateX(3px); }
+  75% { transform: translateX(-1px); }
+}
+.ll-size-nudge { animation: ll-size-nudge 0.45s cubic-bezier(0.36, 0.07, 0.19, 0.97) both; }
+@media (prefers-reduced-motion: reduce) { .ll-size-nudge { animation: none; } }
